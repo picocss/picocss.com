@@ -1,0 +1,45 @@
+@use "sass:map";
+@use "settings" as *;
+
+/**
+ * Docs: Sectionning
+ */
+
+main {
+  [role="document"] {
+    > pre {
+      @each $key, $values in $breakpoints {
+        @if $values {
+          @media (min-width: map.get($values, "breakpoint")) {
+            $multiplier: 1;
+            @if $key == "sm" {
+              $multiplier: 1.25;
+            } @else if $key == "md" {
+              $multiplier: 1.5;
+            } @else if $key == "lg" {
+              $multiplier: 1.75;
+            } @else if $key == "xl" {
+              $multiplier: 2;
+            }
+            #{$✨}block-spacing-horizontal: calc(var(#{$✨}spacing) * $multiplier);
+
+            $multiplier: 1;
+            @if $key == "sm" {
+              $multiplier: 2.5;
+            } @else if $key == "md" {
+              $multiplier: 3;
+            } @else if $key == "lg" {
+              $multiplier: 3.5;
+            } @else if $key == "xl" {
+              $multiplier: 4;
+            }
+            #{$✨}block-spacing-vertical: calc(var(#{$✨}spacing) * $multiplier);
+          }
+        }
+      }
+      margin: var(#{$✨}block-spacing-vertical) 0;
+      padding: calc(var(#{$✨}block-spacing-vertical) * 0.75) var(#{$✨}block-spacing-horizontal);
+      box-shadow: var(#{$✨}card-box-shadow);
+    }
+  }
+}

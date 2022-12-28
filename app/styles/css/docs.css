@@ -1,0 +1,117 @@
+/**
+ * Docs: Main
+ */
+main {
+  margin-top: 4.75rem;
+}
+@media (min-width: 992px) {
+  main {
+    grid-column-gap: 4rem;
+    display: grid;
+    grid-template-columns: 12rem auto;
+  }
+}
+
+/**
+ * Docs: Aside
+ */
+main aside {
+  --pico-font-size: 14px;
+  font-size: var(--pico-font-size);
+}
+main aside details {
+  border-bottom: none;
+}
+main aside details summary {
+  text-transform: uppercase;
+}
+main aside details summary:after {
+  display: none;
+}
+
+/**
+ * Docs: Document
+ */
+main [role=document] {
+  min-width: 0;
+}
+main [role=document] article > *:last-child:not(footer, .grid),
+main [role=document] article form > *:last-child:not(footer, .grid) {
+  margin-bottom: 0;
+}
+main [role=document] h1:first-of-type {
+  margin-top: -0.375em;
+}
+
+/**
+ * Docs: Sectionning
+ */
+main [role=document] > pre {
+  margin: var(--pico-block-spacing-vertical) 0;
+  padding: calc(var(--pico-block-spacing-vertical) * 0.75) var(--pico-block-spacing-horizontal);
+  box-shadow: var(--pico-card-box-shadow);
+}
+@media (min-width: 576px) {
+  main [role=document] > pre {
+    --pico-block-spacing-horizontal: calc(var(--pico-spacing) * 1.25);
+    --pico-block-spacing-vertical: calc(var(--pico-spacing) * 2.5);
+  }
+}
+@media (min-width: 768px) {
+  main [role=document] > pre {
+    --pico-block-spacing-horizontal: calc(var(--pico-spacing) * 1.5);
+    --pico-block-spacing-vertical: calc(var(--pico-spacing) * 3);
+  }
+}
+@media (min-width: 992px) {
+  main [role=document] > pre {
+    --pico-block-spacing-horizontal: calc(var(--pico-spacing) * 1.75);
+    --pico-block-spacing-vertical: calc(var(--pico-spacing) * 3.5);
+  }
+}
+@media (min-width: 1200px) {
+  main [role=document] > pre {
+    --pico-block-spacing-horizontal: calc(var(--pico-spacing) * 2);
+    --pico-block-spacing-vertical: calc(var(--pico-spacing) * 4);
+  }
+}
+
+/**
+ * Docs: Code
+ */
+[data-theme=light],
+:root:not([data-theme=dark]) {
+  --pico-code-tag: #9c5900;
+  --pico-code-attr: #aa3387;
+  --pico-code-value: #327365;
+  --pico-code-comment: #6f7887;
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --pico-code-tag: #a08d52;
+    --pico-code-attr: #b276ab;
+    --pico-code-value: #669697;
+    --pico-code-comment: #5c6370;
+  }
+}
+[data-theme=dark] {
+  --pico-code-tag: #ad8653;
+  --pico-code-attr: #b276ab;
+  --pico-code-value: #669697;
+  --pico-code-comment: #5c6370;
+}
+
+.token.tag:not(.punctuation), .token.property {
+  color: var(--pico-code-tag);
+}
+.token.tag.attr-name:not(.punctuation), .token.selector:not(.punctuation), .token.keyword, .token.boolean {
+  color: var(--pico-code-attr);
+}
+.token.tag.attr-value:not(.attr-equals), .token.string {
+  color: var(--pico-code-value);
+}
+.token.comment:not(.punctuation), .token.doctype {
+  color: var(--pico-code-comment);
+}
+/*# sourceMappingURL=docs.css.map */

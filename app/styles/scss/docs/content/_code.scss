@@ -1,0 +1,56 @@
+@use "colors" as *;
+
+/**
+ * Docs: Code
+ */
+
+// Light color scheme (Default)
+// Can be forced with data-theme="light"
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+  --pico-code-tag: #{$pumpkin-550};
+  --pico-code-attr: #{mix($zinc-550, $fuchsia-550, 25%)};
+  --pico-code-value: #{mix($zinc-550, $jade-550, 50%)};
+  --pico-code-comment: #{$zinc-500};
+}
+
+// Dark color scheme (Auto)
+// Automatically enabled if user has Dark mode enabled
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --pico-code-tag: #{mix($zinc-400, $amber-400, 50%)};
+    --pico-code-attr: #{mix($zinc-400, $fuchsia-400, 62.5%)};
+    --pico-code-value: #{mix($zinc-400, $jade-400, 75%)};
+    --pico-code-comment: #{$zinc-600};
+  }
+}
+
+// Dark color scheme (Forced)
+// Enabled if forced with data-theme="dark"
+[data-theme="dark"] {
+  --pico-code-tag: #{mix($zinc-400, $pumpkin-400, 50%)};
+  --pico-code-attr: #{mix($zinc-400, $fuchsia-400, 62.5%)};
+  --pico-code-value: #{mix($zinc-400, $jade-400, 75%)};
+  --pico-code-comment: #{$zinc-600};
+}
+
+.token {
+  &.tag:not(.punctuation),
+  &.property {
+    color: var(--pico-code-tag);
+  }
+  &.tag.attr-name:not(.punctuation),
+  &.selector:not(.punctuation),
+  &.keyword,
+  &.boolean {
+    color: var(--pico-code-attr);
+  }
+  &.tag.attr-value:not(.attr-equals),
+  &.string {
+    color: var(--pico-code-value);
+  }
+  &.comment:not(.punctuation),
+  &.doctype {
+    color: var(--pico-code-comment);
+  }
+}

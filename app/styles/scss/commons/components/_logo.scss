@@ -1,0 +1,42 @@
+@use "colors" as *;
+
+/**
+ * Logo
+ */
+
+// Light color scheme (Default)
+// Can be forced with data-theme="light"
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+  --pico-logo-wordmark: #{$slate-800};
+  --pico-logo-small-sparkles: #{$amber-200};
+  --pico-logo-big-sparkle: #{$pumpkin-300};
+}
+
+// Dark color scheme (Auto)
+// Automatically enabled if user has Dark mode enabled
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --pico-logo-wordmark: #{$white};
+    --pico-logo-small-sparkles: #{$pumpkin-300};
+    --pico-logo-big-sparkle: #{$amber-200};
+  }
+}
+
+// Dark color scheme (Forced)
+// Enabled if forced with data-theme="dark"
+[data-theme="dark"] {
+  --pico-logo-wordmark: #{$white};
+  --pico-logo-small-sparkles: #{$pumpkin-300};
+  --pico-logo-big-sparkle: #{$amber-200};
+}
+
+// Component
+body {
+  > header {
+    svg {
+      width: auto;
+      height: 2.25rem;
+    }
+  }
+}

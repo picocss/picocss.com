@@ -1,0 +1,18 @@
+@use "sass:map";
+@use "settings" as *;
+
+/**
+ * Docs: Main
+ */
+
+main {
+  margin-top: 4.75rem;
+
+  @if map.get($breakpoints, "lg") {
+    @media (min-width: map.get(map.get($breakpoints, "lg"), "breakpoint")) {
+      grid-column-gap: 4rem;
+      display: grid;
+      grid-template-columns: 12rem auto;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@use "settings" as *;
+
+/**
+ * Docs: Aside
+ */
+
+main {
+  aside {
+    #{$✨}font-size: 14px;
+    font-size: var(#{$✨}font-size);
+
+    details {
+      border-bottom: none;
+
+      summary {
+        text-transform: uppercase;
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+}

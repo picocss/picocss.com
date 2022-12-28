@@ -1,0 +1,20 @@
+/**
+ * Docs: Document
+ */
+
+main {
+  [role="document"] {
+    min-width: 0;
+
+    article,
+    article form {
+      > *:last-child:not(footer, .grid) {
+        margin-bottom: 0;
+      }
+    }
+
+    h1:first-of-type {
+      margin-top: -0.375em;
+    }
+  }
+}

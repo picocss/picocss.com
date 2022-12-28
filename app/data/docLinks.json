@@ -1,0 +1,61 @@
+[
+  {
+    "category": "Getting started",
+    "links": [
+      { "label": "Usage", "route": "/docs" },
+      { "label": "Themes", "route": "/docs/themes" },
+      { "label": "Customization", "route": "/docs/customization" },
+      { "label": "Class-less version", "route": "/docs/classless" },
+      { "label": "RTL", "route": "/docs/rtl" }
+    ]
+  },
+  {
+    "category": "Layout",
+    "links": [
+      { "label": "Containers", "route": "/docs/containers" },
+      { "label": "Landmarks & sections", "route": "/docs/landmarks-sections" },
+      { "label": "Grid", "route": "/docs/grid" },
+      { "label": "Horizontal scroller", "route": "/docs/scroller" }
+    ]
+  },
+  {
+    "category": "Content",
+    "links": [
+      { "label": "Typography", "route": "/docs/typography" },
+      { "label": "Links", "route": "/docs/links" },
+      { "label": "Buttons", "route": "/docs/buttons" },
+      { "label": "Tables", "route": "/docs/tables" }
+    ]
+  },
+  {
+    "category": "Forms",
+    "links": [
+      { "label": "Overview", "route": "/docs/forms/overview" },
+      { "label": "Select", "route": "/docs/forms/select" },
+      { "label": "Checks, radios & switchs", "route": "/docs/forms/check-radio-switch" },
+      { "label": "Other types", "route": "/docs/forms/other-types" }
+    ]
+  },
+  {
+    "category": "Components",
+    "links": [
+      { "label": "Accordions", "route": "/docs/accordions" },
+      { "label": "Cards", "route": "/docs/cards" },
+      { "label": "Dropdowns", "route": "/docs/dropdowns" },
+      { "label": "Modal", "route": "/docs/modal" },
+      { "label": "Navs", "route": "/docs/navs" },
+      { "label": "Progress", "route": "/docs/progress" }
+    ]
+  },
+  {
+    "category": "Utilities",
+    "links": [
+      { "label": "Loading", "route": "/docs/loading" },
+      { "label": "Tooltips", "route": "/docs/tooltips" }
+    ]
+  },
+  {
+    "category": "Extend",
+    "links": [{ "label": "We love .classes", "route": "/docs/we-love-classes" }]
+  }
+]
