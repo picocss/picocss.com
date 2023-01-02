@@ -1,8 +1,8 @@
 import { usePage } from "~/contexts/PageContext";
 
 import Link from "~/components/Link";
-import Logo from "./Logo";
-import Nav from "./Nav";
+import Logo from "~/components/header/Logo";
+import Nav from "~/components/header/Nav";
 
 export default function Header(props) {
   const { isHeaderFixed } = usePage();

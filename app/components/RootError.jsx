@@ -1,4 +1,5 @@
 import Header from "./Header";
+
 export default function RootError({ caught, ...props }) {
   return (
     <>
