@@ -1,0 +1,15 @@
+@use "colors" as *;
+@use "settings" as *;
+
+/**
+ * Docs: Card
+ */
+
+article {
+  &.component {
+    outline-color: var(#{$✨}card-component-outline-color);
+    outline-style: solid;
+    outline-width: var(#{$✨}card-component-outline-width);
+    background-color: transparent;
+  }
+}

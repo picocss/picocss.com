@@ -5,40 +5,10 @@
  * Header
  */
 
-// Light color scheme (Default)
-// Can be forced with data-theme="light"
-[data-theme="light"],
-:root:not([data-theme="dark"]) {
-  #{$✨}header-background: #{rgba($white, 0.85)};
-
-  body {
-    > header {
-      #{$✨}muted-border-color: transparent;
-    }
-  }
-}
-
-// Dark color scheme (Auto)
-// Automatically enabled if user has Dark mode enabled
-@media only screen and (prefers-color-scheme: dark) {
-  :root:not([data-theme]) {
-    #{$✨}header-background: #{rgba(mix($slate-950, $slate-900), 0.85)};
-  }
-}
-
-// Dark color scheme (Forced)
-// Enabled if forced with data-theme="dark"
-[data-theme="dark"] {
-  --pico-header-background: #{rgba(mix($slate-950, $slate-900), 0.85)};
-}
-
 body {
   > header {
-    z-index: 99;
-    position: fixed;
-    inset: 0 0 auto 0;
     padding-block: 0.625rem;
-    border-bottom: 1px solid var(#{$✨}muted-border-color);
+    border-bottom: 1px solid var(#{$✨}header-border-color);
     backdrop-filter: blur(1rem);
     background-color: var(#{$✨}header-background);
     box-shadow: var(#{$✨}card-box-shadow);
@@ -54,6 +24,17 @@ body {
           height: 1.125rem;
           transform: translateY(-0.05em);
         }
+      }
+    }
+
+    // Fixed header
+    &.fixed {
+      z-index: 99;
+      position: fixed;
+      inset: 0 0 auto 0;
+
+      + main {
+        margin-top: 4.75rem;
       }
     }
   }

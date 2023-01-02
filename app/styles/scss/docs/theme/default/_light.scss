@@ -1,0 +1,14 @@
+@use "colors" as *;
+@use "settings" as *;
+
+@mixin theme {
+  // Card for components
+  #{$✨}card-component-outline-width: 0;
+  #{$✨}card-component-outline-color: transparent;
+
+  // Code
+  #{$✨}code-tag: #{$pumpkin-550};
+  #{$✨}code-attr: #{mix($zinc-550, $fuchsia-550, 25%)};
+  #{$✨}code-value: #{mix($zinc-550, $jade-550, 50%)};
+  #{$✨}code-comment: #{$zinc-500};
+}

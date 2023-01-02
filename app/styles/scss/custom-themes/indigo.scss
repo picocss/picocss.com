@@ -1,0 +1,48 @@
+@use "sass:map";
+@use "colors" as *;
+@use "settings" as *;
+
+$colorName: "Indigo";
+
+// Light
+@mixin light {
+  #{$✨}primary: #{$indigo-550};
+  #{$✨}primary-hover: #{$indigo-650};
+  #{$✨}primary-underline: #{rgba($indigo-550, 0.5)};
+  #{$✨}primary-background: #{$indigo-600};
+  #{$✨}primary-background-hover: #{$indigo-650};
+  #{$✨}primary-focus: #{rgba($indigo-400, 0.25)};
+  #{$✨}primary-inverse: #{$white};
+}
+
+// Dark
+@mixin dark {
+  #{$✨}primary: #{$indigo-350};
+  #{$✨}primary-hover: #{$indigo-250};
+  #{$✨}primary-underline: #{rgba($indigo-350, 0.5)};
+  #{$✨}primary-background: #{$indigo-600};
+  #{$✨}primary-background-hover: #{$indigo-550};
+  #{$✨}primary-focus: #{rgba($indigo-350, 0.25)};
+  #{$✨}primary-inverse: #{$white};
+}
+
+/* #{$colorName} color for light color scheme (Default) */
+/* Can be forced with data-theme="light" */
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+  @include light;
+}
+
+/* #{$colorName} color for dark color scheme (Auto) */
+/* Automatically enabled if user has Dark mode enabled */
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    @include dark;
+  }
+}
+
+/* #{$colorName} color for dark color scheme (Forced) */
+/* Enabled if forced with data-theme="dark" */
+[data-theme="dark"] {
+  @include dark;
+}

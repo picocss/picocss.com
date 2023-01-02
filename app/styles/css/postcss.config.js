@@ -1,12 +1,12 @@
 module.exports = {
-  map: { 
+  map: {
     inline: false,
     annotation: true,
-    sourcesContent: true
+    sourcesContent: true,
   },
   plugins: {
     autoprefixer: {
-      cascade: false
-    }
-  }
-}
+      cascade: false,
+    },
+  },
+};

@@ -8,6 +8,10 @@ import { usePage } from "~/contexts/PageContext";
 
 export default function Nav(props) {
   const { pageTheme, switchTheme } = usePage();
+  const handleSwitchTheme = (e) => {
+    e.preventDefault();
+    switchTheme();
+  };
   return (
     <nav {...props}>
       <ul>
@@ -22,6 +26,7 @@ export default function Nav(props) {
             target="_blank"
             rel="noreferrer"
             className="secondary"
+            aria-label="GitHub repository"
           >
             <GitHubIcon />
           </a>
@@ -32,14 +37,19 @@ export default function Nav(props) {
             target="_blank"
             rel="noreferrer"
             className="secondary"
+            aria-label="Twitter"
           >
             <TwitterIcon />
           </a>
         </li>
         <li>
-          <a href="#test" className="secondary" onClick={switchTheme}>
+          <Link
+            className="secondary"
+            onClick={handleSwitchTheme}
+            aria-label={pageTheme === "dark" ? "Turn off dark mode" : "Turn on dark mode"}
+          >
             {pageTheme === "dark" ? <SunIcon /> : <MoonIcon />}
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>

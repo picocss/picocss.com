@@ -1,7 +1,18 @@
 import { Link as RemixLink } from "@remix-run/react";
 import useCurrentPath from "~/utils/useCurrentPath";
 
-export default function Link({ to, ...props }) {
+export default function Link({ preventScrollReset = false, to, ...props }) {
   const currentPath = useCurrentPath();
-  return <RemixLink to={to} {...(currentPath === to && { "aria-current": "page" })} {...props} />;
+  const unFocus = (event) => {
+    event.target.blur();
+  };
+  return (
+    <RemixLink
+      to={to}
+      {...(currentPath === to && { "aria-current": "page" })}
+      onMouseLeave={unFocus}
+      state={{ preventScrollReset }}
+      {...props}
+    />
+  );
 }

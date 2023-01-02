@@ -1,0 +1,13 @@
+@use "colors" as *;
+@use "settings" as *;
+
+@mixin theme {
+  // Header
+  #{$✨}header-background: #{rgba(mix($slate-950, $slate-900), 0.85)};
+  #{$✨}header-border-color: var(#{$✨}muted-border-color);
+
+  // Logo
+  #{$✨}logo-wordmark: #{$white};
+  #{$✨}logo-small-sparkles: #{$pumpkin-300};
+  #{$✨}logo-big-sparkle: #{$amber-200};
+}

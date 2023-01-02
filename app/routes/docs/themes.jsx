@@ -3,8 +3,10 @@ import Code from "~/components/Code";
 
 import { usePage } from "~/contexts/PageContext";
 
+const { titleSuffix } = metaData();
+
 export const meta = () => ({
-  title: `Themes ${metaData.titleSuffix}`,
+  title: `Themes ${titleSuffix}`,
   description:
     "Pico is shipped with two beautiful and consistent color themes, automatically enabled according to the user's preference.",
 });
@@ -19,18 +21,21 @@ export default function Themes() {
         <h1>Themes</h1>
         <h2>Pico is shipped with 2 consistent themes: Light & Dark.</h2>
       </hgroup>
+
       <p>
         The default theme is Light. The Dark theme is automatically enabled if the user has dark
-        mode enabled <code>prefers-color-scheme: dark</code>.
+        mode enabled <Code display="inline" language="css">{`prefers-color-scheme: dark;`}</Code>.
       </p>
       <article aria-label="Theme switcher">
         <button className="contrast" aria-label={changeThemeLabel} onClick={switchTheme}>
           {changeThemeLabel}
         </button>
       </article>
+
       <p>
-        Themes can be forced on document level <code>{`<html data-theme="light">`}</code> or on any
-        HTML element <code>{`<article data-theme="dark">`}</code>
+        Themes can be forced on document level{" "}
+        <Code display="inline">{`<html data-theme="light">`}</Code> or on any HTML element{" "}
+        <Code display="inline">{`<article data-theme="dark">`}</Code>
       </p>
       <article data-theme="light" aria-label="Forced light theme example">
         <h3>Light card</h3>
@@ -60,23 +65,18 @@ export default function Themes() {
           </fieldset>
           <fieldset>
             <label>
-              <input
-                type="checkbox"
-                role="switch"
-                id="switch"
-                name="switch"
-                defaultChecked={true}
-              />{" "}
-              Remember me
+              <input type="checkbox" role="switch" name="switch" defaultChecked={true} /> Remember
+              me
             </label>
           </fieldset>
         </form>
         <footer>
-          <Code language="html">{`<article data-theme="light">
+          <Code>{`<article data-theme="light">
   …
 </article>`}</Code>
         </footer>
       </article>
+
       <article data-theme="dark" aria-label="Forced dark theme example">
         <h3>Dark card</h3>
         <form>
@@ -87,7 +87,6 @@ export default function Themes() {
               placeholder="Login"
               aria-label="Login"
               autoComplete="nickname"
-              required
             />
             <input
               type="password"
@@ -95,31 +94,20 @@ export default function Themes() {
               placeholder="Password"
               aria-label="Password"
               autoComplete="current-password"
-              required
             />
-            <button
-              type="submit"
-              aria-label="Example button"
-              onClick={(event) => event.preventDefault()}
-            >
+            <button type="submit" onClick={(event) => event.preventDefault()}>
               Login
             </button>
           </fieldset>
           <fieldset>
             <label>
-              <input
-                type="checkbox"
-                role="switch"
-                id="switch"
-                name="switch"
-                defaultChecked={true}
-              />{" "}
-              Remember me
+              <input type="checkbox" role="switch" name="switch" defaultChecked={true} /> Remember
+              me
             </label>
           </fieldset>
         </form>
         <footer>
-          <Code language="html">{`<article data-theme="dark">
+          <Code>{`<article data-theme="dark">
   …
 </article>`}</Code>
         </footer>

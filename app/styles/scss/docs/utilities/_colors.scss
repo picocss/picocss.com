@@ -1,0 +1,12 @@
+/**
+ * Docs: color picker utilities
+ */
+
+@use "pico.colors" with (
+  $palette: (
+    "enable-shades": false,
+  ),
+  $utilities: (
+    "colors": false,
+  )
+);

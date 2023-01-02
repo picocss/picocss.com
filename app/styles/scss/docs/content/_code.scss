@@ -1,56 +1,74 @@
 @use "colors" as *;
+@use "settings" as *;
 
 /**
  * Docs: Code
  */
 
-// Light color scheme (Default)
-// Can be forced with data-theme="light"
-[data-theme="light"],
-:root:not([data-theme="dark"]) {
-  --pico-code-tag: #{$pumpkin-550};
-  --pico-code-attr: #{mix($zinc-550, $fuchsia-550, 25%)};
-  --pico-code-value: #{mix($zinc-550, $jade-550, 50%)};
-  --pico-code-comment: #{$zinc-500};
-}
-
-// Dark color scheme (Auto)
-// Automatically enabled if user has Dark mode enabled
-@media only screen and (prefers-color-scheme: dark) {
-  :root:not([data-theme]) {
-    --pico-code-tag: #{mix($zinc-400, $amber-400, 50%)};
-    --pico-code-attr: #{mix($zinc-400, $fuchsia-400, 62.5%)};
-    --pico-code-value: #{mix($zinc-400, $jade-400, 75%)};
-    --pico-code-comment: #{$zinc-600};
-  }
-}
-
-// Dark color scheme (Forced)
-// Enabled if forced with data-theme="dark"
-[data-theme="dark"] {
-  --pico-code-tag: #{mix($zinc-400, $pumpkin-400, 50%)};
-  --pico-code-attr: #{mix($zinc-400, $fuchsia-400, 62.5%)};
-  --pico-code-value: #{mix($zinc-400, $jade-400, 75%)};
-  --pico-code-comment: #{$zinc-600};
-}
-
 .token {
   &.tag:not(.punctuation),
   &.property {
-    color: var(--pico-code-tag);
+    color: var(#{$✨}code-tag);
   }
   &.tag.attr-name:not(.punctuation),
   &.selector:not(.punctuation),
   &.keyword,
-  &.boolean {
-    color: var(--pico-code-attr);
+  &.boolean,
+  &.function {
+    color: var(#{$✨}code-attr);
   }
   &.tag.attr-value:not(.attr-equals),
   &.string {
-    color: var(--pico-code-value);
+    color: var(#{$✨}code-value);
   }
   &.comment:not(.punctuation),
   &.doctype {
-    color: var(--pico-code-comment);
+    color: var(#{$✨}code-comment);
+  }
+}
+
+.code {
+  position: relative;
+
+  > button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.375rem 0.5rem;
+    font-size: 14px;
+    opacity: 0;
+    transition: background-color var(#{$✨}transition), border-color var(#{$✨}transition),
+      color var(#{$✨}transition), box-shadow var(#{$✨}transition), opacity var(#{$✨}transition);
+  }
+
+  &:hover {
+    button {
+      opacity: 1;
+    }
+  }
+}
+
+.code.small {
+  > button {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+p > code {
+  color: inherit;
+}
+
+article footer:has(.code) {
+  position: relative;
+
+  &:hover {
+    button {
+      opacity: 1;
+    }
+  }
+
+  .code {
+    position: initial;
   }
 }

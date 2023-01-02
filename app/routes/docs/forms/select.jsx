@@ -1,0 +1,119 @@
+import metaData from "~/data/meta";
+import Code from "~/components/Code";
+import Link from "~/components/Link";
+
+const { titleSuffix } = metaData();
+
+export const meta = () => ({
+  title: `Select ${titleSuffix}`,
+  description: "Selects are styled like inputs.",
+});
+
+export default function Accordions() {
+  const preventDefault = (e) => e.preventDefault();
+  return (
+    <>
+      <hgroup>
+        <h1>Select</h1>
+        <h2>Selects are styled like inputs.</h2>
+      </hgroup>
+
+      <article aria-label="Select example" className="component">
+        <label htmlFor="fruit">Fruit</label>
+        <select id="fruit" defaultValue="Select a fruit…">
+          <option disabled>Select a fruit…</option>
+          <option>Banana</option>
+          <option>Watermelon</option>
+          <option>Apple</option>
+          <option>Orange</option>
+          <option>Mango</option>
+        </select>
+        <footer>
+          <Code>{`<label for="fruit">Fruit</label>
+<select id="fruit">
+  <option selected disabled>Select a fruit…</option>
+  <option>Banana</option>
+  <option>Watermelon</option>
+  <option>Apple</option>
+  <option>Orange</option>
+  <option>Mango</option>
+</select>`}</Code>
+        </footer>
+      </article>
+
+      <p>
+        Validation states are provided with <Code display="inline">aria-invalid</Code>.
+      </p>
+      <article aria-label="Select example" className="component">
+        <select defaultValue="Banana" aria-invalid="false">
+          <option disabled>Select a fruit…</option>
+          <option>Banana</option>
+          <option>Watermelon</option>
+          <option>Apple</option>
+          <option>Orange</option>
+          <option>Mango</option>
+        </select>
+        <small>Looks good!</small>
+        <select defaultValue="Select a fruit…" aria-invalid="true">
+          <option disabled>Select a fruit…</option>
+          <option>Banana</option>
+          <option>Watermelon</option>
+          <option>Apple</option>
+          <option>Orange</option>
+          <option>Mango</option>
+        </select>
+        <small>Please select a fruit!</small>
+        <footer>
+          <Code>{`<select aria-invalid="false">
+  …
+</select>
+<small>Looks good!</small>
+
+<select aria-invalid="true">
+  …
+</select>
+<small>Please select a fruit!</small>`}</Code>
+        </footer>
+      </article>
+
+      <p>
+        The dropdown component allows you to build a custom select with the same style as the native
+        select. See <Link to="/docs/dropdown">Dropdown</Link>.
+      </p>
+      <article aria-label="Dropdowns as selects" className="component">
+        <div className="grid">
+          <details role="list">
+            <summary aria-haspopup="listbox">Dropdown</summary>
+            <ul role="listbox">
+              <li>
+                <a href="#action" onClick={preventDefault}>
+                  Action
+                </a>
+              </li>
+              <li>
+                <a href="#action" onClick={preventDefault}>
+                  Another action
+                </a>
+              </li>
+              <li>
+                <a href="#action" onClick={preventDefault}>
+                  Something else
+                </a>
+              </li>
+            </ul>
+          </details>
+        </div>
+        <footer>
+          <Code>{`<details role="list">
+  <summary aria-haspopup="listbox">Dropdown</summary>
+  <ul role="listbox">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else</a></li>
+  </ul>
+</details>`}</Code>
+        </footer>
+      </article>
+    </>
+  );
+}

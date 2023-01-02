@@ -7,7 +7,19 @@
 
 main {
   [role="document"] {
-    > pre {
+    article {
+      footer {
+        pre,
+        pre code {
+          margin-bottom: 0;
+          padding: 0;
+          background: transparent;
+        }
+      }
+    }
+
+    > .code pre,
+    hgroup {
       @each $key, $values in $breakpoints {
         @if $values {
           @media (min-width: map.get($values, "breakpoint")) {
@@ -22,24 +34,28 @@ main {
               $multiplier: 2;
             }
             #{$✨}block-spacing-horizontal: calc(var(#{$✨}spacing) * $multiplier);
-
-            $multiplier: 1;
-            @if $key == "sm" {
-              $multiplier: 2.5;
-            } @else if $key == "md" {
-              $multiplier: 3;
-            } @else if $key == "lg" {
-              $multiplier: 3.5;
-            } @else if $key == "xl" {
-              $multiplier: 4;
-            }
             #{$✨}block-spacing-vertical: calc(var(#{$✨}spacing) * $multiplier);
           }
         }
       }
-      margin: var(#{$✨}block-spacing-vertical) 0;
+
+      margin-bottom: var(#{$✨}block-spacing-vertical);
+    }
+
+    > .code pre {
       padding: calc(var(#{$✨}block-spacing-vertical) * 0.75) var(#{$✨}block-spacing-horizontal);
+      background-color: var(#{$✨}card-background-color);
       box-shadow: var(#{$✨}card-box-shadow);
+
+      code {
+        padding-right: 0;
+        padding-left: 0;
+        background: transparent;
+      }
+    }
+
+    > .code.small pre {
+      padding: calc(var(#{$✨}block-spacing-vertical) * 0.25) var(#{$✨}block-spacing-horizontal);
     }
   }
 }

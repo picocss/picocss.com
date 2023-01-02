@@ -1,5 +1,8 @@
-// Pico
+// Regular Pico CSS
 @use "pico";
+
+// Theme
+@use "commons/theme/default";
 
 // Layouts
 @use "commons/layout/document";

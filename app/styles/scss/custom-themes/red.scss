@@ -1,0 +1,48 @@
+@use "sass:map";
+@use "colors" as *;
+@use "settings" as *;
+
+$colorName: "Red";
+
+// Light
+@mixin light {
+  #{$✨}primary: #{$red-550};
+  #{$✨}primary-hover: #{$red-650};
+  #{$✨}primary-underline: #{rgba($red-550, 0.5)};
+  #{$✨}primary-background: #{$red-550};
+  #{$✨}primary-background-hover: #{$red-600};
+  #{$✨}primary-focus: #{rgba($red-400, 0.25)};
+  #{$✨}primary-inverse: #{$white};
+}
+
+// Dark
+@mixin dark {
+  #{$✨}primary: #{$red-350};
+  #{$✨}primary-hover: #{$red-250};
+  #{$✨}primary-underline: #{rgba($red-350, 0.5)};
+  #{$✨}primary-background: #{$red-550};
+  #{$✨}primary-background-hover: #{$red-500};
+  #{$✨}primary-focus: #{rgba($red-350, 0.25)};
+  #{$✨}primary-inverse: #{$white};
+}
+
+/* #{$colorName} color for light color scheme (Default) */
+/* Can be forced with data-theme="light" */
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+  @include light;
+}
+
+/* #{$colorName} color for dark color scheme (Auto) */
+/* Automatically enabled if user has Dark mode enabled */
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    @include dark;
+  }
+}
+
+/* #{$colorName} color for dark color scheme (Forced) */
+/* Enabled if forced with data-theme="dark" */
+[data-theme="dark"] {
+  @include dark;
+}

@@ -5,12 +5,12 @@
  */
 
 main {
-  aside {
+  > aside {
     #{$✨}font-size: 14px;
     font-size: var(#{$✨}font-size);
 
     details {
-      border-bottom: none;
+      // border-bottom: none;
 
       summary {
         text-transform: uppercase;
@@ -18,6 +18,22 @@ main {
         &:after {
           display: none;
         }
+      }
+
+      &[open] {
+        summary {
+          margin-bottom: calc(var(--pico-spacing) * 0.75);
+        }
+      }
+    }
+
+    li {
+      padding: 0;
+
+      a {
+        margin: 0;
+        padding-top: calc(var(#{$✨}nav-element-spacing-vertical) * 0.25);
+        padding-bottom: calc(var(#{$✨}nav-element-spacing-vertical) * 0.25);
       }
     }
   }

@@ -16,5 +16,13 @@ main {
     h1:first-of-type {
       margin-top: -0.375em;
     }
+
+    &#themes {
+      article:first-of-type {
+        button {
+          width: 100%;
+        }
+      }
+    }
   }
 }

@@ -1,0 +1,48 @@
+@use "sass:map";
+@use "colors" as *;
+@use "settings" as *;
+
+$colorName: "Azure";
+
+// Light
+@mixin light {
+  #{$✨}primary: #{$azure-550};
+  #{$✨}primary-hover: #{$azure-650};
+  #{$✨}primary-underline: #{rgba($azure-550, 0.5)};
+  #{$✨}primary-background: #{$azure-550};
+  #{$✨}primary-background-hover: #{$azure-600};
+  #{$✨}primary-focus: #{rgba($azure-400, 0.25)};
+  #{$✨}primary-inverse: #{$white};
+}
+
+// Dark
+@mixin dark {
+  #{$✨}primary: #{$azure-350};
+  #{$✨}primary-hover: #{$azure-250};
+  #{$✨}primary-underline: #{rgba($azure-350, 0.5)};
+  #{$✨}primary-background: #{$azure-550};
+  #{$✨}primary-background-hover: #{$azure-500};
+  #{$✨}primary-focus: #{rgba($azure-350, 0.25)};
+  #{$✨}primary-inverse: #{$white};
+}
+
+/* #{$colorName} color for light color scheme (Default) */
+/* Can be forced with data-theme="light" */
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+  @include light;
+}
+
+/* #{$colorName} color for dark color scheme (Auto) */
+/* Automatically enabled if user has Dark mode enabled */
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    @include dark;
+  }
+}
+
+/* #{$colorName} color for dark color scheme (Forced) */
+/* Enabled if forced with data-theme="dark" */
+[data-theme="dark"] {
+  @include dark;
+}

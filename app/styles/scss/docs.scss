@@ -1,8 +1,18 @@
+// Theme
+@use "docs/theme/default";
+
 // Layouts
 @use "docs/layout/main";
 @use "docs/layout/aside";
 @use "docs/layout/role-document";
 @use "docs/layout/sectionning";
 
-// Components
+// Content
 @use "docs/content/code";
+
+// Components
+@use "docs/components/card";
+@use "docs/components/card-color-picker";
+
+// Utilities
+@use "docs/utilities/colors";

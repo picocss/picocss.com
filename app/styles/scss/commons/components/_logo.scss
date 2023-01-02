@@ -4,39 +4,78 @@
  * Logo
  */
 
-// Light color scheme (Default)
-// Can be forced with data-theme="light"
-[data-theme="light"],
-:root:not([data-theme="dark"]) {
-  --pico-logo-wordmark: #{$slate-800};
-  --pico-logo-small-sparkles: #{$amber-200};
-  --pico-logo-big-sparkle: #{$pumpkin-300};
-}
-
-// Dark color scheme (Auto)
-// Automatically enabled if user has Dark mode enabled
-@media only screen and (prefers-color-scheme: dark) {
-  :root:not([data-theme]) {
-    --pico-logo-wordmark: #{$white};
-    --pico-logo-small-sparkles: #{$pumpkin-300};
-    --pico-logo-big-sparkle: #{$amber-200};
-  }
-}
-
-// Dark color scheme (Forced)
-// Enabled if forced with data-theme="dark"
-[data-theme="dark"] {
-  --pico-logo-wordmark: #{$white};
-  --pico-logo-small-sparkles: #{$pumpkin-300};
-  --pico-logo-big-sparkle: #{$amber-200};
-}
-
 // Component
 body {
   > header {
-    svg {
-      width: auto;
-      height: 2.25rem;
+    .container {
+      > a {
+        svg {
+          width: auto;
+          height: 2.25rem;
+          transition: filter 0.2s ease-in-out;
+
+          &.sparkle {
+            path {
+              &:first-of-type,
+              &:nth-of-type(2),
+              &:nth-of-type(3) {
+                animation-duration: var(--animate-duration);
+                animation-timing-function: ease-in-out;
+                animation-delay: var(--animate-delay);
+                animation-fill-mode: both;
+                animation-name: sparkle;
+              }
+
+              &:nth-of-type(3) {
+                --animate-duration: 0.75s;
+                --animate-delay: 0s;
+                transform-origin: 309px 78px;
+              }
+
+              &:first-of-type {
+                --animate-duration: 0.875s;
+                --animate-delay: 0.125s;
+                transform-origin: 345px 48px;
+              }
+
+              &:nth-of-type(2) {
+                --animate-duration: 0.75s;
+                --animate-delay: 0.375s;
+                transform-origin: 297px 18px;
+              }
+            }
+          }
+        }
+      }
     }
+  }
+}
+
+@keyframes sparkle {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  15% {
+    transform: scale(1.25);
+    opacity: 1;
+  }
+
+  30% {
+    transform: scale(1);
+  }
+
+  40% {
+    transform: scale(1.25);
+    opacity: 0.75;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  80% {
+    transform: scale(1);
   }
 }

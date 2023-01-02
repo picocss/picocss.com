@@ -1,0 +1,48 @@
+@use "sass:map";
+@use "colors" as *;
+@use "settings" as *;
+
+$colorName: "Cyan";
+
+// Light
+@mixin light {
+  #{$✨}primary: #{$cyan-550};
+  #{$✨}primary-hover: #{$cyan-650};
+  #{$✨}primary-underline: #{rgba($cyan-550, 0.5)};
+  #{$✨}primary-background: #{$cyan-550};
+  #{$✨}primary-background-hover: #{$cyan-600};
+  #{$✨}primary-focus: #{rgba($cyan-400, 0.25)};
+  #{$✨}primary-inverse: #{$white};
+}
+
+// Dark
+@mixin dark {
+  #{$✨}primary: #{$cyan-350};
+  #{$✨}primary-hover: #{$cyan-250};
+  #{$✨}primary-underline: #{rgba($cyan-350, 0.5)};
+  #{$✨}primary-background: #{$cyan-550};
+  #{$✨}primary-background-hover: #{$cyan-500};
+  #{$✨}primary-focus: #{rgba($cyan-350, 0.25)};
+  #{$✨}primary-inverse: #{$white};
+}
+
+/* #{$colorName} color for light color scheme (Default) */
+/* Can be forced with data-theme="light" */
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+  @include light;
+}
+
+/* #{$colorName} color for dark color scheme (Auto) */
+/* Automatically enabled if user has Dark mode enabled */
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    @include dark;
+  }
+}
+
+/* #{$colorName} color for dark color scheme (Forced) */
+/* Enabled if forced with data-theme="dark" */
+[data-theme="dark"] {
+  @include dark;
+}

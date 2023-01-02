@@ -1,0 +1,26 @@
+@use "settings" as *;
+
+article.color-picker {
+  > header {
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    border-top-left-radius: var(#{$✨}border-radius);
+    border-top-right-radius: var(#{$✨}border-radius);
+    overflow: hidden;
+
+    a,
+    a:is(:hover, :active, :focus) {
+      margin-bottom: 0;
+      box-shadow: none;
+      border: none;
+      border-radius: 0;
+      padding: 0;
+      aspect-ratio: 1/1;
+    }
+  }
+
+  h3 {
+    color: var(#{$✨}primary);
+  }
+}
