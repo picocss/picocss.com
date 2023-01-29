@@ -6,6 +6,7 @@ $colorName: "Jade";
 
 // Light
 @mixin light {
+  #{$✨}text-selection-color: #{rgba($jade-400, 0.25)};
   #{$✨}primary: #{$jade-550};
   #{$✨}primary-hover: #{$jade-650};
   #{$✨}primary-underline: #{rgba($jade-550, 0.5)};
@@ -17,6 +18,7 @@ $colorName: "Jade";
 
 // Dark
 @mixin dark {
+  #{$✨}text-selection-color: #{rgba($jade-350, 0.1875)};
   #{$✨}primary: #{$jade-350};
   #{$✨}primary-hover: #{$jade-250};
   #{$✨}primary-underline: #{rgba($jade-350, 0.5)};

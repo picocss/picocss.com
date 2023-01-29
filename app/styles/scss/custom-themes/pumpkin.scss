@@ -6,6 +6,7 @@ $colorName: "Pumpkin";
 
 // Light
 @mixin light {
+  #{$✨}text-selection-color: #{rgba($pumpkin-400, 0.25)};
   #{$✨}primary: #{$pumpkin-550};
   #{$✨}primary-hover: #{$pumpkin-650};
   #{$✨}primary-underline: #{rgba($pumpkin-550, 0.5)};
@@ -18,6 +19,7 @@ $colorName: "Pumpkin";
 
 // Dark
 @mixin dark {
+  #{$✨}text-selection-color: #{rgba($pumpkin-350, 0.1875)};
   #{$✨}primary: #{$pumpkin-350};
   #{$✨}primary-hover: #{$pumpkin-250};
   #{$✨}primary-underline: #{rgba($pumpkin-350, 0.5)};

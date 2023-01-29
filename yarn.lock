@@ -1488,9 +1488,8 @@
   version "0.0.4"
   resolved "https://codeload.github.com/picocss/colors/tar.gz/a7f29c899be14b77fde2fb5436cba42b87e454a5"
 
-"@picocss/pico@https://github.com/picocss/pico#v2":
+"@picocss/pico@./../../pico":
   version "2.0.0-alpha1"
-  resolved "https://github.com/picocss/pico#dfa4041b774ac08f0f5396ca63edc0ae05bc5a0f"
   dependencies:
     "@picocss/colors" "github:picocss/colors"
 

@@ -6,6 +6,7 @@ $colorName: "Azure";
 
 // Light
 @mixin light {
+  #{$✨}text-selection-color: #{rgba($azure-400, 0.25)};
   #{$✨}primary: #{$azure-550};
   #{$✨}primary-hover: #{$azure-650};
   #{$✨}primary-underline: #{rgba($azure-550, 0.5)};
@@ -17,6 +18,7 @@ $colorName: "Azure";
 
 // Dark
 @mixin dark {
+  #{$✨}text-selection-color: #{rgba($azure-350, 0.1875)};
   #{$✨}primary: #{$azure-350};
   #{$✨}primary-hover: #{$azure-250};
   #{$✨}primary-underline: #{rgba($azure-350, 0.5)};

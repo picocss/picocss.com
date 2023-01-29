@@ -6,6 +6,7 @@ $colorName: "Orange";
 
 // Light
 @mixin light {
+  #{$✨}text-selection-color: #{rgba($orange-400, 0.25)};
   #{$✨}primary: #{$orange-550};
   #{$✨}primary-hover: #{$orange-650};
   #{$✨}primary-underline: #{rgba($orange-550, 0.5)};
@@ -17,6 +18,7 @@ $colorName: "Orange";
 
 // Dark
 @mixin dark {
+  #{$✨}text-selection-color: #{rgba($orange-350, 0.1875)};
   #{$✨}primary: #{$orange-350};
   #{$✨}primary-hover: #{$orange-250};
   #{$✨}primary-underline: #{rgba($orange-350, 0.5)};

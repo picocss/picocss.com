@@ -6,6 +6,7 @@ $colorName: "Lime";
 
 // Light
 @mixin light {
+  #{$✨}text-selection-color: #{rgba($lime-400, 0.25)};
   #{$✨}primary: #{$lime-550};
   #{$✨}primary-hover: #{$lime-650};
   #{$✨}primary-underline: #{rgba($lime-550, 0.5)};
@@ -18,6 +19,7 @@ $colorName: "Lime";
 
 // Dark
 @mixin dark {
+  #{$✨}text-selection-color: #{rgba($lime-350, 0.1875)};
   #{$✨}primary: #{$lime-350};
   #{$✨}primary-hover: #{$lime-250};
   #{$✨}primary-underline: #{rgba($lime-350, 0.5)};

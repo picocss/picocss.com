@@ -41,6 +41,38 @@ export default function Accordions() {
         </footer>
       </article>
 
+      <p>Multiples</p>
+      <article aria-label="Disabled and read-only example" className="component">
+        <select defaultValue="Select a fruit…" multiple size="5">
+          <option disabled>Select a fruit…</option>
+          <option>Banana</option>
+          <option>Watermelon</option>
+          <option>Apple</option>
+          <option>Orange</option>
+          <option>Mango</option>
+        </select>
+        <footer>
+          <Code>{`<input type="text" placeholder="Disabled" aria-label="Disabled input" disabled>
+<input type="text" value="Read-only" aria-label="Read-only input" readonly>`}</Code>
+        </footer>
+      </article>
+
+      <p>Selects can be disabled or read-only.</p>
+      <article aria-label="Disabled and read-only example" className="component">
+        <select defaultValue="Select a fruit…" disabled>
+          <option disabled>Select a fruit…</option>
+          <option>Banana</option>
+          <option>Watermelon</option>
+          <option>Apple</option>
+          <option>Orange</option>
+          <option>Mango</option>
+        </select>
+        <footer>
+          <Code>{`<input type="text" placeholder="Disabled" aria-label="Disabled input" disabled>
+<input type="text" value="Read-only" aria-label="Read-only input" readonly>`}</Code>
+        </footer>
+      </article>
+
       <p>
         Validation states are provided with <Code display="inline">aria-invalid</Code>.
       </p>

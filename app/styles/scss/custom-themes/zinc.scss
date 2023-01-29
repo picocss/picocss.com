@@ -6,6 +6,7 @@ $colorName: "Zinc";
 
 // Light
 @mixin light {
+  #{$✨}text-selection-color: #{rgba($zinc-400, 0.25)};
   #{$✨}primary: #{$zinc-550};
   #{$✨}primary-hover: #{$zinc-650};
   #{$✨}primary-underline: #{rgba($zinc-550, 0.5)};
@@ -17,6 +18,7 @@ $colorName: "Zinc";
 
 // Dark
 @mixin dark {
+  #{$✨}text-selection-color: #{rgba($zinc-350, 0.1875)};
   #{$✨}primary: #{$zinc-350};
   #{$✨}primary-hover: #{$zinc-250};
   #{$✨}primary-underline: #{rgba($zinc-350, 0.5)};

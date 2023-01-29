@@ -286,6 +286,14 @@ export default function Typography() {
     <cite>— Phasellus eget lacinia</cite>
   </footer>
 </blockquote>`}</Code>
+
+      {/* <h2>Horizontal rules</h2>
+      <article aria-label="Horizontal rule example" className="component">
+        <hr />
+        <footer>
+          <Code>{`<hr />`}</Code>
+        </footer>
+      </article> */}
     </>
   );
 }

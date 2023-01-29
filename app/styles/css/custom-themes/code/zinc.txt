@@ -1,1 +1,42 @@
-:root:not([data-theme=dark]),[data-theme=light]{--pico-primary:#646b79;--pico-primary-hover:#4d535e;--pico-primary-underline:rgba(100, 107, 121, 0.5);--pico-primary-background:#646b79;--pico-primary-background-hover:#5c6370;--pico-primary-focus:rgba(136, 145, 164, 0.25);--pico-primary-inverse:#fff}@media only screen and (prefers-color-scheme:dark){:root:not([data-theme]){--pico-primary:#969eaf;--pico-primary-hover:#b3b9c5;--pico-primary-underline:rgba(150, 158, 175, 0.5);--pico-primary-background:#646b79;--pico-primary-background-hover:#6f7887;--pico-primary-focus:rgba(150, 158, 175, 0.25);--pico-primary-inverse:#fff}}[data-theme=dark]{--pico-primary:#969eaf;--pico-primary-hover:#b3b9c5;--pico-primary-underline:rgba(150, 158, 175, 0.5);--pico-primary-background:#646b79;--pico-primary-background-hover:#6f7887;--pico-primary-focus:rgba(150, 158, 175, 0.25);--pico-primary-inverse:#fff}
+/* Zinc color for light color scheme (Default) */
+/* Can be forced with data-theme="light" */
+[data-theme=light],
+:root:not([data-theme=dark]) {
+  --pico-text-selection-color: rgba(136, 145, 164, 0.25);
+  --pico-primary: #646b79;
+  --pico-primary-hover: #4d535e;
+  --pico-primary-underline: rgba(100, 107, 121, 0.5);
+  --pico-primary-background: #646b79;
+  --pico-primary-background-hover: #5c6370;
+  --pico-primary-focus: rgba(136, 145, 164, 0.25);
+  --pico-primary-inverse: #fff;
+}
+
+/* Zinc color for dark color scheme (Auto) */
+/* Automatically enabled if user has Dark mode enabled */
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --pico-text-selection-color: rgba(150, 158, 175, 0.1875);
+    --pico-primary: #969eaf;
+    --pico-primary-hover: #b3b9c5;
+    --pico-primary-underline: rgba(150, 158, 175, 0.5);
+    --pico-primary-background: #646b79;
+    --pico-primary-background-hover: #6f7887;
+    --pico-primary-focus: rgba(150, 158, 175, 0.25);
+    --pico-primary-inverse: #fff;
+  }
+}
+/* Zinc color for dark color scheme (Forced) */
+/* Enabled if forced with data-theme="dark" */
+[data-theme=dark] {
+  --pico-text-selection-color: rgba(150, 158, 175, 0.1875);
+  --pico-primary: #969eaf;
+  --pico-primary-hover: #b3b9c5;
+  --pico-primary-underline: rgba(150, 158, 175, 0.5);
+  --pico-primary-background: #646b79;
+  --pico-primary-background-hover: #6f7887;
+  --pico-primary-focus: rgba(150, 158, 175, 0.25);
+  --pico-primary-inverse: #fff;
+}
+
+/*# sourceMappingURL=zinc.css.map */

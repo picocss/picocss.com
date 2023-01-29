@@ -42,6 +42,10 @@ main {
       margin-bottom: var(#{$✨}block-spacing-vertical);
     }
 
+    hgroup {
+      margin-bottom: calc(var(#{$✨}block-spacing-vertical) * 2);
+    }
+
     > .code pre {
       padding: calc(var(#{$✨}block-spacing-vertical) * 0.75) var(#{$✨}block-spacing-horizontal);
       background-color: var(#{$✨}card-background-color);

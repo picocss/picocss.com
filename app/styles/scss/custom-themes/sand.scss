@@ -6,6 +6,7 @@ $colorName: "Sand";
 
 // Light
 @mixin light {
+  #{$✨}text-selection-color: #{rgba($sand-400, 0.25)};
   #{$✨}primary: #{$sand-550};
   #{$✨}primary-hover: #{$sand-650};
   #{$✨}primary-underline: #{rgba($sand-550, 0.5)};
@@ -18,6 +19,7 @@ $colorName: "Sand";
 
 // Dark
 @mixin dark {
+  #{$✨}text-selection-color: #{rgba($sand-350, 0.1875)};
   #{$✨}primary: #{$sand-350};
   #{$✨}primary-hover: #{$sand-250};
   #{$✨}primary-underline: #{rgba($sand-350, 0.5)};

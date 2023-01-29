@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "settings" as *;
 
 /**
@@ -6,34 +7,96 @@
 
 main {
   > aside {
-    #{$✨}font-size: 14px;
+    #{$✨}font-size: 16px;
     font-size: var(#{$✨}font-size);
 
-    details {
-      // border-bottom: none;
+    // Expand button
+    > button {
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0;
+      padding-bottom: 1rem;
+      border: none;
+      border-bottom: 1px solid var(#{$✨}muted-border-color);
+      border-radius: 0;
+      background-color: transparent;
+      box-shadow: none;
+      color: var(#{$✨}secondary);
+      text-align: left;
 
-      summary {
-        text-transform: uppercase;
-
-        &:after {
-          display: none;
-        }
+      svg {
+        width: auto;
+        height: 1rem;
+        padding-right: var(#{$✨}nav-element-spacing-horizontal);
       }
+      @media (min-width: map.get(map.get($breakpoints, "lg"), "breakpoint")) {
+        display: none;
+      }
+    }
 
-      &[open] {
-        summary {
-          margin-bottom: calc(var(--pico-spacing) * 0.75);
+    // Nav collapsed on mobile
+    @media (max-width: calc(#{map.get(map.get($breakpoints, "lg"), "breakpoint")} - 1px)) {
+      nav {
+        margin-bottom: 4rem;
+        &.is-collapsed-on-mobile {
+          details {
+            display: none;
+          }
         }
       }
     }
 
-    li {
-      padding: 0;
+    // Accordions
+    details {
+      summary {
+        text-transform: uppercase;
 
+        &:not([role]):not(:focus)[aria-current] {
+          color: var(#{$✨}primary-hover);
+        }
+
+        &:not(:focus-visible):after {
+          display: none;
+        }
+
+        &:focus-visible {
+          &:not([role]) {
+            outline-offset: var(#{$✨}spacing, 1rem);
+          }
+        }
+      }
+
+      &[open] {
+        color: inherit;
+
+        summary {
+          margin-bottom: calc(var(--pico-spacing) * 0.75);
+          color: var(#{$✨}primary-hover);
+        }
+      }
+    }
+
+    ul,
+    ul:first-of-type {
+      margin-left: 0;
+    }
+
+    li {
+      // Links
       a {
-        margin: 0;
-        padding-top: calc(var(#{$✨}nav-element-spacing-vertical) * 0.25);
-        padding-bottom: calc(var(#{$✨}nav-element-spacing-vertical) * 0.25);
+        padding: calc(var(#{$✨}nav-element-spacing-vertical) * 0.375)
+          var(#{$✨}nav-element-spacing-horizontal);
+
+        &[aria-current] {
+          background-color: var(#{$✨}aside-link-current-background-color);
+          color: var(#{$✨}primary-hover);
+          text-decoration-color: var(#{$✨}primary-hover);
+        }
+
+        &:focus-visible {
+          z-index: 1;
+          position: relative;
+        }
       }
     }
   }

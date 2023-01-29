@@ -6,6 +6,7 @@ $colorName: "Yellow";
 
 // Light
 @mixin light {
+  #{$✨}text-selection-color: #{rgba($yellow-400, 0.25)};
   #{$✨}primary: #{$yellow-550};
   #{$✨}primary-hover: #{$yellow-650};
   #{$✨}primary-underline: #{rgba($yellow-550, 0.5)};
@@ -18,6 +19,7 @@ $colorName: "Yellow";
 
 // Dark
 @mixin dark {
+  #{$✨}text-selection-color: #{rgba($yellow-350, 0.1875)};
   #{$✨}primary: #{$yellow-350};
   #{$✨}primary-hover: #{$yellow-250};
   #{$✨}primary-underline: #{rgba($yellow-350, 0.5)};

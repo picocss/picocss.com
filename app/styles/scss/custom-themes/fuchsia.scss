@@ -6,6 +6,7 @@ $colorName: "Fuchsia";
 
 // Light
 @mixin light {
+  #{$✨}text-selection-color: #{rgba($fuchsia-400, 0.25)};
   #{$✨}primary: #{$fuchsia-550};
   #{$✨}primary-hover: #{$fuchsia-650};
   #{$✨}primary-underline: #{rgba($fuchsia-550, 0.5)};
@@ -17,6 +18,7 @@ $colorName: "Fuchsia";
 
 // Dark
 @mixin dark {
+  #{$✨}text-selection-color: #{rgba($fuchsia-350, 0.1875)};
   #{$✨}primary: #{$fuchsia-350};
   #{$✨}primary-hover: #{$fuchsia-250};
   #{$✨}primary-underline: #{rgba($fuchsia-350, 0.5)};

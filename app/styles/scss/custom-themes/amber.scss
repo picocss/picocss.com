@@ -6,6 +6,7 @@ $colorName: "Amber";
 
 // Light
 @mixin light {
+  #{$✨}text-selection-color: #{rgba($amber-400, 0.25)};
   #{$✨}primary: #{$amber-550};
   #{$✨}primary-hover: #{$amber-650};
   #{$✨}primary-underline: #{rgba($amber-550, 0.5)};
@@ -18,6 +19,7 @@ $colorName: "Amber";
 
 // Dark
 @mixin dark {
+  #{$✨}text-selection-color: #{rgba($amber-350, 0.1875)};
   #{$✨}primary: #{$amber-350};
   #{$✨}primary-hover: #{$amber-250};
   #{$✨}primary-underline: #{rgba($amber-350, 0.5)};

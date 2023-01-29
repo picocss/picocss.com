@@ -1,5 +1,12 @@
+import { useState } from "react";
+import { useMatches } from "@remix-run/react";
+
 import Link from "~/components/Link";
+
 import useCurrentPath from "~/utils/useCurrentPath";
+
+import CollapseIcon from "~/components/icons/Collapse";
+import ExpandIcon from "~/components/icons/Expand";
 
 export default function Aside(props) {
   const currentPath = useCurrentPath();
@@ -10,9 +17,17 @@ export default function Aside(props) {
       links: [
         { label: "Usage", route: "/docs" },
         { label: "Themes", route: "/docs/themes" },
-        { label: "Customization", route: "/docs/customization" },
         { label: "Class-less version", route: "/docs/classless" },
         { label: "RTL", route: "/docs/rtl" },
+      ],
+    },
+    {
+      category: "Customize",
+      links: [
+        { label: "CSS variables", route: "/docs/customization" },
+        { label: "Sass", route: "/docs/sass" },
+        { label: "Colors", route: "/docs/colors" },
+        { label: "We love .classes", route: "/docs/we-love-classes" },
       ],
     },
     {
@@ -60,28 +75,52 @@ export default function Aside(props) {
         { label: "Tooltip", route: "/docs/tooltip" },
       ],
     },
-    {
-      category: "Extend",
-      links: [{ label: "We love .classes", route: "/docs/we-love-classes" }],
-    },
   ];
+
+  const routes = useMatches();
+  const isCustomizationNestedPage = routes.some(
+    (route) => route.pathname === "/docs/customization"
+  );
+
+  const [isCollapsedOnMobile, setIsCollapsedOnMobile] = useState(true);
 
   return (
     <aside {...props}>
-      <nav>
+      {/* Table of content button */}
+      <button onClick={() => setIsCollapsedOnMobile(!isCollapsedOnMobile)}>
+        {isCollapsedOnMobile ? <ExpandIcon /> : <CollapseIcon />}
+        Table of content
+      </button>
+
+      {/* Navigation */}
+      <nav {...(isCollapsedOnMobile && { className: "is-collapsed-on-mobile" })}>
         {docLinks.map((category, index) => {
           const isCurrentCategory = category.links.some((link) => link.route === currentPath);
+          const shouldOpen =
+            isCurrentCategory || (isCustomizationNestedPage && category.category === "Customize");
+
           return (
-            <details key={index} open={isCurrentCategory}>
-              <summary>{category.category}</summary>
+            <details key={index} open={shouldOpen}>
+              {/* Category button */}
+              <summary {...(shouldOpen && { "aria-current": true })}>{category.category}</summary>
               <ul>
-                {category.links.map((link, index) => (
-                  <li key={index}>
-                    <Link to={link.route} className="secondary">
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
+                {category.links.map((link, index) => {
+                  const isCustomizationPage = link.route === "/docs/customization";
+
+                  // Link
+                  return (
+                    <li key={index}>
+                      <Link
+                        to={link.route}
+                        className="secondary"
+                        {...(isCustomizationNestedPage &&
+                          isCustomizationPage && { "aria-current": "page" })}
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
             </details>
           );

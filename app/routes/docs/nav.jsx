@@ -31,7 +31,7 @@ export default function Navs() {
               </a>
             </li>
             <li>
-              <a href="#link" aria-current="page" onClick={preventDefault}>
+              <a href="#link" onClick={preventDefault}>
                 Link
               </a>
             </li>

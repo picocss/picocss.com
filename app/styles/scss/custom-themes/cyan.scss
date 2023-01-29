@@ -6,6 +6,7 @@ $colorName: "Cyan";
 
 // Light
 @mixin light {
+  #{$✨}text-selection-color: #{rgba($cyan-400, 0.25)};
   #{$✨}primary: #{$cyan-550};
   #{$✨}primary-hover: #{$cyan-650};
   #{$✨}primary-underline: #{rgba($cyan-550, 0.5)};
@@ -17,6 +18,7 @@ $colorName: "Cyan";
 
 // Dark
 @mixin dark {
+  #{$✨}text-selection-color: #{rgba($cyan-350, 0.1875)};
   #{$✨}primary: #{$cyan-350};
   #{$✨}primary-hover: #{$cyan-250};
   #{$✨}primary-underline: #{rgba($cyan-350, 0.5)};

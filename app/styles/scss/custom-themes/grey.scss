@@ -6,6 +6,7 @@ $colorName: "Grey";
 
 // Light
 @mixin light {
+  #{$✨}text-selection-color: #{rgba($grey-400, 0.25)};
   #{$✨}primary: #{$grey-550};
   #{$✨}primary-hover: #{$grey-650};
   #{$✨}primary-underline: #{rgba($grey-550, 0.5)};
@@ -18,6 +19,7 @@ $colorName: "Grey";
 
 // Dark
 @mixin dark {
+  #{$✨}text-selection-color: #{rgba($grey-350, 0.1875)};
   #{$✨}primary: #{$grey-350};
   #{$✨}primary-hover: #{$grey-250};
   #{$✨}primary-underline: #{rgba($grey-350, 0.5)};

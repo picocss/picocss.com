@@ -6,6 +6,7 @@ $colorName: "Violet";
 
 // Light
 @mixin light {
+  #{$✨}text-selection-color: #{rgba($violet-400, 0.25)};
   #{$✨}primary: #{$violet-550};
   #{$✨}primary-hover: #{$violet-650};
   #{$✨}primary-underline: #{rgba($violet-550, 0.5)};
@@ -17,6 +18,7 @@ $colorName: "Violet";
 
 // Dark
 @mixin dark {
+  #{$✨}text-selection-color: #{rgba($violet-350, 0.1875)};
   #{$✨}primary: #{$violet-350};
   #{$✨}primary-hover: #{$violet-250};
   #{$✨}primary-underline: #{rgba($violet-350, 0.5)};

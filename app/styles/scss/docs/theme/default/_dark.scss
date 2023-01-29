@@ -2,13 +2,16 @@
 @use "settings" as *;
 
 @mixin theme {
+  // Aside
+  #{$✨}aside-link-current-background-color: #{$slate-850};
+
   // Card for components
   #{$✨}card-component-outline-width: 2px;
   #{$✨}card-component-outline-color: var(#{$✨}card-sectionning-background-color);
 
   // Code
-  #{$✨}code-tag: #{mix($zinc-400, $amber-400, 50%)};
-  #{$✨}code-attr: #{mix($zinc-400, $fuchsia-400, 62.5%)};
+  #{$✨}code-tag: #{mix($zinc-400, $amber-400, 37.5%)};
+  #{$✨}code-attr: #{mix($zinc-400, $fuchsia-400, 50%)};
   #{$✨}code-value: #{mix($zinc-400, $jade-400, 75%)};
   #{$✨}code-comment: #{$zinc-600};
 }

@@ -1,1 +1,42 @@
-:root:not([data-theme=dark]),[data-theme=light]{--pico-primary:#2060df;--pico-primary-hover:#184eb8;--pico-primary-underline:rgba(32, 96, 223, 0.5);--pico-primary-background:#2060df;--pico-primary-background-hover:#1d59d0;--pico-primary-focus:rgba(116, 139, 248, 0.25);--pico-primary-inverse:#fff}@media only screen and (prefers-color-scheme:dark){:root:not([data-theme]){--pico-primary:#8999f9;--pico-primary-hover:#aeb5fb;--pico-primary-underline:rgba(137, 153, 249, 0.5);--pico-primary-background:#2060df;--pico-primary-background-hover:#3c71f7;--pico-primary-focus:rgba(137, 153, 249, 0.25);--pico-primary-inverse:#fff}}[data-theme=dark]{--pico-primary:#8999f9;--pico-primary-hover:#aeb5fb;--pico-primary-underline:rgba(137, 153, 249, 0.5);--pico-primary-background:#2060df;--pico-primary-background-hover:#3c71f7;--pico-primary-focus:rgba(137, 153, 249, 0.25);--pico-primary-inverse:#fff}
+/* Blue color for light color scheme (Default) */
+/* Can be forced with data-theme="light" */
+[data-theme=light],
+:root:not([data-theme=dark]) {
+  --pico-text-selection-color: rgba(116, 139, 248, 0.25);
+  --pico-primary: #2060df;
+  --pico-primary-hover: #184eb8;
+  --pico-primary-underline: rgba(32, 96, 223, 0.5);
+  --pico-primary-background: #2060df;
+  --pico-primary-background-hover: #1d59d0;
+  --pico-primary-focus: rgba(116, 139, 248, 0.25);
+  --pico-primary-inverse: #fff;
+}
+
+/* Blue color for dark color scheme (Auto) */
+/* Automatically enabled if user has Dark mode enabled */
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --pico-text-selection-color: rgba(137, 153, 249, 0.1875);
+    --pico-primary: #8999f9;
+    --pico-primary-hover: #aeb5fb;
+    --pico-primary-underline: rgba(137, 153, 249, 0.5);
+    --pico-primary-background: #2060df;
+    --pico-primary-background-hover: #3c71f7;
+    --pico-primary-focus: rgba(137, 153, 249, 0.25);
+    --pico-primary-inverse: #fff;
+  }
+}
+/* Blue color for dark color scheme (Forced) */
+/* Enabled if forced with data-theme="dark" */
+[data-theme=dark] {
+  --pico-text-selection-color: rgba(137, 153, 249, 0.1875);
+  --pico-primary: #8999f9;
+  --pico-primary-hover: #aeb5fb;
+  --pico-primary-underline: rgba(137, 153, 249, 0.5);
+  --pico-primary-background: #2060df;
+  --pico-primary-background-hover: #3c71f7;
+  --pico-primary-focus: rgba(137, 153, 249, 0.25);
+  --pico-primary-inverse: #fff;
+}
+
+/*# sourceMappingURL=blue.css.map */

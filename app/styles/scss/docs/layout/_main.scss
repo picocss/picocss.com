@@ -7,12 +7,10 @@
 
 body > {
   main {
-    @if map.get($breakpoints, "lg") {
-      @media (min-width: map.get(map.get($breakpoints, "lg"), "breakpoint")) {
-        grid-column-gap: 4rem;
-        display: grid;
-        grid-template-columns: 12rem auto;
-      }
+    @media (min-width: map.get(map.get($breakpoints, "lg"), "breakpoint")) {
+      grid-column-gap: 4rem;
+      display: grid;
+      grid-template-columns: 12rem auto;
     }
   }
 }

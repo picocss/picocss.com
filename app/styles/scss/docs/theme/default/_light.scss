@@ -2,6 +2,9 @@
 @use "settings" as *;
 
 @mixin theme {
+  // Aside
+  #{$✨}aside-link-current-background-color: #{$slate-50};
+
   // Card for components
   #{$✨}card-component-outline-width: 0;
   #{$✨}card-component-outline-color: transparent;

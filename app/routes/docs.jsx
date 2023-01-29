@@ -7,7 +7,10 @@ import Aside from "~/components/docs/Aside";
 import docsStyles from "~/styles/css/docs.css";
 
 export function links() {
-  return [{ rel: "stylesheet", href: docsStyles }];
+  return [
+    { rel: "stylesheet", href: docsStyles },
+    // { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" },
+  ];
 }
 
 export default function DocsPage(props) {

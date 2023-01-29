@@ -6,6 +6,7 @@ $colorName: "Pink";
 
 // Light
 @mixin light {
+  #{$✨}text-selection-color: #{rgba($pink-400, 0.25)};
   #{$✨}primary: #{$pink-550};
   #{$✨}primary-hover: #{$pink-650};
   #{$✨}primary-underline: #{rgba($pink-550, 0.5)};
@@ -17,6 +18,7 @@ $colorName: "Pink";
 
 // Dark
 @mixin dark {
+  #{$✨}text-selection-color: #{rgba($pink-350, 0.1875)};
   #{$✨}primary: #{$pink-350};
   #{$✨}primary-hover: #{$pink-250};
   #{$✨}primary-underline: #{rgba($pink-350, 0.5)};

@@ -39,8 +39,8 @@ export default function ThemePreview({ title, code, ...props }) {
         {colors.map((color) => (
           // eslint-disable-next-line jsx-a11y/anchor-has-content
           <Link
-            to={color === "red" ? "/docs/customization" : `/docs/customization/${color}`}
             key={color}
+            to={color === "red" ? "/docs/customization" : `/docs/customization/${color}`}
             className={`background-${color}`}
             aria-label={title}
             preventScrollReset={true}

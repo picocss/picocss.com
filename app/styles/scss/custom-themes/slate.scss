@@ -6,6 +6,7 @@ $colorName: "Slate";
 
 // Light
 @mixin light {
+  #{$✨}text-selection-color: #{rgba($slate-400, 0.25)};
   #{$✨}primary: #{$slate-550};
   #{$✨}primary-hover: #{$slate-650};
   #{$✨}primary-underline: #{rgba($slate-550, 0.5)};
@@ -17,6 +18,7 @@ $colorName: "Slate";
 
 // Dark
 @mixin dark {
+  #{$✨}text-selection-color: #{rgba($slate-350, 0.1875)};
   #{$✨}primary: #{$slate-350};
   #{$✨}primary-hover: #{$slate-250};
   #{$✨}primary-underline: #{rgba($slate-350, 0.5)};

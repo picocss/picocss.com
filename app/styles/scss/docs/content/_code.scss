@@ -27,6 +27,13 @@
   }
 }
 
+// pre,
+// code {
+//   #{$✨}-font-family: "Fira Code", "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace",
+//     "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji",
+//     "Segoe UI Symbol", "Noto Color Emoji";
+// }
+
 .code {
   position: relative;
 
@@ -35,7 +42,7 @@
     top: 1rem;
     right: 1rem;
     padding: 0.375rem 0.5rem;
-    font-size: 14px;
+    font-size: 16px;
     opacity: 0;
     transition: background-color var(#{$✨}transition), border-color var(#{$✨}transition),
       color var(#{$✨}transition), box-shadow var(#{$✨}transition), opacity var(#{$✨}transition);

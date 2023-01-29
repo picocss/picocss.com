@@ -6,6 +6,7 @@ $colorName: "Purple";
 
 // Light
 @mixin light {
+  #{$✨}text-selection-color: #{rgba($purple-400, 0.25)};
   #{$✨}primary: #{$purple-550};
   #{$✨}primary-hover: #{$purple-650};
   #{$✨}primary-underline: #{rgba($purple-550, 0.5)};
@@ -17,6 +18,7 @@ $colorName: "Purple";
 
 // Dark
 @mixin dark {
+  #{$✨}text-selection-color: #{rgba($purple-350, 0.1875)};
   #{$✨}primary: #{$purple-350};
   #{$✨}primary-hover: #{$purple-250};
   #{$✨}primary-underline: #{rgba($purple-350, 0.5)};
