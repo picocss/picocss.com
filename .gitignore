@@ -1,7 +1,12 @@
 node_modules
 
-/.cache
-/functions/\[\[path\]\].js
-/functions/\[\[path\]\].js.map
-/public/build
+# Remix
+.cache
+functions/\[\[path\]\].js
+functions/\[\[path\]\].js.map
+public/build
 .env
+
+# Styles
+app/styles/css/*
+!app/styles/css/postcss.config.js
