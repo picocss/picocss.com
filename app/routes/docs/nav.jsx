@@ -12,7 +12,7 @@ export const meta = () => ({
   description: "The essential navbar component in pure semantic HTML.",
 });
 
-export default function Navs() {
+export default function Nav() {
   const preventDefault = (e) => e.preventDefault();
   return (
     <>

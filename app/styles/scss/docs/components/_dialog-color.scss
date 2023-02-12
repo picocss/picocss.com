@@ -1,0 +1,26 @@
+@use "sass:map";
+@use "settings" as *;
+
+dialog.color {
+  // &:before {
+  //   position: absolute;
+  //   inset: 0;
+  //   background-color: currentColor;
+  //   content: "";
+  //   mix-blend-mode: color;
+  //   opacity: 0.5;
+  // }
+  article {
+    // z-index: 1;
+    // position: relative;
+    // outline: 1px solid currentColor;
+    // outline-offset: -1px;
+    // background-color: transparent;
+    // box-shadow: none;
+    // color: inherit;
+
+    p {
+      color: inherit;
+    }
+  }
+}

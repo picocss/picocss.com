@@ -39,3 +39,11 @@ body {
     }
   }
 }
+
+.modal-is-open {
+  body {
+    header {
+      padding-right: var(#{$✨}scrollbar-width, 0px);
+    }
+  }
+}

@@ -1,13 +1,14 @@
-import metaData from "~/data/meta";
 import ThemePreview from "~/components/docs/ThemePreview";
+import { themeTitle, themeDescription } from "./";
 
 import cssStyle from "~/styles/css/custom-themes/purple.css";
 import cssCode from "~/styles/css/custom-themes/code/purple.txt";
 
-const { titleSuffix } = metaData();
+const colorName = "Purple";
 
 export const meta = () => ({
-  title: `Purple example ${titleSuffix}`,
+  title: themeTitle(colorName),
+  description: themeDescription(colorName),
 });
 
 export function links() {
@@ -15,5 +16,5 @@ export function links() {
 }
 
 export default function Customization() {
-  return <ThemePreview title="Purple" code={cssCode} />;
+  return <ThemePreview title={colorName} code={cssCode} />;
 }

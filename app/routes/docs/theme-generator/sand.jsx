@@ -1,13 +1,14 @@
-import metaData from "~/data/meta";
 import ThemePreview from "~/components/docs/ThemePreview";
+import { themeTitle, themeDescription } from "./";
 
 import cssStyle from "~/styles/css/custom-themes/sand.css";
 import cssCode from "~/styles/css/custom-themes/code/sand.txt";
 
-const { titleSuffix } = metaData();
+const colorName = "Sand";
 
 export const meta = () => ({
-  title: `Sand example ${titleSuffix}`,
+  title: themeTitle(colorName),
+  description: themeDescription(colorName),
 });
 
 export function links() {
@@ -15,5 +16,5 @@ export function links() {
 }
 
 export default function Customization() {
-  return <ThemePreview title="Sand" code={cssCode} />;
+  return <ThemePreview title={colorName} code={cssCode} />;
 }

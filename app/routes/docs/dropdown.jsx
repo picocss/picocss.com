@@ -39,7 +39,7 @@ export function DropdownItems({ className, dir, id }) {
   );
 }
 
-export default function Dropdowns() {
+export default function Dropdown() {
   return (
     <>
       <hgroup>

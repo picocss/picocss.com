@@ -13,6 +13,5 @@
 // Components
 @use "docs/components/card";
 @use "docs/components/card-color-picker";
-
-// Utilities
-@use "docs/utilities/colors";
+@use "docs/components/color-families";
+@use "docs/components/dialog-color";

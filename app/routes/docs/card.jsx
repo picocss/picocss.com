@@ -8,7 +8,7 @@ export const meta = () => ({
   description: "A flexible container with graceful spacings across devices and viewports.",
 });
 
-export default function Cards() {
+export default function Card() {
   return (
     <>
       <hgroup>

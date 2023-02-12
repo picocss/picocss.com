@@ -8,7 +8,7 @@ export const meta = () => ({
   description: "Toggle sections of content in pure HTML, without JavaScript.",
 });
 
-export default function Accordions() {
+export default function Accordion() {
   return (
     <>
       <hgroup>

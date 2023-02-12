@@ -1,4 +1,4 @@
-export default function Tooltips() {
+export default function Tooltip() {
   return (
     <>
       <h1>Tooltip</h1>

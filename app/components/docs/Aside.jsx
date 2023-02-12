@@ -24,7 +24,8 @@ export default function Aside(props) {
     {
       category: "Customize",
       links: [
-        { label: "CSS variables", route: "/docs/customization" },
+        { label: "Theme generator", route: "/docs/theme-generator" },
+        { label: "CSS Variables", route: "/docs/css-variables" },
         { label: "Sass", route: "/docs/sass" },
         { label: "Colors", route: "/docs/colors" },
         { label: "We love .classes", route: "/docs/we-love-classes" },
@@ -78,8 +79,8 @@ export default function Aside(props) {
   ];
 
   const routes = useMatches();
-  const isCustomizationNestedPage = routes.some(
-    (route) => route.pathname === "/docs/customization"
+  const isThemeGeneratorNestedPage = routes.some(
+    (route) => route.pathname === "/docs/theme-generator"
   );
 
   const [isCollapsedOnMobile, setIsCollapsedOnMobile] = useState(true);
@@ -97,7 +98,7 @@ export default function Aside(props) {
         {docLinks.map((category, index) => {
           const isCurrentCategory = category.links.some((link) => link.route === currentPath);
           const shouldOpen =
-            isCurrentCategory || (isCustomizationNestedPage && category.category === "Customize");
+            isCurrentCategory || (isThemeGeneratorNestedPage && category.category === "Customize");
 
           return (
             <details key={index} open={shouldOpen}>
@@ -105,7 +106,7 @@ export default function Aside(props) {
               <summary {...(shouldOpen && { "aria-current": true })}>{category.category}</summary>
               <ul>
                 {category.links.map((link, index) => {
-                  const isCustomizationPage = link.route === "/docs/customization";
+                  const isThemeGeneratorPage = link.route === "/docs/theme-generator";
 
                   // Link
                   return (
@@ -113,8 +114,8 @@ export default function Aside(props) {
                       <Link
                         to={link.route}
                         className="secondary"
-                        {...(isCustomizationNestedPage &&
-                          isCustomizationPage && { "aria-current": "page" })}
+                        {...(isThemeGeneratorNestedPage &&
+                          isThemeGeneratorPage && { "aria-current": "page" })}
                       >
                         {link.label}
                       </Link>

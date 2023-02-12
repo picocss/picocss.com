@@ -9,7 +9,7 @@ export const meta = () => ({
   description: "The essential button in pure HTML, without .classes for the default style.",
 });
 
-export default function Buttons() {
+export default function Button() {
   return (
     <>
       <hgroup>

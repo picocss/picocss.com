@@ -1,0 +1,48 @@
+@use "sass:map";
+@use "settings" as *;
+
+.color-families {
+  grid-column-gap: 2rem;
+  grid-row-gap: 4rem;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .family {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+
+    header {
+      aspect-ratio: 16/9;
+      margin: 0;
+      margin-bottom: 0.75rem;
+      padding: 0;
+      padding: 1rem 2rem;
+      border-radius: var(#{$✨}border-radius);
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.75rem;
+
+      > button {
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 1/1;
+        margin-bottom: 0;
+        padding: 0;
+        border-width: 0;
+        border-radius: var(#{$✨}border-radius);
+        font-size: 0.75rem;
+      }
+    }
+  }
+}

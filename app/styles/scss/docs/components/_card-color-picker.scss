@@ -3,7 +3,7 @@
 
 article.color-picker {
   > header {
-    grid-gap: var(--pico-block-spacing-horizontal);
+    grid-gap: var(#{$✨}block-spacing-horizontal);
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 
@@ -22,7 +22,7 @@ article.color-picker {
     }
 
     @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {
-      grid-gap: calc(var(--pico-block-spacing-horizontal) * 0.5);
+      grid-gap: calc(var(#{$✨}block-spacing-horizontal) * 0.5);
       grid-template-columns: repeat(10, 1fr);
     }
 

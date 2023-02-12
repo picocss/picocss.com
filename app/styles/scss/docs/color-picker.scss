@@ -1,0 +1,9 @@
+// Utilities
+@use "colors/utilities" with (
+  $palette: (
+    "enable-shades": false,
+  ),
+  $utilities: (
+    "colors": false,
+  )
+);

@@ -1,13 +1,14 @@
-import metaData from "~/data/meta";
 import ThemePreview from "~/components/docs/ThemePreview";
+import { themeTitle, themeDescription } from "./";
 
 import cssStyle from "~/styles/css/custom-themes/indigo.css";
 import cssCode from "~/styles/css/custom-themes/code/indigo.txt";
 
-const { titleSuffix } = metaData();
+const colorName = "Indigo";
 
 export const meta = () => ({
-  title: `Indigo example ${titleSuffix}`,
+  title: themeTitle(colorName),
+  description: themeDescription(colorName),
 });
 
 export function links() {
@@ -15,5 +16,5 @@ export function links() {
 }
 
 export default function Customization() {
-  return <ThemePreview title="Indigo" code={cssCode} />;
+  return <ThemePreview title={colorName} code={cssCode} />;
 }

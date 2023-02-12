@@ -40,8 +40,8 @@ export default function ThemePreview({ title, code, ...props }) {
           // eslint-disable-next-line jsx-a11y/anchor-has-content
           <Link
             key={color}
-            to={color === "red" ? "/docs/customization" : `/docs/customization/${color}`}
-            className={`background-${color}`}
+            to={color === "red" ? "/docs/theme-generator" : `/docs/theme-generator/${color}`}
+            className={`pico-background-${color}`}
             aria-label={title}
             preventScrollReset={true}
           />

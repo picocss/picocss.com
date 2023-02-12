@@ -9,7 +9,7 @@ export const meta = () => ({
   description: "Link come with .secondary and .contrast styles.",
 });
 
-export default function Accordions() {
+export default function LinkPage() {
   const preventDefault = (e) => e.preventDefault();
   return (
     <>

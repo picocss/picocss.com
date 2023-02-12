@@ -10,3 +10,7 @@ public/build
 # Styles
 app/styles/css/*
 !app/styles/css/postcss.config.js
+
+# System files
+.DS_Store
+Thumbs.db
