@@ -32,7 +32,9 @@ export default function Logo({ displayWordmark = true, animate = false, ...props
       xmlns="http://www.w3.org/2000/svg"
       viewBox={displayWordmark ? "0 0 381 164" : "279 0 102 93"}
       fill="none"
-      className={animateSparkle ? "pico-logo animate-sparkle" : "pico-logo"}
+      className={`${displayWordmark ? "pico-logo" : "pico-icon"}${
+        animateSparkle ? " animated" : ""
+      }`}
       {...props}
     >
       <path

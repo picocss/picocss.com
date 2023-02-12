@@ -1,12 +1,10 @@
-import colorsData from "~/data/colors";
+import { colorFamilies } from "~/data/colors";
 
 import Logo from "~/components/Logo";
 import Code from "~/components/Code";
 import Link from "~/components/Link";
 
 import useCurrentPath from "~/utils/useCurrentPath";
-
-const colors = colorsData();
 
 // Remove the last X lines of the code snippet.
 const removeLastLines = ({ code, linesToRemove = 1 }) => {
@@ -41,7 +39,7 @@ export default function ThemePreview({ title, code, ...props }) {
   return (
     <article className="color-picker component" aria-label="Custom theme example" {...props}>
       <header>
-        {colors.map((color) => {
+        {colorFamilies.map((color) => {
           const linkTo =
             color === "red" ? "/docs/theme-generator" : `/docs/theme-generator/${color}`;
           const isCurrent = currentPath === linkTo;
@@ -61,7 +59,7 @@ export default function ThemePreview({ title, code, ...props }) {
       </header>
       <hgroup>
         <h3>{title}</h3>
-        <h4>Here is an example of a form with {colorWithPrefix(title)} custom theme.</h4>
+        <h4>Form example with {colorWithPrefix(title)} theme.</h4>
       </hgroup>
       <form>
         <fieldset className="grid">

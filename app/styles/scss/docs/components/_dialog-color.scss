@@ -18,6 +18,21 @@ dialog.color {
 
     header {
       font-weight: bold;
+      transition: color var(#{$✨}transition), background-color var(#{$✨}transition);
+
+      @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
+        aspect-ratio: 4/1;
+      }
+
+      a {
+        &.close {
+          background-image: none;
+          background-position: inherit;
+          background-size: inherit;
+          background-repeat: inherit;
+          color: inherit;
+        }
+      }
     }
 
     .grid {
