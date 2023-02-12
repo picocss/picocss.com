@@ -9,11 +9,14 @@ const PageContext = createContext({});
 const usePage = () => useContext(PageContext);
 
 export default function PageProvider({ children, ...props }) {
+  const isSSR = typeof window === "undefined";
+
   // Theme
   const systemPrefersColorScheme = usePrefersColorScheme();
   const defaultTheme = systemPrefersColorScheme === "dark" ? "dark" : "light";
   const [selectedTheme, setSelectedTheme] = useLocalStorageState("picoTheme", null);
-  const pageTheme = selectedTheme || defaultTheme;
+  const [pageTheme, setPageTheme] = useState("light");
+
   const switchTheme = () => {
     setSelectedTheme(pageTheme === "dark" ? "light" : "dark");
   };
@@ -27,6 +30,17 @@ export default function PageProvider({ children, ...props }) {
   const [modalHelperClasses, setModalHelperClasses] = useState();
   const modalAnimationDuration = 400;
   const [scrollbarWidth, setScrollbarWidth] = useState(0);
+
+  // Set pageTheme on load
+  useEffect(() => {
+    if (selectedTheme) {
+      setPageTheme(selectedTheme);
+    } else {
+      setPageTheme(defaultTheme);
+    }
+  }, [selectedTheme, defaultTheme]);
+
+  // Set scrollbar when modal is open
   useEffect(() => {
     if (!modalIsOpen && typeof window !== "undefined") {
       setScrollbarWidth(window.innerWidth - document.documentElement.clientWidth);
@@ -55,6 +69,7 @@ export default function PageProvider({ children, ...props }) {
     <PageContext.Provider
       value={{
         isHeaderFixed,
+        isSSR,
         modalIsOpen,
         onOpenModal,
         onCloseModal,
