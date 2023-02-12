@@ -8,8 +8,8 @@ import { usePage } from "~/contexts/PageContext";
 
 export default function Nav(props) {
   const { pageTheme, switchTheme } = usePage();
-  const handleSwitchTheme = (e) => {
-    e.preventDefault();
+  const handleSwitchTheme = (event) => {
+    event.preventDefault();
     switchTheme();
   };
   return (
@@ -21,29 +21,30 @@ export default function Nav(props) {
           </Link>
         </li>
         <li>
-          <a
-            href="https://github.com/picocss/pico"
+          <Link
+            to="https://github.com/picocss/pico"
             target="_blank"
             rel="noreferrer"
             className="secondary"
             aria-label="GitHub repository"
           >
             <GitHubIcon />
-          </a>
+          </Link>
         </li>
         <li>
-          <a
-            href="https://twitter.com/picocss"
+          <Link
+            to="https://twitter.com/picocss"
             target="_blank"
             rel="noreferrer"
             className="secondary"
             aria-label="Twitter"
           >
             <TwitterIcon />
-          </a>
+          </Link>
         </li>
         <li>
           <Link
+            to="#"
             className="secondary"
             onClick={handleSwitchTheme}
             aria-label={pageTheme === "dark" ? "Turn off dark mode" : "Turn on dark mode"}

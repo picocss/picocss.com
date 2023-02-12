@@ -8,8 +8,6 @@ import {
   useCatch,
 } from "@remix-run/react";
 
-import { useLocation } from "react-router-dom";
-
 import { HelmetProvider } from "react-helmet-async";
 import { PageProvider } from "~/contexts/PageContext";
 
@@ -55,8 +53,6 @@ export function CatchBoundary() {
 }
 
 export default function App() {
-  const { state } = useLocation();
-  const { preventScrollReset } = state || false;
   return (
     <HelmetProvider>
       <PageProvider>
@@ -67,7 +63,7 @@ export default function App() {
         </head>
         <body>
           <Outlet />
-          {!preventScrollReset && <ScrollRestoration />}
+          <ScrollRestoration />
           <Scripts />
           <LiveReload />
         </body>

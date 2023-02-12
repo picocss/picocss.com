@@ -85,9 +85,8 @@ export default function PageProvider({ children, ...props }) {
         lang="en"
         {...(selectedTheme && { "data-theme": selectedTheme })}
         {...(modalIsOpen && { className: modalHelperClasses })}
-        {...(modalIsOpen && scrollbarIsVisible
-          ? { style: { "--pico-scrollbar-width": `${scrollbarWidth}px` } }
-          : null)}
+        {...(modalIsOpen &&
+          scrollbarIsVisible && { style: { "--pico-scrollbar-width": `${scrollbarWidth}px` } })}
       >
         {children}
       </html>
