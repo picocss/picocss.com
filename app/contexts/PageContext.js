@@ -57,7 +57,8 @@ export default function PageProvider({ children, ...props }) {
   };
 
   // On close modal
-  const onCloseModal = () => {
+  const onCloseModal = (event) => {
+    event.preventDefault();
     setModalHelperClasses("modal-is-open modal-is-closing");
     setTimeout(() => {
       setModalHelperClasses();

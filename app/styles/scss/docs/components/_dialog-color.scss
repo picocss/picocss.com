@@ -2,25 +2,30 @@
 @use "settings" as *;
 
 dialog.color {
-  // &:before {
-  //   position: absolute;
-  //   inset: 0;
-  //   background-color: currentColor;
-  //   content: "";
-  //   mix-blend-mode: color;
-  //   opacity: 0.5;
-  // }
-  article {
-    // z-index: 1;
-    // position: relative;
-    // outline: 1px solid currentColor;
-    // outline-offset: -1px;
-    // background-color: transparent;
-    // box-shadow: none;
-    // color: inherit;
+  #{$✨}font-size: 0.875rem;
+  #{$✨}grid-spacing-vertical: var(#{$✨}spacing);
+  padding: 0;
 
+  article {
     p {
       color: inherit;
+    }
+
+    p,
+    pre {
+      margin-bottom: 0;
+    }
+
+    header {
+      font-weight: bold;
+    }
+
+    .grid {
+      @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {
+        grid-template-columns: min-content auto;
+        align-items: center;
+        white-space: nowrap;
+      }
     }
   }
 }

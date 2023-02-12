@@ -6,19 +6,30 @@ article.color-picker {
     grid-gap: var(#{$✨}block-spacing-horizontal);
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    overflow: hidden;
+    border-top-right-radius: var(#{$✨}border-radius);
+    border-top-left-radius: var(#{$✨}border-radius);
 
     a {
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       aspect-ratio: 1/1;
       border-radius: 50%;
-    }
+      box-shadow: inset 0 0 1rem 0 rgb(0 0 0 / 0%);
+      transition: box-shadow var(#{$✨}transition);
 
-    a,
-    a:is(:hover, :active, :focus) {
-      margin-bottom: 0;
-      padding: 0;
-      border: none;
-      box-shadow: none;
+      &[aria-current] {
+        box-shadow: inset 0 0 1rem 0 rgb(0 0 0 / 25%);
+      }
+
+      svg {
+        --pico-logo-small-sparkles: currentColor;
+        --pico-logo-big-sparkle: currentColor;
+        width: 37.5%;
+        height: auto;
+        opacity: 0.875;
+      }
     }
 
     @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {

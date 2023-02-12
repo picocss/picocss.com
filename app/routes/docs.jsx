@@ -12,7 +12,7 @@ export function links() {
 
 export default function DocsPage(props) {
   const currentPath = useCurrentPath();
-  const pageId = currentPath.substring(1).replace("docs/", "").replace("forms/", "");
+  const pageId = currentPath.substring(1).replace("docs/", "").replace("/", "-");
 
   return (
     <>

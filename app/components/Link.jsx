@@ -11,6 +11,7 @@ export default function Link({ preventScrollReset = false, to, ...props }) {
       to={to}
       {...(currentPath === to && { "aria-current": "page" })}
       onMouseLeave={unFocus}
+      // TODO: Fix hydrate issue with preventScrollReset
       state={{ preventScrollReset }}
       {...props}
     />

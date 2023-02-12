@@ -4,48 +4,39 @@
  * Logo
  */
 
-// Component
-body {
-  > header {
-    .container {
-      > a {
-        svg {
-          width: auto;
-          height: 2.25rem;
-          transition: filter 0.2s ease-in-out;
+svg.pico-logo {
+  width: auto;
+  height: 2.25rem;
+  transition: filter 0.2s ease-in-out;
 
-          &.sparkle {
-            path {
-              &:first-of-type,
-              &:nth-of-type(2),
-              &:nth-of-type(3) {
-                animation-duration: var(--animate-duration);
-                animation-timing-function: ease-in-out;
-                animation-delay: var(--animate-delay);
-                animation-fill-mode: both;
-                animation-name: sparkle;
-              }
+  &.animate-sparkle {
+    path {
+      &:first-of-type,
+      &:nth-of-type(2),
+      &:nth-of-type(3) {
+        animation-duration: var(--animate-duration);
+        animation-timing-function: ease-in-out;
+        animation-delay: var(--animate-delay);
+        animation-fill-mode: both;
+        animation-name: sparkle;
+      }
 
-              &:nth-of-type(3) {
-                --animate-duration: 0.75s;
-                --animate-delay: 0s;
-                transform-origin: 309px 78px;
-              }
+      &:nth-of-type(3) {
+        --animate-duration: 0.75s;
+        --animate-delay: 0s;
+        transform-origin: 309px 78px;
+      }
 
-              &:first-of-type {
-                --animate-duration: 0.875s;
-                --animate-delay: 0.125s;
-                transform-origin: 345px 48px;
-              }
+      &:first-of-type {
+        --animate-duration: 0.875s;
+        --animate-delay: 0.125s;
+        transform-origin: 345px 48px;
+      }
 
-              &:nth-of-type(2) {
-                --animate-duration: 0.75s;
-                --animate-delay: 0.375s;
-                transform-origin: 297px 18px;
-              }
-            }
-          }
-        }
+      &:nth-of-type(2) {
+        --animate-duration: 0.75s;
+        --animate-delay: 0.375s;
+        transform-origin: 297px 18px;
       }
     }
   }

@@ -1,7 +1,10 @@
 import colorsData from "~/data/colors";
 
+import Logo from "~/components/Logo";
 import Code from "~/components/Code";
 import Link from "~/components/Link";
+
+import useCurrentPath from "~/utils/useCurrentPath";
 
 const colors = colorsData();
 
@@ -33,19 +36,28 @@ export default function ThemePreview({ title, code, ...props }) {
     return `${prefix} ${lowercaseColor}`;
   };
 
+  const currentPath = useCurrentPath();
+
   return (
     <article className="color-picker component" aria-label="Custom theme example" {...props}>
       <header>
-        {colors.map((color) => (
-          // eslint-disable-next-line jsx-a11y/anchor-has-content
-          <Link
-            key={color}
-            to={color === "red" ? "/docs/theme-generator" : `/docs/theme-generator/${color}`}
-            className={`pico-background-${color}`}
-            aria-label={title}
-            preventScrollReset={true}
-          />
-        ))}
+        {colors.map((color) => {
+          const linkTo =
+            color === "red" ? "/docs/theme-generator" : `/docs/theme-generator/${color}`;
+          const isCurrent = currentPath === linkTo;
+          return (
+            // eslint-disable-next-line jsx-a11y/anchor-has-content
+            <Link
+              key={color}
+              to={linkTo}
+              className={`pico-background-${color}`}
+              aria-label={title}
+              preventScrollReset={true}
+            >
+              {isCurrent && <Logo displayWordmark={false} animate={true} />}
+            </Link>
+          );
+        })}
       </header>
       <hgroup>
         <h3>{title}</h3>

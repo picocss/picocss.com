@@ -1,7 +1,7 @@
 import { usePage } from "~/contexts/PageContext";
 
 import Link from "~/components/Link";
-import Logo from "~/components/header/Logo";
+import Logo from "~/components/Logo";
 import Nav from "~/components/header/Nav";
 
 export default function Header(props) {

@@ -82,6 +82,7 @@ export default function Aside(props) {
   const isThemeGeneratorNestedPage = routes.some(
     (route) => route.pathname === "/docs/theme-generator"
   );
+  const isColorsNestedPage = routes.some((route) => route.pathname === "/docs/colors");
 
   const [isCollapsedOnMobile, setIsCollapsedOnMobile] = useState(true);
 
@@ -98,7 +99,9 @@ export default function Aside(props) {
         {docLinks.map((category, index) => {
           const isCurrentCategory = category.links.some((link) => link.route === currentPath);
           const shouldOpen =
-            isCurrentCategory || (isThemeGeneratorNestedPage && category.category === "Customize");
+            isCurrentCategory ||
+            ((isThemeGeneratorNestedPage || isColorsNestedPage) &&
+              category.category === "Customize");
 
           return (
             <details key={index} open={shouldOpen}>
@@ -107,6 +110,7 @@ export default function Aside(props) {
               <ul>
                 {category.links.map((link, index) => {
                   const isThemeGeneratorPage = link.route === "/docs/theme-generator";
+                  const isColorsPage = link.route === "/docs/colors";
 
                   // Link
                   return (
@@ -114,8 +118,9 @@ export default function Aside(props) {
                       <Link
                         to={link.route}
                         className="secondary"
-                        {...(isThemeGeneratorNestedPage &&
-                          isThemeGeneratorPage && { "aria-current": "page" })}
+                        {...(((isThemeGeneratorNestedPage && isThemeGeneratorPage) ||
+                          (isColorsNestedPage && isColorsPage)) && { "aria-current": "page" })}
+                        onClick={() => setIsCollapsedOnMobile(true)}
                       >
                         {link.label}
                       </Link>
