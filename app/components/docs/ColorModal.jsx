@@ -5,12 +5,21 @@ import Close from "~/components/icons/Close";
 import Code from "~/components/Code";
 
 import sentenceCase from "~/utils/sentenceCase";
+import { use100vh } from "react-div-100vh";
 
-import { getNextColor, getPreviousColor, getHexValue } from "~/utils/usePicoPalette";
+import {
+  getNextColor,
+  getColorFromNextColorFamily,
+  getPreviousColor,
+  getColorFromPreviousColorFamily,
+  getHexValue,
+  getMainHexValue,
+} from "~/utils/usePicoPalette";
 
 export default function ColorModal({ color, isOpen, onClose, setSelectedColor, ...props }) {
   const backgroundColorClassName = `pico-background-${color.family}-${color.shade}`;
   const hexValue = getHexValue(color);
+  const mainHexValue = getMainHexValue(color);
 
   // Handle click on overlay
   const handleClickOverlay = (event) => {
@@ -23,6 +32,20 @@ export default function ColorModal({ color, isOpen, onClose, setSelectedColor, .
   useEffect(() => {
     const nextColor = getNextColor(color);
     const previousColor = getPreviousColor(color);
+    const nextColorFamily = getColorFromNextColorFamily(color);
+    const previousColorFamily = getColorFromPreviousColorFamily(color);
+
+    // Key up: previous color family
+    const handleKeyUp = (event) => {
+      if (event.key === "ArrowUp") {
+        setSelectedColor({
+          family: previousColorFamily.family,
+          shade: previousColorFamily.shade,
+        });
+      }
+    };
+
+    // Key right: next color
     const handleKeyRight = (event) => {
       if (event.key === "ArrowRight") {
         setSelectedColor({
@@ -31,6 +54,18 @@ export default function ColorModal({ color, isOpen, onClose, setSelectedColor, .
         });
       }
     };
+
+    // Key down: next color family
+    const handleKeyDown = (event) => {
+      if (event.key === "ArrowDown") {
+        setSelectedColor({
+          family: nextColorFamily.family,
+          shade: nextColorFamily.shade,
+        });
+      }
+    };
+
+    // Key left: previous color
     const handleKeyLeft = (event) => {
       if (event.key === "ArrowLeft") {
         setSelectedColor({
@@ -39,26 +74,37 @@ export default function ColorModal({ color, isOpen, onClose, setSelectedColor, .
         });
       }
     };
+
+    // Key escape: close modal
     const handleKeyEscape = (event) => {
       if (event.key === "Escape") {
         onClose(event);
       }
     };
+
+    document.addEventListener("keydown", handleKeyUp);
     document.addEventListener("keydown", handleKeyRight);
+    document.addEventListener("keydown", handleKeyDown);
     document.addEventListener("keydown", handleKeyLeft);
     document.addEventListener("keydown", handleKeyEscape);
+
     return () => {
+      document.removeEventListener("keydown", handleKeyUp);
       document.removeEventListener("keydown", handleKeyRight);
+      document.removeEventListener("keydown", handleKeyDown);
       document.removeEventListener("keydown", handleKeyLeft);
       document.removeEventListener("keydown", handleKeyEscape);
     };
   }, [setSelectedColor, onClose, color]);
 
+  const viewportHeight = use100vh();
+  const modalHeight = viewportHeight ? `calc(${viewportHeight}px - 2rem)` : "calc(100vh - 2rem)";
+
   if (!isOpen && !color.hex) return null;
 
   return (
     <dialog open={isOpen} className={`color`} onClick={handleClickOverlay} {...props}>
-      <article>
+      <article style={{ "--pico-glowing-color": `${mainHexValue}26`, "max-height": modalHeight }}>
         <header className={backgroundColorClassName}>
           <Link to="#" aria-label="Close" className="close" onClick={onClose}>
             <Close />

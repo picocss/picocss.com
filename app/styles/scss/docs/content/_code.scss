@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "colors" as *;
 @use "settings" as *;
 
@@ -27,13 +28,6 @@
   }
 }
 
-// pre,
-// code {
-//   #{$✨}-font-family: "Fira Code", "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace",
-//     "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji",
-//     "Segoe UI Symbol", "Noto Color Emoji";
-// }
-
 .code {
   position: relative;
 
@@ -51,6 +45,12 @@
   &:hover {
     button {
       opacity: 1;
+    }
+  }
+
+  code {
+    @media (min-width: map.get(map.get($breakpoints, "lg"), "breakpoint")) {
+      font-size: 16px;
     }
   }
 }

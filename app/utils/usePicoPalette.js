@@ -1,4 +1,4 @@
-import { colorFamilies, colorShades } from "~/data/colors";
+import { colorFamilies, colorShades, colorMainShades } from "~/data/colors";
 
 // Get the indexes of the color family and shade
 export const getColorIndexes = (color) => {
@@ -20,6 +20,15 @@ export const getNextColor = (color) => {
   };
 };
 
+// Get color from next color family
+export const getColorFromNextColorFamily = (color) => {
+  const { familyIndex } = getColorIndexes(color);
+  return {
+    family: colorFamilies[familyIndex + 1] || colorFamilies[0],
+    shade: color.shade,
+  };
+};
+
 // Get the previous color
 export const getPreviousColor = (color) => {
   const { familyIndex, shadeIndex } = getColorIndexes(color);
@@ -32,6 +41,15 @@ export const getPreviousColor = (color) => {
   };
 };
 
+// Get color from previous color family
+export const getColorFromPreviousColorFamily = (color) => {
+  const { familyIndex } = getColorIndexes(color);
+  return {
+    family: colorFamilies[familyIndex - 1] || colorFamilies[colorFamilies.length - 1],
+    shade: color.shade,
+  };
+};
+
 // Get the hex value from the color family and shade using getComputedStyle
 export const getHexValue = (color) => {
   if (typeof window !== "undefined") {
@@ -39,4 +57,10 @@ export const getHexValue = (color) => {
     return computedStyle.getPropertyValue(`--pico-color-${color.family}-${color.shade}`).trim();
   }
   return null;
+};
+
+// Get the main hex value from the color family
+export const getMainHexValue = (color) => {
+  const mainShade = colorMainShades[color.family];
+  return getHexValue({ family: color.family, shade: mainShade });
 };

@@ -7,6 +7,10 @@ dialog.color {
   padding: 0;
 
   article {
+    transform: translate3d(0, 0, 0);
+    box-shadow: 0 -0 6rem 0 var(#{$✨}glowing-color), var(#{$✨}box-shadow);
+    transition: box-shadow var(#{$✨}transition);
+
     p {
       color: inherit;
     }
@@ -17,20 +21,19 @@ dialog.color {
     }
 
     header {
+      min-height: 16vh;
       font-weight: bold;
       transition: color var(#{$✨}transition), background-color var(#{$✨}transition);
 
-      @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
-        aspect-ratio: 4/1;
-      }
-
       a {
         &.close {
+          height: inherit;
           background-image: none;
           background-position: inherit;
           background-size: inherit;
           background-repeat: inherit;
           color: inherit;
+          line-height: initial;
         }
       }
     }

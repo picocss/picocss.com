@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import metaData from "~/data/meta";
-import { colorFamilies, colorShades } from "~/data/colors";
+import { colorFamilies, colorShades, colorMainShades } from "~/data/colors";
 
 import ColorModal from "~/components/docs/ColorModal";
 
@@ -28,7 +28,19 @@ export default function Colors() {
       <section className="color-families">
         {colorFamilies.map((family) => (
           <article key={family} className="family">
-            <header className={`pico-background-${family}`}>{sentenceCase(family)}</header>
+            <header
+              className={`pico-background-${family}`}
+              role="button"
+              onClick={() => {
+                onOpenModal();
+                setSelectedColor({
+                  family,
+                  shade: colorMainShades[family],
+                });
+              }}
+            >
+              {sentenceCase(family)}
+            </header>
             <main>
               {colorShades.map((shade) => (
                 <button

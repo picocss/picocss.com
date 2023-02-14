@@ -13,6 +13,10 @@ body {
     background-color: var(#{$✨}header-background);
     box-shadow: var(#{$✨}card-box-shadow);
 
+    svg.pico-logo {
+      transform: translateY(-10%);
+    }
+
     .container {
       display: flex;
       align-items: center;

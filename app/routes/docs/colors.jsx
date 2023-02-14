@@ -18,13 +18,17 @@ export default function Colors() {
         <h2>Pico comes with 360 colors to personalize your project.</h2>
       </hgroup>
 
-      <nav>
+      <nav role="tablist">
         <ul>
           <li>
-            <Link to="/docs/colors">Palette</Link>
+            <Link to="/docs/colors" role="button" className="outline secondary">
+              Palette
+            </Link>
           </li>
           <li>
-            <Link to="/docs/colors/usage">Usage</Link>
+            <Link to="/docs/colors/usage" role="button" className="outline secondary">
+              Usage
+            </Link>
           </li>
         </ul>
       </nav>
