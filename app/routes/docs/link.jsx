@@ -15,10 +15,10 @@ export default function LinkPage() {
     <>
       <hgroup>
         <h1>Link</h1>
-        <h2>
+        <p>
           Links come with <Code display="inline">.secondary</Code> and{" "}
           <Code display="inline">.contrast</Code> styles.
-        </h2>
+        </p>
       </hgroup>
 
       <article aria-label="Links example" className="component">

@@ -19,7 +19,7 @@ export default function Themes() {
     <>
       <hgroup>
         <h1>Themes</h1>
-        <h2>Pico is shipped with 2 consistent themes: Light & Dark.</h2>
+        <p>Pico is shipped with 2 consistent themes: Light & Dark.</p>
       </hgroup>
 
       <p>

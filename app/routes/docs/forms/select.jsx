@@ -15,7 +15,7 @@ export default function Accordions() {
     <>
       <hgroup>
         <h1>Select</h1>
-        <h2>Selects are styled like inputs.</h2>
+        <p>Selects are styled like inputs.</p>
       </hgroup>
 
       <article aria-label="Select example" className="component">

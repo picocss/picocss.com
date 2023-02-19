@@ -16,10 +16,10 @@ export default function Accordions() {
     <>
       <hgroup>
         <h1>Form</h1>
-        <h2>
+        <p>
           All form elements are fully responsive in pure semantic HTML, allowing forms to scale
           gracefully across devices and viewports.
-        </h2>
+        </p>
       </hgroup>
 
       <p>

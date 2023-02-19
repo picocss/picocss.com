@@ -8,7 +8,7 @@
 body > {
   main {
     @media (min-width: map.get(map.get($breakpoints, "lg"), "breakpoint")) {
-      grid-column-gap: 4rem;
+      grid-column-gap: 2rem;
       display: grid;
       grid-template-columns: 12rem auto;
     }

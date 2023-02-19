@@ -19,11 +19,12 @@ main {
     }
 
     > .code pre,
-    hgroup {
+    > header {
       @each $key, $values in $breakpoints {
         @if $values {
           @media (min-width: map.get($values, "breakpoint")) {
             $multiplier: 1;
+
             @if $key == "sm" {
               $multiplier: 1.25;
             } @else if $key == "md" {
@@ -33,6 +34,7 @@ main {
             } @else if $key == "xl" {
               $multiplier: 2;
             }
+
             #{$✨}block-spacing-horizontal: calc(var(#{$✨}spacing) * $multiplier);
             #{$✨}block-spacing-vertical: calc(var(#{$✨}spacing) * $multiplier);
           }

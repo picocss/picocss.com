@@ -14,10 +14,10 @@ export default function Button() {
     <>
       <hgroup>
         <h1>Button</h1>
-        <h2>
+        <p>
           The essential button in pure HTML, without <Code display="inline">.classes</Code> for the
           default style.
-        </h2>
+        </p>
       </hgroup>
 
       <article aria-label="Button example" className="component">

@@ -13,7 +13,7 @@ export default function Accordions() {
     <>
       <hgroup>
         <h1>Input</h1>
-        <h2>All input types are consistently styled and come with validation states.</h2>
+        <p>All input types are consistently styled and come with validation states.</p>
       </hgroup>
 
       <article aria-label="Inputs example" className="component">

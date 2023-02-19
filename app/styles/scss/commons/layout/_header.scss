@@ -13,14 +13,20 @@ body {
     background-color: var(#{$✨}header-background);
     box-shadow: var(#{$✨}card-box-shadow);
 
-    svg.pico-logo {
-      transform: translateY(-10%);
-    }
-
     .container {
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      > a {
+        margin: calc(var(#{$✨}spacing) * -0.125) calc(var(#{$✨}spacing) * -0.25);
+        padding: calc(var(#{$✨}spacing) * 0.125) calc(var(#{$✨}spacing) * 0.25);
+        border-radius: var(#{$✨}border-radius);
+
+        svg.pico-logo {
+          transform: translateY(-10%);
+        }
+      }
 
       nav {
         svg {

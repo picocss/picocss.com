@@ -44,7 +44,7 @@ export default function Dropdown() {
     <>
       <hgroup>
         <h1>Dropdown</h1>
-        <h2>Dropdown menus and custom selects without JavaScript.</h2>
+        {/* <p>Dropdown menus and custom selects without JavaScript.</p> */}
       </hgroup>
 
       <p>

@@ -11,6 +11,7 @@
   &.property {
     color: var(#{$✨}code-tag);
   }
+
   &.tag.attr-name:not(.punctuation),
   &.selector:not(.punctuation),
   &.keyword,
@@ -18,10 +19,12 @@
   &.function {
     color: var(#{$✨}code-attr);
   }
+
   &.tag.attr-value:not(.attr-equals),
   &.string {
     color: var(#{$✨}code-value);
   }
+
   &.comment:not(.punctuation),
   &.doctype {
     color: var(#{$✨}code-comment);
@@ -60,10 +63,6 @@
     top: 50%;
     transform: translateY(-50%);
   }
-}
-
-p > code {
-  color: inherit;
 }
 
 article footer:has(.code) {

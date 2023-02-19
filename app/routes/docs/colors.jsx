@@ -15,7 +15,7 @@ export default function Colors() {
     <>
       <hgroup>
         <h1>Colors</h1>
-        <h2>Pico comes with 360 colors to personalize your project.</h2>
+        <p>Pico comes with 360 colors to personalize your project.</p>
       </hgroup>
 
       <nav role="tablist">

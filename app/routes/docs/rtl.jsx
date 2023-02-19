@@ -13,7 +13,7 @@ export default function Rtl() {
     <>
       <hgroup>
         <h1>RTL</h1>
-        <h2>Support for Right-To-Left text with Pico.</h2>
+        <p>Support for Right-To-Left text with Pico.</p>
       </hgroup>
 
       <p>

@@ -13,7 +13,7 @@ export default function Card() {
     <>
       <hgroup>
         <h1>Card</h1>
-        <h2>A flexible container with graceful spacings across devices and viewports.</h2>
+        <p>A flexible container with graceful spacings across devices and viewports.</p>
       </hgroup>
 
       <article aria-label="Card example">I'm a card!</article>

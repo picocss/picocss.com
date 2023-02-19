@@ -23,10 +23,10 @@ export default function ThemeGenerator() {
     <>
       <hgroup>
         <h1>Minimal theme generator</h1>
-        <h2>
+        <p>
           Pick a color to generate the CSS code to customize Pico's primary color with CSS
           variables.
-        </h2>
+        </p>
       </hgroup>
       <Outlet />
     </>

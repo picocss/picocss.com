@@ -14,7 +14,7 @@ export default function Docs() {
     <>
       <hgroup>
         <h1>Usage</h1>
-        <h2>Works without package manager or dependencies 🙂!</h2>
+        <p>Works without package manager or dependencies 🙂!</p>
       </hgroup>
 
       <p>There are 4 ways to get started with pico.css:</p>

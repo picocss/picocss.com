@@ -13,7 +13,7 @@ export default function Classless() {
     <>
       <hgroup>
         <h1>Class-less version</h1>
-        <h2>For wild HTML purists!</h2>
+        <p>For wild HTML purists!</p>
       </hgroup>
 
       <p>

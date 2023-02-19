@@ -13,7 +13,7 @@ export default function Accordion() {
     <>
       <hgroup>
         <h1>Accordions</h1>
-        <h2>Toggle sections of content in pure HTML, without JavaScript.</h2>
+        <p>Toggle sections of content in pure HTML, without JavaScript.</p>
       </hgroup>
 
       <article aria-label="Accordions example" className="component">

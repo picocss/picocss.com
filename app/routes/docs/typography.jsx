@@ -13,10 +13,10 @@ export default function Typography() {
     <>
       <hgroup>
         <h1>Typography</h1>
-        <h2>
+        <p>
           All typographic elements are responsive, allowing text to scale gracefully across devices
           and viewports.
-        </h2>
+        </p>
       </hgroup>
 
       <figure>
@@ -199,30 +199,19 @@ export default function Typography() {
       </article>
 
       <p>
-        Inside a <Code display="inline">{`<hgroup>`}</Code> or a{" "}
-        <Code display="inline">class="headings</Code> all{" "}
-        <Code display="inline">margin-bottom</Code> are collapsed and the{" "}
+        Inside a <Code display="inline">{`<hgroup>`}</Code>, margins bottom are collapsed and the{" "}
         <Code display="inline">:last-child</Code> is muted.
       </p>
-      <article aria-label="Headings group example" className="component">
-        <div className="headings">
-          <h2>Heading 2</h2>
-          <h3>Subtitle for heading 2</h3>
-        </div>
-        <footer>
-          <Code>{`<!-- Hgroup -->
-<hgroup>
-  <h2>Heading 2</h2>
-  <h3>Subtitle for heading 2</h3>
-</hgroup>
 
-<!-- Class -->
-<div class="headings">
+      <hgroup style={{ marginBottom: "var(--pico-typography-spacing-vertical)" }}>
+        <h2>Heading 2</h2>
+        <p>Subtitle for heading 2</p>
+      </hgroup>
+
+      <Code>{`<hgroup>
   <h2>Heading 2</h2>
-  <h3>Subtitle for heading 2</h3>
-</div>`}</Code>
-        </footer>
-      </article>
+  <p>Subtitle for heading 2</p>
+</hgroup>`}</Code>
 
       <h2>Inline text elements</h2>
       <div className="grid">
@@ -287,13 +276,20 @@ export default function Typography() {
   </footer>
 </blockquote>`}</Code>
 
-      {/* <h2>Horizontal rules</h2>
+      <h2>Horizontal rules</h2>
+      <p>
+        The <Code display="inline">{`<hr>`}</Code> tag renders an horizontal line.
+      </p>
       <article aria-label="Horizontal rule example" className="component">
+        <p>Aliquam semper felis sit amet tortor finibus ultricies.</p>
         <hr />
+        <p>Integer eget ante eget nibh laoreet euismod quis id sapien.</p>
         <footer>
-          <Code>{`<hr />`}</Code>
+          <Code>{`<p>Aliquam semper felis sit amet tortor finibus ultricies.</p>
+<hr />
+<p>Integer eget ante eget nibh laoreet euismod quis id sapien.</p>`}</Code>
         </footer>
-      </article> */}
+      </article>
     </>
   );
 }

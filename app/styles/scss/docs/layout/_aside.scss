@@ -29,6 +29,7 @@ main {
         height: 1rem;
         padding-right: var(#{$✨}nav-element-spacing-horizontal);
       }
+
       @media (min-width: map.get(map.get($breakpoints, "lg"), "breakpoint")) {
         display: none;
       }
@@ -46,56 +47,76 @@ main {
       }
     }
 
-    // Accordions
     details {
-      summary {
-        text-transform: uppercase;
+      margin-bottom: calc(var(#{$✨}spacing) * 1.5);
 
-        &:not([role]):not(:focus)[aria-current] {
-          color: var(#{$✨}primary-hover);
+      &:not([role="list"], :has(summary[role="button"])) {
+        padding-bottom: 0;
+        border-bottom: 0;
+      }
+
+      summary {
+        font-weight: 600;
+        line-height: var(#{$✨}line-height);
+
+        &:focus-visible {
+          &:not([role]) {
+            outline-offset: 0;
+          }
         }
 
         &:not(:focus-visible):after {
           display: none;
         }
+      }
 
-        &:focus-visible {
-          &:not([role]) {
-            outline-offset: var(#{$✨}spacing, 1rem);
+      ul {
+        border-left: var(#{$✨}border-width) solid var(#{$✨}muted-border-color);
+
+        &:first-of-type {
+          margin: 0;
+          padding: 0;
+        }
+
+        li {
+          margin: 0;
+          padding: calc(var(#{$✨}nav-element-spacing-vertical) * 0.25) 0;
+
+          a {
+            margin: 0;
+            margin-left: calc(var(#{$✨}border-width) * -1);
+            padding: 0;
+            padding-left: calc(var(#{$✨}nav-element-spacing-horizontal) * 1.5);
+            border-left: var(#{$✨}border-width) solid transparent;
+            border-radius: 0;
+            transition: background-color var(#{$✨}transition), color var(#{$✨}transition),
+              text-decoration var(#{$✨}transition), box-shadow var(#{$✨}transition),
+              border-color var(#{$✨}transition);
+
+            &:hover {
+              border-color: var(#{$✨}secondary-underline);
+            }
+
+            &[aria-current] {
+              border-color: var(#{$✨}primary);
+              color: var(#{$✨}primary-hover);
+              font-weight: 600;
+
+              &:hover {
+                text-decoration: none;
+              }
+            }
           }
         }
       }
 
       &[open] {
-        color: inherit;
+        > summary {
+          margin-bottom: calc(var(#{$✨}spacing) * 0.5);
 
-        summary {
-          margin-bottom: calc(var(--pico-spacing) * 0.75);
-          color: var(#{$✨}primary-hover);
-        }
-      }
-    }
-
-    ul,
-    ul:first-of-type {
-      margin-left: 0;
-    }
-
-    li {
-      // Links
-      a {
-        padding: calc(var(#{$✨}nav-element-spacing-vertical) * 0.375)
-          var(#{$✨}nav-element-spacing-horizontal);
-
-        &[aria-current] {
-          background-color: var(#{$✨}aside-link-current-background-color);
-          color: var(#{$✨}primary-hover);
-          text-decoration-color: var(#{$✨}primary-hover);
-        }
-
-        &:focus-visible {
-          z-index: 1;
-          position: relative;
+          &:not([role]):not(:focus) {
+            color: inherit;
+          }
         }
       }
     }
