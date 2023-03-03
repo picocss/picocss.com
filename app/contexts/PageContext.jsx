@@ -1,4 +1,4 @@
-import { createContext, useEffect, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useRef, useState } from "react";
 
 import usePrefersColorScheme from "use-prefers-color-scheme";
 import useLocalStorageState from "use-local-storage-state";
@@ -22,7 +22,9 @@ export default function PageProvider({ children, ...props }) {
   };
 
   // Header
-  const [isHeaderFixed, setIsHeaderFixed] = useState(false);
+  const [headerIsFixed, setHeaderIsFixed] = useState(false);
+  const headerRef = useRef(null);
+  const headerHeight = headerRef.current ? headerRef.current.offsetHeight : 0;
 
   // Modal
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -69,13 +71,15 @@ export default function PageProvider({ children, ...props }) {
   return (
     <PageContext.Provider
       value={{
-        isHeaderFixed,
         isSSR,
+        headerHeight,
+        headerIsFixed,
+        headerRef,
         modalIsOpen,
         onOpenModal,
         onCloseModal,
         pageTheme,
-        setIsHeaderFixed,
+        setHeaderIsFixed,
         switchTheme,
         systemPrefersColorScheme: defaultTheme,
       }}

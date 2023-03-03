@@ -1,10 +1,10 @@
+import { usePage } from "~/contexts/PageContext";
+
 import Link from "~/components/Link";
 import GitHubIcon from "~/components/icons/GitHub";
 import MoonIcon from "~/components/icons/Moon";
 import SunIcon from "~/components/icons/Sun";
 import TwitterIcon from "~/components/icons/Twitter";
-
-import { usePage } from "~/contexts/PageContext";
 
 export default function Nav(props) {
   const { pageTheme, switchTheme } = usePage();
@@ -15,6 +15,23 @@ export default function Nav(props) {
   return (
     <nav {...props}>
       <ul>
+        {/* <li>
+          <Link to="#" className="secondary" aria-controls="version-menu">
+            v2.0.1
+          </Link>
+          <ul dir="rtl" id="version-menu">
+            <li>
+              <Link to="#" className="secondary">
+                v2.0.1
+              </Link>
+            </li>
+            <li>
+              <Link to="#" className="secondary">
+                v1.5.8
+              </Link>
+            </li>
+          </ul>
+        </li> */}
         <li>
           <Link to="/docs" className="secondary">
             Docs

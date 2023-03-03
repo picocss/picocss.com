@@ -1,7 +1,25 @@
+import Header from "~/components/docs/Header";
+import Content from "~/components/docs/Content";
+
+import metaData from "~/data/meta";
+const { titleSuffix } = metaData();
+
+export const meta = () => ({
+  title: `Loading ${titleSuffix}`,
+  description: "Duis scelerisque nisi ligula, eget ornare lectus ornare efficitur.",
+});
+
 export default function Loading() {
   return (
     <>
-      <h1>Loading</h1>
+      {/* Header */}
+      <Header
+        title="Loading"
+        description="Duis scelerisque nisi ligula, eget ornare lectus ornare efficitur."
+      />
+
+      {/* Content */}
+      <Content />
     </>
   );
 }

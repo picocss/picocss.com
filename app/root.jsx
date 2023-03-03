@@ -27,7 +27,10 @@ export const meta = () => {
 };
 
 export function links() {
-  return [{ rel: "stylesheet", href: picoStyles }];
+  return [
+    { rel: "stylesheet", href: picoStyles },
+    { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" },
+  ];
 }
 
 export function CatchBoundary() {

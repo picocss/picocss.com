@@ -1,54 +1,56 @@
 @use "sass:map";
 @use "settings" as *;
 
-article.color-picker {
-  > header {
-    grid-gap: var(#{$✨}block-spacing-horizontal);
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    overflow: hidden;
-    border-top-right-radius: var(#{$✨}border-radius);
-    border-top-left-radius: var(#{$✨}border-radius);
-
-    a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      aspect-ratio: 1/1;
-      border-radius: 50%;
-      box-shadow: inset 0 0 1rem 0 rgb(0 0 0 / 0%);
-      transition: box-shadow var(#{$✨}transition);
-
-      &[aria-current] {
-        box-shadow: inset 0 0 1rem 0 rgb(0 0 0 / 25%);
-      }
-
-      svg {
-        --pico-logo-small-sparkles: currentColor;
-        --pico-logo-big-sparkle: currentColor;
-        width: 37.5%;
-        height: auto;
-        opacity: 0.875;
-      }
-    }
-
-    @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {
-      grid-gap: calc(var(#{$✨}block-spacing-horizontal) * 0.5);
-      grid-template-columns: repeat(10, 1fr);
-    }
-
-    @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
-      grid-gap: 0;
-      grid-template-columns: repeat(20, 1fr);
-      padding: 0;
+article {
+  &.color-picker {
+    > header {
+      grid-gap: var(#{$✨}block-spacing-horizontal);
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      overflow: hidden;
+      border-top-right-radius: var(#{$✨}border-radius);
+      border-top-left-radius: var(#{$✨}border-radius);
 
       a {
-        border-radius: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        box-shadow: inset 0 0 1rem 0 rgb(0 0 0 / 0%);
+        transition: box-shadow var(#{$✨}transition);
+
+        &[aria-current] {
+          box-shadow: inset 0 0 1rem 0 rgb(0 0 0 / 25%);
+        }
+
+        svg {
+          #{$✨}logo-small-sparkles: currentColor;
+          #{$✨}logo-big-sparkle: currentColor;
+          width: 37.5%;
+          height: auto;
+          opacity: 0.875;
+        }
+      }
+
+      @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {
+        grid-gap: calc(var(#{$✨}block-spacing-horizontal) * 0.5);
+        grid-template-columns: repeat(10, 1fr);
+      }
+
+      @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+        grid-gap: 0;
+        grid-template-columns: repeat(20, 1fr);
+        padding: 0;
+
+        a {
+          border-radius: 0;
+        }
       }
     }
-  }
 
-  h3 {
-    color: var(#{$✨}primary);
+    h3 {
+      color: var(#{$✨}primary);
+    }
   }
 }

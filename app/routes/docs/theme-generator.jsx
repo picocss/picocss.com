@@ -1,7 +1,10 @@
+import Header from "~/components/docs/Header";
+import Content from "~/components/docs/Content";
 import { Outlet } from "@remix-run/react";
-import metaData from "~/data/meta";
+
 import colorPickerStyles from "~/styles/css/docs/color-picker.css";
 
+import metaData from "~/data/meta";
 const { titleSuffix } = metaData();
 
 export const meta = () => ({
@@ -21,14 +24,16 @@ export function links() {
 export default function ThemeGenerator() {
   return (
     <>
-      <hgroup>
-        <h1>Minimal theme generator</h1>
-        <p>
-          Pick a color to generate the CSS code to customize Pico's primary color with CSS
-          variables.
-        </p>
-      </hgroup>
-      <Outlet />
+      {/* Header */}
+      <Header
+        title="Minimal theme generator"
+        description="Pick a color to generate the CSS code to customize Pico's primary color with CSS variables."
+      />
+
+      {/* Content */}
+      <Content>
+        <Outlet />
+      </Content>
     </>
   );
 }

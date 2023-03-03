@@ -1,6 +1,13 @@
-import metaData from "~/data/meta";
+import { useRef } from "react";
+
+import Header from "~/components/docs/Header";
+import TableOfContents from "~/components/docs/TableOfContents";
+import Content from "~/components/docs/Content";
+
+import Heading from "~/components/docs/Heading";
 import Code from "~/components/Code";
 
+import metaData from "~/data/meta";
 const { titleSuffix } = metaData();
 
 export const meta = () => ({
@@ -10,45 +17,105 @@ export const meta = () => ({
 });
 
 export default function Docs() {
+  const installManuallyRef = useRef();
+  const installFromCdnRef = useRef();
+  const installWithNpmRef = useRef();
+  const installWithComposerRef = useRef();
+  const starterHtmlTemplateRef = useRef();
+
   return (
     <>
-      <hgroup>
-        <h1>Usage</h1>
-        <p>Works without package manager or dependencies 🙂!</p>
-      </hgroup>
+      {/* Header */}
+      <Header title="Quick start" description="Works without package manager or dependencies 🙂!" />
 
-      <p>There are 4 ways to get started with pico.css:</p>
+      {/* Table of content */}
+      <TableOfContents
+        data={[
+          {
+            anchor: "install-manually",
+            title: "Install manually",
+            ref: installManuallyRef,
+          },
+          {
+            anchor: "install-from-cdn",
+            title: "Install from CDN",
+            ref: installFromCdnRef,
+          },
+          {
+            anchor: "install-with-npm",
+            title: "Install with NPM",
+            ref: installWithNpmRef,
+          },
+          {
+            anchor: "install-with-composer",
+            title: "Install with Composer",
+            ref: installWithComposerRef,
+          },
+          {
+            anchor: "starter-html-template",
+            title: "Starter HTML template",
+            ref: starterHtmlTemplateRef,
+          },
+        ]}
+      />
 
-      <h3>Install manually</h3>
-      <p>
-        <a href="https://github.com/picocss/pico/archive/refs/heads/master.zip">Download Pico</a>{" "}
-        and link <Code display="inline">{`/css/pico.min.css`}</Code> in the{" "}
-        <Code display="inline">{`<head>`}</Code> of your website.
-      </p>
-      <Code className="small">{`<link rel="stylesheet" href="css/pico.min.css" />`}</Code>
+      {/* Content */}
+      <Content>
+        <section aria-label="Introduction">
+          <p>There are 4 ways to get started with pico.css:</p>
+        </section>
 
-      <h3>Install from CDN</h3>
-      <p>
-        Alternatively, you can use <a href="https://unpkg.com/@picocss/pico@latest/">unpkg CDN</a>{" "}
-        to link pico.css
-      </p>
-      <Code className="small">{`<link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css" />`}</Code>
+        <section ref={installManuallyRef}>
+          <Heading level={2} anchor="install-manually">
+            Install manually
+          </Heading>
+          <p>
+            <a href="https://github.com/picocss/pico/archive/refs/heads/master.zip">
+              Download Pico
+            </a>{" "}
+            and link <Code display="inline">{`/css/pico.min.css`}</Code> in the{" "}
+            <Code display="inline">{`<head>`}</Code> of your website.
+          </p>
+          <Code className="small">{`<link rel="stylesheet" href="css/pico.min.css" />`}</Code>
+        </section>
 
-      <h3>Install with NPM</h3>
-      <Code language="bash" className="small">
-        npm install @picocss/pico
-      </Code>
-      <Code language="bash" className="small">
-        yarn add @picocss/pico
-      </Code>
+        <section ref={installFromCdnRef}>
+          <Heading level={2} anchor="install-from-cdn">
+            Install from CDN
+          </Heading>
+          <p>
+            Alternatively, you can use{" "}
+            <a href="https://unpkg.com/@picocss/pico@latest/">unpkg CDN</a> to link pico.css
+          </p>
+          <Code className="small">{`<link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css" />`}</Code>
+        </section>
 
-      <h3>Install with Composer</h3>
-      <Code language="bash" className="small">
-        composer require picocss/pico
-      </Code>
+        <section ref={installWithNpmRef}>
+          <Heading level={2} anchor="install-with-npm">
+            Install with NPM
+          </Heading>
+          <Code language="bash" className="small">
+            npm install @picocss/pico
+          </Code>
+          <Code language="bash" className="small">
+            yarn add @picocss/pico
+          </Code>
+        </section>
 
-      <p>Starter HTML template:</p>
-      <Code>{`<!doctype html>
+        <section ref={installWithComposerRef}>
+          <Heading level={2} anchor="install-with-composer">
+            Install with Composer
+          </Heading>
+          <Code language="bash" className="small">
+            composer require picocss/pico
+          </Code>
+        </section>
+
+        <section ref={starterHtmlTemplateRef}>
+          <Heading level={2} anchor="starter-html-template">
+            Starter HTML template
+          </Heading>
+          <Code>{`<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -62,6 +129,8 @@ export default function Docs() {
     </main>
   </body>
 </html>`}</Code>
+        </section>
+      </Content>
     </>
   );
 }

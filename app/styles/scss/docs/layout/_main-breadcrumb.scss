@@ -1,0 +1,97 @@
+@use "sass:map";
+@use "settings" as *;
+
+/**
+ * Docs: Breadcrumb
+ */
+
+html {
+  #{$✨}breadcrumb-height: calc(3.5rem + var(#{$✨}border-width));
+}
+
+main {
+  > [aria-label="breadcrumb"] {
+    z-index: 3;
+    position: sticky;
+    top: -1px;
+    background-color: var(#{$✨}background-color);
+
+    &.is-sticky {
+      background-color: transparent;
+
+      &:before {
+        display: block;
+        z-index: -1;
+        position: absolute;
+        inset: 0 calc(var(#{$✨}spacing) * -1);
+        border-bottom: var(#{$✨}border-width) solid var(#{$✨}header-border-color);
+        backdrop-filter: blur(1rem);
+        background-color: var(#{$✨}header-background);
+        box-shadow: var(#{$✨}card-box-shadow);
+        content: "";
+        transition: background-color var(#{$✨}transition), border var(#{$✨}transition),
+          box-shadow var(#{$✨}transition);
+
+        @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) and (max-width: calc(#{map.get(map.get($breakpoints, "lg"), "breakpoint")} - 1px)) {
+          inset: 0 calc(((100vw - map.get(map.get($breakpoints, "sm"), "viewport")) / 2) * -1);
+        }
+
+        @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) and (max-width: calc(#{map.get(map.get($breakpoints, "lg"), "breakpoint")} - 1px)) {
+          inset: 0 calc(((100vw - map.get(map.get($breakpoints, "md"), "viewport")) / 2) * -1);
+        }
+      }
+    }
+
+    ul {
+      max-width: 100%;
+      li {
+        flex-shrink: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        &:not(:last-child) {
+          &::after {
+            content: ">";
+          }
+        }
+
+        &:first-child {
+          a {
+            color: var(#{$✨}secondary);
+            cursor: pointer;
+
+            &:hover {
+              color: var(#{$✨}secondary-hover);
+            }
+          }
+        }
+
+        &:last-child {
+          flex-shrink: 1;
+        }
+
+        @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
+          &:first-child {
+            &::after {
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+
+    svg {
+      width: auto;
+      height: 1.125rem;
+      margin-right: var(#{$✨}nav-link-spacing-horizontal);
+      transform: translateY(-0.0625rem);
+    }
+
+    a {
+      &[aria-current] {
+        pointer-events: auto;
+      }
+    }
+  }
+}

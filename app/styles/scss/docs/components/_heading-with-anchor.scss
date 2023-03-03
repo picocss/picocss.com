@@ -1,0 +1,42 @@
+@use "sass:map";
+@use "settings" as *;
+
+:is(h1, h2, h3, h4, h5, h6) {
+  &:has(a[id]) {
+    position: relative;
+
+    a[id] {
+      padding-left: calc(var(#{$✨}spacing) * 0.5);
+      text-decoration: none;
+      opacity: 0;
+      transition: color var(#{$✨}transition) opacity var(#{$✨}transition);
+
+      @media (min-width: map.get(map.get($breakpoints, "lg"), "breakpoint")) {
+        position: absolute;
+        left: 0;
+        padding-right: calc(var(#{$✨}spacing) * 0.5);
+        transform: translateX(-100%);
+      }
+
+      &:focus-visible {
+        box-shadow: none;
+        color: var(#{$✨}primary);
+        opacity: 1;
+      }
+    }
+
+    &:hover {
+      a[id] {
+        opacity: 0.25;
+
+        &:hover {
+          opacity: 0.5;
+        }
+
+        &:focus-visible {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

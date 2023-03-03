@@ -1,0 +1,113 @@
+@use "sass:map";
+@use "settings" as *;
+
+/**
+ * Docs: Documentation Menu
+ */
+
+main {
+  > aside#documentation-menu {
+    position: relative;
+
+    header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      height: var(#{$✨}header-height);
+      margin-bottom: var(#{$✨}spacing);
+
+      h2 {
+        #{$✨}font-size: 1.25rem;
+        margin-bottom: 0;
+      }
+
+      a {
+        opacity: 0.5;
+        transition: background-color var(#{$✨}transition), color var(#{$✨}transition),
+          opacity var(#{$✨}transition);
+
+        svg {
+          display: block;
+          width: auto;
+          height: 1.125rem;
+        }
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      @media (min-width: map.get(map.get($breakpoints, "lg"), "breakpoint")) {
+        display: none;
+      }
+    }
+
+    @media (max-width: calc(#{map.get(map.get($breakpoints, "lg"), "breakpoint")} - 1px)) {
+      display: grid;
+      z-index: 3;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      grid-template-rows: auto 1fr;
+      transform: translateX(calc(-100% - var(#{$✨}spacing)));
+      transition: transform var(#{$✨}transition);
+
+      header,
+      nav {
+        padding: 0 var(#{$✨}spacing);
+      }
+
+      nav {
+        margin-bottom: var(#{$✨}spacing);
+        margin-block: calc(var(#{$✨}outline-width) * -1);
+        padding-block: var(#{$✨}outline-width);
+        overflow: auto;
+      }
+
+      &::before {
+        z-index: -1;
+        position: fixed;
+        inset: 0;
+        background-color: var(#{$✨}background-color);
+        content: "";
+      }
+
+      &.is-open-on-mobile {
+        transform: translateX(0);
+        @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) and (max-width: calc(#{map.get(map.get($breakpoints, "lg"), "breakpoint")} - 1px)) {
+          max-width: calc(
+            map.get(map.get($breakpoints, "sm"), "viewport") + (var(#{$✨}spacing) * 2)
+          );
+          margin-right: auto;
+          margin-left: auto;
+
+          &::before {
+            inset: 0 calc(((100vw - map.get(map.get($breakpoints, "sm"), "viewport")) / 2) * -1);
+          }
+        }
+
+        @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) and (max-width: calc(#{map.get(map.get($breakpoints, "lg"), "breakpoint")} - 1px)) {
+          max-width: calc(
+            map.get(map.get($breakpoints, "md"), "viewport") + (var(#{$✨}spacing) * 2)
+          );
+
+          &::before {
+            inset: 0 calc(((100vw - map.get(map.get($breakpoints, "md"), "viewport")) / 2) * -1);
+          }
+        }
+      }
+    }
+
+    @media (min-width: #{map.get(map.get($breakpoints, "lg"), "breakpoint")}) {
+      transition: none;
+    }
+  }
+}
+
+@media (max-width: calc(#{map.get(map.get($breakpoints, "lg"), "breakpoint")} - 1px)) {
+  html:has(aside#documentation-menu.is-open-on-mobile) {
+    overflow: hidden;
+  }
+}

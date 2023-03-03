@@ -1399,6 +1399,11 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
+"@makotot/ghostui@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@makotot/ghostui/-/ghostui-2.0.0.tgz#ae035d405a9ed5100436158e953ed9480f1c09a7"
+  integrity sha512-LD6OeMv+yGjpYZNjh34yDTCIE1NegqOtJq5gm4wX6op3QL7K5psTVzMjkWzseBoYj0XOD4g+UJVIZTprfoOPGg==
+
 "@miniflare/cache@2.11.0":
   version "2.11.0"
   resolved "https://registry.yarnpkg.com/@miniflare/cache/-/cache-2.11.0.tgz#e13f4a860ebe01fc67f0169e76be93350c29d7ff"

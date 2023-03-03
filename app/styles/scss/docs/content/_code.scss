@@ -6,75 +6,162 @@
  * Docs: Code
  */
 
-.token {
-  &.tag:not(.punctuation),
-  &.property {
-    color: var(#{$✨}code-tag);
-  }
-
-  &.tag.attr-name:not(.punctuation),
-  &.selector:not(.punctuation),
-  &.keyword,
-  &.boolean,
-  &.function {
-    color: var(#{$✨}code-attr);
-  }
-
-  &.tag.attr-value:not(.attr-equals),
-  &.string {
-    color: var(#{$✨}code-value);
-  }
-
-  &.comment:not(.punctuation),
-  &.doctype {
-    color: var(#{$✨}code-comment);
-  }
-}
-
+// All code blocks
 .code {
   position: relative;
 
-  > button {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    padding: 0.375rem 0.5rem;
-    font-size: 16px;
-    opacity: 0;
-    transition: background-color var(#{$✨}transition), border-color var(#{$✨}transition),
-      color var(#{$✨}transition), box-shadow var(#{$✨}transition), opacity var(#{$✨}transition);
-  }
-
-  &:hover {
-    button {
-      opacity: 1;
-    }
+  pre {
+    margin-bottom: 0;
   }
 
   code {
+    padding: 0;
+    font-family: "Fira Code", var(#{$✨}font-family);
+
     @media (min-width: map.get(map.get($breakpoints, "lg"), "breakpoint")) {
       font-size: 16px;
     }
   }
+
+  > a.copy-to-clipboard {
+    z-index: 1;
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    padding: 0.25rem 1rem;
+    border-radius: var(#{$✨}border-radius);
+    color: var(#{$✨}code-comment);
+    transition: color var(#{$✨}transition);
+
+    > svg {
+      display: block;
+      width: 1.125rem;
+      height: 1.125rem;
+      opacity: 0.5;
+      transition: opacity var(#{$✨}transition);
+    }
+
+    &:hover {
+      svg {
+        opacity: 1;
+      }
+    }
+
+    &:has(svg.check) {
+      color: var(#{$✨}code-copied);
+
+      svg {
+        opacity: 1;
+      }
+    }
+  }
+
+  &::after {
+    position: absolute;
+    inset: 0;
+    border-radius: var(#{$✨}border-radius);
+    content: "";
+    pointer-events: none;
+  }
 }
 
+// Code blocks in the article footer
+article footer:has(.code) {
+  padding: 0;
+  overflow: hidden;
+
+  .code {
+    > a.copy-to-clipboard {
+      background-color: var(#{$✨}card-sectionning-background-color);
+    }
+
+    pre {
+      padding: calc(var(#{$✨}block-spacing-vertical) * 0.66) var(#{$✨}block-spacing-horizontal);
+      background-color: transparent;
+    }
+
+    &::after {
+      box-shadow: 0 0 var(#{$✨}spacing) calc(var(#{$✨}spacing) * 0.5)
+        var(#{$✨}card-sectionning-background-color) inset;
+    }
+  }
+}
+
+// Standalone code blocks
+.code:not(article footer .code) {
+  @each $key, $values in $breakpoints {
+    @if $values {
+      @media (min-width: map.get($values, "breakpoint")) {
+        $multiplier: 1;
+
+        @if $key == "sm" {
+          $multiplier: 1.25;
+        } @else if $key == "md" {
+          $multiplier: 1.5;
+        } @else if $key == "lg" {
+          $multiplier: 1.75;
+        } @else if $key == "xl" {
+          $multiplier: 2;
+        }
+
+        #{$✨}block-spacing-horizontal: calc(var(#{$✨}spacing) * $multiplier);
+        #{$✨}block-spacing-vertical: calc(var(#{$✨}spacing) * $multiplier);
+      }
+    }
+  }
+  margin-bottom: var(#{$✨}block-spacing-vertical);
+  overflow: hidden;
+  border-radius: var(#{$✨}border-radius);
+  background-color: var(#{$✨}card-background-color);
+  box-shadow: var(#{$✨}card-box-shadow);
+
+  > a.copy-to-clipboard {
+    background-color: var(#{$✨}card-background-color);
+  }
+
+  pre {
+    padding: calc(var(#{$✨}block-spacing-vertical) * 0.66) var(#{$✨}block-spacing-horizontal);
+    background: transparent;
+  }
+
+  &::after {
+    box-shadow: 0 0 var(#{$✨}spacing) calc(var(#{$✨}spacing) * 0.5)
+      var(#{$✨}card-background-color) inset;
+  }
+}
+
+// Small code blocks
 .code.small {
-  > button {
+  > a.copy-to-clipboard {
     top: 50%;
     transform: translateY(-50%);
   }
 }
 
-article footer:has(.code) {
-  position: relative;
-
-  &:hover {
-    button {
-      opacity: 1;
+// Color syntax
+code {
+  .token {
+    &.tag:not(.punctuation),
+    &.property {
+      color: var(#{$✨}code-tag);
     }
-  }
 
-  .code {
-    position: initial;
+    &.tag.attr-name:not(.punctuation),
+    &.selector:not(.punctuation),
+    &.keyword,
+    &.boolean,
+    &.function {
+      color: var(#{$✨}code-attr);
+    }
+
+    &.tag.attr-value:not(.attr-equals),
+    &.string {
+      color: var(#{$✨}code-value);
+    }
+
+    &.comment:not(.punctuation),
+    &.doctype {
+      color: var(#{$✨}code-comment);
+    }
   }
 }

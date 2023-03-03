@@ -1,0 +1,35 @@
+@use "sass:map";
+@use "settings" as *;
+
+/**
+ * Page: Typography
+ */
+
+main#typography {
+  table#responsive-font-sizes {
+    font-size: 16px;
+
+    caption {
+      display: none;
+    }
+
+    th,
+    td {
+      padding: calc(var(#{$✨}spacing) / 2);
+      white-space: nowrap;
+    }
+
+    td {
+      font-size: 14px;
+    }
+
+    [data-tooltip] {
+      border-bottom-color: var(#{$✨}muted-color);
+
+      &::before,
+      &::after {
+        font-size: 12px;
+      }
+    }
+  }
+}

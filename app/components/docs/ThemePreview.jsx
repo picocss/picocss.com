@@ -1,10 +1,10 @@
-import { colorFamilies } from "~/data/colors";
+import useCurrentPath from "~/utils/useCurrentPath";
 
 import Logo from "~/components/Logo";
 import Code from "~/components/Code";
 import Link from "~/components/Link";
 
-import useCurrentPath from "~/utils/useCurrentPath";
+import { colorFamilies } from "~/data/colors";
 
 // Remove the last X lines of the code snippet.
 const removeLastLines = ({ code, linesToRemove = 1 }) => {

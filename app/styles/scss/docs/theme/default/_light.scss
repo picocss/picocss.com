@@ -15,4 +15,8 @@
   #{$✨}code-attr: #{mix($zinc-650, $fuchsia-500, 25%)};
   #{$✨}code-value: #{mix($zinc-650, $jade-500, 50%)};
   #{$✨}code-comment: #{$zinc-500};
+  #{$✨}code-copied: #{$jade-500};
+
+  // Chapter
+  #{$✨}chapter-color: var(#{$✨}code-tag);
 }

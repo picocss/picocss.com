@@ -22,7 +22,7 @@
     "dev:watch:sort-scss": "onchange 'app/styles/**/*.scss' -- postcss --config app/styles/scss {{changed}} --replace",
     "dev:watch:build-css": "sass --load-path=node_modules/@picocss/pico/scss/ app/styles/scss/:app/styles/css/ --watch",
     "dev:watch:custom-themes": "onchange --await-write-finish 'app/styles/css/custom-themes/*.css' -- run-s 'build:custom-themes:*'",
-    "dev:watch:autoprefix": "onchange --await-write-finish 'app/styles/css/*.css' -- run-s 'build:autoprefix'",
+    "dev:watch:autoprefix": "onchange 'app/styles/css/*.css' -- postcss --config app/styles/css {{changed}} --replace",
     "dev:wrangler": "cross-env NODE_ENV=development npm run wrangler",
     "start": "cross-env NODE_ENV=production npm run wrangler",
     "wrangler": "wrangler pages dev ./public",
@@ -33,6 +33,7 @@
     "prebuild:compile:copy-custom-themes": "echo '[@picocss/picocss.com] ✨ Copy themes'"
   },
   "dependencies": {
+    "@makotot/ghostui": "2.0.0",
     "@remix-run/cloudflare": "^1.12.0",
     "@remix-run/cloudflare-pages": "^1.12.0",
     "@remix-run/react": "^1.12.0",

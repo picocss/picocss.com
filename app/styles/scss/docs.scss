@@ -3,16 +3,25 @@
 
 // Layouts
 @use "docs/layout/main";
-@use "docs/layout/aside";
-@use "docs/layout/role-document";
-@use "docs/layout/sectionning";
+@use "docs/layout/main-breadcrumb";
+@use "docs/layout/main-aside";
+@use "docs/layout/main-documentation-menu";
+@use "docs/layout/main-header";
+@use "docs/layout/main-table-of-contents";
+@use "docs/layout/main-document";
 
 // Content
 @use "docs/content/code";
 
+// Pages
+@use "docs/pages/themes";
+@use "docs/pages/typography";
+
 // Components
-@use "docs/components/card";
+@use "docs/components/chapter";
+@use "docs/components/docs-nav";
+@use "docs/components/card-component";
 @use "docs/components/card-color-picker";
 @use "docs/components/color-families";
 @use "docs/components/dialog-color";
-@use "docs/components/nav-tablist";
+@use "docs/components/heading-with-anchor";

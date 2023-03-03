@@ -1,11 +1,11 @@
 import { useEffect } from "react";
+import { use100vh } from "react-div-100vh";
 
 import Link from "~/components/Link";
 import Close from "~/components/icons/Close";
 import Code from "~/components/Code";
 
 import sentenceCase from "~/utils/sentenceCase";
-import { use100vh } from "react-div-100vh";
 
 import {
   getNextColor,

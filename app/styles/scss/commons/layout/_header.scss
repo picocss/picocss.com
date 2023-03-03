@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "colors" as *;
 @use "settings" as *;
 
@@ -5,10 +6,14 @@
  * Header
  */
 
+html {
+  #{$✨}header-height: calc(4.75rem + var(#{$✨}border-width));
+}
+
 body {
   > header {
-    padding-block: 0.625rem;
-    border-bottom: 1px solid var(#{$✨}header-border-color);
+    padding: 0.625rem 0;
+    border-bottom: var(#{$✨}border-width) solid var(#{$✨}header-border-color);
     backdrop-filter: blur(1rem);
     background-color: var(#{$✨}header-background);
     box-shadow: var(#{$✨}card-box-shadow);
@@ -30,30 +35,36 @@ body {
 
       nav {
         svg {
-          width: auto;
+          display: inline-block;
+          width: 1.125rem;
           height: 1.125rem;
           transform: translateY(-0.05em);
+        }
+
+        // Hide docs link on mobile
+        li:has(a[href="/docs"]):first-of-type {
+          @media (max-width: calc(#{map.get(map.get($breakpoints, "sm"), "breakpoint")} - 1px)) {
+            display: none;
+          }
         }
       }
     }
 
     // Fixed header
-    &.fixed {
-      z-index: 99;
-      position: fixed;
-      inset: 0 0 auto 0;
-
-      + main {
-        margin-top: 4.75rem;
+    &.is-fixed-above-lg {
+      @media (min-width: map.get(map.get($breakpoints, "lg"), "breakpoint")) {
+        z-index: 2;
+        position: sticky;
+        top: 0;
       }
     }
   }
 }
 
-.modal-is-open {
-  > body {
-    > header {
-      padding-right: var(#{$✨}scrollbar-width, 0px);
-    }
-  }
-}
+// .modal-is-open {
+//   > body {
+//     > header {
+//       padding-right: var(#{$✨}scrollbar-width, 0px);
+//     }
+//   }
+// }

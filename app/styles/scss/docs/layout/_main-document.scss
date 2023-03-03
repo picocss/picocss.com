@@ -1,0 +1,30 @@
+@use "sass:map";
+@use "settings" as *;
+
+/**
+ * Docs: Document
+ */
+
+main {
+  > [role="document"] {
+    // Card
+    article,
+    article form {
+      > *:last-child:not(footer, .grid) {
+        margin-bottom: 0;
+      }
+    }
+
+    // Section
+    > section {
+      > h1,
+      > h2,
+      > h3,
+      > h4,
+      > h5,
+      > h6 {
+        font-weight: normal;
+      }
+    }
+  }
+}

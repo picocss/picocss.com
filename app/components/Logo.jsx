@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import useCurrentPath from "~/utils/useCurrentPath";
 import { usePage } from "~/contexts/PageContext";
+import useCurrentPath from "~/utils/useCurrentPath";
 
 export default function Logo({ displayWordmark = true, animate = false, ...props }) {
   const currentPath = useCurrentPath();

@@ -1,0 +1,18 @@
+@use "sass:map";
+@use "settings" as *;
+
+/**
+ * Docs: Header
+ */
+
+main {
+  > hgroup {
+    p.chapter {
+      margin-bottom: calc(var(#{$✨}spacing) * 0.25);
+    }
+
+    h1 {
+      margin-bottom: calc(var(#{$✨}spacing) * 0.125);
+    }
+  }
+}

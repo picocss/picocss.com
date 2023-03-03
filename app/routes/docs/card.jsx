@@ -1,6 +1,9 @@
-import metaData from "~/data/meta";
+import Header from "~/components/docs/Header";
+import Content from "~/components/docs/Content";
+
 import Code from "~/components/Code";
 
+import metaData from "~/data/meta";
 const { titleSuffix } = metaData();
 
 export const meta = () => ({
@@ -11,36 +14,40 @@ export const meta = () => ({
 export default function Card() {
   return (
     <>
-      <hgroup>
-        <h1>Card</h1>
-        <p>A flexible container with graceful spacings across devices and viewports.</p>
-      </hgroup>
+      {/* Header */}
+      <Header
+        title="Card"
+        description="A flexible container with graceful spacings across devices and viewports."
+      />
 
-      <article aria-label="Card example">I'm a card!</article>
-      <Code className="small">{`<article>I'm a card!</article>`}</Code>
+      {/* Content */}
+      <Content>
+        <article aria-label="Card example">I'm a card!</article>
+        <Code className="small">{`<article>I'm a card!</article>`}</Code>
 
-      <p>
-        You can use <Code display="inline">{`<header>`}</Code> and{" "}
-        <Code display="inline">{`<footer>`}</Code> inside{" "}
-        <Code display="inline">{`<article>`}</Code>.
-      </p>
-      <article aria-label="Card sectioning example">
-        <header>Header</header>Body<footer>Footer</footer>
-      </article>
-      <Code>{`<article>
+        <p>
+          You can use <Code display="inline">{`<header>`}</Code> and{" "}
+          <Code display="inline">{`<footer>`}</Code> inside{" "}
+          <Code display="inline">{`<article>`}</Code>.
+        </p>
+        <article aria-label="Card sectioning example">
+          <header>Header</header>Body<footer>Footer</footer>
+        </article>
+        <Code>{`<article>
   <header>Header</header>
   Body
   <footer>Footer</footer>
 </article>`}</Code>
 
-      <p>
-        Optionally, you can use <Code display="inline">{`<main>`}</Code> to wrap the body content.
-      </p>
-      <Code>{`<article>
+        <p>
+          Optionally, you can use <Code display="inline">{`<main>`}</Code> to wrap the body content.
+        </p>
+        <Code>{`<article>
   <header>Header</header>
   <main>Body</main>
   <footer>Footer</footer>
 </article>`}</Code>
+      </Content>
     </>
   );
 }

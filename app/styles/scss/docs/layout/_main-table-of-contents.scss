@@ -1,0 +1,46 @@
+@use "sass:map";
+@use "settings" as *;
+
+/**
+ * Docs: Table of Contents
+ */
+
+main {
+  > aside#table-of-contents {
+    details {
+      summary {
+        pointer-events: none;
+
+        &::after {
+          display: none;
+        }
+      }
+
+      ul {
+        li {
+          @media (max-width: calc(#{map.get(map.get($breakpoints, "xl"), "breakpoint")} - 1px)) {
+            a {
+              // Bring back underline for small devices
+              &:not(:hover) {
+                text-decoration: underline;
+              }
+
+              // Override aria-current link styles for small devices
+              &[aria-current] {
+                border-color: transparent;
+                color: var(#{$✨}secondary);
+                font-weight: normal;
+                text-decoration-color: var(#{$✨}secondary-underline);
+
+                &:hover {
+                  border-color: var(#{$✨}secondary-underline);
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

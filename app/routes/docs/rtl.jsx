@@ -1,6 +1,9 @@
-import metaData from "~/data/meta";
+import Header from "~/components/docs/Header";
+import Content from "~/components/docs/Content";
+
 import Code from "~/components/Code";
 
+import metaData from "~/data/meta";
 const { titleSuffix } = metaData();
 
 export const meta = () => ({
@@ -11,20 +14,21 @@ export const meta = () => ({
 export default function Rtl() {
   return (
     <>
-      <hgroup>
-        <h1>RTL</h1>
-        <p>Support for Right-To-Left text with Pico.</p>
-      </hgroup>
+      {/* Header */}
+      <Header title="RTL" description="Support for Right-To-Left text with Pico." />
 
-      <p>
-        To enable RTL (Right-To-Left) with Pico, you need to set <code>dir="rtl"</code> on the{" "}
-        <Code display="inline">{`<html>`}</Code> element (
-        <a href="https://picocss.com/examples/preview-rtl/">example</a>).
-      </p>
-      <Code>{`<!doctype html>
+      {/* Content */}
+      <Content>
+        <p>
+          To enable RTL (Right-To-Left) with Pico, you need to set <code>dir="rtl"</code> on the{" "}
+          <Code display="inline">{`<html>`}</Code> element (
+          <a href="https://picocss.com/examples/preview-rtl/">example</a>).
+        </p>
+        <Code>{`<!doctype html>
 <html dir="rtl" lang="ar">
   …
 </html>`}</Code>
+      </Content>
     </>
   );
 }

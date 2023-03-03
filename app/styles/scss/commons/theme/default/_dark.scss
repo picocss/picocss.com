@@ -3,8 +3,8 @@
 
 @mixin theme {
   // Header
-  #{$✨}header-background: #{rgba(mix($slate-950, $slate-900), 0.85)};
-  #{$✨}header-border-color: var(#{$✨}muted-border-color);
+  #{$✨}header-background: #{rgba(mix($slate-950, $slate-900), 0.9)};
+  #{$✨}header-border-color: rgba($slate-850, 0.9);
 
   // Logo
   #{$✨}logo-wordmark: #{$white};
