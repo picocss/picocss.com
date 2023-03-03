@@ -24,7 +24,7 @@ export default function Select() {
         <article aria-label="Select example" className="component">
           <label htmlFor="fruit">Fruit</label>
           <select id="fruit" defaultValue="" required>
-            <option selected disabled value="">
+            <option disabled value="">
               Select a fruit…
             </option>
             <option>Banana</option>

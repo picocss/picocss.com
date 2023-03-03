@@ -77,7 +77,7 @@ export default function Nav() {
             <ul>
               <li>
                 <a href="#menu" onClick={preventDefault} className="secondary" aria-label="Menu">
-                  <MenuIcon height="1rem" width="auto" />
+                  <MenuIcon height="1rem" width="100%" />
                 </a>
               </li>
             </ul>
@@ -94,7 +94,7 @@ export default function Nav() {
                   className="secondary"
                   aria-label="Twitter"
                 >
-                  <TwitterIcon height="1rem" width="auto" />
+                  <TwitterIcon height="1rem" width="100%" />
                 </a>
               </li>
             </ul>
