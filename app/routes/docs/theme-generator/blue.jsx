@@ -1,8 +1,8 @@
-import ThemePreview from "~/components/docs/ThemePreview";
 import { themeTitle, themeDescription } from "./";
-
 import cssStyle from "~/styles/css/custom-themes/blue.css";
 import cssCode from "~/styles/css/custom-themes/code/blue.txt";
+
+import ThemePreview from "~/components/docs/ThemePreview";
 
 const colorName = "Blue";
 

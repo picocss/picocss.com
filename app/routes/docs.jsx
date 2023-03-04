@@ -1,6 +1,6 @@
 import { Outlet } from "@remix-run/react";
 
-import useCurrentPath from "~/utils/useCurrentPath";
+import { useCurrentPath } from "~/utils";
 import { DocumentationProvider } from "~/contexts/DocumentationContext";
 import Breadcrumb from "~/components/docs/Breadcrumb";
 import Header from "~/components/Header";

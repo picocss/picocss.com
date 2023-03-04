@@ -1,7 +1,8 @@
+import metaData from "~/data/meta";
+
 import Header from "~/components/docs/Header";
 import Content from "~/components/docs/Content";
 
-import metaData from "~/data/meta";
 const { titleSuffix } = metaData();
 
 export const meta = () => ({

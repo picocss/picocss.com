@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useMatches } from "@remix-run/react";
-import useCurrentPath from "~/utils/useCurrentPath";
+import { useCurrentPath } from "~/utils";
 import { useDocumentation } from "~/contexts/DocumentationContext";
 
 import { documentationMenu } from "~/data/documentationMenu";
@@ -17,7 +17,7 @@ export default function Aside(props) {
     (route) => route.pathname === "/docs/theme-generator"
   );
   const isColorsNestedPage = routes.some((route) => route.pathname === "/docs/colors");
-  const { menuIsOpenOnMobile, setChapter, setMenuIsOpenOnMobile } = useDocumentation();
+  const { menuIsOpenOnMobile, setMenuIsOpenOnMobile } = useDocumentation();
   const [currentCategory, setCurrentCategory] = useState("Getting started");
 
   const onClose = (event) => {
@@ -25,10 +25,6 @@ export default function Aside(props) {
     console.log("WTF");
     setMenuIsOpenOnMobile(false);
   };
-
-  useEffect(() => {
-    setChapter(currentCategory);
-  }, [currentCategory, setChapter]);
 
   return (
     <aside

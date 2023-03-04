@@ -1,7 +1,7 @@
-import ThemePreview from "~/components/docs/ThemePreview";
-
 import cssStyle from "~/styles/css/custom-themes/red.css";
 import cssCode from "~/styles/css/custom-themes/code/red.txt";
+
+import ThemePreview from "~/components/docs/ThemePreview";
 
 const colorName = "Red";
 

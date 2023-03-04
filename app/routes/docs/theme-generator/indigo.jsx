@@ -1,8 +1,8 @@
-import ThemePreview from "~/components/docs/ThemePreview";
 import { themeTitle, themeDescription } from "./";
-
 import cssStyle from "~/styles/css/custom-themes/indigo.css";
 import cssCode from "~/styles/css/custom-themes/code/indigo.txt";
+
+import ThemePreview from "~/components/docs/ThemePreview";
 
 const colorName = "Indigo";
 

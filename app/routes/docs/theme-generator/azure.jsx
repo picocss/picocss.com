@@ -1,7 +1,7 @@
-import ThemePreview from "~/components/docs/ThemePreview";
 import { themeTitle, themeDescription } from "./";
-
 import cssCode from "~/styles/css/custom-themes/code/azure.txt";
+
+import ThemePreview from "~/components/docs/ThemePreview";
 
 const colorName = "Azure";
 

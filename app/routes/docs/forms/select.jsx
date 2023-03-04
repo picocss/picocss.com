@@ -1,10 +1,10 @@
-import Header from "~/components/docs/Header";
-import Content from "~/components/docs/Content";
-
-import Link from "~/components/Link";
-import Code from "~/components/Code";
-
 import metaData from "~/data/meta";
+
+import Code from "~/components/Code";
+import Content from "~/components/docs/Content";
+import Header from "~/components/docs/Header";
+import Link from "~/components/Link";
+
 const { titleSuffix } = metaData();
 
 export const meta = () => ({

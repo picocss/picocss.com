@@ -1,17 +1,17 @@
 import { useRef, useState } from "react";
 import { usePage } from "~/contexts/PageContext";
 
+import metaData from "~/data/meta";
+import { colorFamilies, colorShades, colorMainShades } from "~/data/colors";
+import { sentenceCase } from "~/utils";
+
+import colorUtilities from "~/styles/css/docs/color-utilities.css";
+
 import Header from "~/components/docs/Header";
 import TableOfContents from "~/components/docs/TableOfContents";
 import Content from "~/components/docs/Content";
-
 import Heading from "~/components/docs/Heading";
 import ColorModal from "~/components/docs/ColorModal";
-
-import metaData from "~/data/meta";
-import { colorFamilies, colorShades, colorMainShades } from "~/data/colors";
-import sentenceCase from "~/utils/sentenceCase";
-import colorUtilities from "~/styles/css/docs/color-utilities.css";
 
 const { titleSuffix } = metaData();
 

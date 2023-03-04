@@ -5,7 +5,7 @@ function getPathFromRoutes(routes) {
   return routes[routes.length - 1].pathname.replace(/\/\s*$/, "");
 }
 
-export default function useCurrentPath() {
+export function useCurrentPath() {
   const routes = useMatches();
   const [currentPath, setCurrentPath] = useState(getPathFromRoutes(routes));
 

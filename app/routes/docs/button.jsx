@@ -1,14 +1,13 @@
 import { useRef } from "react";
+import metaData from "~/data/meta";
 
-import Header from "~/components/docs/Header";
-import TableOfContents from "~/components/docs/TableOfContents";
+import Code from "~/components/Code";
 import Content from "~/components/docs/Content";
-
+import Header from "~/components/docs/Header";
 import Heading from "~/components/docs/Heading";
 import Link from "~/components/Link";
-import Code from "~/components/Code";
+import TableOfContents from "~/components/docs/TableOfContents";
 
-import metaData from "~/data/meta";
 const { titleSuffix } = metaData();
 
 export const meta = () => ({

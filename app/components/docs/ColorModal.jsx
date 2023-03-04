@@ -5,8 +5,6 @@ import Link from "~/components/Link";
 import Close from "~/components/icons/Close";
 import Code from "~/components/Code";
 
-import sentenceCase from "~/utils/sentenceCase";
-
 import {
   getNextColor,
   getColorFromNextColorFamily,
@@ -14,7 +12,8 @@ import {
   getColorFromPreviousColorFamily,
   getHexValue,
   getMainHexValue,
-} from "~/utils/usePicoPalette";
+  sentenceCase,
+} from "~/utils";
 
 export default function ColorModal({ color, isOpen, onClose, setSelectedColor, ...props }) {
   const backgroundColorClassName = `pico-background-${color.family}-${color.shade}`;

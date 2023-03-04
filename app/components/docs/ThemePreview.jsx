@@ -1,4 +1,4 @@
-import useCurrentPath from "~/utils/useCurrentPath";
+import { useCurrentPath } from "~/utils";
 
 import Logo from "~/components/Logo";
 import Code from "~/components/Code";

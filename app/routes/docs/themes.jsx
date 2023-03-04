@@ -1,10 +1,9 @@
-import { usePage } from "~/contexts/PageContext";
-
-import Header from "~/components/docs/Header";
-import Content from "~/components/docs/Content";
-
-import Heading from "~/components/docs/Heading";
 import Code from "~/components/Code";
+import Content from "~/components/docs/Content";
+import Header from "~/components/docs/Header";
+import Heading from "~/components/docs/Heading";
+
+import { usePage } from "~/contexts/PageContext";
 
 import metaData from "~/data/meta";
 const { titleSuffix } = metaData();

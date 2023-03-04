@@ -1,4 +1,4 @@
-export default function isScrollbarVisible() {
+export function isScrollbarVisible() {
   if (typeof window !== "undefined") {
     return document.body.scrollHeight > screen.height;
   }

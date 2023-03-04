@@ -1,15 +1,15 @@
 import { useState } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 
+import Link from "./Link";
+import Check from "./icons/Check";
+import Clipboard from "./icons/Clipboard";
+
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import bash from "react-syntax-highlighter/dist/esm/languages/prism/bash";
 import css from "react-syntax-highlighter/dist/esm/languages/prism/css";
 import jsx from "react-syntax-highlighter/dist/esm/languages/prism/jsx";
 import scss from "react-syntax-highlighter/dist/esm/languages/prism/scss";
-
-import Link from "./Link";
-import Check from "./icons/Check";
-import Clipboard from "./icons/Clipboard";
 
 SyntaxHighlighter.registerLanguage("bash", bash);
 SyntaxHighlighter.registerLanguage("css", css);

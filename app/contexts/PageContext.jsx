@@ -3,7 +3,7 @@ import { createContext, useContext, useEffect, useRef, useState } from "react";
 import usePrefersColorScheme from "use-prefers-color-scheme";
 import useLocalStorageState from "use-local-storage-state";
 
-import isScrollbarVisible from "~/utils/isScrollbarVisible";
+import { isScrollbarVisible } from "~/utils";
 
 const PageContext = createContext({});
 const usePage = () => useContext(PageContext);

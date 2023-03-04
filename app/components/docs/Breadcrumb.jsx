@@ -31,6 +31,7 @@ export default function Breadcrumb(props) {
       aria-label="breadcrumb"
       ref={breadcrumbRef}
       {...(breadcrumbTopPosition && breadcrumbTopPosition <= -1 ? { className: "is-sticky" } : {})}
+      {...props}
     >
       <ul>
         <li>

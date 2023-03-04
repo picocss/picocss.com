@@ -1,8 +1,8 @@
-import ThemePreview from "~/components/docs/ThemePreview";
 import { themeTitle, themeDescription } from "./";
-
 import cssStyle from "~/styles/css/custom-themes/orange.css";
 import cssCode from "~/styles/css/custom-themes/code/orange.txt";
+
+import ThemePreview from "~/components/docs/ThemePreview";
 
 const colorName = "Orange";
 
