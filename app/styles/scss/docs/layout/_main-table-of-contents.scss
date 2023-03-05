@@ -8,6 +8,8 @@
 main {
   > aside#table-of-contents {
     details {
+      border-bottom: none;
+
       summary {
         pointer-events: none;
 
@@ -23,6 +25,7 @@ main {
               // Bring back underline for small devices
               &:not(:hover) {
                 text-decoration: underline;
+                text-decoration-color: var(#{$✨}secondary-underline);
               }
 
               // Override aria-current link styles for small devices
@@ -34,6 +37,7 @@ main {
 
                 &:hover {
                   border-color: var(#{$✨}secondary-underline);
+                  color: var(#{$✨}secondary-hover);
                   text-decoration: underline;
                 }
               }

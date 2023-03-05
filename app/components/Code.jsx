@@ -5,7 +5,7 @@ import Link from "./Link";
 import Check from "./icons/Check";
 import Clipboard from "./icons/Clipboard";
 
-import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
+import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/prism-light";
 import bash from "react-syntax-highlighter/dist/esm/languages/prism/bash";
 import css from "react-syntax-highlighter/dist/esm/languages/prism/css";
 import jsx from "react-syntax-highlighter/dist/esm/languages/prism/jsx";

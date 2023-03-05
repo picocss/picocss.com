@@ -11,7 +11,7 @@ const { titleSuffix } = metaData();
 export const meta = () => ({
   title: `Themes ${titleSuffix}`,
   description:
-    "Pico is shipped with two beautiful and consistent color themes, automatically enabled according to the user's preference.",
+    "Pico has two consistent color themes, automatically enabled according to the user's preference.",
 });
 
 export default function Themes() {
@@ -23,7 +23,7 @@ export default function Themes() {
       {/* Header */}
       <Header
         title="Themes"
-        description="Pico is shipped with 2 consistent themes: Light & Dark."
+        description="Pico has two consistent color themes, automatically enabled according to the user's preference."
       />
 
       {/* Content */}

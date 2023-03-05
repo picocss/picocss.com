@@ -16,6 +16,7 @@ export default function DocsPage(props) {
   const currentPath = useCurrentPath();
   const pageId =
     currentPath === "/docs" ? "index" : currentPath.replace("/docs/", "").replace(/\//g, "-");
+
   return (
     <DocumentationProvider>
       <Header headerIsFixed={true} />

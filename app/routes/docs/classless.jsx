@@ -6,6 +6,7 @@ import Content from "~/components/docs/Content";
 import Header from "~/components/docs/Header";
 import Heading from "~/components/docs/Heading";
 import TableOfContents from "~/components/docs/TableOfContents";
+import Link from "~/components/Link";
 
 const { titleSuffix } = metaData();
 
@@ -29,7 +30,7 @@ export default function Classless() {
         data={[
           {
             anchor: "",
-            title: "Introduction",
+            title: "Semantic containers",
             ref: introductionRef,
           },
           {
@@ -39,7 +40,7 @@ export default function Classless() {
           },
           {
             anchor: "root-container",
-            title: "Root container",
+            title: "Custom root container",
             ref: rootContainerRef,
           },
         ]}
@@ -55,8 +56,8 @@ export default function Classless() {
           <p>
             In this version, <Code display="inline">{`<header>`}</Code>,{" "}
             <Code display="inline">{`<main>`}</Code>, and <Code display="inline">{`<footer>`}</Code>{" "}
-            act as <a href="./containers.html">containers</a> to define a centered or a fluid
-            viewport.
+            inside <Code display="inline">{`<body>`}</Code> act as{" "}
+            <Link to="/docs/container">containers</Link> to define a centered or a fluid viewport.
           </p>
           <Code language="css">{`/* Containers */
 body > header,
@@ -64,6 +65,19 @@ body > main,
 body > footer {
   …
 }`}</Code>
+          <p>These 2 pages have the same style:</p>
+          <Code>{`<!-- With pico.min.css -->
+<body>
+  <main class="container">
+    <h1>Hello, world!</h1>
+  </main>
+</body>`}</Code>
+          <Code>{`<!-- With pico.classless.min.css -->
+<body>
+  <main>
+    <h1>Hello, world!</h1>
+  </main>
+</body>`}</Code>
         </section>
 
         <section ref={usageRef}>
@@ -97,16 +111,15 @@ body > footer {
             Root container
           </Heading>
           <p>
-            If you need to customize the default root container (
-            <Code display="inline">{`<body>`}</Code>) for <Code display="inline">{`<header>`}</Code>
-            , <Code display="inline">{`<main>`}</Code>, and{" "}
-            <Code display="inline">{`<footer>`}</Code>, you can recompile Pico with another CSS
+            If you need to customize the default root container for{" "}
+            <Code display="inline">{`<header>`}</Code>, <Code display="inline">{`<main>`}</Code>,
+            and <Code display="inline">{`<footer>`}</Code>, you can recompile Pico with another CSS
             selector.
           </p>
 
           <p>
             Useful for <a href="https://reactjs.org/">React</a>,{" "}
-            <a href="https://www.gatsbyjs.com/">Gatsby</a> or{" "}
+            <a href="https://www.gatsbyjs.com/">Gatsby</a>, or{" "}
             <a href="https://nextjs.org/">Next.js</a>.
           </p>
           <Code language="scss">{`/* Custom Class-less version for React */

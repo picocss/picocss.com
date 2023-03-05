@@ -14,7 +14,6 @@ main {
     z-index: 3;
     position: sticky;
     top: -1px;
-    background-color: var(#{$✨}background-color);
 
     &.is-sticky {
       background-color: transparent;

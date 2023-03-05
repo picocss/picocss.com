@@ -19,7 +19,7 @@ main {
         &:not([role="list"], :has(summary[role="button"])) {
           @media (min-width: map.get(map.get($breakpoints, "lg"), "breakpoint")) {
             padding-bottom: 0;
-            border-bottom: 0;
+            border-bottom: none;
           }
         }
 

@@ -243,9 +243,9 @@ export default function Typography() {
             </Link>
           </p>
           <p>
-            To follow the user's default font size, the base font size is defined as a percentage
-            and grows with the user's screen size. HTML elements are defined in{" "}
-            <Code display="inline">rem</Code>.{" "}
+            To ensure that the user's default font size is followed, the base font size is defined
+            as a percentage that grows with the user's screen size, while HTML elements are defined
+            in <Code display="inline">rem</Code>.
           </p>
           <p>
             Since <Code display="inline">rem</Code> is a multiplier of the HTML document font size,
@@ -280,7 +280,7 @@ export default function Typography() {
             Heading group
           </Heading>
           <p>
-            Inside a <Code display="inline">{`<hgroup>`}</Code>, margins are collapsed and the{" "}
+            Inside a <Code display="inline">{`<hgroup>`}</Code>, margins are collapsed, and the{" "}
             <Code display="inline">:last-child</Code> is muted.
           </p>
           <article aria-label="Headings example" className="component">
@@ -373,7 +373,7 @@ export default function Typography() {
             Horizontal rule
           </Heading>
           <p>
-            The <Code display="inline">{`<hr>`}</Code> tag renders an horizontal line.
+            The <Code display="inline">{`<hr>`}</Code> tag renders a horizontal line.
           </p>
           <article aria-label="Horizontal rule example" className="component">
             <p>Aliquam semper felis sit amet tortor.</p>
