@@ -1,0 +1,42 @@
+/* Azure color for light color scheme (Default) */
+/* Can be forced with data-theme="light" */
+[data-theme=light],
+:root:not([data-theme=dark]) {
+  --pico-text-selection-color: rgba(2, 154, 232, 0.25);
+  --pico-primary: #0172ad;
+  --pico-primary-hover: #015887;
+  --pico-primary-underline: rgba(1, 114, 173, 0.5);
+  --pico-primary-background: #0172ad;
+  --pico-primary-background-hover: #02659a;
+  --pico-primary-focus: rgba(2, 154, 232, 0.25);
+  --pico-primary-inverse: #fff;
+}
+
+/* Azure color for dark color scheme (Auto) */
+/* Automatically enabled if user has Dark mode enabled */
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --pico-text-selection-color: rgba(1, 170, 255, 0.1875);
+    --pico-primary: #01aaff;
+    --pico-primary-hover: #79c0ff;
+    --pico-primary-underline: rgba(1, 170, 255, 0.5);
+    --pico-primary-background: #0172ad;
+    --pico-primary-background-hover: #017fc0;
+    --pico-primary-focus: rgba(1, 170, 255, 0.25);
+    --pico-primary-inverse: #fff;
+  }
+}
+/* Azure color for dark color scheme (Forced) */
+/* Enabled if forced with data-theme="dark" */
+[data-theme=dark] {
+  --pico-text-selection-color: rgba(1, 170, 255, 0.1875);
+  --pico-primary: #01aaff;
+  --pico-primary-hover: #79c0ff;
+  --pico-primary-underline: rgba(1, 170, 255, 0.5);
+  --pico-primary-background: #0172ad;
+  --pico-primary-background-hover: #017fc0;
+  --pico-primary-focus: rgba(1, 170, 255, 0.25);
+  --pico-primary-inverse: #fff;
+}
+
+/*# sourceMappingURL=azure.css.map */

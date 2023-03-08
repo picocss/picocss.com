@@ -1,6 +1,6 @@
 import { themeTitle, themeDescription } from "./";
 import cssStyle from "~/styles/css/custom-themes/purple.css";
-import cssCode from "~/styles/css/custom-themes/code/purple.txt";
+import cssCode from "~/data/code-snippets/purple.txt";
 
 import ThemePreview from "~/components/docs/ThemePreview";
 

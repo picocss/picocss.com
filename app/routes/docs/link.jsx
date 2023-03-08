@@ -17,7 +17,15 @@ export default function LinkPage() {
   return (
     <>
       {/* Header */}
-      <Header title="Link" description="Links come with .secondary and .contrast styles." />
+      <Header
+        title="Link"
+        description={
+          <>
+            Links come with <Code display="inline">.secondary</Code> and{" "}
+            <Code display="inline">.contrast</Code> styles.
+          </>
+        }
+      />
 
       {/* Content */}
       <Content>

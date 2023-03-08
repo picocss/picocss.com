@@ -9,12 +9,12 @@ import metaData from "~/data/meta";
 const { titleSuffix } = metaData();
 
 export const meta = () => ({
-  title: `Themes ${titleSuffix}`,
+  title: `Color schemes ${titleSuffix}`,
   description:
-    "Pico has two consistent color themes, automatically enabled according to the user's preference.",
+    "Pico has two consistent color schemes, automatically enabled according to the user's preference.",
 });
 
-export default function Themes() {
+export default function ColorSchemes() {
   const { pageTheme, switchTheme } = usePage();
   const changeThemeLabel = pageTheme === "dark" ? "Turn off dark mode" : "Turn on dark mode";
 
@@ -22,15 +22,16 @@ export default function Themes() {
     <>
       {/* Header */}
       <Header
-        title="Themes"
-        description="Pico has two consistent color themes, automatically enabled according to the user's preference."
+        title="Color schemes"
+        description="Pico has two consistent color schemes, automatically enabled according to the user's preference."
       />
 
       {/* Content */}
       <Content>
         <p>
-          The default theme is Light. The Dark theme is automatically enabled if the user has dark
-          mode enabled <Code display="inline" language="css">{`prefers-color-scheme: dark;`}</Code>.
+          The default color scheme is Light. The Dark scheme is automatically enabled if the user
+          has dark mode enabled{" "}
+          <Code display="inline" language="css">{`prefers-color-scheme: dark;`}</Code>.
         </p>
         <article aria-label="Theme switcher" id="theme-switcher">
           <button className="contrast" aria-label={changeThemeLabel} onClick={switchTheme}>
@@ -39,7 +40,7 @@ export default function Themes() {
         </article>
 
         <p>
-          Themes can be forced on document level{" "}
+          Color schemes can be forced on document level{" "}
           <Code display="inline">{`<html data-theme="light">`}</Code> or on any HTML element{" "}
           <Code display="inline">{`<article data-theme="dark">`}</Code>
         </p>

@@ -25,32 +25,6 @@ export default function DocsPage(props) {
         <DocumentationMenu />
         <Outlet />
       </main>
-      <noscript>
-        <style>
-          {`
-            main [aria-label=breadcrumb] {
-              display: none !important;
-            }
-            
-            main aside#documentation-menu {
-              display: block !important;
-              margin-left: 0 !important;
-              transform: inherit !important;
-              position: relative !important;
-              z-index: inherit !important;
-              padding: 0 !important;
-            }
-            
-            main aside#documentation-menu header {
-              height: auto !important;
-            }
-            
-            main aside#documentation-menu header a {
-              display: none !important;
-            }
-          `}
-        </style>
-      </noscript>
     </DocumentationProvider>
   );
 }

@@ -134,9 +134,9 @@ export default function Button() {
             Form buttons
           </Heading>
           <p>
-            <Code display="inline">{`type="submit"`}</Code> and{" "}
-            <Code display="inline">{`type="button"`}</Code> inputs are also displayed as buttons.
-            All forms buttons are <Code display="inline">{`width: 100%;`}</Code> by default.
+            <Code display="inline">type="submit"</Code> and{" "}
+            <Code display="inline">type="button"</Code> inputs are also displayed as buttons. All
+            forms buttons are <Code display="inline">width: 100%;</Code> by default.
           </p>
           <article aria-label="Input buttons example" className="component">
             <input type="submit" />

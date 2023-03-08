@@ -8,7 +8,7 @@ import Heading from "~/components/docs/Heading";
 import TableOfContents from "~/components/docs/TableOfContents";
 import Link from "~/components/Link";
 
-const { titleSuffix } = metaData();
+const { titleSuffix, cdnBaseUrl } = metaData();
 
 export const meta = () => ({
   title: `Class-less version ${titleSuffix}`,
@@ -51,7 +51,7 @@ export default function Classless() {
         <section ref={introductionRef}>
           <p>
             Pico provides a <Code display="inline">.classless</Code> version (
-            <a href="https://picocss.com/examples/classless/">example</a>).
+            <Link to="https://picocss.com/examples/classless/">example</Link>).
           </p>
           <p>
             In this version, <Code display="inline">{`<header>`}</Code>,{" "}
@@ -101,9 +101,9 @@ body > footer {
             <a href="https://unpkg.com/@picocss/pico@latest/">unpkg CDN</a>:
           </p>
           <Code>{`<!-- Centered viewport --> 
-<link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.classless.min.css">`}</Code>
+<link rel="stylesheet" href="${cdnBaseUrl}css/pico.classless.min.css">`}</Code>
           <Code>{`<!-- Fluid viewport --> 
-<link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.fluid.classless.min.css">`}</Code>
+<link rel="stylesheet" href="${cdnBaseUrl}css/pico.fluid.classless.min.css">`}</Code>
         </section>
 
         <section ref={rootContainerRef}>
@@ -143,6 +143,10 @@ body > footer {
 #root > footer {
   …
 }`}</Code>
+          <p>
+            Learn more about{" "}
+            <Link to="/docs/sass">compiling a custom version of Pico with SASS</Link>.
+          </p>
         </section>
       </Content>
     </>

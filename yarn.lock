@@ -1625,8 +1625,9 @@
   dependencies:
     json-parse-even-better-errors "^2.3.1"
 
-"@picocss/pico@./../../pico":
+"@picocss/pico@https://github.com/picocss/pico#v2":
   version "2.0.0-alpha1"
+  resolved "https://github.com/picocss/pico#cd0aee31cfee3c0bdfbc900289cb7ec2ba956660"
 
 "@pkgr/utils@^2.3.1":
   version "2.3.1"

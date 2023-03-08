@@ -15,7 +15,7 @@ export default function CheckboxesAndRadios() {
     <>
       {/* Header */}
       <Header
-        title="Checkboxes and radios"
+        title="Checkboxes and&nbsp;radios"
         description="Duis scelerisque nisi ligula, eget ornare lectus ornare efficitur."
       />
 

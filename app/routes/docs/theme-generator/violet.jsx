@@ -1,6 +1,6 @@
 import { themeTitle, themeDescription } from "./";
 import cssStyle from "~/styles/css/custom-themes/violet.css";
-import cssCode from "~/styles/css/custom-themes/code/violet.txt";
+import cssCode from "~/data/code-snippets/violet.txt";
 
 import ThemePreview from "~/components/docs/ThemePreview";
 

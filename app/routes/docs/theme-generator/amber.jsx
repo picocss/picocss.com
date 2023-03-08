@@ -1,6 +1,6 @@
 import { themeTitle, themeDescription } from "./";
 import cssStyle from "~/styles/css/custom-themes/amber.css";
-import cssCode from "~/styles/css/custom-themes/code/amber.txt";
+import cssCode from "~/data/code-snippets/amber.txt";
 
 import ThemePreview from "~/components/docs/ThemePreview";
 

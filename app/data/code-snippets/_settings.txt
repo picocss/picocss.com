@@ -1,0 +1,132 @@
+@use "sass:map";
+
+// Settings
+// ––––––––––––––––––––
+
+// Prefix for CSS variables
+$css-var-prefix: "pico-" !default;
+
+// Define the root element used to target <header>, <main>, <footer>
+// with $enable-semantic-container and $enable-responsive-spacings
+$semantic-root-element: "body" !default;
+
+// Enable <header>, <main>, <footer> inside $semantic-root-element as containers
+$enable-semantic-container: false !default;
+
+// Enable a centered viewport for <header>, <main>, <footer> inside $semantic-root-element
+// Fluid layout if disabled
+$enable-viewport: true !default;
+
+// Enable responsive spacings for <header>, <main>, <footer>, <section>, <article>
+// Fixed spacings if disabled
+$enable-responsive-spacings: true !default;
+
+// Enable responsive typography
+// Fixed root element size (rem) if disabled
+$enable-responsive-typography: true !default;
+
+// Enable .classes
+// .classless version if disabled
+$enable-classes: true !default;
+
+// Enable transitions
+$enable-transitions: true !default;
+
+// Enable overriding with !important
+$enable-important: true !default;
+
+// Breakpoints, viewports and root font size
+$breakpoints: () !default;
+$breakpoints: map.deep-merge(
+  (
+    // Small (landscape phones)
+    // Font size: 17px
+    sm:
+      (
+        breakpoint: 576px,
+        viewport: 510px,
+        root-font-size: 106.25%,
+      ),
+
+    // Medium (tablets)
+    // Font size: 18px
+    md:
+      (
+        breakpoint: 768px,
+        viewport: 700px,
+        root-font-size: 112.5%,
+      ),
+
+    // Large (desktops)
+    // Font size: 19px
+    lg:
+      (
+        breakpoint: 1024px,
+        viewport: 950px,
+        root-font-size: 118.75%,
+      ),
+
+    // Extra large (large desktops)
+    // Font size: 20px
+    xl:
+      (
+        breakpoint: 1280px,
+        viewport: 1200px,
+        root-font-size: 125%,
+      )
+  ),
+  $breakpoints
+);
+
+// Modules to export
+$modules: () !default;
+$modules: map.merge(
+  (
+    // Theme
+    "themes/default": true,
+
+    // Layout
+    "layout/document": true,
+    "layout/landmarks": true,
+    "layout/container": true,
+    "layout/section": true,
+    "layout/grid": true,
+    "layout/scroller": true,
+
+    // Content
+    "content/link": true,
+    "content/typography": true,
+    "content/embedded": true,
+    "content/button": true,
+    "content/table": true,
+    "content/code": true,
+    "content/miscs": true,
+
+    // Forms
+    "forms/basics": true,
+    "forms/checkbox-radio-switch": true,
+    "forms/input-color": true,
+    "forms/input-date": true,
+    "forms/input-file": true,
+    "forms/input-range": true,
+    "forms/input-search": true,
+
+    // Components
+    "components/accordion": true,
+    "components/card": true,
+    "components/dropdown": true,
+    "components/loading": true,
+    "components/modal": true,
+    "components/nav": true,
+    "components/progress": true,
+    "components/tooltip": true,
+
+    // Utilities
+    "utilities/accessibility": true,
+    "utilities/reduce-motion": true
+  ),
+  $modules
+);
+
+// Shortcut for CSS vars prefix
+$✨: --#{$css-var-prefix};

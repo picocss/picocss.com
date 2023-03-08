@@ -1,6 +1,6 @@
 import { themeTitle, themeDescription } from "./";
 import cssStyle from "~/styles/css/custom-themes/green.css";
-import cssCode from "~/styles/css/custom-themes/code/green.txt";
+import cssCode from "~/data/code-snippets/green.txt";
 
 import ThemePreview from "~/components/docs/ThemePreview";
 

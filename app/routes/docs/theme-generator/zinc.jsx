@@ -1,6 +1,6 @@
 import { themeTitle, themeDescription } from "./";
 import cssStyle from "~/styles/css/custom-themes/zinc.css";
-import cssCode from "~/styles/css/custom-themes/code/zinc.txt";
+import cssCode from "~/data/code-snippets/zinc.txt";
 
 import ThemePreview from "~/components/docs/ThemePreview";
 

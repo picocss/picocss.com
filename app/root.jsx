@@ -26,10 +26,16 @@ export const meta = () => {
   };
 };
 
+// <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="(font CSS URL goes here)">
+
 export function links() {
   return [
     { rel: "stylesheet", href: picoStyles },
-    { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" },
+    { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
+    {
+      rel: "stylesheet",
+      href: "https://fonts.googleapis.com/css2?family=Figtree:wght@700&family=Fira+Code&display=swap",
+    },
   ];
 }
 

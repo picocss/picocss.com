@@ -1,6 +1,6 @@
 import { themeTitle, themeDescription } from "./";
 import cssStyle from "~/styles/css/custom-themes/pumpkin.css";
-import cssCode from "~/styles/css/custom-themes/code/pumpkin.txt";
+import cssCode from "~/data/code-snippets/pumpkin.txt";
 
 import ThemePreview from "~/components/docs/ThemePreview";
 

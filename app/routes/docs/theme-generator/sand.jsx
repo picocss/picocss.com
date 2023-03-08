@@ -1,6 +1,6 @@
 import { themeTitle, themeDescription } from "./";
 import cssStyle from "~/styles/css/custom-themes/sand.css";
-import cssCode from "~/styles/css/custom-themes/code/sand.txt";
+import cssCode from "~/data/code-snippets/sand.txt";
 
 import ThemePreview from "~/components/docs/ThemePreview";
 

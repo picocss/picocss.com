@@ -12,7 +12,10 @@ main {
     }
 
     h1 {
-      margin-bottom: calc(var(#{$✨}spacing) * 0.125);
+      margin-bottom: calc(var(#{$✨}spacing) * 0.5);
+      font-size: 3rem;
+      line-height: 1;
+      font-family: "Figtree", var(#{$✨}font-family);
     }
   }
 }

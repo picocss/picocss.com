@@ -3,7 +3,7 @@ export const documentationMenu = [
     category: "Getting started",
     links: [
       { label: "Quick start", route: "/docs" },
-      { label: "Themes", route: "/docs/themes" },
+      { label: "Color schemes", route: "/docs/color-schemes" },
       { label: "Class-less version", route: "/docs/classless" },
       { label: "RTL", route: "/docs/rtl" },
     ],
@@ -11,8 +11,8 @@ export const documentationMenu = [
   {
     category: "Customization",
     links: [
-      { label: "Theme generator", route: "/docs/theme-generator" },
       { label: "CSS Variables", route: "/docs/css-variables" },
+      { label: "Theme generator", route: "/docs/theme-generator" },
       { label: "Sass", route: "/docs/sass" },
       { label: "Colors", route: "/docs/colors" },
     ],

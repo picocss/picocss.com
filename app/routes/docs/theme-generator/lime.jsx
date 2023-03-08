@@ -1,6 +1,6 @@
 import { themeTitle, themeDescription } from "./";
 import cssStyle from "~/styles/css/custom-themes/lime.css";
-import cssCode from "~/styles/css/custom-themes/code/lime.txt";
+import cssCode from "~/data/code-snippets/lime.txt";
 
 import ThemePreview from "~/components/docs/ThemePreview";
 

@@ -17,7 +17,6 @@ export default function FaviconsAndOpenGraph() {
         href={isDarkColorSchemePreferred ? "/favicon-32x32-dark-scheme.png" : "/favicon-32x32.png"}
         sizes="32x32"
       />
-      <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     </Helmet>
   );
 }

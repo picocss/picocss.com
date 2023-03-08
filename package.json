@@ -10,10 +10,10 @@
     "build:sort-scss": "postcss --config app/styles/scss ./app/styles/**/*.scss --replace",
     "build:build-css": "sass --load-path=node_modules/@picocss/pico/scss/ app/styles/scss/:app/styles/css/",
     "build:autoprefix": "postcss --config app/styles/css --replace app/styles/css/*.css",
-    "build:minify": "cleancss -O1 --with-rebase --batch --batch-suffix '' app/styles/css/*.css app/styles/css/**/*.css !app/styles/css/custom-themes/*.css",
-    "build:custom-themes": "run-s 'build:custom-themes:*'",
-    "build:custom-themes:copy": "copyfiles -f './app/styles/css/custom-themes/*.css' -e './app/styles/css/custom-themes/*.min.css' ./app/styles/css/custom-themes/code",
-    "build:custom-themes:rename": "renamer ./app/styles/css/custom-themes/code/*.css --find .css --replace .txt --force --silent",
+    "build:minify": "cleancss -O1 --with-rebase --batch --batch-suffix '' app/styles/css/*.css app/styles/css/**/*.css !app/styles/css/custom-themes/*.css !app/styles/css/extracts/*.css",
+    "build:code-snippets": "run-s 'build:code-snippets:*' --silent",
+    "build:code-snippets:create-folder": "node scripts/create-code-snippets-folder",
+    "build:code-snippets:copy-snippets": "node scripts/copy-code-snippets.js",
     "dev": "remix build && run-p 'dev:*'",
     "dev:remix": "remix watch",
     "dev:recompile-css-then-watch": "run-s 'build:build-css' 'build:autoprefix' 'dev:watch'",
@@ -21,8 +21,8 @@
     "dev:watch:prettier": "onchange 'app/**/*.{js,jsx,ts,tsx,scss}' -- prettier --write --loglevel silent {{changed}}",
     "dev:watch:sort-scss": "onchange 'app/styles/**/*.scss' -- postcss --config app/styles/scss {{changed}} --replace",
     "dev:watch:build-css": "sass --load-path=node_modules/@picocss/pico/scss/ app/styles/scss/:app/styles/css/ --watch",
-    "dev:watch:custom-themes": "onchange --await-write-finish 'app/styles/css/custom-themes/*.css' -- run-s 'build:custom-themes:*'",
     "dev:watch:autoprefix": "onchange 'app/styles/css/*.css' -- postcss --config app/styles/css {{changed}} --replace",
+    "dev:watch:code-snippets": "onchange -k --await-write-finish 3000 'app/styles/css/**/*.css' -- run-s 'build:code-snippets:copy-snippets'",
     "dev:wrangler": "cross-env NODE_ENV=development npm run wrangler",
     "start": "cross-env NODE_ENV=production npm run wrangler",
     "wrangler": "wrangler pages dev ./public",
@@ -30,7 +30,7 @@
     "prebuild:build-css": "echo '[@picocss/picocss.com] ✨ Compile'",
     "prebuild:autoprefix": "echo '[@picocss/picocss.com] ✨ Autoprefix'",
     "prebuild:minify": "echo '[@picocss/picocss.com] ✨ Minify'",
-    "prebuild:compile:copy-custom-themes": "echo '[@picocss/picocss.com] ✨ Copy themes'"
+    "prebuild:code-snippets": "echo '[@picocss/picocss.com] ✨ Code snippets'"
   },
   "dependencies": {
     "@makotot/ghostui": "2.0.0",
@@ -50,7 +50,7 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20230228.0",
-    "@picocss/pico": "./../../pico",
+    "@picocss/pico": "https://github.com/picocss/pico#v2",
     "@remix-run/dev": "^1.14.0",
     "@remix-run/eslint-config": "^1.14.0",
     "autoprefixer": "^10.4.13",

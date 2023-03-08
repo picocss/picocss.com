@@ -1,6 +1,6 @@
 import { themeTitle, themeDescription } from "./";
 import cssStyle from "~/styles/css/custom-themes/cyan.css";
-import cssCode from "~/styles/css/custom-themes/code/cyan.txt";
+import cssCode from "~/data/code-snippets/cyan.txt";
 
 import ThemePreview from "~/components/docs/ThemePreview";
 

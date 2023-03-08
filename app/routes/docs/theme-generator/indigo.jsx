@@ -1,6 +1,6 @@
 import { themeTitle, themeDescription } from "./";
 import cssStyle from "~/styles/css/custom-themes/indigo.css";
-import cssCode from "~/styles/css/custom-themes/code/indigo.txt";
+import cssCode from "~/data/code-snippets/indigo.txt";
 
 import ThemePreview from "~/components/docs/ThemePreview";
 

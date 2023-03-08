@@ -285,13 +285,13 @@ export default function Typography() {
           </p>
           <article aria-label="Headings example" className="component">
             <hgroup>
-              <Heading level={2}>Heading 2</Heading>
-              <p>Subtitle for heading 2</p>
+              <Heading level={2}>Get inspired with CSS</Heading>
+              <p>How to use CSS to add glam to your Website?</p>
             </hgroup>
             <footer>
               <Code>{`<hgroup>
-  <h2>Heading 2</h2>
-  <p>Subtitle for heading 2</p>
+  <h2>Get inspired with CSS</h2>
+  <p>How to use CSS to add glam to your Website?</p>
 </hgroup>`}</Code>
             </footer>
           </article>
@@ -353,17 +353,17 @@ export default function Typography() {
             Blockquote
           </Heading>
           <blockquote>
-            "Maecenas vehicula metus tellus, vitae congue turpis hendrerit non. Nam at dui sit amet
-            ipsum cursus ornare."
+            "Design is a funny word. Some people think design means how it looks. But of course, if
+            you dig deeper, it's really how it works."
             <footer>
-              <cite>— Phasellus eget lacinia</cite>
+              <cite>— Steve Jobs</cite>
             </footer>
           </blockquote>
           <Code>{`<blockquote>
-  "Maecenas vehicula metus tellus, vitae congue turpis hendrerit non. 
-  Nam at dui sit amet ipsum cursus ornare."
+  "Design is a funny word. Some people think design means how it looks. But of course, if
+  you dig deeper, it's really how it works."
   <footer>
-    <cite>— Phasellus eget lacinia</cite>
+    <cite>— Steve Jobs</cite>
   </footer>
 </blockquote>`}</Code>
         </section>
@@ -376,13 +376,13 @@ export default function Typography() {
             The <Code display="inline">{`<hr>`}</Code> tag renders a horizontal line.
           </p>
           <article aria-label="Horizontal rule example" className="component">
-            <p>Aliquam semper felis sit amet tortor.</p>
+            <p>Paragraph before the horizontal line.</p>
             <hr />
-            <p>Integer eget ante eget nibh laoreet.</p>
+            <p>Paragraph after the horizontal line.</p>
             <footer>
-              <Code>{`<p>Aliquam semper felis sit amet tortor.</p>
+              <Code>{`<p>Paragraph before the horizontal line.</p>
 <hr />
-<p>Integer eget ante eget nibh laoreet.</p>`}</Code>
+<p>Paragraph after the horizontal line.</p>`}</Code>
             </footer>
           </article>
         </section>

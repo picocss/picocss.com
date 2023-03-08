@@ -1,6 +1,6 @@
 import { themeTitle, themeDescription } from "./";
 import cssStyle from "~/styles/css/custom-themes/pink.css";
-import cssCode from "~/styles/css/custom-themes/code/pink.txt";
+import cssCode from "~/data/code-snippets/pink.txt";
 
 import ThemePreview from "~/components/docs/ThemePreview";
 

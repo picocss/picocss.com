@@ -6,8 +6,9 @@ import TableOfContents from "~/components/docs/TableOfContents";
 import Content from "~/components/docs/Content";
 import Heading from "~/components/docs/Heading";
 import Code from "~/components/Code";
+import Link from "~/components/Link";
 
-const { titleSuffix } = metaData();
+const { titleSuffix, cdnBaseUrl } = metaData();
 
 export const meta = () => ({
   title: `Documentation ${titleSuffix}`,
@@ -69,9 +70,9 @@ export default function Docs() {
             Install manually
           </Heading>
           <p>
-            <a href="https://github.com/picocss/pico/archive/refs/heads/master.zip">
+            <Link to="https://github.com/picocss/pico/archive/refs/heads/master.zip">
               Download Pico
-            </a>{" "}
+            </Link>{" "}
             and link <Code display="inline">{`/css/pico.min.css`}</Code> in the{" "}
             <Code display="inline">{`<head>`}</Code> of your website.
           </p>
@@ -83,10 +84,9 @@ export default function Docs() {
             Install from CDN
           </Heading>
           <p>
-            Alternatively, you can use{" "}
-            <a href="https://unpkg.com/@picocss/pico@latest/">unpkg CDN</a> to link pico.css
+            Alternatively, you can use <Link to={cdnBaseUrl}>unpkg CDN</Link> to link pico.css
           </p>
-          <Code className="small">{`<link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css" />`}</Code>
+          <Code className="small">{`<link rel="stylesheet" href="${cdnBaseUrl}css/pico.min.css" />`}</Code>
         </section>
 
         <section ref={installWithNpmRef}>

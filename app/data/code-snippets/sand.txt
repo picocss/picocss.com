@@ -1,0 +1,45 @@
+/* Sand color for light color scheme (Default) */
+/* Can be forced with data-theme="light" */
+[data-theme=light],
+:root:not([data-theme=dark]) {
+  --pico-text-selection-color: rgba(149, 144, 130, 0.25);
+  --pico-primary: #6e6a60;
+  --pico-primary-hover: #55524a;
+  --pico-primary-underline: rgba(110, 106, 96, 0.5);
+  --pico-primary-background: #ccc6b4;
+  --pico-primary-background-hover: #beb8a7;
+  --pico-primary-focus: rgba(149, 144, 130, 0.25);
+  --pico-primary-inverse: #000;
+  --pico-switch-color: var(--pico-secondary-hover);
+}
+
+/* Sand color for dark color scheme (Auto) */
+/* Automatically enabled if user has Dark mode enabled */
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --pico-text-selection-color: rgba(163, 158, 143, 0.1875);
+    --pico-primary: #a39e8f;
+    --pico-primary-hover: #beb8a7;
+    --pico-primary-underline: rgba(163, 158, 143, 0.5);
+    --pico-primary-background: #ccc6b4;
+    --pico-primary-background-hover: #dad4c2;
+    --pico-primary-focus: rgba(163, 158, 143, 0.25);
+    --pico-primary-inverse: #000;
+    --pico-switch-color: var(--pico-background-color);
+  }
+}
+/* Sand color for dark color scheme (Forced) */
+/* Enabled if forced with data-theme="dark" */
+[data-theme=dark] {
+  --pico-text-selection-color: rgba(163, 158, 143, 0.1875);
+  --pico-primary: #a39e8f;
+  --pico-primary-hover: #beb8a7;
+  --pico-primary-underline: rgba(163, 158, 143, 0.5);
+  --pico-primary-background: #ccc6b4;
+  --pico-primary-background-hover: #dad4c2;
+  --pico-primary-focus: rgba(163, 158, 143, 0.25);
+  --pico-primary-inverse: #000;
+  --pico-switch-color: var(--pico-background-color);
+}
+
+/*# sourceMappingURL=sand.css.map */

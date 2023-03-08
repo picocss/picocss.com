@@ -40,8 +40,6 @@ export default function Nav(props) {
         <li>
           <Link
             to="https://github.com/picocss/pico"
-            target="_blank"
-            rel="noreferrer"
             className="secondary"
             aria-label="GitHub repository"
           >
@@ -49,13 +47,7 @@ export default function Nav(props) {
           </Link>
         </li>
         <li>
-          <Link
-            to="https://twitter.com/picocss"
-            target="_blank"
-            rel="noreferrer"
-            className="secondary"
-            aria-label="Twitter"
-          >
+          <Link to="https://twitter.com/picocss" className="secondary" aria-label="Twitter">
             <TwitterIcon />
           </Link>
         </li>

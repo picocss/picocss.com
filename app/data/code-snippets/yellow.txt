@@ -1,0 +1,45 @@
+/* Yellow color for light color scheme (Default) */
+/* Can be forced with data-theme="light" */
+[data-theme=light],
+:root:not([data-theme=dark]) {
+  --pico-text-selection-color: rgba(158, 146, 0, 0.25);
+  --pico-primary: #756b00;
+  --pico-primary-hover: #5b5300;
+  --pico-primary-underline: rgba(117, 107, 0, 0.5);
+  --pico-primary-background: #f2df0d;
+  --pico-primary-background-hover: #e8d600;
+  --pico-primary-focus: rgba(158, 146, 0, 0.25);
+  --pico-primary-inverse: #000;
+  --pico-switch-color: var(--pico-secondary-hover);
+}
+
+/* Yellow color for dark color scheme (Auto) */
+/* Automatically enabled if user has Dark mode enabled */
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --pico-text-selection-color: rgba(173, 159, 0, 0.1875);
+    --pico-primary: #ad9f00;
+    --pico-primary-hover: #caba01;
+    --pico-primary-underline: rgba(173, 159, 0, 0.5);
+    --pico-primary-background: #f2df0d;
+    --pico-primary-background-hover: #f8e861;
+    --pico-primary-focus: rgba(173, 159, 0, 0.25);
+    --pico-primary-inverse: #000;
+    --pico-switch-color: var(--pico-background-color);
+  }
+}
+/* Yellow color for dark color scheme (Forced) */
+/* Enabled if forced with data-theme="dark" */
+[data-theme=dark] {
+  --pico-text-selection-color: rgba(173, 159, 0, 0.1875);
+  --pico-primary: #ad9f00;
+  --pico-primary-hover: #caba01;
+  --pico-primary-underline: rgba(173, 159, 0, 0.5);
+  --pico-primary-background: #f2df0d;
+  --pico-primary-background-hover: #f8e861;
+  --pico-primary-focus: rgba(173, 159, 0, 0.25);
+  --pico-primary-inverse: #000;
+  --pico-switch-color: var(--pico-background-color);
+}
+
+/*# sourceMappingURL=yellow.css.map */

@@ -15,6 +15,7 @@ main#typography {
 
     th,
     td {
+      width: calc(100% / 6);
       padding: calc(var(#{$✨}spacing) / 2);
       white-space: nowrap;
     }

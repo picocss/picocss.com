@@ -1,0 +1,42 @@
+/* Jade color for light color scheme (Default) */
+/* Can be forced with data-theme="light" */
+[data-theme=light],
+:root:not([data-theme=dark]) {
+  --pico-text-selection-color: rgba(0, 166, 110, 0.25);
+  --pico-primary: #007a50;
+  --pico-primary-hover: #005f3d;
+  --pico-primary-underline: rgba(0, 122, 80, 0.5);
+  --pico-primary-background: #007a50;
+  --pico-primary-background-hover: #006d46;
+  --pico-primary-focus: rgba(0, 166, 110, 0.25);
+  --pico-primary-inverse: #fff;
+}
+
+/* Jade color for dark color scheme (Auto) */
+/* Automatically enabled if user has Dark mode enabled */
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --pico-text-selection-color: rgba(0, 180, 120, 0.1875);
+    --pico-primary: #00b478;
+    --pico-primary-hover: #00cc88;
+    --pico-primary-underline: rgba(0, 180, 120, 0.5);
+    --pico-primary-background: #007a50;
+    --pico-primary-background-hover: #00895a;
+    --pico-primary-focus: rgba(0, 180, 120, 0.25);
+    --pico-primary-inverse: #fff;
+  }
+}
+/* Jade color for dark color scheme (Forced) */
+/* Enabled if forced with data-theme="dark" */
+[data-theme=dark] {
+  --pico-text-selection-color: rgba(0, 180, 120, 0.1875);
+  --pico-primary: #00b478;
+  --pico-primary-hover: #00cc88;
+  --pico-primary-underline: rgba(0, 180, 120, 0.5);
+  --pico-primary-background: #007a50;
+  --pico-primary-background-hover: #00895a;
+  --pico-primary-focus: rgba(0, 180, 120, 0.25);
+  --pico-primary-inverse: #fff;
+}
+
+/*# sourceMappingURL=jade.css.map */
