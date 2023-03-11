@@ -14,24 +14,45 @@ import { PageProvider } from "~/contexts/PageContext";
 import picoStyles from "~/styles/css/main.css";
 import metaData from "~/data/meta";
 
-import FaviconsAndOpenGraph from "~/components/FaviconsAndOpenGraph";
 import RootError from "./components/RootError";
+import StructuredData from "./components/StructuredData";
 
-const { titleSuffix } = metaData();
+const { domain, siteName, titleSuffix, twitterHandle } = metaData();
 
 export const meta = () => {
   return {
     charset: "utf-8",
     viewport: "width=device-width,initial-scale=1",
+    "theme-color": "#2a3140",
+
+    // Open Graph
+    "og:image": `${domain}/opengraph.jpg`,
+    "og:image:type": "image/png",
+    "og:image:width": "1200",
+    "og:image:height": "630",
+    "og:site_name": siteName,
+    "og:type": "website",
+    "twitter:card": "summary_large_image",
+    "twitter:domain": domain,
+    "twitter:site": twitterHandle,
   };
 };
 
-// <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="(font CSS URL goes here)">
-
 export function links() {
   return [
-    { rel: "stylesheet", href: picoStyles },
+    // Favicons
+    { rel: "icon", href: "/favicon.ico", sizes: "any" },
     { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
+    { rel: "icon", href: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+    { rel: "apple-touch-icon", href: "/apple-touch-icon.png", type: "image/png", sizes: "180x180" },
+    { rel: "manifest", href: "/site.webmanifest" },
+
+    // Preconnect
+    { rel: "preconnect", href: "https://fonts.googleapis.com" },
+    { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "true" },
+
+    // Styles
+    { rel: "stylesheet", href: picoStyles },
     {
       rel: "stylesheet",
       href: "https://fonts.googleapis.com/css2?family=Figtree:wght@700&family=Fira+Code&display=swap",
@@ -48,7 +69,6 @@ export function CatchBoundary() {
           <Meta />
           <title>{`${caught.status} ${caught.statusText} ${titleSuffix}`}</title>
           <Links />
-          <FaviconsAndOpenGraph />
         </head>
         <body>
           <RootError caught={caught} />
@@ -68,7 +88,7 @@ export default function App() {
         <head>
           <Meta />
           <Links />
-          <FaviconsAndOpenGraph />
+          <StructuredData />
         </head>
         <body>
           <Outlet />

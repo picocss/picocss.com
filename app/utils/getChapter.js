@@ -1,5 +1,6 @@
 import { documentationMenu } from "~/data/documentationMenu";
 
+// Get the chapter from the route
 export function getChapter(route) {
   let sanitizedRoute = route.slice(-1) === "/" ? route.slice(0, -1) : route;
   if (sanitizedRoute.includes("theme-generator/")) {

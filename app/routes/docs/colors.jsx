@@ -3,7 +3,13 @@ import { usePage } from "~/contexts/PageContext";
 
 import metaData from "~/data/meta";
 
-import { getColorFamilies, getColorPalette, getColorShades, sentenceCase } from "~/utils";
+import {
+  getColorFamilies,
+  getColorPalette,
+  getColorShades,
+  getMainColorShade,
+  sentenceCase,
+} from "~/utils";
 
 import colorUtilities from "~/styles/css/docs/color-utilities.css";
 
@@ -95,9 +101,20 @@ export default function Colors() {
         <section className="color-families" ref={colorsRef}>
           {colorFamilies.map((family) => {
             const shades = getColorShades({ family });
+            const mainShade = getMainColorShade({ family });
             return (
               <article key={family} className="family">
-                <header className={`pico-background-${family}`} role="button">
+                <header
+                  className={`pico-background-${family}`}
+                  role="button"
+                  onClick={() => {
+                    onOpenModal();
+                    setSelectedColor({
+                      family,
+                      shade: mainShade,
+                    });
+                  }}
+                >
                   {sentenceCase(family)}
                 </header>
                 <main>

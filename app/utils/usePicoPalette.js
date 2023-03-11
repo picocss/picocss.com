@@ -22,7 +22,17 @@ export const getColorName = ({ family, shade }) => {
 
 // Get the main hex value from the color family
 export const getMainHexValue = ({ family }) => {
-  return colors[family].main.hex;
+  return getColor({ family, shade: "main" }).hex;
+};
+
+// Get the the main color shade index
+export const getMainColorShade = ({ family }) => {
+  const mainHexValue = getMainHexValue({ family });
+  const shades = getColorShades({ family });
+  const shadeIndex = shades.findIndex((shade) => {
+    return getHexValue({ family, shade }) === mainHexValue;
+  });
+  return shades[shadeIndex];
 };
 
 // Get the color family and shade indexes
