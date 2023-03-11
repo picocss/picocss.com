@@ -32,7 +32,7 @@ export default function StructuredData() {
           ],
           licence: `${githubRepo}/blob/master/LICENSE.md`,
           sameAs: [githubRepo, twitterUrl],
-          image: `${domain}/opengraph.jpg`,
+          image: `${domain}/opengraph.png`,
           maintainer: {
             "@type": "Organization",
             name: "Pico",

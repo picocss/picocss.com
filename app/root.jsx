@@ -26,7 +26,7 @@ export const meta = () => {
     "theme-color": "#2a3140",
 
     // Open Graph
-    "og:image": `${domain}/opengraph.jpg`,
+    "og:image": `${domain}/opengraph.png`,
     "og:image:type": "image/png",
     "og:image:width": "1200",
     "og:image:height": "630",
