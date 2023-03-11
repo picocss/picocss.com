@@ -30,7 +30,7 @@ export default function StructuredData() {
             "minimalistic",
             "native-html",
           ],
-          licence: `${githubRepo}/blob/master/LICENSE.md`,
+          license: `${githubRepo}/blob/master/LICENSE.md`,
           sameAs: [githubRepo, twitterUrl],
           image: `${domain}/opengraph.png`,
           maintainer: {
