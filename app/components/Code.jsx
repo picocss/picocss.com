@@ -3,17 +3,19 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 
 import Link from "./Link";
 import Check from "./icons/Check";
-import Clipboard from "./icons/Clipboard";
+import Copy from "./icons/Copy";
 
 import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/prism-light";
 import bash from "react-syntax-highlighter/dist/esm/languages/prism/bash";
 import css from "react-syntax-highlighter/dist/esm/languages/prism/css";
 import jsx from "react-syntax-highlighter/dist/esm/languages/prism/jsx";
+import json from "react-syntax-highlighter/dist/esm/languages/prism/json";
 import scss from "react-syntax-highlighter/dist/esm/languages/prism/scss";
 
 SyntaxHighlighter.registerLanguage("bash", bash);
 SyntaxHighlighter.registerLanguage("css", css);
 SyntaxHighlighter.registerLanguage("html", jsx);
+SyntaxHighlighter.registerLanguage("json", json);
 SyntaxHighlighter.registerLanguage("scss", scss);
 
 function BlockWrapper({ children }) {
@@ -54,8 +56,14 @@ function ButtonCopyToClipboard({ text, ...props }) {
 
   return (
     <CopyToClipboard text={text} {...props}>
-      <Link to="#" className="copy-to-clipboard" onClick={onCopy} tabIndex={-1}>
-        {copied ? <Check className="check" /> : <Clipboard className="clipboard" />}
+      <Link
+        to="#"
+        className="copy-to-clipboard"
+        onClick={onCopy}
+        tabIndex={-1}
+        aria-label="Copy code"
+      >
+        {copied ? <Check className="check" /> : <Copy className="clipboard" />}
       </Link>
     </CopyToClipboard>
   );

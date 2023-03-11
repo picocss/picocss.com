@@ -1,9 +1,9 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePage } from "~/contexts/PageContext";
 
 import metaData from "~/data/meta";
-import { colorFamilies, colorShades, colorMainShades } from "~/data/colors";
-import { sentenceCase } from "~/utils";
+
+import { getColorFamilies, getColorPalette, getColorShades, sentenceCase } from "~/utils";
 
 import colorUtilities from "~/styles/css/docs/color-utilities.css";
 
@@ -12,6 +12,7 @@ import TableOfContents from "~/components/docs/TableOfContents";
 import Content from "~/components/docs/Content";
 import Heading from "~/components/docs/Heading";
 import ColorModal from "~/components/docs/ColorModal";
+import Code from "~/components/Code";
 
 const { titleSuffix } = metaData();
 
@@ -24,13 +25,36 @@ export const meta = () => ({
   description: "Pico comes with 360 colors to personalize your project.",
 });
 
+const DownloadColorPalette = () => {
+  const [hrefColorPalette, setHrefColorPalette] = useState(null);
+
+  useEffect(() => {
+    const jsonColorPalette = JSON.stringify(getColorPalette(), null, 2);
+    const blobColorPalette = new Blob([jsonColorPalette], { type: "application/json" });
+    const hrefColorPalette = URL.createObjectURL(blobColorPalette);
+    setHrefColorPalette(hrefColorPalette);
+
+    // Clean up the object URL when component unmounts
+    return () => URL.revokeObjectURL(hrefColorPalette);
+  }, []);
+
+  return (
+    <a href={hrefColorPalette} download="pico-color-palette.json" role="button">
+      Download
+    </a>
+  );
+};
+
 export default function Colors() {
   const colorsRef = useRef();
   const usageWithCssRef = useRef();
   const usageWithSassRef = useRef();
+  const importInFigmaRef = useRef();
 
   const { modalIsOpen, onOpenModal, onCloseModal } = usePage();
   const [selectedColor, setSelectedColor] = useState({});
+
+  const colorFamilies = getColorFamilies();
 
   return (
     <>
@@ -58,46 +82,44 @@ export default function Colors() {
             title: "Usage with SASS",
             ref: usageWithSassRef,
           },
+          {
+            anchor: "import-in-figma",
+            title: "Import in Figma",
+            ref: importInFigmaRef,
+          },
         ]}
       />
 
       {/* Content */}
       <Content>
         <section className="color-families" ref={colorsRef}>
-          {colorFamilies.map((family) => (
-            <article key={family} className="family">
-              <header
-                className={`pico-background-${family}`}
-                role="button"
-                onClick={() => {
-                  onOpenModal();
-                  setSelectedColor({
-                    family,
-                    shade: colorMainShades[family],
-                  });
-                }}
-              >
-                {sentenceCase(family)}
-              </header>
-              <main>
-                {colorShades.map((shade) => (
-                  <button
-                    key={shade}
-                    className={`secondary pico-background-${family}-${shade}`}
-                    onClick={() => {
-                      onOpenModal();
-                      setSelectedColor({
-                        family,
-                        shade,
-                      });
-                    }}
-                  >
-                    {shade}
-                  </button>
-                ))}
-              </main>
-            </article>
-          ))}
+          {colorFamilies.map((family) => {
+            const shades = getColorShades({ family });
+            return (
+              <article key={family} className="family">
+                <header className={`pico-background-${family}`} role="button">
+                  {sentenceCase(family)}
+                </header>
+                <main>
+                  {shades.map((shade) => (
+                    <button
+                      key={shade}
+                      className={`secondary pico-background-${family}-${shade}`}
+                      onClick={() => {
+                        onOpenModal();
+                        setSelectedColor({
+                          family,
+                          shade,
+                        });
+                      }}
+                    >
+                      {shade}
+                    </button>
+                  ))}
+                </main>
+              </article>
+            );
+          })}
         </section>
 
         <section ref={usageWithCssRef}>
@@ -129,12 +151,23 @@ export default function Colors() {
           </p>
         </section>
 
-        <ColorModal
-          isOpen={modalIsOpen}
-          onClose={onCloseModal}
-          color={selectedColor}
-          setSelectedColor={setSelectedColor}
-        />
+        <section ref={importInFigmaRef}>
+          <Heading level={2} anchor="import-in-figma">
+            Import in Figma
+          </Heading>
+          <p>
+            <DownloadColorPalette />
+          </p>
+        </section>
+
+        {modalIsOpen && (
+          <ColorModal
+            isOpen={modalIsOpen}
+            onClose={onCloseModal}
+            color={selectedColor}
+            setSelectedColor={setSelectedColor}
+          />
+        )}
       </Content>
     </>
   );

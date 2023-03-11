@@ -10,6 +10,8 @@ import {
   getColorFromNextColorFamily,
   getPreviousColor,
   getColorFromPreviousColorFamily,
+  getColorName,
+  getRgbValue,
   getHexValue,
   getMainHexValue,
   sentenceCase,
@@ -18,6 +20,8 @@ import {
 export default function ColorModal({ color, isOpen, onClose, setSelectedColor, ...props }) {
   const backgroundColorClassName = `pico-background-${color.family}-${color.shade}`;
   const hexValue = getHexValue(color);
+  const rgbValue = getRgbValue(color);
+  const colorName = getColorName(color);
   const mainHexValue = getMainHexValue(color);
 
   // Handle click on overlay
@@ -103,16 +107,23 @@ export default function ColorModal({ color, isOpen, onClose, setSelectedColor, .
 
   return (
     <dialog open={isOpen} className={`color`} onClick={handleClickOverlay} {...props}>
-      <article style={{ "--pico-glowing-color": `${mainHexValue}26`, "max-height": modalHeight }}>
+      <article style={{ "--pico-glowing-color": `${mainHexValue}26`, maxeight: modalHeight }}>
         <header className={backgroundColorClassName}>
           <Link to="#" aria-label="Close" className="close" onClick={onClose}>
             <Close />
           </Link>
-          {sentenceCase(color.family)}&nbsp;{color.shade}
+          <hgroup>
+            <h3 className="color-family">
+              {sentenceCase(color.family)}&nbsp;{color.shade}
+            </h3>
+            <p className="color-shade">{colorName}</p>
+          </hgroup>
         </header>
         <div className="grid">
           <p>Hexedecimal color</p>
           <Code className="small">{hexValue.toUpperCase()}</Code>
+          <p>RGB color</p>
+          <Code className="small">{rgbValue}</Code>
           <p>Sass variable</p>
           <Code className="small">{`$${color.family}-${color.shade}`}</Code>
           <p>Color utility classe</p>

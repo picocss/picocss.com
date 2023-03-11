@@ -10,10 +10,10 @@
   #{$✨}card-component-outline-color: var(#{$✨}card-sectionning-background-color);
 
   // Code
-  #{$✨}code-color: #{$zinc-350};
-  #{$✨}code-tag: #{mix($zinc-350, $amber-500, 25%)};
-  #{$✨}code-attr: #{mix($zinc-350, $fuchsia-500, 50%)};
-  #{$✨}code-value: #{mix($zinc-350, $jade-500, 75%)};
+  #{$✨}code-color: #{$zinc-450};
+  #{$✨}code-tag: #{mix($zinc-400, $amber-400, 25%)};
+  #{$✨}code-attr: #{mix($zinc-450, $fuchsia-350, 50%)};
+  #{$✨}code-value: #{mix($zinc-400, $jade-400, 75%)};
   #{$✨}code-comment: #{$zinc-600};
   #{$✨}code-copied: #{$jade-500};
 

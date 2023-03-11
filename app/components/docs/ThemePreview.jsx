@@ -1,10 +1,8 @@
-import { useCurrentPath } from "~/utils";
+import { getColorFamilies, useCurrentPath } from "~/utils";
 
 import Logo from "~/components/Logo";
 import Code from "~/components/Code";
 import Link from "~/components/Link";
-
-import { colorFamilies } from "~/data/colors";
 
 // Remove the last X lines of the code snippet.
 const removeLastLines = ({ code, linesToRemove = 1 }) => {
@@ -34,6 +32,7 @@ export default function ThemePreview({ title, code, ...props }) {
     return `${prefix} ${lowercaseColor}`;
   };
 
+  const colorFamilies = getColorFamilies();
   const currentPath = useCurrentPath();
 
   return (

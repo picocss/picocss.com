@@ -10,12 +10,12 @@
   #{$✨}card-component-outline-color: transparent;
 
   // Code
-  #{$✨}code-color: #{$zinc-650};
-  #{$✨}code-tag: #{$pumpkin-500};
-  #{$✨}code-attr: #{mix($zinc-650, $fuchsia-500, 25%)};
-  #{$✨}code-value: #{mix($zinc-650, $jade-500, 50%)};
-  #{$✨}code-comment: #{$zinc-500};
-  #{$✨}code-copied: #{$jade-500};
+  #{$✨}code-color: #{$zinc-550};
+  #{$✨}code-tag: #{$pumpkin-550};
+  #{$✨}code-attr: #{mix($zinc-550, $fuchsia-550, 25%)};
+  #{$✨}code-value: #{mix($zinc-550, $jade-550, 50%)};
+  #{$✨}code-comment: #{$zinc-400};
+  #{$✨}code-copied: #{$jade-600};
 
   // Chapter
   #{$✨}chapter-color: var(#{$✨}code-tag);

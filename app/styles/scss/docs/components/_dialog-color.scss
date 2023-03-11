@@ -8,8 +8,15 @@ dialog.color {
 
   article {
     transform: translate3d(0, 0, 0);
+    outline: var(#{$✨}border-width) solid var(#{$✨}secondary-focus);
     box-shadow: 0 -0 6rem 0 var(#{$✨}glowing-color), var(#{$✨}box-shadow);
     transition: box-shadow var(#{$✨}transition);
+
+    @if map.get($breakpoints, "lg") {
+      @media (min-width: map.get(map.get($breakpoints, "lg"), "breakpoint")) {
+        max-width: map.get(map.get($breakpoints, "lg"), "viewport");
+      }
+    }
 
     p {
       color: inherit;
@@ -21,7 +28,6 @@ dialog.color {
     }
 
     header {
-      min-height: 16vh;
       font-weight: bold;
       transition: color var(#{$✨}transition), background-color var(#{$✨}transition);
 
@@ -34,6 +40,19 @@ dialog.color {
           background-repeat: inherit;
           color: inherit;
           line-height: initial;
+        }
+      }
+
+      hgroup {
+        margin-bottom: 0;
+
+        h3 {
+          color: inherit;
+        }
+
+        p {
+          #{$✨}font-size: 0.875em;
+          opacity: 0.5;
         }
       }
     }
