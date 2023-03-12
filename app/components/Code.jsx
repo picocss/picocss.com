@@ -9,13 +9,11 @@ import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/prism-light";
 import bash from "react-syntax-highlighter/dist/esm/languages/prism/bash";
 import css from "react-syntax-highlighter/dist/esm/languages/prism/css";
 import jsx from "react-syntax-highlighter/dist/esm/languages/prism/jsx";
-import json from "react-syntax-highlighter/dist/esm/languages/prism/json";
 import scss from "react-syntax-highlighter/dist/esm/languages/prism/scss";
 
 SyntaxHighlighter.registerLanguage("bash", bash);
 SyntaxHighlighter.registerLanguage("css", css);
 SyntaxHighlighter.registerLanguage("html", jsx);
-SyntaxHighlighter.registerLanguage("json", json);
 SyntaxHighlighter.registerLanguage("scss", scss);
 
 function BlockWrapper({ children }) {

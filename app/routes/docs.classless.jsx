@@ -101,9 +101,15 @@ body > footer {
             <a href="https://unpkg.com/@picocss/pico@latest/">unpkg CDN</a>:
           </p>
           <Code>{`<!-- Centered viewport --> 
-<link rel="stylesheet" href="${cdnBaseUrl}css/pico.classless.min.css">`}</Code>
+<link
+  rel="stylesheet"
+  href="${cdnBaseUrl}css/pico.classless.min.css"
+/>`}</Code>
           <Code>{`<!-- Fluid viewport --> 
-<link rel="stylesheet" href="${cdnBaseUrl}css/pico.fluid.classless.min.css">`}</Code>
+<link
+  rel="stylesheet"
+  href="${cdnBaseUrl}css/pico.fluid.classless.min.css"
+/>`}</Code>
         </section>
 
         <section ref={rootContainerRef}>

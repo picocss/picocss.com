@@ -231,9 +231,6 @@ export default function Typography() {
                 })}
               </tbody>
             </table>
-            <figcaption>
-              <small></small>
-            </figcaption>
           </figure>
           <p>
             <Link to="#" onClick={toggleFontSizesInPixels}>
@@ -353,15 +350,16 @@ export default function Typography() {
             Blockquote
           </Heading>
           <blockquote>
-            "Design is a funny word. Some people think design means how it looks. But of course, if
-            you dig deeper, it's really how it works."
+            “Design is a funny word. Some people think design means how it looks. But of course, if
+            you dig deeper, it's really how it works.”
             <footer>
               <cite>— Steve Jobs</cite>
             </footer>
           </blockquote>
           <Code>{`<blockquote>
-  "Design is a funny word. Some people think design means how it looks. But of course, if
-  you dig deeper, it's really how it works."
+  “Design is a funny word. Some people think 
+  design means how it looks. But of course, if 
+  you dig deeper, it's really how it works.”
   <footer>
     <cite>— Steve Jobs</cite>
   </footer>

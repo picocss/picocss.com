@@ -28,6 +28,7 @@ const files = [
   customThemesFolder + "yellow.css",
   customThemesFolder + "zinc.css",
   picoLibraryFolder + "_settings.scss",
+  picoLibraryFolder + "colors/utilities/_settings.scss",
   cssCodeExtractsFolder + "default-theme-color-schemes.css",
   cssCodeExtractsFolder + "default-theme-styles.css",
 ];
@@ -35,7 +36,11 @@ const files = [
 // Copy files to the code snippets folder
 // and rename them to .txt
 files.forEach((file) => {
+  const isColorUtilitiesSettings = file.includes("colors/utilities/_settings.scss");
   const fileName = file.split("/").pop().replace(".css", ".txt").replace(".scss", ".txt");
-  const destination = codeSnippetsFolder + fileName;
+  let destination = codeSnippetsFolder + fileName;
+  if (isColorUtilitiesSettings) {
+    destination = codeSnippetsFolder + "_color-utilities-settings.txt";
+  }
   copyFileSync(file, destination);
 });

@@ -112,7 +112,7 @@ export default function CssVariables() {
             `}</style>
             <h1>Music fest mania</h1>
             <p>
-              Get ready to dance and sing your heart out at our Music Fest Mania. Join the crowd and
+              Get ready to dance and sing your heart out at our Music Fest Mania. Join the crowd,
               jam to your favorite band, and discover new artists.
             </p>
             <button>Let's rock out!</button>
@@ -137,8 +137,9 @@ export default function CssVariables() {
 
 <h1>Music fest mania</h1>
 <p>
-  Get ready to dance and sing your heart out at our Music Fest Mania. Join the crowd and
-  jam to your favorite bands and discover new artists.
+  Get ready to dance and sing your heart out at 
+  our Music Fest Mania. Join the crowd, jam to
+  your favorite band, and discover new artists.
 </p>
 <button>Let's rock out!</button>
 `}</Code>
@@ -171,7 +172,7 @@ export default function CssVariables() {
           </p>
 
           <p>
-            The second inclusion is for the case where you forced the dark mode with{" "}
+            The second inclusion is when you force the dark mode with{" "}
             <Code display="inline">{`data-theme="dark"`}</Code>. This allows you to manually toggle
             between the light and dark themes regardless of the user's device settings.
           </p>

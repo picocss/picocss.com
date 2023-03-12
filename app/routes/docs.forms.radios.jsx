@@ -6,7 +6,7 @@ import Header from "~/components/docs/Header";
 const { titleSuffix } = metaData();
 
 export const meta = () => ({
-  title: `Checkboxes and radios ${titleSuffix}`,
+  title: `Radios ${titleSuffix}`,
   description: "Duis scelerisque nisi ligula, eget ornare lectus ornare efficitur.",
 });
 
@@ -15,7 +15,7 @@ export default function CheckboxesAndRadios() {
     <>
       {/* Header */}
       <Header
-        title="Checkboxes and&nbsp;radios"
+        title="Radios"
         description="Duis scelerisque nisi ligula, eget ornare lectus ornare efficitur."
       />
 

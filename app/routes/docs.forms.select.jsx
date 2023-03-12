@@ -1,162 +1,234 @@
+import { useRef } from "react";
 import metaData from "~/data/meta";
 
-import Code from "~/components/Code";
-import Content from "~/components/docs/Content";
 import Header from "~/components/docs/Header";
+import TableOfContents from "~/components/docs/TableOfContents";
+import Content from "~/components/docs/Content";
+import Heading from "~/components/docs/Heading";
+import Code from "~/components/Code";
 import Link from "~/components/Link";
 
 const { titleSuffix } = metaData();
 
 export const meta = () => ({
   title: `Select ${titleSuffix}`,
-  description: "Selects are styled like inputs.",
+  description: "The native <select> is styled like the input for consistency.",
 });
 
 export default function Select() {
   const preventDefault = (e) => e.preventDefault();
+  const exampleRef = useRef();
+  const multipleRef = useRef();
+  const disabledRef = useRef();
+  const validationStatesRef = useRef();
+  const dropdownRef = useRef();
+
   return (
     <>
       {/* Header */}
-      <Header title="Select" description="Selects are styled like inputs." />
+      <Header
+        title="Select"
+        description={
+          <>
+            The native <Code display="inline">{`<select>`}</Code> is styled like the input for
+            consistency.
+          </>
+        }
+      />
+
+      {/* Table of content */}
+      <TableOfContents
+        data={[
+          {
+            anchor: "",
+            title: "Examples",
+            ref: exampleRef,
+          },
+          {
+            anchor: "multiple",
+            title: "Multiple",
+            ref: multipleRef,
+          },
+          {
+            anchor: "disabled",
+            title: "Disabled",
+            ref: disabledRef,
+          },
+          {
+            anchor: "validation-states",
+            title: "Validation states",
+            ref: validationStatesRef,
+          },
+          {
+            anchor: "dropdown",
+            title: "Dropdown",
+            ref: dropdownRef,
+          },
+        ]}
+      />
 
       {/* Content */}
       <Content>
-        <article aria-label="Select example" className="component">
-          <label htmlFor="fruit">Fruit</label>
-          <select id="fruit" defaultValue="" required>
-            <option disabled value="">
-              Select a fruit…
-            </option>
-            <option>Banana</option>
-            <option>Watermelon</option>
-            <option>Apple</option>
-            <option>Orange</option>
-            <option>Mango</option>
-          </select>
-          <footer>
-            <Code>{`<label for="fruit">Fruit</label>
-<select id="fruit" required>
-  <option selected disabled value="">Select a fruit…</option>
-  <option>Banana</option>
-  <option>Watermelon</option>
-  <option>Apple</option>
-  <option>Orange</option>
-  <option>Mango</option>
+        <section ref={exampleRef}>
+          <article aria-label="Select example" className="component">
+            <select id="favorite-cuisine" defaultValue="" required>
+              <option disabled value="">
+                Select your favorite cuisine...
+              </option>
+              <option>Italian</option>
+              <option>Japanese</option>
+              <option>Indian</option>
+              <option>Thai</option>
+              <option>French</option>
+            </select>
+
+            <footer>
+              <Code>{`<select required>
+  <option selected disabled value="">
+    Select your favorite cuisine...
+  </option>
+  <option>Italian</option>
+  <option>Japanese</option>
+  <option>Indian</option>
+  <option>Thai</option>
+  <option>French</option>
 </select>`}</Code>
-          </footer>
-        </article>
+            </footer>
+          </article>
+        </section>
 
-        <p>Multiples</p>
-        <article aria-label="Disabled and read-only example" className="component">
-          <select defaultValue={["Banana", "Watermelon"]} multiple size="5">
-            <option disabled>Select a fruit…</option>
-            <option>Banana</option>
-            <option>Watermelon</option>
-            <option>Apple</option>
-            <option>Orange</option>
-            <option>Mango</option>
-          </select>
-          <footer>
-            <Code>{`<select multiple size="5">
-  <option disabled>Select a fruit…</option>
-  <option selected>Banana</option>
-  <option selected>Watermelon</option>
-  <option>Apple</option>
-  <option>Orange</option>
-  <option>Mango</option>
+        <section ref={multipleRef}>
+          <Heading level={2} anchor="multiple">
+            Select multiple
+          </Heading>
+          <article aria-label="Disabled and read-only example" className="component">
+            <select defaultValue={["Fruits", "Nuts"]} multiple size="6">
+              <option disabled>Select your favorite snacks...</option>
+              <option>Cheese</option>
+              <option>Fruits</option>
+              <option>Nuts</option>
+              <option>Chocolate</option>
+              <option>Crackers</option>
+            </select>
+            <footer>
+              <Code>{`<select multiple size="6">
+  <option disabled>
+    Select your favorite snacks...
+  </option>
+  <option>Cheese</option>
+  <option selected>Fruits</option>
+  <option selected>Nuts</option>
+  <option>Chocolate</option>
+  <option>Crackers</option>
 </select>`}</Code>
-          </footer>
-        </article>
+            </footer>
+          </article>
+        </section>
 
-        <p>Selects can be disabled or read-only.</p>
-        <article aria-label="Disabled and read-only example" className="component">
-          <select defaultValue="Select a fruit…" disabled>
-            <option disabled>Select a fruit…</option>
-            <option>Banana</option>
-            <option>Watermelon</option>
-            <option>Apple</option>
-            <option>Orange</option>
-            <option>Mango</option>
-          </select>
-          <footer>
-            <Code>{`<input type="text" placeholder="Disabled" aria-label="Disabled input" disabled>
-<input type="text" value="Read-only" aria-label="Read-only input" readonly>`}</Code>
-          </footer>
-        </article>
+        <section ref={disabledRef}>
+          <Heading level={2} anchor="disabled">
+            Disabled select
+          </Heading>
+          <article aria-label="Disabled example" className="component">
+            <select disabled>
+              <option>Select a meal type...</option>
+            </select>
+            <footer>
+              <Code>{`<select disabled>
+  <option>Select a meal type...</option>
+  <option>…</option>
+</select>`}</Code>
+            </footer>
+          </article>
+        </section>
 
-        <p>
-          Validation states are provided with <Code display="inline">aria-invalid</Code>.
-        </p>
-        <article aria-label="Select example" className="component">
-          <select defaultValue="Banana" aria-invalid="false">
-            <option disabled>Select a fruit…</option>
-            <option>Banana</option>
-            <option>Watermelon</option>
-            <option>Apple</option>
-            <option>Orange</option>
-            <option>Mango</option>
-          </select>
-          <small>Looks good!</small>
-          <select defaultValue="Select a fruit…" aria-invalid="true">
-            <option disabled>Select a fruit…</option>
-            <option>Banana</option>
-            <option>Watermelon</option>
-            <option>Apple</option>
-            <option>Orange</option>
-            <option>Mango</option>
-          </select>
-          <small>Please select a fruit!</small>
-          <footer>
-            <Code>{`<select aria-invalid="false">
+        <section ref={validationStatesRef}>
+          <Heading level={2} anchor="validation-states">
+            Validation states
+          </Heading>
+          <p>
+            Validation states are provided with <Code display="inline">aria-invalid</Code>.
+          </p>
+          <article aria-label="Validation states example" className="component">
+            <select defaultValue="Pepperoni" aria-invalid="false">
+              <option disabled>Select your favorite pizza topping...</option>
+              <option>Pepperoni</option>
+              <option>Mushrooms</option>
+              <option>Onions</option>
+              <option>Green Peppers</option>
+              <option>Olives</option>
+            </select>
+            <small>Great choice!</small>
+            <select defaultValue="" required aria-invalid="true">
+              <option disabled value="">
+                Select your favorite pizza topping...
+              </option>
+              <option>Pepperoni</option>
+              <option>Mushrooms</option>
+              <option>Onions</option>
+              <option>Green Peppers</option>
+              <option>Olives</option>
+            </select>
+            <small>Please select your favorite pizza topping!</small>
+            <footer>
+              <Code>{`<select aria-invalid="false">
   …
 </select>
-<small>Looks good!</small>
+<small>Great choice!</small>
 
-<select aria-invalid="true">
+<select required aria-invalid="true">
   …
 </select>
-<small>Please select a fruit!</small>`}</Code>
-          </footer>
-        </article>
+<small>
+  Please select your favorite pizza topping!
+</small>`}</Code>
+            </footer>
+          </article>
+        </section>
 
-        <p>
-          The dropdown component allows you to build a custom select with the same style as the
-          native select. See <Link to="/docs/dropdown">Dropdown</Link>.
-        </p>
-        <article aria-label="Dropdowns as selects" className="component">
-          <div className="grid">
-            <details role="list">
-              <summary aria-haspopup="listbox">Dropdown</summary>
-              <ul role="listbox">
-                <li>
-                  <a href="#action" onClick={preventDefault}>
-                    Action
-                  </a>
-                </li>
-                <li>
-                  <a href="#action" onClick={preventDefault}>
-                    Another action
-                  </a>
-                </li>
-                <li>
-                  <a href="#action" onClick={preventDefault}>
-                    Something else
-                  </a>
-                </li>
-              </ul>
-            </details>
-          </div>
-          <footer>
-            <Code>{`<details role="list">
-  <summary aria-haspopup="listbox">Dropdown</summary>
-  <ul role="listbox">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else</a></li>
-  </ul>
-</details>`}</Code>
-          </footer>
-        </article>
+        <section ref={dropdownRef}>
+          <Heading level={2} anchor="dropdown">
+            Dropdown
+          </Heading>
+
+          <p>
+            The dropdown component allows you to build a custom select with the same style as the
+            native select. See <Link to="/docs/dropdown">Dropdown</Link>.
+          </p>
+          <article aria-label="Dropdowns as selects" className="component">
+            <div className="grid">
+              <details role="list">
+                <summary aria-haspopup="listbox">Select your favorite French dessert...</summary>
+                <ul role="listbox">
+                  <li>
+                    <label>
+                      <input type="radio" name="french-dessert" value="Crème brûlée" />
+                      Crème brûlée
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input type="radio" name="french-dessert" value="Macarons" />
+                      Macarons
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input type="radio" name="french-dessert" value="Tarte tatin" />
+                      Tarte tatin
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input type="radio" name="french-dessert" value="Éclair" />
+                      Éclair
+                    </label>
+                  </li>
+                </ul>
+              </details>
+            </div>
+          </article>
+        </section>
       </Content>
     </>
   );

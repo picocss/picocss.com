@@ -40,9 +40,12 @@ export const documentationMenu = [
     links: [
       { label: "Overview", route: "/docs/forms" },
       { label: "Input", route: "/docs/forms/input" },
+      { label: "Textarea", route: "/docs/forms/textarea" },
       { label: "Select", route: "/docs/forms/select" },
-      { label: "Checkboxes and radios", route: "/docs/forms/checkboxes-radios" },
+      { label: "Checkboxes", route: "/docs/forms/checkboxes" },
+      { label: "Radios", route: "/docs/forms/radios" },
       { label: "Switch", route: "/docs/forms/switch" },
+      { label: "Range", route: "/docs/forms/range" },
     ],
   },
   {

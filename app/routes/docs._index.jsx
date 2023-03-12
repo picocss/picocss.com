@@ -86,7 +86,10 @@ export default function Docs() {
           <p>
             Alternatively, you can use <Link to={cdnBaseUrl}>unpkg CDN</Link> to link pico.css
           </p>
-          <Code className="small">{`<link rel="stylesheet" href="${cdnBaseUrl}css/pico.min.css" />`}</Code>
+          <Code>{`<link
+  rel="stylesheet"
+  href="${cdnBaseUrl}css/pico.min.css"
+/>`}</Code>
         </section>
 
         <section ref={installWithNpmRef}>

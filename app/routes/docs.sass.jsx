@@ -163,12 +163,12 @@ export default function Sass() {
             <li>
               Import your custom theme (you can duplicate{" "}
               <Link to={`${githubTreeBaseUrl}scss/themes/`}>Pico's default theme</Link> as a starter
-              point and customizing it to match your brand's style).
+              point and customize it to match your brand's style).
             </li>
           </ol>
           <Code language="scss">{`
 // Your custom theme
-@use "theme";          
+@use "path/custom-theme";          
           
 // Pico without default theme
 @use "pico" with (

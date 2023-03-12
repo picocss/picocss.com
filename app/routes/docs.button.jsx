@@ -17,10 +17,10 @@ export const meta = () => ({
 
 export default function Button() {
   const overviewRef = useRef();
-  const roleButtonRef = useRef();
   const variantsRef = useRef();
   const formButtonsRef = useRef();
   const disabledRef = useRef();
+  const roleButtonRef = useRef();
 
   return (
     <>
@@ -39,11 +39,6 @@ export default function Button() {
             ref: overviewRef,
           },
           {
-            anchor: "role-button",
-            title: "Role button",
-            ref: roleButtonRef,
-          },
-          {
             anchor: "variants",
             title: "Variants",
             ref: variantsRef,
@@ -58,6 +53,11 @@ export default function Button() {
             title: "Disabled",
             ref: disabledRef,
           },
+          {
+            anchor: "role-button",
+            title: "Role button",
+            ref: roleButtonRef,
+          },
         ]}
       />
 
@@ -68,24 +68,6 @@ export default function Button() {
             <button>Button</button>
             <footer>
               <Code className="small">{`<button>Button</button>`}</Code>
-            </footer>
-          </article>
-        </section>
-
-        <section ref={roleButtonRef}>
-          <Heading level={2} anchor="role-button">
-            Role button
-          </Heading>
-          <p>
-            Clickable elements with <Code display="inline">role="button"</Code> are rendered as
-            buttons and indicate to screen readers that the elements are a button.
-          </p>
-          <article aria-label="Role button example" className="component">
-            <div role="button" tabIndex="0">
-              Div as button
-            </div>
-            <footer>
-              <Code className="small">{`<div role="button" tabindex="0">Div as a button</div>`}</Code>
             </footer>
           </article>
         </section>
@@ -136,7 +118,8 @@ export default function Button() {
           <p>
             <Code display="inline">type="submit"</Code> and{" "}
             <Code display="inline">type="button"</Code> inputs are also displayed as buttons. All
-            forms buttons are <Code display="inline">width: 100%;</Code> by default.
+            form buttons are <Code display="inline">width: 100%;</Code> by default, to match with
+            the other form elements.
           </p>
           <article aria-label="Input buttons example" className="component">
             <input type="submit" />
@@ -175,6 +158,24 @@ export default function Button() {
               <Code>{`<button disabled>Disabled</button>
 <button class="secondary" disabled>Disabled</button>
 <button class="contrast" disabled>Disabled</button>`}</Code>
+            </footer>
+          </article>
+        </section>
+
+        <section ref={roleButtonRef}>
+          <Heading level={2} anchor="role-button">
+            Role button
+          </Heading>
+          <p>
+            Clickable elements with <Code display="inline">role="button"</Code> are rendered as
+            buttons and indicate to screen readers that the elements are a button.
+          </p>
+          <article aria-label="Role button example" className="component">
+            <div role="button" tabIndex="0">
+              Div as button
+            </div>
+            <footer>
+              <Code className="small">{`<div role="button" tabindex="0">Div as a button</div>`}</Code>
             </footer>
           </article>
         </section>

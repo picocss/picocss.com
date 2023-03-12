@@ -57,6 +57,10 @@ dialog.color {
       }
     }
 
+    pre {
+      #{$✨}block-spacing-vertical: var(#{$✨}spacing);
+    }
+
     .grid {
       .code {
         margin-bottom: 0;
