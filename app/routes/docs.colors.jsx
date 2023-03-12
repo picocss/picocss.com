@@ -18,7 +18,6 @@ import TableOfContents from "~/components/docs/TableOfContents";
 import Content from "~/components/docs/Content";
 import Heading from "~/components/docs/Heading";
 import ColorModal from "~/components/docs/ColorModal";
-import Code from "~/components/Code";
 
 const { titleSuffix } = metaData();
 

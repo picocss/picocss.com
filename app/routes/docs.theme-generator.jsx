@@ -14,10 +14,6 @@ export const meta = () => ({
     "Pick a color to generate the CSS code to customize Pico's primary color with CSS variables.",
 });
 
-export const themeTitle = (colorName) => `Minimal ${colorName} theme ${titleSuffix}`;
-export const themeDescription = (colorName) =>
-  `CSS code to customize Pico's primary color to ${colorName} with CSS variables.`;
-
 export function links() {
   return [{ rel: "stylesheet", href: colorPickerStyles }];
 }

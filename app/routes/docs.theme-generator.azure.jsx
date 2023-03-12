@@ -1,4 +1,4 @@
-import { themeTitle, themeDescription } from "./";
+import { themeGeneratorTitle, themeGeneratorDescription } from "~/utils";
 import cssCode from "~/data/code-snippets/azure.txt";
 
 import ThemePreview from "~/components/docs/ThemePreview";
@@ -6,8 +6,8 @@ import ThemePreview from "~/components/docs/ThemePreview";
 const colorName = "Azure";
 
 export const meta = () => ({
-  title: themeTitle(colorName),
-  description: themeDescription(colorName),
+  title: themeGeneratorTitle(colorName),
+  description: themeGeneratorDescription(colorName),
 });
 
 export default function Customization() {

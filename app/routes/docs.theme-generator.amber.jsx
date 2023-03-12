@@ -1,4 +1,4 @@
-import { themeTitle, themeDescription } from "./";
+import { themeGeneratorTitle, themeGeneratorDescription } from "~/utils";
 import cssStyle from "~/styles/css/custom-themes/amber.css";
 import cssCode from "~/data/code-snippets/amber.txt";
 
@@ -7,8 +7,8 @@ import ThemePreview from "~/components/docs/ThemePreview";
 const colorName = "Amber";
 
 export const meta = () => ({
-  title: themeTitle(colorName),
-  description: themeDescription(colorName),
+  title: themeGeneratorTitle(colorName),
+  description: themeGeneratorDescription(colorName),
 });
 
 export function links() {
