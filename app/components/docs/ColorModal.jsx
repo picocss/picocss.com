@@ -107,7 +107,7 @@ export default function ColorModal({ color, isOpen, onClose, setSelectedColor, .
 
   return (
     <dialog open={isOpen} className={`color`} onClick={handleClickOverlay} {...props}>
-      <article style={{ "--pico-glowing-color": `${mainHexValue}26`, maxeight: modalHeight }}>
+      <article style={{ "--pico-glowing-color": `${mainHexValue}26`, maxHeight: modalHeight }}>
         <header className={backgroundColorClassName}>
           <Link to="#" aria-label="Close" className="close" onClick={onClose}>
             <Close />

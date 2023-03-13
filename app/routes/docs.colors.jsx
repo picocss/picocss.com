@@ -244,7 +244,11 @@ export default function Colors() {
             to import all 380 Pico colors.
           </p>
           <p>
-            <img src={paletteImporterImage} alt="Figma plugin Palette Importer" />
+            <img
+              className="rounded-bordered"
+              src={paletteImporterImage}
+              alt="Figma plugin Palette Importer"
+            />
           </p>
           <p>
             Download the <Code display="inline">.json</Code> file with all the colors:

@@ -1,0 +1,7 @@
+@use "sass:map";
+@use "settings" as *;
+
+img.rounded-bordered {
+  border: 1px solid var(#{$✨}muted-border-color);
+  border-radius: var(#{$✨}border-radius);
+}

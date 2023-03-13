@@ -12,7 +12,7 @@ export default function meta() {
     version: "2.0.0-alpha",
 
     // CDN values
-    cdnBaseUrl: "https://unpkg.com/@picocss/pico@2.*/",
+    cdnBaseUrl: "https://unpkg.com/@picocss/pico@2/",
 
     // Github values
     githubRepo: "https://github.com/picocss/pico",
