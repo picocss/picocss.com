@@ -75,7 +75,6 @@ export default function Forms() {
             </form>
             <footer>
               <Code>{`<form>
-
   <fieldset>
     <label>
       First name
@@ -147,8 +146,8 @@ export default function Forms() {
             Usage with grid
           </Heading>
           <p>
-            You can use <Code display="inline">.grid</Code> (see <Link to="/docs/grid">Grid</Link>)
-            inside a form.
+            You can use <Code display="inline">.grid</Code> inside a form. See{" "}
+            <Link to="/docs/grid">Grid</Link>.
           </p>
           <article aria-label="Form and grid example" className="component">
             <form onSubmit={preventDefault}>

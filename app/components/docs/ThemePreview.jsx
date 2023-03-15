@@ -1,3 +1,4 @@
+import { useNavigation } from "@remix-run/react";
 import { getColorFamilies, useCurrentPath } from "~/utils";
 
 import Logo from "~/components/Logo";
@@ -34,9 +35,19 @@ export default function ThemePreview({ title, code, ...props }) {
 
   const colorFamilies = getColorFamilies();
   const currentPath = useCurrentPath();
+  const navigation = useNavigation();
+
+  // Set the button to aria-busy when clicked
+  const handleOnClickTheme = (even) => {
+    even.target.setAttribute("aria-busy", true);
+  };
 
   return (
-    <article className="color-picker component" aria-label="Custom theme example" {...props}>
+    <article
+      className={`color-picker component${navigation.state === "loading" ? " is-loading" : ""}`}
+      aria-label="Custom theme example"
+      {...props}
+    >
       <header>
         {colorFamilies.map((color) => {
           const linkTo =
@@ -50,6 +61,7 @@ export default function ThemePreview({ title, code, ...props }) {
               className={`pico-background-${color}`}
               aria-label={title}
               preventScrollReset={true}
+              onClick={handleOnClickTheme}
             >
               {isCurrent && <Logo displayWordmark={false} animate={true} />}
             </Link>

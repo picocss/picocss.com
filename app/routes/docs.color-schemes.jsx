@@ -78,7 +78,7 @@ export default function ColorSchemes() {
             </fieldset>
           </form>
           <footer>
-            <Code>{`<article data-theme="light">
+            <Code dataTheme="light">{`<article data-theme="light">
   …
 </article>`}</Code>
           </footer>

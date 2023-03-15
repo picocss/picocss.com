@@ -30,8 +30,7 @@
     position: absolute;
     top: 1rem;
     right: 0;
-    padding: 0.25rem 1rem;
-    border-radius: var(#{$✨}border-radius);
+    padding: 0.25rem 1rem 0.25rem 0.25rem;
     color: var(#{$✨}code-comment);
     transition: color var(#{$✨}transition);
 
@@ -54,6 +53,22 @@
 
       svg {
         opacity: 1;
+      }
+    }
+
+    &[data-tooltip] {
+      &::before,
+      &::after {
+        font-size: 0.75em;
+      }
+
+      &:has(svg.check) {
+        &::before {
+          opacity: 1;
+        }
+        &::after {
+          display: none;
+        }
       }
     }
   }

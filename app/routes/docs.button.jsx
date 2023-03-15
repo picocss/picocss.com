@@ -1,12 +1,12 @@
 import { useRef } from "react";
 import metaData from "~/data/meta";
 
-import Code from "~/components/Code";
-import Content from "~/components/docs/Content";
 import Header from "~/components/docs/Header";
-import Heading from "~/components/docs/Heading";
-import Link from "~/components/Link";
+import Content from "~/components/docs/Content";
 import TableOfContents from "~/components/docs/TableOfContents";
+import Heading from "~/components/docs/Heading";
+import Code from "~/components/Code";
+import Link from "~/components/Link";
 
 const { titleSuffix } = metaData();
 
@@ -16,7 +16,7 @@ export const meta = () => ({
 });
 
 export default function Button() {
-  const overviewRef = useRef();
+  const syntaxRef = useRef();
   const variantsRef = useRef();
   const formButtonsRef = useRef();
   const disabledRef = useRef();
@@ -34,9 +34,9 @@ export default function Button() {
       <TableOfContents
         data={[
           {
-            anchor: "overview",
-            title: "Overview",
-            ref: overviewRef,
+            anchor: "",
+            title: "Syntax",
+            ref: syntaxRef,
           },
           {
             anchor: "variants",
@@ -63,7 +63,7 @@ export default function Button() {
 
       {/* Content */}
       <Content>
-        <section aria-label="Overview" ref={overviewRef}>
+        <section aria-label="Overview" ref={syntaxRef}>
           <article aria-label="Button example" className="component">
             <button>Button</button>
             <footer>
@@ -168,7 +168,7 @@ export default function Button() {
           </Heading>
           <p>
             Clickable elements with <Code display="inline">role="button"</Code> are rendered as
-            buttons and indicate to screen readers that the elements are a button.
+            buttons.
           </p>
           <article aria-label="Role button example" className="component">
             <div role="button" tabIndex="0">

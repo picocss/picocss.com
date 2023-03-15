@@ -15,7 +15,7 @@ export const meta = () => ({
 });
 
 export default function Input() {
-  const exampleRef = useRef();
+  const syntaxRef = useRef();
   const disabledRef = useRef();
   const readonlyRef = useRef();
   const validationStatesRef = useRef();
@@ -38,8 +38,8 @@ export default function Input() {
         data={[
           {
             anchor: "",
-            title: "Examples",
-            ref: exampleRef,
+            title: "Syntax",
+            ref: syntaxRef,
           },
           {
             anchor: "disabled",
@@ -61,7 +61,7 @@ export default function Input() {
 
       {/* Content */}
       <Content>
-        <section ref={exampleRef}>
+        <section ref={syntaxRef}>
           <article aria-label="Textarea example" className="component">
             <textarea
               placeholder="Write a professional short bio..."

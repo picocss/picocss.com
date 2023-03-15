@@ -166,8 +166,7 @@ export default function Sass() {
               point and customize it to match your brand's style).
             </li>
           </ol>
-          <Code language="scss">{`
-// Your custom theme
+          <Code language="scss">{`// Your custom theme
 @use "path/custom-theme";          
           
 // Pico without default theme

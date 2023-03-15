@@ -160,7 +160,7 @@ export default function Colors() {
   rel="stylesheet"
   href="${cdnBaseUrl}css/pico.colors.min.css"
 />`}</Code>
-          <p>This stylesheet is quite heavy—almost the same size as the entire Pico library.</p>
+          <p>This stylesheet is almost the same size as the entire Pico library.</p>
           <p>
             We do not recommend including all colors on a production site. You should include only
             the color families and shades that you use.

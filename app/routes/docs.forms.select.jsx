@@ -16,8 +16,7 @@ export const meta = () => ({
 });
 
 export default function Select() {
-  const preventDefault = (e) => e.preventDefault();
-  const exampleRef = useRef();
+  const syntaxRef = useRef();
   const multipleRef = useRef();
   const disabledRef = useRef();
   const validationStatesRef = useRef();
@@ -41,8 +40,8 @@ export default function Select() {
         data={[
           {
             anchor: "",
-            title: "Examples",
-            ref: exampleRef,
+            title: "Syntax",
+            ref: syntaxRef,
           },
           {
             anchor: "multiple",
@@ -69,7 +68,7 @@ export default function Select() {
 
       {/* Content */}
       <Content>
-        <section ref={exampleRef}>
+        <section ref={syntaxRef}>
           <article aria-label="Select example" className="component">
             <select id="favorite-cuisine" defaultValue="" required>
               <option disabled value="">

@@ -60,6 +60,8 @@ function ButtonCopyToClipboard({ text, ...props }) {
         onClick={onCopy}
         tabIndex={-1}
         aria-label="Copy code"
+        data-tooltip={copied ? "Copied" : "Copy to clipboard"}
+        data-placement="left"
       >
         {copied ? <Check className="check" /> : <Copy className="clipboard" />}
       </Link>
@@ -69,6 +71,7 @@ function ButtonCopyToClipboard({ text, ...props }) {
 
 export default function Code({
   children,
+  dataTheme = "dark",
   language = "html",
   display = "block",
   className,
@@ -81,7 +84,7 @@ export default function Code({
   }
 
   return (
-    <div className={className ? `code ${className}` : "code"}>
+    <div className={className ? `code ${className}` : "code"} data-theme={dataTheme}>
       <ButtonCopyToClipboard text={children.toString()} />
       <HighlightedCode {...{ children, displayInline, language, ...props }} />
     </div>

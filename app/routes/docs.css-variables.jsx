@@ -27,7 +27,7 @@ export function links() {
 }
 
 export default function CssVariables() {
-  const overviewRef = useRef();
+  const introductionRef = useRef();
   const exampleRef = useRef();
   const cssVariablesForColorSchemesRef = useRef();
   const allCssVariablesRef = useRef();
@@ -42,8 +42,8 @@ export default function CssVariables() {
         data={[
           {
             anchor: "",
-            title: "Overview",
-            ref: overviewRef,
+            title: "Introduction",
+            ref: introductionRef,
           },
           {
             anchor: "example",
@@ -65,7 +65,7 @@ export default function CssVariables() {
 
       {/* Content */}
       <Content>
-        <section ref={overviewRef}>
+        <section ref={introductionRef}>
           <p>
             Pico includes many custom properties (variables) that allow easy access to frequently
             used values such as <Code display="inline">{`font-family`}</Code>,{" "}

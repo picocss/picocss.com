@@ -10,13 +10,23 @@
   #{$✨}card-component-outline-color: transparent;
 
   // Code
-  #{$✨}code-color: #{$zinc-550};
-  #{$✨}code-tag: #{$pumpkin-550};
-  #{$✨}code-attr: #{mix($zinc-550, $fuchsia-550, 25%)};
-  #{$✨}code-value: #{mix($zinc-550, $jade-550, 50%)};
-  #{$✨}code-comment: #{$zinc-400};
+  #{$✨}code-color: #{$zinc-600};
+  #{$✨}code-tag: #{$pumpkin-600};
+  #{$✨}code-attr: #{mix($zinc-600, $fuchsia-600, 25%)};
+  #{$✨}code-value: #{mix($zinc-600, $jade-600, 50%)};
+  #{$✨}code-comment: #{$zinc-450};
   #{$✨}code-copied: #{$jade-600};
 
   // Chapter
   #{$✨}chapter-color: var(#{$✨}code-tag);
+
+  // Forced dark color scheme
+  article {
+    footer:has(.code[data-theme="dark"]) {
+      #{$✨}card-background-color: #{$slate-900};
+      #{$✨}card-border-color: var(#{$✨}card-background-color);
+      #{$✨}card-box-shadow: var(#{$✨}box-shadow);
+      #{$✨}card-sectionning-background-color: #{mix($slate-900, $slate-850, 75%)};
+    }
+  }
 }

@@ -52,5 +52,30 @@ article {
     h3 {
       color: var(#{$✨}primary);
     }
+
+    > hgroup,
+    > form,
+    > footer {
+      transition: opacity var(#{$✨}transition), filter var(#{$✨}transition);
+    }
+
+    &.is-loading {
+      > header {
+        a {
+          &[aria-current] {
+            svg {
+              display: none;
+            }
+          }
+        }
+      }
+
+      > hgroup,
+      > form,
+      > footer {
+        filter: grayscale(100%);
+        opacity: 0.5;
+      }
+    }
   }
 }

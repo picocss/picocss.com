@@ -16,7 +16,7 @@ export const meta = () => ({
 });
 
 export default function Input() {
-  const examplesRef = useRef();
+  const syntaxRef = useRef();
   const datetimeRef = useRef();
   const searchRef = useRef();
   const colorRef = useRef();
@@ -38,8 +38,8 @@ export default function Input() {
         data={[
           {
             anchor: "",
-            title: "Examples",
-            ref: examplesRef,
+            title: "Syntax",
+            ref: syntaxRef,
           },
           {
             anchor: "datetime",
@@ -81,7 +81,7 @@ export default function Input() {
 
       {/* Content */}
       <Content>
-        <section ref={examplesRef}>
+        <section ref={syntaxRef}>
           <article aria-label="Input examples" className="component">
             <input type="text" placeholder="Text" aria-label="Text" />
             <input type="email" placeholder="Email" aria-label="Email" />

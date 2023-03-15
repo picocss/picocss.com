@@ -17,7 +17,7 @@ body > {
     }
 
     @media (min-width: map.get(map.get($breakpoints, "lg"), "breakpoint")) {
-      grid-template-rows: repeat(1, auto);
+      grid-template-rows: auto 1fr;
       grid-template-columns: 10rem 1fr;
       grid-template-areas:
         "menu header"
@@ -26,7 +26,7 @@ body > {
       row-gap: 3rem;
 
       &:has(aside#table-of-contents) {
-        grid-template-rows: repeat(3, auto);
+        grid-template-rows: auto auto 1fr;
         grid-template-columns: 10rem 1fr;
         grid-template-areas:
           "menu header"
@@ -61,7 +61,7 @@ body > {
     }
 
     @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
-      grid-template-rows: repeat(2, auto);
+      grid-template-rows: auto 1fr;
       grid-template-columns: 10rem 1fr;
       grid-template-areas:
         "menu header"
@@ -69,7 +69,7 @@ body > {
       row-gap: 4rem;
 
       &:has(aside#table-of-contents) {
-        grid-template-rows: repeat(2, auto);
+        grid-template-rows: auto 1fr;
         grid-template-columns: 10rem 1fr 10rem;
         grid-template-areas:
           "menu header table-of-content"
