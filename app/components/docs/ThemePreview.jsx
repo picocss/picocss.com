@@ -1,18 +1,9 @@
-import { getColorFamilies, useCurrentPath } from "~/utils";
-
-import { usePage } from "~/contexts/PageContext";
-import { useNavigation } from "@remix-run/react";
+import { useNavigation } from "~/contexts/NavigationContext";
+import { getColorFamilies, removeLines } from "~/utils";
 
 import Code from "~/components/Code";
 import Link from "~/components/Link";
 import Check from "~/components/icons/Check";
-
-// Remove the last X lines of the code snippet.
-const removeLastLines = ({ code, linesToRemove = 1 }) => {
-  const lines = code.split("\n");
-  lines.splice(lines.length - linesToRemove, linesToRemove);
-  return lines.join("\n");
-};
 
 // Add a missing empty line before a comment.
 const addMissingEmptyLineBeforeComment = ({ code }) => {
@@ -22,8 +13,11 @@ const addMissingEmptyLineBeforeComment = ({ code }) => {
 export default function ThemePreview({ title, code, ...props }) {
   const preventDefault = (e) => e.preventDefault();
 
-  let modifiedCode = addMissingEmptyLineBeforeComment({
-    code: removeLastLines({ code, linesToRemove: 2 }),
+  const modifiedCode = addMissingEmptyLineBeforeComment({
+    code: removeLines({
+      code,
+      linesToRemoveFromEnd: 2,
+    }),
   });
 
   const colorWithPrefix = (color) => {
@@ -36,10 +30,8 @@ export default function ThemePreview({ title, code, ...props }) {
   };
 
   const colorFamilies = getColorFamilies();
-  const currentPath = useCurrentPath();
-  const { shouldDisplayLoadingState } = usePage();
-
-  const navigation = useNavigation();
+  const { locationPath, nextPageCurrentlyLoading, isLoading, shouldDisplayLoadingState } =
+    useNavigation();
 
   return (
     <article
@@ -51,7 +43,7 @@ export default function ThemePreview({ title, code, ...props }) {
         {colorFamilies.map((color) => {
           const linkTo =
             color === "red" ? "/docs/theme-generator" : `/docs/theme-generator/${color}`;
-          const isCurrent = currentPath === linkTo;
+          const isCurrent = locationPath === linkTo;
           return (
             // eslint-disable-next-line jsx-a11y/anchor-has-content
             <Link
@@ -61,9 +53,7 @@ export default function ThemePreview({ title, code, ...props }) {
               aria-label={title}
               preventScrollReset={true}
               aria-busy={
-                shouldDisplayLoadingState &&
-                navigation.location &&
-                navigation.location.pathname === linkTo
+                isLoading && shouldDisplayLoadingState && nextPageCurrentlyLoading === linkTo
               }
             >
               {isCurrent && <Check />}

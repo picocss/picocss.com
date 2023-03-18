@@ -1,22 +1,22 @@
 import { useEffect, useState } from "react";
-import { useCurrentPath } from "~/utils";
+import { useNavigation } from "~/contexts/NavigationContext";
 
 const ANIMATION_DURATION = 1000;
 
 export default function Logo({ displayWordmark = true, ...props }) {
-  const currentPath = useCurrentPath();
-  const [previousPath, setPreviousPath] = useState(currentPath);
+  const { locationPath } = useNavigation();
+  const [previousPath, setPreviousPath] = useState(locationPath);
   const [shouldAnimateLogo, setShouldAnimateLogo] = useState(false);
 
   useEffect(() => {
-    if (previousPath !== currentPath) {
+    if (previousPath !== locationPath) {
       setShouldAnimateLogo(true);
-      setPreviousPath(currentPath);
+      setPreviousPath(locationPath);
       setTimeout(() => {
         setShouldAnimateLogo(false);
       }, ANIMATION_DURATION);
     }
-  }, [currentPath, previousPath]);
+  }, [locationPath, previousPath]);
 
   return (
     <svg

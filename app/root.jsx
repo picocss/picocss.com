@@ -9,6 +9,7 @@ import {
 } from "@remix-run/react";
 
 import { HelmetProvider } from "react-helmet-async";
+import { ModalProvider } from "~/contexts/ModalContext";
 import { PageProvider } from "~/contexts/PageContext";
 
 import picoStyles from "~/styles/css/main.css";
@@ -41,7 +42,7 @@ export const meta = () => {
 export function links() {
   return [
     // Favicons
-    { rel: "icon", href: "/favicon.ico", sizes: "any" },
+    // { rel: "icon", href: "/favicon.ico", sizes: "any" },
     { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
     { rel: "icon", href: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
     { rel: "apple-touch-icon", href: "/apple-touch-icon.png", type: "image/png", sizes: "180x180" },
@@ -84,19 +85,21 @@ export function CatchBoundary() {
 export default function App() {
   return (
     <HelmetProvider>
-      <PageProvider>
-        <head>
-          <Meta />
-          <Links />
-          <StructuredData />
-        </head>
-        <body>
-          <Outlet />
-          <ScrollRestoration />
-          <Scripts />
-          <LiveReload />
-        </body>
-      </PageProvider>
+      <ModalProvider>
+        <PageProvider>
+          <head>
+            <Meta />
+            <Links />
+            <StructuredData />
+          </head>
+          <body>
+            <Outlet />
+            <ScrollRestoration />
+            <Scripts />
+            <LiveReload />
+          </body>
+        </PageProvider>
+      </ModalProvider>
     </HelmetProvider>
   );
 }

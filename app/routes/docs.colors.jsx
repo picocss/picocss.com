@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import { usePage } from "~/contexts/PageContext";
-import metaData from "~/data/meta";
+import { useModal } from "~/contexts/ModalContext";
 
+import metaData from "~/data/meta";
 import picoColorsScssSettings from "~/data/code-snippets/_color-utilities-settings.txt";
 import paletteImporterImage from "~/images/customization-colors-palette-importer.png";
 
@@ -61,7 +61,7 @@ export default function Colors() {
   const usageWithSassRef = useRef();
   const importInFigmaRef = useRef();
 
-  const { modalIsOpen, onOpenModal, onCloseModal } = usePage();
+  const { modalIsOpen, onOpenModal, onCloseModal } = useModal();
   const [selectedColor, setSelectedColor] = useState({});
 
   const colorFamilies = getColorFamilies();

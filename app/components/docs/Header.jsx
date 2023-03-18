@@ -1,12 +1,11 @@
-import { useMatches } from "@remix-run/react";
+import { useNavigation } from "~/contexts/NavigationContext";
 import { getChapter } from "~/utils";
 
 import Heading from "~/components/docs/Heading";
 
 export default function Header({ title, description, ...props }) {
-  const routes = useMatches();
-  const currentPathname = routes[routes.length - 1].pathname;
-  const chapter = getChapter(currentPathname);
+  const { routePath } = useNavigation();
+  const chapter = getChapter(routePath);
 
   return (
     <hgroup {...props}>

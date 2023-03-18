@@ -1,6 +1,6 @@
 import { useRef } from "react";
-import metaData from "~/data/meta";
 
+import metaData from "~/data/meta";
 import stylesCssVars from "~/data/code-snippets/default-theme-styles.txt";
 import colorsCssVars from "~/data/code-snippets/default-theme-color-schemes.txt";
 

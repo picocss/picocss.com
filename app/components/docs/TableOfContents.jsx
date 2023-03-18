@@ -1,10 +1,10 @@
 import { Scrollspy } from "@makotot/ghostui";
-import { usePage } from "~/contexts/PageContext";
+import { useHeader } from "~/contexts/HeaderContext";
 
 import Link from "~/components/Link";
 
 export default function TableOfContents({ data, ...props }) {
-  const { headerHeight } = usePage();
+  const { headerHeight } = useHeader();
   const sectionRefs = data.map((section) => section.ref);
   return (
     <aside id="table-of-contents" {...props}>

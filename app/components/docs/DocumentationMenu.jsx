@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { useMatches } from "@remix-run/react";
-import { useCurrentPath } from "~/utils";
+
 import { useDocumentation } from "~/contexts/DocumentationContext";
+import { useNavigation } from "~/contexts/NavigationContext";
 
 import { documentationMenu } from "~/data/documentationMenu";
 
@@ -10,13 +10,8 @@ import Link from "~/components/Link";
 import Close from "~/components/icons/Close";
 
 export default function Aside(props) {
-  const currentPath = useCurrentPath();
-
-  const routes = useMatches();
-  const isThemeGeneratorNestedPage = routes.some(
-    (route) => route.pathname === "/docs/theme-generator"
-  );
-  const isColorsNestedPage = routes.some((route) => route.pathname === "/docs/colors");
+  const { locationPath } = useNavigation();
+  const isThemeGeneratorNestedPage = locationPath.includes("/docs/theme-generator/");
   const { menuIsOpenOnMobile, setMenuIsOpenOnMobile } = useDocumentation();
   const [currentCategory, setCurrentCategory] = useState("Getting started");
 
@@ -41,11 +36,10 @@ export default function Aside(props) {
       {/* Navigation */}
       <nav>
         {documentationMenu.map((category, index) => {
-          const isCurrentCategory = category.links.some((link) => link.route === currentPath);
+          const isCurrentCategory = category.links.some((link) => link.route === locationPath);
           const shouldOpen =
             isCurrentCategory ||
-            ((isThemeGeneratorNestedPage || isColorsNestedPage) &&
-              category.category === "Customization");
+            (isThemeGeneratorNestedPage && category.category === "Customization");
 
           if (isCurrentCategory && currentCategory !== category.category) {
             setCurrentCategory(category.category);
@@ -57,8 +51,7 @@ export default function Aside(props) {
               <summary {...(shouldOpen && { "aria-current": true })}>{category.category}</summary>
               <ul>
                 {category.links.map((link, index) => {
-                  const isThemeGeneratorPage = link.route === "/docs/theme-generator";
-                  const isColorsPage = link.route === "/docs/colors";
+                  const isThemeGeneratorLink = link.route === "/docs/theme-generator";
 
                   // Link
                   return (
@@ -66,8 +59,9 @@ export default function Aside(props) {
                       <Link
                         to={link.route}
                         className="secondary"
-                        {...(((isThemeGeneratorNestedPage && isThemeGeneratorPage) ||
-                          (isColorsNestedPage && isColorsPage)) && { "aria-current": "page" })}
+                        {...(isThemeGeneratorNestedPage && isThemeGeneratorLink
+                          ? { "aria-current": "page" }
+                          : {})}
                         onClick={() => setMenuIsOpenOnMobile(false)}
                       >
                         {link.label}

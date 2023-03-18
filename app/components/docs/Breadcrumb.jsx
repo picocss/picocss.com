@@ -1,18 +1,19 @@
 import { useEffect, useRef, useState } from "react";
-import { useMatches } from "@remix-run/react";
-import { getChapter } from "~/utils";
+
+import { useNavigation } from "~/contexts/NavigationContext";
 import { useDocumentation } from "~/contexts/DocumentationContext";
+
+import { getChapter } from "~/utils";
 
 import Link from "~/components/Link";
 import Menu from "~/components/icons/Menu";
 
 export default function Breadcrumb(props) {
+  const { routePath } = useNavigation();
   const { setMenuIsOpenOnMobile } = useDocumentation();
   const [isBreadcrumbSticky, setIsBreadcrumbSticky] = useState(false);
   const breadcrumbRef = useRef(null);
-  const routes = useMatches();
-  const currentPathname = routes[routes.length - 1].pathname;
-  const chapter = getChapter(currentPathname);
+  const chapter = getChapter(routePath);
 
   const handleOpenMenu = (event) => {
     event.preventDefault();
