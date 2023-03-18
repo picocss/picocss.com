@@ -35,11 +35,11 @@
   },
   "dependencies": {
     "@makotot/ghostui": "2.0.0",
-    "@remix-run/cloudflare": "^1.14.1",
-    "@remix-run/cloudflare-pages": "^1.14.1",
-    "@remix-run/react": "^1.14.1",
+    "@remix-run/cloudflare": "^1.14.3",
+    "@remix-run/cloudflare-pages": "^1.14.3",
+    "@remix-run/react": "^1.14.3",
     "cross-env": "^7.0.3",
-    "isbot": "^3.6.5",
+    "isbot": "^3.6.7",
     "react": "^18.2.0",
     "react-copy-to-clipboard": "5.1.0",
     "react-div-100vh": "0.7.0",
@@ -54,12 +54,12 @@
   "devDependencies": {
     "@cloudflare/workers-types": "^3.18.0",
     "@picocss/pico": "https://github.com/picocss/pico#v2",
-    "@remix-run/dev": "^1.14.1",
-    "@remix-run/eslint-config": "^1.14.1",
+    "@remix-run/dev": "^1.14.3",
+    "@remix-run/eslint-config": "^1.14.3",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.8",
     "autoprefixer": "^10.4.14",
-    "caniuse-lite": "1.0.30001464",
+    "caniuse-lite": "1.0.30001467",
     "clean-css-cli": "^5.6.2",
     "copyfiles": "2.4.1",
     "css-declaration-sorter": "^6.3.1",
@@ -71,9 +71,9 @@
     "postcss-scss": "^4.0.6",
     "prettier": "^2.8.4",
     "renamer": "4.0.0",
-    "sass": "^1.59.2",
-    "typescript": "^4.8.4",
-    "wrangler": "^2.2.1"
+    "sass": "^1.59.3",
+    "typescript": "^5.0.2",
+    "wrangler": "^2.12.3"
   },
   "engines": {
     "node": ">=16.13"
