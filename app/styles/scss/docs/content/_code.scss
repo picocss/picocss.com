@@ -9,6 +9,7 @@
 // All code blocks
 .code {
   position: relative;
+  background-color: var(#{$✨}card-sectionning-background-color);
 
   pre {
     margin-bottom: 0;
@@ -31,6 +32,7 @@
     top: 1rem;
     right: 0;
     padding: 0.25rem 1rem 0.25rem 0.25rem;
+    background-color: var(#{$✨}card-sectionning-background-color);
     color: var(#{$✨}code-comment);
     transition: color var(#{$✨}transition);
 
@@ -88,18 +90,9 @@ article footer:has(.code) {
   overflow: hidden;
 
   .code {
-    > a.copy-to-clipboard {
-      background-color: var(#{$✨}card-sectionning-background-color);
-    }
-
     pre {
       padding: calc(var(#{$✨}block-spacing-vertical) * 0.66) var(#{$✨}block-spacing-horizontal);
       background-color: transparent;
-    }
-
-    &::after {
-      box-shadow: 0 0 var(#{$✨}spacing) calc(var(#{$✨}spacing) * 0.5)
-        var(#{$✨}card-sectionning-background-color) inset;
     }
   }
 }
@@ -129,21 +122,11 @@ article footer:has(.code) {
   margin-bottom: var(#{$✨}block-spacing-vertical);
   overflow: hidden;
   border-radius: var(#{$✨}border-radius);
-  background-color: var(#{$✨}card-background-color);
   box-shadow: var(#{$✨}card-box-shadow);
-
-  > a.copy-to-clipboard {
-    background-color: var(#{$✨}card-background-color);
-  }
 
   pre {
     padding: calc(var(#{$✨}block-spacing-vertical) * 0.66) var(#{$✨}block-spacing-horizontal);
     background: transparent;
-  }
-
-  &::after {
-    box-shadow: 0 0 var(#{$✨}spacing) calc(var(#{$✨}spacing) * 0.5)
-      var(#{$✨}card-background-color) inset;
   }
 }
 

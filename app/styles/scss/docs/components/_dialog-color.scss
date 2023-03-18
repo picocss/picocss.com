@@ -64,15 +64,6 @@ dialog.color {
     .grid {
       .code {
         margin-bottom: 0;
-        background-color: var(#{$✨}card-sectionning-background-color);
-
-        a.copy-to-clipboard {
-          background-color: var(#{$✨}card-sectionning-background-color);
-        }
-
-        &::after {
-          display: none;
-        }
       }
 
       @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {
