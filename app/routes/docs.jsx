@@ -25,7 +25,7 @@ export default function DocsPage(props) {
     routePath.includes("/docs/theme-generator");
 
   const pageId =
-    routePath === "/docs" ? "index" : routePath.replace("/docs/", "").replace(/\//g, "-");
+    routePath === "/docs/" ? "index" : routePath.replace("/docs/", "").replace(/\//g, "-");
 
   return (
     <DocumentationProvider>
