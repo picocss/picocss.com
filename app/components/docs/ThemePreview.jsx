@@ -1,9 +1,11 @@
-import { useNavigation } from "@remix-run/react";
 import { getColorFamilies, useCurrentPath } from "~/utils";
 
-import Logo from "~/components/Logo";
+import { usePage } from "~/contexts/PageContext";
+import { useNavigation } from "@remix-run/react";
+
 import Code from "~/components/Code";
 import Link from "~/components/Link";
+import Check from "~/components/icons/Check";
 
 // Remove the last X lines of the code snippet.
 const removeLastLines = ({ code, linesToRemove = 1 }) => {
@@ -35,16 +37,13 @@ export default function ThemePreview({ title, code, ...props }) {
 
   const colorFamilies = getColorFamilies();
   const currentPath = useCurrentPath();
-  const navigation = useNavigation();
+  const { shouldDisplayLoadingState } = usePage();
 
-  // Set the button to aria-busy when clicked
-  const handleOnClickTheme = (even) => {
-    even.target.setAttribute("aria-busy", true);
-  };
+  const navigation = useNavigation();
 
   return (
     <article
-      className={`color-picker component${navigation.state === "loading" ? " is-loading" : ""}`}
+      className={`color-picker component${shouldDisplayLoadingState ? " is-loading" : ""}`}
       aria-label="Custom theme example"
       {...props}
     >
@@ -61,9 +60,13 @@ export default function ThemePreview({ title, code, ...props }) {
               className={`pico-background-${color}`}
               aria-label={title}
               preventScrollReset={true}
-              onClick={handleOnClickTheme}
+              aria-busy={
+                shouldDisplayLoadingState &&
+                navigation.location &&
+                navigation.location.pathname === linkTo
+              }
             >
-              {isCurrent && <Logo displayWordmark={false} animate={true} />}
+              {isCurrent && <Check />}
             </Link>
           );
         })}

@@ -83,8 +83,7 @@
   --pico-range-active-border-color: #bfc7d9;
   --pico-range-thumb-border-color: var(--pico-background-color);
   --pico-range-thumb-color: var(--pico-secondary-background);
-  --pico-range-thumb-hover-color: var(--pico-secondary-background-hover);
-  --pico-range-thumb-active-color: var(--pico-primary);
+  --pico-range-thumb-active-color: var(--pico-primary-background);
   --pico-accordion-border-color: var(--pico-muted-border-color);
   --pico-accordion-active-summary-color: var(--pico-primary-hover);
   --pico-accordion-close-summary-color: var(--pico-color);
@@ -214,8 +213,7 @@
     --pico-range-active-border-color: #2a3140;
     --pico-range-thumb-border-color: var(--pico-background-color);
     --pico-range-thumb-color: var(--pico-secondary-background);
-    --pico-range-thumb-hover-color: var(--pico-secondary-background-hover);
-    --pico-range-thumb-active-color: var(--pico-primary);
+    --pico-range-thumb-active-color: var(--pico-primary-background);
     --pico-accordion-border-color: var(--pico-muted-border-color);
     --pico-accordion-active-summary-color: var(--pico-primary-hover);
     --pico-accordion-close-summary-color: var(--pico-color);
@@ -338,8 +336,7 @@
   --pico-range-active-border-color: #2a3140;
   --pico-range-thumb-border-color: var(--pico-background-color);
   --pico-range-thumb-color: var(--pico-secondary-background);
-  --pico-range-thumb-hover-color: var(--pico-secondary-background-hover);
-  --pico-range-thumb-active-color: var(--pico-primary);
+  --pico-range-thumb-active-color: var(--pico-primary-background);
   --pico-accordion-border-color: var(--pico-muted-border-color);
   --pico-accordion-active-summary-color: var(--pico-primary-hover);
   --pico-accordion-close-summary-color: var(--pico-color);

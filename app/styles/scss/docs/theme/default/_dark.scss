@@ -19,4 +19,7 @@
 
   // Chapter
   #{$✨}chapter-color: var(#{$✨}code-tag);
+
+  // Skeleton
+  #{$✨}skeleton-background-color: #{mix($slate-900, $slate-850)};
 }

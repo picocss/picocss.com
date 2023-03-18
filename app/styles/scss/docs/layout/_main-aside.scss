@@ -82,6 +82,11 @@ main {
                 border-color: var(#{$✨}secondary-underline);
               }
 
+              &:active,
+              &:focus {
+                #{$✨}color: var(#{$✨}secondary-hover);
+              }
+
               &[aria-current] {
                 border-color: var(#{$✨}primary);
                 color: var(#{$✨}primary-hover);

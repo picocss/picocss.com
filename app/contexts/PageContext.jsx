@@ -2,6 +2,7 @@ import { createContext, useContext, useEffect, useRef, useState } from "react";
 
 import usePrefersColorScheme from "use-prefers-color-scheme";
 import useLocalStorageState from "use-local-storage-state";
+import { useNavigation } from "@remix-run/react";
 
 import { isScrollbarVisible } from "~/utils";
 
@@ -32,6 +33,11 @@ export default function PageProvider({ children, ...props }) {
   const [modalHelperClasses, setModalHelperClasses] = useState();
   const modalAnimationDuration = 400;
   const [scrollbarWidth, setScrollbarWidth] = useState(0);
+
+  // Loading state
+  const navigation = useNavigation();
+  const isLoading = navigation.state === "loading";
+  const [shouldDisplayLoadingState, setShouldDisplayLoadingState] = useState(false);
 
   // Set pageTheme on load
   useEffect(() => {
@@ -68,6 +74,12 @@ export default function PageProvider({ children, ...props }) {
     }, modalAnimationDuration);
   };
 
+  // Debounce loading state
+  useEffect(() => {
+    const timeout = setTimeout(() => setShouldDisplayLoadingState(isLoading), 200);
+    return () => clearTimeout(timeout);
+  }, [isLoading]);
+
   return (
     <PageContext.Provider
       value={{
@@ -75,11 +87,13 @@ export default function PageProvider({ children, ...props }) {
         headerHeight,
         headerIsFixed,
         headerRef,
+        isLoading,
         modalIsOpen,
         onOpenModal,
         onCloseModal,
         pageTheme,
         setHeaderIsFixed,
+        shouldDisplayLoadingState,
         switchTheme,
         systemPrefersColorScheme: defaultTheme,
       }}

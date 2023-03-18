@@ -1,10 +1,14 @@
-import { Outlet } from "@remix-run/react";
+import { Outlet, useNavigation } from "@remix-run/react";
 
-import { useCurrentPath } from "~/utils";
 import { DocumentationProvider } from "~/contexts/DocumentationContext";
+import { useCurrentPath } from "~/utils";
+
+import { usePage } from "~/contexts/PageContext";
+
 import Breadcrumb from "~/components/docs/Breadcrumb";
 import Header from "~/components/Header";
 import DocumentationMenu from "~/components/docs/DocumentationMenu";
+import LoadingDocPage from "~/components/docs/LoadingDocPage";
 
 import docsStyles from "~/styles/css/docs.css";
 
@@ -14,6 +18,13 @@ export function links() {
 
 export default function DocsPage(props) {
   const currentPath = useCurrentPath();
+  const navigation = useNavigation();
+  const nextPageYsAGeneratedThemePage =
+    navigation.state === "loading" &&
+    navigation.location.pathname.includes("/docs/theme-generator") &&
+    currentPath.includes("/docs/theme-generator");
+
+  const { shouldDisplayLoadingState } = usePage();
   const pageId =
     currentPath === "/docs" ? "index" : currentPath.replace("/docs/", "").replace(/\//g, "-");
 
@@ -23,7 +34,13 @@ export default function DocsPage(props) {
       <main className="container" id={pageId} {...props}>
         <Breadcrumb />
         <DocumentationMenu />
-        <Outlet />
+        {shouldDisplayLoadingState &&
+        !nextPageYsAGeneratedThemePage &&
+        navigation.state === "loading" ? (
+          <LoadingDocPage />
+        ) : (
+          <Outlet />
+        )}
       </main>
     </DocumentationProvider>
   );

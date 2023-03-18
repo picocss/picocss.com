@@ -1,31 +1,22 @@
 import { useEffect, useState } from "react";
-import { usePage } from "~/contexts/PageContext";
 import { useCurrentPath } from "~/utils";
 
-export default function Logo({ displayWordmark = true, animate = false, ...props }) {
+const ANIMATION_DURATION = 1000;
+
+export default function Logo({ displayWordmark = true, ...props }) {
   const currentPath = useCurrentPath();
-  const { pageTheme } = usePage();
   const [previousPath, setPreviousPath] = useState(currentPath);
-  const [previousTheme, setPreviousTheme] = useState(pageTheme);
-  const [animateSparkle, setAnimateSparkle] = useState(animate);
-  const excludeThemegenerator =
-    previousPath.includes("/docs/theme-generator") && currentPath.includes("/docs/theme-generator");
-  const shouldAnimate =
-    (currentPath !== previousPath || pageTheme !== previousTheme) && !excludeThemegenerator;
+  const [shouldAnimateLogo, setShouldAnimateLogo] = useState(false);
 
   useEffect(() => {
-    if (shouldAnimate) {
+    if (previousPath !== currentPath) {
+      setShouldAnimateLogo(true);
       setPreviousPath(currentPath);
-      setPreviousTheme(pageTheme);
-
-      if (!animateSparkle) {
-        setAnimateSparkle(true);
-        setTimeout(() => {
-          setAnimateSparkle(false);
-        }, 1250);
-      }
+      setTimeout(() => {
+        setShouldAnimateLogo(false);
+      }, ANIMATION_DURATION);
     }
-  }, [animateSparkle, currentPath, pageTheme, previousPath, previousTheme, shouldAnimate]);
+  }, [currentPath, previousPath]);
 
   return (
     <svg
@@ -33,7 +24,7 @@ export default function Logo({ displayWordmark = true, animate = false, ...props
       viewBox={displayWordmark ? "0 0 381 164" : "279 0 102 93"}
       fill="none"
       className={`${displayWordmark ? "pico-logo" : "pico-icon"}${
-        animateSparkle ? " animated" : ""
+        shouldAnimateLogo ? " animated" : ""
       }`}
       {...props}
     >

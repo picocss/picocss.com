@@ -19,7 +19,7 @@ export default function Breadcrumb(props) {
     setMenuIsOpenOnMobile(true);
   };
 
-  // Listen scroll event and check if the breadcrumb is sticky
+  // Listen scroll and resize events and check if the breadcrumb is sticky
   useEffect(() => {
     const checkBreadcrumbPosition = () => {
       const { top } = breadcrumbRef.current.getBoundingClientRect();
@@ -31,8 +31,12 @@ export default function Breadcrumb(props) {
     };
 
     window.addEventListener("scroll", checkBreadcrumbPosition);
+    window.addEventListener("resize", checkBreadcrumbPosition);
     checkBreadcrumbPosition();
-    return () => window.removeEventListener("scroll", checkBreadcrumbPosition);
+    return () => {
+      window.removeEventListener("scroll", checkBreadcrumbPosition);
+      window.removeEventListener("resize", checkBreadcrumbPosition);
+    };
   }, [isBreadcrumbSticky, setIsBreadcrumbSticky]);
 
   return (

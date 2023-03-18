@@ -1,0 +1,148 @@
+@use "sass:map";
+@use "settings" as *;
+
+$animation-delay: 0.1s;
+$animation-duration: $animation-delay * 8 * 2;
+
+body > {
+  main {
+    > hgroup,
+    > aside#table-of-contents,
+    > [role="document"] {
+      &.skeleton {
+        p,
+        h1,
+        details summary,
+        details ul li a {
+          background: linear-gradient(
+            0deg,
+            transparent,
+            transparent 20%,
+            var(#{$✨}skeleton-background-color) 20%,
+            var(#{$✨}skeleton-background-color) 80%,
+            transparent 80%,
+            transparent
+          );
+        }
+
+        p,
+        h1,
+        details summary,
+        details ul li a,
+        article {
+          animation: skeleton $animation-duration infinite;
+        }
+      }
+    }
+
+    > hgroup {
+      &.skeleton {
+        p.chapter {
+          width: 20%;
+          background-clip: inherit;
+        }
+
+        h1 {
+          width: 60%;
+          background: linear-gradient(
+            0deg,
+            transparent,
+            transparent 5%,
+            var(#{$✨}skeleton-background-color) 5%,
+            var(#{$✨}skeleton-background-color) 95%,
+            transparent 95%,
+            transparent
+          );
+          animation-delay: $animation-delay * 1;
+        }
+
+        p:not(.chapter) {
+          width: 80%;
+          animation-delay: $animation-delay * 2;
+        }
+      }
+    }
+
+    > aside#table-of-contents {
+      &.skeleton {
+        max-width: 10rem;
+
+        details {
+          summary {
+            width: 40%;
+            animation-delay: $animation-delay * 3;
+          }
+
+          ul {
+            border-left-color: var(#{$✨}skeleton-background-color);
+
+            li {
+              a {
+                margin-left: calc(var(#{$✨}nav-element-spacing-horizontal) * 1.5);
+                text-decoration: none;
+                pointer-events: none;
+              }
+
+              &:first-of-type {
+                a {
+                  width: 80%;
+                  animation-delay: $animation-delay * 4;
+                }
+              }
+
+              &:nth-of-type(2) {
+                a {
+                  width: 40%;
+                  animation-delay: $animation-delay * 5;
+                }
+              }
+
+              &:nth-of-type(3) {
+                a {
+                  width: 60%;
+                  animation-delay: $animation-delay * 5;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    > [role="document"] {
+      &.skeleton {
+        p {
+          &:first-of-type {
+            margin-bottom: 0;
+            animation-delay: $animation-delay * 6;
+          }
+
+          &:nth-of-type(2) {
+            width: 40%;
+            animation-delay: $animation-delay * 7;
+          }
+        }
+
+        article {
+          background-color: var(#{$✨}skeleton-background-color);
+          box-shadow: none;
+          animation-delay: $animation-delay * 8;
+        }
+      }
+    }
+  }
+}
+
+@keyframes skeleton {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

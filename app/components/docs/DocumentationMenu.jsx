@@ -22,7 +22,6 @@ export default function Aside(props) {
 
   const onClose = (event) => {
     event.preventDefault();
-    console.log("WTF");
     setMenuIsOpenOnMobile(false);
   };
 

@@ -20,6 +20,9 @@
   // Chapter
   #{$✨}chapter-color: var(#{$✨}code-tag);
 
+  // Skeleton
+  #{$✨}skeleton-background-color: #{$slate-50};
+
   // Forced dark color scheme
   article {
     footer:has(.code[data-theme="dark"]) {

@@ -176,11 +176,8 @@ thead th,
 thead td,
 tfoot th,
 tfoot td {
+  --pico-font-weight: 600;
   --pico-border-width: 3px;
-}
-
-:not(thead, tfoot) > * > td {
-  font-size: 0.875em;
 }
 
 pre,

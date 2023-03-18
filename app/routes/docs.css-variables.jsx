@@ -117,8 +117,7 @@ export default function CssVariables() {
             </p>
             <button>Let's rock out!</button>
             <footer>
-              <Code>{`
-<style>
+              <Code>{`<style>
   :root {
     --pico-border-radius: 2rem;
     --pico-typography-spacing-vertical: 1.5rem;

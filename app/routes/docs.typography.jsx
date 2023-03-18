@@ -1,12 +1,12 @@
 import { useRef, useState } from "react";
 import metaData from "~/data/meta";
 
-import Code from "~/components/Code";
-import Content from "~/components/docs/Content";
 import Header from "~/components/docs/Header";
+import Content from "~/components/docs/Content";
+import TableOfContents from "~/components/docs/TableOfContents";
+import Code from "~/components/Code";
 import Heading from "~/components/docs/Heading";
 import Link from "~/components/Link";
-import TableOfContents from "~/components/docs/TableOfContents";
 
 const { titleSuffix } = metaData();
 
@@ -156,7 +156,7 @@ export default function Typography() {
       <Content>
         <section ref={fontSizesRef}>
           <figure>
-            <table role="grid" id="responsive-font-sizes">
+            <table className="striped" id="responsive-font-sizes">
               <caption>Responsive font sizes</caption>
               {/* Devices */}
               <thead>

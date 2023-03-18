@@ -12,7 +12,7 @@ export default function TableOfContents({ data, ...props }) {
         {({ currentElementIndexInViewport }) => (
           <nav>
             <details open>
-              <summary>On this page</summary>
+              <summary>Content</summary>
               <ul>
                 {data.map((section, index) => (
                   <li key={section.anchor}>

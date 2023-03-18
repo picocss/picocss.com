@@ -25,9 +25,8 @@ article {
         }
 
         svg {
-          #{$✨}logo-small-sparkles: currentColor;
-          #{$✨}logo-big-sparkle: currentColor;
-          width: 37.5%;
+          width: 50%;
+          max-width: 1.5rem;
           height: auto;
           opacity: 0.875;
         }
@@ -60,6 +59,8 @@ article {
     }
 
     &.is-loading {
+      pointer-events: none;
+
       > header {
         a {
           &[aria-current] {
@@ -73,7 +74,7 @@ article {
       > hgroup,
       > form,
       > footer {
-        filter: grayscale(100%);
+        filter: grayscale(50%);
         opacity: 0.5;
       }
     }

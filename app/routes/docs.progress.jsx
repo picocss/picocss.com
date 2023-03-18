@@ -20,7 +20,13 @@ export default function Progress() {
       />
 
       {/* Content */}
-      <Content />
+      <Content>
+        <section>
+          <article className="component">
+            <progress />
+          </article>
+        </section>
+      </Content>
     </>
   );
 }
