@@ -32,19 +32,19 @@ export default function Nav() {
             </ul>
             <ul>
               <li>
-                <a href="#link" onClick={preventDefault}>
+                <Link to="#" onClick={preventDefault}>
                   Link
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#link" onClick={preventDefault}>
+                <Link to="#" onClick={preventDefault}>
                   Link
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#link" onClick={preventDefault}>
+                <Link to="#" onClick={preventDefault}>
                   Link
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>
@@ -76,9 +76,9 @@ export default function Nav() {
           <nav>
             <ul>
               <li>
-                <a href="#menu" onClick={preventDefault} className="secondary" aria-label="Menu">
+                <Link to="#" onClick={preventDefault} className="secondary" aria-label="Menu">
                   <MenuIcon height="1rem" width="100%" />
-                </a>
+                </Link>
               </li>
             </ul>
             <ul>
@@ -88,27 +88,22 @@ export default function Nav() {
             </ul>
             <ul>
               <li>
-                <a
-                  href="#twitter"
-                  onClick={preventDefault}
-                  className="secondary"
-                  aria-label="Twitter"
-                >
+                <Link to="#" onClick={preventDefault} className="secondary" aria-label="Twitter">
                   <TwitterIcon height="1rem" width="100%" />
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>
           <footer>
             <Code>{`<nav>
   <ul>
-    <li><a href="#" class="secondary">…</a></li>
+    <li><a href="#" class="secondary">...</a></li>
   </ul>
   <ul>
     <li><strong>Brand</strong></li>
   </ul>
   <ul>
-    <li><a href="#" class="secondary">…</a>
+    <li><a href="#" class="secondary">...</a>
     </li>
   </ul>
 </nav>`}</Code>
@@ -129,14 +124,14 @@ export default function Nav() {
             </ul>
             <ul>
               <li>
-                <a href="#link" onClick={preventDefault} className="secondary">
+                <Link to="#" onClick={preventDefault} className="secondary">
                   Link
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#link" onClick={preventDefault} className="secondary">
+                <Link to="#" onClick={preventDefault} className="secondary">
                   Link
-                </a>
+                </Link>
               </li>
               <li>
                 <button>Button</button>
@@ -165,19 +160,19 @@ export default function Nav() {
             <nav>
               <ul>
                 <li>
-                  <a href="#link" onClick={preventDefault}>
+                  <Link to="#" onClick={preventDefault}>
                     Link
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#link" onClick={preventDefault}>
+                  <Link to="#" onClick={preventDefault}>
                     Link
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#link" onClick={preventDefault}>
+                  <Link to="#" onClick={preventDefault}>
                     Link
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </nav>
@@ -208,14 +203,14 @@ export default function Nav() {
           <nav aria-label="breadcrumb">
             <ul>
               <li>
-                <a href="#link" onClick={preventDefault}>
+                <Link to="#" onClick={preventDefault}>
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#link" onClick={preventDefault}>
+                <Link to="#" onClick={preventDefault}>
                   Category
-                </a>
+                </Link>
               </li>
               <li>Page</li>
             </ul>

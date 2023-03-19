@@ -42,7 +42,7 @@ body {
         }
 
         // Hide docs link on mobile
-        li:has(a[href="/docs"]):first-of-type {
+        li.hide-before-sm {
           @media (max-width: calc(#{map.get(map.get($breakpoints, "sm"), "breakpoint")} - 1px)) {
             display: none;
           }

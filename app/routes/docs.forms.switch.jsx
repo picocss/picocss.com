@@ -4,7 +4,7 @@ import metaData from "~/data/meta";
 import Header from "~/components/docs/Header";
 import TableOfContents from "~/components/docs/TableOfContents";
 import Content from "~/components/docs/Content";
-import Heading from "~/components/docs/Heading";
+import Heading from "~/components/Heading";
 import Code from "~/components/Code";
 
 const { titleSuffix } = metaData();
@@ -82,11 +82,11 @@ export default function Switch() {
           </Heading>
           <article aria-label="Disabled switch example" className="component">
             <fieldset>
-              <label>
+              <label aria-disabled="true">
                 <input type="checkbox" role="switch" disabled />
                 Publish on my profile
               </label>
-              <label>
+              <label aria-disabled="true">
                 <input type="checkbox" role="switch" defaultChecked={true} disabled />
                 Change my password at next login
               </label>

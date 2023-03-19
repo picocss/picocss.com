@@ -4,8 +4,9 @@ import metaData from "~/data/meta";
 import Header from "~/components/docs/Header";
 import Content from "~/components/docs/Content";
 import TableOfContents from "~/components/docs/TableOfContents";
-import Heading from "~/components/docs/Heading";
+import Heading from "~/components/Heading";
 import Code from "~/components/Code";
+import Link from "~/components/Link";
 
 const { titleSuffix } = metaData();
 
@@ -55,6 +56,7 @@ export default function Accordion() {
                 conserve body heat.
               </p>
             </details>
+            <hr />
             <details>
               <summary>Accordion 2</summary>
               <ul>
@@ -71,14 +73,16 @@ export default function Accordion() {
             <footer>
               <Code>{`<details open>
   <summary>Accordion 1</summary>
-  <p>…</p>
+  <p>...</p>
 </details>
+
+<hr />
 
 <details>
   <summary>Accordion 2</summary>
   <ul>
-    <li>…</li>
-    <li>…</li>
+    <li>...</li>
+    <li>...</li>
   </ul>
 </details>`}</Code>
             </footer>
@@ -107,13 +111,14 @@ export default function Accordion() {
             <footer>
               <Code>{`<details>
   <summary role="button">Owls</summary>
-  <p>…</p>
+  <p>...</p>
 </details>`}</Code>
             </footer>
           </article>
           <p>
             Like regular buttons, they come with <Code display="inline">.secondary</Code>,{" "}
-            <Code display="inline">.contrast</Code>, and <Code display="inline">.outline</Code>.
+            <Code display="inline">.contrast</Code>, and <Code display="inline">.outline</Code> (Not
+            available in the <Link to="/docs/classless">class-less version</Link>).
           </p>
           <article aria-label="Accordions buttons example" className="component">
             <details>
@@ -177,31 +182,31 @@ export default function Accordion() {
               <Code>{`<!-- Secondary -->
 <details>
   <summary role="button" class="secondary">Secondary</summary>
-  <p>…</p>
+  <p>...</p>
 </details>
 
 <!-- Contrast -->
 <details>
   <summary role="button" class="contrast">Contrast</summary>
-  <p>…</p>
+  <p>...</p>
 </details>
 
 <!-- Primary outline -->
 <details>
   <summary role="button" class="outline">Primary outline</summary>
-  <p>…</p>
+  <p>...</p>
 </details>
 
 <!-- Secondary outline -->
 <details>
   <summary role="button" class="outline secondary">Secondary outline</summary>
-  <p>…</p>
+  <p>...</p>
 </details>
 
 <!-- Contrast outline -->
 <details>
   <summary role="button" class="outline contrast">Contrast outline</summary>
-  <p>…</p>
+  <p>...</p>
 </details>`}</Code>
             </footer>
           </article>

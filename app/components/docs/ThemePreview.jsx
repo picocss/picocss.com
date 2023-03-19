@@ -89,7 +89,7 @@ export default function ThemePreview({ title, code, ...props }) {
           <label>
             <input type="checkbox" role="switch" name="switch" defaultChecked={true} /> I agree to
             the{" "}
-            <Link to="#policy" onClick={preventDefault}>
+            <Link to="#" onClick={preventDefault}>
               Privacy Policy
             </Link>
           </label>

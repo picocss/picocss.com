@@ -4,7 +4,7 @@ import metaData from "~/data/meta";
 import Code from "~/components/Code";
 import Content from "~/components/docs/Content";
 import Header from "~/components/docs/Header";
-import Heading from "~/components/docs/Heading";
+import Heading from "~/components/Heading";
 import Link from "~/components/Link";
 import TableOfContents from "~/components/docs/TableOfContents";
 

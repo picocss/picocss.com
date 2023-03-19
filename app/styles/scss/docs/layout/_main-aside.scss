@@ -16,13 +16,6 @@ main {
           margin-bottom: 0;
         }
 
-        &:not([role="list"], :has(summary[role="button"])) {
-          @media (min-width: map.get(map.get($breakpoints, "lg"), "breakpoint")) {
-            padding-bottom: 0;
-            border-bottom: none;
-          }
-        }
-
         summary {
           font-weight: 600;
           line-height: var(#{$✨}line-height);

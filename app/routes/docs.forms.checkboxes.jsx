@@ -4,7 +4,7 @@ import metaData from "~/data/meta";
 import Header from "~/components/docs/Header";
 import TableOfContents from "~/components/docs/TableOfContents";
 import Content from "~/components/docs/Content";
-import Heading from "~/components/docs/Heading";
+import Heading from "~/components/Heading";
 import Code from "~/components/Code";
 
 const { titleSuffix } = metaData();
@@ -88,7 +88,7 @@ export default function CheckboxesAndRadios() {
                 <input type="checkbox" name="thai" />
                 Thai
               </label>
-              <label>
+              <label aria-disabled="true">
                 <input type="checkbox" name="dothraki" disabled />
                 Dothraki
               </label>
@@ -109,14 +109,10 @@ export default function CheckboxesAndRadios() {
     Mandarin
   </label>
   <label>
-    <input type="checkbox" name="arabic" />
-    Arabic
-  </label>
-  <label>
     <input type="checkbox" name="thai" />
     Thai
   </label>
-  <label>
+  <label aria-disabled="true">
     <input type="checkbox" name="dothraki" disabled />
     Dothraki
   </label>
@@ -137,7 +133,9 @@ export default function CheckboxesAndRadios() {
               <input type="checkbox" id="swahili" name="swahili" />
               <label htmlFor="swahili">Swahili</label>
               <input type="checkbox" id="navi " name="navi" disabled />
-              <label htmlFor="navi">Na'vi</label>
+              <label htmlFor="navi" aria-disabled="true">
+                Na'vi
+              </label>
             </fieldset>
             <footer>
               <Code>{`<fieldset>
@@ -146,8 +144,8 @@ export default function CheckboxesAndRadios() {
   <label htmlFor="hindi">Hindi</label>
   <input type="checkbox" id="swahili" name="swahili" />
   <label htmlFor="swahili">Swahili</label>
-  <input type="checkbox" id="navi" name="navi" disabled />
-  <label htmlFor="navi">Na'vi</label>
+  <input type="checkbox" id="navi " name="navi" disabled />
+  <label htmlFor="navi" aria-disabled="true">
 </fieldset>`}</Code>
             </footer>
           </article>

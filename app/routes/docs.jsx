@@ -6,6 +6,7 @@ import { useNavigation } from "~/contexts/NavigationContext";
 
 import docsStyles from "~/styles/css/docs.css";
 
+import Main from "~/components/docs/Main";
 import Breadcrumb from "~/components/docs/Breadcrumb";
 import Header from "~/components/Header";
 import DocumentationMenu from "~/components/docs/DocumentationMenu";
@@ -24,14 +25,11 @@ export default function DocsPage(props) {
     nextPageCurrentlyLoading.includes("/docs/theme-generator") &&
     routePath.includes("/docs/theme-generator");
 
-  const pageId =
-    routePath === "/docs/" ? "index" : routePath.replace("/docs/", "").replace(/\//g, "-");
-
   return (
     <DocumentationProvider>
       <HeaderProvider>
         <Header headerIsFixed={true} />
-        <main className="container" id={pageId} {...props}>
+        <Main>
           <Breadcrumb />
           <DocumentationMenu />
           {isLoading && shouldDisplayLoadingState && !nextPageIsAGeneratedThemePage ? (
@@ -39,7 +37,7 @@ export default function DocsPage(props) {
           ) : (
             <Outlet />
           )}
-        </main>
+        </Main>
       </HeaderProvider>
     </DocumentationProvider>
   );

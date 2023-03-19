@@ -1,7 +1,7 @@
 import { useNavigation } from "~/contexts/NavigationContext";
 import { getChapter } from "~/utils";
 
-import Heading from "~/components/docs/Heading";
+import Heading from "~/components/Heading";
 
 export default function Header({ title, description, ...props }) {
   const { routePath } = useNavigation();

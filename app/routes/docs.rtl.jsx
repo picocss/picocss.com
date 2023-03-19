@@ -27,7 +27,7 @@ export default function Rtl() {
         </p>
         <Code>{`<!doctype html>
 <html dir="rtl" lang="ar">
-  …
+  ...
 </html>`}</Code>
       </Content>
     </>

@@ -5,7 +5,7 @@ import { useNavigation } from "~/contexts/NavigationContext";
 
 import { documentationMenu } from "~/data/documentationMenu";
 
-import Heading from "~/components/docs/Heading";
+import Heading from "~/components/Heading";
 import Link from "~/components/Link";
 import Close from "~/components/icons/Close";
 

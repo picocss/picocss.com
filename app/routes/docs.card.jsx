@@ -1,8 +1,11 @@
+import { useRef } from "react";
 import metaData from "~/data/meta";
 
 import Code from "~/components/Code";
-import Content from "~/components/docs/Content";
 import Header from "~/components/docs/Header";
+import TableOfContents from "~/components/docs/TableOfContents";
+import Content from "~/components/docs/Content";
+import Heading from "~/components/Heading";
 
 const { titleSuffix } = metaData();
 
@@ -12,6 +15,9 @@ export const meta = () => ({
 });
 
 export default function Card() {
+  const syntaxRef = useRef();
+  const sectioningRef = useRef();
+
   return (
     <>
       {/* Header */}
@@ -20,33 +26,49 @@ export default function Card() {
         description="A flexible container with graceful spacings across devices and viewports."
       />
 
+      {/* Table of contents */}
+      <TableOfContents
+        data={[
+          { anchor: "", title: "Syntax", ref: syntaxRef },
+          { anchor: "sectioning", title: "Sectioning", ref: sectioningRef },
+        ]}
+      />
+
       {/* Content */}
       <Content>
-        <article aria-label="Card example">I'm a card!</article>
-        <Code className="small">{`<article>I'm a card!</article>`}</Code>
+        <section ref={syntaxRef}>
+          <article aria-label="Card example">I'm a card!</article>
+          <Code className="small">{`<article>I'm a card!</article>`}</Code>
+        </section>
 
-        <p>
-          You can use <Code display="inline">{`<header>`}</Code> and{" "}
-          <Code display="inline">{`<footer>`}</Code> inside{" "}
-          <Code display="inline">{`<article>`}</Code>.
-        </p>
-        <article aria-label="Card sectioning example">
-          <header>Header</header>Body<footer>Footer</footer>
-        </article>
-        <Code>{`<article>
+        <section ref={sectioningRef}>
+          <p>
+            You can use <Code display="inline">{`<header>`}</Code> and{" "}
+            <Code display="inline">{`<footer>`}</Code> inside{" "}
+            <Code display="inline">{`<article>`}</Code>.
+          </p>
+          <Heading level={2} anchor="sectioning">
+            Sectioning
+          </Heading>
+          <article aria-label="Card sectioning example">
+            <header>Header</header>Body<footer>Footer</footer>
+          </article>
+          <Code>{`<article>
   <header>Header</header>
   Body
   <footer>Footer</footer>
 </article>`}</Code>
 
-        <p>
-          Optionally, you can use <Code display="inline">{`<main>`}</Code> to wrap the body content.
-        </p>
-        <Code>{`<article>
+          <p>
+            Optionally, you can use <Code display="inline">{`<main>`}</Code> to wrap the body
+            content.
+          </p>
+          <Code>{`<article>
   <header>Header</header>
   <main>Body</main>
   <footer>Footer</footer>
 </article>`}</Code>
+        </section>
       </Content>
     </>
   );

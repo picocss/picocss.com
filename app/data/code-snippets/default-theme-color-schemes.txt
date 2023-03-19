@@ -91,7 +91,7 @@
   --pico-card-background-color: var(--pico-background-color);
   --pico-card-border-color: var(--pico-muted-border-color);
   --pico-card-box-shadow: var(--pico-box-shadow);
-  --pico-card-sectionning-background-color: #fbfcfc;
+  --pico-card-sectioning-background-color: #fbfcfc;
   --pico-dropdown-background-color: #fff;
   --pico-dropdown-border-color: #eff1f4;
   --pico-dropdown-box-shadow: var(--pico-box-shadow);
@@ -221,7 +221,7 @@
     --pico-card-background-color: #181c25;
     --pico-card-border-color: var(--pico-card-background-color);
     --pico-card-box-shadow: var(--pico-box-shadow);
-    --pico-card-sectionning-background-color: #1a1f28;
+    --pico-card-sectioning-background-color: #1a1f28;
     --pico-dropdown-background-color: #181c25;
     --pico-dropdown-border-color: #202632;
     --pico-dropdown-box-shadow: var(--pico-box-shadow);
@@ -344,7 +344,7 @@
   --pico-card-background-color: #181c25;
   --pico-card-border-color: var(--pico-card-background-color);
   --pico-card-box-shadow: var(--pico-box-shadow);
-  --pico-card-sectionning-background-color: #1a1f28;
+  --pico-card-sectioning-background-color: #1a1f28;
   --pico-dropdown-background-color: #181c25;
   --pico-dropdown-border-color: #202632;
   --pico-dropdown-box-shadow: var(--pico-box-shadow);

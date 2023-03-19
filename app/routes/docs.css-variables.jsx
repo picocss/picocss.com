@@ -8,7 +8,7 @@ import Content from "~/components/docs/Content";
 import Header from "~/components/docs/Header";
 import Code from "~/components/Code";
 import Link from "~/components/Link";
-import Heading from "~/components/docs/Heading";
+import Heading from "~/components/Heading";
 import TableOfContents from "~/components/docs/TableOfContents";
 
 import { removeLines } from "~/utils";
@@ -157,7 +157,7 @@ export default function CssVariables() {
 /* Can be forced with data-theme="light" */
 [data-theme="light"],
 :root:not([data-theme="dark"]) {
- …
+ ...
 }`}</Code>
           <p>To add or edit CSS variables for dark mode, you need to define them twice.</p>
           <p>
@@ -179,14 +179,14 @@ export default function CssVariables() {
 /* Automatically enabled if user has Dark mode enabled */
  @media only screen and (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
-    …
+    ...
   }
 }
 
 /* Dark color scheme (Forced) */
 /* Enabled if forced with data-theme="dark" */
 [data-theme="dark"] {
-  …
+  ...
 }`}</Code>
           <p>
             Try our <Link to="/docs/theme-generator">Minimal theme generator</Link> for a detailed

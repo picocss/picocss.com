@@ -5,7 +5,7 @@ import Header from "~/components/docs/Header";
 import TableOfContents from "~/components/docs/TableOfContents";
 import Content from "~/components/docs/Content";
 import Code from "~/components/Code";
-import Heading from "~/components/docs/Heading";
+import Heading from "~/components/Heading";
 import Link from "~/components/Link";
 
 import { usePage } from "~/contexts/PageContext";
@@ -163,10 +163,10 @@ export default function TablePage() {
           </figure>
           <Code>{`<table>
   <thead data-theme="${inversedTheme}">
-    …
+    ...
   </thead>
-  <tbody>…</tbody>
-  <tfoot>…</tfoot>
+  <tbody>...</tbody>
+  <tfoot>...</tfoot>
 </table>`}</Code>
         </section>
 
@@ -175,14 +175,14 @@ export default function TablePage() {
             Striped table
           </Heading>
           <p>
-            <Code display="inline">.striped</Code> enable striped rows (Not available in the{" "}
+            <Code display="inline">.striped</Code> enable striped rows (not available in the{" "}
             <Link to="/docs/classless">class&#8209;less&nbsp;version</Link>).
           </p>
           <figure>
             <Table className="striped" />
           </figure>
           <Code>{`<table class="striped">
-  …
+  ...
 </table>`}</Code>
         </section>
       </Content>

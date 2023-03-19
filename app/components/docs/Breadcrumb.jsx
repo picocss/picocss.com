@@ -12,7 +12,7 @@ export default function Breadcrumb(props) {
   const { routePath } = useNavigation();
   const { setMenuIsOpenOnMobile } = useDocumentation();
   const [isBreadcrumbSticky, setIsBreadcrumbSticky] = useState(false);
-  const breadcrumbRef = useRef(null);
+  const breadcrumbRef = useRef();
   const chapter = getChapter(routePath);
 
   const handleOpenMenu = (event) => {

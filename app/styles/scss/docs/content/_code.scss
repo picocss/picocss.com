@@ -9,7 +9,7 @@
 // All code blocks
 .code {
   position: relative;
-  background-color: var(#{$✨}card-sectionning-background-color);
+  background-color: var(#{$✨}card-sectioning-background-color);
 
   pre {
     margin-bottom: 0;
@@ -32,7 +32,7 @@
     top: 1rem;
     right: 0;
     padding: 0.25rem 1rem 0.25rem 0.25rem;
-    background-color: var(#{$✨}card-sectionning-background-color);
+    background-color: var(#{$✨}card-sectioning-background-color);
     color: var(#{$✨}code-comment);
     transition: color var(#{$✨}transition);
 
@@ -50,12 +50,9 @@
       }
     }
 
-    &:has(svg.check) {
+    svg.check {
       color: var(#{$✨}code-copied);
-
-      svg {
-        opacity: 1;
-      }
+      opacity: 1;
     }
 
     &[data-tooltip] {
@@ -65,9 +62,6 @@
       }
 
       &:has(svg.check) {
-        &::before {
-          opacity: 1;
-        }
         &::after {
           display: none;
         }

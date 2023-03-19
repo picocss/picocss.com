@@ -8,7 +8,7 @@ import TableOfContents from "~/components/docs/TableOfContents";
 import Content from "~/components/docs/Content";
 import Link from "~/components/Link";
 import Code from "~/components/Code";
-import Heading from "~/components/docs/Heading";
+import Heading from "~/components/Heading";
 
 import { removeLines } from "~/utils";
 
@@ -97,7 +97,7 @@ export default function Sass() {
           <p>
             You can load custom settings with{" "}
             <Code display="inline" language="scss">
-              @use "pico" with ( … );
+              @use "pico" with ( ... );
             </Code>
             . These custom values will override the default variables.
           </p>

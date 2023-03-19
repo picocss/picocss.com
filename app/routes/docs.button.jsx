@@ -4,7 +4,7 @@ import metaData from "~/data/meta";
 import Header from "~/components/docs/Header";
 import Content from "~/components/docs/Content";
 import TableOfContents from "~/components/docs/TableOfContents";
-import Heading from "~/components/docs/Heading";
+import Heading from "~/components/Heading";
 import Code from "~/components/Code";
 import Link from "~/components/Link";
 
@@ -78,7 +78,7 @@ export default function Button() {
           </Heading>
           <p>
             Buttons come with <Code display="inline">.secondary</Code> and{" "}
-            <Code display="inline">.contrast</Code> styles (Not available in the{" "}
+            <Code display="inline">.contrast</Code> styles (not available in the{" "}
             <Link to="/docs/classless">class-less version</Link>).
           </p>
           <article aria-label="Button colors example" className="component">
@@ -94,7 +94,7 @@ export default function Button() {
           </article>
 
           <p>
-            They also come with a classic outline style (Not available in the{" "}
+            They also come with a classic outline style (not available in the{" "}
             <Link to="/docs/classless">class-less version</Link>).
           </p>
           <article aria-label="Buttons outline example" className="component">

@@ -30,17 +30,17 @@ export default function LinkPage() {
       {/* Content */}
       <Content>
         <article aria-label="Links example" className="component">
-          <a href="#primary" onClick={preventDefault}>
+          <Link to="#" onClick={preventDefault}>
             Primary
-          </a>
+          </Link>
           <br />
-          <a href="#secondary" onClick={preventDefault} className="secondary">
+          <Link to="#" onClick={preventDefault} className="secondary">
             Secondary
-          </a>
+          </Link>
           <br />
-          <a href="#contrast" onClick={preventDefault} className="contrast">
+          <Link to="#" onClick={preventDefault} className="contrast">
             Contrast
-          </a>
+          </Link>
           <br />
           <footer>
             <Code>{`<a href="#">Primary</a>
@@ -59,17 +59,17 @@ export default function LinkPage() {
           and is displayed as the hover links.
         </p>
         <article aria-label="Active link example" className="component">
-          <a href="#regular" onClick={preventDefault}>
+          <Link to="#" onClick={preventDefault}>
             Regular link
-          </a>
+          </Link>
           <br />
-          <a href="#active" onClick={preventDefault} aria-current="page">
+          <Link to="#" onClick={preventDefault} aria-current="page">
             Active link
-          </a>
+          </Link>
           <br />
-          <a href="#regular" onClick={preventDefault}>
+          <Link to="#" onClick={preventDefault}>
             Regular link
-          </a>
+          </Link>
           <br />
           <footer>
             <Code>{`<a href="#">Regular link</a>

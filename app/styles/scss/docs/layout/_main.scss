@@ -25,6 +25,16 @@ body > {
       column-gap: 3rem;
       row-gap: 3rem;
 
+      // Hack for Firefox, which doesn't support the `:has()` pseudo-class
+      &.has-table-of-contents {
+        grid-template-rows: auto auto 1fr;
+        grid-template-columns: 10rem 1fr;
+        grid-template-areas:
+          "menu header"
+          "menu table-of-content"
+          "menu body";
+      }
+
       &:has(aside#table-of-contents) {
         grid-template-rows: auto auto 1fr;
         grid-template-columns: 10rem 1fr;
@@ -39,12 +49,14 @@ body > {
       }
 
       > aside {
-        grid-area: menu;
-
         > nav {
           position: sticky;
           top: calc(var(#{$✨}header-height) + 2rem);
         }
+      }
+
+      > aside#documentation-menu {
+        grid-area: menu;
       }
 
       > hgroup {
@@ -68,6 +80,15 @@ body > {
         "menu body";
       row-gap: 4rem;
 
+      // Hack for Firefox, which doesn't support the `:has()` pseudo-class
+      &.has-table-of-contents {
+        grid-template-rows: auto 1fr;
+        grid-template-columns: 10rem 1fr 10rem;
+        grid-template-areas:
+          "menu header table-of-content"
+          "menu body table-of-content";
+      }
+
       &:has(aside#table-of-contents) {
         grid-template-rows: auto 1fr;
         grid-template-columns: 10rem 1fr 10rem;
@@ -76,7 +97,7 @@ body > {
           "menu body table-of-content";
       }
 
-      > aside {
+      > aside#documentation-menu {
         grid-area: menu;
       }
 

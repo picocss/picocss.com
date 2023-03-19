@@ -5,7 +5,7 @@ import Header from "~/components/docs/Header";
 import Content from "~/components/docs/Content";
 import TableOfContents from "~/components/docs/TableOfContents";
 import Code from "~/components/Code";
-import Heading from "~/components/docs/Heading";
+import Heading from "~/components/Heading";
 import Link from "~/components/Link";
 
 const { titleSuffix } = metaData();

@@ -1,7 +1,7 @@
 import Code from "~/components/Code";
 import Content from "~/components/docs/Content";
 import Header from "~/components/docs/Header";
-import Heading from "~/components/docs/Heading";
+import Heading from "~/components/Heading";
 
 import { usePage } from "~/contexts/PageContext";
 
@@ -79,7 +79,7 @@ export default function ColorSchemes() {
           </form>
           <footer>
             <Code dataTheme="light">{`<article data-theme="light">
-  …
+  ...
 </article>`}</Code>
           </footer>
         </article>
@@ -115,7 +115,7 @@ export default function ColorSchemes() {
           </form>
           <footer>
             <Code>{`<article data-theme="dark">
-  …
+  ...
 </article>`}</Code>
           </footer>
         </article>

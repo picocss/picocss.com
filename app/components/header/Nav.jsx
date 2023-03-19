@@ -32,7 +32,7 @@ export default function Nav(props) {
             </li>
           </ul>
         </li> */}
-        <li>
+        <li className="hide-before-sm">
           <Link to="/docs" className="secondary">
             Docs
           </Link>

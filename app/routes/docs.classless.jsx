@@ -4,7 +4,7 @@ import metaData from "~/data/meta";
 import Code from "~/components/Code";
 import Content from "~/components/docs/Content";
 import Header from "~/components/docs/Header";
-import Heading from "~/components/docs/Heading";
+import Heading from "~/components/Heading";
 import TableOfContents from "~/components/docs/TableOfContents";
 import Link from "~/components/Link";
 
@@ -63,7 +63,7 @@ export default function Classless() {
 body > header,
 body > main,
 body > footer {
-  …
+  ...
 }`}</Code>
           <p>These 2 pages have the same style:</p>
           <Code>{`<!-- With pico.min.css -->
@@ -147,7 +147,7 @@ body > footer {
 #root > header,
 #root > main,
 #root > footer {
-  …
+  ...
 }`}</Code>
           <p>
             Learn more about{" "}

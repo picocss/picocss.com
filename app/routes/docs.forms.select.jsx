@@ -4,7 +4,7 @@ import metaData from "~/data/meta";
 import Header from "~/components/docs/Header";
 import TableOfContents from "~/components/docs/TableOfContents";
 import Content from "~/components/docs/Content";
-import Heading from "~/components/docs/Heading";
+import Heading from "~/components/Heading";
 import Code from "~/components/Code";
 import Link from "~/components/Link";
 
@@ -135,7 +135,7 @@ export default function Select() {
             <footer>
               <Code>{`<select disabled>
   <option>Select a meal type...</option>
-  <option>…</option>
+  <option>...</option>
 </select>`}</Code>
             </footer>
           </article>
@@ -171,12 +171,12 @@ export default function Select() {
             <small>Please select your favorite pizza topping!</small>
             <footer>
               <Code>{`<select aria-invalid="false">
-  …
+  ...
 </select>
 <small>Great choice!</small>
 
 <select required aria-invalid="true">
-  …
+  ...
 </select>
 <small>
   Please select your favorite pizza topping!

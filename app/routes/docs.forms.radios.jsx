@@ -4,7 +4,7 @@ import metaData from "~/data/meta";
 import Header from "~/components/docs/Header";
 import TableOfContents from "~/components/docs/TableOfContents";
 import Content from "~/components/docs/Content";
-import Heading from "~/components/docs/Heading";
+import Heading from "~/components/Heading";
 import Code from "~/components/Code";
 
 const { titleSuffix } = metaData();
@@ -75,7 +75,7 @@ export default function CheckboxesAndRadios() {
                 <input type="radio" name="language" />
                 Thai
               </label>
-              <label>
+              <label aria-disabled="true">
                 <input type="radio" name="language" disabled />
                 Dothraki
               </label>
@@ -97,13 +97,9 @@ export default function CheckboxesAndRadios() {
   </label>
   <label>
     <input type="radio" name="language" />
-    Arabic
-  </label>
-  <label>
-    <input type="radio" name="language" />
     Thai
   </label>
-  <label>
+  <label aria-disabled="true">
     <input type="radio" name="language" disabled />
     Dothraki
   </label>
@@ -124,7 +120,9 @@ export default function CheckboxesAndRadios() {
               <input type="radio" id="swahili" name="second-language" />
               <label htmlFor="swahili">Swahili</label>
               <input type="radio" id="navi " name="second-language" disabled />
-              <label htmlFor="navi">Na'vi</label>
+              <label htmlFor="navi" aria-disabled="true">
+                Na'vi
+              </label>
             </fieldset>
             <footer>
               <Code>{`<fieldset>
@@ -133,8 +131,8 @@ export default function CheckboxesAndRadios() {
   <label htmlFor="hindi">Hindi</label>
   <input type="radio" id="swahili" name="second-language" />
   <label htmlFor="swahili">Swahili</label>
-  <input type="radio" id="navi" name="second-language" disabled />
-  <label htmlFor="navi">Na'vi</label>
+  <input type="radio" id="navi " name="second-language" disabled />
+  <label htmlFor="navi" aria-disabled="true">Na'vi</label>
 </fieldset>`}</Code>
             </footer>
           </article>
