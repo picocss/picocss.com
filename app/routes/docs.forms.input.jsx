@@ -89,14 +89,12 @@ export default function Input() {
             <input type="password" placeholder="Password" aria-label="Password" />
             <input type="tel" placeholder="Tel" aria-label="Tel" />
             <input type="url" placeholder="Url" aria-label="Url" />
-            <footer>
-              <Code>{`<input type="text" placeholder="Text" aria-label="Text">
+            <Code as="footer">{`<input type="text" placeholder="Text" aria-label="Text">
 <input type="email" placeholder="Email" aria-label="Email">
 <input type="number" placeholder="Number" aria-label="Number">
 <input type="password" placeholder="Password" aria-label="Password">
 <input type="tel" placeholder="Tel" aria-label="Tel">
 <input type="url" placeholder="Url" aria-label="Url">`}</Code>
-            </footer>
           </article>
         </section>
 
@@ -111,12 +109,10 @@ export default function Input() {
             <input type="month" aria-label="Month" />
 
             <input type="time" aria-label="Time" />
-            <footer>
-              <Code>{`<input type="date" aria-label="Date">
+            <Code as="footer">{`<input type="date" aria-label="Date">
 <input type="datetime-local" aria-label="Datetime local">
 <input type="month" aria-label="Month">
 <input type="time" aria-label="Time">`}</Code>
-            </footer>
           </article>
         </section>
 
@@ -129,13 +125,11 @@ export default function Input() {
           </p>
           <article aria-label="Search input example" className="component">
             <input type="search" placeholder="Search" aria-label="Search" />
-            <footer>
-              <Code>{`<input
+            <Code as="footer">{`<input
   type="search"
   placeholder="Search"
   aria-label="Search"
 >`}</Code>
-            </footer>
           </article>
         </section>
 
@@ -149,13 +143,11 @@ export default function Input() {
           </p>
           <article aria-label="Color input example" className="component">
             <input type="color" defaultValue="#ff9500" aria-label="Color picker" />
-            <footer>
-              <Code>{`<input
+            <Code as="footer">{`<input
   type="color"
   value="#ff9500"
   aria-label="Color picker"
 >`}</Code>
-            </footer>
           </article>
         </section>
 
@@ -172,9 +164,7 @@ export default function Input() {
           </p>
           <article aria-label="File input example" className="component">
             <input type="file" />
-            <footer>
-              <Code className="small">{`<input type="file">`}</Code>
-            </footer>
+            <Code as="footer" className="small">{`<input type="file">`}</Code>
           </article>
         </section>
 
@@ -184,14 +174,12 @@ export default function Input() {
           </Heading>
           <article aria-label="Disabled example" className="component">
             <input type="text" placeholder="Disabled" aria-label="Disabled input" disabled />
-            <footer>
-              <Code>{`<input
+            <Code as="footer">{`<input
   type="text"
   placeholder="Disabled"
   aria-label="Disabled input"
   disabled
 >`}</Code>
-            </footer>
           </article>
         </section>
 
@@ -201,14 +189,12 @@ export default function Input() {
           </Heading>
           <article aria-label="Disabled example" className="component">
             <input type="text" defaultValue="Read-only" aria-label="Read-only input" readOnly />
-            <footer>
-              <Code>{`<input
+            <Code as="footer">{`<input
   type="text"
   value="Read-only"
   aria-label="Read-only input"
   readonly
 >`}</Code>
-            </footer>
           </article>
         </section>
 
@@ -222,8 +208,7 @@ export default function Input() {
           <article aria-label="Validation states example" className="component">
             <input type="text" defaultValue="Valid" placeholder="Valid" aria-invalid="false" />
             <input type="text" defaultValue="Invalid" placeholder="Invalid" aria-invalid="true" />
-            <footer>
-              <Code>{`<input
+            <Code as="footer">{`<input
   type="text"
   value="Valid"
   aria-invalid="false"
@@ -234,7 +219,6 @@ export default function Input() {
   value="Invalid"
   aria-invalid="true"
 >`}</Code>
-            </footer>
           </article>
 
           <p>
@@ -258,8 +242,7 @@ export default function Input() {
               aria-describedby="invalid-helper"
             />
             <small id="invalid-helper">Please provide a valid value!</small>
-            <footer>
-              <Code>{`<input
+            <Code as="footer">{`<input
   type="text"
   value="Valid"
   aria-invalid="false"
@@ -276,7 +259,6 @@ export default function Input() {
 <small id="invalid-helper">
   Please provide a valid value!
 </small>`}</Code>
-            </footer>
           </article>
         </section>
       </Content>

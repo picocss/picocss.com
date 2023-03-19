@@ -73,8 +73,7 @@ export default function Forms() {
               </fieldset>
               <input type="submit" value="Subscribe" />
             </form>
-            <footer>
-              <Code>{`<form>
+            <Code as="footer">{`<form>
   <fieldset>
     <label>
       First name
@@ -99,7 +98,6 @@ export default function Forms() {
     value="Subscribe"
   >
 </form>`}</Code>
-            </footer>
           </article>
 
           <p>
@@ -115,8 +113,7 @@ export default function Forms() {
               <label htmlFor="email">Email</label>
               <input type="email" name="email" placeholder="Email" autoComplete="email" />
             </form>
-            <footer>
-              <Code>{`<form>
+            <Code as="footer">{`<form>
   
   <!-- Input inside label -->
   <label>
@@ -137,7 +134,6 @@ export default function Forms() {
   >
 
 </form>`}</Code>
-            </footer>
           </article>
         </section>
 
@@ -168,8 +164,7 @@ export default function Forms() {
                 <input type="submit" value="Login" />
               </fieldset>
             </form>
-            <footer>
-              <Code>{`<form>
+            <Code as="footer">{`<form>
   <fieldset class="grid">
     <input 
       name="login"
@@ -190,7 +185,6 @@ export default function Forms() {
     >
   </fieldset>
 </form>`}</Code>
-            </footer>
           </article>
         </section>
 
@@ -212,8 +206,7 @@ export default function Forms() {
               aria-describedby="email-helper"
             />
             <small id="email-helper">We'll never share your email with anyone else.</small>
-            <footer>
-              <Code>{`<input
+            <Code as="footer">{`<input
   type="email"
   name="email"
   placeholder="Email"
@@ -224,7 +217,6 @@ export default function Forms() {
 <small id="email-helper">
   We'll never share your email with anyone else.
 </small>`}</Code>
-            </footer>
           </article>
         </section>
       </Content>

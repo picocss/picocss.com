@@ -42,11 +42,9 @@ export default function LinkPage() {
             Contrast
           </Link>
           <br />
-          <footer>
-            <Code>{`<a href="#">Primary</a>
+          <Code as="footer">{`<a href="#">Primary</a>
 <a href="#" class="secondary">Secondary</a>
 <a href="#" class="contrast">Contrast</a>`}</Code>
-          </footer>
         </article>
 
         <p>
@@ -71,11 +69,9 @@ export default function LinkPage() {
             Regular link
           </Link>
           <br />
-          <footer>
-            <Code>{`<a href="#">Regular link</a>
+          <Code as="footer">{`<a href="#">Regular link</a>
 <a href="#" aria-current="page">Active link</a>
 <a href="#">Regular link</a>`}</Code>
-          </footer>
         </article>
       </Content>
     </>

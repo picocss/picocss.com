@@ -80,9 +80,7 @@ export default function Select() {
               <option>Thai</option>
               <option>French</option>
             </select>
-
-            <footer>
-              <Code>{`<select required>
+            <Code as="footer">{`<select required>
   <option selected disabled value="">
     Select your favorite cuisine...
   </option>
@@ -92,7 +90,6 @@ export default function Select() {
   <option>Thai</option>
   <option>French</option>
 </select>`}</Code>
-            </footer>
           </article>
         </section>
 
@@ -109,8 +106,7 @@ export default function Select() {
               <option>Chocolate</option>
               <option>Crackers</option>
             </select>
-            <footer>
-              <Code>{`<select multiple size="6">
+            <Code as="footer">{`<select multiple size="6">
   <option disabled>
     Select your favorite snacks...
   </option>
@@ -120,7 +116,6 @@ export default function Select() {
   <option>Chocolate</option>
   <option>Crackers</option>
 </select>`}</Code>
-            </footer>
           </article>
         </section>
 
@@ -132,12 +127,10 @@ export default function Select() {
             <select disabled>
               <option>Select a meal type...</option>
             </select>
-            <footer>
-              <Code>{`<select disabled>
+            <Code as="footer">{`<select disabled>
   <option>Select a meal type...</option>
   <option>...</option>
 </select>`}</Code>
-            </footer>
           </article>
         </section>
 
@@ -169,8 +162,7 @@ export default function Select() {
               <option>Olives</option>
             </select>
             <small>Please select your favorite pizza topping!</small>
-            <footer>
-              <Code>{`<select aria-invalid="false">
+            <Code as="footer">{`<select aria-invalid="false">
   ...
 </select>
 <small>Great choice!</small>
@@ -181,7 +173,6 @@ export default function Select() {
 <small>
   Please select your favorite pizza topping!
 </small>`}</Code>
-            </footer>
           </article>
         </section>
 

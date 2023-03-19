@@ -32,8 +32,7 @@ export default function Switch() {
               Contrast
               <input type="range" defaultValue={40} />
             </label>
-            <footer>
-              <Code>{`<label>
+            <Code as="footer">{`<label>
   Brightness
   <input type="range" />
 </label>
@@ -42,7 +41,6 @@ export default function Switch() {
   Contrast
   <input type="range" value="40" />
 </label>`}</Code>
-            </footer>
           </article>
         </section>
       </Content>

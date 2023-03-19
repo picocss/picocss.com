@@ -48,8 +48,7 @@ export default function Nav() {
               </li>
             </ul>
           </nav>
-          <footer>
-            <Code>{`<nav>
+          <Code as="footer">{`<nav>
   <ul>
     <li><strong>Brand</strong></li>
   </ul>
@@ -59,7 +58,6 @@ export default function Nav() {
     <li><a href="#">Link</a></li>
   </ul>
 </nav>`}</Code>
-          </footer>
         </article>
 
         <p>
@@ -94,8 +92,7 @@ export default function Nav() {
               </li>
             </ul>
           </nav>
-          <footer>
-            <Code>{`<nav>
+          <Code as="footer">{`<nav>
   <ul>
     <li><a href="#" class="secondary">...</a></li>
   </ul>
@@ -107,7 +104,6 @@ export default function Nav() {
     </li>
   </ul>
 </nav>`}</Code>
-          </footer>
         </article>
 
         <p>
@@ -138,8 +134,7 @@ export default function Nav() {
               </li>
             </ul>
           </nav>
-          <footer>
-            <Code>{`<nav>
+          <Code as="footer">{`<nav>
   <ul>
     <li><strong>Brand</strong></li>
   </ul>
@@ -149,7 +144,6 @@ export default function Nav() {
     <li><button>Button</button></li>
   </ul>
 </nav>`}</Code>
-          </footer>
         </article>
 
         <p>
@@ -177,8 +171,7 @@ export default function Nav() {
               </ul>
             </nav>
           </aside>
-          <footer>
-            <Code>{`<aside>
+          <Code as="footer">{`<aside>
   <nav>
     <ul>
       <li><a href="#">Link</a></li>
@@ -187,7 +180,6 @@ export default function Nav() {
     </ul>
   </nav>
 </aside>`}</Code>
-          </footer>
         </article>
 
         <p>
@@ -215,15 +207,13 @@ export default function Nav() {
               <li>Page</li>
             </ul>
           </nav>
-          <footer>
-            <Code>{`<nav aria-label="breadcrumb">
+          <Code as="footer">{`<nav aria-label="breadcrumb">
   <ul>
     <li><a href="#">Home</a></li>
     <li><a href="#">Category</a></li>
     <li>Page</li>
   </ul>
 </nav>`}</Code>
-          </footer>
         </article>
       </Content>
     </>

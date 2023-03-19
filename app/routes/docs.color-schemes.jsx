@@ -77,11 +77,9 @@ export default function ColorSchemes() {
               </label>
             </fieldset>
           </form>
-          <footer>
-            <Code dataTheme="light">{`<article data-theme="light">
+          <Code as="footer" dataTheme="light">{`<article data-theme="light">
   ...
 </article>`}</Code>
-          </footer>
         </article>
 
         <article data-theme="dark" aria-label="Forced dark theme example">
@@ -113,11 +111,9 @@ export default function ColorSchemes() {
               </label>
             </fieldset>
           </form>
-          <footer>
-            <Code>{`<article data-theme="dark">
+          <Code as="footer">{`<article data-theme="dark">
   ...
 </article>`}</Code>
-          </footer>
         </article>
       </Content>
     </>

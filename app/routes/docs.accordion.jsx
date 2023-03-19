@@ -70,8 +70,7 @@ export default function Accordion() {
                 <li>Some species of kangaroos can leap up to 30 feet in a single bound.</li>
               </ul>
             </details>
-            <footer>
-              <Code>{`<details open>
+            <Code as="footer">{`<details open>
   <summary>Accordion 1</summary>
   <p>...</p>
 </details>
@@ -85,7 +84,6 @@ export default function Accordion() {
     <li>...</li>
   </ul>
 </details>`}</Code>
-            </footer>
           </article>
         </section>
 
@@ -108,12 +106,10 @@ export default function Accordion() {
                 hunt prey in the dark.
               </p>
             </details>
-            <footer>
-              <Code>{`<details>
+            <Code as="footer">{`<details>
   <summary role="button">Owls</summary>
   <p>...</p>
 </details>`}</Code>
-            </footer>
           </article>
           <p>
             Like regular buttons, they come with <Code display="inline">.secondary</Code>,{" "}
@@ -178,8 +174,7 @@ export default function Accordion() {
                 climates, including thick feathers and a layer of fat for insulation.
               </p>
             </details>
-            <footer>
-              <Code>{`<!-- Secondary -->
+            <Code as="footer">{`<!-- Secondary -->
 <details>
   <summary role="button" class="secondary">Secondary</summary>
   <p>...</p>
@@ -208,7 +203,6 @@ export default function Accordion() {
   <summary role="button" class="outline contrast">Contrast outline</summary>
   <p>...</p>
 </details>`}</Code>
-            </footer>
           </article>
         </section>
       </Content>

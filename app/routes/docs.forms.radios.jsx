@@ -80,8 +80,7 @@ export default function CheckboxesAndRadios() {
                 Dothraki
               </label>
             </fieldset>
-            <footer>
-              <Code>{`<fieldset>
+            <Code as="footer">{`<fieldset>
   <legend>Language preference:</legend>
   <label>
     <input type="radio" name="language" checked />
@@ -104,7 +103,6 @@ export default function CheckboxesAndRadios() {
     Dothraki
   </label>
 </fieldset>`}</Code>
-            </footer>
           </article>
         </section>
 
@@ -124,8 +122,7 @@ export default function CheckboxesAndRadios() {
                 Na'vi
               </label>
             </fieldset>
-            <footer>
-              <Code>{`<fieldset>
+            <Code as="footer">{`<fieldset>
   <legend>Second language:</legend>
   <input type="radio" id="hindi" name="second-language" checked />
   <label htmlFor="hindi">Hindi</label>
@@ -134,7 +131,6 @@ export default function CheckboxesAndRadios() {
   <input type="radio" id="navi " name="second-language" disabled />
   <label htmlFor="navi" aria-disabled="true">Na'vi</label>
 </fieldset>`}</Code>
-            </footer>
           </article>
         </section>
 
@@ -158,8 +154,7 @@ export default function CheckboxesAndRadios() {
                 Invalid
               </label>
             </fieldset>
-            <footer>
-              <Code>{`<fieldset>
+            <Code as="footer">{`<fieldset>
   <label>
     <input type="radio" name="validation-states" aria-invalid="false" />
     Valid
@@ -170,7 +165,6 @@ export default function CheckboxesAndRadios() {
     Invalid
   </label>
 </fieldset>`}</Code>
-            </footer>
           </article>
         </section>
       </Content>

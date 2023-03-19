@@ -67,13 +67,11 @@ export default function Input() {
               placeholder="Write a professional short bio..."
               aria-label="Professional short bio"
             />
-            <footer>
-              <Code>{`<textarea
+            <Code as="footer">{`<textarea
   placeholder="Write a professional short bio..."
   aria-label="Professional short bio"
 >
 </textarea>`}</Code>
-            </footer>
           </article>
         </section>
 
@@ -83,11 +81,9 @@ export default function Input() {
           </Heading>
           <article aria-label="Disabled example" className="component">
             <textarea defaultValue="Disabled" disabled />
-            <footer>
-              <Code>{`<textarea disabled>
+            <Code as="footer">{`<textarea disabled>
   Disabled
 </textarea>`}</Code>
-            </footer>
           </article>
         </section>
 
@@ -97,11 +93,9 @@ export default function Input() {
           </Heading>
           <article aria-label="Disabled example" className="component">
             <textarea defaultValue="Read-only" aria-label="Read-only textarea" readOnly />
-            <footer>
-              <Code>{`<textarea readonly>
+            <Code as="footer">{`<textarea readonly>
   Read-only
 </textarea>`}</Code>
-            </footer>
           </article>
         </section>
 
@@ -115,15 +109,13 @@ export default function Input() {
           <article aria-label="Validation states example" className="component">
             <textarea defaultValue="Valid" placeholder="Valid" aria-invalid="false" />
             <textarea defaultValue="Invalid" placeholder="Invalid" aria-invalid="true" />
-            <footer>
-              <Code>{`<textarea aria-invalid="false">
+            <Code as="footer">{`<textarea aria-invalid="false">
   Valid
 </textarea>
 
 <textarea aria-invalid="true">
   Invalid
 </textarea> `}</Code>
-            </footer>
           </article>
 
           <p>
@@ -145,8 +137,7 @@ export default function Input() {
               aria-describedby="invalid-helper"
             />
             <small id="invalid-helper">Please provide a valid value!</small>
-            <footer>
-              <Code>{`<textarea
+            <Code as="footer">{`<textarea
   aria-invalid="false"
   aria-describedby="valid-helper"
 >
@@ -163,7 +154,6 @@ export default function Input() {
 <small id="invalid-helper">
   Please provide a valid value!
 </small>`}</Code>
-            </footer>
           </article>
         </section>
       </Content>

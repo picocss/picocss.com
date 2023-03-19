@@ -93,8 +93,7 @@ export default function CheckboxesAndRadios() {
                 Dothraki
               </label>
             </fieldset>
-            <footer>
-              <Code>{`<fieldset>
+            <Code as="footer">{`<fieldset>
   <legend>Language preferences:</legend>
   <label>
     <input type="checkbox" name="english" checked />
@@ -117,7 +116,6 @@ export default function CheckboxesAndRadios() {
     Dothraki
   </label>
 </fieldset>`}</Code>
-            </footer>
           </article>
         </section>
 
@@ -137,8 +135,7 @@ export default function CheckboxesAndRadios() {
                 Na'vi
               </label>
             </fieldset>
-            <footer>
-              <Code>{`<fieldset>
+            <Code as="footer">{`<fieldset>
   <legend>Language preferences:</legend>
   <input type="checkbox" id="hindi" name="hindi" checked />
   <label htmlFor="hindi">Hindi</label>
@@ -147,7 +144,6 @@ export default function CheckboxesAndRadios() {
   <input type="checkbox" id="navi " name="navi" disabled />
   <label htmlFor="navi" aria-disabled="true">
 </fieldset>`}</Code>
-            </footer>
           </article>
         </section>
 
@@ -168,8 +164,7 @@ export default function CheckboxesAndRadios() {
               ref={indeterminateCheckboxRef}
             />
             <label htmlFor="indeterminate">Indeterminate</label>
-            <footer>
-              <Code>{`<input type="checkbox" id="indeterminate" name="indeterminate" />
+            <Code as="footer">{`<input type="checkbox" id="indeterminate" name="indeterminate" />
 <label htmlFor="indeterminate">Indeterminate</label>
 
 <script>
@@ -178,7 +173,6 @@ export default function CheckboxesAndRadios() {
 </script>
 
 `}</Code>
-            </footer>
           </article>
         </section>
 
@@ -198,8 +192,7 @@ export default function CheckboxesAndRadios() {
               <input type="checkbox" name="invalid" aria-invalid={true} />
               Invalid
             </label>
-            <footer>
-              <Code>{`<label>
+            <Code as="footer">{`<label>
   <input type="checkbox" name="valid" aria-invalid="false" />
   Valid
 </label>
@@ -208,7 +201,6 @@ export default function CheckboxesAndRadios() {
   <input type="checkbox" name="invalid" aria-invalid="true" />
   Invalid
 </label>`}</Code>
-            </footer>
           </article>
         </section>
       </Content>

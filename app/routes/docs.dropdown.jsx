@@ -120,8 +120,7 @@ export default function Dropdown() {
                 <SelectItems />
               </select>
             </div>
-            <footer>
-              <Code>{`<!-- Dropdown -->
+            <Code as="footer">{`<!-- Dropdown -->
 <details role="list">
   <summary aria-haspopup="listbox">Dropdown</summary>
   <ul role="listbox">
@@ -148,7 +147,6 @@ export default function Dropdown() {
     )
     .join("")}
 </select>`}</Code>
-            </footer>
           </article>
         </section>
 
@@ -188,8 +186,7 @@ export default function Dropdown() {
                 ))}
               </ul>
             </details>
-            <footer>
-              <Code language="html">{`<!-- Radios -->
+            <Code as="footer" language="html">{`<!-- Radios -->
 <details role="list">
   <summary aria-haspopup="listbox">
     Select a phase of matter...
@@ -228,7 +225,6 @@ export default function Dropdown() {
     .join("")}
   </ul>
 </details>`}</Code>
-            </footer>
           </article>
           <p>
             Pico does not include JavaScript code. You will probably need some JavaScript to
@@ -251,8 +247,7 @@ export default function Dropdown() {
               </summary>
               <DropdownItems />
             </details>
-            <footer>
-              <Code>{`<details role="list">
+            <Code as="footer">{`<details role="list">
   <summary aria-haspopup="listbox" role="button">
     Dropdown as a button
   </summary>
@@ -260,7 +255,6 @@ export default function Dropdown() {
     ...
   </ul>
 </details>`}</Code>
-            </footer>
           </article>
 
           <p>
@@ -305,8 +299,7 @@ export default function Dropdown() {
               </summary>
               <DropdownItems />
             </details>
-            <footer>
-              <Code>{`<!-- Primary -->
+            <Code as="footer">{`<!-- Primary -->
 <details role="list">
   <summary aria-haspopup="listbox" role="button">
     Primary
@@ -366,7 +359,6 @@ export default function Dropdown() {
   </ul>
 </details>
 `}</Code>
-            </footer>
           </article>
         </section>
 
@@ -391,8 +383,7 @@ export default function Dropdown() {
               </summary>
               <DropdownItems />
             </details>
-            <footer>
-              <Code>{`<details role="list">
+            <Code as="footer">{`<details role="list">
   <summary aria-haspopup="listbox" aria-invalid="false">
     Valid phase of matter: Solid
   </summary>
@@ -409,7 +400,6 @@ export default function Dropdown() {
     ...
   </ul>
 </details>`}</Code>
-            </footer>
           </article>
         </section>
 
@@ -443,8 +433,7 @@ export default function Dropdown() {
                 </li>
               </ul>
             </nav>
-            <footer>
-              <Code>{`<nav>
+            <Code as="footer">{`<nav>
   <ul>
     <li><strong>Acme Corp<</strong></li>
   </ul>
@@ -467,7 +456,6 @@ ${accountItems
     </li>
   </ul>
 </nav>`}</Code>
-            </footer>
           </article>
         </section>
       </Content>

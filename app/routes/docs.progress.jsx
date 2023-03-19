@@ -43,9 +43,10 @@ export default function Progress() {
         <section ref={syntaxRef}>
           <article aria-label="Progress example" className="component">
             <progress value={progressValue} max="100" />
-            <footer>
-              <Code display="small">{`<progress value="${progressValue}" max="100" />`}</Code>
-            </footer>
+            <Code
+              as="footer"
+              display="small"
+            >{`<progress value="${progressValue}" max="100" />`}</Code>
           </article>
         </section>
 
@@ -55,9 +56,7 @@ export default function Progress() {
           </Heading>
           <article aria-label="Indeterminate progress example" className="component">
             <progress />
-            <footer>
-              <Code display="small">{`<progress />`}</Code>
-            </footer>
+            <Code as="footer" display="small">{`<progress />`}</Code>
           </article>
         </section>
       </Content>

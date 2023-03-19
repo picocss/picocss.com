@@ -25,7 +25,7 @@
 
   // Forced dark color scheme
   article {
-    footer:has(.code[data-theme="dark"]) {
+    footer.code[data-theme="dark"] {
       #{$✨}card-background-color: #{$slate-900};
       #{$✨}card-border-color: var(#{$✨}card-background-color);
       #{$✨}card-box-shadow: var(#{$✨}box-shadow);

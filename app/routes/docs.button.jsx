@@ -66,9 +66,7 @@ export default function Button() {
         <section aria-label="Overview" ref={syntaxRef}>
           <article aria-label="Button example" className="component">
             <button>Button</button>
-            <footer>
-              <Code className="small">{`<button>Button</button>`}</Code>
-            </footer>
+            <Code as="footer" className="small">{`<button>Button</button>`}</Code>
           </article>
         </section>
 
@@ -86,11 +84,9 @@ export default function Button() {
               <button className="secondary">Secondary</button>
               <button className="contrast">Contrast</button>
             </div>
-            <footer>
-              <Code>{`<button class="secondary">Secondary</button>
+            <Code as="footer">{`<button class="secondary">Secondary</button>
 <button class="contrast">Contrast</button>
 `}</Code>
-            </footer>
           </article>
 
           <p>
@@ -103,11 +99,9 @@ export default function Button() {
               <button className="outline secondary">Secondary</button>
               <button className="outline contrast">Contrast</button>
             </div>
-            <footer>
-              <Code>{`<button class="outline">Primary</button>
+            <Code as="footer">{`<button class="outline">Primary</button>
 <button class="outline secondary">Secondary</button>
 <button class="outline contrast">Contrast</button>`}</Code>
-            </footer>
           </article>
         </section>
 
@@ -124,18 +118,14 @@ export default function Button() {
           <article aria-label="Input buttons example" className="component">
             <input type="submit" />
             <input type="button" value="Input" />
-            <footer>
-              <Code>{`<input type="submit" />
+            <Code as="footer">{`<input type="submit" />
 <input type="button" value="Input" />`}</Code>
-            </footer>
           </article>
 
           <p>Reset inputs have the secondary style by default.</p>
           <article aria-label="Reset input example" className="component">
             <input type="reset" />
-            <footer>
-              <Code className="small">{`<input type="reset" />`}</Code>
-            </footer>
+            <Code as="footer" className="small">{`<input type="reset" />`}</Code>
           </article>
         </section>
 
@@ -154,11 +144,9 @@ export default function Button() {
                 Disabled
               </button>
             </div>
-            <footer>
-              <Code>{`<button disabled>Disabled</button>
+            <Code as="footer">{`<button disabled>Disabled</button>
 <button class="secondary" disabled>Disabled</button>
 <button class="contrast" disabled>Disabled</button>`}</Code>
-            </footer>
           </article>
         </section>
 
@@ -174,9 +162,10 @@ export default function Button() {
             <div role="button" tabIndex="0">
               Div as button
             </div>
-            <footer>
-              <Code className="small">{`<div role="button" tabindex="0">Div as a button</div>`}</Code>
-            </footer>
+            <Code
+              as="footer"
+              className="small"
+            >{`<div role="button" tabindex="0">Div as a button</div>`}</Code>
           </article>
         </section>
       </Content>

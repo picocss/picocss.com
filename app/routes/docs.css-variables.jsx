@@ -116,8 +116,8 @@ export default function CssVariables() {
               jam to your favorite band, and discover new artists.
             </p>
             <button>Let's rock out!</button>
-            <footer>
-              <Code>{`<style>
+
+            <Code as="footer">{`<style>
   :root {
     --pico-border-radius: 2rem;
     --pico-typography-spacing-vertical: 1.5rem;
@@ -142,7 +142,6 @@ export default function CssVariables() {
 </p>
 <button>Let's rock out!</button>
 `}</Code>
-            </footer>
           </article>
         </section>
 

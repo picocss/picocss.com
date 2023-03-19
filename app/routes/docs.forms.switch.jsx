@@ -61,8 +61,7 @@ export default function Switch() {
                 updates
               </label>
             </fieldset>
-            <footer>
-              <Code>{`<fieldset>
+            <Code as="footer">{`<fieldset>
   <label>
     <input type="checkbox" role="switch" />
     I agree to the Terms
@@ -72,7 +71,6 @@ export default function Switch() {
     Receive news and offers
   </label>
 </fieldset>`}</Code>
-            </footer>
           </article>
         </section>
 
@@ -91,8 +89,7 @@ export default function Switch() {
                 Change my password at next login
               </label>
             </fieldset>
-            <footer>
-              <Code>{`<fieldset>
+            <Code as="footer">{`<fieldset>
   <label>
     <input type="checkbox" role="switch" disabled />
     Publish on my profile
@@ -102,7 +99,6 @@ export default function Switch() {
     Change my password at next login
   </label>
 </fieldset>`}</Code>
-            </footer>
           </article>
         </section>
 
@@ -121,8 +117,7 @@ export default function Switch() {
                 Automatic subscription renewal
               </label>
             </fieldset>
-            <footer>
-              <Code>{`<fieldset>
+            <Code as="footer">{`<fieldset>
   <label>
     <input type="checkbox" role="switch" aria-invalid="false" />
     Enable two-factor authentication
@@ -132,7 +127,6 @@ export default function Switch() {
     Automatic subscription renewal
   </label>
 </fieldset>`}</Code>
-            </footer>
           </article>
         </section>
       </Content>

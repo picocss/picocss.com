@@ -61,6 +61,8 @@
         font-size: 0.75em;
       }
 
+      // Not working in Firefox, which doesn't support the `:has()` pseudo-class
+      // That's fine
       &:has(svg.check) {
         &::after {
           display: none;
@@ -78,21 +80,20 @@
   }
 }
 
-// Code blocks in the article footer
-article footer:has(.code) {
+// Code blocks as article footer
+article footer.code {
   padding: 0;
-  overflow: hidden;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
 
-  .code {
-    pre {
-      padding: calc(var(#{$✨}block-spacing-vertical) * 0.66) var(#{$✨}block-spacing-horizontal);
-      background-color: transparent;
-    }
+  pre {
+    padding: calc(var(#{$✨}block-spacing-vertical) * 0.66) var(#{$✨}block-spacing-horizontal);
+    background-color: transparent;
   }
 }
 
 // Standalone code blocks
-.code:not(article footer .code) {
+.code:not(article footer.code) {
   @each $key, $values in $breakpoints {
     @if $values {
       @media (min-width: map.get($values, "breakpoint")) {
