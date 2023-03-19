@@ -1639,7 +1639,7 @@
 
 "@picocss/pico@https://github.com/picocss/pico#v2":
   version "2.0.0-alpha1"
-  resolved "https://github.com/picocss/pico#0b3d7949e8e2f7aa9bea8bfd72f169af95cd23ca"
+  resolved "https://github.com/picocss/pico#de6ba1075781958b290e053b8cf8d9f1e538cd47"
 
 "@pkgr/utils@^2.3.1":
   version "2.3.1"
