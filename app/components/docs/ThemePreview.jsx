@@ -95,9 +95,9 @@ export default function ThemePreview({ title, code, ...props }) {
           </label>
         </fieldset>
       </form>
-      <footer>
-        <Code language="css">{modifiedCode}</Code>
-      </footer>
+      <Code as="footer" language="css">
+        {modifiedCode}
+      </Code>
     </article>
   );
 }
