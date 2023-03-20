@@ -14,15 +14,10 @@ body > {
         h1,
         details summary,
         details ul li a {
-          background: linear-gradient(
-            0deg,
-            transparent,
-            transparent 20%,
-            var(#{$✨}skeleton-background-color) 20%,
-            var(#{$✨}skeleton-background-color) 80%,
-            transparent 80%,
-            transparent
-          );
+          transform: scale(0.65);
+          transform-origin: center left;
+          border-radius: var(#{$✨}border-radius);
+          background-color: var(#{$✨}skeleton-background-color);
         }
 
         p,
@@ -44,15 +39,7 @@ body > {
 
         h1 {
           width: 60%;
-          background: linear-gradient(
-            0deg,
-            transparent,
-            transparent 5%,
-            var(#{$✨}skeleton-background-color) 5%,
-            var(#{$✨}skeleton-background-color) 95%,
-            transparent 95%,
-            transparent
-          );
+          transform: scale(0.85);
           animation-delay: $animation-delay * 1;
         }
 

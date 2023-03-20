@@ -21,5 +21,5 @@
   #{$✨}chapter-color: var(#{$✨}code-tag);
 
   // Skeleton
-  #{$✨}skeleton-background-color: #{mix($slate-900, $slate-850)};
+  #{$✨}skeleton-background-color: #{$slate-850};
 }

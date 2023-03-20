@@ -67,6 +67,13 @@ export default function Typography() {
         fontUnit: "%",
         breakpoint: "≥ 1280px",
       },
+      {
+        key: "xxl",
+        name: "Extra extra large",
+        fontSize: 131.25,
+        fontUnit: "%",
+        breakpoint: "≥ 1536px",
+      },
     ],
     htmlElements: [
       {
@@ -164,8 +171,11 @@ export default function Typography() {
                   <th>Breakpoint</th>
                   {fontSizesTableData.rootFontSize.map((device) => (
                     <th key={device.key}>
-                      <span data-tooltip={device.breakpoint} data-placement="bottom">
-                        {device.name}
+                      <span
+                        data-tooltip={`${device.name} ${device.breakpoint}`}
+                        data-placement="bottom"
+                      >
+                        {device.key}
                       </span>
                     </th>
                   ))}

@@ -29,7 +29,7 @@
       #{$✨}card-background-color: #{$slate-900};
       #{$✨}card-border-color: var(#{$✨}card-background-color);
       #{$✨}card-box-shadow: var(#{$✨}box-shadow);
-      #{$✨}card-sectioning-background-color: #{mix($slate-900, $slate-850, 75%)};
+      #{$✨}card-sectioning-background-color: #{mix($slate-900, $slate-850)};
     }
   }
 }
