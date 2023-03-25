@@ -11,7 +11,7 @@ const { titleSuffix } = metaData();
 export const meta = () => ({
   title: `Color schemes ${titleSuffix}`,
   description:
-    "Pico has two consistent color schemes, automatically enabled according to the user's preference.",
+    "Choose from two consistent color schemes that can be automatically enabled based on users' preferences.",
 });
 
 export default function ColorSchemes() {
@@ -23,7 +23,7 @@ export default function ColorSchemes() {
       {/* Header */}
       <Header
         title="Color schemes"
-        description="Pico has two consistent color schemes, automatically enabled according to the user's preference."
+        description="Choose from two consistent color&nbsp;schemes that can be automatically enabled based on users'&nbsp;preferences."
       />
 
       {/* Content */}

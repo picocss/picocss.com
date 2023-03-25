@@ -14,7 +14,8 @@ const { titleSuffix } = metaData();
 
 export const meta = () => ({
   title: `Table ${titleSuffix}`,
-  description: "Clean and minimal styles for <table>.",
+  description:
+    "Clean and minimal styles for <table>, providing consistent spacings and a minimal unbordered look.",
 });
 
 const Table = ({ theadProps, tbodyProps, tfootProps, ...props }) => (
@@ -79,7 +80,8 @@ export default function TablePage() {
         title="Table"
         description={
           <>
-            Clean and minimal styles for <Code display="inline">{`<table>`}</Code>.
+            Clean and minimal styles for <Code display="inline">{`<table>`}</Code>, providing
+            consistent&nbsp;spacings and a minimal unbordered&nbsp;look.
           </>
         }
       />

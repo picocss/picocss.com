@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import metaData from "~/data/meta";
 
 import Header from "~/components/docs/Header";
+import TableOfContents from "~/components/docs/TableOfContents";
 import Content from "~/components/docs/Content";
 import Heading from "~/components/Heading";
 import Code from "~/components/Code";
@@ -10,7 +11,7 @@ const { titleSuffix } = metaData();
 
 export const meta = () => ({
   title: `Progress ${titleSuffix}`,
-  description: "Duis scelerisque nisi ligula, eget ornare lectus ornare efficitur.",
+  description: "The progress bar element in pure HTML, without JavaScript.",
 });
 
 // Generate a random number between 5 and 95
@@ -35,7 +36,23 @@ export default function Progress() {
       {/* Header */}
       <Header
         title="Progress"
-        description="Duis scelerisque nisi ligula, eget ornare lectus ornare efficitur."
+        description="The progress bar element in pure HTML, without JavaScript."
+      />
+
+      {/* Table of content */}
+      <TableOfContents
+        data={[
+          {
+            anchor: "",
+            title: "Syntax",
+            ref: syntaxRef,
+          },
+          {
+            anchor: "indeterminate",
+            title: "Indeterminate",
+            ref: indeterminateRef,
+          },
+        ]}
       />
 
       {/* Content */}

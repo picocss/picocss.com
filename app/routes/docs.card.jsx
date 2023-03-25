@@ -11,7 +11,8 @@ const { titleSuffix } = metaData();
 
 export const meta = () => ({
   title: `Card ${titleSuffix}`,
-  description: "A flexible container with graceful spacings across devices and viewports.",
+  description:
+    "Create flexible cards with a semantic markup that provides graceful spacings across various devices and viewports.",
 });
 
 export default function Card() {
@@ -23,7 +24,7 @@ export default function Card() {
       {/* Header */}
       <Header
         title="Card"
-        description="A flexible container with graceful spacings across devices and viewports."
+        description="Create flexible cards with a semantic markup that provides graceful spacings across various devices and viewports."
       />
 
       {/* Table of contents */}

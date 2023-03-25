@@ -15,6 +15,7 @@
 
 // Pages
 @use "docs/pages/color-schemes";
+@use "docs/pages/modal";
 @use "docs/pages/typography";
 
 // Components
@@ -25,5 +26,6 @@
 @use "docs/components/card-color-picker";
 @use "docs/components/color-families";
 @use "docs/components/dialog-color";
+@use "docs/components/dialog-example";
 @use "docs/components/heading-with-anchor";
 @use "docs/components/img-rounded-bordered";

@@ -12,7 +12,8 @@ const { titleSuffix } = metaData();
 
 export const meta = () => ({
   title: `Accordions ${titleSuffix}`,
-  description: "Toggle sections of content in pure HTML, without JavaScript.",
+  description:
+    "Toggle sections of content in pure HTML, without JavaScript, using minimal and semantic markup.",
 });
 
 export default function Accordion() {
@@ -24,7 +25,7 @@ export default function Accordion() {
       {/* Header */}
       <Header
         title="Accordions"
-        description="Toggle sections of content in pure HTML, without JavaScript."
+        description="Toggle sections of content in pure&nbsp;HTML, without JavaScript, using minimal and semantic&nbsp;markup."
       />
 
       {/* Table of content */}
@@ -59,16 +60,20 @@ export default function Accordion() {
             <hr />
             <details>
               <summary>Accordion 2</summary>
-              <ul>
-                <li>Kangaroos are marsupials that are native to Australia.</li>
-                <li>They are known for their powerful hind legs, which they use to hop around.</li>
-                <li>Kangaroos can't walk backwards due to the shape of their legs and tail.</li>
-                <li>
-                  Baby kangaroos, called joeys, are born very small and undeveloped and must crawl
-                  into their mother's pouch to continue developing.
-                </li>
-                <li>Some species of kangaroos can leap up to 30 feet in a single bound.</li>
-              </ul>
+              <article>
+                <ul>
+                  <li>Kangaroos are marsupials that are native to Australia.</li>
+                  <li>
+                    They are known for their powerful hind legs, which they use to hop around.
+                  </li>
+                  <li>Kangaroos can't walk backwards due to the shape of their legs and tail.</li>
+                  <li>
+                    Baby kangaroos, called joeys, are born very small and undeveloped and must crawl
+                    into their mother's pouch to continue developing.
+                  </li>
+                  <li>Some species of kangaroos can leap up to 30 feet in a single bound.</li>
+                </ul>
+              </article>
             </details>
             <Code as="footer">{`<details open>
   <summary>Accordion 1</summary>

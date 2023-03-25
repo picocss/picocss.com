@@ -12,7 +12,8 @@ const { titleSuffix } = metaData();
 
 export const meta = () => ({
   title: `Dropdown ${titleSuffix}`,
-  description: "Dropdown menus and custom selects without JavaScript.",
+  description:
+    "Create dropdown menus and custom selects with minimal and semantic HTML, without JavaScript.",
 });
 
 const phasesOfMatter = ["Solid", "Liquid", "Gas", "Plasma"];
@@ -62,7 +63,7 @@ export default function Dropdown() {
       {/* Header */}
       <Header
         title="Dropdown"
-        description="Dropdown menus and custom selects without JavaScript."
+        description="Create dropdown menus and custom selects with minimal and semantic HTML, without JavaScript."
       />
 
       {/* Table of contents */}

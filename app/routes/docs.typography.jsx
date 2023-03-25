@@ -12,7 +12,8 @@ const { titleSuffix } = metaData();
 
 export const meta = () => ({
   title: `Typography ${titleSuffix}`,
-  description: "Links come with .secondaryand .contrast styles.",
+  description:
+    "All typographic elements are responsive and scale gracefully across devices and viewports.",
 });
 
 export default function Typography() {
@@ -119,8 +120,7 @@ export default function Typography() {
       {/* Header */}
       <Header
         title="Typography"
-        description="All typographic elements are responsive, allowing text to scale gracefully across
-        devices and viewports."
+        description="All typographic elements are responsive and scale gracefully across devices and viewports."
       />
 
       {/* Table of content */}

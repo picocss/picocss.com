@@ -32,7 +32,8 @@ export function links() {
 
 export const meta = () => ({
   title: `Colors ${titleSuffix}`,
-  description: "Pico comes with 380 colors to personalize your project.",
+  description:
+    "Pico comes with 380 manually crafted colors to help you personalize your brand design system.",
 });
 
 const DownloadColorPalette = () => {
@@ -71,7 +72,7 @@ export default function Colors() {
       {/* Header */}
       <Header
         title="Colors"
-        description="Pico comes with 380 colors to personalize your project."
+        description="Pico comes with 380 manually&nbsp;crafted colors to help you personalize your brand&nbsp;design&nbsp;system."
       />
 
       {/* Table of content */}

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { useDebounce } from "use-debounce";
 
 import { useNavigation } from "~/contexts/NavigationContext";
 import { useDocumentation } from "~/contexts/DocumentationContext";
@@ -20,25 +21,27 @@ export default function Breadcrumb(props) {
     setMenuIsOpenOnMobile(true);
   };
 
+  const checkBreadcrumbPosition = () => {
+    const { top } = breadcrumbRef.current.getBoundingClientRect();
+    setIsBreadcrumbSticky(top <= -1);
+  };
+
+  const [debouncedCheckBreadcrumbPosition] = useDebounce(checkBreadcrumbPosition, 250);
+
   // Listen scroll and resize events and check if the breadcrumb is sticky
   useEffect(() => {
-    const checkBreadcrumbPosition = () => {
-      const { top } = breadcrumbRef.current.getBoundingClientRect();
-      if (top <= -1) {
-        setIsBreadcrumbSticky(true);
-      } else {
-        setIsBreadcrumbSticky(false);
-      }
-    };
+    const handleScroll = () => debouncedCheckBreadcrumbPosition();
+    const handleResize = () => debouncedCheckBreadcrumbPosition();
 
-    window.addEventListener("scroll", checkBreadcrumbPosition);
-    window.addEventListener("resize", checkBreadcrumbPosition);
-    checkBreadcrumbPosition();
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
+    debouncedCheckBreadcrumbPosition();
+
     return () => {
-      window.removeEventListener("scroll", checkBreadcrumbPosition);
-      window.removeEventListener("resize", checkBreadcrumbPosition);
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
     };
-  }, [isBreadcrumbSticky, setIsBreadcrumbSticky]);
+  }, [debouncedCheckBreadcrumbPosition]);
 
   return (
     <nav

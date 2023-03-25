@@ -11,7 +11,7 @@ const { titleSuffix } = metaData();
 export const meta = () => ({
   title: `Minimal theme generator ${titleSuffix}`,
   description:
-    "Pick a color to generate the CSS code to customize Pico's primary color with CSS variables.",
+    "Pick a color to generate the CSS code to customize Pico's primary color using CSS variables.",
 });
 
 export function links() {
@@ -24,7 +24,7 @@ export default function ThemeGenerator() {
       {/* Header */}
       <Header
         title="Minimal theme generator"
-        description="Pick a color to generate the CSS code to customize Pico's primary color with CSS variables."
+        description="Pick a color to generate the CSS&nbsp;code to customize&nbsp;Pico's primary&nbsp;color using CSS&nbsp;variables."
       />
 
       {/* Content */}

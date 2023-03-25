@@ -12,7 +12,8 @@ const { titleSuffix, cdnBaseUrl } = metaData();
 
 export const meta = () => ({
   title: `Class-less version ${titleSuffix}`,
-  description: "For wild HTML purists, Pico provides a .classless version.",
+  description:
+    "Embrace minimalism with Pico's .classless version, a semantic option for wild HTML purists who prefer a stripped-down approach.",
 });
 
 export default function Classless() {
@@ -23,7 +24,16 @@ export default function Classless() {
   return (
     <>
       {/* Header */}
-      <Header title="Class-less version" description="For wild HTML purists!" />
+      <Header
+        title="Class-less version"
+        description={
+          <>
+            Embrace minimalism with Pico's <Code display="inline">.classless</Code> version, a
+            semantic&nbsp;option for wild&nbsp;HTML&nbsp;purists who prefer a
+            stripped-down&nbsp;approach.
+          </>
+        }
+      />
 
       {/* Table of content */}
       <TableOfContents

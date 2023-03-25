@@ -7,7 +7,8 @@ const { titleSuffix } = metaData();
 
 export const meta = () => ({
   title: `Landmarks & section ${titleSuffix}`,
-  description: "Duis scelerisque nisi ligula, eget ornare lectus ornare efficitur.",
+  description:
+    "Structure your pages with semantic landmarks and sections for better accessibility and graceful spacings.",
 });
 
 export default function LandmarksAndSection() {
@@ -16,7 +17,7 @@ export default function LandmarksAndSection() {
       {/* Header */}
       <Header
         title="Landmarks & section"
-        description="Duis scelerisque nisi ligula, eget ornare lectus ornare efficitur."
+        description="Structure your pages with semantic landmarks and sections for better&nbsp;accessibility and graceful&nbsp;spacings."
       />
 
       {/* Content */}

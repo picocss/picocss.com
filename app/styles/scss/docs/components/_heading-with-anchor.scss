@@ -6,6 +6,7 @@
 
   > a[id] {
     padding-left: calc(var(#{$✨}spacing) * 0.5);
+    font-weight: normal;
     text-decoration: none;
     opacity: 0;
     transition: color var(#{$✨}transition) opacity var(#{$✨}transition);

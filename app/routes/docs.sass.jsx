@@ -17,7 +17,7 @@ const { titleSuffix, githubTreeBaseUrl } = metaData();
 export const meta = () => ({
   title: `Sass ${titleSuffix}`,
   description:
-    "Build your own minimal CSS framework by compiling a custom version of Pico with SASS.",
+    "Build your own minimal design system by compiling a custom version of Pico's CSS framework with Sass.",
 });
 
 export default function Sass() {
@@ -32,8 +32,8 @@ export default function Sass() {
         title="Sass"
         description={
           <>
-            Build your own minimal CSS framework by compiling a custom version of Pico with{" "}
-            <Link to="https://sass-lang.com/">SASS</Link>.
+            Build your own minimal design&nbsp;system by compiling a custom version of
+            Pico's&nbsp;CSS&nbsp;framework with&nbsp;<Link to="https://sass-lang.com/">SASS</Link>.
           </>
         }
       />

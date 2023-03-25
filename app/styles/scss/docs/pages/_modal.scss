@@ -1,0 +1,21 @@
+@use "sass:map";
+@use "settings" as *;
+
+/**
+ * Page: Modal
+ */
+
+main#modal {
+  article#demo {
+    button {
+      display: block;
+      width: 100%;
+      margin-inline: auto;
+
+      @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
+        width: 50%;
+        min-width: fit-content;
+      }
+    }
+  }
+}

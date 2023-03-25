@@ -2,12 +2,13 @@ import metaData from "~/data/meta";
 
 import Header from "~/components/docs/Header";
 import Content from "~/components/docs/Content";
+import Code from "~/components/Code";
 
 const { titleSuffix } = metaData();
 
 export const meta = () => ({
   title: `Loading ${titleSuffix}`,
-  description: "Duis scelerisque nisi ligula, eget ornare lectus ornare efficitur.",
+  description: 'Add a loading indicator with aria-busy="true".',
 });
 
 export default function Loading() {
@@ -16,7 +17,11 @@ export default function Loading() {
       {/* Header */}
       <Header
         title="Loading"
-        description="Duis scelerisque nisi ligula, eget ornare lectus ornare efficitur."
+        description={
+          <>
+            Add a loading indicator with <Code display="inline">aria-busy="true"</Code>.
+          </>
+        }
       />
 
       {/* Content */}

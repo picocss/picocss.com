@@ -8,7 +8,7 @@ const { titleSuffix } = metaData();
 
 export const meta = () => ({
   title: `Range ${titleSuffix}`,
-  description: "Duis scelerisque nisi ligula, eget ornare lectus ornare efficitur.",
+  description: 'Create a slider control with the input type <input type="range">.',
 });
 
 export default function Switch() {
@@ -17,7 +17,12 @@ export default function Switch() {
       {/* Header */}
       <Header
         title="Range"
-        description="Duis scelerisque nisi ligula, eget ornare lectus ornare efficitur."
+        description={
+          <>
+            Create a slider control with the input type{" "}
+            <Code display="inline">{`<input type="range">`}</Code>.
+          </>
+        }
       />
 
       {/* Content */}

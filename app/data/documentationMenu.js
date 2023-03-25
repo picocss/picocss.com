@@ -54,15 +54,10 @@ export const documentationMenu = [
       { label: "Accordion", route: "/docs/accordion" },
       { label: "Card", route: "/docs/card" },
       { label: "Dropdown", route: "/docs/dropdown" },
+      { label: "Loading", route: "/docs/loading" },
       { label: "Modal", route: "/docs/modal" },
       { label: "Nav", route: "/docs/nav" },
       { label: "Progress", route: "/docs/progress" },
-    ],
-  },
-  {
-    category: "Utilities",
-    links: [
-      { label: "Loading", route: "/docs/loading" },
       { label: "Tooltip", route: "/docs/tooltip" },
     ],
   },

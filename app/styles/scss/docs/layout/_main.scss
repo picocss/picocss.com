@@ -74,7 +74,7 @@ body > {
 
     @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
       grid-template-rows: auto 1fr;
-      grid-template-columns: 10rem 1fr 10rem;
+      grid-template-columns: 10rem 1fr;
       grid-template-areas:
         "menu header"
         "menu body";

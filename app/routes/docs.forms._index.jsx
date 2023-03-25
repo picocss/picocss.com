@@ -13,7 +13,7 @@ const { titleSuffix } = metaData();
 export const meta = () => ({
   title: `Forms overview ${titleSuffix}`,
   description:
-    "All form elements are fully responsive in pure semantic HTML, allowing forms to scale gracefully across devices and viewports.",
+    "All form elements are fully responsive with pure semantic HTML, enabling forms to scale gracefully across devices and viewports.",
 });
 
 export default function Forms() {
@@ -28,7 +28,7 @@ export default function Forms() {
       {/* Header */}
       <Header
         title="Forms overview"
-        description="All form elements are fully responsive in pure semantic HTML, allowing forms to scale gracefully across devices and viewports."
+        description="All form elements are fully responsive with pure semantic HTML, enabling forms to scale gracefully across devices and viewports."
       />
 
       {/* Table of content */}

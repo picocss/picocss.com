@@ -24,6 +24,7 @@
   --pico-nav-element-spacing-horizontal: 0.5rem;
   --pico-nav-link-spacing-vertical: 0.5rem;
   --pico-nav-link-spacing-horizontal: 0.5rem;
+  --pico-nav-breadcrumb-divider: ">";
 }
 @media (min-width: 576px) {
   :root {

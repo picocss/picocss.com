@@ -12,7 +12,7 @@ const { titleSuffix } = metaData();
 
 export const meta = () => ({
   title: `Button ${titleSuffix}`,
-  description: "The essential button in pure HTML, without .classes for the default style.",
+  description: "Buttons are using the native <button> tag, without .classes for the default style.",
 });
 
 export default function Button() {
@@ -27,7 +27,12 @@ export default function Button() {
       {/* Header */}
       <Header
         title="Button"
-        description="The essential button in pure HTML, without .classes for the default style."
+        description={
+          <>
+            Buttons are using the native <Code display="inline">{`<button>`}</Code> tag, without{" "}
+            <Code display="inline">.classes</Code>. for the default&nbsp;style.
+          </>
+        }
       />
 
       {/* Table of content */}

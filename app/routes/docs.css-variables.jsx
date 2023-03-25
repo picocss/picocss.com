@@ -17,7 +17,8 @@ const { titleSuffix } = metaData();
 
 export const meta = () => ({
   title: `CSS variables ${titleSuffix}`,
-  description: "Customize Pico with over 130 CSS variables.",
+  description:
+    "Customize Pico's design system with over 130 CSS variables to create a unique look and feel.",
 });
 
 export function links() {
@@ -35,7 +36,10 @@ export default function CssVariables() {
   return (
     <>
       {/* Header */}
-      <Header title="CSS variables" description="Customize Pico with over 130 CSS variables." />
+      <Header
+        title="CSS variables"
+        description="Customize Pico's design system with over 130 CSS variables to create a unique look&nbsp;and&nbsp;feel."
+      />
 
       {/* Table of content */}
       <TableOfContents

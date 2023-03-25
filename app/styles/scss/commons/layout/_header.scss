@@ -7,12 +7,12 @@
  */
 
 html {
-  #{$✨}header-height: calc(4.75rem + var(#{$✨}border-width));
+  #{$✨}header-height: calc(4.5rem + var(#{$✨}border-width));
 }
 
 body {
   > header {
-    padding: 0.625rem 0;
+    padding: 0.5rem 0;
     border-bottom: var(#{$✨}border-width) solid var(#{$✨}header-border-color);
     backdrop-filter: blur(1rem);
     background-color: var(#{$✨}header-background);

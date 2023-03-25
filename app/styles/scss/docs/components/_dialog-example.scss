@@ -1,0 +1,22 @@
+@use "sass:map";
+@use "settings" as *;
+
+dialog {
+  &.example {
+    z-index: inherit;
+    position: relative;
+    min-height: inherit;
+    margin: 0 calc(var(#{$✨}spacing) * -1) var(#{$✨}block-spacing-vertical)
+      calc(var(#{$✨}spacing) * -1);
+    inset: inherit;
+
+    @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
+      margin: 0;
+      margin-bottom: var(#{$✨}block-spacing-vertical);
+    }
+
+    > article {
+      animation: none;
+    }
+  }
+}

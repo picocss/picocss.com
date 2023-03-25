@@ -9,14 +9,14 @@ const { titleSuffix } = metaData();
 
 export const meta = () => ({
   title: `RTL (Right-To-Left) ${titleSuffix}`,
-  description: "Support for Right-To-Left text with Pico.",
+  description: "Support for Right-To-Left text.",
 });
 
 export default function Rtl() {
   return (
     <>
       {/* Header */}
-      <Header title="RTL" description="Support for Right-To-Left text with Pico." />
+      <Header title="RTL" description="Support for Right-To-Left text." />
 
       {/* Content */}
       <Content>

@@ -13,7 +13,7 @@ const { titleSuffix, cdnBaseUrl } = metaData();
 export const meta = () => ({
   title: `Documentation ${titleSuffix}`,
   description:
-    "There are 4 ways to get started with pico.css: manually, from a CDN, with NPM, and with Composer.",
+    "Link Pico.css manually or via CDN for a dependency-free setup, or use NPM or Composer for advanced usage.",
 });
 
 export default function Docs() {
@@ -26,7 +26,15 @@ export default function Docs() {
   return (
     <>
       {/* Header */}
-      <Header title="Quick start" description="Works without package manager or dependencies 🙂!" />
+      <Header
+        title="Quick start"
+        description={
+          <>
+            Link <Code display="inline">pico.css</Code> manually or via CDN for a dependency-free
+            setup, or use NPM or Composer for advanced&nbsp;usage.
+          </>
+        }
+      />
 
       {/* Table of content */}
       <TableOfContents
