@@ -20,15 +20,37 @@ export default function Rtl() {
 
       {/* Content */}
       <Content>
-        <p>
-          To enable RTL (Right-To-Left) with Pico, you need to set <code>dir="rtl"</code> on the{" "}
-          <Code display="inline">{`<html>`}</Code> element (
-          <Link to="https://picocss.com/examples/preview-rtl/">example</Link>).
-        </p>
-        <Code>{`<!doctype html>
+        <section>
+          <p>
+            To enable RTL (Right-To-Left) with Pico, you need to set <code>dir="rtl"</code> on the{" "}
+            <Code display="inline">{`<html>`}</Code> element (
+            <Link to="https://picocss.com/examples/preview-rtl/">example</Link>).
+          </p>
+          <Code>{`<!doctype html>
 <html dir="rtl" lang="ar">
   ...
 </html>`}</Code>
+
+          <p>RTL can also be enabled on a per-element basis:</p>
+          <article aria-label="RTL example" className="component">
+            <blockquote dir="rtl" lang="ar">
+              “كُنْ كالطير، الذي إذا اعتاد القفز على الأغصان لا يحس بالخطر وليس في ذلك أي تردد،
+              ولكنه لو فقد الثقة بجناحيه فإنه يسقط أرضًا. كذلك، إذا اعتاد الإنسان على العمل الصالح
+              فإنه يستطيع فعله بلا جهد وليس في ذلك أي عناء، ولكنه إذا فقد الثقة بنفسه فإنه يفشل.”
+              <footer>
+                <cite>— خليل جبران</cite>
+              </footer>
+            </blockquote>
+            <Code as="footer">{`<blockquote dir="rtl" lang="ar">
+  “كُنْ كالطير، الذي إذا اعتاد القفز على الأغصان لا يحس بالخطر وليس في ذلك أي تردد،
+  ولكنه لو فقد الثقة بجناحيه فإنه يسقط أرضًا. كذلك، إذا اعتاد الإنسان على العمل الصالح
+  فإنه يستطيع فعله بلا جهد وليس في ذلك أي عناء، ولكنه إذا فقد الثقة بنفسه فإنه يفشل.”
+  <footer>
+    <cite>— خليل جبران</cite>
+  </footer>
+</blockquote>`}</Code>
+          </article>
+        </section>
       </Content>
     </>
   );

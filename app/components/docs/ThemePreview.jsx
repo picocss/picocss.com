@@ -56,7 +56,7 @@ export default function ThemePreview({ title, code, ...props }) {
                 isLoading && shouldDisplayLoadingState && nextPageCurrentlyLoading === linkTo
               }
             >
-              {isCurrent && <Check />}
+              {isCurrent && <Check isAnimated={true} />}
             </Link>
           );
         })}

@@ -1,0 +1,16 @@
+@use "sass:map";
+@use "settings" as *;
+
+/**
+ * Page: Loading
+ */
+
+main#loading {
+  .grid {
+    #{$✨}grid-spacing-vertical: var(#{$✨}spacing);
+
+    &#buttons {
+      margin-bottom: var(#{$✨}spacing);
+    }
+  }
+}

@@ -14,8 +14,11 @@
 @use "docs/content/code";
 
 // Pages
+@use "docs/pages/button";
 @use "docs/pages/color-schemes";
+@use "docs/pages/loading";
 @use "docs/pages/modal";
+@use "docs/pages/tooltip";
 @use "docs/pages/typography";
 
 // Components

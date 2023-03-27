@@ -157,15 +157,19 @@ export default function CheckboxesAndRadios() {
             <Code display="inline">true</Code>.
           </p>
           <article aria-label="Indeterminate checkbox example" className="component">
-            <input
-              type="checkbox"
-              id="indeterminate"
-              name="indeterminate"
-              ref={indeterminateCheckboxRef}
-            />
-            <label htmlFor="indeterminate">Indeterminate</label>
-            <Code as="footer">{`<input type="checkbox" id="indeterminate" name="indeterminate" />
-<label htmlFor="indeterminate">Indeterminate</label>
+            <label>
+              <input
+                type="checkbox"
+                id="indeterminate"
+                name="indeterminate"
+                ref={indeterminateCheckboxRef}
+              />
+              Indeterminate
+            </label>
+            <Code as="footer">{`<label>
+  <input type="checkbox" id="indeterminate" name="indeterminate" />
+  Indeterminate
+</label>
 
 <script>
   const checkbox = document.querySelector('#indeterminate');

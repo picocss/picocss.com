@@ -63,7 +63,11 @@ function ButtonCopyToClipboard({ text, ...props }) {
         data-tooltip={copied ? "Copied" : "Copy to clipboard"}
         data-placement="left"
       >
-        {copied ? <Check className="check" /> : <Copy className="clipboard" />}
+        {copied ? (
+          <Check className="check" isAnimated={true} stroke={3} />
+        ) : (
+          <Copy className="clipboard" />
+        )}
       </Link>
     </CopyToClipboard>
   );

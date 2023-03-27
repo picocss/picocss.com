@@ -18,6 +18,23 @@ article {
         aspect-ratio: 1/1;
         border-radius: 50%;
 
+        &[aria-busy="true"] {
+          &::before {
+            background-image: var(#{$✨}icon-loading-button);
+          }
+
+          &.pico-background-lime,
+          &.pico-background-yellow,
+          &.pico-background-amber,
+          &.pico-background-pumpkin,
+          &.pico-background-sand,
+          &.pico-background-grey {
+            &::before {
+              filter: invert(1);
+            }
+          }
+        }
+
         svg {
           width: 50%;
           max-width: 1.5rem;

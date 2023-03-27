@@ -1,0 +1,12 @@
+@use "sass:map";
+@use "settings" as *;
+
+/**
+ * Page: Tooltip
+ */
+
+main#tooltip {
+  .grid {
+    #{$✨}grid-spacing-vertical: var(#{$✨}spacing);
+  }
+}

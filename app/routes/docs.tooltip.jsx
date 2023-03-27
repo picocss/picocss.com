@@ -70,7 +70,7 @@ export default function Tooltip() {
             The tooltip is displayed on top by default but you can change it with the{" "}
             <Code display="inline">data-placement</Code> attribute.
           </p>
-          <article aria-label="Tooltip placement example">
+          <article aria-label="Tooltip placement example" id="tooltip-placement">
             <main className="grid">
               <button data-tooltip="Top">Top</button>
               <button data-tooltip="Right" data-placement="right">

@@ -14,31 +14,26 @@ main {
     z-index: 3;
     position: sticky;
     top: -1px;
+    margin: 0 calc(var(#{$✨}spacing) * -1);
+    padding: 0 var(#{$✨}spacing);
+    border-bottom: var(#{$✨}border-width) solid transparent;
+    background-color: var(#{$✨}background-color);
+    transition: border var(#{$✨}transition), box-shadow var(#{$✨}transition);
+
+    @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) and (max-width: calc(#{map.get(map.get($breakpoints, "lg"), "breakpoint")} - 1px)) {
+      margin: 0 calc(((100vw - map.get(map.get($breakpoints, "sm"), "viewport")) / 2) * -1);
+      padding: 0 calc((100vw - map.get(map.get($breakpoints, "sm"), "viewport")) / 2);
+    }
+
+    @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) and (max-width: calc(#{map.get(map.get($breakpoints, "lg"), "breakpoint")} - 1px)) {
+      margin: 0 calc(((100vw - map.get(map.get($breakpoints, "md"), "viewport")) / 2) * -1);
+      padding: 0 calc((100vw - map.get(map.get($breakpoints, "md"), "viewport")) / 2);
+    }
 
     &.is-sticky {
-      background-color: transparent;
+      border-bottom-color: var(#{$✨}header-border-color);
 
-      &:before {
-        display: block;
-        z-index: -1;
-        position: absolute;
-        inset: 0 calc(var(#{$✨}spacing) * -1);
-        border-bottom: var(#{$✨}border-width) solid var(#{$✨}header-border-color);
-        backdrop-filter: blur(1rem);
-        background-color: var(#{$✨}header-background);
-        box-shadow: var(#{$✨}card-box-shadow);
-        content: "";
-        transition: background-color var(#{$✨}transition), border var(#{$✨}transition),
-          box-shadow var(#{$✨}transition);
-
-        @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) and (max-width: calc(#{map.get(map.get($breakpoints, "lg"), "breakpoint")} - 1px)) {
-          inset: 0 calc(((100vw - map.get(map.get($breakpoints, "sm"), "viewport")) / 2) * -1);
-        }
-
-        @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) and (max-width: calc(#{map.get(map.get($breakpoints, "lg"), "breakpoint")} - 1px)) {
-          inset: 0 calc(((100vw - map.get(map.get($breakpoints, "md"), "viewport")) / 2) * -1);
-        }
-      }
+      box-shadow: var(#{$✨}card-box-shadow);
     }
 
     ul {
