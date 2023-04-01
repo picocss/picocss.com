@@ -1,14 +1,20 @@
 import Header from "./Header";
 
-export default function RootError({ caught, ...props }) {
+export default function RootError({ error, ...props }) {
   return (
     <>
       <Header />
       <main className="container" {...props}>
         <hgroup>
-          <h1>{caught.statusText}</h1>
+          <h1>{error ? error.statusText : "Oops!"}</h1>
           <p>
-            {caught.status} {caught.data}
+            {error ? (
+              <>
+                {error.status} {error.data}
+              </>
+            ) : (
+              "Something went wrong."
+            )}
           </p>
         </hgroup>
         <p>

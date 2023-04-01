@@ -2,6 +2,8 @@
 module.exports = {
   devServerBroadcastDelay: 1000,
   future: {
+    v2_errorBoundary: true,
+    v2_normalizeFormMethod: true,
     v2_routeConvention: true,
   },
   ignoredRouteFiles: ["**/.*"],
@@ -13,7 +15,4 @@ module.exports = {
   serverMinify: true,
   serverModuleFormat: "esm",
   serverPlatform: "neutral",
-  // appDirectory: "app",
-  // assetsBuildDirectory: "public/build",
-  // publicPath: "/build/",
 };

@@ -5,7 +5,8 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-  useCatch,
+  useRouteError,
+  isRouteErrorResponse,
 } from "@remix-run/react";
 
 import { HelmetProvider } from "react-helmet-async";
@@ -63,18 +64,23 @@ export function links() {
   ];
 }
 
-export function CatchBoundary() {
-  const caught = useCatch();
+export function ErrorBoundary() {
+  const error = useRouteError();
+
   return (
     <HelmetProvider>
       <PageProvider>
         <head>
           <Meta />
-          <title>{`${caught.status} ${caught.statusText} ${titleSuffix}`}</title>
+          <title>
+            {isRouteErrorResponse(error)
+              ? `${error.status} ${error.statusText} ${titleSuffix}`
+              : `Something went wrong ${titleSuffix}`}
+          </title>
           <Links />
         </head>
         <Body>
-          <RootError caught={caught} />
+          <RootError error={isRouteErrorResponse(error) ? error : null} />
           <Footer />
           <ScrollRestoration />
           <Scripts />
