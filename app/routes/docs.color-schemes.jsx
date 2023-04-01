@@ -2,6 +2,7 @@ import Code from "~/components/Code";
 import Content from "~/components/docs/Content";
 import Header from "~/components/docs/Header";
 import Heading from "~/components/Heading";
+import ThemeToggle from "~/components/icons/ThemeToggle";
 
 import { usePage } from "~/contexts/PageContext";
 
@@ -16,7 +17,8 @@ export const meta = () => ({
 
 export default function ColorSchemes() {
   const { pageTheme, switchTheme } = usePage();
-  const changeThemeLabel = pageTheme === "dark" ? "Turn off dark mode" : "Turn on dark mode";
+  const isThemeDark = pageTheme === "dark";
+  const changeThemeLabel = isThemeDark ? "Turn off dark mode" : "Turn on dark mode";
 
   return (
     <>
@@ -35,6 +37,7 @@ export default function ColorSchemes() {
         </p>
         <article aria-label="Theme switcher" id="theme-switcher">
           <button className="contrast" aria-label={changeThemeLabel} onClick={switchTheme}>
+            <ThemeToggle className={`theme-toggle${isThemeDark ? " moon" : ""}`} />
             {changeThemeLabel}
           </button>
         </article>

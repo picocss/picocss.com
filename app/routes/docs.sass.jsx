@@ -83,9 +83,9 @@ export default function Sass() {
             <Link to="https://sass-lang.com/documentation/cli/dart-sass">
               Sass Command-Line Interface
             </Link>{" "}
-            to compile your <Code display="inline">.scss</Code> files, you can define{" "}
-            <Code display="inline">sass --load-path=node_modules/@picocss/pico/scss/</Code> to avoid
-            using absolute URLs like:
+            to compile your <Code display="inline">.scss</Code> files, you can define the load path
+            using <Code display="inline">sass --load-path=node_modules/@picocss/pico/scss/</Code> to
+            avoid using relative URLs like:
           </p>
           <Code language="scss">@use "../../../node_modules/@picocss/pico/scss/pico";</Code>
         </section>
@@ -95,13 +95,13 @@ export default function Sass() {
             Settings
           </Heading>
           <p>
-            You can load custom settings with{" "}
+            You can set custom settings with{" "}
             <Code display="inline" language="scss">
               @use "pico" with ( ... );
             </Code>
             . These custom values will override the default variables.
           </p>
-          <p>Example to generate the classless version:</p>
+          <p>Here is an example to generate the classless version:</p>
           <Code language="scss">{`// Pico classless version
 @use "pico" with (
   $enable-semantic-container: true,
@@ -112,7 +112,7 @@ export default function Sass() {
             Example to generate a lightweight version without <Code display="inline">.classes</Code>
             , uncommon form elements, and components.
           </p>
-          <p>This version reduces the weight of Pico by 50%.</p>
+          <p>This version reduces the weight of Pico by ~50%.</p>
           <Code language="scss">{`// Pico lightweight version
 @use "pico" with (
   $enable-semantic-container: true,
@@ -155,15 +155,15 @@ export default function Sass() {
             Custom theme
           </Heading>
           <p>
-            To create a custom version of Pico with a full-custom theme that reflects your brand
+            To create a custom version of Pico with a fully custom theme that reflects your brand
             identity, you can:
           </p>
           <ol>
             <li>Exclude the default theme from compilation,</li>
             <li>
-              Import your custom theme (you can duplicate{" "}
-              <Link to={`${githubTreeBaseUrl}scss/themes/`}>Pico's default theme</Link> as a starter
-              point and customize it to match your brand's style).
+              Import your custom theme (you can duplicate
+              <Link to={`${githubTreeBaseUrl}scss/themes/`}>Pico's default theme</Link> as a
+              starting point and customize it to match your brand's style).
             </li>
           </ol>
           <Code language="scss">{`// Your custom theme

@@ -4,6 +4,7 @@ import { getColorFamilies, removeLines } from "~/utils";
 import Code from "~/components/Code";
 import Link from "~/components/Link";
 import Check from "~/components/icons/Check";
+import Heading from "../Heading";
 
 // Add a missing empty line before a comment.
 const addMissingEmptyLineBeforeComment = ({ code }) => {
@@ -62,8 +63,8 @@ export default function ThemePreview({ title, code, ...props }) {
         })}
       </header>
       <hgroup>
-        <h3>{title}</h3>
-        <h4>Form example with {colorWithPrefix(title)} theme.</h4>
+        <Heading level={3}>{title}</Heading>
+        <p>Form example with {colorWithPrefix(title)} theme.</p>
       </hgroup>
       <form>
         <fieldset className="grid">

@@ -12,6 +12,14 @@ main#color-schemes {
       width: 100%;
       margin-inline: auto;
 
+      svg.theme-toggle {
+        display: inline-block;
+        width: auto;
+        height: 1.25rem;
+        margin-right: calc(var(#{$✨}spacing) * 0.5);
+        transform: translateY(-0.0625rem);
+      }
+
       @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
         width: 50%;
         min-width: fit-content;

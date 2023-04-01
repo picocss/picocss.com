@@ -5,8 +5,18 @@
  * Docs: Main
  */
 
-body > {
-  main {
+body {
+  #{$✨}main-top-offset: 0rem;
+
+  > header {
+    &.is-fixed-above-lg {
+      + main {
+        #{$✨}main-top-offset: var(#{$✨}header-height);
+      }
+    }
+  }
+
+  > main {
     display: grid;
     grid-template-rows: 1fr;
     row-gap: 2rem;
@@ -51,7 +61,9 @@ body > {
       > aside {
         > nav {
           position: sticky;
-          top: calc(var(#{$✨}header-height) + 2rem);
+          top: calc(var(#{$✨}main-top-offset) + 2rem);
+          transition: top var(#{$✨}transition);
+          transition-delay: 0.05s;
         }
       }
 

@@ -64,7 +64,7 @@ function ButtonCopyToClipboard({ text, ...props }) {
         data-placement="left"
       >
         {copied ? (
-          <Check className="check" isAnimated={true} stroke={3} />
+          <Check className="check" isAnimated={true} strokeWidth={3} />
         ) : (
           <Copy className="clipboard" />
         )}

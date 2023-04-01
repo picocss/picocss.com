@@ -29,6 +29,8 @@ export default function Main({ children, ...props }) {
     "progress",
     "loading",
     "tooltip",
+    "mission",
+    "usage-scenarios",
   ];
   const hasTableOfContents = !pageIdsWithoutTableOfContents.includes(pageId);
 

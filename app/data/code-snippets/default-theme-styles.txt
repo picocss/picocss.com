@@ -247,4 +247,8 @@ details[role=list] summary:not([role=button]) {
   --pico-outline-width: 0.0625rem;
 }
 
+nav details[role=list] summary:focus-visible {
+  --pico-outline-width: 0.1875rem;
+}
+
 /*# sourceMappingURL=default-theme-styles.css.map */

@@ -5,8 +5,10 @@
 @use "commons/theme/default";
 
 // Layouts
-@use "commons/layout/document";
 @use "commons/layout/header";
+@use "commons/layout/document";
+@use "commons/layout/footer";
 
 // Components
 @use "commons/components/logo";
+@use "commons/components/theme-toggle";

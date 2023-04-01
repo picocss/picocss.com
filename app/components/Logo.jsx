@@ -3,20 +3,20 @@ import { useNavigation } from "~/contexts/NavigationContext";
 
 const ANIMATION_DURATION = 1000;
 
-export default function Logo({ displayWordmark = true, ...props }) {
+export default function Logo({ shouldAnimateOnRouteChange, displayWordmark = true, ...props }) {
   const { locationPath } = useNavigation();
   const [previousPath, setPreviousPath] = useState(locationPath);
   const [shouldAnimateLogo, setShouldAnimateLogo] = useState(false);
 
   useEffect(() => {
-    if (previousPath !== locationPath) {
+    if (previousPath !== locationPath && shouldAnimateOnRouteChange) {
       setShouldAnimateLogo(true);
       setPreviousPath(locationPath);
       setTimeout(() => {
         setShouldAnimateLogo(false);
       }, ANIMATION_DURATION);
     }
-  }, [locationPath, previousPath]);
+  }, [locationPath, previousPath, shouldAnimateOnRouteChange]);
 
   return (
     <svg

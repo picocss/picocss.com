@@ -1,0 +1,47 @@
+@use "sass:map";
+@use "settings" as *;
+
+/**
+ * Page: Usage scenarios
+ */
+
+main#usage-scenarios {
+  table {
+    font-size: 16px;
+
+    tr {
+      th,
+      td {
+        &:first-of-type {
+          min-width: 10em;
+        }
+        &:last-of-type {
+          min-width: 15em;
+        }
+      }
+    }
+
+    th {
+      white-space: nowrap;
+    }
+  }
+
+  .scale-color-1 {
+    color: var(#{$✨}scale-color-1);
+  }
+  .scale-color-2 {
+    color: var(#{$✨}scale-color-2);
+  }
+  .scale-color-3 {
+    color: var(#{$✨}scale-color-3);
+  }
+  .scale-color-4 {
+    color: var(#{$✨}scale-color-4);
+  }
+  .scale-color-5 {
+    color: var(#{$✨}scale-color-5);
+  }
+  .muted {
+    color: var(#{$✨}muted-color);
+  }
+}

@@ -44,7 +44,7 @@ main {
 
     @media (max-width: calc(#{map.get(map.get($breakpoints, "lg"), "breakpoint")} - 1px)) {
       display: grid;
-      z-index: 3;
+      z-index: 4;
       position: fixed;
       top: 0;
       right: 0;

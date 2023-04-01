@@ -11,7 +11,7 @@ export default function Header({ title, description, ...props }) {
     <hgroup {...props}>
       {chapter && <p className="chapter">{chapter}</p>}
       <Heading level={1}>{title}</Heading>
-      <p>{description}</p>
+      {description && <p>{description}</p>}
     </hgroup>
   );
 }

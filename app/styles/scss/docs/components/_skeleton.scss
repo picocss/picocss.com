@@ -4,8 +4,8 @@
 $animation-delay: 0.1s;
 $animation-duration: $animation-delay * 8 * 2;
 
-body > {
-  main {
+body {
+  > main {
     > hgroup,
     > aside#table-of-contents,
     > [role="document"] {

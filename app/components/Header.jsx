@@ -2,16 +2,16 @@ import { useHeader } from "~/contexts/HeaderContext";
 
 import Link from "~/components/Link";
 import Logo from "~/components/Logo";
-import Nav from "~/components/header/Nav";
+import Nav from "~/components/Nav";
 
 export default function Header({ headerIsFixed = false, ...props }) {
   const { headerRef } = useHeader();
-  
+
   return (
     <header {...(headerIsFixed && { className: "is-fixed-above-lg" })} ref={headerRef} {...props}>
       <div className="container">
         <Link to="/docs" aria-label="Pico CSS homepage">
-          <Logo />
+          <Logo shouldAnimateOnRouteChange />
         </Link>
         <Nav />
       </div>

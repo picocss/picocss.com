@@ -33,6 +33,8 @@ dialog.color {
 
       a {
         &.close {
+          z-index: 1;
+          position: relative;
           height: inherit;
           background-image: none;
           background-position: inherit;

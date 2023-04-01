@@ -1,11 +1,11 @@
-export default function Check({ isAnimated = false, stroke = 4, ...props }) {
+export default function Check({ isAnimated = false, strokeWidth = 4, ...props }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
       viewBox="0 0 24 24"
-      strokeWidth={stroke}
+      strokeWidth={strokeWidth}
       stroke="currentColor"
       fill="none"
       strokeLinecap="round"

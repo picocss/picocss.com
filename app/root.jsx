@@ -15,7 +15,9 @@ import { PageProvider } from "~/contexts/PageContext";
 import picoStyles from "~/styles/css/main.css";
 import metaData from "~/data/meta";
 
+import Body from "./components/Body";
 import RootError from "./components/RootError";
+import Footer from "./components/Footer";
 import StructuredData from "./components/StructuredData";
 
 const { domain, siteName, titleSuffix, twitterHandle } = metaData();
@@ -71,12 +73,13 @@ export function CatchBoundary() {
           <title>{`${caught.status} ${caught.statusText} ${titleSuffix}`}</title>
           <Links />
         </head>
-        <body>
+        <Body>
           <RootError caught={caught} />
+          <Footer />
           <ScrollRestoration />
           <Scripts />
           <LiveReload />
-        </body>
+        </Body>
       </PageProvider>
     </HelmetProvider>
   );
@@ -92,12 +95,13 @@ export default function App() {
             <Links />
             <StructuredData />
           </head>
-          <body>
+          <Body>
             <Outlet />
+            <Footer />
             <ScrollRestoration />
             <Scripts />
             <LiveReload />
-          </body>
+          </Body>
         </PageProvider>
       </ModalProvider>
     </HelmetProvider>

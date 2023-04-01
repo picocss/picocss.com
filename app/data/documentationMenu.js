@@ -61,4 +61,12 @@ export const documentationMenu = [
       { label: "Tooltip", route: "/docs/tooltip" },
     ],
   },
+  {
+    category: "About",
+    links: [
+      { label: "Mission", route: "/docs/mission" },
+      { label: "Usage scenarios", route: "/docs/usage-scenarios" },
+      { label: "Brand", route: "/docs/brand" },
+    ],
+  },
 ];

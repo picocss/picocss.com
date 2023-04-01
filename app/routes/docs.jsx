@@ -6,9 +6,9 @@ import { useNavigation } from "~/contexts/NavigationContext";
 
 import docsStyles from "~/styles/css/docs.css";
 
+import Header from "~/components/Header";
 import Main from "~/components/docs/Main";
 import Breadcrumb from "~/components/docs/Breadcrumb";
-import Header from "~/components/Header";
 import DocumentationMenu from "~/components/docs/DocumentationMenu";
 import LoadingDocPage from "~/components/docs/LoadingDocPage";
 
@@ -16,7 +16,7 @@ export function links() {
   return [{ rel: "stylesheet", href: docsStyles }];
 }
 
-export default function DocsPage(props) {
+export default function DocsPage() {
   const { routePath, isLoading, nextPageCurrentlyLoading, shouldDisplayLoadingState } =
     useNavigation();
 

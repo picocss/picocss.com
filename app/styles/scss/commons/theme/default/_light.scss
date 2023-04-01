@@ -10,4 +10,14 @@
   #{$✨}logo-wordmark: #{$slate-800};
   #{$✨}logo-small-sparkles: #{$amber-200};
   #{$✨}logo-big-sparkle: #{$pumpkin-300};
+
+  // Current version checkmark
+  #{$✨}current-version-checkmark: #{mix($jade-450, $zinc-750)};
+
+  // Footer
+  footer {
+    #{$✨}background-gradient: linear-gradient(0deg, #{mix($azure-100, $slate-100)}, transparent);
+    #{$✨}logo-small-sparkles: #{$slate-150};
+    #{$✨}logo-big-sparkle: #{$slate-200};
+  }
 }

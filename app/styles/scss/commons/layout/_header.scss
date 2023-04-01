@@ -12,6 +12,8 @@ html {
 
 body {
   > header {
+    z-index: 4;
+    position: relative;
     padding: 0.5rem 0;
     border-bottom: var(#{$✨}border-width) solid var(#{$✨}header-border-color);
     backdrop-filter: blur(1rem);
@@ -36,15 +38,64 @@ body {
       nav {
         svg {
           display: inline-block;
-          width: 1.125rem;
-          height: 1.125rem;
-          transform: translateY(-0.05em);
+          width: 1rem;
+          height: 1rem;
+          transform: translateY(-0.0625rem);
+
+          &.theme-toggle {
+            transform: scale(1.125) translateY(-0.0625rem);
+          }
         }
 
         // Hide docs link on mobile
         li.hide-before-sm {
           @media (max-width: calc(#{map.get(map.get($breakpoints, "sm"), "breakpoint")} - 1px)) {
             display: none;
+          }
+        }
+
+        // Dropdown menu
+        details[role="list"] {
+          margin: calc(var(#{$✨}nav-element-spacing-vertical) * -1)
+            calc(var(#{$✨}nav-element-spacing-horizontal) * -1);
+
+          &:not(:focus-within) summary,
+          summary:not(:hover, :focus, :focus-visible) {
+            border-color: transparent;
+            background-color: transparent;
+          }
+
+          summary {
+            &:hover,
+            &:focus,
+            &:focus-visible {
+              color: var(#{$✨}secondary-hover);
+            }
+
+            &:focus {
+              border: var(#{$✨}border-width) solid var(#{$✨}dropdown-border-color);
+              box-shadow: none;
+            }
+
+            &:focus-visible {
+              box-shadow: 0 0 0 var(#{$✨}outline-width) var(#{$✨}primary-focus);
+            }
+
+            &::after {
+              transform: rotate(0) translate(0.2rem) translateY(0.0625rem);
+            }
+          }
+
+          ul {
+            li {
+              a {
+                svg {
+                  stroke: var(#{$✨}current-version-checkmark);
+                  margin-left: 0.25rem;
+                  transform: scale(0.75);
+                }
+              }
+            }
           }
         }
       }
@@ -60,11 +111,3 @@ body {
     }
   }
 }
-
-// .modal-is-open {
-//   > body {
-//     > header {
-//       padding-right: var(#{$✨}scrollbar-width, 0px);
-//     }
-//   }
-// }

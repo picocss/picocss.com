@@ -52,7 +52,7 @@ export default function Breadcrumb(props) {
     >
       <ul>
         <li>
-          <Link to="/docs" onClick={handleOpenMenu} className="secondary">
+          <Link to="/docs" onClick={handleOpenMenu} className="secondary" aria-current={false}>
             <Menu />
             Documentation
           </Link>

@@ -15,11 +15,18 @@
   #{$✨}code-attr: #{mix($zinc-350, $fuchsia-350, 50%)};
   #{$✨}code-value: #{mix($zinc-350, $jade-350, 75%)};
   #{$✨}code-comment: #{$zinc-500};
-  #{$✨}code-copied: #{$jade-500};
+  #{$✨}code-copied: #{mix($jade-450, $zinc-200)};
 
   // Chapter
   #{$✨}chapter-color: var(#{$✨}code-tag);
 
   // Skeleton
   #{$✨}skeleton-background-color: #{$slate-850};
+
+  // Color coded scale
+  #{$✨}scale-color-1: #{mix($jade-150, $zinc-200)};
+  #{$✨}scale-color-2: #{mix($lime-150, $zinc-200)};
+  #{$✨}scale-color-3: #{mix($amber-250, $zinc-200)};
+  #{$✨}scale-color-4: #{mix($pumpkin-250, $zinc-200)};
+  #{$✨}scale-color-5: #{mix($red-350, $zinc-200)};
 }

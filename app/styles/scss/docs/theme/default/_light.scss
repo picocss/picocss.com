@@ -15,13 +15,20 @@
   #{$✨}code-attr: #{mix($zinc-600, $fuchsia-600, 25%)};
   #{$✨}code-value: #{mix($zinc-600, $jade-600, 50%)};
   #{$✨}code-comment: #{$zinc-450};
-  #{$✨}code-copied: #{$jade-600};
+  #{$✨}code-copied: #{mix($jade-450, $zinc-750)};
 
   // Chapter
   #{$✨}chapter-color: var(#{$✨}code-tag);
 
   // Skeleton
   #{$✨}skeleton-background-color: #{$slate-50};
+
+  // Color coded scale
+  #{$✨}scale-color-1: #{$jade-600};
+  #{$✨}scale-color-2: #{$lime-600};
+  #{$✨}scale-color-3: #{$amber-600};
+  #{$✨}scale-color-4: #{$pumpkin-600};
+  #{$✨}scale-color-5: #{$red-600};
 
   // Forced dark color scheme
   article {

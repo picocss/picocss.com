@@ -1,0 +1,47 @@
+/**
+ * Theme toggle
+ * Source: https://toggles.dev
+ */
+
+svg.theme-toggle {
+  --theme-toggle-duration: 400ms;
+
+  clipPath {
+    path {
+      transition-duration: calc(var(--theme-toggle-duration) * 0.6);
+      transition-property: transform, d;
+      transition-timing-function: cubic-bezier(0, 0, 0.5, 1);
+    }
+  }
+
+  g {
+    circle,
+    path {
+      transform-origin: center;
+      transition: transform calc(var(--theme-toggle-duration) * 0.65) cubic-bezier(0, 0, 0, 1.25)
+        calc(var(--theme-toggle-duration) * 0.35);
+    }
+  }
+
+  &.moon {
+    g circle {
+      transform: scale(1.4);
+      transition-delay: 0s;
+    }
+    g path {
+      transform: scale(0.75);
+      transition-delay: 0s;
+    }
+    :first-child path {
+      d: path("M-9 3h25a1 1 0 0017 13v30H0Z");
+      transition-delay: calc(var(--theme-toggle-duration) * 0.4);
+      transition-timing-function: cubic-bezier(0, 0, 0, 1.25);
+    }
+  }
+
+  @supports not (d: path("")) {
+    &.moon clipPath path {
+      transform: translate3d(-9px, 14px, 0);
+    }
+  }
+}

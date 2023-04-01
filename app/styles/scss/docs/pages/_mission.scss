@@ -1,0 +1,17 @@
+@use "sass:map";
+@use "settings" as *;
+
+/**
+ * Page: Mission
+ */
+
+main#mission {
+  blockquote {
+    max-width: 30em;
+    font-weight: 600;
+
+    footer {
+      font-weight: 400;
+    }
+  }
+}

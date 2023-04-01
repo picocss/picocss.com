@@ -8,8 +8,20 @@ export default function meta() {
     domain: "https://v2.picocss.com",
     titleSuffix: "• Pico CSS",
 
-    // Version
-    version: "2.0.0-alpha",
+    // Versions
+    versions: {
+      current: "2.0.0-alpha",
+      all: [
+        {
+          version: "2.0.0-alpha",
+          url: "https://picocss.com/docs",
+        },
+        {
+          version: "1.5.7",
+          url: "https://v1.picocss.com/docs/",
+        },
+      ],
+    },
 
     // CDN values
     cdnBaseUrl: "https://unpkg.com/@picocss/pico@2/",
