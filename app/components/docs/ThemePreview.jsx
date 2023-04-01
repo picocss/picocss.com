@@ -31,15 +31,10 @@ export default function ThemePreview({ title, code, ...props }) {
   };
 
   const colorFamilies = getColorFamilies();
-  const { locationPath, nextPageCurrentlyLoading, isLoading, shouldDisplayLoadingState } =
-    useNavigation();
+  const { locationPath, nextPageCurrentlyLoading, isLoading } = useNavigation();
 
   return (
-    <article
-      className={`color-picker component${shouldDisplayLoadingState ? " is-loading" : ""}`}
-      aria-label="Custom theme example"
-      {...props}
-    >
+    <article className={`color-picker component`} aria-label="Custom theme example" {...props}>
       <header>
         {colorFamilies.map((color) => {
           const linkTo =
@@ -53,11 +48,9 @@ export default function ThemePreview({ title, code, ...props }) {
               className={`pico-background-${color}`}
               aria-label={title}
               preventScrollReset={true}
-              aria-busy={
-                isLoading && shouldDisplayLoadingState && nextPageCurrentlyLoading === linkTo
-              }
+              aria-busy={isLoading && nextPageCurrentlyLoading === linkTo}
             >
-              {isCurrent && <Check isAnimated={true} />}
+              {isCurrent && !isLoading ? <Check isAnimated={true} /> : null}
             </Link>
           );
         })}

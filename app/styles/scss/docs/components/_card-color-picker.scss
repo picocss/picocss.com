@@ -20,7 +20,11 @@ article {
 
         &[aria-busy="true"] {
           &::before {
-            background-image: var(#{$✨}icon-loading-button);
+            aspect-ratio: 1/1;
+            width: 50%;
+            max-width: 1.5rem;
+            filter: brightness(0) invert(1);
+            opacity: 0.875;
           }
 
           &.pico-background-lime,
@@ -30,7 +34,7 @@ article {
           &.pico-background-sand,
           &.pico-background-grey {
             &::before {
-              filter: invert(1);
+              filter: brightness(0);
             }
           }
         }
@@ -67,27 +71,6 @@ article {
     > form,
     > footer {
       transition: opacity var(#{$✨}transition), filter var(#{$✨}transition);
-    }
-
-    &.is-loading {
-      pointer-events: none;
-
-      > header {
-        a {
-          &[aria-current] {
-            svg {
-              display: none;
-            }
-          }
-        }
-      }
-
-      > hgroup,
-      > form,
-      > footer {
-        filter: grayscale(50%);
-        opacity: 0.5;
-      }
     }
   }
 }

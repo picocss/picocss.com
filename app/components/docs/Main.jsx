@@ -1,7 +1,6 @@
 import { useNavigation } from "~/contexts/NavigationContext";
 
-export default function Main({ children, ...props }) {
-  const { routePath } = useNavigation();
+function getPageId(routePath) {
   let pageId =
     routePath === "/docs/"
       ? "index"
@@ -12,8 +11,13 @@ export default function Main({ children, ...props }) {
   if (pageId.includes("theme-generator-")) {
     pageId = "theme-generator";
   }
+  return pageId;
+}
 
-  // Hack for Firefox, which doesn't support the `:has()` pseudo-class
+export default function Main({ children, ...props }) {
+  const { isLoading, routePath } = useNavigation();
+  const pageId = getPageId(routePath);
+
   const pageIdsWithoutTableOfContents = [
     "color-schemes",
     "rtl",
@@ -34,12 +38,16 @@ export default function Main({ children, ...props }) {
   ];
   const hasTableOfContents = !pageIdsWithoutTableOfContents.includes(pageId);
 
+  const classNames = [
+    "container",
+    hasTableOfContents && "has-table-of-contents",
+    isLoading && "is-loading",
+  ]
+    .filter(Boolean)
+    .join(" ");
+
   return (
-    <main
-      className={`container${hasTableOfContents ? " has-table-of-contents" : ""}`}
-      id={pageId}
-      {...props}
-    >
+    <main className={classNames} id={pageId} {...props}>
       {children}
     </main>
   );

@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext } from "react";
 import { useNavigation as useRemixNavigation, useMatches } from "@remix-run/react";
 
 const NavigationContext = createContext({});
@@ -13,14 +13,6 @@ export default function NavigationProvider({ children }) {
   const locationPath = routePath.replace(/\/\s*$/, "");
   const nextPageCurrentlyLoading = navigation.state === "loading" && navigation.location.pathname;
 
-  const [shouldDisplayLoadingState, setShouldDisplayLoadingState] = useState(false);
-
-  // Delay shouldDisplayLoadingState to prevent loading indicator flicker
-  useEffect(() => {
-    const timeout = setTimeout(() => setShouldDisplayLoadingState(isLoading), 200);
-    return () => clearTimeout(timeout);
-  }, [isLoading]);
-
   return (
     <NavigationContext.Provider
       value={{
@@ -28,7 +20,6 @@ export default function NavigationProvider({ children }) {
         locationPath,
         nextPageCurrentlyLoading,
         routePath,
-        shouldDisplayLoadingState,
       }}
     >
       {children}

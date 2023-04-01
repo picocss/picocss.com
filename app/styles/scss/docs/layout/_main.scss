@@ -134,6 +134,24 @@ body {
         "menu body table-of-content";
       row-gap: 5rem;
     }
+
+    // Loading
+    &.is-loading {
+      > hgroup,
+      > aside#table-of-contents,
+      > [role="document"] {
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-name: docs-loading;
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+@keyframes docs-loading {
+  from {
+    opacity: 1;
   }
 }
 
