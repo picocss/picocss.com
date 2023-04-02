@@ -55,7 +55,7 @@ body {
         }
 
         // Dropdown menu
-        details[role="list"] {
+        details[class="dropdown"] {
           margin: calc(var(#{$✨}nav-element-spacing-vertical) * -1)
             calc(var(#{$✨}nav-element-spacing-horizontal) * -1);
 

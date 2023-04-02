@@ -23,9 +23,9 @@ export default function Nav(props) {
     <nav {...props}>
       <ul>
         <li>
-          <details role="list">
-            <summary aria-haspopup="listbox">{`v${versions.current}`}</summary>
-            <ul role="listbox" dir="rtl">
+          <details className="dropdown">
+            <summary>{`v${versions.current}`}</summary>
+            <ul dir="rtl">
               {versions.all.map((version) => {
                 const { version: label, url } = version;
                 const isCurrent = versions.current === label;

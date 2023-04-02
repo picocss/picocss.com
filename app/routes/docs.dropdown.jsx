@@ -31,7 +31,7 @@ export function Item({ children, className, ...props }) {
 
 export function DropdownItems({ items = phasesOfMatter, dir, id }) {
   return (
-    <ul role="listbox" dir={dir} id={id}>
+    <ul dir={dir} id={id}>
       {items.map((item) => (
         <li key={item}>
           <Item>{item}</Item>
@@ -97,11 +97,16 @@ export default function Dropdown() {
       <Content>
         <section ref={syntaxRef}>
           <p>
-            Dropdowns are built with <Code display="inline">{`<details role="list">`}</Code> as a
-            wrapper and <Code display="inline">{`<summary>`}</Code> and{" "}
+            Dropdowns are built with <Code display="inline">{`<details class="dropdown">`}</Code> as
+            a wrapper and <Code display="inline">{`<summary>`}</Code> and{" "}
             <Code display="inline">{`<ul>`}</Code> as direct childrens. Unless they are in a{" "}
             <Link to="/docs/nav">Nav</Link>, dropdowns are{" "}
             <Code display="inline">{`width: 100%;`}</Code> by default.
+          </p>
+
+          <p>
+            Dropdowns are not available in the{" "}
+            <Link to="/docs/classless">class&#8209;less&nbsp;version</Link>.
           </p>
 
           <p>
@@ -110,8 +115,8 @@ export default function Dropdown() {
           </p>
           <article aria-label="Dropdowns as selects" className="component">
             <div className="grid">
-              <details role="list">
-                <summary aria-haspopup="listbox">Dropdown</summary>
+              <details className="dropdown">
+                <summary>Dropdown</summary>
                 <DropdownItems />
               </details>
               <select defaultValue="" required>
@@ -122,9 +127,9 @@ export default function Dropdown() {
               </select>
             </div>
             <Code as="footer">{`<!-- Dropdown -->
-<details role="list">
-  <summary aria-haspopup="listbox">Dropdown</summary>
-  <ul role="listbox">
+<details class="dropdown">
+  <summary>Dropdown</summary>
+  <ul>
   ${phasesOfMatter
     .map(
       (phase, index) =>
@@ -161,9 +166,9 @@ export default function Dropdown() {
             <Code display="inline">{`<input type="checkbox">`}</Code>.
           </p>
           <article aria-label="Dropdowns with radio buttons or checkboxes" className="component">
-            <details role="list">
-              <summary aria-haspopup="listbox">Select a phase of matter...</summary>
-              <ul role="listbox">
+            <details className="dropdown">
+              <summary>Select a phase of matter...</summary>
+              <ul>
                 {phasesOfMatter.map((phase) => (
                   <li key={phase}>
                     <label>
@@ -174,9 +179,9 @@ export default function Dropdown() {
                 ))}
               </ul>
             </details>
-            <details role="list">
-              <summary aria-haspopup="listbox">Select phases of matter...</summary>
-              <ul role="listbox">
+            <details className="dropdown">
+              <summary>Select phases of matter...</summary>
+              <ul>
                 {phasesOfMatter.map((phase) => (
                   <li key={phase}>
                     <label>
@@ -188,11 +193,11 @@ export default function Dropdown() {
               </ul>
             </details>
             <Code as="footer" language="html">{`<!-- Radios -->
-<details role="list">
-  <summary aria-haspopup="listbox">
+<details class="dropdown">
+  <summary>
     Select a phase of matter...
   </summary>
-  <ul role="listbox">
+  <ul>
   ${phasesOfMatter
     .map(
       (phase, index) =>
@@ -208,11 +213,11 @@ export default function Dropdown() {
 </details>
 
 <!-- Checkboxes -->
-<details role="list">
-  <summary aria-haspopup="listbox">
+<details class="dropdown">
+  <summary>
     Select phases of matter...
   </summary>
-  <ul role="listbox">
+  <ul>
   ${phasesOfMatter
     .map(
       (phase, index) =>
@@ -242,17 +247,15 @@ export default function Dropdown() {
             button.
           </p>
           <article aria-label="Dropdowns as buttons" className="component">
-            <details role="list">
-              <summary aria-haspopup="listbox" role="button">
-                Dropdown as a button
-              </summary>
+            <details className="dropdown">
+              <summary role="button">Dropdown as a button</summary>
               <DropdownItems />
             </details>
-            <Code as="footer">{`<details role="list">
-  <summary aria-haspopup="listbox" role="button">
+            <Code as="footer">{`<details class="dropdown">
+  <summary role="button">
     Dropdown as a button
   </summary>
-  <ul role="listbox">
+  <ul>
     ...
   </ul>
 </details>`}</Code>
@@ -264,98 +267,96 @@ export default function Dropdown() {
             available in the <Link to="/docs/classless">class-less version</Link>).
           </p>
           <article aria-label="Dropdowns as buttons" className="component">
-            <details role="list">
-              <summary aria-haspopup="listbox" role="button">
-                Primary
-              </summary>
+            <details className="dropdown">
+              <summary role="button">Primary</summary>
               <DropdownItems />
             </details>
-            <details role="list">
-              <summary aria-haspopup="listbox" role="button" className="secondary">
+            <details className="dropdown">
+              <summary role="button" className="secondary">
                 Secondary
               </summary>
               <DropdownItems />
             </details>
-            <details role="list">
-              <summary aria-haspopup="listbox" role="button" className="contrast">
+            <details className="dropdown">
+              <summary role="button" className="contrast">
                 Contrast
               </summary>
               <DropdownItems />
             </details>
-            <details role="list">
-              <summary aria-haspopup="listbox" role="button" className="outline">
+            <details className="dropdown">
+              <summary role="button" className="outline">
                 Primary outline
               </summary>
               <DropdownItems />
             </details>
-            <details role="list">
-              <summary aria-haspopup="listbox" role="button" className="outline secondary">
+            <details className="dropdown">
+              <summary role="button" className="outline secondary">
                 Secondary outline
               </summary>
               <DropdownItems />
             </details>
-            <details role="list">
-              <summary aria-haspopup="listbox" role="button" className="outline contrast">
+            <details className="dropdown">
+              <summary role="button" className="outline contrast">
                 Contrast outline
               </summary>
               <DropdownItems />
             </details>
             <Code as="footer">{`<!-- Primary -->
-<details role="list">
-  <summary aria-haspopup="listbox" role="button">
+<details class="dropdown">
+  <summary role="button">
     Primary
   </summary>
-  <ul role="listbox">
+  <ul>
     ...
   </ul>
 </details>
 
 <!-- Secondary -->
-<details role="list">
-  <summary aria-haspopup="listbox" role="button" class="secondary">
+<details class="dropdown">
+  <summary role="button" class="secondary">
     Secondary
   </summary>
-  <ul role="listbox">
+  <ul>
     ...
   </ul>
 </details>
 
 <!-- Contrast -->
-<details role="list">
-  <summary aria-haspopup="listbox" role="button" class="contrast">
+<details class="dropdown">
+  <summary role="button" class="contrast">
     Contrast
   </summary>
-  <ul role="listbox">
+  <ul>
     ...
   </ul>
 </details>
 
 <!-- Primary outline -->
-<details role="list">
-  <summary aria-haspopup="listbox" role="button" class="outline">
+<details class="dropdown">
+  <summary role="button" class="outline">
     Primary outline
   </summary>
-  <ul role="listbox">
+  <ul>
     ...
   </ul>
 </details>
 
 <!-- Secondary outline -->
-<details role="list">
-  <summary aria-haspopup="listbox" role="button" class="outline secondary">
+<details class="dropdown">
+  <summary role="button" class="outline secondary">
     Secondary outline
   </summary>
-  <ul role="listbox">
+  <ul>
     ...
   </ul>
 </details>
 
 <!-- Contrast outline -->
-<details role="list">
-  <summary aria-haspopup="listbox" role="button" class="outline contrast">
+<details class="dropdown">
+  <summary role="button" class="outline contrast">
     Contrast outline
   </summary>
-  <ul role="listbox">
+  <ul>
     ...
   </ul>
 </details>
@@ -372,20 +373,16 @@ export default function Dropdown() {
             <Code display="inline">aria-invalid</Code>.
           </p>
           <article aria-label="Dropdowns with validation states" className="component">
-            <details role="list">
-              <summary aria-haspopup="listbox" aria-invalid="false">
-                Valid phase of matter: Solid
-              </summary>
+            <details className="dropdown">
+              <summary aria-invalid="false">Valid phase of matter: Solid</summary>
               <DropdownItems />
             </details>
-            <details role="list">
-              <summary aria-haspopup="listbox" aria-invalid="true">
-                Debated classification: Plasma
-              </summary>
+            <details className="dropdown">
+              <summary aria-invalid="true">Debated classification: Plasma</summary>
               <DropdownItems />
             </details>
-            <Code as="footer">{`<details role="list">
-  <summary aria-haspopup="listbox" aria-invalid="false">
+            <Code as="footer">{`<details class="dropdown">
+  <summary aria-invalid="false">
     Valid phase of matter: Solid
   </summary>
   <ul>
@@ -393,8 +390,8 @@ export default function Dropdown() {
   </ul>
 </details>
 
-<details role="list">
-  <summary aria-haspopup="listbox" aria-invalid="true">
+<details class="dropdown">
+  <summary aria-invalid="true">
     Debated classification: Plasma
   </summary>
   <ul>
@@ -427,8 +424,8 @@ export default function Dropdown() {
                   <Item className="secondary">Services</Item>
                 </li>
                 <li>
-                  <details role="list">
-                    <summary aria-haspopup="listbox">Account</summary>
+                  <details className="dropdown">
+                    <summary>Account</summary>
                     <DropdownItems items={accountItems} dir="rtl" />
                   </details>
                 </li>
@@ -441,11 +438,11 @@ export default function Dropdown() {
   <ul>
     <li><a href="#" class="secondary">Services</a></li>
     <li>
-      <details role="list">
-        <summary aria-haspopup="listbox">
+      <details class="dropdown">
+        <summary>
           Account
         </summary>
-        <ul role="listbox" dir="rtl">
+        <ul dir="rtl">
 ${accountItems
   .map(
     (item, index) =>

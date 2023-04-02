@@ -84,10 +84,12 @@ export default function Accordion() {
 
 <details>
   <summary>Accordion 2</summary>
-  <ul>
-    <li>...</li>
-    <li>...</li>
-  </ul>
+  <article>
+    <ul>
+      <li>...</li>
+      <li>...</li>
+    </ul>
+  </article>
 </details>`}</Code>
           </article>
         </section>

@@ -41,9 +41,9 @@ export default function Loading() {
           <p>Any button:</p>
           <article aria-label="Loading button examples">
             <div className="grid" id="buttons">
-              <button aria-busy="true" />
-              <button aria-busy="true" className="secondary" />
-              <button aria-busy="true" className="contrast" />
+              <button aria-busy="true" aria-label="Please wait…" />
+              <button aria-busy="true" aria-label="Please wait…" className="secondary" />
+              <button aria-busy="true" aria-label="Please wait…" className="contrast" />
             </div>
             <div className="grid" id="outline-buttons">
               <button aria-busy="true" className="outline">
@@ -56,9 +56,9 @@ export default function Loading() {
                 Please wait…
               </button>
             </div>
-            <Code as="footer">{`<button aria-busy="true" />
-<button aria-busy="true" class="secondary" />
-<button aria-busy="true" class="contrast" />
+            <Code as="footer">{`<button aria-busy="true" aria-label="Please wait…" />
+<button aria-busy="true" aria-label="Please wait…" class="secondary" />
+<button aria-busy="true" aria-label="Please wait…" class="contrast" />
 <button aria-busy="true" class="outline">Please wait…</button>
 <button aria-busy="true" class="outline secondary">Please wait…</button>
 <button aria-busy="true" class="outline contrast">Please wait…</button>`}</Code>

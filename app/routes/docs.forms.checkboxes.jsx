@@ -158,12 +158,7 @@ export default function Checkboxes() {
           </p>
           <article aria-label="Indeterminate checkbox example" className="component">
             <label>
-              <input
-                type="checkbox"
-                id="indeterminate"
-                name="indeterminate"
-                ref={indeterminateCheckboxRef}
-              />
+              <input type="checkbox" name="indeterminate" ref={indeterminateCheckboxRef} />
               Indeterminate
             </label>
             <Code as="footer">{`<label>

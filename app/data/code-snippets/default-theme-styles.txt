@@ -247,11 +247,11 @@ input:not([type=submit],
   --pico-border-width: 0.1875rem;
 }
 
-details[role=list] summary:not([role=button]) {
+details.dropdown summary:not([role=button]) {
   --pico-outline-width: 0.0625rem;
 }
 
-nav details[role=list] summary:focus-visible {
+nav details.dropdown summary:focus-visible {
   --pico-outline-width: 0.1875rem;
 }
 

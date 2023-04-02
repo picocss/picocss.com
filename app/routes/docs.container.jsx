@@ -125,6 +125,12 @@ export default function Container() {
               ))}
             </tbody>
           </table>
+          <p>
+            <Code display="inline">.container</Code> and{" "}
+            <Code display="inline">.container-fluid</Code> are not available in the{" "}
+            <Link to="/docs/classless">class&#8209;less&nbsp;version</Link> (see{" "}
+            <Link to="#semantic-containers">Semantic containers</Link> for an alternative).
+          </p>
         </section>
 
         <section ref={fixedRef}>

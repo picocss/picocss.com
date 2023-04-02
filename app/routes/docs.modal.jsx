@@ -191,7 +191,7 @@ export default function Modal() {
             Demo
           </Heading>
           <p>Toggle a modal by clicking the button below.</p>
-          <article aria-label="Modal demo" id="demo">
+          <article aria-label="Modal demo" id="modal-demo">
             <button className="contrast" onClick={onOpenModal}>
               Open modal
             </button>

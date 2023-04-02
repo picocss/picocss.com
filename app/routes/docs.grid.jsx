@@ -5,6 +5,7 @@ import Header from "~/components/docs/Header";
 import TableOfContents from "~/components/docs/TableOfContents";
 import Content from "~/components/docs/Content";
 import Code from "~/components/Code";
+import Link from "~/components/Link";
 import Heading from "~/components/Heading";
 import Minus from "~/components/icons/Minus";
 import Plus from "~/components/icons/Plus";
@@ -91,6 +92,10 @@ export default function Grid() {
           <p>
             Columns intentionally collapse on small devices (
             <Code display="inline">{`<768px`}</Code>).
+          </p>
+          <p>
+            <Code display="inline">.grid</Code> is not available in the{" "}
+            <Link to="/docs/classless">class&#8209;less&nbsp;version</Link>.
           </p>
         </section>
 

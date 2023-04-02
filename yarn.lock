@@ -1759,7 +1759,7 @@
 
 "@picocss/pico@https://github.com/picocss/pico#v2":
   version "2.0.0-alpha1"
-  resolved "https://github.com/picocss/pico#09dc2a75b5b895d9c81dc793e888c8e69a18802d"
+  resolved "https://github.com/picocss/pico#f0a2480fc614fe0db7c043de46c5e06778e301ee"
 
 "@pkgr/utils@^2.3.1":
   version "2.3.1"

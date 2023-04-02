@@ -187,9 +187,9 @@ export default function Select() {
           </p>
           <article aria-label="Dropdowns as selects" className="component">
             <div className="grid">
-              <details role="list">
-                <summary aria-haspopup="listbox">Select your favorite French dessert...</summary>
-                <ul role="listbox">
+              <details className="dropdown">
+                <summary>Select your favorite French dessert...</summary>
+                <ul>
                   <li>
                     <label>
                       <input type="radio" name="french-dessert" value="Crème brûlée" />
