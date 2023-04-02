@@ -20,8 +20,6 @@ article {
 
         &[aria-busy="true"] {
           &::before {
-            aspect-ratio: 1/1;
-            width: 50%;
             max-width: 1.5rem;
             filter: brightness(0) invert(1);
             opacity: 0.875;
