@@ -19,6 +19,7 @@ import metaData from "~/data/meta";
 import Body from "./components/Body";
 import RootError from "./components/RootError";
 import Footer from "./components/Footer";
+import DynamicMeta from "./components/DynamicMeta";
 import StructuredData from "./components/StructuredData";
 
 const { domain, siteName, titleSuffix, twitterHandle } = metaData();
@@ -45,7 +46,6 @@ export const meta = () => {
 export function links() {
   return [
     // Favicons
-    // { rel: "icon", href: "/favicon.ico", sizes: "any" },
     { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
     { rel: "icon", href: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
     { rel: "apple-touch-icon", href: "/apple-touch-icon.png", type: "image/png", sizes: "180x180" },
@@ -99,6 +99,7 @@ export default function App() {
           <head>
             <Meta />
             <Links />
+            <DynamicMeta />
             <StructuredData />
           </head>
           <Body>

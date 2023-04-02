@@ -10,7 +10,7 @@ export const meta = () => ({
   description: "How does Pico fit into your project?",
 });
 
-export default function Rtl() {
+export default function UsageScenarios() {
   return (
     <>
       {/* Header */}

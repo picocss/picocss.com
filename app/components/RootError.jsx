@@ -1,26 +1,25 @@
-import Header from "./Header";
+import { HeaderProvider } from "~/contexts/HeaderContext";
+import Main from "~/components/docs/Main";
+import Header from "~/components/Header";
+import ErrorHeader from "~/components/docs/Header";
+import Content from "~/components/docs/Content";
 
 export default function RootError({ error, ...props }) {
   return (
-    <>
+    <HeaderProvider>
       <Header />
-      <main className="container" {...props}>
-        <hgroup>
-          <h1>{error ? error.statusText : "Oops!"}</h1>
+      <Main>
+        <ErrorHeader
+          title={error ? error.statusText : "Oops!"}
+          description="Something went wrong."
+        />
+
+        <Content>
           <p>
-            {error ? (
-              <>
-                {error.status} {error.data}
-              </>
-            ) : (
-              "Something went wrong."
-            )}
+            <small>That's all we know.</small>
           </p>
-        </hgroup>
-        <p>
-          <small>That's all we know.</small>
-        </p>
-      </main>
-    </>
+        </Content>
+      </Main>
+    </HeaderProvider>
   );
 }

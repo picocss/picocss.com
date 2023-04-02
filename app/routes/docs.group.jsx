@@ -15,7 +15,9 @@ export const meta = () => ({
   description: 'Stack forms elements and buttons horizontally with role="group" and role="search".',
 });
 
-export default function Loading() {
+export default function Group() {
+  const preventDefault = (e) => e.preventDefault();
+
   const formsRef = useRef();
   const searchRef = useRef();
   const buttonsRef = useRef();
@@ -67,10 +69,10 @@ export default function Loading() {
           </p>
           <p>
             Unlike <Code display="inline">.grid</Code> (see <Link to="/docs/grid">Grid</Link>),
-            columns are not disabled on mobile devices.
+            columns are not collapsed on mobile devices.
           </p>
           <article className="component" aria-label="Form group example">
-            <form role="group">
+            <form role="group" onSubmit={preventDefault}>
               <input type="email" placeholder="Enter your email" />
               <input type="submit" value="Subscribe" />
             </form>
@@ -96,7 +98,7 @@ export default function Loading() {
           </p>
 
           <article className="component" aria-label="Form group example">
-            <form role="group">
+            <form role="group" onSubmit={preventDefault}>
               <input type="email" placeholder="Email" />
               <input type="password" placeholder="Password" />
               <input type="submit" value="Log in" />
@@ -122,7 +124,7 @@ export default function Loading() {
           </p>
 
           <article className="component" aria-label="Searcgh group example">
-            <form role="search">
+            <form role="search" onSubmit={preventDefault}>
               <input type="search" placeholder="Search" />
               <input type="submit" value="Search" />
             </form>

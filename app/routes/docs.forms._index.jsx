@@ -235,7 +235,7 @@ export default function Forms() {
             <Link to="/docs/group">Group</Link>.
           </p>
           <article className="component" aria-label="Form group example">
-            <form role="group">
+            <form role="group" onSubmit={preventDefault}>
               <input type="email" placeholder="Enter your email" />
               <input type="submit" value="Subscribe" />
             </form>

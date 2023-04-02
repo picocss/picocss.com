@@ -14,7 +14,7 @@ export const meta = () => ({
   description: "The native <textarea> is styled like the input for consistency.",
 });
 
-export default function Input() {
+export default function Textarea() {
   const syntaxRef = useRef();
   const disabledRef = useRef();
   const readonlyRef = useRef();

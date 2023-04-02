@@ -12,7 +12,7 @@ export const meta = () => ({
     "Pico CSS is a minimalist and lightweight starter kit that prioritizes semantic HTML, making every HTML tag responsive and elegant by default.",
 });
 
-export default function Rtl() {
+export default function Mission() {
   return (
     <>
       {/* Header */}

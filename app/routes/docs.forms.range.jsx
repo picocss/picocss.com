@@ -11,7 +11,7 @@ export const meta = () => ({
   description: 'Create a slider control with the input type <input type="range">.',
 });
 
-export default function Switch() {
+export default function Range() {
   return (
     <>
       {/* Header */}

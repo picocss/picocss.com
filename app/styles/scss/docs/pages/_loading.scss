@@ -7,8 +7,6 @@
 
 main#loading {
   .grid {
-    #{$✨}grid-spacing-vertical: var(#{$✨}spacing);
-
     &#buttons {
       margin-bottom: var(#{$✨}spacing);
     }

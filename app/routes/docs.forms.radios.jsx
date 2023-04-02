@@ -14,7 +14,7 @@ export const meta = () => ({
   description: 'The native <input type="radio"> with a custom and responsive style.',
 });
 
-export default function CheckboxesAndRadios() {
+export default function Radios() {
   const syntaxRef = useRef();
   const horizontalStackingRef = useRef();
   const validationStatesRef = useRef();

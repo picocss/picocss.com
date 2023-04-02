@@ -1,0 +1,42 @@
+@use "sass:map";
+@use "settings" as *;
+
+/**
+ * Page: Grid
+ */
+
+main#grid {
+  .btn-group {
+    button {
+      width: 100%;
+      margin-bottom: var(#{$✨}spacing);
+
+      svg {
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        margin-right: 0.5em;
+        transform: translateY(-0.125em);
+      }
+
+      @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
+        width: auto;
+
+        &:not(:last-child) {
+          margin-right: var(#{$✨}spacing);
+        }
+      }
+    }
+  }
+
+  .grid {
+    > div {
+      padding: calc(var(#{$✨}spacing) / 2) 0;
+      border-radius: var(#{$✨}border-radius);
+      background-color: var(#{$✨}card-sectioning-background-color);
+      color: var(#{$✨}muted-color);
+      font-size: 0.875rem;
+      text-align: center;
+    }
+  }
+}
