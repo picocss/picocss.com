@@ -6,7 +6,7 @@
 svg.theme-toggle {
   --theme-toggle-duration: 400ms;
 
-  clipPath {
+  :first-child {
     path {
       transition-duration: calc(var(--theme-toggle-duration) * 0.6);
       transition-property: transform, d;
@@ -40,7 +40,7 @@ svg.theme-toggle {
   }
 
   @supports not (d: path("")) {
-    &.moon clipPath path {
+    &.moon :first-child path {
       transform: translate3d(-9px, 14px, 0);
     }
   }
