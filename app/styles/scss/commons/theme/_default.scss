@@ -2,11 +2,15 @@
 @use "default/light";
 @use "default/dark";
 
+// Fonts
+@use "../../../../../node_modules/@fontsource/fira-code/scss/mixins" as FiraCode;
+@use "../../../../../node_modules/@fontsource/figtree/scss/mixins" as FigTree;
+
 // Styles
 @use "default/styles";
 
 /**
- * Website color schemes
+ * Color schemes
  */
 
 // Light color scheme (Default)
@@ -29,3 +33,19 @@
 [data-theme="dark"] {
   @include dark.theme;
 }
+
+/**
+ * Fonts
+ */
+
+@include FiraCode.fontFace(
+  $weight: 400,
+  $display: swap,
+  $fontDir: "../../../node_modules/@fontsource/fira-code/files"
+);
+
+@include FigTree.fontFace(
+  $weight: 700,
+  $display: swap,
+  $fontDir: "../../../node_modules/@fontsource/figtree/files"
+);

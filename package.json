@@ -34,6 +34,8 @@
     "prebuild:code-snippets": "echo '[@picocss/picocss.com] ✨ Code snippets'"
   },
   "dependencies": {
+    "@fontsource/figtree": "4.5.3",
+    "@fontsource/fira-code": "4.5.13",
     "@makotot/ghostui": "2.0.0",
     "@remix-run/cloudflare": "^1.15.0",
     "@remix-run/cloudflare-pages": "^1.15.0",
