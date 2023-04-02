@@ -145,8 +145,8 @@ export default function Brand() {
             use “Pico” or “Pico&nbsp;✨” if you prefer.
           </p>
           <p>
-            The CSS stylesheet can be referred to as “pico.css”. However, please avoid using
-            “PicoCss”, “PicoCSS”, “Pico.css", or “pico”.
+            The CSS stylesheet can be referred as “pico.css”. However, please avoid using “PicoCss”,
+            “PicoCSS”, “Pico.css", or “pico”.
           </p>
         </section>
 
