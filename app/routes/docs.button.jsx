@@ -21,6 +21,7 @@ export default function Button() {
   const formButtonsRef = useRef();
   const disabledRef = useRef();
   const roleButtonRef = useRef();
+  const usageWithGroupRef = useRef();
 
   return (
     <>
@@ -62,6 +63,11 @@ export default function Button() {
             anchor: "role-button",
             title: "Role button",
             ref: roleButtonRef,
+          },
+          {
+            anchor: "usage-with-group",
+            title: "Usage with group",
+            ref: usageWithGroupRef,
           },
         ]}
       />
@@ -171,6 +177,30 @@ export default function Button() {
               as="footer"
               className="small"
             >{`<div role="button" tabindex="0">Div as a button</div>`}</Code>
+          </article>
+        </section>
+
+        <section ref={usageWithGroupRef}>
+          <Heading level={2} anchor="usage-with-group">
+            Usage with group
+          </Heading>
+
+          <p>
+            You can use <Code display="inline">role="group"</Code> with buttons. See{" "}
+            <Link to="/docs/group">Group</Link>.
+          </p>
+
+          <article className="component" aria-label="Group example">
+            <div role="group">
+              <button>Button</button>
+              <button>Button</button>
+              <button>Button</button>
+            </div>
+            <Code as="footer">{`<div role="group">
+  <button>Button</button>
+  <button>Button</button>
+  <button>Button</button>
+</div>`}</Code>
           </article>
         </section>
       </Content>

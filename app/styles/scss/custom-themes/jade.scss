@@ -8,10 +8,10 @@ $colorName: "Jade";
 @mixin light {
   #{$✨}text-selection-color: #{rgba($jade-400, 0.25)};
   #{$✨}primary: #{$jade-550};
-  #{$✨}primary-hover: #{$jade-650};
-  #{$✨}primary-underline: #{rgba($jade-550, 0.5)};
   #{$✨}primary-background: #{$jade-550};
-  #{$✨}primary-background-hover: #{$jade-600};
+  #{$✨}primary-underline: #{rgba($jade-550, 0.5)};
+  #{$✨}primary-hover: #{$jade-650};
+  #{$✨}primary-hover-background: #{$jade-600};
   #{$✨}primary-focus: #{rgba($jade-400, 0.25)};
   #{$✨}primary-inverse: #{$white};
 }
@@ -20,10 +20,10 @@ $colorName: "Jade";
 @mixin dark {
   #{$✨}text-selection-color: #{rgba($jade-350, 0.1875)};
   #{$✨}primary: #{$jade-350};
-  #{$✨}primary-hover: #{$jade-250};
-  #{$✨}primary-underline: #{rgba($jade-350, 0.5)};
   #{$✨}primary-background: #{$jade-550};
-  #{$✨}primary-background-hover: #{$jade-500};
+  #{$✨}primary-underline: #{rgba($jade-350, 0.5)};
+  #{$✨}primary-hover: #{$jade-250};
+  #{$✨}primary-hover-background: #{$jade-500};
   #{$✨}primary-focus: #{rgba($jade-350, 0.25)};
   #{$✨}primary-inverse: #{$white};
 }

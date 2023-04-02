@@ -75,11 +75,6 @@ main {
                 border-color: var(#{$✨}secondary-underline);
               }
 
-              &:active,
-              &:focus {
-                color: var(#{$✨}primary-hover);
-              }
-
               &[aria-current] {
                 border-color: var(#{$✨}primary);
                 color: var(#{$✨}primary-hover);
@@ -88,6 +83,14 @@ main {
                 &:hover {
                   text-decoration: none;
                 }
+              }
+
+              mark {
+                border-radius: 0.125rem;
+                font-weight: 600;
+                font-size: 12px;
+                text-transform: uppercase;
+                vertical-align: text-bottom;
               }
             }
           }

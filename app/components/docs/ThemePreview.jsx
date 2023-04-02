@@ -76,7 +76,7 @@ export default function ThemePreview({ title, code, ...props }) {
             autoComplete="current-password"
           />
           <button type="submit" aria-label="Example button" onClick={preventDefault}>
-            Login
+            Log in
           </button>
         </fieldset>
         <fieldset>

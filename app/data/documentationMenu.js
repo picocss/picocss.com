@@ -14,7 +14,7 @@ export const documentationMenu = [
       { label: "CSS Variables", route: "/docs/css-variables" },
       { label: "Theme generator", route: "/docs/theme-generator" },
       { label: "Sass", route: "/docs/sass" },
-      { label: "Colors", route: "/docs/colors" },
+      { label: "Colors <mark>New</mark>", route: "/docs/colors" },
     ],
   },
   {
@@ -54,6 +54,7 @@ export const documentationMenu = [
       { label: "Accordion", route: "/docs/accordion" },
       { label: "Card", route: "/docs/card" },
       { label: "Dropdown", route: "/docs/dropdown" },
+      { label: "Group <mark>New</mark>", route: "/docs/group" },
       { label: "Loading", route: "/docs/loading" },
       { label: "Modal", route: "/docs/modal" },
       { label: "Nav", route: "/docs/nav" },

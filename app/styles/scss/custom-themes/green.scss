@@ -8,10 +8,10 @@ $colorName: "Green";
 @mixin light {
   #{$✨}text-selection-color: #{rgba($green-400, 0.25)};
   #{$✨}primary: #{$green-550};
-  #{$✨}primary-hover: #{$green-650};
-  #{$✨}primary-underline: #{rgba($green-550, 0.5)};
   #{$✨}primary-background: #{$green-500};
-  #{$✨}primary-background-hover: #{$green-550};
+  #{$✨}primary-underline: #{rgba($green-550, 0.5)};
+  #{$✨}primary-hover: #{$green-650};
+  #{$✨}primary-hover-background: #{$green-550};
   #{$✨}primary-focus: #{rgba($green-400, 0.25)};
   #{$✨}primary-inverse: #{$white};
 }
@@ -20,10 +20,10 @@ $colorName: "Green";
 @mixin dark {
   #{$✨}text-selection-color: #{rgba($green-350, 0.1875)};
   #{$✨}primary: #{$green-350};
-  #{$✨}primary-hover: #{$green-250};
-  #{$✨}primary-underline: #{rgba($green-350, 0.5)};
   #{$✨}primary-background: #{$green-500};
-  #{$✨}primary-background-hover: #{$green-450};
+  #{$✨}primary-underline: #{rgba($green-350, 0.5)};
+  #{$✨}primary-hover: #{$green-250};
+  #{$✨}primary-hover-background: #{$green-450};
   #{$✨}primary-focus: #{rgba($green-350, 0.25)};
   #{$✨}primary-inverse: #{$white};
 }

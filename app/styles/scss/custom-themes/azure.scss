@@ -8,10 +8,10 @@ $colorName: "Azure";
 @mixin light {
   #{$✨}text-selection-color: #{rgba($azure-400, 0.25)};
   #{$✨}primary: #{$azure-550};
-  #{$✨}primary-hover: #{$azure-650};
-  #{$✨}primary-underline: #{rgba($azure-550, 0.5)};
   #{$✨}primary-background: #{$azure-550};
-  #{$✨}primary-background-hover: #{$azure-600};
+  #{$✨}primary-underline: #{rgba($azure-550, 0.5)};
+  #{$✨}primary-hover: #{$azure-650};
+  #{$✨}primary-hover-background: #{$azure-600};
   #{$✨}primary-focus: #{rgba($azure-400, 0.25)};
   #{$✨}primary-inverse: #{$white};
 }
@@ -20,10 +20,10 @@ $colorName: "Azure";
 @mixin dark {
   #{$✨}text-selection-color: #{rgba($azure-350, 0.1875)};
   #{$✨}primary: #{$azure-350};
-  #{$✨}primary-hover: #{$azure-250};
-  #{$✨}primary-underline: #{rgba($azure-350, 0.5)};
   #{$✨}primary-background: #{$azure-550};
-  #{$✨}primary-background-hover: #{$azure-500};
+  #{$✨}primary-underline: #{rgba($azure-350, 0.5)};
+  #{$✨}primary-hover: #{$azure-250};
+  #{$✨}primary-hover-background: #{$azure-500};
   #{$✨}primary-focus: #{rgba($azure-350, 0.25)};
   #{$✨}primary-inverse: #{$white};
 }

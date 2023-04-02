@@ -8,8 +8,8 @@ dialog.color {
 
   article {
     transform: translate3d(0, 0, 0);
-    outline: var(#{$✨}border-width) solid var(#{$✨}secondary-focus);
-    box-shadow: 0 -0 6rem 0 var(#{$✨}glowing-color), var(#{$✨}box-shadow);
+    box-shadow: 0 0 0 var(#{$✨}border-width) var(#{$✨}secondary-focus),
+      0 -0 6rem 0 var(#{$✨}glowing-color), var(#{$✨}box-shadow);
     transition: box-shadow var(#{$✨}transition);
 
     @if map.get($breakpoints, "lg") {

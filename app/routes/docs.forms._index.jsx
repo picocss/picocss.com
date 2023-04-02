@@ -21,6 +21,7 @@ export default function Forms() {
 
   const introductionRef = useRef();
   const usageWithGridRef = useRef();
+  const usageWithGroupRef = useRef();
   const helperTextRef = useRef();
 
   return (
@@ -40,14 +41,19 @@ export default function Forms() {
             ref: introductionRef,
           },
           {
+            anchor: "helper-text",
+            title: "Helper text",
+            ref: helperTextRef,
+          },
+          {
             anchor: "usage-with-grid",
             title: "Usage with grid",
             ref: usageWithGridRef,
           },
           {
-            anchor: "helper-text",
-            title: "Helper text",
-            ref: helperTextRef,
+            anchor: "usage-with-group",
+            title: "Usage with group",
+            ref: usageWithGroupRef,
           },
         ]}
       />
@@ -80,7 +86,7 @@ export default function Forms() {
       <input
         name="first_name"
         placeholder="First name"
-      >
+      />
     </label>
     <label>
       Email
@@ -89,14 +95,14 @@ export default function Forms() {
         name="email"
         placeholder="Email"
         autocomplete="email"
-      >
+      />
     </label>
   </fieldset>
 
   <input
     type="submit"
     value="Subscribe"
-  >
+  />
 </form>`}</Code>
           </article>
 
@@ -121,7 +127,7 @@ export default function Forms() {
     <input
       name="first_name"
       placeholder="First name"
-    >
+    />
   </label>
 
   <!-- Input outside label -->
@@ -131,59 +137,8 @@ export default function Forms() {
     name="email"
     placeholder="Email"
     autocomplete="email"
-  >
+  />
 
-</form>`}</Code>
-          </article>
-        </section>
-
-        <section ref={usageWithGridRef}>
-          <Heading level={2} anchor="usage-with-grid">
-            Usage with grid
-          </Heading>
-          <p>
-            You can use <Code display="inline">.grid</Code> inside a form. See{" "}
-            <Link to="/docs/grid">Grid</Link>.
-          </p>
-          <article aria-label="Form and grid example" className="component">
-            <form onSubmit={preventDefault}>
-              <fieldset className="grid">
-                <input
-                  name="login"
-                  placeholder="Login"
-                  aria-label="Login"
-                  autoComplete="nickname"
-                />
-                <input
-                  type="password"
-                  name="password"
-                  placeholder="Password"
-                  aria-label="Password"
-                  autoComplete="current-password"
-                />
-                <input type="submit" value="Login" />
-              </fieldset>
-            </form>
-            <Code as="footer">{`<form>
-  <fieldset class="grid">
-    <input 
-      name="login"
-      placeholder="Login"
-      aria-label="Login"
-      autocomplete="nickname"
-    >
-    <input
-      type="password"
-      name="password"
-      placeholder="Password"
-      aria-label="Password"
-      autocomplete="current-password"
-    >
-    <input
-      type="submit"
-      value="Login"
-    >
-  </fieldset>
 </form>`}</Code>
           </article>
         </section>
@@ -213,10 +168,81 @@ export default function Forms() {
   autoComplete="email"
   aria-label="Email"
   aria-describedby="email-helper"
->
+/>
 <small id="email-helper">
   We'll never share your email with anyone else.
 </small>`}</Code>
+          </article>
+        </section>
+
+        <section ref={usageWithGridRef}>
+          <Heading level={2} anchor="usage-with-grid">
+            Usage with grid
+          </Heading>
+          <p>
+            You can use <Code display="inline">.grid</Code> inside a form. See{" "}
+            <Link to="/docs/grid">Grid</Link>.
+          </p>
+          <article aria-label="Form and grid example" className="component">
+            <form onSubmit={preventDefault}>
+              <fieldset className="grid">
+                <input
+                  name="login"
+                  placeholder="Login"
+                  aria-label="Login"
+                  autoComplete="nickname"
+                />
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                  aria-label="Password"
+                  autoComplete="current-password"
+                />
+                <input type="submit" value="Log in" />
+              </fieldset>
+            </form>
+            <Code as="footer">{`<form>
+  <fieldset class="grid">
+    <input 
+      name="login"
+      placeholder="Login"
+      aria-label="Login"
+      autocomplete="nickname"
+    />
+    <input
+      type="password"
+      name="password"
+      placeholder="Password"
+      aria-label="Password"
+      autocomplete="current-password"
+    />
+    <input
+      type="submit"
+      value="Log in"
+    />
+  </fieldset>
+</form>`}</Code>
+          </article>
+        </section>
+
+        <section ref={usageWithGroupRef}>
+          <Heading level={2} anchor="usage-with-group">
+            Usage with group
+          </Heading>
+          <p>
+            You can use <Code display="inline">role="group"</Code> with form elements. See{" "}
+            <Link to="/docs/group">Group</Link>.
+          </p>
+          <article className="component" aria-label="Form group example">
+            <form role="group">
+              <input type="email" placeholder="Enter your email" />
+              <input type="submit" value="Subscribe" />
+            </form>
+            <Code as="footer">{`<form role="group">
+  <input type="email" placeholder="Enter your email" />
+  <input type="submit" value="Subscribe" />
+</form>`}</Code>
           </article>
         </section>
       </Content>

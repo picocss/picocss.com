@@ -60,9 +60,8 @@ export default function Rtl() {
 </footer>`}</Code>
           <p>
             That's all! We believe that CSS classes are essential when building complex websites
-            with varying styles, but why use them when the page only contains a single variant of
-            each tag? And above all, why block page rendering with JavaScript for such a simple
-            structure?
+            with varying styles, but why use classes for the default style? And above all, why block
+            page rendering with JavaScript for such a simple structure?
           </p>
           <p>
             From there, we added all form elements, HTML landmarks, typographic elements, and every

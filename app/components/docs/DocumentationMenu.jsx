@@ -1,4 +1,5 @@
 import { useState } from "react";
+import parse from "html-react-parser";
 
 import { useDocumentation } from "~/contexts/DocumentationContext";
 import { useNavigation } from "~/contexts/NavigationContext";
@@ -48,7 +49,9 @@ export default function Aside(props) {
           return (
             <details key={index} open={shouldOpen}>
               {/* Category button */}
-              <summary {...(shouldOpen && { "aria-current": true })}>{category.category}</summary>
+              <summary {...(shouldOpen && { "aria-current": true })}>
+                {parse(category.category)}
+              </summary>
               <ul>
                 {category.links.map((link, index) => {
                   const isThemeGeneratorLink = link.route === "/docs/theme-generator";
@@ -64,7 +67,7 @@ export default function Aside(props) {
                           : {})}
                         onClick={() => setMenuIsOpenOnMobile(false)}
                       >
-                        {link.label}
+                        {parse(link.label)}
                       </Link>
                     </li>
                   );

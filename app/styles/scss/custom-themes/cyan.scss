@@ -8,10 +8,10 @@ $colorName: "Cyan";
 @mixin light {
   #{$✨}text-selection-color: #{rgba($cyan-400, 0.25)};
   #{$✨}primary: #{$cyan-550};
-  #{$✨}primary-hover: #{$cyan-650};
-  #{$✨}primary-underline: #{rgba($cyan-550, 0.5)};
   #{$✨}primary-background: #{$cyan-550};
-  #{$✨}primary-background-hover: #{$cyan-600};
+  #{$✨}primary-underline: #{rgba($cyan-550, 0.5)};
+  #{$✨}primary-hover: #{$cyan-650};
+  #{$✨}primary-hover-background: #{$cyan-600};
   #{$✨}primary-focus: #{rgba($cyan-400, 0.25)};
   #{$✨}primary-inverse: #{$white};
 }
@@ -20,10 +20,10 @@ $colorName: "Cyan";
 @mixin dark {
   #{$✨}text-selection-color: #{rgba($cyan-350, 0.1875)};
   #{$✨}primary: #{$cyan-350};
-  #{$✨}primary-hover: #{$cyan-250};
-  #{$✨}primary-underline: #{rgba($cyan-350, 0.5)};
   #{$✨}primary-background: #{$cyan-550};
-  #{$✨}primary-background-hover: #{$cyan-500};
+  #{$✨}primary-underline: #{rgba($cyan-350, 0.5)};
+  #{$✨}primary-hover: #{$cyan-250};
+  #{$✨}primary-hover-background: #{$cyan-500};
   #{$✨}primary-focus: #{rgba($cyan-350, 0.25)};
   #{$✨}primary-inverse: #{$white};
 }

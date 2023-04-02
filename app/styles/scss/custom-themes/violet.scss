@@ -8,10 +8,10 @@ $colorName: "Violet";
 @mixin light {
   #{$✨}text-selection-color: #{rgba($violet-400, 0.25)};
   #{$✨}primary: #{$violet-550};
-  #{$✨}primary-hover: #{$violet-650};
-  #{$✨}primary-underline: #{rgba($violet-550, 0.5)};
   #{$✨}primary-background: #{$violet-600};
-  #{$✨}primary-background-hover: #{$violet-650};
+  #{$✨}primary-underline: #{rgba($violet-550, 0.5)};
+  #{$✨}primary-hover: #{$violet-650};
+  #{$✨}primary-hover-background: #{$violet-650};
   #{$✨}primary-focus: #{rgba($violet-400, 0.25)};
   #{$✨}primary-inverse: #{$white};
 }
@@ -20,10 +20,10 @@ $colorName: "Violet";
 @mixin dark {
   #{$✨}text-selection-color: #{rgba($violet-350, 0.1875)};
   #{$✨}primary: #{$violet-350};
-  #{$✨}primary-hover: #{$violet-250};
-  #{$✨}primary-underline: #{rgba($violet-350, 0.5)};
   #{$✨}primary-background: #{$violet-600};
-  #{$✨}primary-background-hover: #{$violet-550};
+  #{$✨}primary-underline: #{rgba($violet-350, 0.5)};
+  #{$✨}primary-hover: #{$violet-250};
+  #{$✨}primary-hover-background: #{$violet-550};
   #{$✨}primary-focus: #{rgba($violet-350, 0.25)};
   #{$✨}primary-inverse: #{$white};
 }

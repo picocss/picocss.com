@@ -198,7 +198,7 @@ export default function Dropdown() {
       (phase, index) =>
         `${index !== 0 ? "    " : "  "}<li>
       <label>
-        <input type="radio" name="phase" value="${phase.toLowerCase()}">
+        <input type="radio" name="phase" value="${phase.toLowerCase()}" />
         ${phase}
       </label>
     </li>${phase !== phasesOfMatter[phasesOfMatter.length - 1] ? "\n" : ""}`
@@ -218,7 +218,7 @@ export default function Dropdown() {
       (phase, index) =>
         `${index !== 0 ? "    " : "  "}<li>
       <label>
-        <input type="checkbox" name="${phase.toLowerCase()}">
+        <input type="checkbox" name="${phase.toLowerCase()}" />
         ${phase}
       </label>
     </li>${phase !== phasesOfMatter[phasesOfMatter.length - 1] ? "\n" : ""}`

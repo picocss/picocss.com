@@ -8,10 +8,10 @@ $colorName: "Orange";
 @mixin light {
   #{$✨}text-selection-color: #{rgba($orange-400, 0.25)};
   #{$✨}primary: #{$orange-550};
-  #{$✨}primary-hover: #{$orange-650};
-  #{$✨}primary-underline: #{rgba($orange-550, 0.5)};
   #{$✨}primary-background: #{$orange-500};
-  #{$✨}primary-background-hover: #{$orange-550};
+  #{$✨}primary-underline: #{rgba($orange-550, 0.5)};
+  #{$✨}primary-hover: #{$orange-650};
+  #{$✨}primary-hover-background: #{$orange-550};
   #{$✨}primary-focus: #{rgba($orange-400, 0.25)};
   #{$✨}primary-inverse: #{$white};
 }
@@ -20,10 +20,10 @@ $colorName: "Orange";
 @mixin dark {
   #{$✨}text-selection-color: #{rgba($orange-350, 0.1875)};
   #{$✨}primary: #{$orange-350};
-  #{$✨}primary-hover: #{$orange-250};
-  #{$✨}primary-underline: #{rgba($orange-350, 0.5)};
   #{$✨}primary-background: #{$orange-500};
-  #{$✨}primary-background-hover: #{$orange-450};
+  #{$✨}primary-underline: #{rgba($orange-350, 0.5)};
+  #{$✨}primary-hover: #{$orange-250};
+  #{$✨}primary-hover-background: #{$orange-450};
   #{$✨}primary-focus: #{rgba($orange-350, 0.25)};
   #{$✨}primary-inverse: #{$white};
 }

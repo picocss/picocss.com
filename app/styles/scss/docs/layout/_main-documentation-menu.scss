@@ -103,6 +103,21 @@ main {
     @media (min-width: #{map.get(map.get($breakpoints, "lg"), "breakpoint")}) {
       transition: none;
     }
+
+    nav {
+      details {
+        ul {
+          li {
+            a {
+              &:active,
+              &:focus {
+                color: var(#{$✨}primary-hover);
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 

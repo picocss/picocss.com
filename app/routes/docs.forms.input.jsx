@@ -89,12 +89,12 @@ export default function Input() {
             <input type="password" placeholder="Password" aria-label="Password" />
             <input type="tel" placeholder="Tel" aria-label="Tel" />
             <input type="url" placeholder="Url" aria-label="Url" />
-            <Code as="footer">{`<input type="text" placeholder="Text" aria-label="Text">
-<input type="email" placeholder="Email" aria-label="Email">
-<input type="number" placeholder="Number" aria-label="Number">
-<input type="password" placeholder="Password" aria-label="Password">
-<input type="tel" placeholder="Tel" aria-label="Tel">
-<input type="url" placeholder="Url" aria-label="Url">`}</Code>
+            <Code as="footer">{`<input type="text" placeholder="Text" aria-label="Text" />
+<input type="email" placeholder="Email" aria-label="Email" />
+<input type="number" placeholder="Number" aria-label="Number" />
+<input type="password" placeholder="Password" aria-label="Password" />
+<input type="tel" placeholder="Tel" aria-label="Tel" />
+<input type="url" placeholder="Url" aria-label="Url" />`}</Code>
           </article>
         </section>
 
@@ -109,10 +109,10 @@ export default function Input() {
             <input type="month" aria-label="Month" />
 
             <input type="time" aria-label="Time" />
-            <Code as="footer">{`<input type="date" aria-label="Date">
-<input type="datetime-local" aria-label="Datetime local">
-<input type="month" aria-label="Month">
-<input type="time" aria-label="Time">`}</Code>
+            <Code as="footer">{`<input type="date" aria-label="Date" />
+<input type="datetime-local" aria-label="Datetime local" />
+<input type="month" aria-label="Month" />
+<input type="time" aria-label="Time" />`}</Code>
           </article>
         </section>
 
@@ -129,7 +129,7 @@ export default function Input() {
   type="search"
   placeholder="Search"
   aria-label="Search"
->`}</Code>
+/>`}</Code>
           </article>
         </section>
 
@@ -147,7 +147,7 @@ export default function Input() {
   type="color"
   value="#ff9500"
   aria-label="Color picker"
->`}</Code>
+/>`}</Code>
           </article>
         </section>
 
@@ -164,7 +164,7 @@ export default function Input() {
           </p>
           <article aria-label="File input example" className="component">
             <input type="file" />
-            <Code as="footer" className="small">{`<input type="file">`}</Code>
+            <Code as="footer" className="small">{`<input type="file" />`}</Code>
           </article>
         </section>
 
@@ -179,7 +179,7 @@ export default function Input() {
   placeholder="Disabled"
   aria-label="Disabled input"
   disabled
->`}</Code>
+/>`}</Code>
           </article>
         </section>
 
@@ -194,7 +194,7 @@ export default function Input() {
   value="Read-only"
   aria-label="Read-only input"
   readonly
->`}</Code>
+/>`}</Code>
           </article>
         </section>
 
@@ -212,13 +212,13 @@ export default function Input() {
   type="text"
   value="Valid"
   aria-invalid="false"
->
+/>
 
 <input
   type="text"
   value="Invalid"
   aria-invalid="true"
->`}</Code>
+/>`}</Code>
           </article>
 
           <p>
@@ -247,7 +247,7 @@ export default function Input() {
   value="Valid"
   aria-invalid="false"
   aria-describedby="valid-helper"
->
+/>
 <small id="valid-helper">Looks good!</small>
 
 <input
@@ -255,7 +255,7 @@ export default function Input() {
   value="Invalid"
   aria-invalid="true"
   aria-describedby="invalid-helper"
->
+/>
 <small id="invalid-helper">
   Please provide a valid value!
 </small>`}</Code>

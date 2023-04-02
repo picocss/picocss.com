@@ -8,10 +8,10 @@ $colorName: "Slate";
 @mixin light {
   #{$✨}text-selection-color: #{rgba($slate-400, 0.25)};
   #{$✨}primary: #{$slate-550};
-  #{$✨}primary-hover: #{$slate-650};
-  #{$✨}primary-underline: #{rgba($slate-550, 0.5)};
   #{$✨}primary-background: #{$slate-600};
-  #{$✨}primary-background-hover: #{$slate-650};
+  #{$✨}primary-underline: #{rgba($slate-550, 0.5)};
+  #{$✨}primary-hover: #{$slate-650};
+  #{$✨}primary-hover-background: #{$slate-650};
   #{$✨}primary-focus: #{rgba($slate-400, 0.25)};
   #{$✨}primary-inverse: #{$white};
 }
@@ -20,10 +20,10 @@ $colorName: "Slate";
 @mixin dark {
   #{$✨}text-selection-color: #{rgba($slate-350, 0.1875)};
   #{$✨}primary: #{$slate-350};
-  #{$✨}primary-hover: #{$slate-250};
-  #{$✨}primary-underline: #{rgba($slate-350, 0.5)};
   #{$✨}primary-background: #{$slate-600};
-  #{$✨}primary-background-hover: #{$slate-550};
+  #{$✨}primary-underline: #{rgba($slate-350, 0.5)};
+  #{$✨}primary-hover: #{$slate-250};
+  #{$✨}primary-hover-background: #{$slate-550};
   #{$✨}primary-focus: #{rgba($slate-350, 0.25)};
   #{$✨}primary-inverse: #{$white};
 }
