@@ -4,22 +4,20 @@
 /docs/buttons.html /docs/button 301
 /docs/cards.html /docs/card 301
 /docs/classless.html /docs/classless 301
+/docs/containers.html /docs/container 301
 /docs/customization.html /docs/theme-generator 301
 /docs/dropdowns.html /docs/dropdown 301
-/docs/grid.html /docs/grid 301
-/docs/navs.html /docs/nav 301
-/docs/containers.html /docs/container 301
-/docs/scroller.html /docs/scroller 301
-/docs/themes.html /docs/color-schemes 301
-/docs/typography.html /docs/typography 301
-/docs/rtl.html /docs/rtl 301
-/docs/modal.html /docs/modal 301
-/docs/loading.html /docs/loading 301
-/docs/progress.html /docs/progress 301
 /docs/forms.html /docs/forms 301
+/docs/grid.html /docs/grid 301
+/docs/loading.html /docs/loading 301
+/docs/modal.html /docs/modal 301
+/docs/navs.html /docs/nav 301
+/docs/progress.html /docs/progress 301
+/docs/rtl.html /docs/rtl 301
+/docs/scroller.html /docs/scroller 301
 /docs/tables.html /docs/table 301
+/docs/themes.html /docs/color-schemes 301
+/docs/third-party/ /docs 301
 /docs/tooltips.html /docs/tooltip 301
-
-# Todo
-# third-party
-# we-love-classes.html
+/docs/typography.html /docs/typography 301
+/docs/we-love-classes.html /docs/mission 301
