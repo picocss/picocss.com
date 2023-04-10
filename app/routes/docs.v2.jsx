@@ -176,7 +176,8 @@ export default function Classless() {
 
           <Heading level={3}>Grid</Heading>
           <p>
-            Grid columns now collapse on small devices (<Code display="inline">{`<768px`}</Code>).
+            <Link to="/docs/grid">Grid</Link> columns now collapse on small devices (
+            <Code display="inline">{`<768px`}</Code>).
           </p>
         </section>
       </Content>

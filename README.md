@@ -1,22 +1,15 @@
-# Welcome to Remix!
+# Pico CSS Documentation
 
-- [Remix Docs](https://remix.run/docs)
+Pico CSS uses [Remix](https://remix.run) for its documentation.
 
-## Development
+To run the project locally, first install the dependencies:
 
-You will be utilizing Wrangler for local development to emulate the Cloudflare runtime. This is already wired up in your package.json as the `dev` script:
-
-```sh
-# start the remix dev server and wrangler
-npm run dev
+```bash
+yarn
 ```
 
-Open up [http://127.0.0.1:8788](http://127.0.0.1:8788) and you should be ready to go!
+Next, run the development server:
 
-## Deployment
-
-Cloudflare Pages are currently only deployable through their Git provider integrations.
-
-If you don't already have an account, then [create a Cloudflare account here](https://dash.cloudflare.com/sign-up/pages) and after verifying your email address with Cloudflare, go to your dashboard and follow the [Cloudflare Pages deployment guide](https://developers.cloudflare.com/pages/framework-guides/deploy-anything).
-
-Configure the "Build command" should be set to `npm run build`, and the "Build output directory" should be set to `public`.
+```bash
+yarn dev
+```

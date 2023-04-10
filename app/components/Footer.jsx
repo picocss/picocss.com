@@ -26,12 +26,12 @@ export default forwardRef(function Footer(props, ref) {
           </p>
           <p>
             Code licensed{" "}
-            <Link to="#" className="secondary">
+            <Link to="https://github.com/picocss/pico/blob/master/LICENSE.md" className="secondary">
               MIT
             </Link>
             , docs{" "}
-            <Link to="#" className="secondary">
-              CC BY 3.0
+            <Link to="https://creativecommons.org/licenses/by-sa/4.0/" className="secondary">
+              CC BY-SA 4.0
             </Link>
             .
           </p>
