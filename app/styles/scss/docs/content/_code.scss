@@ -6,6 +6,11 @@
  * Docs: Code
  */
 
+pre,
+code {
+  font-family: "Fira Code", var(#{$✨}font-family-monospace);
+}
+
 // All code blocks
 .code {
   position: relative;
@@ -19,7 +24,6 @@
     min-width: min-content;
     margin-right: var(#{$✨}block-spacing-horizontal);
     padding: 0;
-    font-family: "Fira Code", var(#{$✨}font-family);
 
     @media (min-width: map.get(map.get($breakpoints, "lg"), "breakpoint")) {
       font-size: 16px;

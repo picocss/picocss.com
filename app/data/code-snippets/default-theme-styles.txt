@@ -2,7 +2,10 @@
  * Styles
  */
 :root {
-  --pico-font-family: system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu", "Cantarell", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --pico-font-family-emoji: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --pico-font-family-sans-serif: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, var(--pico-font-family-emoji);
+  --pico-font-family-monospace: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace, var(--pico-font-family-emoji);
+  --pico-font-family: var(--pico-font-family-sans-serif);
   --pico-line-height: 1.5;
   --pico-font-weight: 400;
   --pico-font-size: 100%;
@@ -19,6 +22,9 @@
   --pico-grid-row-gap: var(--pico-spacing);
   --pico-form-element-spacing-vertical: 0.75rem;
   --pico-form-element-spacing-horizontal: 1rem;
+  --pico-group-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  --pico-group-box-shadow-focus-with-button: 0 0 0 var(--pico-outline-width) var(--pico-primary-focus);
+  --pico-group-box-shadow-focus-with-input: 0 0 0 0.0625rem var(--pico-form-element-border-color);
   --pico-modal-overlay-backdrop-filter: blur(0.375rem);
   --pico-nav-element-spacing-vertical: 1rem;
   --pico-nav-element-spacing-horizontal: 0.5rem;
@@ -217,7 +223,7 @@ pre,
 code,
 kbd,
 samp {
-  --pico-font-family: "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --pico-font-family: var(--pico-font-family-monospace);
 }
 
 kbd {
@@ -259,12 +265,6 @@ nav details.dropdown summary:focus-visible {
   --pico-border-radius: 5rem;
 }
 
-[role=search],
-[role=group] {
-  --pico-group-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-  --pico-group-box-shadow-focus-with-button: 0 0 0 var(--pico-outline-width) var(--pico-primary-focus);
-  --pico-group-box-shadow-focus-with-input: 0 0 0 0.0625rem var(--pico-form-element-border-color);
-}
 [role=search]:has(button.secondary:focus,
 [type=submit].secondary:focus,
 [type=button].secondary:focus,

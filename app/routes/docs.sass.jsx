@@ -161,7 +161,7 @@ export default function Sass() {
           <ol>
             <li>Exclude the default theme from compilation,</li>
             <li>
-              Import your custom theme (you can duplicate
+              Import your custom theme (you can duplicate{" "}
               <Link to={`${githubTreeBaseUrl}scss/themes/`}>Pico's default theme</Link> as a
               starting point and customize it to match your brand's style).
             </li>

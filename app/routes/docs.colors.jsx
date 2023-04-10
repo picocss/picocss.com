@@ -155,7 +155,7 @@ export default function Colors() {
           </p>
           <Code className="small">{`<link rel="stylesheet" href="css/pico.colors.min.css" />`}</Code>
           <p>
-            Also available on <Link to={cdnBaseUrl}>unpkg CDN</Link>:
+            Also available on <Link to={cdnBaseUrl}>jsDelivr CDN</Link>:
           </p>
           <Code>{`<link
   rel="stylesheet"

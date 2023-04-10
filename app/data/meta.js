@@ -14,17 +14,17 @@ export default function meta() {
       all: [
         {
           version: "2.0.0-alpha",
-          url: "https://picocss.com/docs",
+          url: "https://v2.picocss.com/docs",
         },
         {
-          version: "1.5.7",
-          url: "https://v1.picocss.com/docs/",
+          version: "1.5.9",
+          url: "https://picocss.com/docs/",
         },
       ],
     },
 
     // CDN values
-    cdnBaseUrl: "https://unpkg.com/@picocss/pico@2/",
+    cdnBaseUrl: "https://cdn.jsdelivr.net/npm/@picocss/pico@2/",
 
     // Github values
     githubRepo: "https://github.com/picocss/pico",

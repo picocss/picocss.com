@@ -65,6 +65,7 @@ export const documentationMenu = [
   {
     category: "About",
     links: [
+      { label: "What’s new in v2?", route: "/docs/v2" },
       { label: "Mission", route: "/docs/mission" },
       { label: "Usage scenarios", route: "/docs/usage-scenarios" },
       { label: "Brand", route: "/docs/brand" },

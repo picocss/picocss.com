@@ -1,0 +1,13 @@
+@use "sass:map";
+@use "settings" as *;
+
+/**
+ * Page: v2
+ */
+
+main#v2 {
+  h3 {
+    font-weight: 400;
+    font-size: 1.25rem;
+  }
+}

@@ -61,7 +61,10 @@ export default function Classless() {
         <section ref={introductionRef}>
           <p>
             Pico provides a <Code display="inline">.classless</Code> version (
-            <Link to="https://picocss.com/examples/classless/">example</Link>).
+            <Link to="https://codesandbox.io/s/github/picocss/examples/tree/master/v1-classless">
+              example
+            </Link>
+            ).
           </p>
           <p>
             In this version, <Code display="inline">{`<header>`}</Code>,{" "}
@@ -108,7 +111,7 @@ body > footer {
 
           <p>
             These <Code display="inline">.classless</Code> versions are also available on{" "}
-            <a href="https://unpkg.com/@picocss/pico@latest/">unpkg CDN</a>:
+            <a href={cdnBaseUrl}>jsDelivr CDN</a>:
           </p>
           <Code>{`<!-- Centered viewport --> 
 <link

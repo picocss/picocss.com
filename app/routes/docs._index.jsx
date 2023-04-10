@@ -92,7 +92,7 @@ export default function Docs() {
             Install from CDN
           </Heading>
           <p>
-            Alternatively, you can use <Link to={cdnBaseUrl}>unpkg CDN</Link> to link pico.css
+            Alternatively, you can use <Link to={cdnBaseUrl}>jsDelivr CDN</Link> to link pico.css
           </p>
           <Code>{`<link
   rel="stylesheet"

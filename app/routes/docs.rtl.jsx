@@ -24,7 +24,10 @@ export default function Rtl() {
           <p>
             To enable RTL (Right-To-Left) with Pico, you need to set <code>dir="rtl"</code> on the{" "}
             <Code display="inline">{`<html>`}</Code> element (
-            <Link to="https://picocss.com/examples/preview-rtl/">example</Link>).
+            <Link to="https://codesandbox.io/s/github/picocss/examples/tree/master/v1-preview-rtl">
+              example
+            </Link>
+            ).
           </p>
           <Code>{`<!doctype html>
 <html dir="rtl" lang="ar">

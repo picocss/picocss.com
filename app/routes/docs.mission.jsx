@@ -32,8 +32,8 @@ export default function Mission() {
           <p>Here's our maxi-minimalist story.</p>
           <p>Pico started as a solution to two minor frustrations:</p>
           <blockquote>
-            “I don’t want to load a huge CSS framework only to build a landing page with a title, a
-            description, and a small signup form.”
+            “I don’t want to import a huge CSS framework only to build a landing page with a title,
+            a description, and a small signup form.”
             <footer>
               <cite>— Frustrated frontend developer</cite>
             </footer>
@@ -59,9 +59,9 @@ export default function Mission() {
   This page should be fast enough to please Google's algorithm.
 </footer>`}</Code>
           <p>
-            That's all! We believe that CSS classes are essential when building complex websites
-            with varying styles, but why use classes for the default style? And above all, why block
-            page rendering with JavaScript for such a simple structure?
+            That's all! We believe that CSS classes are essential when building complex websites,
+            but why use classes for the default style? And above all, why block page rendering with
+            JavaScript for such a simple structure?
           </p>
           <p>
             From there, we added all form elements, HTML landmarks, typographic elements, and every
