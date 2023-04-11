@@ -78,7 +78,7 @@ export default function Docs() {
             Install manually
           </Heading>
           <p>
-            <Link to="https://github.com/picocss/pico/archive/refs/heads/master.zip">
+            <Link to="https://github.com/picocss/pico/archive/refs/heads/v2.zip">
               Download Pico
             </Link>{" "}
             and link <Code display="inline">{`/css/pico.min.css`}</Code> in the{" "}
