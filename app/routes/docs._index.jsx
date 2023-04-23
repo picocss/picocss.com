@@ -105,10 +105,10 @@ export default function Docs() {
             Install with NPM
           </Heading>
           <Code language="bash" className="small">
-            npm install @picocss/pico
+            npm install @picocss/pico@next
           </Code>
           <Code language="bash" className="small">
-            yarn add @picocss/pico
+            yarn add @picocss/pico@next
           </Code>
         </section>
 
