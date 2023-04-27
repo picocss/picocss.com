@@ -63,7 +63,7 @@ export default function Forms() {
         <section aria-label="Introduction" ref={introductionRef}>
           <p>
             Inputs are <Code display="inline" language="css">{`width: 100%;`}</Code> by default and
-            are the same size as the buttons to build consitent forms.
+            are the same size as the buttons to build consistent forms.
           </p>
           <article aria-label="Form example" className="component">
             <form onSubmit={preventDefault}>
