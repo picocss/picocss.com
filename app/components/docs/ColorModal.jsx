@@ -126,9 +126,9 @@ export default function ColorModal({ color, isOpen, onClose, setSelectedColor, .
           <Code className="small">{rgbValue}</Code>
           <p>Sass variable</p>
           <Code className="small">{`$${color.family}-${color.shade}`}</Code>
-          <p>Color utility classe</p>
+          <p>Color utility class</p>
           <Code className="small">{`pico-color-${color.family}-${color.shade}`}</Code>
-          <p>Background utility classe</p>
+          <p>Background utility class</p>
           <Code className="small">{`pico-background-${color.family}-${color.shade}`}</Code>
           <p>CSS variable</p>
           <Code className="small">{`var(--pico-color-${color.family}-${color.shade})`}</Code>
