@@ -30,11 +30,14 @@ export function links() {
   return [{ rel: "stylesheet", href: colorUtilities }];
 }
 
-export const meta = () => ({
-  title: `Colors ${titleSuffix}`,
-  description:
-    "Pico comes with 380 manually crafted colors to help you personalize your brand design system.",
-});
+export const meta = () => [
+  { title: `Colors ${titleSuffix}` },
+  {
+    name: "description",
+    content:
+      "Pico comes with 380 manually crafted colors to help you personalize your brand design system.",
+  },
+];
 
 const DownloadColorPalette = () => {
   const [hrefColorPalette, setHrefColorPalette] = useState(null);

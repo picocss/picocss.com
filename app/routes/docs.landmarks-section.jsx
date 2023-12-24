@@ -10,11 +10,14 @@ import Heading from "~/components/Heading";
 
 const { titleSuffix } = metaData();
 
-export const meta = () => ({
-  title: `Landmarks & section ${titleSuffix}`,
-  description:
-    "Structure your pages with semantic landmarks and sections for better accessibility and graceful spacings.",
-});
+export const meta = () => [
+  { title: `Landmarks & section ${titleSuffix}` },
+  {
+    name: "description",
+    content:
+      "Structure your pages with semantic landmarks and sections for better accessibility and graceful spacings.",
+  },
+];
 
 export default function LandmarksAndSection() {
   const landmarksRef = useRef();

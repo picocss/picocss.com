@@ -10,10 +10,13 @@ import Link from "~/components/Link";
 
 const { titleSuffix } = metaData();
 
-export const meta = () => ({
-  title: `Select ${titleSuffix}`,
-  description: "The native <select> is styled like the input for consistency.",
-});
+export const meta = () => [
+  { title: `Select ${titleSuffix}` },
+  {
+    name: "description",
+    content: "The native <select> is styled like the input for consistency.",
+  },
+];
 
 export default function Select() {
   const syntaxRef = useRef();

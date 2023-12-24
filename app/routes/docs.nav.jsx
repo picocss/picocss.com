@@ -12,10 +12,13 @@ import TwitterIcon from "~/components/icons/Twitter";
 
 const { titleSuffix } = metaData();
 
-export const meta = () => ({
-  title: `Nav ${titleSuffix}`,
-  description: "The essential navbar component in pure semantic HTML.",
-});
+export const meta = () => [
+  { title: `Nav ${titleSuffix}` },
+  {
+    name: "description",
+    content: "The essential navbar component in pure semantic HTML.",
+  },
+];
 
 const brandLabel = "Acme Corp";
 const menuItems = ["About", "Services", "Products"];

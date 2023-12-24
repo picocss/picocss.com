@@ -12,11 +12,14 @@ import { useModal } from "~/contexts/ModalContext";
 
 const { titleSuffix } = metaData();
 
-export const meta = () => ({
-  title: `Modal ${titleSuffix}`,
-  description:
-    "The classic modal component with graceful spacings across devices and viewports, using the semantic HTML tag <dialog>.",
-});
+export const meta = () => [
+  { title: `Modal ${titleSuffix}` },
+  {
+    name: "description",
+    content:
+      "The classic modal component with graceful spacings across devices and viewports, using the semantic HTML tag <dialog>.",
+  },
+];
 
 const ThankYouForRegisteringExample = ({ preventDefault, ...props }) => {
   return (

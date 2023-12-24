@@ -10,11 +10,14 @@ import Link from "~/components/Link";
 
 const { titleSuffix } = metaData();
 
-export const meta = () => ({
-  title: `Typography ${titleSuffix}`,
-  description:
-    "All typographic elements are responsive and scale gracefully across devices and viewports.",
-});
+export const meta = () => [
+  { title: `Typography ${titleSuffix}` },
+  {
+    name: "description",
+    content:
+      "All typographic elements are responsive and scale gracefully across devices and viewports.",
+  },
+];
 
 export default function Typography() {
   const fontSizesRef = useRef();

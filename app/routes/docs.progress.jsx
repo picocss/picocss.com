@@ -9,10 +9,13 @@ import Code from "~/components/Code";
 
 const { titleSuffix } = metaData();
 
-export const meta = () => ({
-  title: `Progress ${titleSuffix}`,
-  description: "The progress bar element in pure HTML, without JavaScript.",
-});
+export const meta = () => [
+  { title: `Progress ${titleSuffix}` },
+  {
+    name: "description",
+    content: "The progress bar element in pure HTML, without JavaScript.",
+  },
+];
 
 // Generate a random number between 5 and 95
 const randomProgressValue = () => Math.floor(Math.random() * 90) + 5;

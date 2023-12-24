@@ -12,10 +12,13 @@ import Plus from "~/components/icons/Plus";
 
 const { titleSuffix } = metaData();
 
-export const meta = () => ({
-  title: `Grid ${titleSuffix}`,
-  description: "Create minimal responsive layouts with .grid to enable auto-layout columns.",
-});
+export const meta = () => [
+  { title: `Grid ${titleSuffix}` },
+  {
+    name: "description",
+    content: "Create minimal responsive layouts with .grid to enable auto-layout columns.",
+  },
+];
 
 export default function Grid() {
   const syntaxRef = useRef();

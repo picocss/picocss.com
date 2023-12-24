@@ -10,10 +10,13 @@ import Link from "~/components/Link";
 
 const { titleSuffix } = metaData();
 
-export const meta = () => ({
-  title: `Group ${titleSuffix}`,
-  description: 'Stack forms elements and buttons horizontally with role="group" and role="search".',
-});
+export const meta = () => [
+  { title: `Group ${titleSuffix}` },
+  {
+    name: "description",
+    content: "Stack forms elements and buttons horizontally with role='group' and role='search'.",
+  },
+];
 
 export default function Group() {
   const preventDefault = (e) => e.preventDefault();

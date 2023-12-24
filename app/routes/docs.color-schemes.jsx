@@ -9,11 +9,14 @@ import { usePage } from "~/contexts/PageContext";
 import metaData from "~/data/meta";
 const { titleSuffix } = metaData();
 
-export const meta = () => ({
-  title: `Color schemes ${titleSuffix}`,
-  description:
-    "Choose from two consistent color schemes that can be automatically enabled based on users' preferences.",
-});
+export const meta = () => [
+  { title: `Color schemes ${titleSuffix}` },
+  {
+    name: "description",
+    content:
+      "Choose from two consistent color schemes that can be automatically enabled based on users' preferences.",
+  },
+];
 
 export default function ColorSchemes() {
   const { pageTheme, switchTheme } = usePage();

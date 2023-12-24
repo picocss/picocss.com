@@ -10,10 +10,13 @@ import Link from "~/components/Link";
 
 const { titleSuffix } = metaData();
 
-export const meta = () => ({
-  title: `Input ${titleSuffix}`,
-  description: "All input types are consistently styled and come with validation states.",
-});
+export const meta = () => [
+  { title: `Input ${titleSuffix}` },
+  {
+    name: "description",
+    content: "All input types are consistently styled and come with validation states.",
+  },
+];
 
 export default function Input() {
   const syntaxRef = useRef();

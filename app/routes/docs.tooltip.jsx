@@ -10,10 +10,13 @@ import Link from "~/components/Link";
 import metaData from "~/data/meta";
 const { titleSuffix } = metaData();
 
-export const meta = () => ({
-  title: `Tooltip ${titleSuffix}`,
-  description: "Enable tooltips everywhere, without JavaScript.",
-});
+export const meta = () => [
+  { title: `Tooltip ${titleSuffix}` },
+  {
+    name: "description",
+    content: "Enable tooltips everywhere, without JavaScript.",
+  },
+];
 
 export default function Tooltip() {
   const syntaxRef = useRef();

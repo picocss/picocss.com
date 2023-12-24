@@ -7,10 +7,13 @@ import Link from "~/components/Link";
 
 const { titleSuffix } = metaData();
 
-export const meta = () => ({
-  title: `Loading ${titleSuffix}`,
-  description: 'Add a loading indicator with aria-busy="true".',
-});
+export const meta = () => [
+  { title: `Loading ${titleSuffix}` },
+  {
+    name: "description",
+    content: "Add a loading indicator with aria-busy='true'.",
+  },
+];
 
 export default function Loading() {
   return (

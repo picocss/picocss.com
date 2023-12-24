@@ -15,11 +15,14 @@ import { removeLines } from "~/utils";
 
 const { titleSuffix } = metaData();
 
-export const meta = () => ({
-  title: `CSS variables ${titleSuffix}`,
-  description:
-    "Customize Pico's design system with over 130 CSS variables to create a unique look and feel.",
-});
+export const meta = () => [
+  { title: `CSS variables ${titleSuffix}` },
+  {
+    name: "description",
+    content:
+      "Customize Pico's design system with over 130 CSS variables to create a unique look and feel.",
+  },
+];
 
 export function links() {
   return [

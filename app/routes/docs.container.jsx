@@ -10,11 +10,13 @@ import Link from "~/components/Link";
 
 const { titleSuffix } = metaData();
 
-export const meta = () => ({
-  title: `Container ${titleSuffix}`,
-  description:
-    "Use .container for a centered viewport or .container-fluid for a full-width layout.",
-});
+export const meta = () => [
+  { title: `Container ${titleSuffix}` },
+  {
+    name: "description",
+    content: "Use .container for a centered viewport or .container-fluid for a full-width layout.",
+  },
+];
 
 const breakpoints = [
   {

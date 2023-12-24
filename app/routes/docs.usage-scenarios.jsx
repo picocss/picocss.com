@@ -5,10 +5,13 @@ import Header from "~/components/docs/Header";
 
 const { titleSuffix } = metaData();
 
-export const meta = () => ({
-  title: `Usage scenarios ${titleSuffix}`,
-  description: "How does Pico fit into your project?",
-});
+export const meta = () => [
+  { title: `Usage scenarios ${titleSuffix}` },
+  {
+    name: "description",
+    content: "How does Pico fit into your project?",
+  },
+];
 
 export default function UsageScenarios() {
   return (
@@ -60,7 +63,7 @@ export default function UsageScenarios() {
                 <tr>
                   <td>Small web projects</td>
                   <td className="scale-color-2">Low/Medium</td>
-                  <td className="scale-color-5">High</td>
+                  <td className="scale-color-3">Medium</td>
                   <td className="muted">
                     Small business websites, portfolios, and personal websites
                   </td>

@@ -6,11 +6,14 @@ import Code from "~/components/Code";
 
 const { titleSuffix } = metaData();
 
-export const meta = () => ({
-  title: `Horizontal scroller ${titleSuffix}`,
-  description:
-    "<figure> acts as a container to make any content scrollable horizontally with minimal and semantic HTML.",
-});
+export const meta = () => [
+  { title: `Horizontal scroller ${titleSuffix}` },
+  {
+    name: "description",
+    content:
+      "<figure> acts as a container to make any content scrollable horizontally with minimal and semantic HTML.",
+  },
+];
 
 export default function Scroller() {
   return (

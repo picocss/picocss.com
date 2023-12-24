@@ -2,10 +2,15 @@ node_modules
 
 # Remix
 .cache
-functions/\[\[path\]\].js
-functions/\[\[path\]\].js.map
 public/build
 .env
+
+# Cloudflare
+functions/\[\[path\]\].js
+functions/\[\[path\]\].js.map
+/functions/metafile.*
+/functions/version.txt
+.dev.vars
 
 # Styles
 app/styles/css/*
@@ -14,3 +19,4 @@ app/styles/css/*
 # System files
 .DS_Store
 Thumbs.db
+

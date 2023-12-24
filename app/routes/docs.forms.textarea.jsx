@@ -9,10 +9,13 @@ import Code from "~/components/Code";
 
 const { titleSuffix } = metaData();
 
-export const meta = () => ({
-  title: `Textarea ${titleSuffix}`,
-  description: "The native <textarea> is styled like the input for consistency.",
-});
+export const meta = () => [
+  { title: `Textarea ${titleSuffix}` },
+  {
+    name: "description",
+    content: "The native <textarea> is styled like the input for consistency.",
+  },
+];
 
 export default function Textarea() {
   const syntaxRef = useRef();

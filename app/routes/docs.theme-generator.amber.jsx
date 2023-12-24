@@ -6,10 +6,13 @@ import ThemePreview from "~/components/docs/ThemePreview";
 
 const colorName = "Amber";
 
-export const meta = () => ({
-  title: themeGeneratorTitle(colorName),
-  description: themeGeneratorDescription(colorName),
-});
+export const meta = () => [
+  { title: themeGeneratorTitle(colorName) },
+  {
+    name: "description",
+    content: themeGeneratorDescription(colorName),
+  },
+];
 
 export function links() {
   return [{ rel: "stylesheet", href: cssStyle }];
