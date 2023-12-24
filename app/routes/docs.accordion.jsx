@@ -69,10 +69,10 @@ export default function Accordion() {
                   <li>
                     They are known for their powerful hind legs, which they use to hop around.
                   </li>
-                  <li>Kangaroos can't walk backwards due to the shape of their legs and tail.</li>
+                  <li>Kangaroos can’t walk backwards due to the shape of their legs and tail.</li>
                   <li>
                     Baby kangaroos, called joeys, are born very small and undeveloped and must crawl
-                    into their mother's pouch to continue developing.
+                    into their mother’s pouch to continue developing.
                   </li>
                   <li>Some species of kangaroos can leap up to 30 feet in a single bound.</li>
                 </ul>
@@ -134,7 +134,7 @@ export default function Accordion() {
               <p>
                 Ostriches are the largest birds in the world and are native to Africa. They have
                 long, powerful legs that they use to run at high speeds, and they can reach up to 45
-                miles per hour. An ostrich's eye is bigger than its brain, which is unusual for
+                miles per hour. An ostrich’s eye is bigger than its brain, which is unusual for
                 birds.
               </p>
             </details>

@@ -145,7 +145,7 @@ export default function Checkboxes() {
   <input type="checkbox" id="swahili" name="swahili" />
   <label htmlFor="swahili">Swahili</label>
   <input type="checkbox" id="navi " name="navi" disabled />
-  <label htmlFor="navi" aria-disabled="true">
+  <label htmlFor="navi" aria-disabled="true">Na'vi</label>
 </fieldset>`}</Code>
           </article>
         </section>

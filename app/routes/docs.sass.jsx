@@ -19,7 +19,7 @@ export const meta = () => [
   {
     name: "description",
     content:
-      "Build your own minimal design system by compiling a custom version of Pico's CSS framework with Sass.",
+      "Build your own minimal design system by compiling a custom version of Pico CSS framework with Sass.",
   },
 ];
 
@@ -36,7 +36,7 @@ export default function Sass() {
         description={
           <>
             Build your own minimal design&nbsp;system by compiling a custom version of
-            Pico's&nbsp;CSS&nbsp;framework with&nbsp;<Link to="https://sass-lang.com/">SASS</Link>.
+            Pico&nbsp;CSS&nbsp;framework with&nbsp;<Link to="https://sass-lang.com/">SASS</Link>.
           </>
         }
       />
@@ -165,8 +165,8 @@ export default function Sass() {
             <li>Exclude the default theme from compilation,</li>
             <li>
               Import your custom theme (you can duplicate{" "}
-              <Link to={`${githubTreeBaseUrl}scss/themes/`}>Pico's default theme</Link> as a
-              starting point and customize it to match your brand's style).
+              <Link to={`${githubTreeBaseUrl}scss/themes/`}>Pico’s default theme</Link> as a
+              starting point and customize it to match your brand’s style).
             </li>
           </ol>
           <Code language="scss">{`// Your custom theme

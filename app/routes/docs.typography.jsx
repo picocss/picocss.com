@@ -253,13 +253,13 @@ export default function Typography() {
             </Link>
           </p>
           <p>
-            To ensure that the user's default font size is followed, the base font size is defined
-            as a percentage that grows with the user's screen size, while HTML elements are defined
+            To ensure that the user’s default font size is followed, the base font size is defined
+            as a percentage that grows with the user’s screen size, while HTML elements are defined
             in <Code display="inline">rem</Code>.
           </p>
           <p>
             Since <Code display="inline">rem</Code> is a multiplier of the HTML document font size,
-            all HTML element's font sizes grow proportionally with the size of the user's screen.
+            all HTML element’s font sizes grow proportionally with the size of the user’s screen.
           </p>
         </section>
 
@@ -360,7 +360,7 @@ export default function Typography() {
           </Heading>
           <blockquote>
             “Design is a funny word. Some people think design means how it looks. But of course, if
-            you dig deeper, it's really how it works.”
+            you dig deeper, it’s really how it works.”
             <footer>
               <cite>— Steve Jobs</cite>
             </footer>
