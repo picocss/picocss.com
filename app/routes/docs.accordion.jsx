@@ -10,11 +10,14 @@ import Link from "~/components/Link";
 
 const { titleSuffix } = metaData();
 
-export const meta = () => ({
-  title: `Accordions ${titleSuffix}`,
-  description:
-    "Toggle sections of content in pure HTML, without JavaScript, using minimal and semantic markup.",
-});
+export const meta = () => [
+  { title: `Accordions ${titleSuffix}` },
+  {
+    name: "description",
+    content:
+      "Toggle sections of content in pure HTML, without JavaScript, using minimal and semantic markup.",
+  },
+];
 
 export default function Accordion() {
   const overviewRef = useRef();

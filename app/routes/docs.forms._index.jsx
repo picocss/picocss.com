@@ -10,11 +10,14 @@ import TableOfContents from "~/components/docs/TableOfContents";
 
 const { titleSuffix } = metaData();
 
-export const meta = () => ({
-  title: `Forms overview ${titleSuffix}`,
-  description:
-    "All form elements are fully responsive with pure semantic HTML, enabling forms to scale gracefully across devices and viewports.",
-});
+export const meta = () => [
+  { title: `Forms overview ${titleSuffix}` },
+  {
+    name: "description",
+    content:
+      "All form elements are fully responsive with pure semantic HTML, enabling forms to scale gracefully across devices and viewports.",
+  },
+];
 
 export default function Forms() {
   const preventDefault = (e) => e.preventDefault();

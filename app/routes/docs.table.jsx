@@ -12,11 +12,14 @@ import { usePage } from "~/contexts/PageContext";
 
 const { titleSuffix } = metaData();
 
-export const meta = () => ({
-  title: `Table ${titleSuffix}`,
-  description:
-    "Clean and minimal styles for <table>, providing consistent spacings and a minimal unbordered look.",
-});
+export const meta = () => [
+  { title: `Table ${titleSuffix}` },
+  {
+    name: "description",
+    content:
+      "Clean and minimal styles for <table>, providing consistent spacings and a minimal unbordered look.",
+  },
+];
 
 const Table = ({ theadProps, tbodyProps, tfootProps, ...props }) => (
   <table {...props}>

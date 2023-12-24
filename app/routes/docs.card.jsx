@@ -9,11 +9,14 @@ import Heading from "~/components/Heading";
 
 const { titleSuffix } = metaData();
 
-export const meta = () => ({
-  title: `Card ${titleSuffix}`,
-  description:
-    "Create flexible cards with a semantic markup that provides graceful spacings across various devices and viewports.",
-});
+export const meta = () => [
+  { title: `Card ${titleSuffix}` },
+  {
+    name: "description",
+    content:
+      "Create flexible cards with a semantic markup that provides graceful spacings across various devices and viewports.",
+  },
+];
 
 export default function Card() {
   const syntaxRef = useRef();

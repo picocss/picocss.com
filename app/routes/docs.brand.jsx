@@ -17,10 +17,13 @@ import darkIconPng from "~/images/brand-assets/pico-mark-dark.png";
 
 const { titleSuffix } = metaData();
 
-export const meta = () => ({
-  title: `Brand ${titleSuffix}`,
-  description: "Pico CSS brand assets and usage guidelines.",
-});
+export const meta = () => [
+  { title: `Brand ${titleSuffix}` },
+  {
+    name: "description",
+    content: "Pico CSS brand assets and usage guidelines.",
+  },
+];
 
 export default function Brand() {
   const logoRef = useRef();

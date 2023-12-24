@@ -5,10 +5,13 @@ import Header from "~/components/docs/Header";
 
 const { titleSuffix } = metaData();
 
-export const meta = () => ({
-  title: `Usage scenarios ${titleSuffix}`,
-  description: "How does Pico fit into your project?",
-});
+export const meta = () => [
+  { title: `Usage scenarios ${titleSuffix}` },
+  {
+    name: "description",
+    content: "How does Pico fit into your project?",
+  },
+];
 
 export default function UsageScenarios() {
   return (

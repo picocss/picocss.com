@@ -9,10 +9,13 @@ import Code from "~/components/Code";
 
 const { titleSuffix } = metaData();
 
-export const meta = () => ({
-  title: `Switch ${titleSuffix}`,
-  description: "A switch component in pure CSS, using the checkbox syntax.",
-});
+export const meta = () => [
+  { title: `Switch ${titleSuffix}` },
+  {
+    name: "description",
+    content: "A switch component in pure CSS, using the checkbox syntax.",
+  },
+];
 
 export default function Switch() {
   const syntaxRef = useRef();

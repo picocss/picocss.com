@@ -10,11 +10,14 @@ import Link from "~/components/Link";
 
 const { titleSuffix, cdnBaseUrl } = metaData();
 
-export const meta = () => ({
-  title: `Documentation ${titleSuffix}`,
-  description:
-    "Link Pico.css manually or via CDN for a dependency-free setup, or use NPM or Composer for advanced usage.",
-});
+export const meta = () => [
+  { title: `Documentation ${titleSuffix}` },
+  {
+    name: "description",
+    content:
+      "Link Pico.css manually or via CDN for a dependency-free setup, or use NPM or Composer for advanced usage.",
+  },
+];
 
 export default function Docs() {
   const installManuallyRef = useRef();

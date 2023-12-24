@@ -8,11 +8,14 @@ import colorPickerStyles from "~/styles/css/docs/color-picker.css";
 
 const { titleSuffix } = metaData();
 
-export const meta = () => ({
-  title: `Minimal theme generator ${titleSuffix}`,
-  description:
-    "Pick a color to generate the CSS code to customize Pico's primary color using CSS variables.",
-});
+export const meta = () => [
+  { title: `Minimal theme generator ${titleSuffix}` },
+  {
+    name: "description",
+    content:
+      "Pick a color to generate the CSS code to customize Pico's primary color using CSS variables.",
+  },
+];
 
 export function links() {
   return [{ rel: "stylesheet", href: colorPickerStyles }];

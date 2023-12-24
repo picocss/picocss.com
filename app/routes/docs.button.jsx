@@ -10,10 +10,13 @@ import Link from "~/components/Link";
 
 const { titleSuffix } = metaData();
 
-export const meta = () => ({
-  title: `Button ${titleSuffix}`,
-  description: "Buttons are using the native <button> tag, without .classes for the default style.",
-});
+export const meta = () => [
+  { title: `Button ${titleSuffix}` },
+  {
+    name: "description",
+    content: "Buttons are using the native <button> tag, without .classes for the default style.",
+  },
+];
 
 export default function Button() {
   const syntaxRef = useRef();

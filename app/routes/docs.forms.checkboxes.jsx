@@ -9,10 +9,13 @@ import Code from "~/components/Code";
 
 const { titleSuffix } = metaData();
 
-export const meta = () => ({
-  title: `Checkboxes ${titleSuffix}`,
-  description: 'The native <input type="checkbox"> with a custom and responsive style.',
-});
+export const meta = () => [
+  { title: `Checkboxes ${titleSuffix}` },
+  {
+    name: "description",
+    content: "The native <input type='checkbox'> with a custom and responsive style.",
+  },
+];
 
 export default function Checkboxes() {
   const syntaxRef = useRef();

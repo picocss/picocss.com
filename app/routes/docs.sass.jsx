@@ -14,11 +14,14 @@ import { removeLines } from "~/utils";
 
 const { titleSuffix, githubTreeBaseUrl } = metaData();
 
-export const meta = () => ({
-  title: `Sass ${titleSuffix}`,
-  description:
-    "Build your own minimal design system by compiling a custom version of Pico's CSS framework with Sass.",
-});
+export const meta = () => [
+  { title: `Sass ${titleSuffix}` },
+  {
+    name: "description",
+    content:
+      "Build your own minimal design system by compiling a custom version of Pico's CSS framework with Sass.",
+  },
+];
 
 export default function Sass() {
   const introductionRef = useRef();

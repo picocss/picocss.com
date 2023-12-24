@@ -9,10 +9,13 @@ import Code from "~/components/Code";
 
 const { titleSuffix } = metaData();
 
-export const meta = () => ({
-  title: `Radios ${titleSuffix}`,
-  description: 'The native <input type="radio"> with a custom and responsive style.',
-});
+export const meta = () => [
+  { title: `Radios ${titleSuffix}` },
+  {
+    name: "description",
+    content: "The native <input type='radio'> with a custom and responsive style.",
+  },
+];
 
 export default function Radios() {
   const syntaxRef = useRef();

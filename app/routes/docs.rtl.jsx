@@ -7,10 +7,13 @@ import Link from "~/components/Link";
 
 const { titleSuffix } = metaData();
 
-export const meta = () => ({
-  title: `RTL (Right-To-Left) ${titleSuffix}`,
-  description: "Support for Right-To-Left text.",
-});
+export const meta = () => [
+  { title: `RTL (Right-To-Left) ${titleSuffix}` },
+  {
+    name: "description",
+    content: "Support for Right-To-Left text.",
+  },
+];
 
 export default function Rtl() {
   return (

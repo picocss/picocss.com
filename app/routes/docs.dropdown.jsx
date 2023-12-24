@@ -10,11 +10,14 @@ import Heading from "~/components/Heading";
 
 const { titleSuffix } = metaData();
 
-export const meta = () => ({
-  title: `Dropdown ${titleSuffix}`,
-  description:
-    "Create dropdown menus and custom selects with minimal and semantic HTML, without JavaScript.",
-});
+export const meta = () => [
+  { title: `Dropdown ${titleSuffix}` },
+  {
+    name: "description",
+    content:
+      "Create dropdown menus and custom selects with minimal and semantic HTML, without JavaScript.",
+  },
+];
 
 const phasesOfMatter = ["Solid", "Liquid", "Gas", "Plasma"];
 const accountItems = ["Profile", "Settings", "Security", "Logout"];

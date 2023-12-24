@@ -7,10 +7,13 @@ import Link from "~/components/Link";
 
 const { titleSuffix } = metaData();
 
-export const meta = () => ({
-  title: `Link ${titleSuffix}`,
-  description: "Link come with .secondary and .contrast styles.",
-});
+export const meta = () => [
+  { title: `Link ${titleSuffix}` },
+  {
+    name: "description",
+    content: "Link come with .secondary and .contrast styles.",
+  },
+];
 
 export default function LinkPage() {
   const preventDefault = (e) => e.preventDefault();

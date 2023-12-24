@@ -6,11 +6,14 @@ import Header from "~/components/docs/Header";
 
 const { titleSuffix } = metaData();
 
-export const meta = () => ({
-  title: `Mission ${titleSuffix}`,
-  description:
-    "Pico CSS is a minimalist and lightweight starter kit that prioritizes semantic HTML, making every HTML tag responsive and elegant by default.",
-});
+export const meta = () => [
+  { title: `Mission ${titleSuffix}` },
+  {
+    name: "description",
+    content:
+      "Pico CSS is a minimalist and lightweight starter kit that prioritizes semantic HTML, making every HTML tag responsive and elegant by default.",
+  },
+];
 
 export default function Mission() {
   return (

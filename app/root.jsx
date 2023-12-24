@@ -25,22 +25,44 @@ import StructuredData from "./components/StructuredData";
 const { domain, siteName, titleSuffix, twitterHandle } = metaData();
 
 export const meta = () => {
-  return {
-    charset: "utf-8",
-    viewport: "width=device-width,initial-scale=1",
-    "theme-color": "#2a3140",
-
-    // Open Graph
-    "og:image": `${domain}/opengraph.png`,
-    "og:image:type": "image/png",
-    "og:image:width": "1200",
-    "og:image:height": "630",
-    "og:site_name": siteName,
-    "og:type": "website",
-    "twitter:card": "summary_large_image",
-    "twitter:domain": domain,
-    "twitter:site": twitterHandle,
-  };
+  return [
+    {
+      name: "og:image",
+      content: `${domain}/opengraph.png`,
+    },
+    {
+      name: "og:image:type",
+      content: "image/png",
+    },
+    {
+      name: "og:image:width",
+      content: "1200",
+    },
+    {
+      name: "og:image:height",
+      content: "630",
+    },
+    {
+      name: "og:site_name",
+      content: siteName,
+    },
+    {
+      name: "og:type",
+      content: "website",
+    },
+    {
+      name: "twitter:card",
+      content: "summary_large_image",
+    },
+    {
+      name: "twitter:domain",
+      content: domain,
+    },
+    {
+      name: "twitter:site",
+      content: twitterHandle,
+    },
+  ];
 };
 
 export function links() {
@@ -63,6 +85,9 @@ export function ErrorBoundary() {
     <HelmetProvider>
       <PageProvider>
         <head>
+          <meta charSet="utf-8" />
+          <meta name="viewport" content="width=device-width,initial-scale=1" />
+          <meta name="theme-color" content="#2a3140" />
           <Meta />
           <title>
             {isRouteErrorResponse(error)

@@ -6,10 +6,13 @@ import Code from "~/components/Code";
 
 const { titleSuffix } = metaData();
 
-export const meta = () => ({
-  title: `Range ${titleSuffix}`,
-  description: 'Create a slider control with the input type <input type="range">.',
-});
+export const meta = () => [
+  { title: `Range ${titleSuffix}` },
+  {
+    name: "description",
+    content: "Create a slider control with the input type <input type='range'>.",
+  },
+];
 
 export default function Range() {
   return (

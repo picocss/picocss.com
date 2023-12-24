@@ -10,11 +10,14 @@ import Link from "~/components/Link";
 
 const { titleSuffix, cdnBaseUrl } = metaData();
 
-export const meta = () => ({
-  title: `Class-less version ${titleSuffix}`,
-  description:
-    "Embrace minimalism with Pico's .classless version, a semantic option for wild HTML purists who prefer a stripped-down approach.",
-});
+export const meta = () => [
+  { title: `Class-less version ${titleSuffix}` },
+  {
+    name: "description",
+    content:
+      "Embrace minimalism with Pico's .classless version, a semantic option for wild HTML purists who prefer a stripped-down approach.",
+  },
+];
 
 export default function Classless() {
   const introductionRef = useRef();

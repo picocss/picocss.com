@@ -10,11 +10,14 @@ import Link from "~/components/Link";
 
 const { titleSuffix } = metaData();
 
-export const meta = () => ({
-  title: `v2.0 ${titleSuffix}`,
-  description:
-    "Pico v2.0 features better accessibility, easier customization with SASS, a complete color palette, and a new group component.",
-});
+export const meta = () => [
+  { title: `v2.0 ${titleSuffix}` },
+  {
+    name: "description",
+    content:
+      "Pico v2.0 features better accessibility, easier customization with SASS, a complete color palette, and a new group component.",
+  },
+];
 
 export default function Classless() {
   const newLookAndFeelRef = useRef();
