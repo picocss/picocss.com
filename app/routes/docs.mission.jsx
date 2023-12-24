@@ -11,7 +11,7 @@ export const meta = () => [
   {
     name: "description",
     content:
-      "Pico CSS is a minimalist and lightweight starter kit that prioritizes semantic HTML, making every HTML tag responsive and elegant by default.",
+      "Pico CSS is a minimalist and lightweight starter kit that prioritizes semantic syntax, making every HTML element responsive and elegant by default.",
   },
 ];
 
@@ -21,8 +21,8 @@ export default function Mission() {
       {/* Header */}
       <Header
         title="Mission"
-        description="Pico CSS is a minimalist and lightweight starter kit that prioritizes semantic HTML,
-            making every HTML tag responsive and elegant by default."
+        description="Pico CSS is a minimalist and lightweight starter kit that prioritizes semantic syntax,
+        making every HTML element responsive and elegant by default."
       />
 
       {/* Content */}
@@ -32,7 +32,7 @@ export default function Mission() {
             With a focus on simplicity, Pico provides a clean starting point for building websites
             without the need for excessive CSS classes and wrappers.
           </p>
-          <p>Here's our maxi-minimalist story.</p>
+          <p>Here’s our maxi-minimalist story.</p>
           <p>Pico started as a solution to two minor frustrations:</p>
           <blockquote>
             “I don’t want to import a huge CSS framework only to build a landing page with a title,
@@ -62,7 +62,7 @@ export default function Mission() {
   This page should be fast enough to please Google's algorithm.
 </footer>`}</Code>
           <p>
-            That's all! We believe that CSS classes are essential when building complex websites,
+            That’s all! We believe that CSS classes are essential when building complex websites,
             but why use classes for the default style? And above all, why block page rendering with
             JavaScript for such a simple structure?
           </p>

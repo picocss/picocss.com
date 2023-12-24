@@ -160,11 +160,11 @@ export default function Brand() {
           <p>Pico CSS brand name and logo are protected under intellectual property law.</p>
           <p>
             You can use the Pico CSS name as part of the name of your open-source and non-commercial
-            project, such as 'Pico-React', but using the name in commercial projects without
+            project, such as “Pico-React”, but using the name in commercial projects without
             permission is not allowed.
           </p>
           <p>
-            You cannot use the Pico CSS logo for open or closed source projects, but you're welcome
+            You cannot use the Pico CSS logo for open or closed source projects, but you’re welcome
             to use it in articles or documentation as long as proper credit is given.
           </p>
           <p>

@@ -15,7 +15,7 @@ export const meta = () => [
   {
     name: "description",
     content:
-      "Embrace minimalism with Pico's .classless version, a semantic option for wild HTML purists who prefer a stripped-down approach.",
+      "Embrace minimalism with Pico’s .classless version, a semantic option for wild HTML purists who prefer a stripped-down approach.",
   },
 ];
 
@@ -31,7 +31,7 @@ export default function Classless() {
         title="Class-less version"
         description={
           <>
-            Embrace minimalism with Pico's <Code display="inline">.classless</Code> version, a
+            Embrace minimalism with Pico’s <Code display="inline">.classless</Code> version, a
             semantic&nbsp;option for wild&nbsp;HTML&nbsp;purists who prefer a
             stripped-down&nbsp;approach.
           </>

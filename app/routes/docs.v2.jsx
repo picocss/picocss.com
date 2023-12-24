@@ -167,7 +167,7 @@ export default function Classless() {
           <Heading level={3}>Table</Heading>
           <p>
             The <Code display="inline">.striped</Code> class is now used for the striped{" "}
-            <Link to="/docs/table">table</Link>'s style.
+            <Link to="/docs/table">table</Link>’s style.
           </p>
 
           <Heading level={3}>Dropdowns</Heading>

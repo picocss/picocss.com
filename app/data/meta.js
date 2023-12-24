@@ -4,7 +4,7 @@ export default function meta() {
     siteName: "Pico CSS",
     defaultTitle: "Pico CSS • Minimal CSS Framework for semantic HTML",
     defaultDescription:
-      "Elegant styles for all natives HTML elements without .classes and dark mode automatically enabled. Less than 10 kB minified and gzipped!",
+      "Minimalist and lightweight starter kit that prioritizes semantic syntax, making every HTML element responsive and elegant by default.",
     domain: "https://v2.picocss.com",
     titleSuffix: "• Pico CSS",
 

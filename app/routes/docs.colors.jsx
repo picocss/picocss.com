@@ -178,7 +178,7 @@ export default function Colors() {
             <Code
               as="footer"
               className="small"
-            >{`<h2 className="pico-color-pink-500">Pink title</h2>`}</Code>
+            >{`<h2 class="pico-color-pink-500">Pink title</h2>`}</Code>
           </article>
           <article aria-label="Background color example" className="pico-background-pink-600">
             Pink card

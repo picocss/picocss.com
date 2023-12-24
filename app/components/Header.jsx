@@ -10,7 +10,7 @@ export default function Header({ headerIsFixed = false, ...props }) {
   return (
     <header {...(headerIsFixed && { className: "is-fixed-above-lg" })} ref={headerRef} {...props}>
       <div className="container">
-        <Link to="/docs" aria-label="Pico CSS homepage">
+        <Link to="/" aria-label="Pico CSS homepage">
           <Logo shouldAnimateOnRouteChange />
         </Link>
         <Nav />

@@ -29,7 +29,7 @@ export default function UsageScenarios() {
                 <tr>
                   <th>Project type</th>
                   <th>CSS expertise</th>
-                  <th>Pico's fit</th>
+                  <th>Pico’s fit</th>
                   <th>Examples</th>
                 </tr>
               </thead>
