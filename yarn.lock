@@ -1696,15 +1696,15 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.56.0.tgz#ef20350fec605a7f7035a01764731b2de0f3782b"
   integrity sha512-gMsVel9D7f2HLkBma9VbtzZRehRogVRfbr++f06nL2vnCGCNlzOD+/MUov/F4p8myyAHspEhVobgjpX64q5m6A==
 
-"@fontsource/figtree@4.5.3":
-  version "4.5.3"
-  resolved "https://registry.yarnpkg.com/@fontsource/figtree/-/figtree-4.5.3.tgz#6c914512488cb998d3ef1c3071e2974051b02df8"
-  integrity sha512-e/8bpoOhWfYq6hk5RNUHwBAjTXTCA13+caQOhImzD8TN6RG0VdpqMavKQiH350WBBBjwOJdBrCZZdpHHRONobQ==
+"@fontsource/figtree@5.0.18":
+  version "5.0.18"
+  resolved "https://registry.yarnpkg.com/@fontsource/figtree/-/figtree-5.0.18.tgz#2beeae2e52110f9e6a9d1e8454cfbe6a86451f65"
+  integrity sha512-dr9BuLeFLz270lUAzuqBrWtW2w8ZVfrkDG2rv+0hHPt2EWJ/2CmXyNiVrwbXBiNwRMHyfvJp9KtsoxlEzvxhIQ==
 
-"@fontsource/fira-code@4.5.13":
-  version "4.5.13"
-  resolved "https://registry.yarnpkg.com/@fontsource/fira-code/-/fira-code-4.5.13.tgz#7ddd62472f7e6002acf9371815090eecf5d28f8c"
-  integrity sha512-T1IG6/2AXSwEKwlrEm3kyIL3RQTMblPyj68HgnBGl0IBGFxgS5LZ7StRdDo/QimJ4Tz6FQGHuy1Y/ShNxaUefA==
+"@fontsource/fira-code@5.0.16":
+  version "5.0.16"
+  resolved "https://registry.yarnpkg.com/@fontsource/fira-code/-/fira-code-5.0.16.tgz#a85f1836ddc38b6ea81feeade110d7ae31f0bc6d"
+  integrity sha512-mOAs/sgZz+ETOB4foFnOnbewQDJpByvR4h/pLmgkWVn/gbA8Tlb4wUSWK4QFc+SKmHaDJsT/wgWjDUcxssZn7w==
 
 "@gar/promisify@^1.0.1":
   version "1.1.3"

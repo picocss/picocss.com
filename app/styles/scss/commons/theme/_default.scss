@@ -38,14 +38,14 @@
  * Fonts
  */
 
-@include FiraCode.fontFace(
-  $weight: 400,
-  $display: swap,
-  $fontDir: "../../../node_modules/@fontsource/fira-code/files"
+@include FiraCode.faces(
+  $weights: 400,
+  $styles: all,
+  $directory: "../../../node_modules/@fontsource/fira-code/files"
 );
 
-@include FigTree.fontFace(
-  $weight: 700,
-  $display: swap,
-  $fontDir: "../../../node_modules/@fontsource/figtree/files"
+@include FigTree.faces(
+  $weights: 700,
+  $styles: all,
+  $directory: "../../../node_modules/@fontsource/figtree/files"
 );
