@@ -11,7 +11,7 @@ functions/\[\[path\]\].js.map
 /functions/metafile.*
 /functions/version.txt
 .dev.vars
-.wrangler/tmp
+.wrangler
 
 # Styles
 app/styles/css/*
