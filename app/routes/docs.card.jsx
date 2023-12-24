@@ -41,8 +41,8 @@ export default function Card() {
       {/* Content */}
       <Content>
         <section ref={syntaxRef}>
-          <article aria-label="Card example">I'm a card!</article>
-          <Code className="small">{`<article>I'm a card!</article>`}</Code>
+          <article aria-label="Card example">I’m a card!</article>
+          <Code className="small">{`<article>I’m a card!</article>`}</Code>
         </section>
 
         <section ref={sectioningRef}>

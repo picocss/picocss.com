@@ -163,7 +163,7 @@ export default function Forms() {
               aria-label="Email"
               aria-describedby="email-helper"
             />
-            <small id="email-helper">We'll never share your email with anyone else.</small>
+            <small id="email-helper">We’ll never share your email with anyone else.</small>
             <Code as="footer">{`<input
   type="email"
   name="email"

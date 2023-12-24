@@ -6,9 +6,10 @@ import Link from "~/components/Link";
 export default function TableOfContents({ data, ...props }) {
   const { headerHeight } = useHeader();
   const sectionRefs = data.map((section) => section.ref);
+  console.log("headerHeight", headerHeight);
   return (
     <aside id="table-of-contents" {...props}>
-      <Scrollspy sectionRefs={sectionRefs} offset={-headerHeight * 2}>
+      <Scrollspy sectionRefs={sectionRefs} offset={-(headerHeight * 2)}>
         {({ currentElementIndexInViewport }) => (
           <nav>
             <details open>

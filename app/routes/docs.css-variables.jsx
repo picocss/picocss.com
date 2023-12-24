@@ -122,7 +122,7 @@ export default function CssVariables() {
               Get ready to dance and sing your heart out at our Music Fest Mania. Join the crowd,
               jam to your favorite band, and discover new artists.
             </p>
-            <button>Let's rock out!</button>
+            <button>Let’s rock out!</button>
 
             <Code as="footer">{`<style>
   :root {
@@ -179,7 +179,7 @@ export default function CssVariables() {
           <p>
             The second inclusion is when you force the dark mode with{" "}
             <Code display="inline">{`data-theme="dark"`}</Code>. This allows you to manually toggle
-            between the light and dark themes regardless of the user's device settings.
+            between the light and dark themes regardless of the user’s device settings.
           </p>
           <Code language="css">{`/* Dark color scheme (Auto) */
 /* Automatically enabled if user has Dark mode enabled */

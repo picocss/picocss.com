@@ -13,7 +13,7 @@ export const meta = () => [
   {
     name: "description",
     content:
-      "Pick a color to generate the CSS code to customize Pico's primary color using CSS variables.",
+      "Pick a color to generate the CSS code to customize Pico’s primary color using CSS variables.",
   },
 ];
 
@@ -27,7 +27,7 @@ export default function ThemeGenerator() {
       {/* Header */}
       <Header
         title="Minimal theme generator"
-        description="Pick a color to generate the CSS&nbsp;code to customize&nbsp;Pico's primary&nbsp;color using CSS&nbsp;variables."
+        description="Pick a color to generate the CSS&nbsp;code to customize&nbsp;Pico’s primary&nbsp;color using CSS&nbsp;variables."
       />
 
       {/* Content */}
