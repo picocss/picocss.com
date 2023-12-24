@@ -63,7 +63,7 @@ export default function UsageScenarios() {
                 <tr>
                   <td>Small web projects</td>
                   <td className="scale-color-2">Low/Medium</td>
-                  <td className="scale-color-5">High</td>
+                  <td className="scale-color-3">Medium</td>
                   <td className="muted">
                     Small business websites, portfolios, and personal websites
                   </td>
