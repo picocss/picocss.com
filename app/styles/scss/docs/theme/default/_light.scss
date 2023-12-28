@@ -5,24 +5,6 @@
   // Aside
   #{$✨}aside-link-current-background-color: #{$slate-50};
 
-  // Card for components
-  #{$✨}card-component-outline-width: 0;
-  #{$✨}card-component-outline-color: transparent;
-
-  // Code
-  #{$✨}code-color: #{$zinc-600};
-  #{$✨}code-tag: #{$pumpkin-600};
-  #{$✨}code-attr: #{mix($zinc-600, $fuchsia-600, 25%)};
-  #{$✨}code-value: #{mix($zinc-600, $jade-600, 50%)};
-  #{$✨}code-comment: #{$zinc-450};
-  #{$✨}code-copied: #{mix($jade-450, $zinc-750)};
-
-  // Chapter
-  #{$✨}chapter-color: var(#{$✨}code-tag);
-
-  // Skeleton
-  #{$✨}skeleton-background-color: #{$slate-50};
-
   // Color coded scale
   #{$✨}scale-color-1: #{$jade-600};
   #{$✨}scale-color-2: #{$lime-600};

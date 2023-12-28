@@ -98,7 +98,7 @@ export default function Nav() {
         (item, index) =>
           `${index !== 0 ? "    " : ""}<li><a href="#">${item}</a></li>${
             index !== menuItems.length - 1 ? "\n" : ""
-          }`
+          }`,
       )
       .join("")}
   </ul>
@@ -151,7 +151,7 @@ export default function Nav() {
         (item, index) =>
           `${index !== 0 ? "    " : ""}<li><a href="#" class="contrast">${item}</a></li>${
             index !== menuItems.length - 1 ? "\n" : ""
-          }`
+          }`,
       )
       .join("")}
   </ul>
@@ -241,7 +241,7 @@ export default function Nav() {
             menuItems.length - 1 === index ? '<button class="secondary">' : '<a href="#">'
           }${item}${menuItems.length - 1 === index ? "</button>" : "</a>"}</li>${
             index !== menuItems.length - 1 ? "\n" : ""
-          }`
+          }`,
       )
       .join("")}
   </ul>
@@ -279,7 +279,7 @@ export default function Nav() {
           (item, index) =>
             `${index !== 0 ? "      " : ""}<li><a href="#">${item}</a></li>${
               index !== menuItems.length - 1 ? "\n" : ""
-            }`
+            }`,
         )
         .join("")}
     </ul>

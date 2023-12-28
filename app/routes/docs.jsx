@@ -18,7 +18,7 @@ export default function DocsPage() {
   return (
     <DocumentationProvider>
       <HeaderProvider>
-        <Header headerIsFixed={true} />
+        <Header headerIsFixed={true} shouldDisplayVersion={true} />
         <Main>
           <Breadcrumb />
           <DocumentationMenu />

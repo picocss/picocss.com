@@ -15,7 +15,7 @@ functions/\[\[path\]\].js.map
 
 # Styles
 app/styles/css/*
-!app/styles/css/postcss.config.js
+!app/styles/css/postcss.config.cjs
 
 # System files
 .DS_Store

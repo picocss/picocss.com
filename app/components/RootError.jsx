@@ -6,7 +6,7 @@ import Content from "~/components/docs/Content";
 
 export default function RootError({ error, ...props }) {
   return (
-    <HeaderProvider>
+    <HeaderProvider {...props}>
       <Header />
       <Main>
         <ErrorHeader

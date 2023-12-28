@@ -1,0 +1,120 @@
+@use "sass:map";
+@use "colors" as *;
+@use "settings" as *;
+
+article.demo.component {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+  height: calc(var(--demo-height) + (var(#{$✨}block-spacing-vertical) * 2));
+  margin-bottom: 0;
+  padding-bottom: 0;
+  pointer-events: none;
+  transition: height 0.4s ease-out;
+  user-select: none;
+  #{$✨}block-spacing-horizontal: var(#{$✨}spacing) !important;
+  #{$✨}block-spacing-vertical: calc(var(#{$✨}spacing) * 1.5) !important;
+  background-color: var(#{$✨}background-color);
+
+  @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
+    #{$✨}block-spacing-horizontal: calc(var(#{$✨}spacing) * 1.5) !important;
+    #{$✨}block-spacing-vertical: calc(var(#{$✨}spacing) * 2) !important;
+  }
+
+  main {
+    margin-bottom: auto;
+
+    form {
+      &[role="search"],
+      &[role="group"],
+      input:only-child,
+      input[aria-invalid="true"],
+      button {
+        margin-bottom: 0;
+      }
+
+      small {
+        margin-top: 0.25rem;
+        margin-bottom: 0;
+      }
+
+      label {
+        margin-bottom: 0;
+      }
+
+      // Focused group form
+      &[role="search"],
+      &[role="group"] {
+        &.is-focused {
+          #{$✨}group-box-shadow: var(#{$✨}group-box-shadow-focus-with-button);
+
+          input:not([type="checkbox"], [type="radio"]),
+          select {
+            border-color: transparent;
+          }
+
+          button {
+            box-shadow: none;
+          }
+        }
+      }
+
+      // Focused input
+      input {
+        &.is-focused {
+          #{$✨}background-color: var(#{$✨}form-element-active-background-color);
+          #{$✨}border-color: var(#{$✨}form-element-active-border-color);
+          #{$✨}box-shadow: 0 0 0 var(#{$✨}outline-width) var(#{$✨}form-element-focus-color);
+        }
+      }
+
+      // Focused button
+      button {
+        &.is-focused {
+          #{$✨}background-color: var(#{$✨}primary-hover-background);
+          #{$✨}border-color: var(#{$✨}primary-hover-border);
+          #{$✨}color: var(#{$✨}primary-inverse);
+          #{$✨}box-shadow:
+            var(#{$✨}button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0)),
+            0 0 0 var(#{$✨}outline-width) var(#{$✨}primary-focus);
+        }
+      }
+
+      * {
+        transition: border-radius var(#{$✨}transition);
+      }
+    }
+  }
+
+  footer.code {
+    margin-top: auto;
+    margin-bottom: 0;
+    background: none;
+
+    [data-typeit-id] {
+      .ti-cursor {
+        transform: translateX(-0.25em);
+        color: inherit;
+        font-style: inherit;
+        font-weight: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        font-family: inherit;
+      }
+    }
+  }
+
+  // Background gradient
+  &:after {
+    display: block;
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    transform: scale(6);
+    transform-origin: center;
+    background: var(#{$✨}background-gradient);
+    content: "";
+  }
+}

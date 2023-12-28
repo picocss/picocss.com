@@ -10,9 +10,6 @@
 @use "docs/layout/main-table-of-contents";
 @use "docs/layout/main-document";
 
-// Content
-@use "docs/content/code";
-
 // Pages
 @use "docs/pages/brand";
 @use "docs/pages/color-schemes";
@@ -25,9 +22,7 @@
 @use "docs/pages/v2";
 
 // Components
-@use "docs/components/chapter";
 @use "docs/components/docs-nav";
-@use "docs/components/card-component";
 @use "docs/components/card-color-picker";
 @use "docs/components/color-families";
 @use "docs/components/dialog-color";

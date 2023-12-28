@@ -1,0 +1,44 @@
+@use "sass:map";
+@use "settings" as *;
+
+#{$semantic-root-element} {
+  overflow-x: hidden;
+
+  > main {
+    #{$✨}homepage-spacing-vertical: calc(var(#{$✨}spacing) * 3.5);
+    #{$✨}homepage-spacing-horizontal: calc(var(#{$✨}spacing) * 1.5);
+    @each $key, $values in $breakpoints {
+      @if $values {
+        @media (min-width: map.get($values, "breakpoint")) {
+          $multiplier-vertical: 3.5;
+          $multiplier-horizontal: 1.5;
+          @if $key == "sm" {
+            $multiplier-vertical: 4;
+            $multiplier-horizontal: 2;
+          } @else if $key == "md" {
+            $multiplier-vertical: 4.5;
+            $multiplier-horizontal: 2.5;
+          } @else if $key == "lg" {
+            $multiplier-vertical: 5;
+            $multiplier-horizontal: 3;
+          } @else if $key == "xl" {
+            $multiplier-vertical: 5.5;
+            $multiplier-horizontal: 3.5;
+          } @else if $key == "xxl" {
+            $multiplier-vertical: 6;
+            $multiplier-horizontal: 4;
+          }
+
+          #{$✨}homepage-spacing-vertical: calc(var(#{$✨}spacing) * $multiplier-vertical);
+          #{$✨}homepage-spacing-horizontal: calc(var(#{$✨}spacing) * $multiplier-horizontal);
+        }
+      }
+    }
+    padding: 0;
+  }
+}
+
+section {
+  padding-top: var(#{$✨}homepage-spacing-vertical);
+  padding-bottom: var(#{$✨}homepage-spacing-vertical);
+}

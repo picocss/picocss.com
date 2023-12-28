@@ -1,0 +1,28 @@
+// Colors schemes
+@use "default/light";
+@use "default/dark";
+
+/**
+ * Color schemes
+ */
+
+// Light color scheme (Default)
+// Can be forced with data-theme="light"
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+  @include light.theme;
+}
+
+// Dark color scheme (Auto)
+// Automatically enabled if user has Dark mode enabled
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    @include dark.theme;
+  }
+}
+
+// Dark color scheme (Forced)
+// Enabled if forced with data-theme="dark"
+[data-theme="dark"] {
+  @include dark.theme;
+}

@@ -1,0 +1,74 @@
+@use "sass:map";
+@use "settings" as *;
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: var(#{$✨}homepage-spacing-horizontal);
+  row-gap: var(#{$✨}homepage-spacing-vertical);
+  justify-items: center;
+
+  @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+    grid-template-columns: 6fr 5fr;
+    align-items: center;
+    min-height: calc(25.5rem + (var(#{$✨}homepage-spacing-vertical) * 2));
+    margin: 0 auto;
+    padding-top: calc(var(#{$✨}homepage-spacing-vertical) / 2);
+    padding-bottom: calc(var(#{$✨}homepage-spacing-vertical) / 2);
+  }
+
+  @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+    grid-template-columns: 7fr 5fr;
+  }
+
+  article.demo.component,
+  .hook {
+    width: 100%;
+
+    @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {
+      max-width: map.get(map.get($breakpoints, "md"), "viewport");
+    }
+
+    @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+      max-width: none;
+    }
+
+    p {
+      color: var(#{$✨}color);
+    }
+  }
+
+  .hook {
+    hgroup {
+      text-align: center;
+
+      @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+        text-align: left;
+      }
+
+      p:first-of-type {
+        margin-bottom: calc(var(#{$✨}spacing) * 2);
+      }
+
+      h1 {
+        margin-bottom: 1rem;
+
+        @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
+          margin-bottom: 1.25rem;
+        }
+      }
+    }
+
+    .grid.ctas {
+      margin-top: calc(var(#{$✨}homepage-spacing-vertical) / 2);
+      @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
+        display: flex;
+        justify-content: center;
+      }
+
+      @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+        justify-content: flex-start;
+      }
+    }
+  }
+}

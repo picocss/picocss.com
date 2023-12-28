@@ -15,10 +15,7 @@ body {
     z-index: 4;
     position: relative;
     padding: 0.5rem 0;
-    border-bottom: var(#{$✨}border-width) solid var(#{$✨}header-border-color);
-    backdrop-filter: blur(1rem);
-    background-color: var(#{$✨}header-background);
-    box-shadow: var(#{$✨}card-box-shadow);
+    border-bottom: var(#{$✨}border-width) solid transparent;
 
     .container {
       display: flex;
@@ -107,6 +104,16 @@ body {
         z-index: 2;
         position: sticky;
         top: 0;
+        backdrop-filter: blur(1rem);
+        background-color: var(#{$✨}header-background);
+        transition:
+          border-top-color 0.4s ease-in-out,
+          box-shadow 0.4s ease-in-out;
+
+        &.is-fixed {
+          border-bottom-color: var(#{$✨}header-border-color);
+          box-shadow: var(#{$✨}card-box-shadow);
+        }
       }
     }
   }
