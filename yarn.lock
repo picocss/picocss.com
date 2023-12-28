@@ -992,10 +992,9 @@
   dependencies:
     which "^3.0.0"
 
-"@picocss/pico@^2.0.0-alpha1":
-  version "2.0.0-alpha1"
-  resolved "https://registry.yarnpkg.com/@picocss/pico/-/pico-2.0.0-alpha1.tgz#0199959ec2ae9f126fbb7165894716471524235a"
-  integrity sha512-DIMBG+ssQHVKEkQuwUs3mfBqNotxIH59xCmrMA8jCtm0CyRmc8p+VfMW1YeBZpeEY/WiKNw8GTefpoLBFvdpug==
+"@picocss/pico@https://github.com/picocss/pico#v2":
+  version "2.0.0-rc1"
+  resolved "https://github.com/picocss/pico#357ab1f1a0be5c6d638c2d16b4583f83ffa6d10c"
 
 "@pkgjs/parseargs@^0.11.0":
   version "0.11.0"
@@ -1351,6 +1350,11 @@
   version "2.0.10"
   resolved "https://registry.yarnpkg.com/@types/unist/-/unist-2.0.10.tgz#04ffa7f406ab628f7f7e97ca23e290cd8ab15efc"
   integrity sha512-IfYcSBWE3hLpBg8+X2SEa8LVkJdJEkT2Ese2aaLs3ptGdVtABxndrMaxuFlQ1qdFf9Q5rDvDpxI3WwgvKFAsQA==
+
+"@types/web-animations-js@^2.2.16":
+  version "2.2.16"
+  resolved "https://registry.yarnpkg.com/@types/web-animations-js/-/web-animations-js-2.2.16.tgz#fd84c49a7a2f148b588ba8b372496162b427742f"
+  integrity sha512-ATELeWMFwj8eQiH0KmvsCl1V2lu/qx/CjOBmv4ADSZS5u8r4reMyjCXtxG7khqyiwH3IOMNdrON/Ugn94OUcRA==
 
 "@typescript-eslint/eslint-plugin@^5.59.0":
   version "5.62.0"
@@ -5845,7 +5849,7 @@ react-div-100vh@^0.7.0:
   resolved "https://registry.yarnpkg.com/react-div-100vh/-/react-div-100vh-0.7.0.tgz#b3bec03a833fa40e406f36ed2e23a35a59d1068f"
   integrity sha512-I3d77tQyaSlOx/6vurDDLk7upb5GA2ldEtVXkk7Kn5cy+tLlS0KlqDK14xUxlxh7jz4StjgKcwFyrpymsPpomA==
 
-react-dom@^18.2.0:
+react-dom@>=18.2.0, react-dom@^18.2.0:
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-18.2.0.tgz#22aaf38708db2674ed9ada224ca4aa708d821e3d"
   integrity sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==
@@ -5918,7 +5922,7 @@ react-syntax-highlighter@^15.5.0:
     prismjs "^1.27.0"
     refractor "^3.6.0"
 
-react@^18.2.0:
+react@>=18.2.0, react@^18.2.0:
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/react/-/react-18.2.0.tgz#555bd98592883255fa00de14f1151a917b5d77d5"
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==
@@ -6887,6 +6891,22 @@ typed-array-length@^1.0.4:
     call-bind "^1.0.2"
     for-each "^0.3.3"
     is-typed-array "^1.1.9"
+
+typeit-react@2.7.0:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/typeit-react/-/typeit-react-2.7.0.tgz#f928563181ca65242ced2c98aa4e7ca21174e340"
+  integrity sha512-8Jq5RKZPUllZWSdvC4E2Of6qSyxp92xzH3B6bzq9NftLo39A7n8UDuPbd9k//0mKEc2jSKfl9tn5aQPNCVfTuQ==
+  dependencies:
+    react ">=18.2.0"
+    react-dom ">=18.2.0"
+    typeit "^8.8.0"
+
+typeit@^8.8.0:
+  version "8.8.0"
+  resolved "https://registry.yarnpkg.com/typeit/-/typeit-8.8.0.tgz#9def6390cf4dd886096657fc4557c875e44d8739"
+  integrity sha512-GQp6OW7vxro1HN3F7UPL0C2KzkGs8bFtUgmJSeK+xNhdofI40mkWxrBT2AXQwtS5Txkg7ttwplxvWCQxnUXyrw==
+  dependencies:
+    "@types/web-animations-js" "^2.2.16"
 
 typescript@^5.3.3:
   version "5.3.3"
