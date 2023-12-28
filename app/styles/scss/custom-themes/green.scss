@@ -6,26 +6,26 @@ $colorName: "Green";
 
 // Light
 @mixin light {
-  #{$✨}text-selection-color: #{rgba($green-400, 0.25)};
-  #{$✨}primary: #{$green-550};
-  #{$✨}primary-background: #{$green-500};
-  #{$✨}primary-underline: #{rgba($green-550, 0.5)};
-  #{$✨}primary-hover: #{$green-650};
-  #{$✨}primary-hover-background: #{$green-550};
-  #{$✨}primary-focus: #{rgba($green-400, 0.25)};
-  #{$✨}primary-inverse: #{$white};
+  #{$css-var-prefix}text-selection-color: #{rgba($green-400, 0.25)};
+  #{$css-var-prefix}primary: #{$green-550};
+  #{$css-var-prefix}primary-background: #{$green-500};
+  #{$css-var-prefix}primary-underline: #{rgba($green-550, 0.5)};
+  #{$css-var-prefix}primary-hover: #{$green-650};
+  #{$css-var-prefix}primary-hover-background: #{$green-550};
+  #{$css-var-prefix}primary-focus: #{rgba($green-400, 0.25)};
+  #{$css-var-prefix}primary-inverse: #{$white};
 }
 
 // Dark
 @mixin dark {
-  #{$✨}text-selection-color: #{rgba($green-350, 0.1875)};
-  #{$✨}primary: #{$green-350};
-  #{$✨}primary-background: #{$green-500};
-  #{$✨}primary-underline: #{rgba($green-350, 0.5)};
-  #{$✨}primary-hover: #{$green-250};
-  #{$✨}primary-hover-background: #{$green-450};
-  #{$✨}primary-focus: #{rgba($green-350, 0.25)};
-  #{$✨}primary-inverse: #{$white};
+  #{$css-var-prefix}text-selection-color: #{rgba($green-350, 0.1875)};
+  #{$css-var-prefix}primary: #{$green-350};
+  #{$css-var-prefix}primary-background: #{$green-500};
+  #{$css-var-prefix}primary-underline: #{rgba($green-350, 0.5)};
+  #{$css-var-prefix}primary-hover: #{$green-250};
+  #{$css-var-prefix}primary-hover-background: #{$green-450};
+  #{$css-var-prefix}primary-focus: #{rgba($green-350, 0.25)};
+  #{$css-var-prefix}primary-inverse: #{$white};
 }
 
 /* #{$colorName} color for light color scheme (Default) */

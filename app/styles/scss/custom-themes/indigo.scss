@@ -6,26 +6,26 @@ $colorName: "Indigo";
 
 // Light
 @mixin light {
-  #{$✨}text-selection-color: #{rgba($indigo-400, 0.25)};
-  #{$✨}primary: #{$indigo-550};
-  #{$✨}primary-background: #{$indigo-600};
-  #{$✨}primary-underline: #{rgba($indigo-550, 0.5)};
-  #{$✨}primary-hover: #{$indigo-650};
-  #{$✨}primary-hover-background: #{$indigo-650};
-  #{$✨}primary-focus: #{rgba($indigo-400, 0.25)};
-  #{$✨}primary-inverse: #{$white};
+  #{$css-var-prefix}text-selection-color: #{rgba($indigo-400, 0.25)};
+  #{$css-var-prefix}primary: #{$indigo-550};
+  #{$css-var-prefix}primary-background: #{$indigo-600};
+  #{$css-var-prefix}primary-underline: #{rgba($indigo-550, 0.5)};
+  #{$css-var-prefix}primary-hover: #{$indigo-650};
+  #{$css-var-prefix}primary-hover-background: #{$indigo-650};
+  #{$css-var-prefix}primary-focus: #{rgba($indigo-400, 0.25)};
+  #{$css-var-prefix}primary-inverse: #{$white};
 }
 
 // Dark
 @mixin dark {
-  #{$✨}text-selection-color: #{rgba($indigo-350, 0.1875)};
-  #{$✨}primary: #{$indigo-350};
-  #{$✨}primary-background: #{$indigo-600};
-  #{$✨}primary-underline: #{rgba($indigo-350, 0.5)};
-  #{$✨}primary-hover: #{$indigo-250};
-  #{$✨}primary-hover-background: #{$indigo-550};
-  #{$✨}primary-focus: #{rgba($indigo-350, 0.25)};
-  #{$✨}primary-inverse: #{$white};
+  #{$css-var-prefix}text-selection-color: #{rgba($indigo-350, 0.1875)};
+  #{$css-var-prefix}primary: #{$indigo-350};
+  #{$css-var-prefix}primary-background: #{$indigo-600};
+  #{$css-var-prefix}primary-underline: #{rgba($indigo-350, 0.5)};
+  #{$css-var-prefix}primary-hover: #{$indigo-250};
+  #{$css-var-prefix}primary-hover-background: #{$indigo-550};
+  #{$css-var-prefix}primary-focus: #{rgba($indigo-350, 0.25)};
+  #{$css-var-prefix}primary-inverse: #{$white};
 }
 
 /* #{$colorName} color for light color scheme (Default) */

@@ -6,50 +6,50 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Figtree", var(#{$✨}font-family);
+  font-family: "Figtree", var(#{$css-var-prefix}font-family);
 }
 
 @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
   h1 {
-    #{$✨}font-size: 2.5rem;
-    #{$✨}line-height: 1;
-    #{$✨}typography-spacing-top: 4rem;
+    #{$css-var-prefix}font-size: 2.5rem;
+    #{$css-var-prefix}line-height: 1;
+    #{$css-var-prefix}typography-spacing-top: 4rem;
   }
 
   h2 {
-    #{$✨}font-size: 2rem;
-    #{$✨}line-height: 1.25;
-    #{$✨}typography-spacing-top: 3rem;
+    #{$css-var-prefix}font-size: 2rem;
+    #{$css-var-prefix}line-height: 1.25;
+    #{$css-var-prefix}typography-spacing-top: 3rem;
   }
 
   h3 {
-    #{$✨}font-size: 1.75rem;
-    #{$✨}line-height: 1.3;
-    #{$✨}typography-spacing-top: 2.625rem;
+    #{$css-var-prefix}font-size: 1.75rem;
+    #{$css-var-prefix}line-height: 1.3;
+    #{$css-var-prefix}typography-spacing-top: 2.625rem;
   }
 
   h4 {
-    #{$✨}font-size: 1.5rem;
-    #{$✨}line-height: 1.35;
-    #{$✨}typography-spacing-top: 2.25rem;
+    #{$css-var-prefix}font-size: 1.5rem;
+    #{$css-var-prefix}line-height: 1.35;
+    #{$css-var-prefix}typography-spacing-top: 2.25rem;
   }
 
   h5 {
-    #{$✨}font-size: 1.25rem;
-    #{$✨}line-height: 1.4;
-    #{$✨}typography-spacing-top: 1.874rem;
+    #{$css-var-prefix}font-size: 1.25rem;
+    #{$css-var-prefix}line-height: 1.4;
+    #{$css-var-prefix}typography-spacing-top: 1.874rem;
   }
 
   h6 {
-    #{$✨}font-size: 1.125rem;
-    #{$✨}line-height: 1.45;
-    #{$✨}typography-spacing-top: 1.6875rem;
+    #{$css-var-prefix}font-size: 1.125rem;
+    #{$css-var-prefix}line-height: 1.45;
+    #{$css-var-prefix}typography-spacing-top: 1.6875rem;
   }
 }
 
 @media (min-width: map.get(map.get($breakpoints, "xxl"), "breakpoint")) {
   h1 {
-    #{$✨}font-size: 3rem;
-    #{$✨}line-height: 1;
+    #{$css-var-prefix}font-size: 3rem;
+    #{$css-var-prefix}line-height: 1;
   }
 }

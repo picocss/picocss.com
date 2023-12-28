@@ -6,26 +6,26 @@ $colorName: "Purple";
 
 // Light
 @mixin light {
-  #{$✨}text-selection-color: #{rgba($purple-400, 0.25)};
-  #{$✨}primary: #{$purple-550};
-  #{$✨}primary-background: #{$purple-600};
-  #{$✨}primary-underline: #{rgba($purple-550, 0.5)};
-  #{$✨}primary-hover: #{$purple-650};
-  #{$✨}primary-hover-background: #{$purple-650};
-  #{$✨}primary-focus: #{rgba($purple-400, 0.25)};
-  #{$✨}primary-inverse: #{$white};
+  #{$css-var-prefix}text-selection-color: #{rgba($purple-400, 0.25)};
+  #{$css-var-prefix}primary: #{$purple-550};
+  #{$css-var-prefix}primary-background: #{$purple-600};
+  #{$css-var-prefix}primary-underline: #{rgba($purple-550, 0.5)};
+  #{$css-var-prefix}primary-hover: #{$purple-650};
+  #{$css-var-prefix}primary-hover-background: #{$purple-650};
+  #{$css-var-prefix}primary-focus: #{rgba($purple-400, 0.25)};
+  #{$css-var-prefix}primary-inverse: #{$white};
 }
 
 // Dark
 @mixin dark {
-  #{$✨}text-selection-color: #{rgba($purple-350, 0.1875)};
-  #{$✨}primary: #{$purple-350};
-  #{$✨}primary-background: #{$purple-600};
-  #{$✨}primary-underline: #{rgba($purple-350, 0.5)};
-  #{$✨}primary-hover: #{$purple-250};
-  #{$✨}primary-hover-background: #{$purple-550};
-  #{$✨}primary-focus: #{rgba($purple-350, 0.25)};
-  #{$✨}primary-inverse: #{$white};
+  #{$css-var-prefix}text-selection-color: #{rgba($purple-350, 0.1875)};
+  #{$css-var-prefix}primary: #{$purple-350};
+  #{$css-var-prefix}primary-background: #{$purple-600};
+  #{$css-var-prefix}primary-underline: #{rgba($purple-350, 0.5)};
+  #{$css-var-prefix}primary-hover: #{$purple-250};
+  #{$css-var-prefix}primary-hover-background: #{$purple-550};
+  #{$css-var-prefix}primary-focus: #{rgba($purple-350, 0.25)};
+  #{$css-var-prefix}primary-inverse: #{$white};
 }
 
 /* #{$colorName} color for light color scheme (Default) */

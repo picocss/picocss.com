@@ -8,14 +8,14 @@
 main {
   > hgroup {
     p.chapter {
-      margin-bottom: calc(var(#{$✨}spacing) * 0.25);
+      margin-bottom: calc(var(#{$css-var-prefix}spacing) * 0.25);
     }
 
     h1 {
-      margin-bottom: calc(var(#{$✨}spacing) * 0.5);
+      margin-bottom: calc(var(#{$css-var-prefix}spacing) * 0.5);
       font-size: 3rem;
       line-height: 1;
-      font-family: "Figtree", var(#{$✨}font-family);
+      font-family: "Figtree", var(#{$css-var-prefix}font-family);
     }
   }
 }

@@ -2,14 +2,14 @@
 @use "settings" as *;
 
 dialog.color {
-  #{$✨}font-size: 0.875rem;
+  #{$css-var-prefix}font-size: 0.875rem;
   padding: 0;
 
   article {
     transform: translate3d(0, 0, 0);
-    box-shadow: 0 0 0 var(#{$✨}border-width) var(#{$✨}secondary-focus),
-      0 -0 6rem 0 var(#{$✨}glowing-color), var(#{$✨}box-shadow);
-    transition: box-shadow var(#{$✨}transition);
+    box-shadow: 0 0 0 var(#{$css-var-prefix}border-width) var(#{$css-var-prefix}secondary-focus),
+      0 -0 6rem 0 var(#{$css-var-prefix}glowing-color), var(#{$css-var-prefix}box-shadow);
+    transition: box-shadow var(#{$css-var-prefix}transition);
 
     @if map.get($breakpoints, "lg") {
       @media (min-width: map.get(map.get($breakpoints, "lg"), "breakpoint")) {
@@ -28,7 +28,7 @@ dialog.color {
 
     header {
       font-weight: bold;
-      transition: color var(#{$✨}transition), background-color var(#{$✨}transition);
+      transition: color var(#{$css-var-prefix}transition), background-color var(#{$css-var-prefix}transition);
 
       a {
         &.close {
@@ -52,14 +52,14 @@ dialog.color {
         }
 
         p {
-          #{$✨}font-size: 0.875em;
+          #{$css-var-prefix}font-size: 0.875em;
           opacity: 0.5;
         }
       }
     }
 
     pre {
-      #{$✨}block-spacing-vertical: var(#{$✨}spacing);
+      #{$css-var-prefix}block-spacing-vertical: var(#{$css-var-prefix}spacing);
     }
 
     .grid {

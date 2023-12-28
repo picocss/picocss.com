@@ -6,28 +6,28 @@ $colorName: "Yellow";
 
 // Light
 @mixin light {
-  #{$✨}text-selection-color: #{rgba($yellow-400, 0.25)};
-  #{$✨}primary: #{$yellow-550};
-  #{$✨}primary-background: #{$yellow-100};
-  #{$✨}primary-underline: #{rgba($yellow-550, 0.5)};
-  #{$✨}primary-hover: #{$yellow-650};
-  #{$✨}primary-hover-background: #{$yellow-150};
-  #{$✨}primary-focus: #{rgba($yellow-400, 0.25)};
-  #{$✨}primary-inverse: #{$black};
-  #{$✨}switch-color: var(#{$✨}secondary-hover);
+  #{$css-var-prefix}text-selection-color: #{rgba($yellow-400, 0.25)};
+  #{$css-var-prefix}primary: #{$yellow-550};
+  #{$css-var-prefix}primary-background: #{$yellow-100};
+  #{$css-var-prefix}primary-underline: #{rgba($yellow-550, 0.5)};
+  #{$css-var-prefix}primary-hover: #{$yellow-650};
+  #{$css-var-prefix}primary-hover-background: #{$yellow-150};
+  #{$css-var-prefix}primary-focus: #{rgba($yellow-400, 0.25)};
+  #{$css-var-prefix}primary-inverse: #{$black};
+  #{$css-var-prefix}switch-color: var(#{$css-var-prefix}secondary-hover);
 }
 
 // Dark
 @mixin dark {
-  #{$✨}text-selection-color: #{rgba($yellow-350, 0.1875)};
-  #{$✨}primary: #{$yellow-350};
-  #{$✨}primary-background: #{$yellow-100};
-  #{$✨}primary-underline: #{rgba($yellow-350, 0.5)};
-  #{$✨}primary-hover: #{$yellow-250};
-  #{$✨}primary-hover-background: #{mix($yellow-100, $yellow-50)};
-  #{$✨}primary-focus: #{rgba($yellow-350, 0.25)};
-  #{$✨}primary-inverse: #{$black};
-  #{$✨}switch-color: var(#{$✨}background-color);
+  #{$css-var-prefix}text-selection-color: #{rgba($yellow-350, 0.1875)};
+  #{$css-var-prefix}primary: #{$yellow-350};
+  #{$css-var-prefix}primary-background: #{$yellow-100};
+  #{$css-var-prefix}primary-underline: #{rgba($yellow-350, 0.5)};
+  #{$css-var-prefix}primary-hover: #{$yellow-250};
+  #{$css-var-prefix}primary-hover-background: #{mix($yellow-100, $yellow-50)};
+  #{$css-var-prefix}primary-focus: #{rgba($yellow-350, 0.25)};
+  #{$css-var-prefix}primary-inverse: #{$black};
+  #{$css-var-prefix}switch-color: var(#{$css-var-prefix}background-color);
 }
 
 /* #{$colorName} color for light color scheme (Default) */

@@ -6,26 +6,26 @@ $colorName: "Blue";
 
 // Light
 @mixin light {
-  #{$✨}text-selection-color: #{rgba($blue-400, 0.25)};
-  #{$✨}primary: #{$blue-550};
-  #{$✨}primary-background: #{$blue-550};
-  #{$✨}primary-underline: #{rgba($blue-550, 0.5)};
-  #{$✨}primary-hover: #{$blue-650};
-  #{$✨}primary-hover-background: #{$blue-600};
-  #{$✨}primary-focus: #{rgba($blue-400, 0.25)};
-  #{$✨}primary-inverse: #{$white};
+  #{$css-var-prefix}text-selection-color: #{rgba($blue-400, 0.25)};
+  #{$css-var-prefix}primary: #{$blue-550};
+  #{$css-var-prefix}primary-background: #{$blue-550};
+  #{$css-var-prefix}primary-underline: #{rgba($blue-550, 0.5)};
+  #{$css-var-prefix}primary-hover: #{$blue-650};
+  #{$css-var-prefix}primary-hover-background: #{$blue-600};
+  #{$css-var-prefix}primary-focus: #{rgba($blue-400, 0.25)};
+  #{$css-var-prefix}primary-inverse: #{$white};
 }
 
 // Dark
 @mixin dark {
-  #{$✨}text-selection-color: #{rgba($blue-350, 0.1875)};
-  #{$✨}primary: #{$blue-350};
-  #{$✨}primary-background: #{$blue-550};
-  #{$✨}primary-underline: #{rgba($blue-350, 0.5)};
-  #{$✨}primary-hover: #{$blue-250};
-  #{$✨}primary-hover-background: #{$blue-500};
-  #{$✨}primary-focus: #{rgba($blue-350, 0.25)};
-  #{$✨}primary-inverse: #{$white};
+  #{$css-var-prefix}text-selection-color: #{rgba($blue-350, 0.1875)};
+  #{$css-var-prefix}primary: #{$blue-350};
+  #{$css-var-prefix}primary-background: #{$blue-550};
+  #{$css-var-prefix}primary-underline: #{rgba($blue-350, 0.5)};
+  #{$css-var-prefix}primary-hover: #{$blue-250};
+  #{$css-var-prefix}primary-hover-background: #{$blue-500};
+  #{$css-var-prefix}primary-focus: #{rgba($blue-350, 0.25)};
+  #{$css-var-prefix}primary-inverse: #{$white};
 }
 
 /* #{$colorName} color for light color scheme (Default) */

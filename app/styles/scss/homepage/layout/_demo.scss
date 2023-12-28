@@ -8,19 +8,19 @@ article.demo.component {
   flex-direction: column;
   justify-content: space-between;
   min-width: 0;
-  height: calc(var(--demo-height) + (var(#{$✨}block-spacing-vertical) * 2));
+  height: calc(var(--demo-height) + (var(#{$css-var-prefix}block-spacing-vertical) * 2));
   margin-bottom: 0;
   padding-bottom: 0;
   pointer-events: none;
   transition: height 0.4s ease-out;
   user-select: none;
-  #{$✨}block-spacing-horizontal: var(#{$✨}spacing) !important;
-  #{$✨}block-spacing-vertical: calc(var(#{$✨}spacing) * 1.5) !important;
-  background-color: var(#{$✨}background-color);
+  #{$css-var-prefix}block-spacing-horizontal: var(#{$css-var-prefix}spacing) !important;
+  #{$css-var-prefix}block-spacing-vertical: calc(var(#{$css-var-prefix}spacing) * 1.5) !important;
+  background-color: var(#{$css-var-prefix}background-color);
 
   @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
-    #{$✨}block-spacing-horizontal: calc(var(#{$✨}spacing) * 1.5) !important;
-    #{$✨}block-spacing-vertical: calc(var(#{$✨}spacing) * 2) !important;
+    #{$css-var-prefix}block-spacing-horizontal: calc(var(#{$css-var-prefix}spacing) * 1.5) !important;
+    #{$css-var-prefix}block-spacing-vertical: calc(var(#{$css-var-prefix}spacing) * 2) !important;
   }
 
   main {
@@ -48,7 +48,7 @@ article.demo.component {
       &[role="search"],
       &[role="group"] {
         &.is-focused {
-          #{$✨}group-box-shadow: var(#{$✨}group-box-shadow-focus-with-button);
+          #{$css-var-prefix}group-box-shadow: var(#{$css-var-prefix}group-box-shadow-focus-with-button);
 
           input:not([type="checkbox"], [type="radio"]),
           select {
@@ -64,26 +64,26 @@ article.demo.component {
       // Focused input
       input {
         &.is-focused {
-          #{$✨}background-color: var(#{$✨}form-element-active-background-color);
-          #{$✨}border-color: var(#{$✨}form-element-active-border-color);
-          #{$✨}box-shadow: 0 0 0 var(#{$✨}outline-width) var(#{$✨}form-element-focus-color);
+          #{$css-var-prefix}background-color: var(#{$css-var-prefix}form-element-active-background-color);
+          #{$css-var-prefix}border-color: var(#{$css-var-prefix}form-element-active-border-color);
+          #{$css-var-prefix}box-shadow: 0 0 0 var(#{$css-var-prefix}outline-width) var(#{$css-var-prefix}form-element-focus-color);
         }
       }
 
       // Focused button
       button {
         &.is-focused {
-          #{$✨}background-color: var(#{$✨}primary-hover-background);
-          #{$✨}border-color: var(#{$✨}primary-hover-border);
-          #{$✨}color: var(#{$✨}primary-inverse);
-          #{$✨}box-shadow:
-            var(#{$✨}button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0)),
-            0 0 0 var(#{$✨}outline-width) var(#{$✨}primary-focus);
+          #{$css-var-prefix}background-color: var(#{$css-var-prefix}primary-hover-background);
+          #{$css-var-prefix}border-color: var(#{$css-var-prefix}primary-hover-border);
+          #{$css-var-prefix}color: var(#{$css-var-prefix}primary-inverse);
+          #{$css-var-prefix}box-shadow:
+            var(#{$css-var-prefix}button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0)),
+            0 0 0 var(#{$css-var-prefix}outline-width) var(#{$css-var-prefix}primary-focus);
         }
       }
 
       * {
-        transition: border-radius var(#{$✨}transition);
+        transition: border-radius var(#{$css-var-prefix}transition);
       }
     }
   }
@@ -114,7 +114,7 @@ article.demo.component {
     inset: 0;
     transform: scale(6);
     transform-origin: center;
-    background: var(#{$✨}background-gradient);
+    background: var(#{$css-var-prefix}background-gradient);
     content: "";
   }
 }

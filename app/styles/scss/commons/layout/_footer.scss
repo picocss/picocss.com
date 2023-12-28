@@ -6,13 +6,13 @@
 
 body {
   > footer {
-    background: var(#{$✨}background-gradient);
+    background: var(#{$css-var-prefix}background-gradient);
 
     .container {
       svg {
         width: 2rem;
         height: 2rem;
-        margin-bottom: var(#{$✨}spacing);
+        margin-bottom: var(#{$css-var-prefix}spacing);
       }
 
       p {
@@ -23,7 +23,7 @@ body {
 
         &:not(:first-of-type) {
           margin-bottom: 0.125em;
-          color: var(#{$✨}muted-color);
+          color: var(#{$css-var-prefix}muted-color);
           font-size: 14px;
         }
       }

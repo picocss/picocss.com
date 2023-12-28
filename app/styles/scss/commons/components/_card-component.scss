@@ -7,9 +7,9 @@
 
 article {
   &.component {
-    outline-color: var(#{$✨}card-component-outline-color);
+    outline-color: var(#{$css-var-prefix}card-component-outline-color);
     outline-style: solid;
-    outline-width: var(#{$✨}card-component-outline-width);
+    outline-width: var(#{$css-var-prefix}card-component-outline-width);
     background-color: transparent;
   }
 }

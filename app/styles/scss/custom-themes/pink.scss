@@ -6,26 +6,26 @@ $colorName: "Pink";
 
 // Light
 @mixin light {
-  #{$✨}text-selection-color: #{rgba($pink-400, 0.25)};
-  #{$✨}primary: #{$pink-550};
-  #{$✨}primary-background: #{$pink-500};
-  #{$✨}primary-underline: #{rgba($pink-550, 0.5)};
-  #{$✨}primary-hover: #{$pink-650};
-  #{$✨}primary-hover-background: #{$pink-550};
-  #{$✨}primary-focus: #{rgba($pink-400, 0.25)};
-  #{$✨}primary-inverse: #{$white};
+  #{$css-var-prefix}text-selection-color: #{rgba($pink-400, 0.25)};
+  #{$css-var-prefix}primary: #{$pink-550};
+  #{$css-var-prefix}primary-background: #{$pink-500};
+  #{$css-var-prefix}primary-underline: #{rgba($pink-550, 0.5)};
+  #{$css-var-prefix}primary-hover: #{$pink-650};
+  #{$css-var-prefix}primary-hover-background: #{$pink-550};
+  #{$css-var-prefix}primary-focus: #{rgba($pink-400, 0.25)};
+  #{$css-var-prefix}primary-inverse: #{$white};
 }
 
 // Dark
 @mixin dark {
-  #{$✨}text-selection-color: #{rgba($pink-350, 0.1875)};
-  #{$✨}primary: #{$pink-350};
-  #{$✨}primary-background: #{$pink-500};
-  #{$✨}primary-underline: #{rgba($pink-350, 0.5)};
-  #{$✨}primary-hover: #{$pink-250};
-  #{$✨}primary-hover-background: #{$pink-450};
-  #{$✨}primary-focus: #{rgba($pink-350, 0.25)};
-  #{$✨}primary-inverse: #{$white};
+  #{$css-var-prefix}text-selection-color: #{rgba($pink-350, 0.1875)};
+  #{$css-var-prefix}primary: #{$pink-350};
+  #{$css-var-prefix}primary-background: #{$pink-500};
+  #{$css-var-prefix}primary-underline: #{rgba($pink-350, 0.5)};
+  #{$css-var-prefix}primary-hover: #{$pink-250};
+  #{$css-var-prefix}primary-hover-background: #{$pink-450};
+  #{$css-var-prefix}primary-focus: #{rgba($pink-350, 0.25)};
+  #{$css-var-prefix}primary-inverse: #{$white};
 }
 
 /* #{$colorName} color for light color scheme (Default) */

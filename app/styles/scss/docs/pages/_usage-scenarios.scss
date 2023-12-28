@@ -27,21 +27,21 @@ main#usage-scenarios {
   }
 
   .scale-color-1 {
-    color: var(#{$✨}scale-color-1);
+    color: var(#{$css-var-prefix}scale-color-1);
   }
   .scale-color-2 {
-    color: var(#{$✨}scale-color-2);
+    color: var(#{$css-var-prefix}scale-color-2);
   }
   .scale-color-3 {
-    color: var(#{$✨}scale-color-3);
+    color: var(#{$css-var-prefix}scale-color-3);
   }
   .scale-color-4 {
-    color: var(#{$✨}scale-color-4);
+    color: var(#{$css-var-prefix}scale-color-4);
   }
   .scale-color-5 {
-    color: var(#{$✨}scale-color-5);
+    color: var(#{$css-var-prefix}scale-color-5);
   }
   .muted {
-    color: var(#{$✨}muted-color);
+    color: var(#{$css-var-prefix}muted-color);
   }
 }

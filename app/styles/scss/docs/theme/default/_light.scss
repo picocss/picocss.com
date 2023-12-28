@@ -3,22 +3,22 @@
 
 @mixin theme {
   // Aside
-  #{$✨}aside-link-current-background-color: #{$slate-50};
+  #{$css-var-prefix}aside-link-current-background-color: #{$slate-50};
 
   // Color coded scale
-  #{$✨}scale-color-1: #{$jade-600};
-  #{$✨}scale-color-2: #{$lime-600};
-  #{$✨}scale-color-3: #{$amber-600};
-  #{$✨}scale-color-4: #{$pumpkin-600};
-  #{$✨}scale-color-5: #{$red-600};
+  #{$css-var-prefix}scale-color-1: #{$jade-600};
+  #{$css-var-prefix}scale-color-2: #{$lime-600};
+  #{$css-var-prefix}scale-color-3: #{$amber-600};
+  #{$css-var-prefix}scale-color-4: #{$pumpkin-600};
+  #{$css-var-prefix}scale-color-5: #{$red-600};
 
   // Forced dark color scheme
   article {
     footer.code[data-theme="dark"] {
-      #{$✨}card-background-color: #{$slate-900};
-      #{$✨}card-border-color: var(#{$✨}card-background-color);
-      #{$✨}card-box-shadow: var(#{$✨}box-shadow);
-      #{$✨}card-sectioning-background-color: #{mix($slate-900, $slate-850)};
+      #{$css-var-prefix}card-background-color: #{$slate-900};
+      #{$css-var-prefix}card-border-color: var(#{$css-var-prefix}card-background-color);
+      #{$css-var-prefix}card-box-shadow: var(#{$css-var-prefix}box-shadow);
+      #{$css-var-prefix}card-sectioning-background-color: #{mix($slate-900, $slate-850)};
     }
   }
 }

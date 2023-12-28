@@ -7,8 +7,8 @@
 
 main {
   > aside {
-    #{$✨}font-size: 16px;
-    font-size: var(#{$✨}font-size);
+    #{$css-var-prefix}font-size: 16px;
+    font-size: var(#{$css-var-prefix}font-size);
 
     nav {
       details {
@@ -18,7 +18,7 @@ main {
 
         summary {
           font-weight: 600;
-          line-height: var(#{$✨}line-height);
+          line-height: var(#{$css-var-prefix}line-height);
 
           &:focus-visible {
             &:not([role]) {
@@ -27,7 +27,7 @@ main {
           }
 
           &::after {
-            height: calc(1em * var(#{$✨}line-height));
+            height: calc(1em * var(#{$css-var-prefix}line-height));
           }
 
           @media (min-width: map.get(map.get($breakpoints, "lg"), "breakpoint")) {
@@ -39,7 +39,7 @@ main {
 
         &[open] {
           > summary {
-            margin-bottom: calc(var(#{$✨}spacing) * 0.5);
+            margin-bottom: calc(var(#{$css-var-prefix}spacing) * 0.5);
 
             &:not([role]):not(:focus) {
               color: inherit;
@@ -48,7 +48,7 @@ main {
         }
 
         ul {
-          border-left: var(#{$✨}border-width) solid var(#{$✨}muted-border-color);
+          border-left: var(#{$css-var-prefix}border-width) solid var(#{$css-var-prefix}muted-border-color);
 
           &:first-of-type {
             margin: 0;
@@ -57,27 +57,27 @@ main {
 
           li {
             margin: 0;
-            padding: calc(var(#{$✨}nav-element-spacing-vertical) * 0.25) 0;
+            padding: calc(var(#{$css-var-prefix}nav-element-spacing-vertical) * 0.25) 0;
 
             a {
               margin: 0;
-              margin-left: calc(var(#{$✨}border-width) * -1);
+              margin-left: calc(var(#{$css-var-prefix}border-width) * -1);
               padding: 0;
-              padding-left: calc(var(#{$✨}nav-element-spacing-horizontal) * 1.5);
-              border-left: var(#{$✨}border-width) solid transparent;
+              padding-left: calc(var(#{$css-var-prefix}nav-element-spacing-horizontal) * 1.5);
+              border-left: var(#{$css-var-prefix}border-width) solid transparent;
               border-radius: 0;
               font-weight: 400;
-              transition: background-color var(#{$✨}transition), color var(#{$✨}transition),
-                text-decoration var(#{$✨}transition), box-shadow var(#{$✨}transition),
-                border-color var(#{$✨}transition), font-weight var(#{$✨}transition);
+              transition: background-color var(#{$css-var-prefix}transition), color var(#{$css-var-prefix}transition),
+                text-decoration var(#{$css-var-prefix}transition), box-shadow var(#{$css-var-prefix}transition),
+                border-color var(#{$css-var-prefix}transition), font-weight var(#{$css-var-prefix}transition);
 
               &:hover {
-                border-color: var(#{$✨}secondary-underline);
+                border-color: var(#{$css-var-prefix}secondary-underline);
               }
 
               &[aria-current] {
-                border-color: var(#{$✨}primary);
-                color: var(#{$✨}primary-hover);
+                border-color: var(#{$css-var-prefix}primary);
+                color: var(#{$css-var-prefix}primary-hover);
                 font-weight: 600;
 
                 &:hover {

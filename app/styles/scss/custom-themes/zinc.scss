@@ -6,26 +6,26 @@ $colorName: "Zinc";
 
 // Light
 @mixin light {
-  #{$✨}text-selection-color: #{rgba($zinc-400, 0.25)};
-  #{$✨}primary: #{$zinc-550};
-  #{$✨}primary-background: #{$zinc-550};
-  #{$✨}primary-underline: #{rgba($zinc-550, 0.5)};
-  #{$✨}primary-hover: #{$zinc-650};
-  #{$✨}primary-hover-background: #{$zinc-600};
-  #{$✨}primary-focus: #{rgba($zinc-400, 0.25)};
-  #{$✨}primary-inverse: #{$white};
+  #{$css-var-prefix}text-selection-color: #{rgba($zinc-400, 0.25)};
+  #{$css-var-prefix}primary: #{$zinc-550};
+  #{$css-var-prefix}primary-background: #{$zinc-550};
+  #{$css-var-prefix}primary-underline: #{rgba($zinc-550, 0.5)};
+  #{$css-var-prefix}primary-hover: #{$zinc-650};
+  #{$css-var-prefix}primary-hover-background: #{$zinc-600};
+  #{$css-var-prefix}primary-focus: #{rgba($zinc-400, 0.25)};
+  #{$css-var-prefix}primary-inverse: #{$white};
 }
 
 // Dark
 @mixin dark {
-  #{$✨}text-selection-color: #{rgba($zinc-350, 0.1875)};
-  #{$✨}primary: #{$zinc-350};
-  #{$✨}primary-background: #{$zinc-550};
-  #{$✨}primary-underline: #{rgba($zinc-350, 0.5)};
-  #{$✨}primary-hover: #{$zinc-250};
-  #{$✨}primary-hover-background: #{$zinc-500};
-  #{$✨}primary-focus: #{rgba($zinc-350, 0.25)};
-  #{$✨}primary-inverse: #{$white};
+  #{$css-var-prefix}text-selection-color: #{rgba($zinc-350, 0.1875)};
+  #{$css-var-prefix}primary: #{$zinc-350};
+  #{$css-var-prefix}primary-background: #{$zinc-550};
+  #{$css-var-prefix}primary-underline: #{rgba($zinc-350, 0.5)};
+  #{$css-var-prefix}primary-hover: #{$zinc-250};
+  #{$css-var-prefix}primary-hover-background: #{$zinc-500};
+  #{$css-var-prefix}primary-focus: #{rgba($zinc-350, 0.25)};
+  #{$css-var-prefix}primary-inverse: #{$white};
 }
 
 /* #{$colorName} color for light color scheme (Default) */

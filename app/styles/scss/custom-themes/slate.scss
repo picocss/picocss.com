@@ -6,26 +6,26 @@ $colorName: "Slate";
 
 // Light
 @mixin light {
-  #{$✨}text-selection-color: #{rgba($slate-400, 0.25)};
-  #{$✨}primary: #{$slate-550};
-  #{$✨}primary-background: #{$slate-600};
-  #{$✨}primary-underline: #{rgba($slate-550, 0.5)};
-  #{$✨}primary-hover: #{$slate-650};
-  #{$✨}primary-hover-background: #{$slate-650};
-  #{$✨}primary-focus: #{rgba($slate-400, 0.25)};
-  #{$✨}primary-inverse: #{$white};
+  #{$css-var-prefix}text-selection-color: #{rgba($slate-400, 0.25)};
+  #{$css-var-prefix}primary: #{$slate-550};
+  #{$css-var-prefix}primary-background: #{$slate-600};
+  #{$css-var-prefix}primary-underline: #{rgba($slate-550, 0.5)};
+  #{$css-var-prefix}primary-hover: #{$slate-650};
+  #{$css-var-prefix}primary-hover-background: #{$slate-650};
+  #{$css-var-prefix}primary-focus: #{rgba($slate-400, 0.25)};
+  #{$css-var-prefix}primary-inverse: #{$white};
 }
 
 // Dark
 @mixin dark {
-  #{$✨}text-selection-color: #{rgba($slate-350, 0.1875)};
-  #{$✨}primary: #{$slate-350};
-  #{$✨}primary-background: #{$slate-600};
-  #{$✨}primary-underline: #{rgba($slate-350, 0.5)};
-  #{$✨}primary-hover: #{$slate-250};
-  #{$✨}primary-hover-background: #{$slate-550};
-  #{$✨}primary-focus: #{rgba($slate-350, 0.25)};
-  #{$✨}primary-inverse: #{$white};
+  #{$css-var-prefix}text-selection-color: #{rgba($slate-350, 0.1875)};
+  #{$css-var-prefix}primary: #{$slate-350};
+  #{$css-var-prefix}primary-background: #{$slate-600};
+  #{$css-var-prefix}primary-underline: #{rgba($slate-350, 0.5)};
+  #{$css-var-prefix}primary-hover: #{$slate-250};
+  #{$css-var-prefix}primary-hover-background: #{$slate-550};
+  #{$css-var-prefix}primary-focus: #{rgba($slate-350, 0.25)};
+  #{$css-var-prefix}primary-inverse: #{$white};
 }
 
 /* #{$colorName} color for light color scheme (Default) */

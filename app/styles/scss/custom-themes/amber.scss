@@ -6,28 +6,28 @@ $colorName: "Amber";
 
 // Light
 @mixin light {
-  #{$✨}text-selection-color: #{rgba($amber-400, 0.25)};
-  #{$✨}primary: #{$amber-550};
-  #{$✨}primary-background: #{$amber-200};
-  #{$✨}primary-underline: #{rgba($amber-550, 0.5)};
-  #{$✨}primary-hover: #{$amber-650};
-  #{$✨}primary-hover-background: #{$amber-250};
-  #{$✨}primary-focus: #{rgba($amber-400, 0.25)};
-  #{$✨}primary-inverse: #{$black};
-  #{$✨}switch-color: var(#{$✨}secondary-hover);
+  #{$css-var-prefix}text-selection-color: #{rgba($amber-400, 0.25)};
+  #{$css-var-prefix}primary: #{$amber-550};
+  #{$css-var-prefix}primary-background: #{$amber-200};
+  #{$css-var-prefix}primary-underline: #{rgba($amber-550, 0.5)};
+  #{$css-var-prefix}primary-hover: #{$amber-650};
+  #{$css-var-prefix}primary-hover-background: #{$amber-250};
+  #{$css-var-prefix}primary-focus: #{rgba($amber-400, 0.25)};
+  #{$css-var-prefix}primary-inverse: #{$black};
+  #{$css-var-prefix}switch-color: var(#{$css-var-prefix}secondary-hover);
 }
 
 // Dark
 @mixin dark {
-  #{$✨}text-selection-color: #{rgba($amber-350, 0.1875)};
-  #{$✨}primary: #{$amber-350};
-  #{$✨}primary-background: #{$amber-200};
-  #{$✨}primary-underline: #{rgba($amber-350, 0.5)};
-  #{$✨}primary-hover: #{$amber-250};
-  #{$✨}primary-hover-background: #{$amber-150};
-  #{$✨}primary-focus: #{rgba($amber-350, 0.25)};
-  #{$✨}primary-inverse: #{$black};
-  #{$✨}switch-color: var(#{$✨}background-color);
+  #{$css-var-prefix}text-selection-color: #{rgba($amber-350, 0.1875)};
+  #{$css-var-prefix}primary: #{$amber-350};
+  #{$css-var-prefix}primary-background: #{$amber-200};
+  #{$css-var-prefix}primary-underline: #{rgba($amber-350, 0.5)};
+  #{$css-var-prefix}primary-hover: #{$amber-250};
+  #{$css-var-prefix}primary-hover-background: #{$amber-150};
+  #{$css-var-prefix}primary-focus: #{rgba($amber-350, 0.25)};
+  #{$css-var-prefix}primary-inverse: #{$black};
+  #{$css-var-prefix}switch-color: var(#{$css-var-prefix}background-color);
 }
 
 /* #{$colorName} color for light color scheme (Default) */

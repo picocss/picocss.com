@@ -6,26 +6,26 @@ $colorName: "Azure";
 
 // Light
 @mixin light {
-  #{$✨}text-selection-color: #{rgba($azure-400, 0.25)};
-  #{$✨}primary: #{$azure-550};
-  #{$✨}primary-background: #{$azure-550};
-  #{$✨}primary-underline: #{rgba($azure-550, 0.5)};
-  #{$✨}primary-hover: #{$azure-650};
-  #{$✨}primary-hover-background: #{$azure-600};
-  #{$✨}primary-focus: #{rgba($azure-400, 0.25)};
-  #{$✨}primary-inverse: #{$white};
+  #{$css-var-prefix}text-selection-color: #{rgba($azure-400, 0.25)};
+  #{$css-var-prefix}primary: #{$azure-550};
+  #{$css-var-prefix}primary-background: #{$azure-550};
+  #{$css-var-prefix}primary-underline: #{rgba($azure-550, 0.5)};
+  #{$css-var-prefix}primary-hover: #{$azure-650};
+  #{$css-var-prefix}primary-hover-background: #{$azure-600};
+  #{$css-var-prefix}primary-focus: #{rgba($azure-400, 0.25)};
+  #{$css-var-prefix}primary-inverse: #{$white};
 }
 
 // Dark
 @mixin dark {
-  #{$✨}text-selection-color: #{rgba($azure-350, 0.1875)};
-  #{$✨}primary: #{$azure-350};
-  #{$✨}primary-background: #{$azure-550};
-  #{$✨}primary-underline: #{rgba($azure-350, 0.5)};
-  #{$✨}primary-hover: #{$azure-250};
-  #{$✨}primary-hover-background: #{$azure-500};
-  #{$✨}primary-focus: #{rgba($azure-350, 0.25)};
-  #{$✨}primary-inverse: #{$white};
+  #{$css-var-prefix}text-selection-color: #{rgba($azure-350, 0.1875)};
+  #{$css-var-prefix}primary: #{$azure-350};
+  #{$css-var-prefix}primary-background: #{$azure-550};
+  #{$css-var-prefix}primary-underline: #{rgba($azure-350, 0.5)};
+  #{$css-var-prefix}primary-hover: #{$azure-250};
+  #{$css-var-prefix}primary-hover-background: #{$azure-500};
+  #{$css-var-prefix}primary-focus: #{rgba($azure-350, 0.25)};
+  #{$css-var-prefix}primary-inverse: #{$white};
 }
 
 /* #{$colorName} color for light color scheme (Default) */

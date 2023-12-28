@@ -2,6 +2,6 @@
 @use "settings" as *;
 
 img.rounded-bordered {
-  border: 1px solid var(#{$✨}muted-border-color);
-  border-radius: var(#{$✨}border-radius);
+  border: 1px solid var(#{$css-var-prefix}muted-border-color);
+  border-radius: var(#{$css-var-prefix}border-radius);
 }

@@ -2,7 +2,7 @@
 @use "settings" as *;
 
 @mixin theme {
-  #{$✨}background-gradient: radial-gradient(
+  #{$css-var-prefix}background-gradient: radial-gradient(
     circle closest-side,
     #{mix($azure-850, $slate-900, 12.5%)},
     transparent

@@ -5,8 +5,8 @@
   overflow-x: hidden;
 
   > main {
-    #{$✨}homepage-spacing-vertical: calc(var(#{$✨}spacing) * 3.5);
-    #{$✨}homepage-spacing-horizontal: calc(var(#{$✨}spacing) * 1.5);
+    #{$css-var-prefix}homepage-spacing-vertical: calc(var(#{$css-var-prefix}spacing) * 3.5);
+    #{$css-var-prefix}homepage-spacing-horizontal: calc(var(#{$css-var-prefix}spacing) * 1.5);
     @each $key, $values in $breakpoints {
       @if $values {
         @media (min-width: map.get($values, "breakpoint")) {
@@ -29,8 +29,8 @@
             $multiplier-horizontal: 4;
           }
 
-          #{$✨}homepage-spacing-vertical: calc(var(#{$✨}spacing) * $multiplier-vertical);
-          #{$✨}homepage-spacing-horizontal: calc(var(#{$✨}spacing) * $multiplier-horizontal);
+          #{$css-var-prefix}homepage-spacing-vertical: calc(var(#{$css-var-prefix}spacing) * $multiplier-vertical);
+          #{$css-var-prefix}homepage-spacing-horizontal: calc(var(#{$css-var-prefix}spacing) * $multiplier-horizontal);
         }
       }
     }
@@ -39,6 +39,6 @@
 }
 
 section {
-  padding-top: var(#{$✨}homepage-spacing-vertical);
-  padding-bottom: var(#{$✨}homepage-spacing-vertical);
+  padding-top: var(#{$css-var-prefix}homepage-spacing-vertical);
+  padding-bottom: var(#{$css-var-prefix}homepage-spacing-vertical);
 }
