@@ -1,4 +1,5 @@
 @use "sass:map";
+@use "colors" as *;
 @use "settings" as *;
 
 .hero {
@@ -7,21 +8,19 @@
   column-gap: var(#{$css-var-prefix}homepage-spacing-horizontal);
   row-gap: var(#{$css-var-prefix}homepage-spacing-vertical);
   justify-items: center;
+  padding-top: var(#{$css-var-prefix}homepage-spacing-vertical);
 
   @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
     grid-template-columns: 6fr 5fr;
     align-items: center;
-    min-height: calc(25.5rem + (var(#{$css-var-prefix}homepage-spacing-vertical) * 2));
     margin: 0 auto;
-    padding-top: calc(var(#{$css-var-prefix}homepage-spacing-vertical) / 2);
-    padding-bottom: calc(var(#{$css-var-prefix}homepage-spacing-vertical) / 2);
   }
 
   @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
     grid-template-columns: 7fr 5fr;
   }
 
-  article.demo.component,
+  .demo,
   .hook {
     width: 100%;
 
@@ -32,35 +31,35 @@
     @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
       max-width: none;
     }
-
-    p {
-      color: var(#{$css-var-prefix}color);
-    }
   }
 
   .hook {
-    hgroup {
-      text-align: center;
+    h1,
+    p {
+      @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
+        text-align: center;
+      }
 
       @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
         text-align: left;
       }
+    }
 
-      p:first-of-type {
-        margin-bottom: calc(var(#{$css-var-prefix}spacing) * 2);
-      }
+    h1 {
+      margin-top: 0;
 
-      h1 {
-        margin-bottom: 1rem;
-
-        @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
-          margin-bottom: 1.25rem;
-        }
+      mark {
+        padding: 0;
+        background-image: var(#{$css-var-prefix}mark-gradient);
+        background-clip: text;
+        color: transparent;
       }
     }
 
     .grid.ctas {
       margin-top: calc(var(#{$css-var-prefix}homepage-spacing-vertical) / 2);
+      margin-bottom: calc(var(#{$css-var-prefix}spacing) * 0.5);
+
       @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
         display: flex;
         justify-content: center;
@@ -69,6 +68,11 @@
       @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
         justify-content: flex-start;
       }
+    }
+
+    p.info,
+    p.secondary {
+      color: var(#{$css-var-prefix}muted-color);
     }
   }
 }

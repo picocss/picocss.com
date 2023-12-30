@@ -1,4 +1,4 @@
-export const documentationMenu = [
+export default [
   {
     category: "Getting started",
     links: [

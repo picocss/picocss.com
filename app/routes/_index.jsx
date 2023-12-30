@@ -3,6 +3,7 @@ import { HeaderProvider } from "~/contexts/HeaderContext";
 
 import Header from "~/components/Header";
 import Hero from "~/components/homepage/Hero";
+import Stats from "~/components/homepage/Stats";
 
 const { defaultTitle, defaultDescription } = metaData();
 
@@ -26,6 +27,7 @@ export default function Docs() {
       <Header />
       <main className="container">
         <Hero />
+        <Stats />
       </main>
     </HeaderProvider>
   );

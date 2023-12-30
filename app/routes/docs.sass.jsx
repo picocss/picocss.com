@@ -80,7 +80,9 @@ export default function Sass() {
             You can import Pico into your SCSS file with{" "}
             <Link to="https://sass-lang.com/documentation/at-rules/use">@use</Link>:
           </p>
-          <Code language="scss">@use "pico";</Code>
+          <Code language="scss" className="small">
+            @use "pico";
+          </Code>
           <p>
             If you are using{" "}
             <Link to="https://sass-lang.com/documentation/cli/dart-sass">
@@ -90,7 +92,9 @@ export default function Sass() {
             using <Code display="inline">sass --load-path=node_modules/@picocss/pico/scss/</Code> to
             avoid using relative URLs like:
           </p>
-          <Code language="scss">@use "../../../node_modules/@picocss/pico/scss/pico";</Code>
+          <Code language="scss" className="small">
+            @use "../../../node_modules/@picocss/pico/scss/pico";
+          </Code>
         </section>
 
         <section ref={settingsRef}>

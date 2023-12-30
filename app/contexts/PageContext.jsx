@@ -18,7 +18,7 @@ export default function PageProvider({ children, ...props }) {
   // Theme
   const systemPrefersColorScheme = usePrefersColorScheme();
   const defaultTheme = systemPrefersColorScheme === "dark" ? "dark" : "light";
-  const [selectedTheme, setSelectedTheme] = useLocalStorageState("picoTheme", null);
+  const [selectedTheme, setSelectedTheme] = useLocalStorageState("picoColorScheme", null);
   const [pageTheme, setPageTheme] = useState("light");
 
   const switchTheme = () => {

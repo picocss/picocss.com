@@ -2,106 +2,131 @@
 @use "colors" as *;
 @use "settings" as *;
 
-article.demo.component {
+.demo {
   display: flex;
   position: relative;
   flex-direction: column;
-  justify-content: space-between;
-  min-width: 0;
-  height: calc(var(--demo-height) + (var(#{$css-var-prefix}block-spacing-vertical) * 2));
-  margin-bottom: 0;
-  padding-bottom: 0;
-  pointer-events: none;
-  transition: height 0.4s ease-out;
-  user-select: none;
-  #{$css-var-prefix}block-spacing-horizontal: var(#{$css-var-prefix}spacing) !important;
-  #{$css-var-prefix}block-spacing-vertical: calc(var(#{$css-var-prefix}spacing) * 1.5) !important;
-  background-color: var(#{$css-var-prefix}background-color);
+  justify-content: center;
+  max-width: calc(100vw - (var(#{$css-var-prefix}spacing) * 2));
+  min-height: 25rem;
 
-  @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
-    #{$css-var-prefix}block-spacing-horizontal: calc(var(#{$css-var-prefix}spacing) * 1.5) !important;
-    #{$css-var-prefix}block-spacing-vertical: calc(var(#{$css-var-prefix}spacing) * 2) !important;
-  }
+  article.component {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-width: 0;
+    height: 100%;
+    margin-bottom: 0;
+    pointer-events: none;
+    user-select: none;
+    #{$css-var-prefix}block-spacing-horizontal: var(#{$css-var-prefix}spacing) !important;
+    #{$css-var-prefix}block-spacing-vertical: calc(var(#{$css-var-prefix}spacing) * 1.5) !important;
+    background-color: var(#{$css-var-prefix}background-color);
 
-  main {
-    margin-bottom: auto;
+    @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
+      #{$css-var-prefix}block-spacing-horizontal: calc(
+        var(#{$css-var-prefix}spacing) * 1.5
+      ) !important;
+      #{$css-var-prefix}block-spacing-vertical: calc(var(#{$css-var-prefix}spacing) * 2) !important;
+    }
 
-    form {
-      &[role="search"],
-      &[role="group"],
-      input:only-child,
-      input[aria-invalid="true"],
-      button {
-        margin-bottom: 0;
+    @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+      justify-content: flex-start;
+      height: calc(var(--demo-height) + (var(#{$css-var-prefix}block-spacing-vertical) * 2));
+      padding-bottom: 0;
+      transition: height 0.4s ease-out;
+    }
+
+    main {
+      @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+        margin-bottom: auto;
       }
 
-      small {
-        margin-top: 0.25rem;
-        margin-bottom: 0;
-      }
+      form {
+        &[role="search"],
+        &[role="group"],
+        input:only-child,
+        input[aria-invalid="true"],
+        button {
+          margin-bottom: 0;
+        }
 
-      label {
-        margin-bottom: 0;
-      }
+        small {
+          margin-top: 0.25rem;
+          margin-bottom: 0;
+        }
 
-      // Focused group form
-      &[role="search"],
-      &[role="group"] {
-        &.is-focused {
-          #{$css-var-prefix}group-box-shadow: var(#{$css-var-prefix}group-box-shadow-focus-with-button);
+        label {
+          margin-bottom: 0;
+        }
 
-          input:not([type="checkbox"], [type="radio"]),
-          select {
-            border-color: transparent;
+        // Focused group form
+        &[role="search"],
+        &[role="group"] {
+          &.is-focused {
+            #{$css-var-prefix}group-box-shadow: var(
+              #{$css-var-prefix}group-box-shadow-focus-with-button
+            );
+
+            input:not([type="checkbox"], [type="radio"]),
+            select {
+              border-color: transparent;
+            }
+
+            button {
+              box-shadow: none;
+            }
           }
+        }
 
-          button {
-            box-shadow: none;
+        // Focused input
+        input {
+          &.is-focused {
+            #{$css-var-prefix}background-color: var(
+              #{$css-var-prefix}form-element-active-background-color
+            );
+            #{$css-var-prefix}border-color: var(#{$css-var-prefix}form-element-active-border-color);
+            #{$css-var-prefix}box-shadow: 0 0 0 var(#{$css-var-prefix}outline-width)
+              var(#{$css-var-prefix}form-element-focus-color);
           }
         }
-      }
 
-      // Focused input
-      input {
-        &.is-focused {
-          #{$css-var-prefix}background-color: var(#{$css-var-prefix}form-element-active-background-color);
-          #{$css-var-prefix}border-color: var(#{$css-var-prefix}form-element-active-border-color);
-          #{$css-var-prefix}box-shadow: 0 0 0 var(#{$css-var-prefix}outline-width) var(#{$css-var-prefix}form-element-focus-color);
+        // Focused button
+        button {
+          &.is-focused {
+            #{$css-var-prefix}background-color: var(#{$css-var-prefix}primary-hover-background);
+            #{$css-var-prefix}border-color: var(#{$css-var-prefix}primary-hover-border);
+            #{$css-var-prefix}color: var(#{$css-var-prefix}primary-inverse);
+            #{$css-var-prefix}box-shadow:
+              var(#{$css-var-prefix}button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0)),
+              0 0 0 var(#{$css-var-prefix}outline-width) var(#{$css-var-prefix}primary-focus);
+          }
         }
-      }
 
-      // Focused button
-      button {
-        &.is-focused {
-          #{$css-var-prefix}background-color: var(#{$css-var-prefix}primary-hover-background);
-          #{$css-var-prefix}border-color: var(#{$css-var-prefix}primary-hover-border);
-          #{$css-var-prefix}color: var(#{$css-var-prefix}primary-inverse);
-          #{$css-var-prefix}box-shadow:
-            var(#{$css-var-prefix}button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0)),
-            0 0 0 var(#{$css-var-prefix}outline-width) var(#{$css-var-prefix}primary-focus);
+        * {
+          transition: border-radius var(#{$css-var-prefix}transition);
         }
-      }
-
-      * {
-        transition: border-radius var(#{$css-var-prefix}transition);
       }
     }
-  }
 
-  footer.code {
-    margin-top: auto;
-    margin-bottom: 0;
-    background: none;
+    footer.code {
+      background: none;
 
-    [data-typeit-id] {
-      .ti-cursor {
-        transform: translateX(-0.25em);
-        color: inherit;
-        font-style: inherit;
-        font-weight: inherit;
-        font-size: inherit;
-        line-height: inherit;
-        font-family: inherit;
+      @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+        margin-top: auto;
+        margin-bottom: 0;
+      }
+
+      [data-typeit-id] {
+        .ti-cursor {
+          transform: translateX(-0.25em);
+          color: inherit;
+          font-style: inherit;
+          font-weight: inherit;
+          font-size: inherit;
+          line-height: inherit;
+          font-family: inherit;
+        }
       }
     }
   }
@@ -112,7 +137,7 @@ article.demo.component {
     z-index: -1;
     position: absolute;
     inset: 0;
-    transform: scale(6);
+    transform: scale(3);
     transform-origin: center;
     background: var(#{$css-var-prefix}background-gradient);
     content: "";

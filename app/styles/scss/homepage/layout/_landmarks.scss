@@ -2,7 +2,7 @@
 @use "settings" as *;
 
 #{$semantic-root-element} {
-  overflow-x: hidden;
+  overflow: hidden;
 
   > main {
     #{$css-var-prefix}homepage-spacing-vertical: calc(var(#{$css-var-prefix}spacing) * 3.5);
@@ -29,8 +29,12 @@
             $multiplier-horizontal: 4;
           }
 
-          #{$css-var-prefix}homepage-spacing-vertical: calc(var(#{$css-var-prefix}spacing) * $multiplier-vertical);
-          #{$css-var-prefix}homepage-spacing-horizontal: calc(var(#{$css-var-prefix}spacing) * $multiplier-horizontal);
+          #{$css-var-prefix}homepage-spacing-vertical: calc(
+            var(#{$css-var-prefix}spacing) * $multiplier-vertical
+          );
+          #{$css-var-prefix}homepage-spacing-horizontal: calc(
+            var(#{$css-var-prefix}spacing) * $multiplier-horizontal
+          );
         }
       }
     }
@@ -39,6 +43,6 @@
 }
 
 section {
-  padding-top: var(#{$css-var-prefix}homepage-spacing-vertical);
+  margin-bottom: 0;
   padding-bottom: var(#{$css-var-prefix}homepage-spacing-vertical);
 }

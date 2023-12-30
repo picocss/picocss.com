@@ -4,7 +4,7 @@ import parse from "html-react-parser";
 import { useDocumentation } from "~/contexts/DocumentationContext";
 import { useNavigation } from "~/contexts/NavigationContext";
 
-import { documentationMenu } from "~/data/documentationMenu";
+import documentationMenu from "~/data/documentationMenu";
 
 import Heading from "~/components/Heading";
 import Link from "~/components/Link";

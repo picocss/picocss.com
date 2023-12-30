@@ -1,4 +1,4 @@
-import { documentationMenu } from "~/data/documentationMenu";
+import documentationMenu from "~/data/documentationMenu";
 
 // Get the chapter from the route
 export function getChapter(route) {
@@ -7,7 +7,7 @@ export function getChapter(route) {
     sanitizedRoute = sanitizedRoute.split("/").slice(0, -1).join("/");
   }
   const category = documentationMenu.find((category) =>
-    category.links.some((link) => link.route === sanitizedRoute)
+    category.links.some((link) => link.route === sanitizedRoute),
   );
   return category ? category.category : null;
 }

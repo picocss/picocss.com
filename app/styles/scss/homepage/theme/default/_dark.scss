@@ -2,9 +2,21 @@
 @use "settings" as *;
 
 @mixin theme {
+  // Hero background gradient
   #{$css-var-prefix}background-gradient: radial-gradient(
     circle closest-side,
-    #{mix($azure-850, $slate-900, 12.5%)},
+    #{mix($azure-850, $slate-900, 37.5%)},
     transparent
   );
+
+  // Mark gradient
+  #{$css-var-prefix}mark-gradient: linear-gradient(
+    to right,
+    mix($azure-300, $cyan-300),
+    $azure-200,
+    mix($azure-100, $slate-100)
+  );
+
+  // Stats color
+  #{$css-var-prefix}stats-color: mix($azure-200, $cyan-200, 75%);
 }
