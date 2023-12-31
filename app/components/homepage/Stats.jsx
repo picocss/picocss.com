@@ -1,9 +1,6 @@
-import { useEffect } from "react";
-import useLocalStorageState from "use-local-storage-state";
+import stats from "~/data/stats";
+import { formatStatNumber } from "~/utils";
 import parse from "html-react-parser";
-
-import metrics from "~/data/metrics";
-import { fetchData, formatStatNumber } from "~/utils";
 
 import Npm from "~/components/logos/Npm";
 import Github from "~/components/logos/Github";
@@ -24,45 +21,14 @@ const Logo = ({ type, ...props }) => {
 };
 
 export default function Stats(props) {
-  const [statsData, setStatsData] = useLocalStorageState("picoStats", {
-    defaultValue: {},
-  });
-
-  useEffect(() => {
-    const currentTime = new Date().getTime();
-    const oneDay = 24 * 60 * 60 * 1_000; // milliseconds in a day
-
-    const updateData = async () => {
-      metrics.map(async (metric) => {
-        if (!statsData[metric.key] || currentTime - statsData[metric.key].timestamp > oneDay) {
-          const data = await fetchData(metric.url);
-          if (data) {
-            const value = metric.dataPath.split(".").reduce((o, k) => (o || {})[k], data);
-            setStatsData((prev) => ({
-              ...prev,
-              [metric.key]: { count: value, timestamp: currentTime },
-            }));
-          }
-        }
-      });
-    };
-
-    updateData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  console.log(stats);
 
   return (
     <section className="stats" {...props}>
       <ul>
-        {metrics.map((metric) => (
+        {stats.map((metric) => (
           <li key={metric.key}>
-            {parse(
-              `<strong>${
-                statsData[metric.key]
-                  ? formatStatNumber(statsData[metric.key].count)
-                  : metric.placeholder
-              }</strong>`,
-            )}
+            {parse(`<strong>${formatStatNumber(metric.count)}</strong>`)}
             <span>
               <Logo type={metric.key} />
               {metric.label}

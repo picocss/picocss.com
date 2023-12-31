@@ -1,0 +1,20 @@
+[
+  {
+    "key": "githubStars",
+    "url": "https://api.github.com/repos/picocss/pico",
+    "dataPath": "stargazers_count",
+    "label": "Stars"
+  },
+  {
+    "key": "npmDownloads",
+    "url": "https://api.npmjs.org/downloads/point/last-month/@picocss/pico",
+    "dataPath": "downloads",
+    "label": "Monthly Downloads"
+  },
+  {
+    "key": "jsdelivrHits",
+    "url": "https://data.jsdelivr.com/v1/stats/packages/npm/%40picocss%2Fpico?period=month",
+    "dataPath": "hits.total",
+    "label": "Monthly Requests"
+  }
+]

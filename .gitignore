@@ -17,8 +17,9 @@ functions/\[\[path\]\].js.map
 app/styles/css/*
 !app/styles/css/postcss.config.cjs
 
-# Pico v1 docs
+# Pico
 public/docs
+app/data/stats.json
 
 # System files
 .DS_Store

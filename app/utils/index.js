@@ -1,4 +1,3 @@
-export * from "./fetchData";
 export * from "./formatStatNumber";
 export * from "./getChapter";
 export * from "./isScrollbarVisible";
