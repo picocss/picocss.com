@@ -10,15 +10,15 @@ export default function meta() {
 
     // Versions
     versions: {
-      current: "2.0.0-alpha1",
+      current: "2.0.0-rc1",
       all: [
         {
-          version: "2.0.0-alpha1",
-          url: "https://v2.picocss.com/docs",
+          version: "2.0.0-rc1",
+          url: "/docs",
         },
         {
-          version: "1.5.10",
-          url: "https://picocss.com/docs/",
+          version: "1.5.11",
+          url: "/docs/1.5.11/",
         },
       ],
     },

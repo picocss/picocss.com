@@ -41,12 +41,13 @@ export default function Nav({ shouldDisplayVersion = false, ...props }) {
 
                   return (
                     <li key={label}>
-                      <Link
-                        to={isCurrent ? "#" : url}
-                        {...(isCurrent && { "aria-current": true, dir: "ltr" })}
-                      >
-                        {linkLabel}
-                      </Link>
+                      {isCurrent ? (
+                        <Link to={url} aria-current={true} dir="ltr">
+                          {linkLabel}
+                        </Link>
+                      ) : (
+                        <a href={url}>{linkLabel}</a>
+                      )}
                     </li>
                   );
                 })}
