@@ -33,7 +33,9 @@
     "prebuild:build-css": "echo '[@picocss/picocss.com] ✨ Compile'",
     "prebuild:autoprefix": "echo '[@picocss/picocss.com] ✨ Autoprefix'",
     "prebuild:minify": "echo '[@picocss/picocss.com] ✨ Minify'",
-    "prebuild:code-snippets": "echo '[@picocss/picocss.com] ✨ Code snippets'"
+    "prebuild:code-snippets": "echo '[@picocss/picocss.com] ✨ Generate code snippets'",
+    "prebuild:fetch-stats": "echo '[@picocss/picocss.com] ✨ Fetch stats'",
+    "prebuild:v1-documentation": "echo '[@picocss/picocss.com] ✨ Build v1 documentation'"
   },
   "dependencies": {
     "@fontsource/figtree": "^5.0.18",
