@@ -7,7 +7,6 @@ import Github from "~/components/logos/Github";
 import Jsdelivr from "~/components/logos/Jsdelivr";
 
 const Logo = ({ type, ...props }) => {
-  console.log(type);
   switch (type) {
     case "npmDownloads":
       return <Npm {...props} />;
@@ -21,8 +20,6 @@ const Logo = ({ type, ...props }) => {
 };
 
 export default function Stats(props) {
-  console.log(stats);
-
   return (
     <section className="stats" {...props}>
       <ul>

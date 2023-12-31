@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import TypeIt from "typeit-react";
+import parse from "html-react-parser";
 
 // Display HTML tag
 const tag = (value) => {
@@ -16,6 +17,16 @@ const value = (value) => {
   return `<span class="token tag attr-value">${value}</span>`;
 };
 
+// Initial Demo Code
+const initialDemoCode = [
+  `&lt;${tag("form")}&gt;`,
+  `<br />  &lt;${tag("input")}`,
+  `<br />    ${attr("type")}=${value('"email"')}`,
+  `<br />    ${attr("placeholder")}=${value('"Enter your email"')}`,
+  `<br />  /&gt;`,
+  `<br />&lt;/${tag("form")}&gt;`,
+];
+
 // Demo
 export default function Demo() {
   // Speed and delay
@@ -30,14 +41,14 @@ export default function Demo() {
   // Form states
   const formRef = useRef(null);
   const [formRole, setFormRole] = useState(false);
-  const [formIsBusy, setFormIsBusy] = useState(true);
+  const [formIsBusy, setFormIsBusy] = useState(false);
   const [formGroupIsFocused, setFormGroupIsFocused] = useState(false);
 
   // Input states
-  const [displayInput, setDisplayInput] = useState(false);
-  const [iputPlaceholder, setInputPlaceholder] = useState(null);
+  const [displayInput, setDisplayInput] = useState(true);
+  const [iputPlaceholder, setInputPlaceholder] = useState("Enter your email");
   const [inputInvalid, setInputInvalid] = useState(null);
-  const [inputClass, setInputClass] = useState(null);
+  const [inputClass, setInputClass] = useState("");
   const [inputType, setInputType] = useState(null);
   const [inputValue, setInputValue] = useState("");
   const [displayedInputValue, setDisplayedInputValue] = useState("");
@@ -67,7 +78,7 @@ export default function Demo() {
 
   // Input helper states
   const [inputHelper, setInputHelper] = useState(null);
-  const [inputHelperClass, setInputHelperClass] = useState(null);
+  const [inputHelperClass, setInputHelperClass] = useState("");
 
   // Select states
   const [displaySelect, setDisplaySelect] = useState(false);
@@ -75,14 +86,20 @@ export default function Demo() {
   // Checkbox states
   const [displayCheckbox, setDisplayCheckbox] = useState(false);
   const [checkboxIsChecked, setCheckboxIsChecked] = useState(false);
-  const [checkboxClass, setCheckboxClass] = useState(null);
+  const [checkboxClass, setCheckboxClass] = useState("");
   const [checkboxRole, setCheckboxRole] = useState(null);
+  const [checkboxIsFocused, setCheckboxIsFocused] = useState(false);
+
+  // Range states
+  const [displayRange, setDisplayRange] = useState(false);
+  const [rangeValue, setRangeValue] = useState(0);
+  const [rangeIsFocused, setRangeIsFocused] = useState(false);
 
   // Button states
   const [displayButton, setDisplayButton] = useState(false);
   const [buttonType, setButtonType] = useState(null);
   const [buttonLabel, setButtonLabel] = useState(null);
-  const [buttonClass, setButtonClass] = useState(null);
+  const [buttonClass, setButtonClass] = useState("");
   const [buttonIsBusy, setButtonIsBusy] = useState(false);
   const [buttonIsFocused, setButtonIsFocused] = useState(false);
 
@@ -110,12 +127,18 @@ export default function Demo() {
     };
   }, []);
 
+  // Reset TypeIt instance
+  const manualLoop = (instance) => {
+    instance.reset();
+    instance.go();
+  };
+
   return (
     <div className="demo">
       <article
         className="component"
         aria-label="Demo"
-        style={{ "--demo-height": `${demoHeight}px` }}
+        style={demoHeight && { "--demo-height": `${demoHeight}px` }}
       >
         {/* Example */}
         <main>
@@ -150,9 +173,21 @@ export default function Demo() {
                   type="checkbox"
                   {...(checkboxRole && { role: checkboxRole })}
                   checked={checkboxIsChecked}
+                  className={checkboxIsFocused ? "is-focused" : ""}
                   onChange={(e) => setCheckboxIsChecked(e.target.checked)}
                 />
                 Publish on my profile
+              </label>
+            )}
+            {displayRange && (
+              <label>
+                Brightness
+                <input
+                  type="range"
+                  value={rangeValue}
+                  className={rangeIsFocused ? "is-focused" : ""}
+                  onChange={(e) => setRangeValue(e.target.value)}
+                />
               </label>
             )}
             {displayButton && (
@@ -171,47 +206,34 @@ export default function Demo() {
         <footer className="code">
           <pre ref={footerRef}>
             <code>
+              <noscript>{parse(initialDemoCode.join(""))}</noscript>
               <TypeIt
                 options={{
                   speed: delay.type,
                   deleteSpeed: delay.delete,
+                  startDelay: 0,
+                  afterComplete: (instance) => manualLoop(instance),
                 }}
                 getBeforeInit={(instance) => {
                   instance
-                    // Form busy
-                    .type(
-                      `&lt;${tag("form")} ${attr("aria-busy")}=${value('"true"')}&gt;&lt;/${tag(
-                        "form",
-                      )}&gt;`,
-                      { instant: true },
-                    )
-
                     // Email input
+                    .empty()
+                    .type(initialDemoCode[0], { instant: true })
+                    .type(initialDemoCode[1], { instant: true })
+                    .type(initialDemoCode[2], { instant: true })
+                    .type(initialDemoCode[3], { instant: true })
+                    .type(initialDemoCode[4], { instant: true })
+                    .type(initialDemoCode[5], { instant: true })
+                    .move(-13, { instant: true })
                     .pause(delay.displayComponent)
-                    .move(-8, { instant: true, delay: delay.pause })
-                    .delete(17, { instant: deleteIsInstant, delay: delay.pause })
-                    .move(1, { instant: true, delay: delay.pause })
-                    .type("<br />   <br />", { instant: true, delay: delay.pause })
-                    .move(-2, { instant: true, delay: delay.pause })
-                    .type(`&lt;${tag("input")} /&gt;`)
-                    .move(-3, { instant: true, delay: delay.pause })
-                    .type("<br />     <br /> ", { instant: true, delay: delay.pause })
-                    .move(-3, { instant: true, delay: delay.pause })
-                    .type(`${attr("type")}=${value('"email"')}`)
-                    .type("<br />    ", { instant: true, delay: delay.pause })
-                    .type(`${attr("placeholder")}=${value('"Enter your email"')}`)
                     .exec(() => {
-                      setFormIsBusy(false);
-                      setDisplayInput(true);
-                      setInputPlaceholder("Enter your email");
                       setInputType("email");
-                      setInputClass("fadeIn");
                       setTimeout(() => {
                         setInputIsFocused(true);
                         setTimeout(() => {
                           setInputValue("invalid@example");
-                        }, delay.displayComponent / 4);
-                      }, delay.displayComponent / 4);
+                        }, delay.pause * 2);
+                      }, delay.pause);
                     })
 
                     // Invalid email input
@@ -226,7 +248,8 @@ export default function Demo() {
                     // Invalid email input helper
                     .pause(delay.displayComponent)
                     .move(6, { instant: true, delay: delay.pause })
-                    .type("<br />  ", { instant: true, delay: delay.pause })
+                    .type("  <br />", { instant: true, delay: delay.pause })
+                    .move(-1, { instant: true, delay: delay.pause })
                     .type(`&lt;${tag("small")}&gt;&lt;/${tag("small")}&gt;`)
                     .move(-8, { instant: true, delay: delay.pause })
                     .type("<br />    <br />  ", { instant: true, delay: delay.pause })
@@ -241,11 +264,11 @@ export default function Demo() {
                     .pause(delay.displayComponent)
                     .move(11, { instant: true, delay: delay.pause })
                     .delete(53, { instant: deleteIsInstant, delay: delay.pause })
-                    .move(-6, { instant: true, delay: delay.pause })
+                    .move(-5, { instant: true, delay: delay.pause })
                     .delete(24, { instant: deleteIsInstant, delay: delay.pause })
                     .move(-62, { instant: true, delay: delay.pause })
                     .type(` ${attr("role")}=${value('"group"')}`)
-                    .move(68, { instant: true, delay: delay.pause })
+                    .move(67, { instant: true, delay: delay.pause })
                     .type("<br />  ", { instant: true, delay: delay.pause })
                     .type(
                       `&lt;${tag("button")} ${attr("type")}=${value('"submit"')}&gt;&lt;/${tag(
@@ -269,7 +292,7 @@ export default function Demo() {
 
                     // Search input with button
                     .pause(delay.displayComponent)
-                    .move(-107, { instant: true, delay: delay.pause })
+                    .move(-106, { instant: true, delay: delay.pause })
                     .delete(7, { instant: deleteIsInstant, delay: delay.pause })
                     .type(`${value('"search"')}`)
                     .move(27, { instant: true, delay: delay.pause })
@@ -278,7 +301,7 @@ export default function Demo() {
                     .move(35, { instant: true, delay: delay.pause })
                     .delete(18, { instant: deleteIsInstant, delay: delay.pause })
                     .type(`${value('"Search"')}`)
-                    .move(45, { instant: true, delay: delay.pause })
+                    .move(44, { instant: true, delay: delay.pause })
                     .delete(8, { instant: deleteIsInstant, delay: delay.pause })
                     .type("earch")
                     .exec(() => {
@@ -311,7 +334,7 @@ export default function Demo() {
                     .move(12, { instant: true, delay: delay.pause })
                     .delete(79, { instant: deleteIsInstant, delay: delay.pause })
                     .move(-2, { instant: true, delay: delay.pause })
-                    .delete(47, { instant: deleteIsInstant, delay: delay.pause })
+                    .delete(46, { instant: deleteIsInstant, delay: delay.pause })
                     .type(` ${attr("type")}=${value('"date"')} `)
                     .move(-23, { instant: true, delay: delay.pause })
                     .delete(14, { instant: deleteIsInstant, delay: delay.pause })
@@ -322,6 +345,7 @@ export default function Demo() {
                       setButtonClass("");
                       setButtonIsBusy(false);
                       setInputType("date");
+                      setDisplayedInputValue(todayForInputDate);
                       setInputValue(todayForInputDate);
                       setInputPlaceholder(null);
                       setInputIsDisabled(false);
@@ -377,9 +401,14 @@ export default function Demo() {
                     .move(-40, { instant: true, delay: delay.pause })
                     .type(` ${attr("checked")}`)
                     .exec(() => {
-                      setCheckboxIsChecked(true);
+                      setCheckboxIsFocused(true);
+                      setTimeout(function () {
+                        setCheckboxIsChecked(true);
+                        setTimeout(function () {
+                          setCheckboxIsFocused(false);
+                        }, delay.pause * 2);
+                      }, delay.pause);
                     })
-                    .pause(1000000)
 
                     // Switch checked
                     .pause(delay.displayComponent)
@@ -401,8 +430,81 @@ export default function Demo() {
                     .move(14, { instant: true, delay: delay.pause })
                     .delete(14, { instant: deleteIsInstant, delay: delay.pause })
                     .exec(() => {
-                      setCheckboxIsChecked(false);
-                    });
+                      setCheckboxIsFocused(true);
+                      setTimeout(function () {
+                        setCheckboxIsChecked(false);
+                        setTimeout(function () {
+                          setCheckboxIsFocused(false);
+                        }, delay.pause * 2);
+                      }, delay.pause);
+                    })
+
+                    // Range
+                    .pause(delay.displayComponent)
+                    .move(34, { instant: true, delay: delay.pause })
+                    .delete(26, { instant: deleteIsInstant, delay: delay.pause })
+                    .move(-56, { instant: true, delay: delay.pause })
+                    .type("    <br />    ", { instant: true, delay: delay.pause })
+                    .move(-9, { instant: true, delay: delay.pause })
+                    .type("Brightness")
+                    .move(37, { instant: true, delay: delay.pause })
+                    .delete(10, { instant: deleteIsInstant, delay: delay.pause })
+                    .type(value('"range"'))
+                    .move(20, { instant: true, delay: delay.pause })
+                    .delete(13, { instant: deleteIsInstant, delay: delay.pause })
+                    .type(`${attr("value")}=${value('"25"')}`)
+                    .exec(() => {
+                      setDisplayCheckbox(false);
+                      setDisplayRange(true);
+                      setRangeValue(25);
+                    })
+
+                    // Range to 50
+                    .pause(delay.displayComponent / 4)
+                    .delete(4, { instant: deleteIsInstant, delay: delay.pause })
+                    .type(value('"50"'))
+                    .exec(() => {
+                      setRangeIsFocused(true);
+                      setTimeout(function () {
+                        setRangeValue(50);
+                        setTimeout(function () {
+                          setRangeIsFocused(false);
+                        }, delay.pause * 2);
+                      }, delay.pause);
+                    })
+
+                    // Form busy
+                    .pause(delay.displayComponent)
+                    .move(20, { instant: true, delay: delay.pause })
+                    .delete(96, { instant: deleteIsInstant, delay: delay.pause })
+                    .move(-1, { instant: true, delay: delay.pause })
+                    .type(` ${attr("aria-busy")}=${value('"true"')}`)
+                    .exec(() => {
+                      setDisplayRange(false);
+                      setFormIsBusy(true);
+                    })
+
+                    // Loop to input email
+                    .pause(delay.displayComponent)
+                    .delete(17, { instant: deleteIsInstant, delay: delay.pause })
+                    .move(1, { instant: true, delay: delay.pause })
+                    .type(`${initialDemoCode[1]}<br />`)
+                    .move(-1, { instant: true, delay: delay.pause })
+                    .type(initialDemoCode[2])
+                    .type(initialDemoCode[3])
+                    .type(initialDemoCode[4])
+                    .type(" ", { instant: true })
+                    .delete(1, { instant: true })
+                    .exec(() => {
+                      setFormIsBusy(false);
+                      setDisplayInput(true);
+                      setInputClass("fadeIn");
+                      setInputType("email");
+                      setInputValue("");
+                      setDisplayedInputValue("");
+                      setInputPlaceholder("Enter your email");
+                    })
+                    .pause(delay.displayComponent);
 
                   return instance;
                 }}
