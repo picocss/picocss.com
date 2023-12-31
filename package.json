@@ -11,7 +11,7 @@
     "build:sort-scss": "postcss --config app/styles/scss ./app/styles/**/*.scss --replace",
     "build:build-css": "sass --load-path=node_modules/@picocss/pico/scss/ app/styles/scss/:app/styles/css/",
     "build:autoprefix": "postcss --config app/styles/css --replace app/styles/css/*.css",
-    "build:minify": "cleancss -O1 --with-rebase --batch --batch-suffix '' app/styles/css/*.css app/styles/css/**/*.css !app/styles/css/custom-themes/*.css !app/styles/css/extracts/*.css",
+    "build:minify": "cleancss -O1 --with-rebase --batch --batch-suffix '' app/styles/css/*.css app/styles/css/**/*.css !app/styles/css/custom-themes/*.css !app/styles/css/snippets/*.css",
     "build:code-snippets": "run-s 'build:code-snippets:*' --silent",
     "build:code-snippets:create-folder": "node scripts/create-code-snippets-folder.cjs",
     "build:code-snippets:copy-snippets": "node scripts/copy-code-snippets.cjs",
