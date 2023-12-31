@@ -16,19 +16,19 @@ SyntaxHighlighter.registerLanguage("css", css);
 SyntaxHighlighter.registerLanguage("html", jsx);
 SyntaxHighlighter.registerLanguage("scss", scss);
 
-function BlockWrapper({ children }) {
-  return <pre>{children}</pre>;
+const BlockWrapper = ({ children, ...props }) => {
+  return <pre {...props}>{children}</pre>;
 }
 
-function InlineWrapper({ children }) {
+const InlineWrapper = ({ children }) => {
   return <>{children}</>;
 }
 
-function CodeTag({ children }) {
-  return <code>{children}</code>;
+const CodeTag = ({ children, ...props }) => {
+  return <code {...props}>{children}</code>;
 }
 
-function HighlightedCode({ children, displayInline, language, ...props }) {
+const HighlightedCode = ({ children, displayInline, language, ...props }) => {
   return (
     <SyntaxHighlighter
       useInlineStyles={false}
@@ -42,7 +42,7 @@ function HighlightedCode({ children, displayInline, language, ...props }) {
   );
 }
 
-function ButtonCopyToClipboard({ text, ...props }) {
+const ButtonCopyToClipboard = ({ text, ...props }) => {
   const [copied, setCopied] = useState(false);
   const onCopy = (event) => {
     event.preventDefault();

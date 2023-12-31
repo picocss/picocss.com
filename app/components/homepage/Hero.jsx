@@ -1,8 +1,8 @@
 import Demo from "./Demo";
 
-export default function Hero() {
+export default function Hero(props) {
   return (
-    <section className="hero">
+    <section className="hero" {...props}>
       <div className="hook">
         <h1>
           <mark>Minimal CSS&nbsp;Framework</mark> <br />
