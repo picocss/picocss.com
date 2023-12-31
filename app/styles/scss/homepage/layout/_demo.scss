@@ -6,7 +6,6 @@
   display: flex;
   position: relative;
   flex-direction: column;
-  justify-content: center;
   max-width: calc(100vw - (var(#{$css-var-prefix}spacing) * 2));
   min-height: 25rem;
 

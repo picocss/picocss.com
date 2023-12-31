@@ -3,6 +3,7 @@
 @use "settings" as *;
 
 .hero {
+  $vertical-align-at-xl: true;
   display: grid;
   grid-template-columns: 1fr;
   column-gap: var(#{$css-var-prefix}homepage-spacing-horizontal);
@@ -12,8 +13,16 @@
 
   @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
     grid-template-columns: 6fr 5fr;
-    align-items: center;
     margin: 0 auto;
+
+    @if $vertical-align-at-xl {
+      align-items: center;
+
+      .demo {
+        justify-content: center;
+        transform: translateY(calc(var(#{$css-var-prefix}spacing) * -1.5));
+      }
+    }
   }
 
   @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
