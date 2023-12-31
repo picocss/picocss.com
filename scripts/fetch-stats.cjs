@@ -12,7 +12,7 @@ async function fetchStats() {
 
   for (const endpoint of endpoints) {
     try {
-      const response = await fetch(endpoint.url);
+      const response = await fetch(endpoint.endpoint);
       const data = await response.json();
       const value = endpoint.dataPath.split(".").reduce((o, k) => (o || {})[k], data);
 
@@ -20,6 +20,7 @@ async function fetchStats() {
         key: endpoint.key,
         label: endpoint.label,
         count: value,
+        url: endpoint.url,
       });
     } catch (error) {
       console.error(`Error fetching data for ${endpoint.key}:`, error);

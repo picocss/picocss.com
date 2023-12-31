@@ -1,20 +1,23 @@
 [
   {
     "key": "githubStars",
-    "url": "https://api.github.com/repos/picocss/pico",
+    "endpoint": "https://api.github.com/repos/picocss/pico",
+    "url": "https://github.com/picocss/pico",
     "dataPath": "stargazers_count",
-    "label": "Stars"
+    "label": "GitHub Stars"
   },
   {
     "key": "npmDownloads",
-    "url": "https://api.npmjs.org/downloads/point/last-month/@picocss/pico",
+    "endpoint": "https://api.npmjs.org/downloads/point/last-month/@picocss/pico",
+    "url": "https://www.npmjs.com/package/@picocss/pico",
     "dataPath": "downloads",
-    "label": "Monthly Downloads"
+    "label": "Monthly Npm Downloads"
   },
   {
     "key": "jsdelivrHits",
-    "url": "https://data.jsdelivr.com/v1/stats/packages/npm/%40picocss%2Fpico?period=month",
+    "endpoint": "https://data.jsdelivr.com/v1/stats/packages/npm/%40picocss%2Fpico?period=month",
+    "url": "https://www.jsdelivr.com/package/npm/@picocss/pico",
     "dataPath": "hits.total",
-    "label": "Monthly Requests"
+    "label": "Monthly JSDelivr Requests"
   }
 ]

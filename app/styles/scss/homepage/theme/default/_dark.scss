@@ -14,9 +14,9 @@
     to right,
     mix($azure-300, $cyan-300),
     $azure-200,
-    mix($azure-100, $slate-100)
+    mix($azure-200, $slate-200)
   );
 
   // Stats color
-  #{$css-var-prefix}stats-color: mix($azure-200, $cyan-200, 75%);
+  #{$css-var-prefix}stats-color: mix($azure-200, $slate-200);
 }

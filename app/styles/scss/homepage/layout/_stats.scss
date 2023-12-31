@@ -10,66 +10,79 @@
 
   ul {
     display: grid;
-    column-gap: calc(var(#{$css-var-prefix}spacing) * 4);
-    row-gap: calc(var(#{$css-var-prefix}spacing) * 3);
-    margin: 0;
+    column-gap: calc(var(#{$css-var-prefix}spacing) * 2);
+    row-gap: calc(var(#{$css-var-prefix}spacing) * 2);
+    max-width: map.get(map.get($breakpoints, "md"), "viewport");
+    margin: 0 auto;
     padding: 0;
 
-    // @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {
-    // grid-template-columns: 1fr 1fr 1fr;
-    // column-gap: var(#{$css-var-prefix}spacing);
-    // }
+    @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {
+      grid-template-columns: repeat(3, 1fr);
+    }
 
     @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
-      grid-template-columns: auto auto auto;
+      grid-template-columns: repeat(3, auto);
       column-gap: calc(var(#{$css-var-prefix}spacing) * 4);
       width: fit-content;
-      margin: 0;
+      max-width: none;
+      margin-left: 0;
     }
   }
 
   ul li {
-    strong {
-      display: block;
-      color: var(#{$css-var-prefix}stats-color);
-      font-size: 2rem;
-      line-height: 1.25;
-      font-family: "Figtree", var(#{$css-var-prefix}font-family);
+    @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
       text-align: center;
 
       @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
-        font-size: 1.75rem;
         text-align: left;
       }
     }
 
-    span {
-      display: block;
-      text-align: center;
+    p.count {
+      margin-bottom: calc(var(#{$css-var-prefix}spacing) * 0.25);
+      color: var(#{$css-var-prefix}stats-color);
+      font-size: 1.75rem;
+      line-height: 1.15;
+      font-family: "Figtree", var(#{$css-var-prefix}font-family);
+    }
 
-      // @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {
-      // }
+    p.label {
+      margin: 0;
 
-      @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
-        font-size: 0.875em;
-        text-align: left;
+      a {
+        text-decoration: none;
+
+        svg {
+          display: inline-block;
+          width: auto;
+          height: 1em;
+          margin-right: calc(var(#{$css-var-prefix}spacing) * 0.375);
+          transform: translateY(-0.125em);
+          color: var(#{$css-var-prefix}h1-color);
+        }
+
+        span.period-prefix {
+          @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {
+            display: none;
+          }
+
+          @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+            display: inline;
+          }
+        }
+      }
+    }
+
+    p.period-suffix {
+      display: none;
+      color: var(#{$css-var-prefix}muted-color);
+
+      @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {
+        display: block;
       }
 
-      svg {
-        display: inline-block;
-        width: auto;
-        height: 1em;
-        margin-right: calc(var(#{$css-var-prefix}spacing) * 0.25);
-        color: var(#{$css-var-prefix}h1-color);
-
-        &.github-logo {
-          transform: translateY(-0.1875em);
-        }
-
-        &.jsdelivr-logo {
-          height: 1.25em;
-          transform: translateY(-0.0625em);
-        }
+      @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+        display: none;
       }
     }
   }
