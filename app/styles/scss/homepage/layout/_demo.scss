@@ -1,6 +1,7 @@
 @use "sass:map";
 @use "colors" as *;
 @use "settings" as *;
+@use "hero" as *;
 
 .demo {
   display: flex;
@@ -10,17 +11,17 @@
   min-height: 25rem;
 
   article.component {
+    #{$css-var-prefix}block-spacing-horizontal: var(#{$css-var-prefix}spacing) !important;
+    #{$css-var-prefix}block-spacing-vertical: calc(var(#{$css-var-prefix}spacing) * 1.5) !important;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     min-width: 0;
     height: 100%;
     margin-bottom: 0;
+    background-color: var(#{$css-var-prefix}background-color);
     pointer-events: none;
     user-select: none;
-    #{$css-var-prefix}block-spacing-horizontal: var(#{$css-var-prefix}spacing) !important;
-    #{$css-var-prefix}block-spacing-vertical: calc(var(#{$css-var-prefix}spacing) * 1.5) !important;
-    background-color: var(#{$css-var-prefix}background-color);
 
     @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
       #{$css-var-prefix}block-spacing-horizontal: calc(
@@ -29,20 +30,28 @@
       #{$css-var-prefix}block-spacing-vertical: calc(var(#{$css-var-prefix}spacing) * 2) !important;
     }
 
-    @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
-      justify-content: flex-start;
-      height: calc(var(--demo-height, 260px) + (var(#{$css-var-prefix}block-spacing-vertical) * 2));
-      padding-bottom: 0;
-      transition: height 0.4s ease-out;
-    }
+    @if $columns-at-xl {
+      @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+        justify-content: flex-start;
+        height: calc(
+          var(--demo-height, 260px) + (var(#{$css-var-prefix}block-spacing-vertical) * 2)
+        );
+        padding-bottom: 0;
+        transition: height 0.4s ease-out;
+      }
 
-    @media (min-width: map.get(map.get($breakpoints, "xxl"), "breakpoint")) {
-      height: calc(var(--demo-height, 265px) + (var(#{$css-var-prefix}block-spacing-vertical) * 2));
+      @media (min-width: map.get(map.get($breakpoints, "xxl"), "breakpoint")) {
+        height: calc(
+          var(--demo-height, 265px) + (var(#{$css-var-prefix}block-spacing-vertical) * 2)
+        );
+      }
     }
 
     main {
-      @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
-        margin-bottom: auto;
+      @if $columns-at-xl {
+        @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+          margin-bottom: auto;
+        }
       }
 
       form {
@@ -146,9 +155,11 @@
     footer.code {
       background: none;
 
-      @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
-        margin-top: auto;
-        margin-bottom: 0;
+      @if $columns-at-xl {
+        @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+          margin-top: auto;
+          margin-bottom: 0;
+        }
       }
 
       [data-typeit-id] {

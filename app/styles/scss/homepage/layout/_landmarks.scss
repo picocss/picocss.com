@@ -6,27 +6,27 @@
 
   > main {
     #{$css-var-prefix}homepage-spacing-vertical: calc(var(#{$css-var-prefix}spacing) * 3.5);
-    #{$css-var-prefix}homepage-spacing-horizontal: calc(var(#{$css-var-prefix}spacing) * 1.5);
+    #{$css-var-prefix}homepage-spacing-horizontal: calc(var(#{$css-var-prefix}spacing) * 3.5);
     @each $key, $values in $breakpoints {
       @if $values {
         @media (min-width: map.get($values, "breakpoint")) {
           $multiplier-vertical: 3.5;
-          $multiplier-horizontal: 1.5;
+          $multiplier-horizontal: 3.5;
           @if $key == "sm" {
             $multiplier-vertical: 4;
-            $multiplier-horizontal: 2;
+            $multiplier-horizontal: 4;
           } @else if $key == "md" {
             $multiplier-vertical: 4.5;
-            $multiplier-horizontal: 2.5;
+            $multiplier-horizontal: 4.5;
           } @else if $key == "lg" {
             $multiplier-vertical: 5;
-            $multiplier-horizontal: 3;
+            $multiplier-horizontal: 4;
           } @else if $key == "xl" {
             $multiplier-vertical: 5.5;
-            $multiplier-horizontal: 3.5;
+            $multiplier-horizontal: 5.5;
           } @else if $key == "xxl" {
             $multiplier-vertical: 6;
-            $multiplier-horizontal: 4;
+            $multiplier-horizontal: 6;
           }
 
           #{$css-var-prefix}homepage-spacing-vertical: calc(

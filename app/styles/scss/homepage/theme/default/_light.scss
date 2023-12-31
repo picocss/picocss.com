@@ -12,11 +12,11 @@
   // Mark gradient
   #{$css-var-prefix}mark-gradient: linear-gradient(
     to right,
-    mix($azure-500, $cyan-500),
-    $azure-600,
-    mix($azure-700, $slate-700)
+    mix($azure-400, $cyan-400),
+    $azure-500,
+    mix($azure-600, $slate-600)
   );
 
   // Stats color
-  #{$css-var-prefix}stats-color: mix($azure-600, $cyan-600, 75%);
+  #{$css-var-prefix}stats-color: mix($azure-500, $cyan-500, 75%);
 }

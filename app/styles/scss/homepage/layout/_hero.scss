@@ -2,31 +2,31 @@
 @use "colors" as *;
 @use "settings" as *;
 
+$columns-at-xl: true;
+
 .hero {
-  $vertical-align-at-xl: true;
   display: grid;
   grid-template-columns: 1fr;
   column-gap: var(#{$css-var-prefix}homepage-spacing-horizontal);
-  row-gap: var(#{$css-var-prefix}homepage-spacing-vertical);
+  row-gap: calc(var(#{$css-var-prefix}homepage-spacing-vertical) / 2);
   justify-items: center;
   padding-top: var(#{$css-var-prefix}homepage-spacing-vertical);
 
-  @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
-    grid-template-columns: 6fr 5fr;
-    margin: 0 auto;
-
-    @if $vertical-align-at-xl {
+  @if $columns-at-xl {
+    @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+      grid-template-columns: 6fr 5fr;
       align-items: center;
+      margin: 0 auto;
 
       .demo {
         justify-content: center;
         transform: translateY(calc(var(#{$css-var-prefix}spacing) * -1.5));
       }
     }
-  }
 
-  @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
-    grid-template-columns: 7fr 5fr;
+    @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+      grid-template-columns: 7fr 5fr;
+    }
   }
 
   .demo,
@@ -37,25 +37,36 @@
       max-width: map.get(map.get($breakpoints, "md"), "viewport");
     }
 
-    @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
-      max-width: none;
+    @if $columns-at-xl {
+      @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+        max-width: none;
+      }
+    } @else {
+      @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+        max-width: map.get(map.get($breakpoints, "lg"), "viewport");
+      }
     }
   }
 
   .hook {
+    z-index: 1;
+    position: relative;
+
     h1,
     p {
       @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
         text-align: center;
       }
 
-      @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
-        text-align: left;
+      @if $columns-at-xl {
+        @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+          text-align: left;
+        }
       }
     }
 
     h1 {
-      margin-top: 0;
+      margin-bottom: calc(var(#{$css-var-prefix}homepage-spacing-vertical) / 2);
 
       mark {
         padding: 0;
@@ -74,8 +85,10 @@
         justify-content: center;
       }
 
-      @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
-        justify-content: flex-start;
+      @if $columns-at-xl {
+        @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+          justify-content: flex-start;
+        }
       }
     }
 
