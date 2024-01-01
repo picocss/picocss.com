@@ -15,9 +15,12 @@ body > main > .hero > .demo {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    width: 100%;
     min-width: 0;
+    max-width: map.get(map.get($breakpoints, "md"), "viewport");
     height: 100%;
     margin-bottom: 0;
+    margin-inline: auto;
     background-color: var(#{$css-var-prefix}background-color);
     pointer-events: none;
     user-select: none;

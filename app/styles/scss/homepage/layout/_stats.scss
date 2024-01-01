@@ -1,5 +1,6 @@
 @use "sass:map";
 @use "settings" as *;
+@use "hero" as *;
 
 body > main > .stats {
   position: relative;
@@ -24,12 +25,14 @@ body > main > .stats {
       grid-template-columns: repeat(3, 1fr);
     }
 
-    @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
-      grid-template-columns: repeat(3, auto);
-      column-gap: calc(var(#{$css-var-prefix}spacing) * 4);
-      width: fit-content;
-      max-width: none;
-      margin-left: 0;
+    @if $columns-at-xl {
+      @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+        grid-template-columns: repeat(3, auto);
+        column-gap: calc(var(#{$css-var-prefix}spacing) * 4);
+        width: fit-content;
+        max-width: none;
+        margin-left: 0;
+      }
     }
   }
 
@@ -37,8 +40,10 @@ body > main > .stats {
     @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
       text-align: center;
 
-      @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
-        text-align: left;
+      @if $columns-at-xl {
+        @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+          text-align: left;
+        }
       }
     }
 
@@ -69,8 +74,10 @@ body > main > .stats {
             display: none;
           }
 
-          @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
-            display: inline;
+          @if $columns-at-xl {
+            @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+              display: inline;
+            }
           }
         }
       }
@@ -84,8 +91,10 @@ body > main > .stats {
         display: block;
       }
 
-      @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
-        display: none;
+      @if $columns-at-xl {
+        @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+          display: none;
+        }
       }
     }
   }
@@ -98,8 +107,10 @@ body > main > .stats {
     justify-content: center;
     inset: 0;
 
-    @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
-      justify-content: flex-start;
+    @if $columns-at-xl {
+      @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+        justify-content: flex-start;
+      }
     }
 
     &::after {
@@ -121,9 +132,11 @@ body > main > .stats {
         transform: scale(10);
       }
 
-      @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
-        transform: scale(16);
-        opacity: 1;
+      @if $columns-at-xl {
+        @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+          transform: scale(16);
+          opacity: 1;
+        }
       }
     }
   }

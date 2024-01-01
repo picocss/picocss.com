@@ -52,6 +52,7 @@ const ConfirmYourMembershipExample = ({
   ...props
 }) => {
   return (
+    // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions
     <dialog onClick={handleClickOverlay} open={modalIsOpen} {...props}>
       <article>
         <Heading level={2}>Confirm Your Membership</Heading>
