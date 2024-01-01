@@ -1,4 +1,4 @@
-export default function Copy(props) {
+export default function Code(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -12,8 +12,9 @@ export default function Copy(props) {
       strokeLinejoin="round"
       {...props}
     >
-      <path d="M8 8m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z"></path>
-      <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"></path>
+      <path d="M7 8l-4 4l4 4" />
+      <path d="M17 8l4 4l-4 4" />
+      <path d="M14 4l-4 16" />
     </svg>
   );
 }

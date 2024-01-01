@@ -18,15 +18,16 @@ SyntaxHighlighter.registerLanguage("scss", scss);
 
 const BlockWrapper = ({ children, ...props }) => {
   return <pre {...props}>{children}</pre>;
-}
+};
 
 const InlineWrapper = ({ children }) => {
   return <>{children}</>;
-}
+};
 
-const CodeTag = ({ children, ...props }) => {
+// eslint-disable-next-line no-unused-vars
+const CodeTag = ({ children, style: _, ...props }) => {
   return <code {...props}>{children}</code>;
-}
+};
 
 const HighlightedCode = ({ children, displayInline, language, ...props }) => {
   return (
@@ -40,7 +41,7 @@ const HighlightedCode = ({ children, displayInline, language, ...props }) => {
       {children}
     </SyntaxHighlighter>
   );
-}
+};
 
 const ButtonCopyToClipboard = ({ text, ...props }) => {
   const [copied, setCopied] = useState(false);
@@ -71,7 +72,7 @@ const ButtonCopyToClipboard = ({ text, ...props }) => {
       </Link>
     </CopyToClipboard>
   );
-}
+};
 
 export default function Code({
   as = "div",

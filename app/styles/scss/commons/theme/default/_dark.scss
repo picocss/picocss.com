@@ -16,7 +16,9 @@
 
   // Card for components
   #{$css-var-prefix}card-component-outline-width: 2px;
-  #{$css-var-prefix}card-component-outline-color: var(#{$css-var-prefix}card-sectioning-background-color);
+  #{$css-var-prefix}card-component-outline-color: var(
+    #{$css-var-prefix}card-sectioning-background-color
+  );
 
   // Code
   #{$css-var-prefix}code-color: #{$zinc-350};
@@ -31,8 +33,12 @@
 
   // Footer
   footer {
-    #{$css-var-prefix}background-gradient: linear-gradient(0deg, #{mix($azure-900, $slate-900)}, transparent);
-    #{$css-var-prefix}logo-small-sparkles: #{$slate-800};
-    #{$css-var-prefix}logo-big-sparkle: #{$slate-750};
+    #{$css-var-prefix}background-gradient: linear-gradient(
+      0deg,
+      #{mix($azure-900, $slate-900)},
+      transparent
+    );
+    #{$css-var-prefix}logo-small-sparkles: #{$slate-400};
+    #{$css-var-prefix}logo-big-sparkle: #{$slate-200};
   }
 }

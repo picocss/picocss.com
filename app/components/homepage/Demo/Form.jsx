@@ -17,6 +17,7 @@ const Input = (props) => {
   if (!displayInput) return null;
   return (
     <input
+      tabIndex="-1"
       type={inputType}
       placeholder={inputPlaceholder}
       className={`${inputClass}${inputIsFocused ? " is-focused" : ""}`}
@@ -47,7 +48,7 @@ const Select = (props) => {
 
   if (!displaySelect) return null;
   return (
-    <select defaultValue="" required {...props}>
+    <select tabIndex="-1" defaultValue="" required {...props}>
       <option disabled value="">
         Select...
       </option>
@@ -70,6 +71,7 @@ const Checkbox = (props) => {
   return (
     <label className={checkboxClass} {...props}>
       <input
+        tabIndex="-1"
         type="checkbox"
         {...(checkboxRole && { role: checkboxRole })}
         checked={checkboxIsChecked}
@@ -90,6 +92,7 @@ const Range = (props) => {
     <label {...props}>
       Brightness
       <input
+        tabIndex="-1"
         type="range"
         value={rangeValue}
         className={rangeIsFocused ? "is-focused" : ""}
@@ -107,6 +110,7 @@ const Button = (props) => {
   if (!displayButton) return null;
   return (
     <button
+      tabIndex="-1"
       {...(buttonType && { type: buttonType })}
       className={`${buttonClass}${buttonIsFocused ? " is-focused" : ""}`}
       aria-busy={buttonIsBusy}

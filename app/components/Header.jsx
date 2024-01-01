@@ -5,7 +5,11 @@ import Link from "~/components/Link";
 import Logo from "~/components/Logo";
 import Nav from "~/components/Nav";
 
-export default function Header({ shouldDisplayVersion = false, headerIsFixed = false, ...props }) {
+export default function Header({
+  shouldDisplayDocsVersion = false,
+  headerIsFixed = false,
+  ...props
+}) {
   const { headerRef } = useHeader();
   const [userHasScrolled, setUserHasScrolled] = useState(false);
   const pageOffset = 45;
@@ -28,7 +32,7 @@ export default function Header({ shouldDisplayVersion = false, headerIsFixed = f
         <Link to="/" aria-label="Pico CSS homepage">
           <Logo shouldAnimateOnRouteChange />
         </Link>
-        <Nav shouldDisplayVersion={shouldDisplayVersion} />
+        <Nav shouldDisplayDocsVersion={shouldDisplayDocsVersion} />
       </div>
     </header>
   );

@@ -2,21 +2,39 @@
 @use "settings" as *;
 
 @mixin theme {
-  // Hero background gradient
-  #{$css-var-prefix}background-gradient: radial-gradient(
+  // Demo outer background
+  #{$css-var-prefix}demo-outer-background: radial-gradient(
     circle closest-side,
     #{$azure-50},
+    transparent
+  );
+
+  // Demo inner background
+  #{$css-var-prefix}demo-inner-background: var(#{$css-var-prefix}background-color);
+
+  // Stats background gradient
+  #{$css-var-prefix}stats-background-gradient: radial-gradient(
+    circle closest-side,
+    #{mix($indigo-100, $indigo-50)},
     transparent
   );
 
   // Mark gradient
   #{$css-var-prefix}mark-gradient: linear-gradient(
     to right,
-    mix($azure-500, $cyan-500),
-    $azure-600,
-    mix($azure-700, $slate-700)
+    mix($azure-600, $purple-600, 25%),
+    mix($azure-550, $cyan-550, 75%)
   );
 
   // Stats color
-  #{$css-var-prefix}stats-color: mix($azure-600, $slate-600);
+  #{$css-var-prefix}stats-color: mix($blue-600, $slate-600);
+
+  // Feature icons
+  #{$css-var-prefix}icon-border-color: #{mix($blue-100, $slate-100, 25%)};
+  #{$css-var-prefix}icon-background-color: linear-gradient(
+    135deg,
+    #{mix($blue-50, $slate-50, 25%)},
+    #{rgba(mix($blue-50, $slate-50, 25%), 0.25)}
+  );
+  #{$css-var-prefix}icon-color: mix($blue-600, $slate-600);
 }

@@ -3,7 +3,7 @@
 @use "settings" as *;
 @use "hero" as *;
 
-.demo {
+body > main > .hero > .demo {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -184,7 +184,8 @@
     inset: 0;
     transform: scale(3);
     transform-origin: center;
-    background: var(#{$css-var-prefix}background-gradient);
+    background: var(#{$css-var-prefix}demo-outer-background);
     content: "";
+    opacity: 0.5;
   }
 }

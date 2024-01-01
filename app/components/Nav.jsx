@@ -10,7 +10,7 @@ import metaData from "~/data/meta";
 
 const { versions } = metaData();
 
-export default function Nav({ shouldDisplayVersion = false, ...props }) {
+export default function Nav({ shouldDisplayDocsVersion = false, ...props }) {
   const { pageTheme, switchTheme } = usePage();
   const handleSwitchTheme = (event) => {
     event.preventDefault();
@@ -22,7 +22,7 @@ export default function Nav({ shouldDisplayVersion = false, ...props }) {
   return (
     <nav {...props}>
       <ul>
-        {shouldDisplayVersion && (
+        {shouldDisplayDocsVersion && (
           <li>
             <details className="dropdown">
               <summary>{`v${versions.current}`}</summary>
@@ -55,7 +55,7 @@ export default function Nav({ shouldDisplayVersion = false, ...props }) {
             </details>
           </li>
         )}
-        <li {...(shouldDisplayVersion && { className: "hide-before-sm" })}>
+        <li {...(shouldDisplayDocsVersion && { className: "hide-before-sm" })}>
           <Link to="/docs" className="contrast">
             Docs
           </Link>

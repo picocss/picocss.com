@@ -53,6 +53,7 @@ export default function Stats(props) {
           );
         })}
       </ul>
+      <div className="background" />
     </section>
   );
 }

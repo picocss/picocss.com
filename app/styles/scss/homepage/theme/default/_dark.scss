@@ -2,21 +2,41 @@
 @use "settings" as *;
 
 @mixin theme {
-  // Hero background gradient
-  #{$css-var-prefix}background-gradient: radial-gradient(
+  // Demo outer background
+  #{$css-var-prefix}demo-outer-background: radial-gradient(
     circle closest-side,
     #{mix($azure-850, $slate-900, 37.5%)},
+    transparent
+  );
+
+  // Demo outline
+  #{$css-var-prefix}card-component-outline-width: 0.0625rem;
+  #{$css-var-prefix}card-component-outline-color: #{mix($blue-850, $slate-900, 25%)};
+  #{$css-var-prefix}card-border-color: var(#{$css-var-prefix}card-component-outline-color);
+
+  // Stats background gradient
+  #{$css-var-prefix}stats-background-gradient: radial-gradient(
+    circle closest-side,
+    #{mix($violet-900, $slate-900, 37.5%)},
     transparent
   );
 
   // Mark gradient
   #{$css-var-prefix}mark-gradient: linear-gradient(
     to right,
-    mix($azure-300, $cyan-300),
-    $azure-200,
-    mix($azure-200, $slate-200)
+    mix($azure-300, $purple-300, 25%),
+    mix($azure-250, $cyan-250, 75%)
   );
 
   // Stats color
-  #{$css-var-prefix}stats-color: mix($azure-200, $slate-200);
+  #{$css-var-prefix}stats-color: mix($blue-300, $slate-300);
+
+  // Feature icons
+  #{$css-var-prefix}icon-border-color: #{mix($blue-850, $slate-800, 25%)};
+  #{$css-var-prefix}icon-background-color: linear-gradient(
+    135deg,
+    #{mix($blue-900, $slate-850, 25%)},
+    #{rgba(mix($blue-900, $slate-850, 25%), 0.25)}
+  );
+  #{$css-var-prefix}icon-color: mix($blue-300, $slate-300);
 }

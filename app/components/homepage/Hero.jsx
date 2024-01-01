@@ -24,9 +24,6 @@ export default function Hero(props) {
             Examples
           </a>
         </div>
-        <p className="info">
-          <small>Less than 15 kB minified and gzipped</small>
-        </p>
       </div>
       <Demo />
     </section>

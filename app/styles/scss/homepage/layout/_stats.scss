@@ -1,8 +1,10 @@
 @use "sass:map";
-@use "colors" as *;
 @use "settings" as *;
 
-.stats {
+body > main > .stats {
+  position: relative;
+  margin-top: calc(var(#{$css-var-prefix}homepage-spacing-vertical) / 2);
+
   ul li {
     margin: 0;
     list-style-type: none;
@@ -10,6 +12,8 @@
 
   ul {
     display: grid;
+    z-index: 1;
+    position: relative;
     column-gap: calc(var(#{$css-var-prefix}spacing) * 2);
     row-gap: calc(var(#{$css-var-prefix}spacing) * 2);
     max-width: map.get(map.get($breakpoints, "md"), "viewport");
@@ -83,6 +87,44 @@
 
       @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
         display: none;
+      }
+    }
+  }
+
+  .background {
+    display: flex;
+    z-index: -1;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    inset: 0;
+
+    @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+      justify-content: flex-start;
+    }
+
+    &::after {
+      display: block;
+      aspect-ratio: 1 / 1;
+      height: 100%;
+      inset: 0 auto;
+      transform: scale(3);
+      border-radius: 50%;
+      background: var(#{$css-var-prefix}stats-background-gradient);
+      content: "";
+      opacity: 0.5;
+
+      @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
+        transform: scale(4);
+      }
+
+      @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {
+        transform: scale(10);
+      }
+
+      @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+        transform: scale(16);
+        opacity: 1;
       }
     }
   }
