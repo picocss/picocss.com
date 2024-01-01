@@ -16,11 +16,6 @@ body > main > .features {
       text-align: left;
     }
 
-    > p.chapter {
-      margin-bottom: calc(var(#{$css-var-prefix}spacing) * 0.5);
-      font-size: 0.875rem;
-    }
-
     > h2 {
       margin-bottom: calc(var(#{$css-var-prefix}spacing) * 1);
 

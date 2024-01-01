@@ -67,13 +67,6 @@ body > main > .hero {
 
     h1 {
       margin-bottom: calc(var(#{$css-var-prefix}spacing) * 2);
-
-      mark {
-        padding: 0;
-        background-image: var(#{$css-var-prefix}mark-gradient);
-        background-clip: text;
-        color: transparent;
-      }
     }
 
     .grid.ctas {

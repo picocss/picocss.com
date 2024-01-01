@@ -24,7 +24,6 @@ export default function Features(props) {
   return (
     <section className="features" {...props}>
       <hgroup>
-        <p className="chapter">HTML just&nbsp;got an&nbsp;upgrade</p>
         <h2>
           A&nbsp;Superpowered <mark>HTML&nbsp;Reset</mark>
         </h2>
@@ -50,7 +49,8 @@ export default function Features(props) {
           <h3>Great Styles with Just CSS</h3>
           <p>
             No extra baggage. Picon&nbsp;CSS doesn’t require dependencies, packagen&nbsp;managers,
-            externaln&nbsp;files, or JavaScript. Achieve stunning styles with pure HTMLn&nbsp;markup.
+            externaln&nbsp;files, or JavaScript. Achieve stunning styles with pure
+            HTMLn&nbsp;markup.
           </p>
           <BlockLink to="/docs">Read the documentation</BlockLink>
         </article>

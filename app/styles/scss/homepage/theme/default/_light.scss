@@ -20,14 +20,23 @@
   );
 
   // Mark gradient
-  #{$css-var-prefix}mark-gradient: linear-gradient(
-    to right,
-    mix($azure-600, $purple-600, 25%),
-    mix($azure-550, $cyan-550, 75%)
-  );
+  #{$css-var-prefix}mark-gradient: linear-gradient(to right, transparent, rgba($slate-700, 12.5%)),
+    linear-gradient(
+      to right,
+      mix($slate-550, $pink-550, 30%),
+      mix($slate-550, $fuchsia-550, 25%),
+      mix($slate-550, $purple-550, 20%),
+      mix($slate-550, $violet-550, 25%),
+      mix($slate-550, $indigo-550, 30%),
+      mix($slate-550, $blue-550, 35%),
+      mix($slate-550, $azure-550, 35%),
+      mix($slate-550, $cyan-550, 40%),
+      mix($slate-550, $jade-550, 45%),
+      mix($slate-550, $green-550, 40%)
+    );
 
   // Stats color
-  #{$css-var-prefix}stats-color: mix($blue-600, $slate-600);
+  #{$css-var-prefix}stats-color: mix($azure-600, $slate-600);
 
   // Feature icons
   #{$css-var-prefix}icon-border-color: #{mix($blue-100, $slate-100, 25%)};
@@ -36,5 +45,5 @@
     #{mix($blue-50, $slate-50, 25%)},
     #{rgba(mix($blue-50, $slate-50, 25%), 0.25)}
   );
-  #{$css-var-prefix}icon-color: mix($blue-600, $slate-600);
+  #{$css-var-prefix}icon-color: mix($blue-600, $slate-600, 25%);
 }

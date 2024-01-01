@@ -1,5 +1,4 @@
 @use "sass:map";
-@use "colors" as *;
 @use "settings" as *;
 @use "hero" as *;
 
@@ -182,7 +181,7 @@ body > main > .hero > .demo {
     z-index: -1;
     position: absolute;
     inset: 0;
-    transform: scale(3);
+    transform: scale(4);
     transform-origin: center;
     background: var(#{$css-var-prefix}demo-outer-background);
     content: "";
