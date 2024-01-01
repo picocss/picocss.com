@@ -997,10 +997,9 @@
   resolved "https://registry.yarnpkg.com/@picocss/pico/-/pico-1.5.11.tgz#8bd37fc546fcab95625218dddd8cf788b8fd5f8a"
   integrity sha512-cDaFiSyNPtuSTwSQt/05xsw8+g2ek4/S58tgh9Nc7miJCCdUrY9PAyl4OPWRJtYgJDdEvkUA9GuGj0J4nDP4Cw==
 
-"@picocss/pico@^2.0.0-rc1":
+"@picocss/pico@github:picocss/pico#v2":
   version "2.0.0-rc1"
-  resolved "https://registry.yarnpkg.com/@picocss/pico/-/pico-2.0.0-rc1.tgz#5b3182b40db9178811c17b92c23164d29c9e1601"
-  integrity sha512-t/3AeCLwU1DC1QlNYHZUOaw0BuJqroMmEMopPPjZN7asV9aXrUi04GnNZxnrD9LYxOSnh03RxwGLJ9VofRyF2A==
+  resolved "https://codeload.github.com/picocss/pico/tar.gz/2ddb5486f2b0458ad79cbd52868b1a4f5727e8d4"
 
 "@pkgjs/parseargs@^0.11.0":
   version "0.11.0"
