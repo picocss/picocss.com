@@ -37,10 +37,10 @@ export default function Features(props) {
           <CodeIcon />
           <h3>Class-light and Semantic</h3>
           <p>
-            Picon&nbsp;CSS thrives on simplicity. It rely native HTMLn&nbsp;tags, using less than
+            Pico&nbsp;CSS thrives on simplicity. It rely native HTML&nbsp;tags, using less than
             10&nbsp;
             <Code display="inline">.classes</Code> overall. Also comes with a class-less version for
-            wild HTMLn&nbsp;purists
+            wild HTML&nbsp;purists.
           </p>
           <BlockLink to="/docs/classless">Discover the class-less version</BlockLink>
         </article>
@@ -48,11 +48,10 @@ export default function Features(props) {
           <Logo displayWordmark={false} />
           <h3>Great Styles with Just CSS</h3>
           <p>
-            No extra baggage. Picon&nbsp;CSS doesn’t require dependencies, packagen&nbsp;managers,
-            externaln&nbsp;files, or JavaScript. Achieve stunning styles with pure
-            HTMLn&nbsp;markup.
+            No extra baggage. Pico&nbsp;CSS doesn’t require dependencies, package&nbsp;managers,
+            external&nbsp;files, or JavaScript. Achieve stunning styles with pure HTML&nbsp;markup.
           </p>
-          <BlockLink to="/docs">Read the documentation</BlockLink>
+          <BlockLink to="/docs">Get Started</BlockLink>
         </article>
         <article>
           <Expand />
