@@ -999,7 +999,7 @@
 
 "@picocss/pico@github:picocss/pico#v2":
   version "2.0.0-rc1"
-  resolved "https://codeload.github.com/picocss/pico/tar.gz/2ddb5486f2b0458ad79cbd52868b1a4f5727e8d4"
+  resolved "https://codeload.github.com/picocss/pico/tar.gz/9a18b46e12203ef352a0797b981d76233675082c"
 
 "@pkgjs/parseargs@^0.11.0":
   version "0.11.0"
