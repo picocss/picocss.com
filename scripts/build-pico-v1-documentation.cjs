@@ -6,6 +6,7 @@ const { execSync } = require("child_process");
 const picoLibraryFolder = "./node_modules/@picocss/pico-v1/";
 const picoLibraryPackageJsonFilePath = picoLibraryFolder + "package.json";
 const picoCssFilePath = picoLibraryFolder + "css/pico.min.css";
+const picoCssSourceMapFilePath = picoLibraryFolder + "css/pico.min.css.map";
 const picoDocsFolder = picoLibraryFolder + "docs/";
 
 // Function to get the version of the Pico library from its package.json file
@@ -38,7 +39,7 @@ function copyDocsFolderToOutputFolder(outputDocsFolder) {
     "js/src/",
     "js/*.js",
   ];
-  const includePatternsInPicoDocsFolder = ["css/*", "js/*.min.js", "src/*.html"];
+  const includePatternsInPicoDocsFolder = ["css/*.docs.min.css.map", "css/*.docs.min.css.map", "js/*.min.js", "src/*.html"];
   const excludeFilesInPicoDocsFolder = excludePatternsInPicoDocsFolder
     .map((pattern) => `--exclude='${pattern}'`)
     .join(" ");
@@ -52,6 +53,7 @@ function copyDocsFolderToOutputFolder(outputDocsFolder) {
 // Function to copy the Pico library's CSS file to the output folder
 function copyPicoCssFileToOutputFolder(outputCssFolder) {
   copyFileSync(picoCssFilePath, outputCssFolder + "pico.min.css");
+  copyFileSync(picoCssSourceMapFilePath, outputCssFolder + "pico.min.css.map");
 }
 
 // Function to replace the CSS path in the head partial file
