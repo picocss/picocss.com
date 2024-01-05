@@ -1,10 +1,10 @@
 const fs = require("fs");
-const fetch = require("node-fetch");
 const dataFolder = "./app/data/";
-const endpointsFile = dataFolder + "statsEndpoints.json";
-const outputFile = dataFolder + "stats.json";
+const endpointsFile = `${dataFolder}statsEndpoints.json`;
+const outputFile = `${dataFolder}stats.json`;
 
 async function fetchStats() {
+  const fetch = (await import("node-fetch")).default;
   const endpointsData = fs.readFileSync(endpointsFile, "utf8");
   const endpoints = JSON.parse(endpointsData);
 
