@@ -11,7 +11,7 @@ export default function Header({
 }) {
   const { headerRef } = useHeader();
   const [userHasScrolled, setUserHasScrolled] = useState(false);
-  const pageOffset = 45;
+  const pageOffset = 20;
 
   useEffect(() => {
     const handleScroll = () => setUserHasScrolled(window.scrollY > pageOffset);
