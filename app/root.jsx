@@ -9,6 +9,7 @@ import {
   useRouteError,
 } from "@remix-run/react";
 import { HelmetProvider } from "react-helmet-async";
+import { HeaderProvider } from "~/contexts/HeaderContext";
 import { ModalProvider } from "~/contexts/ModalContext";
 import { PageProvider } from "~/contexts/PageContext";
 import metaData from "~/data/meta";
@@ -81,25 +82,27 @@ export function ErrorBoundary() {
   return (
     <HelmetProvider>
       <PageProvider>
-        <head>
-          <meta charSet="utf-8" />
-          <meta name="viewport" content="width=device-width,initial-scale=1" />
-          <meta name="theme-color" content="#2a3140" />
-          <Meta />
-          <title>
-            {isRouteErrorResponse(error)
-              ? `${error.status} ${error.statusText} ${titleSuffix}`
-              : `Something went wrong ${titleSuffix}`}
-          </title>
-          <Links />
-        </head>
-        <Body>
-          <RootError error={isRouteErrorResponse(error) ? error : null} />
-          <Footer />
-          <ScrollRestoration />
-          <Scripts />
-          <LiveReload />
-        </Body>
+        <HeaderProvider>
+          <head>
+            <meta charSet="utf-8" />
+            <meta name="viewport" content="width=device-width,initial-scale=1" />
+            <meta name="theme-color" content="#2a3140" />
+            <Meta />
+            <title>
+              {isRouteErrorResponse(error)
+                ? `${error.status} ${error.statusText} ${titleSuffix}`
+                : `Something went wrong ${titleSuffix}`}
+            </title>
+            <Links />
+          </head>
+          <Body>
+            <RootError error={isRouteErrorResponse(error) ? error : null} />
+            <Footer />
+            <ScrollRestoration />
+            <Scripts />
+            <LiveReload />
+          </Body>
+        </HeaderProvider>
       </PageProvider>
     </HelmetProvider>
   );
@@ -110,22 +113,24 @@ export default function App() {
     <HelmetProvider>
       <ModalProvider>
         <PageProvider>
-          <head>
-            <meta charSet="utf-8" />
-            <meta name="viewport" content="width=device-width,initial-scale=1" />
-            <meta name="theme-color" content="#2a3140" />
-            <Meta />
-            <Links />
-            <DynamicMeta />
-            <StructuredData />
-          </head>
-          <Body>
-            <Outlet />
-            <Footer />
-            <ScrollRestoration />
-            <Scripts />
-            <LiveReload />
-          </Body>
+          <HeaderProvider>
+            <head>
+              <meta charSet="utf-8" />
+              <meta name="viewport" content="width=device-width,initial-scale=1" />
+              <meta name="theme-color" content="#2a3140" />
+              <Meta />
+              <Links />
+              <DynamicMeta />
+              <StructuredData />
+            </head>
+            <Body>
+              <Outlet />
+              <Footer />
+              <ScrollRestoration />
+              <Scripts />
+              <LiveReload />
+            </Body>
+          </HeaderProvider>
         </PageProvider>
       </ModalProvider>
     </HelmetProvider>

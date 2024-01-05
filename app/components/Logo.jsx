@@ -1,23 +1,7 @@
-import { useEffect, useState } from "react";
-import { useNavigation } from "~/contexts/NavigationContext";
+import { useHeader } from "~/contexts/HeaderContext";
 
-const ANIMATION_DURATION = 1000;
-
-export default function Logo({ shouldAnimateOnRouteChange, displayWordmark = true, ...props }) {
-  const { locationPath } = useNavigation();
-  const [previousPath, setPreviousPath] = useState(locationPath);
-  const [shouldAnimateLogo, setShouldAnimateLogo] = useState(false);
-
-  useEffect(() => {
-    if (previousPath !== locationPath && shouldAnimateOnRouteChange) {
-      setShouldAnimateLogo(true);
-      setPreviousPath(locationPath);
-      setTimeout(() => {
-        setShouldAnimateLogo(false);
-      }, ANIMATION_DURATION);
-    }
-  }, [locationPath, previousPath, shouldAnimateOnRouteChange]);
-
+export default function Logo({ displayWordmark = true, ...props }) {
+  const { shouldAnimateLogo } = useHeader();
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

@@ -3,7 +3,6 @@ import Comparison from "~/components/homepage/Comparison";
 import Features from "~/components/homepage/Features";
 import Hero from "~/components/homepage/Hero";
 import Stats from "~/components/homepage/Stats";
-import { HeaderProvider } from "~/contexts/HeaderContext";
 import metaData from "~/data/meta";
 import homepageStyles from "~/styles/css/homepage.css";
 
@@ -23,7 +22,7 @@ export function links() {
 
 export default function Docs() {
   return (
-    <HeaderProvider>
+    <>
       <Header />
       <main className="container">
         <Hero />
@@ -31,6 +30,6 @@ export default function Docs() {
         <Features />
         <Comparison />
       </main>
-    </HeaderProvider>
+    </>
   );
 }

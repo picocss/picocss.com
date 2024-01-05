@@ -29,7 +29,7 @@ export default function Header({
     >
       <div className="container">
         <Link to="/" aria-label="Pico CSS homepage">
-          <Logo shouldAnimateOnRouteChange />
+          <Logo />
         </Link>
         <Nav shouldDisplayDocsVersion={shouldDisplayDocsVersion} />
       </div>

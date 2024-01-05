@@ -4,7 +4,6 @@ import Breadcrumb from "~/components/docs/Breadcrumb";
 import DocumentationMenu from "~/components/docs/DocumentationMenu";
 import Main from "~/components/docs/Main";
 import { DocumentationProvider } from "~/contexts/DocumentationContext";
-import { HeaderProvider } from "~/contexts/HeaderContext";
 import docsStyles from "~/styles/css/docs.css";
 
 export function links() {
@@ -14,14 +13,12 @@ export function links() {
 export default function DocsPage() {
   return (
     <DocumentationProvider>
-      <HeaderProvider>
-        <Header headerIsFixed={true} shouldDisplayDocsVersion={true} />
-        <Main>
-          <Breadcrumb />
-          <DocumentationMenu />
-          <Outlet />
-        </Main>
-      </HeaderProvider>
+      <Header headerIsFixed={true} shouldDisplayDocsVersion={true} />
+      <Main>
+        <Breadcrumb />
+        <DocumentationMenu />
+        <Outlet />
+      </Main>
     </DocumentationProvider>
   );
 }
