@@ -2,7 +2,7 @@ import Link from "~/components/Link";
 import Check from "~/components/icons/Check";
 import GitHubIcon from "~/components/icons/GitHub";
 import ThemeToggle from "~/components/icons/ThemeToggle";
-import TwitterIcon from "~/components/icons/Twitter";
+import TwitterIcon from "~/components/icons/XTwitter";
 import { usePage } from "~/contexts/PageContext";
 import metaData from "~/data/meta";
 

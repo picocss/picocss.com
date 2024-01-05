@@ -6,7 +6,7 @@ import Content from "~/components/docs/Content";
 import Header from "~/components/docs/Header";
 import TableOfContents from "~/components/docs/TableOfContents";
 import MenuIcon from "~/components/icons/Menu";
-import TwitterIcon from "~/components/icons/Twitter";
+import TwitterIcon from "~/components/icons/XTwitter";
 import metaData from "~/data/meta";
 
 const { titleSuffix } = metaData();

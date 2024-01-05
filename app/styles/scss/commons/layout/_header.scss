@@ -23,8 +23,10 @@ body {
       justify-content: space-between;
 
       > a {
-        margin: calc(var(#{$css-var-prefix}spacing) * -0.125) calc(var(#{$css-var-prefix}spacing) * -0.25);
-        padding: calc(var(#{$css-var-prefix}spacing) * 0.125) calc(var(#{$css-var-prefix}spacing) * 0.25);
+        margin: calc(var(#{$css-var-prefix}spacing) * -0.125)
+          calc(var(#{$css-var-prefix}spacing) * -0.25);
+        padding: calc(var(#{$css-var-prefix}spacing) * 0.125)
+          calc(var(#{$css-var-prefix}spacing) * 0.25);
         border-radius: var(#{$css-var-prefix}border-radius);
 
         svg.pico-logo {
@@ -35,8 +37,8 @@ body {
       nav {
         svg {
           display: inline-block;
-          width: 1rem;
-          height: 1rem;
+          width: auto;
+          height: 1.125rem;
           transform: translateY(-0.0625rem);
 
           &.theme-toggle {
@@ -70,12 +72,14 @@ body {
             }
 
             &:focus {
-              border: var(#{$css-var-prefix}border-width) solid var(#{$css-var-prefix}dropdown-border-color);
+              border: var(#{$css-var-prefix}border-width) solid
+                var(#{$css-var-prefix}dropdown-border-color);
               box-shadow: none;
             }
 
             &:focus-visible {
-              box-shadow: 0 0 0 var(#{$css-var-prefix}outline-width) var(#{$css-var-prefix}primary-focus);
+              box-shadow: 0 0 0 var(#{$css-var-prefix}outline-width)
+                var(#{$css-var-prefix}primary-focus);
             }
 
             &::after {
