@@ -1,14 +1,13 @@
-import metaData from "~/data/meta";
-import { HeaderProvider } from "~/contexts/HeaderContext";
-
 import Header from "~/components/Header";
+import Comparison from "~/components/homepage/Comparison";
+import Features from "~/components/homepage/Features";
 import Hero from "~/components/homepage/Hero";
 import Stats from "~/components/homepage/Stats";
-import Features from "~/components/homepage/Features";
+import { HeaderProvider } from "~/contexts/HeaderContext";
+import metaData from "~/data/meta";
+import homepageStyles from "~/styles/css/homepage.css";
 
 const { defaultTitle, defaultDescription } = metaData();
-
-import homepageStyles from "~/styles/css/homepage.css";
 
 export const meta = () => [
   { title: defaultTitle },
@@ -30,6 +29,7 @@ export default function Docs() {
         <Hero />
         <Stats />
         <Features />
+        <Comparison />
       </main>
     </HeaderProvider>
   );

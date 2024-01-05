@@ -1,8 +1,7 @@
 import { forwardRef } from "react";
-import metaData from "~/data/meta";
-
 import Link from "~/components/Link";
 import Logo from "~/components/Logo";
+import metaData from "~/data/meta";
 
 export default forwardRef(function Footer(props, ref) {
   const { versions } = metaData();

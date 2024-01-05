@@ -12,22 +12,31 @@ export default function ModalProvider({ children }) {
   const [scrollbarWidth, setScrollbarWidth] = useState(0);
 
   // On open modal
-  const onOpenModal = () => {
-    setModalHelperClasses("modal-is-open modal-is-opening");
-    setModalIsOpen(true);
-    setTimeout(() => {
+  const onOpenModal = ({ isAnimated = true } = {}) => {
+    if (isAnimated) {
+      setModalHelperClasses("modal-is-open modal-is-opening");
+      setModalIsOpen(true);
+      setTimeout(() => {
+        setModalHelperClasses("modal-is-open");
+      }, modalAnimationDuration);
+    } else {
       setModalHelperClasses("modal-is-open");
-    }, modalAnimationDuration);
+      setModalIsOpen(true);
+    }
   };
 
   // On close modal
-  const onCloseModal = (event) => {
-    event.preventDefault();
-    setModalHelperClasses("modal-is-open modal-is-closing");
-    setTimeout(() => {
+  const onCloseModal = ({ isAnimated = true } = {}) => {
+    if (isAnimated) {
+      setModalHelperClasses("modal-is-open modal-is-closing");
+      setTimeout(() => {
+        setModalHelperClasses();
+        setModalIsOpen(false);
+      }, modalAnimationDuration);
+    } else {
       setModalHelperClasses();
       setModalIsOpen(false);
-    }, modalAnimationDuration);
+    }
   };
 
   // Set scrollbar when modal is open

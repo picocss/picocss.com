@@ -1,7 +1,6 @@
-import cssStyle from "~/styles/css/custom-themes/red.css";
-import cssCode from "~/data/code-snippets/red.txt";
-
 import ThemePreview from "~/components/docs/ThemePreview";
+import cssCode from "~/data/code-snippets/red.txt";
+import cssStyle from "~/styles/css/custom-themes/red.css";
 
 const colorName = "Red";
 

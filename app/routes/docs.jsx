@@ -1,14 +1,11 @@
 import { Outlet } from "@remix-run/react";
-
-import { HeaderProvider } from "~/contexts/HeaderContext";
-import { DocumentationProvider } from "~/contexts/DocumentationContext";
-
-import docsStyles from "~/styles/css/docs.css";
-
 import Header from "~/components/Header";
-import Main from "~/components/docs/Main";
 import Breadcrumb from "~/components/docs/Breadcrumb";
 import DocumentationMenu from "~/components/docs/DocumentationMenu";
+import Main from "~/components/docs/Main";
+import { DocumentationProvider } from "~/contexts/DocumentationContext";
+import { HeaderProvider } from "~/contexts/HeaderContext";
+import docsStyles from "~/styles/css/docs.css";
 
 export function links() {
   return [{ rel: "stylesheet", href: docsStyles }];

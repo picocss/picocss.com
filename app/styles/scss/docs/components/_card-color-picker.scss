@@ -68,7 +68,9 @@ article {
     > hgroup,
     > form,
     > footer {
-      transition: opacity var(#{$css-var-prefix}transition), filter var(#{$css-var-prefix}transition);
+      transition:
+        opacity var(#{$css-var-prefix}transition),
+        filter var(#{$css-var-prefix}transition);
     }
   }
 }

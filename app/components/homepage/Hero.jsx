@@ -1,3 +1,5 @@
+import Link from "~/components/Link";
+import ArrowRight from "../icons/ArrowRight";
 import Demo from "./Demo";
 
 export default function Hero(props) {
@@ -17,12 +19,14 @@ export default function Hero(props) {
           making every HTML&nbsp;element responsive and elegant&nbsp;by&nbsp;default.
         </p>
         <div className="grid ctas">
-          <a href="/docs" role="button">
+          <Link to="/docs" role="button">
             Get Started
-          </a>
-          <a href="/docs" role="button" className="contrast">
+            <ArrowRight />
+          </Link>
+          <Link to="/docs" role="button" className="contrast">
             Examples
-          </a>
+            <ArrowRight />
+          </Link>
         </div>
       </div>
       <Demo />

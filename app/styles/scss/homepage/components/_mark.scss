@@ -3,7 +3,7 @@
 mark {
   padding: 0;
   background: var(#{$css-var-prefix}mark-gradient);
-  background-size: 100%, 400%;
+  background-size: 100%, 300%;
   background-clip: text;
   color: transparent;
   // We are using a custom gradient instead of filter: hue-rotate()

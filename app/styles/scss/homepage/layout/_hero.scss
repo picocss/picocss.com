@@ -84,6 +84,14 @@ body > main > .hero {
           justify-content: flex-start;
         }
       }
+
+      a[role="button"] {
+        svg {
+          width: auto;
+          height: 1rem;
+          margin-left: calc(var(#{$css-var-prefix}spacing) * 0.25);
+        }
+      }
     }
   }
 }

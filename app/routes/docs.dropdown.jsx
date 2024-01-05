@@ -1,12 +1,11 @@
 import { useRef } from "react";
-import metaData from "~/data/meta";
-
+import Code from "~/components/Code";
+import Heading from "~/components/Heading";
+import Link from "~/components/Link";
+import Content from "~/components/docs/Content";
 import Header from "~/components/docs/Header";
 import TableOfContents from "~/components/docs/TableOfContents";
-import Content from "~/components/docs/Content";
-import Code from "~/components/Code";
-import Link from "~/components/Link";
-import Heading from "~/components/Heading";
+import metaData from "~/data/meta";
 
 const { titleSuffix } = metaData();
 
@@ -138,7 +137,7 @@ export default function Dropdown() {
       (phase, index) =>
         `${index !== 0 ? "    " : "  "}<li><a href="#">${phase}</a></li>${
           phase !== phasesOfMatter[phasesOfMatter.length - 1] ? "\n" : ""
-        }`
+        }`,
     )
     .join("")}
   </ul>
@@ -152,7 +151,7 @@ export default function Dropdown() {
       (phase, index) =>
         `${index !== 0 ? "  " : ""}<option>${phase}</option>${
           index !== phasesOfMatter.length - 1 && "\n"
-        }`
+        }`,
     )
     .join("")}
 </select>`}</Code>
@@ -209,7 +208,7 @@ export default function Dropdown() {
         <input type="radio" name="phase" value="${phase.toLowerCase()}" />
         ${phase}
       </label>
-    </li>${phase !== phasesOfMatter[phasesOfMatter.length - 1] ? "\n" : ""}`
+    </li>${phase !== phasesOfMatter[phasesOfMatter.length - 1] ? "\n" : ""}`,
     )
     .join("")}
   </ul>
@@ -229,7 +228,7 @@ export default function Dropdown() {
         <input type="checkbox" name="${phase.toLowerCase()}" />
         ${phase}
       </label>
-    </li>${phase !== phasesOfMatter[phasesOfMatter.length - 1] ? "\n" : ""}`
+    </li>${phase !== phasesOfMatter[phasesOfMatter.length - 1] ? "\n" : ""}`,
     )
     .join("")}
   </ul>
@@ -449,7 +448,7 @@ export default function Dropdown() {
 ${accountItems
   .map(
     (item, index) =>
-      `          <li><a href="#">${item}</a></li>${index !== accountItems.length - 1 ? "\n" : ""}`
+      `          <li><a href="#">${item}</a></li>${index !== accountItems.length - 1 ? "\n" : ""}`,
   )
   .join("")}
         </ul>

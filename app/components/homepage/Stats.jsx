@@ -1,11 +1,10 @@
+import parse from "html-react-parser";
+import ClouDownload from "~/components/icons/CloudDownload";
+import Download from "~/components/icons/Download";
+import Star from "~/components/icons/Star";
+import Terminal from "~/components/icons/Terminal";
 import stats from "~/data/stats";
 import { formatStatNumber } from "~/utils";
-import parse from "html-react-parser";
-
-import Star from "~/components/icons/Star";
-import Download from "~/components/icons/Download";
-import Terminal from "~/components/icons/Terminal";
-import ClouDownload from "~/components/icons/CloudDownload";
 
 const Icon = ({ type, ...props }) => {
   switch (type) {

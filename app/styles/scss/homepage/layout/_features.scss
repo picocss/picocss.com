@@ -84,7 +84,7 @@ body > main > .features {
             svg {
               width: auto;
               height: 1rem;
-              margin-left: calc(var(#{$css-var-prefix}spacing) * 0.5);
+              margin-left: calc(var(#{$css-var-prefix}spacing) * 0.25);
             }
           }
         }

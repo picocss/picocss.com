@@ -1,13 +1,12 @@
 import Code from "~/components/Code";
 import Link from "~/components/Link";
-
+import Logo from "~/components/Logo";
 import CodeIcon from "~/components/icons/Code";
 import Expand from "~/components/icons/Expand";
+import Adjustments from "../icons/Adjustments";
+import ArrowRight from "../icons/ArrowRight";
 import Brightness from "../icons/Brightness";
 import Speedtest from "../icons/Speedtest";
-import Adjustments from "../icons/Adjustments";
-import Logo from "~/components/Logo";
-import ArrowRight from "../icons/ArrowRight";
 
 const BlockLink = ({ children, to, ...props }) => (
   <p {...props}>

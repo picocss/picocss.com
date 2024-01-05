@@ -1,9 +1,7 @@
-import metaData from "~/data/meta";
 import { Outlet } from "@remix-run/react";
-
 import Content from "~/components/docs/Content";
 import Header from "~/components/docs/Header";
-
+import metaData from "~/data/meta";
 import colorPickerStyles from "~/styles/css/docs/color-picker.css";
 
 const { titleSuffix } = metaData();

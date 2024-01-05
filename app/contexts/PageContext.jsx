@@ -1,10 +1,8 @@
 import { createContext, useContext, useEffect, useState } from "react";
-
-import usePrefersColorScheme from "use-prefers-color-scheme";
 import useLocalStorageState from "use-local-storage-state";
-
-import { NavigationProvider } from "~/contexts/NavigationContext";
+import usePrefersColorScheme from "use-prefers-color-scheme";
 import { useModal } from "~/contexts/ModalContext";
+import { NavigationProvider } from "~/contexts/NavigationContext";
 
 const PageContext = createContext({});
 const usePage = () => useContext(PageContext);

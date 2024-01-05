@@ -20,6 +20,7 @@ body {
     display: grid;
     grid-template-rows: 1fr;
     row-gap: 2rem;
+    padding: 0;
 
     > * {
       min-width: 0;
@@ -61,7 +62,9 @@ body {
       > aside {
         > nav {
           position: sticky;
-          top: calc(var(#{$css-var-prefix}main-top-offset) + 2rem);
+          top: calc(
+            var(#{$css-var-prefix}main-top-offset) + calc(var(--pico-block-spacing-vertical) / 2)
+          );
           transition: top var(#{$css-var-prefix}transition);
           transition-delay: 0.05s;
         }
@@ -73,6 +76,7 @@ body {
 
       > hgroup {
         grid-area: header;
+        margin-top: calc(var(--pico-block-spacing-vertical) / 2);
       }
 
       > aside#table-of-contents {

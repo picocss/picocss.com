@@ -3,10 +3,9 @@ import Content from "~/components/docs/Content";
 import Header from "~/components/docs/Header";
 import Heading from "~/components/Heading";
 import ThemeToggle from "~/components/icons/ThemeToggle";
-
 import { usePage } from "~/contexts/PageContext";
-
 import metaData from "~/data/meta";
+
 const { titleSuffix } = metaData();
 
 export const meta = () => [

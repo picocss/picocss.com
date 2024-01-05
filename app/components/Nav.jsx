@@ -1,11 +1,9 @@
-import { usePage } from "~/contexts/PageContext";
-
 import Link from "~/components/Link";
-import GitHubIcon from "~/components/icons/GitHub";
-import TwitterIcon from "~/components/icons/Twitter";
 import Check from "~/components/icons/Check";
+import GitHubIcon from "~/components/icons/GitHub";
 import ThemeToggle from "~/components/icons/ThemeToggle";
-
+import TwitterIcon from "~/components/icons/Twitter";
+import { usePage } from "~/contexts/PageContext";
 import metaData from "~/data/meta";
 
 const { versions } = metaData();

@@ -13,6 +13,7 @@ body > main > .hero > .demo {
     #{$css-var-prefix}block-spacing-horizontal: var(#{$css-var-prefix}spacing) !important;
     #{$css-var-prefix}block-spacing-vertical: calc(var(#{$css-var-prefix}spacing) * 1.5) !important;
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: flex-start;
     width: 100%;
@@ -22,8 +23,6 @@ body > main > .hero > .demo {
     margin-bottom: 0;
     margin-inline: auto;
     background-color: var(#{$css-var-prefix}background-color);
-    pointer-events: none;
-    user-select: none;
 
     @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
       #{$css-var-prefix}block-spacing-horizontal: calc(
@@ -47,6 +46,12 @@ body > main > .hero > .demo {
           var(--demo-height, 265px) + (var(#{$css-var-prefix}block-spacing-vertical) * 2)
         );
       }
+    }
+
+    main,
+    footer {
+      pointer-events: none;
+      user-select: none;
     }
 
     main {
@@ -174,6 +179,64 @@ body > main > .hero > .demo {
           line-height: inherit;
           font-family: inherit;
         }
+      }
+    }
+
+    .controls {
+      display: grid;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      grid-auto-flow: column;
+      padding: var(#{$css-var-prefix}spacing);
+      pointer-events: all;
+      transition: opacity var(#{$css-var-prefix}transition);
+      grid-gap: calc(var(#{$css-var-prefix}spacing) * 0.25);
+
+      @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+        opacity: 0;
+      }
+
+      svg {
+        width: auto;
+        height: 1rem;
+        color: var(#{$css-var-prefix}muted-color);
+        cursor: pointer;
+        transition: color var(#{$css-var-prefix}transition);
+
+        &:hover {
+          color: var(#{$css-var-prefix}secondary-hover);
+        }
+      }
+    }
+
+    &:hover {
+      .controls {
+        opacity: 1;
+      }
+    }
+  }
+
+  &.is-maximized {
+    z-index: 999;
+    position: fixed;
+    max-width: none;
+    inset: 0;
+    transform: none;
+    background: var(#{$css-var-prefix}background-color);
+
+    article.component {
+      position: unset;
+      max-width: none;
+      border-radius: none;
+      outline: none;
+
+      @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+        max-width: map.get(map.get($breakpoints, "md"), "viewport");
+      }
+
+      .controls {
+        opacity: 1;
       }
     }
   }

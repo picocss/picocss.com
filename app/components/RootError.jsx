@@ -1,8 +1,8 @@
-import { HeaderProvider } from "~/contexts/HeaderContext";
-import Main from "~/components/docs/Main";
 import Header from "~/components/Header";
-import ErrorHeader from "~/components/docs/Header";
 import Content from "~/components/docs/Content";
+import ErrorHeader from "~/components/docs/Header";
+import Main from "~/components/docs/Main";
+import { HeaderProvider } from "~/contexts/HeaderContext";
 
 export default function RootError({ error, ...props }) {
   return (

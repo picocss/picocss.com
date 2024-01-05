@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
-import { useHeader } from "~/contexts/HeaderContext";
-
 import Link from "~/components/Link";
 import Logo from "~/components/Logo";
 import Nav from "~/components/Nav";
+import { useHeader } from "~/contexts/HeaderContext";
 
 export default function Header({
   shouldDisplayDocsVersion = false,

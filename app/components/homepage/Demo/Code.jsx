@@ -1,6 +1,6 @@
-import { useDemo } from "./DemoContext";
-import TypeIt from "typeit-react";
 import parse from "html-react-parser";
+import TypeIt from "typeit-react";
+import { useDemo } from "./DemoContext";
 
 // Display HTML tag
 const tag = (value) => {

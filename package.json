@@ -5,7 +5,6 @@
   "homepage": "https://picocss.com",
   "private": true,
   "sideEffects": false,
-  "type": "module",
   "scripts": {
     "build": "run-s 'build:*' --silent && remix build",
     "build:sort-scss": "postcss --config app/styles/scss ./app/styles/**/*.scss --replace",
@@ -13,10 +12,10 @@
     "build:autoprefix": "postcss --config app/styles/css --replace app/styles/css/*.css",
     "build:minify": "cleancss -O1 --with-rebase --batch --batch-suffix '' app/styles/css/*.css app/styles/css/**/*.css !app/styles/css/custom-themes/*.css !app/styles/css/snippets/*.css",
     "build:code-snippets": "run-s 'build:code-snippets:*' --silent",
-    "build:code-snippets:create-folder": "node scripts/create-code-snippets-folder.cjs",
-    "build:code-snippets:copy-snippets": "node scripts/copy-code-snippets.cjs",
-    "build:fetch-stats": "node scripts/fetch-stats.cjs",
-    "build:v1-documentation": "node scripts/build-pico-v1-documentation.cjs",
+    "build:code-snippets:create-folder": "node scripts/create-code-snippets-folder",
+    "build:code-snippets:copy-snippets": "node scripts/copy-code-snippets",
+    "build:fetch-stats": "node scripts/fetch-stats",
+    "build:v1-documentation": "node scripts/build-pico-v1-documentation",
     "dev": "remix build && run-p 'dev:*'",
     "dev:remix": "remix dev --manual -c \"npm run start\"",
     "dev:recompile-css-then-watch": "run-s 'build:build-css' 'build:autoprefix' 'dev:watch'",
@@ -70,7 +69,7 @@
     "@types/react": "^18.2.46",
     "@types/react-dom": "^18.2.18",
     "autoprefixer": "^10.4.16",
-    "caniuse-lite": "^1.0.30001572",
+    "caniuse-lite": "^1.0.30001574",
     "clean-css-cli": "^5.6.3",
     "copyfiles": "^2.4.1",
     "css-declaration-sorter": "^7.1.1",
@@ -88,10 +87,11 @@
     "postcss-cli": "^11.0.0",
     "postcss-scss": "^4.0.9",
     "prettier": "^3.1.1",
+    "prettier-plugin-organize-imports": "^3.2.4",
     "renamer": "^4.0.0",
-    "sass": "^1.69.6",
+    "sass": "^1.69.7",
     "typescript": "^5.3.3",
-    "wrangler": "^3.22.1"
+    "wrangler": "^3.22.3"
   },
   "engines": {
     "node": ">=18.19.0"

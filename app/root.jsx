@@ -5,21 +5,18 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-  useRouteError,
   isRouteErrorResponse,
+  useRouteError,
 } from "@remix-run/react";
-
 import { HelmetProvider } from "react-helmet-async";
 import { ModalProvider } from "~/contexts/ModalContext";
 import { PageProvider } from "~/contexts/PageContext";
-
-import picoStyles from "~/styles/css/main.css";
 import metaData from "~/data/meta";
-
+import picoStyles from "~/styles/css/main.css";
 import Body from "./components/Body";
-import RootError from "./components/RootError";
-import Footer from "./components/Footer";
 import DynamicMeta from "./components/DynamicMeta";
+import Footer from "./components/Footer";
+import RootError from "./components/RootError";
 import StructuredData from "./components/StructuredData";
 
 const { domain, siteName, titleSuffix, twitterHandle } = metaData();

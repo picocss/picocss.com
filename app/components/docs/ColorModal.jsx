@@ -1,19 +1,17 @@
 import { useEffect } from "react";
 import { use100vh } from "react-div-100vh";
-
+import Code from "~/components/Code";
 import Link from "~/components/Link";
 import Close from "~/components/icons/Close";
-import Code from "~/components/Code";
-
 import {
-  getNextColor,
   getColorFromNextColorFamily,
-  getPreviousColor,
   getColorFromPreviousColorFamily,
   getColorName,
-  getRgbValue,
   getHexValue,
   getMainHexValue,
+  getNextColor,
+  getPreviousColor,
+  getRgbValue,
   sentenceCase,
 } from "~/utils";
 

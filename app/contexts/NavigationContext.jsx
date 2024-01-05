@@ -1,5 +1,5 @@
+import { useMatches, useNavigation as useRemixNavigation } from "@remix-run/react";
 import { createContext, useContext } from "react";
-import { useNavigation as useRemixNavigation, useMatches } from "@remix-run/react";
 
 const NavigationContext = createContext({});
 const useNavigation = () => useContext(NavigationContext);

@@ -1,14 +1,12 @@
 import { useRef } from "react";
-import metaData from "~/data/meta";
-
-import picoScssSettings from "~/data/code-snippets/_settings.txt";
-
-import Header from "~/components/docs/Header";
-import TableOfContents from "~/components/docs/TableOfContents";
-import Content from "~/components/docs/Content";
-import Link from "~/components/Link";
 import Code from "~/components/Code";
 import Heading from "~/components/Heading";
+import Link from "~/components/Link";
+import Content from "~/components/docs/Content";
+import Header from "~/components/docs/Header";
+import TableOfContents from "~/components/docs/TableOfContents";
+import picoScssSettings from "~/data/code-snippets/_settings.txt";
+import metaData from "~/data/meta";
 
 import { removeLines } from "~/utils";
 

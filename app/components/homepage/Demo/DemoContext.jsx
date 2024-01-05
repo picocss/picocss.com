@@ -10,6 +10,9 @@ export default function DemoProvider({ children }) {
   const [formIsBusy, setFormIsBusy] = useState(false);
   const [formGroupIsFocused, setFormGroupIsFocused] = useState(false);
 
+  // Demo states
+  const [isMaximized, setIsMaximized] = useState(false);
+
   // Input states
   const [displayInput, setDisplayInput] = useState(true);
   const [inputPlaceholder, setInputPlaceholder] = useState("Enter your email");
@@ -119,6 +122,10 @@ export default function DemoProvider({ children }) {
         setFormIsBusy,
         formGroupIsFocused,
         setFormGroupIsFocused,
+
+        // Demo states
+        isMaximized,
+        setIsMaximized,
 
         // Input states
         displayInput,
