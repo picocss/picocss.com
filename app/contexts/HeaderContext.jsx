@@ -14,8 +14,6 @@ export default function HeaderProvider({ shouldAnimateOnRouteChange = true, chil
   const [shouldAnimateLogo, setShouldAnimateLogo] = useState(false);
 
   useEffect(() => {
-    console.log("previousPath", previousPath);
-    console.log("locationPath", locationPath);
     if (previousPath !== locationPath && shouldAnimateOnRouteChange) {
       setShouldAnimateLogo(true);
       setPreviousPath(locationPath);
