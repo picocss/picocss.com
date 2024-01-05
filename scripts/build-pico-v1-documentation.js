@@ -39,7 +39,12 @@ function copyDocsFolderToOutputFolder(outputDocsFolder) {
     "js/src/",
     "js/*.js",
   ];
-  const includePatternsInPicoDocsFolder = ["css/*.docs.min.css.map", "css/*.docs.min.css.map", "js/*.min.js", "src/*.html"];
+  const includePatternsInPicoDocsFolder = [
+    "css/*.docs.min.css.map",
+    "css/*.docs.min.css.map",
+    "js/*.min.js",
+    "src/*.html",
+  ];
   const excludeFilesInPicoDocsFolder = excludePatternsInPicoDocsFolder
     .map((pattern) => `--exclude='${pattern}'`)
     .join(" ");
