@@ -9,27 +9,27 @@ const picoCssFilePath = picoLibraryFolder + "css/pico.min.css";
 const picoCssSourceMapFilePath = picoLibraryFolder + "css/pico.min.css.map";
 const picoDocsFolder = picoLibraryFolder + "docs/";
 
-// Function to get the version of the Pico library from its package.json file
+// Get the version of the Pico library from its package.json file
 function getPicoLibraryVersion() {
   const picoLibraryPackageJsonFileContent = readFileSync(picoLibraryPackageJsonFilePath, "utf8");
   const picoLibraryPackageJson = JSON.parse(picoLibraryPackageJsonFileContent);
   return picoLibraryPackageJson.version;
 }
 
-// Function to create a folder if it does not exist
+// Create a folder if it does not exist
 function createFolderIfNonExistent(folderPath) {
   if (!existsSync(folderPath)) {
     mkdirSync(folderPath, { recursive: true });
   }
 }
 
-// Function to clear the output folder and create it if it does not exist
+// Clear the output folder and create it if it does not exist
 function clearAndCreateOutputFolder(outputDocsFolder) {
   rmSync(outputDocsFolder, { recursive: true, force: true });
   createFolderIfNonExistent(outputDocsFolder);
 }
 
-// Function to copy the Pico library's documentation folder to the output folder
+// Copy the Pico library's documentation folder to the output folder
 function copyDocsFolderToOutputFolder(outputDocsFolder) {
   const excludePatternsInPicoDocsFolder = [
     "*.html",
@@ -55,7 +55,7 @@ function copyDocsFolderToOutputFolder(outputDocsFolder) {
   execSync(copyPicoDocsFolderCommand);
 }
 
-// Function to copy the Pico library's CSS file to the output folder
+// Copy the Pico library's CSS file to the output folder
 function copyPicoCssFileToOutputFolder(outputCssFolder) {
   copyFileSync(picoCssFilePath, outputCssFolder + "pico.min.css");
   copyFileSync(picoCssSourceMapFilePath, outputCssFolder + "pico.min.css.map");
@@ -71,14 +71,19 @@ function replaceCssPathInHeadPartial(picoDocsHeadPartialFilePath) {
   execSync(`echo '${headPartialFileContentWithCorrectCssPath}' > ${picoDocsHeadPartialFilePath}`);
 }
 
-// Function to build the documentation with html-includes
+// Build the documentation with html-includes
 function buildDocs(picoLibraryVersion) {
   execSync(
     `html-includes --src public/docs/${picoLibraryVersion}/src --dest public/docs/${picoLibraryVersion}/ --minify minifyJS=true --quiet`,
   );
 }
 
-// Main function
+// Temove the documentation's source folder
+function removeDocsSourceFolder(picoLibraryVersion) {
+  rmSync(`public/docs/${picoLibraryVersion}/src`, { recursive: true, force: true });
+}
+
+// Main
 function main() {
   const picoLibraryVersion = getPicoLibraryVersion();
   const outputDocsFolder = `./public/docs/${picoLibraryVersion}/`;
@@ -90,6 +95,7 @@ function main() {
   copyPicoCssFileToOutputFolder(outputCssFolder);
   replaceCssPathInHeadPartial(picoDocsHeadPartialFilePath);
   buildDocs(picoLibraryVersion);
+  removeDocsSourceFolder(picoLibraryVersion);
 }
 
 main();
