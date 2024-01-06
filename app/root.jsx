@@ -15,8 +15,8 @@ import { PageProvider } from "~/contexts/PageContext";
 import metaData from "~/data/meta";
 import picoStyles from "~/styles/css/main.css";
 import Body from "./components/Body";
-import DynamicMeta from "./components/DynamicMeta";
 import Footer from "./components/Footer";
+import Head from "./components/Head/";
 import RootError from "./components/RootError";
 import StructuredData from "./components/StructuredData";
 
@@ -120,7 +120,7 @@ export default function App() {
               <meta name="theme-color" content="#2a3140" />
               <Meta />
               <Links />
-              <DynamicMeta />
+              <Head />
               <StructuredData />
             </head>
             <Body>
