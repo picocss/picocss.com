@@ -12,7 +12,7 @@ $colorName: "Fuchsia";
   #{$css-var-prefix}primary-underline: #{rgba($fuchsia-550, 0.5)};
   #{$css-var-prefix}primary-hover: #{$fuchsia-650};
   #{$css-var-prefix}primary-hover-background: #{$fuchsia-600};
-  #{$css-var-prefix}primary-focus: #{rgba($fuchsia-400, 0.25)};
+  #{$css-var-prefix}primary-focus: #{rgba($fuchsia-400, 0.5)};
   #{$css-var-prefix}primary-inverse: #{$white};
 }
 
@@ -24,7 +24,7 @@ $colorName: "Fuchsia";
   #{$css-var-prefix}primary-underline: #{rgba($fuchsia-350, 0.5)};
   #{$css-var-prefix}primary-hover: #{$fuchsia-250};
   #{$css-var-prefix}primary-hover-background: #{$fuchsia-500};
-  #{$css-var-prefix}primary-focus: #{rgba($fuchsia-350, 0.25)};
+  #{$css-var-prefix}primary-focus: #{rgba($fuchsia-350, 0.375)};
   #{$css-var-prefix}primary-inverse: #{$white};
 }
 

@@ -12,7 +12,7 @@ $colorName: "Red";
   #{$css-var-prefix}primary-underline: #{rgba($red-550, 0.5)};
   #{$css-var-prefix}primary-hover: #{$red-650};
   #{$css-var-prefix}primary-hover-background: #{$red-600};
-  #{$css-var-prefix}primary-focus: #{rgba($red-400, 0.25)};
+  #{$css-var-prefix}primary-focus: #{rgba($red-400, 0.5)};
   #{$css-var-prefix}primary-inverse: #{$white};
 }
 
@@ -24,7 +24,7 @@ $colorName: "Red";
   #{$css-var-prefix}primary-underline: #{rgba($red-350, 0.5)};
   #{$css-var-prefix}primary-hover: #{$red-250};
   #{$css-var-prefix}primary-hover-background: #{$red-500};
-  #{$css-var-prefix}primary-focus: #{rgba($red-350, 0.25)};
+  #{$css-var-prefix}primary-focus: #{rgba($red-350, 0.375)};
   #{$css-var-prefix}primary-inverse: #{$white};
 }
 

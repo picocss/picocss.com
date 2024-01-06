@@ -12,7 +12,7 @@ $colorName: "Azure";
   #{$css-var-prefix}primary-underline: #{rgba($azure-550, 0.5)};
   #{$css-var-prefix}primary-hover: #{$azure-650};
   #{$css-var-prefix}primary-hover-background: #{$azure-600};
-  #{$css-var-prefix}primary-focus: #{rgba($azure-400, 0.25)};
+  #{$css-var-prefix}primary-focus: #{rgba($azure-400, 0.5)};
   #{$css-var-prefix}primary-inverse: #{$white};
 }
 
@@ -24,7 +24,7 @@ $colorName: "Azure";
   #{$css-var-prefix}primary-underline: #{rgba($azure-350, 0.5)};
   #{$css-var-prefix}primary-hover: #{$azure-250};
   #{$css-var-prefix}primary-hover-background: #{$azure-500};
-  #{$css-var-prefix}primary-focus: #{rgba($azure-350, 0.25)};
+  #{$css-var-prefix}primary-focus: #{rgba($azure-350, 0.375)};
   #{$css-var-prefix}primary-inverse: #{$white};
 }
 

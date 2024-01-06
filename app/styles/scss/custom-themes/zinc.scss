@@ -12,7 +12,7 @@ $colorName: "Zinc";
   #{$css-var-prefix}primary-underline: #{rgba($zinc-550, 0.5)};
   #{$css-var-prefix}primary-hover: #{$zinc-650};
   #{$css-var-prefix}primary-hover-background: #{$zinc-600};
-  #{$css-var-prefix}primary-focus: #{rgba($zinc-400, 0.25)};
+  #{$css-var-prefix}primary-focus: #{rgba($zinc-400, 0.5)};
   #{$css-var-prefix}primary-inverse: #{$white};
 }
 
@@ -24,7 +24,7 @@ $colorName: "Zinc";
   #{$css-var-prefix}primary-underline: #{rgba($zinc-350, 0.5)};
   #{$css-var-prefix}primary-hover: #{$zinc-250};
   #{$css-var-prefix}primary-hover-background: #{$zinc-500};
-  #{$css-var-prefix}primary-focus: #{rgba($zinc-350, 0.25)};
+  #{$css-var-prefix}primary-focus: #{rgba($zinc-350, 0.375)};
   #{$css-var-prefix}primary-inverse: #{$white};
 }
 

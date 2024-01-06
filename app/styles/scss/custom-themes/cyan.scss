@@ -12,7 +12,7 @@ $colorName: "Cyan";
   #{$css-var-prefix}primary-underline: #{rgba($cyan-550, 0.5)};
   #{$css-var-prefix}primary-hover: #{$cyan-650};
   #{$css-var-prefix}primary-hover-background: #{$cyan-600};
-  #{$css-var-prefix}primary-focus: #{rgba($cyan-400, 0.25)};
+  #{$css-var-prefix}primary-focus: #{rgba($cyan-400, 0.5)};
   #{$css-var-prefix}primary-inverse: #{$white};
 }
 
@@ -24,7 +24,7 @@ $colorName: "Cyan";
   #{$css-var-prefix}primary-underline: #{rgba($cyan-350, 0.5)};
   #{$css-var-prefix}primary-hover: #{$cyan-250};
   #{$css-var-prefix}primary-hover-background: #{$cyan-500};
-  #{$css-var-prefix}primary-focus: #{rgba($cyan-350, 0.25)};
+  #{$css-var-prefix}primary-focus: #{rgba($cyan-350, 0.375)};
   #{$css-var-prefix}primary-inverse: #{$white};
 }
 

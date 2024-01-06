@@ -8,7 +8,7 @@
   --pico-primary-underline: rgba(100, 107, 121, 0.5);
   --pico-primary-hover: #4d535e;
   --pico-primary-hover-background: #5c6370;
-  --pico-primary-focus: rgba(136, 145, 164, 0.25);
+  --pico-primary-focus: rgba(136, 145, 164, 0.5);
   --pico-primary-inverse: #fff;
 }
 
@@ -22,7 +22,7 @@
     --pico-primary-underline: rgba(150, 158, 175, 0.5);
     --pico-primary-hover: #b3b9c5;
     --pico-primary-hover-background: #6f7887;
-    --pico-primary-focus: rgba(150, 158, 175, 0.25);
+    --pico-primary-focus: rgba(150, 158, 175, 0.375);
     --pico-primary-inverse: #fff;
   }
 }
@@ -35,7 +35,7 @@
   --pico-primary-underline: rgba(150, 158, 175, 0.5);
   --pico-primary-hover: #b3b9c5;
   --pico-primary-hover-background: #6f7887;
-  --pico-primary-focus: rgba(150, 158, 175, 0.25);
+  --pico-primary-focus: rgba(150, 158, 175, 0.375);
   --pico-primary-inverse: #fff;
 }
 

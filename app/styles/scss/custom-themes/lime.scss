@@ -12,7 +12,7 @@ $colorName: "Lime";
   #{$css-var-prefix}primary-underline: #{rgba($lime-550, 0.5)};
   #{$css-var-prefix}primary-hover: #{$lime-650};
   #{$css-var-prefix}primary-hover-background: #{$lime-250};
-  #{$css-var-prefix}primary-focus: #{rgba($lime-400, 0.25)};
+  #{$css-var-prefix}primary-focus: #{rgba($lime-400, 0.5)};
   #{$css-var-prefix}primary-inverse: #{$black};
   #{$css-var-prefix}switch-color: var(#{$css-var-prefix}secondary-hover);
 }
@@ -25,7 +25,7 @@ $colorName: "Lime";
   #{$css-var-prefix}primary-underline: #{rgba($lime-350, 0.5)};
   #{$css-var-prefix}primary-hover: #{$lime-250};
   #{$css-var-prefix}primary-hover-background: #{$lime-150};
-  #{$css-var-prefix}primary-focus: #{rgba($lime-350, 0.25)};
+  #{$css-var-prefix}primary-focus: #{rgba($lime-350, 0.375)};
   #{$css-var-prefix}primary-inverse: #{$black};
   #{$css-var-prefix}switch-color: var(#{$css-var-prefix}background-color);
 }

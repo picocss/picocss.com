@@ -12,7 +12,7 @@ $colorName: "Indigo";
   #{$css-var-prefix}primary-underline: #{rgba($indigo-550, 0.5)};
   #{$css-var-prefix}primary-hover: #{$indigo-650};
   #{$css-var-prefix}primary-hover-background: #{$indigo-650};
-  #{$css-var-prefix}primary-focus: #{rgba($indigo-400, 0.25)};
+  #{$css-var-prefix}primary-focus: #{rgba($indigo-400, 0.5)};
   #{$css-var-prefix}primary-inverse: #{$white};
 }
 
@@ -24,7 +24,7 @@ $colorName: "Indigo";
   #{$css-var-prefix}primary-underline: #{rgba($indigo-350, 0.5)};
   #{$css-var-prefix}primary-hover: #{$indigo-250};
   #{$css-var-prefix}primary-hover-background: #{$indigo-550};
-  #{$css-var-prefix}primary-focus: #{rgba($indigo-350, 0.25)};
+  #{$css-var-prefix}primary-focus: #{rgba($indigo-350, 0.375)};
   #{$css-var-prefix}primary-inverse: #{$white};
 }
 

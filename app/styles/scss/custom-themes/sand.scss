@@ -12,7 +12,7 @@ $colorName: "Sand";
   #{$css-var-prefix}primary-underline: #{rgba($sand-550, 0.5)};
   #{$css-var-prefix}primary-hover: #{$sand-650};
   #{$css-var-prefix}primary-hover-background: #{$sand-250};
-  #{$css-var-prefix}primary-focus: #{rgba($sand-400, 0.25)};
+  #{$css-var-prefix}primary-focus: #{rgba($sand-400, 0.5)};
   #{$css-var-prefix}primary-inverse: #{$black};
   #{$css-var-prefix}switch-color: var(#{$css-var-prefix}secondary-hover);
 }
@@ -25,7 +25,7 @@ $colorName: "Sand";
   #{$css-var-prefix}primary-underline: #{rgba($sand-350, 0.5)};
   #{$css-var-prefix}primary-hover: #{$sand-250};
   #{$css-var-prefix}primary-hover-background: #{$sand-150};
-  #{$css-var-prefix}primary-focus: #{rgba($sand-350, 0.25)};
+  #{$css-var-prefix}primary-focus: #{rgba($sand-350, 0.375)};
   #{$css-var-prefix}primary-inverse: #{$black};
   #{$css-var-prefix}switch-color: var(#{$css-var-prefix}background-color);
 }
