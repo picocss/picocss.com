@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { Fragment, useRef } from "react";
 import Code from "~/components/Code";
 import Heading from "~/components/Heading";
 import Link from "~/components/Link";
@@ -24,6 +24,7 @@ export const meta = () => [
 export default function Sass() {
   const introductionRef = useRef();
   const settingsRef = useRef();
+  const themeColorRef = useRef();
   const customThemeRef = useRef();
 
   return (
@@ -51,6 +52,11 @@ export default function Sass() {
             anchor: "settings",
             title: "Settings",
             ref: settingsRef,
+          },
+          {
+            anchor: "theme-color",
+            title: "Theme color",
+            ref: themeColorRef,
           },
           {
             anchor: "custom-theme",
@@ -153,6 +159,58 @@ export default function Sass() {
               })}
             </Code>
           </details>
+        </section>
+
+        <section ref={themeColorRef}>
+          <Heading level={2} anchor="theme-color">
+            Theme color
+          </Heading>
+          <p>
+            Pico comes with a default{" "}
+            <Code display="inline" language="scss">
+              "azure"
+            </Code>{" "}
+            theme.
+            <br />
+            You can easily recompile Pico using a different primary color from a selection of 20
+            colors.
+          </p>
+          <Code language="scss">{`// Pico with purple primary color
+@use "pico" with (
+  $theme-color: "purple"
+);`}</Code>
+          <p>
+            Possible color choices:{" "}
+            {[
+              "amber",
+              "azure",
+              "blue",
+              "cyan",
+              "fuchsia",
+              "green",
+              "grey",
+              "indigo",
+              "jade",
+              "lime",
+              "orange",
+              "pink",
+              "pumpkin",
+              "purple",
+              "red",
+              "sand",
+              "slate",
+              "violet",
+              "yellow",
+              "zinc",
+            ].map((color, index) => (
+              <Fragment key={color}>
+                <Code display="inline" language="scss">
+                  {`${color}`}
+                </Code>
+                {index < 19 ? ", " : "."}
+              </Fragment>
+            ))}
+          </p>
         </section>
 
         <section ref={customThemeRef}>
