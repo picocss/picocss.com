@@ -10,10 +10,10 @@ export default function meta() {
 
     // Versions
     versions: {
-      current: "2.0.0-rc1",
+      current: "2.0.0-rc2",
       all: [
         {
-          version: "2.0.0-rc1",
+          version: "2.0.0-rc2",
           url: "/docs",
         },
         {
