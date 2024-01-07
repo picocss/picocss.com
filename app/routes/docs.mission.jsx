@@ -72,8 +72,7 @@ export default function Mission() {
           </p>
           <p>
             As we continued to build, our community grew 🧡, and with it, the responsibility to
-            provide a reliable CSS reset that would prevent maxi-minimalist sadness when looking at
-            our HTML DOM.
+            provide a reliable CSS reset that would prevent sadness when looking at our HTML DOM.
           </p>
         </section>
       </Content>
