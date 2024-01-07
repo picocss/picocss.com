@@ -997,9 +997,10 @@
   resolved "https://registry.yarnpkg.com/@picocss/pico/-/pico-1.5.11.tgz#8bd37fc546fcab95625218dddd8cf788b8fd5f8a"
   integrity sha512-cDaFiSyNPtuSTwSQt/05xsw8+g2ek4/S58tgh9Nc7miJCCdUrY9PAyl4OPWRJtYgJDdEvkUA9GuGj0J4nDP4Cw==
 
-"@picocss/pico@github:picocss/pico#v2":
-  version "2.0.0-rc1"
-  resolved "https://codeload.github.com/picocss/pico/tar.gz/d291480c7d280e254f4f0ea5c40d69864b959408"
+"@picocss/pico@2.0.0-rc2":
+  version "2.0.0-rc2"
+  resolved "https://registry.yarnpkg.com/@picocss/pico/-/pico-2.0.0-rc2.tgz#d03493d33896ed238838df372a9465fa739a0ae3"
+  integrity sha512-0bT9gKwqJqHxh8b07MM3Rd3sXtMZItFIw8kkKoMVsYDooozOKYUYudADG+02Q96gYFvymcVTbHloS3GPyw6zow==
 
 "@pkgjs/parseargs@^0.11.0":
   version "0.11.0"
@@ -1336,15 +1337,6 @@
   version "18.2.45"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.45.tgz#253f4fac288e7e751ab3dc542000fb687422c15c"
   integrity sha512-TtAxCNrlrBp8GoeEp1npd5g+d/OejJHFxS3OWmrPBMFaVQMSN0OFySozJio5BHxTuTeug00AVXVAjfDSfk+lUg==
-  dependencies:
-    "@types/prop-types" "*"
-    "@types/scheduler" "*"
-    csstype "^3.0.2"
-
-"@types/react@^18.2.46":
-  version "18.2.46"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.46.tgz#f04d6c528f8f136ea66333bc66abcae46e2680df"
-  integrity sha512-nNCvVBcZlvX4NU1nRRNV/mFl1nNRuTuslAJglQsq+8ldXe5Xv0Wd2f7WTE3jOxhLH2BFfiZGC6GCp+kHQbgG+w==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
