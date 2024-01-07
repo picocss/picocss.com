@@ -78,6 +78,7 @@ export default function Code({
   dataTheme = "dark",
   language = "html",
   display = "block",
+  allowCopy = true,
   className,
   ...props
 }) {
@@ -90,7 +91,7 @@ export default function Code({
 
   return (
     <Tag className={className ? `code ${className}` : "code"} data-theme={dataTheme}>
-      <ButtonCopyToClipboard text={children.toString()} />
+      {allowCopy && <ButtonCopyToClipboard text={children.toString()} />}
       <HighlightedCode {...{ children, displayInline, language, ...props }} />
     </Tag>
   );

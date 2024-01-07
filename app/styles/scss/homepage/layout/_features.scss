@@ -18,13 +18,6 @@ body > main > .features {
 
     > h2 {
       margin-bottom: calc(var(#{$css-var-prefix}spacing) * 1);
-
-      mark {
-        padding: 0;
-        background-image: var(#{$css-var-prefix}mark-gradient);
-        background-clip: text;
-        color: transparent;
-      }
     }
 
     > *:not(:first-child):last-child {

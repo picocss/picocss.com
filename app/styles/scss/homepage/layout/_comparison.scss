@@ -1,0 +1,57 @@
+@use "sass:map";
+@use "settings" as *;
+
+body > main > .comparison {
+  > hgroup {
+    max-width: map.get(map.get($breakpoints, "md"), "viewport");
+    margin-bottom: calc(var(#{$css-var-prefix}homepage-spacing-vertical) / 2);
+
+    > h2 {
+      margin-bottom: calc(var(#{$css-var-prefix}spacing) * 1);
+    }
+
+    > *:not(:first-child):last-child {
+      #{$css-var-prefix}color: var(#{$css-var-prefix}color);
+    }
+  }
+
+  > .grid {
+    column-gap: calc(var(#{$css-var-prefix}homepage-spacing-horizontal) / 2);
+    row-gap: calc(var(#{$css-var-prefix}homepage-spacing-vertical) / 2);
+
+    @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: map.get(map.get($breakpoints, "lg"), "breakpoint")) {
+      grid-template-columns: repeat(auto-fit, minmax(0%, 1fr));
+    }
+
+    > div {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        .emoji {
+          font-size: 1.25rem;
+        }
+      }
+
+      .code {
+        height: 100%;
+      }
+
+      &.pico {
+        .code {
+          border: 0.125rem solid var(#{$css-var-prefix}form-element-valid-border-color) !important;
+        }
+      }
+
+      &.utility-framework {
+        > .code {
+          border: 0.125rem solid var(#{$css-var-prefix}form-element-invalid-border-color) !important;
+        }
+      }
+    }
+  }
+}
