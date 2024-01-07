@@ -10,14 +10,11 @@ export default function Hero(props) {
           <mark>Minimal CSS&nbsp;Framework</mark> <br />
           for Semantic&nbsp;HTML
         </h1>
-        <p>
-          Seamless, Clean, and Accessible&nbsp;Design — Write&nbsp;HTML, Add&nbsp;Pico&nbsp;CSS,
-          and&nbsp;Voilà!
-        </p>
         <p className="secondary">
           A minimalist and lightweight starter&nbsp;kit that prioritizes semantic&nbsp;syntax,
           making every HTML&nbsp;element responsive and elegant&nbsp;by&nbsp;default.
         </p>
+        <p>Write&nbsp;HTML, Add&nbsp;Pico&nbsp;CSS, and&nbsp;Voilà!</p>
         <div className="grid ctas">
           <Link to="/docs" role="button">
             Get Started
