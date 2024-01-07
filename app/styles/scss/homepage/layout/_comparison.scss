@@ -39,17 +39,27 @@ body > main > .comparison {
 
       .code {
         height: 100%;
+        border-left: 0.1875rem solid;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+
+        @media (min-width: map.get(map.get($breakpoints, "lg"), "breakpoint")) {
+          border-top: 0.25rem solid;
+          border-left: none;
+          border-top-left-radius: var(#{$css-var-prefix}border-radius);
+          border-bottom-left-radius: var(#{$css-var-prefix}border-radius);
+        }
       }
 
       &.pico {
         .code {
-          border: 0.125rem solid var(#{$css-var-prefix}form-element-valid-border-color) !important;
+          border-color: var(#{$css-var-prefix}form-element-valid-border-color);
         }
       }
 
       &.utility-framework {
-        > .code {
-          border: 0.125rem solid var(#{$css-var-prefix}form-element-invalid-border-color) !important;
+        .code {
+          border-color: var(#{$css-var-prefix}form-element-invalid-border-color);
         }
       }
     }
