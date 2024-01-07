@@ -33,7 +33,7 @@ body > main > .features {
   }
 
   > .grid {
-    column-gap: var(#{$css-var-prefix}homepage-spacing-horizontal);
+    column-gap: calc(var(#{$css-var-prefix}homepage-spacing-horizontal) / 2);
     row-gap: calc(var(#{$css-var-prefix}homepage-spacing-vertical) / 2);
 
     @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {

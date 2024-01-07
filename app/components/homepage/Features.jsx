@@ -36,10 +36,9 @@ export default function Features(props) {
           <CodeIcon />
           <h3>Class-light and Semantic</h3>
           <p>
-            Pico&nbsp;CSS thrives on simplicity. It rely native HTML&nbsp;tags, using less than
-            10&nbsp;
-            <Code display="inline">.classes</Code> overall. Also comes with a class-less version for
-            wild HTML&nbsp;purists.
+            Thriving on simplicity, Pico directly styles your HTML tags, using fewer than 10{" "}
+            <Code display="inline">.classes</Code> overall. It also comes with a class-less version
+            for wild HTML&nbsp;purists.
           </p>
           <BlockLink to="/docs/classless">Discover the class-less version</BlockLink>
         </article>
@@ -47,8 +46,9 @@ export default function Features(props) {
           <Logo displayWordmark={false} />
           <h3>Great Styles with Just CSS</h3>
           <p>
-            No extra baggage. Pico&nbsp;CSS doesn’t require dependencies, package&nbsp;managers,
-            external&nbsp;files, or JavaScript. Achieve stunning styles with pure HTML&nbsp;markup.
+            No extra baggage needed. Pico works seamlessly without dependencies,
+            package&nbsp;managers, external files, or JavaScript, achieving elegant and
+            straightforward styles with pure HTML&nbsp;markup.
           </p>
           <BlockLink to="/docs">Get Started</BlockLink>
         </article>
@@ -56,9 +56,9 @@ export default function Features(props) {
           <Expand />
           <h3>Responsive Everything</h3>
           <p>
-            Seamless elegance on every device. Pico CSS ensures a harmonious balance of spacings and
-            typography across devices. Your design remains elegant and consistent, no matter the
-            screen size.
+            Effortless elegance on every&nbsp;device. Pico natively scales font sizes and spacings
+            with screen widths, resulting in a consistent and elegant look across devices. No extra
+            classes or configuration needed.
           </p>
           <BlockLink to="/docs/typography">Discover the responsive font sizes</BlockLink>
         </article>
@@ -66,8 +66,9 @@ export default function Features(props) {
           <Brightness />
           <h3>Light or Dark Mode</h3>
           <p>
-            Pico CSS comes with two neutral and contrasted color schemes. And the best part? It
-            adjusts automatically to user preferences, without the need for JavaScript.
+            Pico comes with two accessible, neutral color schemes out of the box: light and dark.
+            The best part? It automatically adapts to users'{" "}
+            <Code display="inline">prefers-color-scheme</Code>, all without the use of JavaScript.
           </p>
           <BlockLink to="/docs/color-schemes">Learn about the color schemes</BlockLink>
         </article>
@@ -75,10 +76,9 @@ export default function Features(props) {
           <Adjustments />
           <h3>Easy Customization</h3>
           <p>
-            Tailoring made effortless. Pico CSS empowers you to shape your design with over 130 CSS
-            variables. Customize your website with ease, adding your personal touch to every
-            element. Build your own minimal design system by recompiling Pico's CSS framework with
-            SCSS.
+            Customize Pico with over 130 CSS&nbsp;variables, or dive deeper by using SASS. Switch
+            between 20 handcrafted color&nbsp;themes and compose with 30+ modular&nbsp;components to
+            tailor the UI to your brand's look&nbsp;and&nbsp;feel.
           </p>
           <BlockLink to="/docs/css-variables">Learn about the CSS variables</BlockLink>
         </article>
@@ -86,11 +86,11 @@ export default function Features(props) {
           <Speedtest />
           <h3>Optimized Performance</h3>
           <p>
-            Speed meets elegance. Pico CSS is designed with performance in mind. Unlike large and
-            complex CSS files that increase memory usage and cause longer style calculations, Pico
-            CSS ensures swift loading times, contributing to an exceptional user experience.
+          Speed meets elegance. Unlike bulky and overcomplicated frameworks
+            that demand extensive&nbsp;class overrides and JavaScript, Pico keeps your HTML lean,
+            decreases memory usage by avoiding excessive CSS specificity, and reduces loaded files.
           </p>
-          <BlockLink to="/docs/css-variables">Learn about the CSS variables</BlockLink>
+          <BlockLink to="/docs">Quick start</BlockLink>
         </article>
       </div>
     </section>
