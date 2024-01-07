@@ -16,12 +16,12 @@ main#typography {
     th,
     td {
       width: calc(100% / 7);
-      padding: calc(var(#{$✨}spacing) / 2);
+      padding: calc(var(#{$css-var-prefix}spacing) / 2);
       white-space: nowrap;
     }
 
     [data-tooltip] {
-      border-bottom-color: var(#{$✨}muted-color);
+      border-bottom-color: var(#{$css-var-prefix}muted-color);
 
       &::before,
       &::after {

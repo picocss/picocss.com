@@ -6,13 +6,13 @@ dialog {
     z-index: inherit;
     position: relative;
     min-height: inherit;
-    margin: 0 calc(var(#{$✨}spacing) * -1) var(#{$✨}block-spacing-vertical)
-      calc(var(#{$✨}spacing) * -1);
+    margin: 0 calc(var(#{$css-var-prefix}spacing) * -1) var(#{$css-var-prefix}block-spacing-vertical)
+      calc(var(#{$css-var-prefix}spacing) * -1);
     inset: inherit;
 
     @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
       margin: 0;
-      margin-bottom: var(#{$✨}block-spacing-vertical);
+      margin-bottom: var(#{$css-var-prefix}block-spacing-vertical);
     }
 
     > article {

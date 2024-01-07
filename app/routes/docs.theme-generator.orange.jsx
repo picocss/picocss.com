@@ -1,8 +1,7 @@
-import { themeGeneratorTitle, themeGeneratorDescription } from "~/utils";
-import cssStyle from "~/styles/css/custom-themes/orange.css";
-import cssCode from "~/data/code-snippets/orange.txt";
-
 import ThemePreview from "~/components/docs/ThemePreview";
+import cssCode from "~/data/code-snippets/orange.txt";
+import cssStyle from "~/styles/css/custom-themes/orange.css";
+import { themeGeneratorDescription, themeGeneratorTitle } from "~/utils";
 
 const colorName = "Orange";
 

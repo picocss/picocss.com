@@ -1,0 +1,97 @@
+@use "sass:map";
+@use "settings" as *;
+
+$columns-at-xl: true;
+
+body > main > .hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: var(#{$css-var-prefix}homepage-spacing-horizontal);
+  row-gap: calc(var(#{$css-var-prefix}homepage-spacing-vertical) / 2);
+  justify-items: center;
+  margin-block: calc(var(#{$css-var-prefix}homepage-spacing-vertical) / 2);
+
+  @if $columns-at-xl {
+    @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+      grid-template-columns: 6fr 5fr;
+      row-gap: calc(var(#{$css-var-prefix}homepage-spacing-vertical) / 2);
+      align-items: center;
+      margin-inline: auto;
+
+      .demo {
+        justify-content: center;
+        transform: translateY(calc(var(#{$css-var-prefix}spacing) * -1.5));
+      }
+    }
+
+    @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+      grid-template-columns: 7fr 5fr;
+    }
+  }
+
+  .demo,
+  .hook {
+    width: 100%;
+
+    @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {
+      max-width: map.get(map.get($breakpoints, "md"), "viewport");
+    }
+
+    @if $columns-at-xl {
+      @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+        max-width: none;
+      }
+    } @else {
+      @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+        max-width: map.get(map.get($breakpoints, "lg"), "viewport");
+      }
+    }
+  }
+
+  .hook {
+    z-index: 1;
+    position: relative;
+
+    h1,
+    p {
+      @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
+        text-align: center;
+      }
+
+      @if $columns-at-xl {
+        @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+          text-align: left;
+        }
+      }
+    }
+
+    h1 {
+      margin-bottom: calc(var(#{$css-var-prefix}spacing) * 2);
+    }
+
+    .grid.ctas {
+      #{$css-var-prefix}form-element-spacing-horizontal: 2rem;
+      margin-top: calc(var(#{$css-var-prefix}spacing) * 4);
+      margin-bottom: calc(var(#{$css-var-prefix}spacing) * 0.5);
+
+      @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
+        display: flex;
+        justify-content: center;
+      }
+
+      @if $columns-at-xl {
+        @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+          justify-content: flex-start;
+        }
+      }
+
+      a[role="button"] {
+        svg {
+          width: auto;
+          height: 1rem;
+          margin-left: calc(var(#{$css-var-prefix}spacing) * 0.25);
+        }
+      }
+    }
+  }
+}

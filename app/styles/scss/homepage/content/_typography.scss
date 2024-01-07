@@ -1,0 +1,47 @@
+@use "sass:map";
+@use "settings" as *;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Figtree", var(#{$css-var-prefix}font-family);
+}
+
+@media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
+  h1 {
+    #{$css-var-prefix}font-size: 2.5rem;
+  }
+
+  h2 {
+    #{$css-var-prefix}font-size: 2rem;
+    #{$css-var-prefix}line-height: 1.125;
+  }
+
+  h3 {
+    #{$css-var-prefix}font-size: 1.75rem;
+    #{$css-var-prefix}line-height: 1.15;
+  }
+
+  h4 {
+    #{$css-var-prefix}font-size: 1.5rem;
+    #{$css-var-prefix}line-height: 1.175;
+  }
+
+  h5 {
+    #{$css-var-prefix}font-size: 1.25rem;
+    #{$css-var-prefix}line-height: 1.2;
+  }
+
+  h6 {
+    #{$css-var-prefix}font-size: 1.125rem;
+    #{$css-var-prefix}line-height: 1.225;
+  }
+}
+
+@media (min-width: map.get(map.get($breakpoints, "xxl"), "breakpoint")) {
+  h1 {
+    #{$css-var-prefix}font-size: 3rem;
+  }
+}

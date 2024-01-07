@@ -16,7 +16,7 @@ main#color-schemes {
         display: inline-block;
         width: auto;
         height: 1.25rem;
-        margin-right: calc(var(#{$✨}spacing) * 0.5);
+        margin-right: calc(var(#{$css-var-prefix}spacing) * 0.5);
         transform: translateY(-0.0625rem);
       }
 

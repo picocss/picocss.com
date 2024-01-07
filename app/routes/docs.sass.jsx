@@ -1,14 +1,12 @@
-import { useRef } from "react";
-import metaData from "~/data/meta";
-
-import picoScssSettings from "~/data/code-snippets/_settings.txt";
-
-import Header from "~/components/docs/Header";
-import TableOfContents from "~/components/docs/TableOfContents";
-import Content from "~/components/docs/Content";
-import Link from "~/components/Link";
+import { Fragment, useRef } from "react";
 import Code from "~/components/Code";
 import Heading from "~/components/Heading";
+import Link from "~/components/Link";
+import Content from "~/components/docs/Content";
+import Header from "~/components/docs/Header";
+import TableOfContents from "~/components/docs/TableOfContents";
+import picoScssSettings from "~/data/code-snippets/_settings.txt";
+import metaData from "~/data/meta";
 
 import { removeLines } from "~/utils";
 
@@ -26,6 +24,7 @@ export const meta = () => [
 export default function Sass() {
   const introductionRef = useRef();
   const settingsRef = useRef();
+  const themeColorRef = useRef();
   const customThemeRef = useRef();
 
   return (
@@ -55,6 +54,11 @@ export default function Sass() {
             ref: settingsRef,
           },
           {
+            anchor: "theme-color",
+            title: "Theme color",
+            ref: themeColorRef,
+          },
+          {
             anchor: "custom-theme",
             title: "Custom theme",
             ref: customThemeRef,
@@ -80,7 +84,9 @@ export default function Sass() {
             You can import Pico into your SCSS file with{" "}
             <Link to="https://sass-lang.com/documentation/at-rules/use">@use</Link>:
           </p>
-          <Code language="scss">@use "pico";</Code>
+          <Code language="scss" className="small">
+            @use "pico";
+          </Code>
           <p>
             If you are using{" "}
             <Link to="https://sass-lang.com/documentation/cli/dart-sass">
@@ -90,7 +96,9 @@ export default function Sass() {
             using <Code display="inline">sass --load-path=node_modules/@picocss/pico/scss/</Code> to
             avoid using relative URLs like:
           </p>
-          <Code language="scss">@use "../../../node_modules/@picocss/pico/scss/pico";</Code>
+          <Code language="scss" className="small">
+            @use "../../../node_modules/@picocss/pico/scss/pico";
+          </Code>
         </section>
 
         <section ref={settingsRef}>
@@ -151,6 +159,58 @@ export default function Sass() {
               })}
             </Code>
           </details>
+        </section>
+
+        <section ref={themeColorRef}>
+          <Heading level={2} anchor="theme-color">
+            Theme color
+          </Heading>
+          <p>
+            Pico comes with a default{" "}
+            <Code display="inline" language="scss">
+              "azure"
+            </Code>{" "}
+            theme.
+            <br />
+            You can easily recompile Pico using a different primary color from a selection of 20
+            colors.
+          </p>
+          <Code language="scss">{`// Pico with purple primary color
+@use "pico" with (
+  $theme-color: "purple"
+);`}</Code>
+          <p>
+            Possible color choices:{" "}
+            {[
+              "amber",
+              "azure",
+              "blue",
+              "cyan",
+              "fuchsia",
+              "green",
+              "grey",
+              "indigo",
+              "jade",
+              "lime",
+              "orange",
+              "pink",
+              "pumpkin",
+              "purple",
+              "red",
+              "sand",
+              "slate",
+              "violet",
+              "yellow",
+              "zinc",
+            ].map((color, index) => (
+              <Fragment key={color}>
+                <Code display="inline" language="scss">
+                  {`${color}`}
+                </Code>
+                {index < 19 ? ", " : "."}
+              </Fragment>
+            ))}
+          </p>
         </section>
 
         <section ref={customThemeRef}>

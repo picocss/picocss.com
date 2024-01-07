@@ -1,7 +1,6 @@
 import { Helmet } from "react-helmet-async";
-
-import metaData from "~/data/meta";
 import { useNavigation } from "~/contexts/NavigationContext";
+import metaData from "~/data/meta";
 
 export default function DynamicMeta() {
   const { domain } = metaData();

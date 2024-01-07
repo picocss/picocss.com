@@ -1,0 +1,26 @@
+@use "settings" as *;
+
+mark {
+  padding: 0;
+  background: var(#{$css-var-prefix}mark-gradient);
+  background-size: 100%, 300%;
+  background-clip: text;
+  color: transparent;
+  // We are using a custom gradient instead of filter: hue-rotate()
+  // to avoid ugly goose poop green
+  animation: background-position-x 36s linear infinite;
+}
+
+@keyframes background-position-x {
+  0% {
+    background-position-x: 100%, 100%;
+  }
+
+  50% {
+    background-position-x: 100%, 0%;
+  }
+
+  100% {
+    background-position: 100%, 100%;
+  }
+}

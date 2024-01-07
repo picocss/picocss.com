@@ -3,30 +3,12 @@
 
 @mixin theme {
   // Aside
-  #{$✨}aside-link-current-background-color: #{$slate-850};
-
-  // Card for components
-  #{$✨}card-component-outline-width: 2px;
-  #{$✨}card-component-outline-color: var(#{$✨}card-sectioning-background-color);
-
-  // Code
-  #{$✨}code-color: #{$zinc-350};
-  #{$✨}code-tag: #{mix($zinc-350, $amber-350, 25%)};
-  #{$✨}code-attr: #{mix($zinc-350, $fuchsia-350, 50%)};
-  #{$✨}code-value: #{mix($zinc-350, $jade-350, 75%)};
-  #{$✨}code-comment: #{$zinc-500};
-  #{$✨}code-copied: #{mix($jade-450, $zinc-200)};
-
-  // Chapter
-  #{$✨}chapter-color: var(#{$✨}code-tag);
-
-  // Skeleton
-  #{$✨}skeleton-background-color: #{$slate-850};
+  #{$css-var-prefix}aside-link-current-background-color: #{$slate-850};
 
   // Color coded scale
-  #{$✨}scale-color-1: #{mix($jade-150, $zinc-200)};
-  #{$✨}scale-color-2: #{mix($lime-150, $zinc-200)};
-  #{$✨}scale-color-3: #{mix($amber-250, $zinc-200)};
-  #{$✨}scale-color-4: #{mix($pumpkin-250, $zinc-200)};
-  #{$✨}scale-color-5: #{mix($red-350, $zinc-200)};
+  #{$css-var-prefix}scale-color-1: #{mix($jade-150, $zinc-200)};
+  #{$css-var-prefix}scale-color-2: #{mix($lime-150, $zinc-200)};
+  #{$css-var-prefix}scale-color-3: #{mix($amber-250, $zinc-200)};
+  #{$css-var-prefix}scale-color-4: #{mix($pumpkin-250, $zinc-200)};
+  #{$css-var-prefix}scale-color-5: #{mix($red-350, $zinc-200)};
 }

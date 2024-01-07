@@ -23,7 +23,7 @@
       margin-bottom: 0.75rem;
       padding: 0;
       padding: 1rem 2rem;
-      border-radius: var(#{$✨}border-radius);
+      border-radius: var(#{$css-var-prefix}border-radius);
       border-color: transparent;
       text-align: left;
     }
@@ -42,7 +42,7 @@
         margin-bottom: 0;
         padding: 0;
         border-width: 0;
-        border-radius: var(#{$✨}border-radius);
+        border-radius: var(#{$css-var-prefix}border-radius);
         font-size: 0.75rem;
       }
     }

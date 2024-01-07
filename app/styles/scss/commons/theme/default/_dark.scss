@@ -3,21 +3,42 @@
 
 @mixin theme {
   // Header
-  #{$✨}header-background: #{rgba(mix($slate-950, $slate-900), 0.9)};
-  #{$✨}header-border-color: rgba($slate-850, 0.9);
+  #{$css-var-prefix}header-background: #{rgba(mix($slate-950, $slate-900), 0.9)};
+  #{$css-var-prefix}header-border-color: rgba($slate-850, 0.9);
 
   // Logo
-  #{$✨}logo-wordmark: #{$white};
-  #{$✨}logo-small-sparkles: #{$pumpkin-300};
-  #{$✨}logo-big-sparkle: #{$amber-200};
+  #{$css-var-prefix}logo-wordmark: #{$white};
+  #{$css-var-prefix}logo-small-sparkles: #{$pumpkin-300};
+  #{$css-var-prefix}logo-big-sparkle: #{$amber-200};
 
   // Current version checkmark
-  #{$✨}current-version-checkmark: #{mix($jade-450, $zinc-200)};
+  #{$css-var-prefix}current-version-checkmark: #{mix($jade-450, $zinc-200)};
+
+  // Card for components
+  #{$css-var-prefix}card-component-outline-width: 2px;
+  #{$css-var-prefix}card-component-outline-color: var(
+    #{$css-var-prefix}card-sectioning-background-color
+  );
+
+  // Code
+  #{$css-var-prefix}code-color: #{$zinc-350};
+  #{$css-var-prefix}code-tag: #{mix($zinc-350, $amber-350, 25%)};
+  #{$css-var-prefix}code-attr: #{mix($zinc-350, $fuchsia-350, 50%)};
+  #{$css-var-prefix}code-value: #{mix($zinc-350, $jade-350, 75%)};
+  #{$css-var-prefix}code-comment: #{$zinc-500};
+  #{$css-var-prefix}code-copied: #{mix($jade-450, $zinc-200)};
+
+  // Chapter
+  #{$css-var-prefix}chapter-color: var(#{$css-var-prefix}code-tag);
 
   // Footer
   footer {
-    #{$✨}background-gradient: linear-gradient(0deg, #{mix($azure-900, $slate-900)}, transparent);
-    #{$✨}logo-small-sparkles: #{$slate-800};
-    #{$✨}logo-big-sparkle: #{$slate-750};
+    #{$css-var-prefix}background-gradient: linear-gradient(
+      0deg,
+      #{mix($azure-900, $slate-900)},
+      transparent
+    );
+    #{$css-var-prefix}logo-small-sparkles: #{$slate-400};
+    #{$css-var-prefix}logo-big-sparkle: #{$slate-200};
   }
 }

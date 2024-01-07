@@ -4,12 +4,12 @@
 article {
   &.color-picker {
     > header {
-      grid-gap: var(#{$✨}block-spacing-horizontal);
+      grid-gap: var(#{$css-var-prefix}block-spacing-horizontal);
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       overflow: hidden;
-      border-top-right-radius: var(#{$✨}border-radius);
-      border-top-left-radius: var(#{$✨}border-radius);
+      border-top-right-radius: var(#{$css-var-prefix}border-radius);
+      border-top-left-radius: var(#{$css-var-prefix}border-radius);
 
       a {
         display: flex;
@@ -46,7 +46,7 @@ article {
       }
 
       @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {
-        grid-gap: calc(var(#{$✨}block-spacing-horizontal) * 0.5);
+        grid-gap: calc(var(#{$css-var-prefix}block-spacing-horizontal) * 0.5);
         grid-template-columns: repeat(10, 1fr);
       }
 
@@ -62,13 +62,15 @@ article {
     }
 
     h3 {
-      color: var(#{$✨}primary);
+      color: var(#{$css-var-prefix}primary);
     }
 
     > hgroup,
     > form,
     > footer {
-      transition: opacity var(#{$✨}transition), filter var(#{$✨}transition);
+      transition:
+        opacity var(#{$css-var-prefix}transition),
+        filter var(#{$css-var-prefix}transition);
     }
   }
 }

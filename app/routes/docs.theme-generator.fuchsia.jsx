@@ -1,8 +1,7 @@
-import { themeGeneratorTitle, themeGeneratorDescription } from "~/utils";
-import cssStyle from "~/styles/css/custom-themes/fuchsia.css";
-import cssCode from "~/data/code-snippets/fuchsia.txt";
-
 import ThemePreview from "~/components/docs/ThemePreview";
+import cssCode from "~/data/code-snippets/fuchsia.txt";
+import cssStyle from "~/styles/css/custom-themes/fuchsia.css";
+import { themeGeneratorDescription, themeGeneratorTitle } from "~/utils";
 
 const colorName = "Fuchia";
 

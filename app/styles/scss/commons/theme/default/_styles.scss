@@ -7,6 +7,6 @@
   #{$semantic-root-element} > main,
   #{$semantic-root-element} > footer,
   section {
-    #{$✨}block-spacing-vertical: calc(var(#{$✨}spacing) * 4);
+    #{$css-var-prefix}block-spacing-vertical: calc(var(#{$css-var-prefix}spacing) * 4);
   }
 }

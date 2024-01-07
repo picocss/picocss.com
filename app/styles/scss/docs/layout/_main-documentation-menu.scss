@@ -13,18 +13,18 @@ main {
       display: grid;
       grid-template-columns: 1fr auto;
       align-items: center;
-      height: var(#{$✨}header-height);
-      margin-bottom: var(#{$✨}spacing);
+      height: var(#{$css-var-prefix}header-height);
+      margin-bottom: var(#{$css-var-prefix}spacing);
 
       h2 {
-        #{$✨}font-size: 1.25rem;
+        #{$css-var-prefix}font-size: 1.25rem;
         margin-bottom: 0;
       }
 
       a {
         opacity: 0.5;
-        transition: background-color var(#{$✨}transition), color var(#{$✨}transition),
-          opacity var(#{$✨}transition);
+        transition: background-color var(#{$css-var-prefix}transition), color var(#{$css-var-prefix}transition),
+          opacity var(#{$css-var-prefix}transition);
 
         svg {
           display: block;
@@ -51,18 +51,18 @@ main {
       bottom: 0;
       left: 0;
       grid-template-rows: auto 1fr;
-      transform: translateX(calc(-100% - var(#{$✨}spacing)));
-      transition: transform var(#{$✨}transition);
+      transform: translateX(calc(-100% - var(#{$css-var-prefix}spacing)));
+      transition: transform var(#{$css-var-prefix}transition);
 
       header,
       nav {
-        padding: 0 var(#{$✨}spacing);
+        padding: 0 var(#{$css-var-prefix}spacing);
       }
 
       nav {
-        margin-bottom: var(#{$✨}spacing);
-        margin-block: calc(var(#{$✨}outline-width) * -1);
-        padding-block: var(#{$✨}outline-width);
+        margin-bottom: var(#{$css-var-prefix}spacing);
+        margin-block: calc(var(#{$css-var-prefix}outline-width) * -1);
+        padding-block: var(#{$css-var-prefix}outline-width);
         overflow: auto;
       }
 
@@ -70,7 +70,7 @@ main {
         z-index: -1;
         position: fixed;
         inset: 0;
-        background-color: var(#{$✨}background-color);
+        background-color: var(#{$css-var-prefix}background-color);
         content: "";
       }
 
@@ -78,7 +78,7 @@ main {
         transform: translateX(0);
         @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) and (max-width: calc(#{map.get(map.get($breakpoints, "lg"), "breakpoint")} - 1px)) {
           max-width: calc(
-            map.get(map.get($breakpoints, "sm"), "viewport") + (var(#{$✨}spacing) * 2)
+            map.get(map.get($breakpoints, "sm"), "viewport") + (var(#{$css-var-prefix}spacing) * 2)
           );
           margin-right: auto;
           margin-left: auto;
@@ -90,7 +90,7 @@ main {
 
         @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) and (max-width: calc(#{map.get(map.get($breakpoints, "lg"), "breakpoint")} - 1px)) {
           max-width: calc(
-            map.get(map.get($breakpoints, "md"), "viewport") + (var(#{$✨}spacing) * 2)
+            map.get(map.get($breakpoints, "md"), "viewport") + (var(#{$css-var-prefix}spacing) * 2)
           );
 
           &::before {
@@ -111,7 +111,7 @@ main {
             a {
               &:active,
               &:focus {
-                color: var(#{$✨}primary-hover);
+                color: var(#{$css-var-prefix}primary-hover);
               }
             }
           }

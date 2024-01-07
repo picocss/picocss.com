@@ -3,7 +3,7 @@ const { copyFileSync } = require("fs");
 // Config
 const customThemesFolder = "./app/styles/css/custom-themes/";
 const picoLibraryFolder = "./node_modules/@picocss/pico/scss/";
-const cssCodeExtractsFolder = "./app/styles/css/extracts/";
+const cssSnippetsFolder = "./app/styles/css/snippets/";
 const codeSnippetsFolder = "./app/data/code-snippets/";
 
 const files = [
@@ -29,8 +29,8 @@ const files = [
   customThemesFolder + "zinc.css",
   picoLibraryFolder + "_settings.scss",
   picoLibraryFolder + "colors/utilities/_settings.scss",
-  cssCodeExtractsFolder + "default-theme-color-schemes.css",
-  cssCodeExtractsFolder + "default-theme-styles.css",
+  cssSnippetsFolder + "default-theme-color-schemes.css",
+  cssSnippetsFolder + "default-theme-styles.css",
 ];
 
 // Copy files to the code snippets folder

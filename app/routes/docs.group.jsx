@@ -1,12 +1,11 @@
 import { useRef } from "react";
-import metaData from "~/data/meta";
-
-import Header from "~/components/docs/Header";
-import TableOfContents from "~/components/docs/TableOfContents";
-import Content from "~/components/docs/Content";
 import Code from "~/components/Code";
 import Heading from "~/components/Heading";
 import Link from "~/components/Link";
+import Content from "~/components/docs/Content";
+import Header from "~/components/docs/Header";
+import TableOfContents from "~/components/docs/TableOfContents";
+import metaData from "~/data/meta";
 
 const { titleSuffix } = metaData();
 
@@ -75,13 +74,17 @@ export default function Group() {
             columns are not collapsed on mobile devices.
           </p>
           <article className="component" aria-label="Form group example">
-            <form role="group" onSubmit={preventDefault}>
-              <input type="email" placeholder="Enter your email" />
-              <input type="submit" value="Subscribe" />
+            <form onSubmit={preventDefault}>
+              <fieldset role="group">
+                <input type="email" placeholder="Enter your email" />
+                <input type="submit" value="Subscribe" />
+              </fieldset>
             </form>
-            <Code as="footer">{`<form role="group">
-  <input type="email" placeholder="Enter your email" />
-  <input type="submit" value="Subscribe" />
+            <Code as="footer">{`<form>
+  <fieldset role="group">
+    <input type="email" placeholder="Enter your email" />
+    <input type="submit" value="Subscribe" />
+  </fieldset>
 </form>`}</Code>
           </article>
 
@@ -101,15 +104,19 @@ export default function Group() {
           </p>
 
           <article className="component" aria-label="Form group example">
-            <form role="group" onSubmit={preventDefault}>
-              <input type="email" placeholder="Email" />
-              <input type="password" placeholder="Password" />
-              <input type="submit" value="Log in" />
+            <form onSubmit={preventDefault}>
+              <fieldset role="group">
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Password" />
+                <input type="submit" value="Log in" />
+              </fieldset>
             </form>
-            <Code as="footer">{`<form role="group">
-  <input type="email" placeholder="Email" />
-  <input type="password" placeholder="Password" />
-  <input type="submit" value="Log in" />
+            <Code as="footer">{`<form>
+  <fieldset role="group">
+    <input type="email" placeholder="Email" />
+    <input type="password" placeholder="Password" />
+    <input type="submit" value="Log in" />
+  </fieldset>
 </form>`}</Code>
           </article>
         </section>

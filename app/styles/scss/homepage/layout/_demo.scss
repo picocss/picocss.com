@@ -1,0 +1,256 @@
+@use "sass:map";
+@use "settings" as *;
+@use "hero" as *;
+
+body > main > .hero > .demo {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  max-width: calc(100vw - (var(#{$css-var-prefix}spacing) * 2));
+  min-height: 25rem;
+
+  article.component {
+    #{$css-var-prefix}block-spacing-horizontal: var(#{$css-var-prefix}spacing) !important;
+    #{$css-var-prefix}block-spacing-vertical: calc(var(#{$css-var-prefix}spacing) * 1.5) !important;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    min-width: 0;
+    max-width: map.get(map.get($breakpoints, "md"), "viewport");
+    height: 100%;
+    margin-bottom: 0;
+    margin-inline: auto;
+    background-color: var(#{$css-var-prefix}background-color);
+
+    @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
+      #{$css-var-prefix}block-spacing-horizontal: calc(
+        var(#{$css-var-prefix}spacing) * 1.5
+      ) !important;
+      #{$css-var-prefix}block-spacing-vertical: calc(var(#{$css-var-prefix}spacing) * 2) !important;
+    }
+
+    @if $columns-at-xl {
+      @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+        justify-content: flex-start;
+        height: calc(
+          var(--demo-height, 260px) + (var(#{$css-var-prefix}block-spacing-vertical) * 2)
+        );
+        padding-bottom: 0;
+        transition: height 0.4s ease-out;
+      }
+
+      @media (min-width: map.get(map.get($breakpoints, "xxl"), "breakpoint")) {
+        height: calc(
+          var(--demo-height, 265px) + (var(#{$css-var-prefix}block-spacing-vertical) * 2)
+        );
+      }
+    }
+
+    main,
+    footer {
+      pointer-events: none;
+      user-select: none;
+    }
+
+    main {
+      @if $columns-at-xl {
+        @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+          margin-bottom: auto;
+        }
+      }
+
+      form {
+        &[role="search"],
+        &[role="group"],
+        input:only-child,
+        input[aria-invalid="true"],
+        button {
+          margin-bottom: 0;
+        }
+
+        small {
+          margin-top: 0.25rem;
+          margin-bottom: 0;
+        }
+
+        label {
+          margin-bottom: 0;
+        }
+
+        // Focused group form
+        &[role="search"],
+        &[role="group"] {
+          &.is-focused {
+            #{$css-var-prefix}group-box-shadow: var(
+              #{$css-var-prefix}group-box-shadow-focus-with-button
+            );
+
+            input:not([type="checkbox"], [type="radio"]),
+            select {
+              border-color: transparent;
+            }
+
+            button {
+              box-shadow: none;
+            }
+          }
+        }
+
+        // Focused input
+        input {
+          &:not([type="range"]) {
+            &.is-focused {
+              #{$css-var-prefix}border-color: var(
+                #{$css-var-prefix}form-element-active-border-color
+              );
+              #{$css-var-prefix}box-shadow: 0 0 0 var(#{$css-var-prefix}outline-width)
+                var(#{$css-var-prefix}form-element-focus-color);
+            }
+          }
+
+          &:not([type="checkbox"]) {
+            &.is-focused {
+              #{$css-var-prefix}background-color: var(
+                #{$css-var-prefix}form-element-active-background-color
+              );
+            }
+          }
+
+          &[type="range"] {
+            &.is-focused {
+              #{$css-var-prefix}range-border-color: var(
+                #{$css-var-prefix}range-active-border-color
+              );
+              #{$css-var-prefix}range-thumb-color: var(#{$css-var-prefix}range-thumb-active-color);
+
+              // Slider Thumb
+              &::-webkit-slider-thumb {
+                transform: scale(1.25);
+              }
+
+              &::-moz-range-thumb {
+                transform: scale(1.25);
+              }
+
+              &::-ms-thumb {
+                transform: scale(1.25);
+              }
+            }
+          }
+        }
+
+        // Focused button
+        button {
+          &.is-focused {
+            #{$css-var-prefix}background-color: var(#{$css-var-prefix}primary-hover-background);
+            #{$css-var-prefix}border-color: var(#{$css-var-prefix}primary-hover-border);
+            #{$css-var-prefix}color: var(#{$css-var-prefix}primary-inverse);
+            #{$css-var-prefix}box-shadow:
+              var(#{$css-var-prefix}button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0)),
+              0 0 0 var(#{$css-var-prefix}outline-width) var(#{$css-var-prefix}primary-focus);
+          }
+        }
+
+        * {
+          transition: border-radius var(#{$css-var-prefix}transition);
+        }
+      }
+    }
+
+    footer.code {
+      background: none;
+
+      @if $columns-at-xl {
+        @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+          margin-top: auto;
+          margin-bottom: 0;
+        }
+      }
+
+      [data-typeit-id] {
+        .ti-cursor {
+          transform: translateX(-0.25em);
+          color: inherit;
+          font-style: inherit;
+          font-weight: inherit;
+          font-size: inherit;
+          line-height: inherit;
+          font-family: inherit;
+        }
+      }
+    }
+
+    .controls {
+      display: grid;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      grid-auto-flow: column;
+      padding: var(#{$css-var-prefix}spacing);
+      pointer-events: all;
+      transition: opacity var(#{$css-var-prefix}transition);
+      grid-gap: calc(var(#{$css-var-prefix}spacing) * 0.25);
+
+      @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+        opacity: 0;
+      }
+
+      svg {
+        width: auto;
+        height: 1rem;
+        color: var(#{$css-var-prefix}muted-color);
+        cursor: pointer;
+        transition: color var(#{$css-var-prefix}transition);
+
+        &:hover {
+          color: var(#{$css-var-prefix}secondary-hover);
+        }
+      }
+    }
+
+    &:hover {
+      .controls {
+        opacity: 1;
+      }
+    }
+  }
+
+  &.is-maximized {
+    z-index: 999;
+    position: fixed;
+    max-width: none;
+    inset: 0;
+    transform: none;
+    background: var(#{$css-var-prefix}background-color);
+
+    article.component {
+      position: unset;
+      max-width: none;
+      border-radius: none;
+      outline: none;
+
+      @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+        max-width: map.get(map.get($breakpoints, "md"), "viewport");
+      }
+
+      .controls {
+        opacity: 1;
+      }
+    }
+  }
+
+  // Background gradient
+  &:after {
+    display: block;
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    transform: scale(2.5);
+    transform-origin: center;
+    background: var(#{$css-var-prefix}demo-outer-background);
+    content: "";
+    opacity: 0.66;
+  }
+}

@@ -1,0 +1,87 @@
+@use "sass:map";
+@use "settings" as *;
+
+body > main > .features {
+  > hgroup {
+    max-width: map.get(map.get($breakpoints, "md"), "viewport");
+    margin-bottom: calc(var(#{$css-var-prefix}homepage-spacing-vertical) / 2);
+    margin-inline: auto;
+
+    @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
+      text-align: center;
+    }
+
+    @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+      margin-left: 0;
+      text-align: left;
+    }
+
+    > h2 {
+      margin-bottom: calc(var(#{$css-var-prefix}spacing) * 1);
+    }
+
+    > *:not(:first-child):last-child {
+      #{$css-var-prefix}color: var(#{$css-var-prefix}color);
+    }
+  }
+
+  > .grid {
+    column-gap: calc(var(#{$css-var-prefix}homepage-spacing-horizontal) / 2);
+    row-gap: calc(var(#{$css-var-prefix}homepage-spacing-vertical) / 2);
+
+    @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    article {
+      margin-bottom: 0;
+      margin-block: 0;
+      padding: 0;
+      background-color: transparent;
+      box-shadow: none;
+
+      > svg {
+        width: auto;
+        height: 2.5rem;
+        margin-bottom: calc(var(#{$css-var-prefix}spacing) * 1);
+        padding: calc(var(#{$css-var-prefix}spacing) * 0.75);
+        border: 1px solid var(#{$css-var-prefix}icon-border-color);
+        border-radius: 0.25rem;
+        background: var(#{$css-var-prefix}icon-background-color);
+        color: var(#{$css-var-prefix}icon-color);
+
+        &.pico-icon {
+          path {
+            fill: currentColor;
+          }
+        }
+      }
+
+      h3 {
+        font-size: 1.125rem;
+        line-height: 1.225;
+      }
+
+      p {
+        margin-bottom: calc(var(#{$css-var-prefix}spacing) * 1);
+        color: var(#{$css-var-prefix}muted-color);
+
+        &:last-child {
+          margin-bottom: 0;
+
+          a {
+            svg {
+              width: auto;
+              height: 1rem;
+              margin-left: calc(var(#{$css-var-prefix}spacing) * 0.25);
+            }
+          }
+        }
+      }
+    }
+  }
+}

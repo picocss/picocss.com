@@ -1,7 +1,6 @@
-import { themeGeneratorTitle, themeGeneratorDescription } from "~/utils";
-import cssCode from "~/data/code-snippets/azure.txt";
-
 import ThemePreview from "~/components/docs/ThemePreview";
+import cssCode from "~/data/code-snippets/azure.txt";
+import { themeGeneratorDescription, themeGeneratorTitle } from "~/utils";
 
 const colorName = "Azure";
 

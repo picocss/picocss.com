@@ -1,19 +1,17 @@
 import { useRef } from "react";
-import metaData from "~/data/meta";
-
+import Heading from "~/components/Heading";
+import Content from "~/components/docs/Content";
 import Header from "~/components/docs/Header";
 import TableOfContents from "~/components/docs/TableOfContents";
-import Content from "~/components/docs/Content";
-import Heading from "~/components/Heading";
-
-import lightLogoSvg from "~/images/brand-assets/pico-logo-light.svg";
-import lightLogoPng from "~/images/brand-assets/pico-logo-light.png";
-import darkLogoSvg from "~/images/brand-assets/pico-logo-dark.svg";
+import metaData from "~/data/meta";
 import darkLogoPng from "~/images/brand-assets/pico-logo-dark.png";
-import lightIconSvg from "~/images/brand-assets/pico-mark-light.svg";
-import lightIconPng from "~/images/brand-assets/pico-mark-light.png";
-import darkIconSvg from "~/images/brand-assets/pico-mark-dark.svg";
+import darkLogoSvg from "~/images/brand-assets/pico-logo-dark.svg";
+import lightLogoPng from "~/images/brand-assets/pico-logo-light.png";
+import lightLogoSvg from "~/images/brand-assets/pico-logo-light.svg";
 import darkIconPng from "~/images/brand-assets/pico-mark-dark.png";
+import darkIconSvg from "~/images/brand-assets/pico-mark-dark.svg";
+import lightIconPng from "~/images/brand-assets/pico-mark-light.png";
+import lightIconSvg from "~/images/brand-assets/pico-mark-light.svg";
 
 const { titleSuffix } = metaData();
 

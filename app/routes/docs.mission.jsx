@@ -1,8 +1,7 @@
-import metaData from "~/data/meta";
-
 import Code from "~/components/Code";
 import Content from "~/components/docs/Content";
 import Header from "~/components/docs/Header";
+import metaData from "~/data/meta";
 
 const { titleSuffix } = metaData();
 
@@ -73,8 +72,7 @@ export default function Mission() {
           </p>
           <p>
             As we continued to build, our community grew 🧡, and with it, the responsibility to
-            provide a reliable CSS reset that would prevent maxi-minimalist sadness when looking at
-            our HTML DOM.
+            provide a reliable CSS reset that would prevent sadness when looking at our HTML DOM.
           </p>
         </section>
       </Content>

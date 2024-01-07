@@ -1,16 +1,13 @@
 import { useRef } from "react";
-
-import metaData from "~/data/meta";
-import stylesCssVars from "~/data/code-snippets/default-theme-styles.txt";
-import colorsCssVars from "~/data/code-snippets/default-theme-color-schemes.txt";
-
+import Code from "~/components/Code";
+import Heading from "~/components/Heading";
+import Link from "~/components/Link";
 import Content from "~/components/docs/Content";
 import Header from "~/components/docs/Header";
-import Code from "~/components/Code";
-import Link from "~/components/Link";
-import Heading from "~/components/Heading";
 import TableOfContents from "~/components/docs/TableOfContents";
-
+import colorsCssVars from "~/data/code-snippets/default-theme-color-schemes.txt";
+import stylesCssVars from "~/data/code-snippets/default-theme-styles.txt";
+import metaData from "~/data/meta";
 import { removeLines } from "~/utils";
 
 const { titleSuffix } = metaData();

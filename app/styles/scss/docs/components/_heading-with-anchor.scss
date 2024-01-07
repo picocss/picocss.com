@@ -5,22 +5,22 @@
   position: relative;
 
   > a[id] {
-    padding-left: calc(var(#{$✨}spacing) * 0.5);
+    padding-left: calc(var(#{$css-var-prefix}spacing) * 0.5);
     font-weight: normal;
     text-decoration: none;
     opacity: 0;
-    transition: color var(#{$✨}transition) opacity var(#{$✨}transition);
+    transition: color var(#{$css-var-prefix}transition) opacity var(#{$css-var-prefix}transition);
 
     @media (min-width: map.get(map.get($breakpoints, "lg"), "breakpoint")) {
       position: absolute;
       left: 0;
-      padding-right: calc(var(#{$✨}spacing) * 0.5);
+      padding-right: calc(var(#{$css-var-prefix}spacing) * 0.5);
       transform: translateX(-100%);
     }
 
     &:focus-visible {
       box-shadow: none;
-      color: var(#{$✨}primary);
+      color: var(#{$css-var-prefix}primary);
       opacity: 1;
     }
   }

@@ -1,13 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import { useDebounce } from "use-debounce";
-
-import { useNavigation } from "~/contexts/NavigationContext";
-import { useDocumentation } from "~/contexts/DocumentationContext";
-
-import { getChapter } from "~/utils";
-
 import Link from "~/components/Link";
 import Menu from "~/components/icons/Menu";
+import { useDocumentation } from "~/contexts/DocumentationContext";
+import { useNavigation } from "~/contexts/NavigationContext";
+import { getChapter } from "~/utils";
 
 export default function Breadcrumb(props) {
   const { routePath } = useNavigation();

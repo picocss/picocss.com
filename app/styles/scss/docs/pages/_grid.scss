@@ -9,7 +9,7 @@ main#grid {
   .btn-group {
     button {
       width: 100%;
-      margin-bottom: var(#{$✨}spacing);
+      margin-bottom: var(#{$css-var-prefix}spacing);
 
       svg {
         display: inline-block;
@@ -23,7 +23,7 @@ main#grid {
         width: auto;
 
         &:not(:last-child) {
-          margin-right: var(#{$✨}spacing);
+          margin-right: var(#{$css-var-prefix}spacing);
         }
       }
     }
@@ -31,10 +31,10 @@ main#grid {
 
   .grid {
     > div {
-      padding: calc(var(#{$✨}spacing) / 2) 0;
-      border-radius: var(#{$✨}border-radius);
-      background-color: var(#{$✨}card-sectioning-background-color);
-      color: var(#{$✨}muted-color);
+      padding: calc(var(#{$css-var-prefix}spacing) / 2) 0;
+      border-radius: var(#{$css-var-prefix}border-radius);
+      background-color: var(#{$css-var-prefix}card-sectioning-background-color);
+      color: var(#{$css-var-prefix}muted-color);
       font-size: 0.875rem;
       text-align: center;
     }

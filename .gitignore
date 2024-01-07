@@ -17,6 +17,10 @@ functions/\[\[path\]\].js.map
 app/styles/css/*
 !app/styles/css/postcss.config.js
 
+# Pico
+public/docs
+app/data/stats.json
+
 # System files
 .DS_Store
 Thumbs.db

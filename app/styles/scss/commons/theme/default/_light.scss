@@ -3,21 +3,40 @@
 
 @mixin theme {
   // Header
-  #{$✨}header-background: #{rgba($white, 0.8)};
-  #{$✨}header-border-color: transparent;
+  #{$css-var-prefix}header-background: #{rgba($white, 0.8)};
+  #{$css-var-prefix}header-border-color: transparent;
 
   // Logo
-  #{$✨}logo-wordmark: #{$slate-800};
-  #{$✨}logo-small-sparkles: #{$amber-200};
-  #{$✨}logo-big-sparkle: #{$pumpkin-300};
+  #{$css-var-prefix}logo-wordmark: #{$slate-800};
+  #{$css-var-prefix}logo-small-sparkles: #{$amber-200};
+  #{$css-var-prefix}logo-big-sparkle: #{$pumpkin-300};
 
   // Current version checkmark
-  #{$✨}current-version-checkmark: #{mix($jade-450, $zinc-750)};
+  #{$css-var-prefix}current-version-checkmark: #{mix($jade-450, $zinc-750)};
+
+  // Card for components
+  #{$css-var-prefix}card-component-outline-width: 0;
+  #{$css-var-prefix}card-component-outline-color: transparent;
+
+  // Code
+  #{$css-var-prefix}code-color: #{$zinc-600};
+  #{$css-var-prefix}code-tag: #{$pumpkin-600};
+  #{$css-var-prefix}code-attr: #{mix($zinc-600, $fuchsia-600, 25%)};
+  #{$css-var-prefix}code-value: #{mix($zinc-600, $jade-600, 50%)};
+  #{$css-var-prefix}code-comment: #{$zinc-450};
+  #{$css-var-prefix}code-copied: #{mix($jade-450, $zinc-750)};
+
+  // Chapter
+  #{$css-var-prefix}chapter-color: var(#{$css-var-prefix}code-tag);
 
   // Footer
   footer {
-    #{$✨}background-gradient: linear-gradient(0deg, #{mix($azure-100, $slate-100)}, transparent);
-    #{$✨}logo-small-sparkles: #{$slate-150};
-    #{$✨}logo-big-sparkle: #{$slate-200};
+    #{$css-var-prefix}background-gradient: linear-gradient(
+      0deg,
+      #{mix($azure-100, $slate-100)},
+      transparent
+    );
+    #{$css-var-prefix}logo-small-sparkles: #{$slate-500};
+    #{$css-var-prefix}logo-big-sparkle: #{$slate-700};
   }
 }

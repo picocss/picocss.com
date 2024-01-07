@@ -1,12 +1,11 @@
 import { useRef } from "react";
-import metaData from "~/data/meta";
-
-import Header from "~/components/docs/Header";
-import Content from "~/components/docs/Content";
-import TableOfContents from "~/components/docs/TableOfContents";
-import Heading from "~/components/Heading";
 import Code from "~/components/Code";
+import Heading from "~/components/Heading";
 import Link from "~/components/Link";
+import Content from "~/components/docs/Content";
+import Header from "~/components/docs/Header";
+import TableOfContents from "~/components/docs/TableOfContents";
+import metaData from "~/data/meta";
 
 const { titleSuffix } = metaData();
 
@@ -63,20 +62,16 @@ export default function Accordion() {
             <hr />
             <details>
               <summary>Accordion 2</summary>
-              <article>
-                <ul>
-                  <li>Kangaroos are marsupials that are native to Australia.</li>
-                  <li>
-                    They are known for their powerful hind legs, which they use to hop around.
-                  </li>
-                  <li>Kangaroos can’t walk backwards due to the shape of their legs and tail.</li>
-                  <li>
-                    Baby kangaroos, called joeys, are born very small and undeveloped and must crawl
-                    into their mother’s pouch to continue developing.
-                  </li>
-                  <li>Some species of kangaroos can leap up to 30 feet in a single bound.</li>
-                </ul>
-              </article>
+              <ul>
+                <li>Kangaroos are marsupials that are native to Australia.</li>
+                <li>They are known for their powerful hind legs, which they use to hop around.</li>
+                <li>Kangaroos can’t walk backwards due to the shape of their legs and tail.</li>
+                <li>
+                  Baby kangaroos, called joeys, are born very small and undeveloped and must crawl
+                  into their mother’s pouch to continue developing.
+                </li>
+                <li>Some species of kangaroos can leap up to 30 feet in a single bound.</li>
+              </ul>
             </details>
             <Code as="footer">{`<details open>
   <summary>Accordion 1</summary>
@@ -87,12 +82,10 @@ export default function Accordion() {
 
 <details>
   <summary>Accordion 2</summary>
-  <article>
-    <ul>
-      <li>...</li>
-      <li>...</li>
-    </ul>
-  </article>
+  <ul>
+    <li>...</li>
+    <li>...</li>
+  </ul>
 </details>`}</Code>
           </article>
         </section>

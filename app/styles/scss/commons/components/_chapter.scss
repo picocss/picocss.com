@@ -1,9 +1,9 @@
 @use "settings" as *;
 
 .chapter {
-  width: fit-content;
-  background-clip: text;
-  color: var(#{$✨}chapter-color);
+  // width: fit-content;
+  // background-clip: text;
+  color: var(#{$css-var-prefix}chapter-color);
   font-weight: 600;
   font-size: 13px;
   letter-spacing: 0.0625em;

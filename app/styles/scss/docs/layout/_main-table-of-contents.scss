@@ -25,19 +25,19 @@ main {
               // Bring back underline for small devices
               &:not(:hover) {
                 text-decoration: underline;
-                text-decoration-color: var(#{$✨}secondary-underline);
+                text-decoration-color: var(#{$css-var-prefix}secondary-underline);
               }
 
               // Override aria-current link styles for small devices
               &[aria-current] {
                 border-color: transparent;
-                color: var(#{$✨}secondary);
+                color: var(#{$css-var-prefix}secondary);
                 font-weight: normal;
-                text-decoration-color: var(#{$✨}secondary-underline);
+                text-decoration-color: var(#{$css-var-prefix}secondary-underline);
 
                 &:hover {
-                  border-color: var(#{$✨}secondary-underline);
-                  color: var(#{$✨}secondary-hover);
+                  border-color: var(#{$css-var-prefix}secondary-underline);
+                  color: var(#{$css-var-prefix}secondary-hover);
                   text-decoration: underline;
                 }
               }

@@ -1,34 +1,33 @@
 import { useState } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
-
-import Link from "./Link";
-import Check from "./icons/Check";
-import Copy from "./icons/Copy";
-
-import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/prism-light";
 import bash from "react-syntax-highlighter/dist/esm/languages/prism/bash";
 import css from "react-syntax-highlighter/dist/esm/languages/prism/css";
 import jsx from "react-syntax-highlighter/dist/esm/languages/prism/jsx";
 import scss from "react-syntax-highlighter/dist/esm/languages/prism/scss";
+import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/prism-light";
+import Link from "./Link";
+import Check from "./icons/Check";
+import Copy from "./icons/Copy";
 
 SyntaxHighlighter.registerLanguage("bash", bash);
 SyntaxHighlighter.registerLanguage("css", css);
 SyntaxHighlighter.registerLanguage("html", jsx);
 SyntaxHighlighter.registerLanguage("scss", scss);
 
-function BlockWrapper({ children }) {
-  return <pre>{children}</pre>;
-}
+const BlockWrapper = ({ children, ...props }) => {
+  return <pre {...props}>{children}</pre>;
+};
 
-function InlineWrapper({ children }) {
+const InlineWrapper = ({ children }) => {
   return <>{children}</>;
-}
+};
 
-function CodeTag({ children }) {
-  return <code>{children}</code>;
-}
+// eslint-disable-next-line no-unused-vars
+const CodeTag = ({ children, style: _, ...props }) => {
+  return <code {...props}>{children}</code>;
+};
 
-function HighlightedCode({ children, displayInline, language, ...props }) {
+const HighlightedCode = ({ children, displayInline, language, ...props }) => {
   return (
     <SyntaxHighlighter
       useInlineStyles={false}
@@ -40,9 +39,9 @@ function HighlightedCode({ children, displayInline, language, ...props }) {
       {children}
     </SyntaxHighlighter>
   );
-}
+};
 
-function ButtonCopyToClipboard({ text, ...props }) {
+const ButtonCopyToClipboard = ({ text, ...props }) => {
   const [copied, setCopied] = useState(false);
   const onCopy = (event) => {
     event.preventDefault();
@@ -71,7 +70,7 @@ function ButtonCopyToClipboard({ text, ...props }) {
       </Link>
     </CopyToClipboard>
   );
-}
+};
 
 export default function Code({
   as = "div",
@@ -79,6 +78,7 @@ export default function Code({
   dataTheme = "dark",
   language = "html",
   display = "block",
+  allowCopy = true,
   className,
   ...props
 }) {
@@ -91,7 +91,7 @@ export default function Code({
 
   return (
     <Tag className={className ? `code ${className}` : "code"} data-theme={dataTheme}>
-      <ButtonCopyToClipboard text={children.toString()} />
+      {allowCopy && <ButtonCopyToClipboard text={children.toString()} />}
       <HighlightedCode {...{ children, displayInline, language, ...props }} />
     </Tag>
   );

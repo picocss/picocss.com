@@ -1,14 +1,23 @@
-import { useNavigation } from "~/contexts/NavigationContext";
-import { getColorFamilies, removeLines } from "~/utils";
-
 import Code from "~/components/Code";
 import Link from "~/components/Link";
 import Check from "~/components/icons/Check";
+import { useNavigation } from "~/contexts/NavigationContext";
+import { getColorFamilies, removeLines } from "~/utils";
 import Heading from "../Heading";
 
 // Add a missing empty line before a comment.
 const addMissingEmptyLineBeforeComment = ({ code }) => {
   return code.replaceAll("\n}\n/*", "\n}\n\n/*");
+};
+
+// Add a or an before a color name.
+const colorWithPrefix = (color) => {
+  let prefix = "a";
+  const lowercaseColor = color.charAt(0).toLowerCase() + color.slice(1);
+  if (["a", "e", "i", "o", "u"].includes(lowercaseColor.charAt(0))) {
+    prefix = "an";
+  }
+  return `${prefix} ${lowercaseColor}`;
 };
 
 export default function ThemePreview({ title, code, ...props }) {
@@ -20,15 +29,6 @@ export default function ThemePreview({ title, code, ...props }) {
       linesToRemoveFromEnd: 2,
     }),
   });
-
-  const colorWithPrefix = (color) => {
-    let prefix = "a";
-    const lowercaseColor = color.charAt(0).toLowerCase() + color.slice(1);
-    if (["a", "e", "i", "o", "u"].includes(lowercaseColor.charAt(0))) {
-      prefix = "an";
-    }
-    return `${prefix} ${lowercaseColor}`;
-  };
 
   const colorFamilies = getColorFamilies();
   const { locationPath, nextPageCurrentlyLoading, isLoading } = useNavigation();

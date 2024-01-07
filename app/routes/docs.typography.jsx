@@ -1,12 +1,11 @@
-import { useRef, useState } from "react";
-import metaData from "~/data/meta";
-
-import Header from "~/components/docs/Header";
-import Content from "~/components/docs/Content";
-import TableOfContents from "~/components/docs/TableOfContents";
+import { useRef } from "react";
 import Code from "~/components/Code";
 import Heading from "~/components/Heading";
-import Link from "~/components/Link";
+import Content from "~/components/docs/Content";
+import FontsizeTable from "~/components/docs/FontsizeTable";
+import Header from "~/components/docs/Header";
+import TableOfContents from "~/components/docs/TableOfContents";
+import metaData from "~/data/meta";
 
 const { titleSuffix } = metaData();
 
@@ -26,97 +25,6 @@ export default function Typography() {
   const inlineTextElementsRef = useRef();
   const blockquoteRef = useRef();
   const horizontalRuleRef = useRef();
-
-  const [fontSizesInPixels, setFontSizesInPixels] = useState(true);
-
-  const toggleFontSizesInPixels = (event) => {
-    event.preventDefault();
-    setFontSizesInPixels(!fontSizesInPixels);
-  };
-
-  const fontSizesTableData = {
-    rootFontSize: [
-      {
-        key: "xs",
-        name: "Extra small",
-        fontSize: 100,
-        fontUnit: "%",
-        breakpoint: "< 576px",
-      },
-      {
-        key: "sm",
-        name: "Small",
-        fontSize: 106.25,
-        fontUnit: "%",
-        breakpoint: "≥ 576px",
-      },
-      {
-        key: "md",
-        name: "Medium",
-        fontSize: 112.5,
-        fontUnit: "%",
-        breakpoint: "≥ 768px",
-      },
-      {
-        key: "lg",
-        name: "Large",
-        fontSize: 118.75,
-        fontUnit: "%",
-        breakpoint: "≥ 1024px",
-      },
-      {
-        key: "xl",
-        name: "Extra large",
-        fontSize: 125,
-        fontUnit: "%",
-        breakpoint: "≥ 1280px",
-      },
-      {
-        key: "xxl",
-        name: "Extra extra large",
-        fontSize: 131.25,
-        fontUnit: "%",
-        breakpoint: "≥ 1536px",
-      },
-    ],
-    htmlElements: [
-      {
-        name: "h1",
-        fontSize: 2,
-        fontUnit: "rem",
-      },
-      {
-        name: "h2",
-        fontSize: 1.75,
-        fontUnit: "rem",
-      },
-      {
-        name: "h3",
-        fontSize: 1.5,
-        fontUnit: "rem",
-      },
-      {
-        name: "h4",
-        fontSize: 1.25,
-        fontUnit: "rem",
-      },
-      {
-        name: "h5",
-        fontSize: 1.125,
-        fontUnit: "rem",
-      },
-      {
-        name: "h6",
-        fontSize: 1,
-        fontUnit: "rem",
-      },
-      {
-        name: "small",
-        fontSize: 0.875,
-        fontUnit: "em",
-      },
-    ],
-  };
 
   return (
     <>
@@ -165,93 +73,7 @@ export default function Typography() {
       {/* Content */}
       <Content>
         <section ref={fontSizesRef}>
-          <figure>
-            <table className="striped" id="responsive-font-sizes">
-              <caption>Responsive font sizes</caption>
-              {/* Devices */}
-              <thead>
-                <tr>
-                  <th>Breakpoint</th>
-                  {fontSizesTableData.rootFontSize.map((device) => (
-                    <th key={device.key}>
-                      <span
-                        data-tooltip={`${device.name} ${device.breakpoint}`}
-                        data-placement="bottom"
-                      >
-                        {device.key}
-                      </span>
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {/* Base font size */}
-                <tr>
-                  <th>Base</th>
-                  {fontSizesTableData.rootFontSize.map((breakpoint) => {
-                    const percent = breakpoint.fontSize;
-                    const pixel = (percent * 16) / 100;
-                    const formula = `${breakpoint.fontSize}${breakpoint.fontUnit} * 16px`;
-                    return (
-                      <td key={breakpoint.key}>
-                        {fontSizesInPixels ? (
-                          <span data-tooltip={formula} data-placement="bottom">
-                            {pixel}
-                            <small>px</small>
-                          </span>
-                        ) : (
-                          <>
-                            {percent}
-                            <small>%</small>
-                          </>
-                        )}
-                      </td>
-                    );
-                  })}
-                </tr>
-
-                {/* HTML elements */}
-                {fontSizesTableData.htmlElements.map((htmlElement) => {
-                  return (
-                    <tr key={htmlElement.name}>
-                      <th>
-                        <Code display="inline">{`<${htmlElement.name}>`}</Code>
-                      </th>
-                      {fontSizesTableData.rootFontSize.map((breakpoint) => {
-                        const breakpointPercent = breakpoint.fontSize;
-                        const breakpointPixel = (breakpointPercent * 16) / 100;
-                        const htmlElementPixel = breakpointPixel * htmlElement.fontSize;
-                        const formula = `${breakpoint.fontSize}${breakpoint.fontUnit} * ${htmlElement.fontSize}${htmlElement.fontUnit} * 16px`;
-                        return (
-                          <td key={breakpoint.key}>
-                            {fontSizesInPixels ? (
-                              <span data-tooltip={formula} data-placement="bottom">
-                                {htmlElementPixel}
-                                <small>px</small>
-                              </span>
-                            ) : (
-                              <>
-                                <small>x&nbsp;</small>
-                                {htmlElement.fontSize}
-                                <small>{htmlElement.fontUnit}</small>
-                              </>
-                            )}
-                          </td>
-                        );
-                      })}
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </figure>
-          <p>
-            <Link to="#" onClick={toggleFontSizesInPixels}>
-              {fontSizesInPixels
-                ? "Display font sizes in percent and rem."
-                : "Display font sizes in pixels."}
-            </Link>
-          </p>
+          <FontsizeTable />
           <p>
             To ensure that the user’s default font size is followed, the base font size is defined
             as a percentage that grows with the user’s screen size, while HTML elements are defined

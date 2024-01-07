@@ -112,6 +112,7 @@ export default function Colors() {
             const mainShade = getMainColorShade({ family });
             return (
               <article key={family} className="family">
+                {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/interactive-supports-focus */}
                 <header
                   className={`pico-background-${family}`}
                   role="button"

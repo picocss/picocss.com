@@ -8,13 +8,13 @@
 
 pre,
 code {
-  font-family: "Fira Code", var(#{$✨}font-family-monospace);
+  font-family: "Fira Code", var(#{$css-var-prefix}font-family-monospace);
 }
 
 // All code blocks
 .code {
   position: relative;
-  background-color: var(#{$✨}card-sectioning-background-color);
+  background-color: var(#{$css-var-prefix}card-sectioning-background-color);
 
   pre {
     margin-bottom: 0;
@@ -22,7 +22,7 @@ code {
 
   code {
     min-width: min-content;
-    margin-right: var(#{$✨}block-spacing-horizontal);
+    margin-right: var(#{$css-var-prefix}block-spacing-horizontal);
     padding: 0;
 
     @media (min-width: map.get(map.get($breakpoints, "lg"), "breakpoint")) {
@@ -36,16 +36,16 @@ code {
     top: 1rem;
     right: 0;
     padding: 0.25rem 1rem 0.25rem 0.25rem;
-    background-color: var(#{$✨}card-sectioning-background-color);
-    color: var(#{$✨}code-comment);
-    transition: color var(#{$✨}transition);
+    background-color: var(#{$css-var-prefix}card-sectioning-background-color);
+    color: var(#{$css-var-prefix}code-comment);
+    transition: color var(#{$css-var-prefix}transition);
 
     > svg {
       display: block;
       width: 1.125rem;
       height: 1.125rem;
       opacity: 0.5;
-      transition: opacity var(#{$✨}transition);
+      transition: opacity var(#{$css-var-prefix}transition);
     }
 
     &:hover {
@@ -55,7 +55,7 @@ code {
     }
 
     svg.check {
-      color: var(#{$✨}code-copied);
+      color: var(#{$css-var-prefix}code-copied);
       opacity: 1;
     }
 
@@ -78,7 +78,7 @@ code {
   &::after {
     position: absolute;
     inset: 0;
-    border-radius: var(#{$✨}border-radius);
+    border-radius: var(#{$css-var-prefix}border-radius);
     content: "";
     pointer-events: none;
   }
@@ -91,7 +91,7 @@ article footer.code {
   border-top-left-radius: 0;
 
   pre {
-    padding: calc(var(#{$✨}block-spacing-vertical) * 0.66) var(#{$✨}block-spacing-horizontal);
+    padding: calc(var(#{$css-var-prefix}block-spacing-vertical) * 0.66) var(#{$css-var-prefix}block-spacing-horizontal);
     background-color: transparent;
   }
 }
@@ -115,18 +115,18 @@ article footer.code {
           $multiplier: 2.5;
         }
 
-        #{$✨}block-spacing-horizontal: calc(var(#{$✨}spacing) * $multiplier);
-        #{$✨}block-spacing-vertical: calc(var(#{$✨}spacing) * $multiplier);
+        #{$css-var-prefix}block-spacing-horizontal: calc(var(#{$css-var-prefix}spacing) * $multiplier);
+        #{$css-var-prefix}block-spacing-vertical: calc(var(#{$css-var-prefix}spacing) * $multiplier);
       }
     }
   }
-  margin-bottom: var(#{$✨}block-spacing-vertical);
+  margin-bottom: var(#{$css-var-prefix}block-spacing-vertical);
   overflow: hidden;
-  border-radius: var(#{$✨}border-radius);
-  box-shadow: var(#{$✨}card-box-shadow);
+  border-radius: var(#{$css-var-prefix}border-radius);
+  box-shadow: var(#{$css-var-prefix}card-box-shadow);
 
   pre {
-    padding: calc(var(#{$✨}block-spacing-vertical) * 0.66) var(#{$✨}block-spacing-horizontal);
+    padding: calc(var(#{$css-var-prefix}block-spacing-vertical) * 0.66) var(#{$css-var-prefix}block-spacing-horizontal);
     background: transparent;
   }
 }
@@ -144,7 +144,7 @@ code {
   .token {
     &.tag:not(.punctuation),
     &.property {
-      color: var(#{$✨}code-tag);
+      color: var(#{$css-var-prefix}code-tag);
     }
 
     &.tag.attr-name:not(.punctuation),
@@ -152,17 +152,17 @@ code {
     &.keyword,
     &.boolean,
     &.function {
-      color: var(#{$✨}code-attr);
+      color: var(#{$css-var-prefix}code-attr);
     }
 
     &.tag.attr-value:not(.attr-equals),
     &.string {
-      color: var(#{$✨}code-value);
+      color: var(#{$css-var-prefix}code-value);
     }
 
     &.comment:not(.punctuation),
     &.doctype {
-      color: var(#{$✨}code-comment);
+      color: var(#{$css-var-prefix}code-comment);
     }
   }
 }

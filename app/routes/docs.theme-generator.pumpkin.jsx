@@ -1,8 +1,7 @@
-import { themeGeneratorTitle, themeGeneratorDescription } from "~/utils";
-import cssStyle from "~/styles/css/custom-themes/pumpkin.css";
-import cssCode from "~/data/code-snippets/pumpkin.txt";
-
 import ThemePreview from "~/components/docs/ThemePreview";
+import cssCode from "~/data/code-snippets/pumpkin.txt";
+import cssStyle from "~/styles/css/custom-themes/pumpkin.css";
+import { themeGeneratorDescription, themeGeneratorTitle } from "~/utils";
 
 const colorName = "Pumpkin";
 

@@ -1,0 +1,52 @@
+@use "colors" as *;
+@use "settings" as *;
+
+@mixin theme {
+  // Demo outer background
+  #{$css-var-prefix}demo-outer-background: radial-gradient(
+    circle closest-side,
+    #{mix($azure-850, $slate-900, 37.5%)},
+    transparent
+  );
+
+  // Demo outline
+  #{$css-var-prefix}card-component-outline-width: 0.0625rem;
+  #{$css-var-prefix}card-component-outline-color: #{mix($blue-850, $slate-900, 25%)};
+  #{$css-var-prefix}card-border-color: var(#{$css-var-prefix}card-component-outline-color);
+
+  // Stats background gradient
+  #{$css-var-prefix}stats-background-gradient: radial-gradient(
+    circle closest-side,
+    #{mix($violet-900, $slate-900, 37.5%)},
+    transparent
+  );
+
+  // Mark gradient
+  #{$css-var-prefix}mark-gradient: linear-gradient(to right, transparent 50%, rgba($azure-50, 50%)),
+    linear-gradient(
+      to right,
+      mix($azure-300, $red-300, 5%),
+      mix($azure-300, $pink-300, 10%),
+      mix($azure-300, $fuchsia-300, 15%),
+      mix($azure-300, $purple-300, 20%),
+      mix($azure-300, $violet-300, 25%),
+      mix($azure-300, $indigo-300, 30%),
+      mix($azure-300, $blue-300, 35%),
+      mix($azure-300, $azure-300, 35%),
+      mix($azure-300, $cyan-300, 40%),
+      mix($azure-300, $jade-300, 45%),
+      mix($azure-300, $green-300, 40%)
+    );
+
+  // Stats color
+  #{$css-var-prefix}stats-color: mix($azure-300, $slate-300);
+
+  // Feature icons
+  #{$css-var-prefix}icon-border-color: #{mix($blue-850, $slate-800, 25%)};
+  #{$css-var-prefix}icon-background-color: linear-gradient(
+    135deg,
+    #{mix($blue-900, $slate-850, 25%)},
+    #{rgba(mix($blue-900, $slate-850, 25%), 0.25)}
+  );
+  #{$css-var-prefix}icon-color: mix($blue-300, $slate-300);
+}

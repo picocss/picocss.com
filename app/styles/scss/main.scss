@@ -9,6 +9,11 @@
 @use "commons/layout/document";
 @use "commons/layout/footer";
 
+// Content
+@use "commons/content/code";
+
 // Components
 @use "commons/components/logo";
 @use "commons/components/theme-toggle";
+@use "commons/components/chapter";
+@use "commons/components/card-component";

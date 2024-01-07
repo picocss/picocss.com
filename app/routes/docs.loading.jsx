@@ -1,9 +1,8 @@
-import metaData from "~/data/meta";
-
-import Header from "~/components/docs/Header";
-import Content from "~/components/docs/Content";
 import Code from "~/components/Code";
 import Link from "~/components/Link";
+import Content from "~/components/docs/Content";
+import Header from "~/components/docs/Header";
+import metaData from "~/data/meta";
 
 const { titleSuffix } = metaData();
 
