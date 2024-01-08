@@ -61,8 +61,10 @@ article {
       }
     }
 
-    h3 {
+    h2 {
       color: var(#{$css-var-prefix}primary);
+      font-size: 1.5rem;
+      line-height: 1.175;
     }
 
     > hgroup,

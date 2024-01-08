@@ -56,7 +56,7 @@ export default function ThemePreview({ title, code, ...props }) {
         })}
       </header>
       <hgroup>
-        <Heading level={3}>{title}</Heading>
+        <Heading level={2}>{title}</Heading>
         <p>Form example with {colorWithPrefix(title)} theme.</p>
       </hgroup>
       <form>
@@ -75,7 +75,7 @@ export default function ThemePreview({ title, code, ...props }) {
             aria-label="Password"
             autoComplete="current-password"
           />
-          <button type="submit" aria-label="Example button" onClick={preventDefault}>
+          <button type="submit" onClick={preventDefault}>
             Log in
           </button>
         </fieldset>

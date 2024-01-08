@@ -119,7 +119,7 @@ export default function Radios() {
               <label htmlFor="hindi">Hindi</label>
               <input type="radio" id="swahili" name="second-language" />
               <label htmlFor="swahili">Swahili</label>
-              <input type="radio" id="navi " name="second-language" disabled />
+              <input type="radio" id="navi" name="second-language" disabled />
               <label htmlFor="navi" aria-disabled="true">
                 Na'vi
               </label>
@@ -130,7 +130,7 @@ export default function Radios() {
   <label htmlFor="hindi">Hindi</label>
   <input type="radio" id="swahili" name="second-language" />
   <label htmlFor="swahili">Swahili</label>
-  <input type="radio" id="navi " name="second-language" disabled />
+  <input type="radio" id="navi" name="second-language" disabled />
   <label htmlFor="navi" aria-disabled="true">Na'vi</label>
 </fieldset>`}</Code>
           </article>

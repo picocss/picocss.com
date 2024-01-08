@@ -82,7 +82,7 @@ export default function Textarea() {
             Disabled textarea
           </Heading>
           <article aria-label="Disabled example" className="component">
-            <textarea defaultValue="Disabled" disabled />
+            <textarea defaultValue="Disabled" aria-label="Disabled textarea" disabled />
             <Code as="footer">{`<textarea disabled>
   Disabled
 </textarea>`}</Code>

@@ -33,7 +33,7 @@ main#grid {
     > div {
       padding: calc(var(#{$css-var-prefix}spacing) / 2) 0;
       border-radius: var(#{$css-var-prefix}border-radius);
-      background-color: var(#{$css-var-prefix}card-sectioning-background-color);
+      background-color: var(#{$css-var-prefix}code-background-color);
       color: var(#{$css-var-prefix}muted-color);
       font-size: 0.875rem;
       text-align: center;

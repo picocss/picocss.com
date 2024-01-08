@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { useModal } from "~/contexts/ModalContext";
 
-import metaData from "~/data/meta";
 import picoColorsScssSettings from "~/data/code-snippets/_color-utilities-settings.txt";
+import metaData from "~/data/meta";
 import paletteImporterImage from "~/images/customization-colors-palette-importer.png";
 
 import {
@@ -16,13 +16,13 @@ import {
 
 import colorUtilities from "~/styles/css/docs/color-utilities.css";
 
+import Code from "~/components/Code";
+import Heading from "~/components/Heading";
+import Link from "~/components/Link";
+import ColorModal from "~/components/docs/ColorModal";
+import Content from "~/components/docs/Content";
 import Header from "~/components/docs/Header";
 import TableOfContents from "~/components/docs/TableOfContents";
-import Content from "~/components/docs/Content";
-import Heading from "~/components/Heading";
-import ColorModal from "~/components/docs/ColorModal";
-import Code from "~/components/Code";
-import Link from "~/components/Link";
 
 const { cdnBaseUrl, titleSuffix } = metaData();
 
@@ -112,10 +112,9 @@ export default function Colors() {
             const mainShade = getMainColorShade({ family });
             return (
               <article key={family} className="family">
-                {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/interactive-supports-focus */}
+                {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/interactive-supports-focus, jsx-a11y/no-static-element-interactions */}
                 <header
                   className={`pico-background-${family}`}
-                  role="button"
                   onClick={() => {
                     onOpenModal();
                     setSelectedColor({

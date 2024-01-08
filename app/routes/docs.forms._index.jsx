@@ -237,13 +237,17 @@ export default function Forms() {
             <Link to="/docs/group">Group</Link>.
           </p>
           <article className="component" aria-label="Form group example">
-            <form role="group" onSubmit={preventDefault}>
-              <input type="email" placeholder="Enter your email" />
-              <input type="submit" value="Subscribe" />
+            <form onSubmit={preventDefault}>
+              <fieldset role="group">
+                <input type="email" placeholder="Enter your email" />
+                <input type="submit" value="Subscribe" />
+              </fieldset>
             </form>
-            <Code as="footer">{`<form role="group">
-  <input type="email" placeholder="Enter your email" />
-  <input type="submit" value="Subscribe" />
+            <Code as="footer">{`<form>
+  <fieldset role="group"
+    <input type="email" placeholder="Enter your email" />
+    <input type="submit" value="Subscribe" />
+  </fieldset>
 </form>`}</Code>
           </article>
         </section>

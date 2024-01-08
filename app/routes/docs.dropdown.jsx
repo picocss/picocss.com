@@ -121,7 +121,7 @@ export default function Dropdown() {
                 <summary>Dropdown</summary>
                 <DropdownItems />
               </details>
-              <select defaultValue="" required>
+              <select aria-label="Select" defaultValue="" required>
                 <option value="" disabled>
                   Select
                 </option>
@@ -144,7 +144,7 @@ export default function Dropdown() {
 </details>
 
 <!-- Select -->
-<select required>
+<select aria-label="Select" required>
   <option selected disabled value="">Select</option>
   ${phasesOfMatter
     .map(

@@ -38,7 +38,7 @@ export default function ColorSchemes() {
           <Code display="inline" language="css">{`prefers-color-scheme: dark;`}</Code>.
         </p>
         <article aria-label="Theme switcher" id="theme-switcher">
-          <button className="contrast" aria-label={changeThemeLabel} onClick={switchTheme}>
+          <button className="contrast" onClick={switchTheme}>
             <ThemeToggle className={`theme-toggle${isThemeDark ? " moon" : ""}`} />
             {changeThemeLabel}
           </button>
@@ -67,11 +67,7 @@ export default function ColorSchemes() {
                 aria-label="Password"
                 autoComplete="current-password"
               />
-              <button
-                type="submit"
-                aria-label="Example button"
-                onClick={(event) => event.preventDefault()}
-              >
+              <button type="submit" onClick={(event) => event.preventDefault()}>
                 Login
               </button>
             </fieldset>

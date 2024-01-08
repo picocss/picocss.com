@@ -72,7 +72,12 @@ export default function Select() {
       <Content>
         <section ref={syntaxRef}>
           <article aria-label="Select example" className="component">
-            <select id="favorite-cuisine" defaultValue="" required>
+            <select
+              id="favorite-cuisine"
+              aria-label=" Select your favorite cuisine..."
+              defaultValue=""
+              required
+            >
               <option disabled value="">
                 Select your favorite cuisine...
               </option>
@@ -82,7 +87,7 @@ export default function Select() {
               <option>Thai</option>
               <option>French</option>
             </select>
-            <Code as="footer">{`<select required>
+            <Code as="footer">{`<select aria-label=" Select your favorite cuisine..." required>
   <option selected disabled value="">
     Select your favorite cuisine...
   </option>
@@ -100,7 +105,12 @@ export default function Select() {
             Select multiple
           </Heading>
           <article aria-label="Disabled and read-only example" className="component">
-            <select defaultValue={["Fruits", "Nuts"]} multiple size="6">
+            <select
+              aria-label="Select your favorite snacks..."
+              defaultValue={["Fruits", "Nuts"]}
+              multiple
+              size="6"
+            >
               <option disabled>Select your favorite snacks...</option>
               <option>Cheese</option>
               <option>Fruits</option>
@@ -108,7 +118,7 @@ export default function Select() {
               <option>Chocolate</option>
               <option>Crackers</option>
             </select>
-            <Code as="footer">{`<select multiple size="6">
+            <Code as="footer">{`<select aria-label="Select your favorite snacks..." multiple size="6">
   <option disabled>
     Select your favorite snacks...
   </option>
@@ -126,10 +136,10 @@ export default function Select() {
             Disabled select
           </Heading>
           <article aria-label="Disabled example" className="component">
-            <select disabled>
+            <select aria-label="Select a meal type..." disabled>
               <option>Select a meal type...</option>
             </select>
-            <Code as="footer">{`<select disabled>
+            <Code as="footer">{`<select  aria-label="Select a meal type..." disabled>
   <option>Select a meal type...</option>
   <option>...</option>
 </select>`}</Code>
@@ -144,7 +154,11 @@ export default function Select() {
             Validation states are provided with <Code display="inline">aria-invalid</Code>.
           </p>
           <article aria-label="Validation states example" className="component">
-            <select defaultValue="Pepperoni" aria-invalid="false">
+            <select
+              aria-label="Select your favorite pizza topping..."
+              defaultValue="Pepperoni"
+              aria-invalid="false"
+            >
               <option disabled>Select your favorite pizza topping...</option>
               <option>Pepperoni</option>
               <option>Mushrooms</option>
@@ -153,7 +167,12 @@ export default function Select() {
               <option>Olives</option>
             </select>
             <small>Great choice!</small>
-            <select defaultValue="" required aria-invalid="true">
+            <select
+              aria-label="Select your favorite pizza topping..."
+              defaultValue=""
+              required
+              aria-invalid="true"
+            >
               <option disabled value="">
                 Select your favorite pizza topping...
               </option>
