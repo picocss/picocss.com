@@ -6,8 +6,16 @@ body > main > .comparison {
     max-width: map.get(map.get($breakpoints, "md"), "viewport");
     margin-bottom: calc(var(#{$css-var-prefix}homepage-spacing-vertical) / 2);
 
+    @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {
+      margin-bottom: calc(var(#{$css-var-prefix}homepage-spacing-vertical) / 3);
+    }
+
     > h2 {
       margin-bottom: calc(var(#{$css-var-prefix}spacing) * 1);
+
+      @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {
+        margin-bottom: calc(var(#{$css-var-prefix}spacing) / 2);
+      }
     }
 
     > *:not(:first-child):last-child {
@@ -40,6 +48,7 @@ body > main > .comparison {
       .code {
         height: 100%;
         border-left: 0.25rem solid;
+        background-color: var(#{$css-var-prefix}card-background-color);
 
         pre {
           height: 100%;

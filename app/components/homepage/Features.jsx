@@ -8,7 +8,7 @@ import ArrowRight from "../icons/ArrowRight";
 import Brightness from "../icons/Brightness";
 import Speedtest from "../icons/Speedtest";
 
-const BlockLink = ({ children, to, ...props }) => (
+const ArrowLink = ({ children, to, ...props }) => (
   <p {...props}>
     <Link to={to}>
       <>
@@ -40,7 +40,7 @@ export default function Features(props) {
             <Code display="inline">.classes</Code> overall. It also comes with a class-less version
             for wild HTML&nbsp;purists.
           </p>
-          <BlockLink to="/docs/classless">Discover the class-less version</BlockLink>
+          <ArrowLink to="/docs/classless">Discover the class-less version</ArrowLink>
         </article>
         <article>
           <Logo displayWordmark={false} />
@@ -50,7 +50,7 @@ export default function Features(props) {
             package&nbsp;managers, external files, or JavaScript, achieving elegant and
             straightforward styles with pure HTML&nbsp;markup.
           </p>
-          <BlockLink to="/docs">Get Started</BlockLink>
+          <ArrowLink to="/docs">Get started</ArrowLink>
         </article>
         <article>
           <Expand />
@@ -60,7 +60,7 @@ export default function Features(props) {
             with screen widths, resulting in a consistent and elegant look across devices. No extra
             classes or configuration needed.
           </p>
-          <BlockLink to="/docs/typography">Discover the responsive font sizes</BlockLink>
+          <ArrowLink to="/docs/typography">Discover the responsive font sizes</ArrowLink>
         </article>
         <article>
           <Brightness />
@@ -70,7 +70,7 @@ export default function Features(props) {
             The best part? It automatically adapts to users'{" "}
             <Code display="inline">prefers-color-scheme</Code>, all without the use of JavaScript.
           </p>
-          <BlockLink to="/docs/color-schemes">Learn about the color schemes</BlockLink>
+          <ArrowLink to="/docs/color-schemes">Learn about the color schemes</ArrowLink>
         </article>
         <article>
           <Adjustments />
@@ -80,17 +80,17 @@ export default function Features(props) {
             between 20 handcrafted color&nbsp;themes and compose with 30+ modular&nbsp;components to
             tailor the UI to your brand's look&nbsp;and&nbsp;feel.
           </p>
-          <BlockLink to="/docs/css-variables">Learn about the CSS variables</BlockLink>
+          <ArrowLink to="/docs/css-variables">Learn about the CSS variables</ArrowLink>
         </article>
         <article>
           <Speedtest />
           <h3>Optimized Performance</h3>
           <p>
-          Speed meets elegance. Unlike bulky and overcomplicated frameworks
-            that demand extensive&nbsp;class overrides and JavaScript, Pico keeps your HTML lean,
-            decreases memory usage by avoiding excessive CSS specificity, and reduces loaded files.
+            Speed meets elegance. Unlike bulky and overcomplicated frameworks that demand
+            extensive&nbsp;class overrides and JavaScript, Pico keeps your HTML lean, decreases
+            memory usage by avoiding excessive CSS specificity, and reduces loaded files.
           </p>
-          <BlockLink to="/docs">Quick start</BlockLink>
+          <ArrowLink to="/docs">Quick start</ArrowLink>
         </article>
       </div>
     </section>

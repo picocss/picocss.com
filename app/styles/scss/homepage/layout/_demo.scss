@@ -253,8 +253,10 @@ body > main > .hero > .demo {
     content: "";
     transition: opacity var(#{$css-var-prefix}transition);
 
-    @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
-      opacity: 0.66;
+    @if $columns-at-xl {
+      @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+        opacity: 0.66;
+      }
     }
   }
 }

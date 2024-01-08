@@ -5,16 +5,6 @@ body > main > .features {
   > hgroup {
     max-width: map.get(map.get($breakpoints, "md"), "viewport");
     margin-bottom: calc(var(#{$css-var-prefix}homepage-spacing-vertical) / 2);
-    margin-inline: auto;
-
-    @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
-      text-align: center;
-    }
-
-    @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
-      margin-left: 0;
-      text-align: left;
-    }
 
     > h2 {
       margin-bottom: calc(var(#{$css-var-prefix}spacing) * 1);

@@ -1,6 +1,8 @@
 import Code from "~/components/Code";
+import { usePage } from "~/contexts/PageContext";
 
 export default function Comparison(props) {
+  const { pageTheme } = usePage();
   return (
     <section className="comparison" {...props}>
       <hgroup>
@@ -14,7 +16,7 @@ export default function Comparison(props) {
           <p>
             <span className="emoji">😌</span> Pico CSS
           </p>
-          <Code language="html" allowCopy={false}>{`<form>
+          <Code language="html" allowCopy={false} dataTheme={pageTheme}>{`<form>
   <input type="text">
   <button type="submit">Action</button>
 </form>`}</Code>
@@ -23,7 +25,11 @@ export default function Comparison(props) {
           <p>
             <span className="emoji">🥵</span> Utility CSS Framework
           </p>
-          <Code language="html" allowCopy={false}>{`<div class="container display-flex my-md mx-sm">
+          <Code
+            language="html"
+            allowCopy={false}
+            dataTheme={pageTheme}
+          >{`<div class="container display-flex my-md mx-sm">
   <form class="form shadow-md my-md mx-sm align-center">
     <div class="input-wrapper border-radius-sm">
       <input type="text" class="input text-color-gray placeholder-color-light-gray focus-outline-blue">

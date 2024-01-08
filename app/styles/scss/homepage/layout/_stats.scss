@@ -21,7 +21,7 @@ body > main > .stats {
     margin: 0 auto;
     padding: 0;
 
-    @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {
+    @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
       grid-template-columns: repeat(3, 1fr);
     }
 
@@ -39,11 +39,11 @@ body > main > .stats {
   ul li {
     @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
       text-align: center;
+    }
 
-      @if $columns-at-xl {
-        @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
-          text-align: left;
-        }
+    @if $columns-at-xl {
+      @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+        text-align: left;
       }
     }
 
@@ -67,10 +67,18 @@ body > main > .stats {
           height: 1em;
           margin-right: calc(var(#{$css-var-prefix}spacing) * 0.375);
           transform: translateY(-0.125em);
+
+          @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
+            display: none;
+          }
+
+          @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {
+            display: inline-block;
+          }
         }
 
         span.period-prefix {
-          @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {
+          @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
             display: none;
           }
 
@@ -87,7 +95,7 @@ body > main > .stats {
       display: none;
       color: var(#{$css-var-prefix}muted-color);
 
-      @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {
+      @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
         display: block;
       }
 
