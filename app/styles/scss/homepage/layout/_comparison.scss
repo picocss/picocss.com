@@ -43,6 +43,10 @@ body > main > .comparison {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
 
+        pre {
+          height: 100%;
+        }
+
         @media (min-width: map.get(map.get($breakpoints, "lg"), "breakpoint")) {
           border-top: 0.25rem solid;
           border-left: none;
