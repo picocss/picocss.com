@@ -33,12 +33,7 @@
 
   // Footer
   footer {
-    #{$css-var-prefix}background-gradient: linear-gradient(
-      0deg,
-      #{mix($azure-900, $slate-900)},
-      transparent
-    );
-    #{$css-var-prefix}logo-small-sparkles: #{$slate-400};
-    #{$css-var-prefix}logo-big-sparkle: #{$slate-200};
+    #{$css-var-prefix}logo-small-sparkles: #{mix($slate-850, $azure-850, 75%)};
+    #{$css-var-prefix}logo-big-sparkle: #{mix($slate-800, $azure-800, 75%)};
   }
 }

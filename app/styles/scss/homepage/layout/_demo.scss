@@ -251,6 +251,10 @@ body > main > .hero > .demo {
     transform-origin: center;
     background: var(#{$css-var-prefix}demo-outer-background);
     content: "";
-    opacity: 0.66;
+    transition: opacity var(#{$css-var-prefix}transition);
+
+    @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+      opacity: 0.66;
+    }
   }
 }
