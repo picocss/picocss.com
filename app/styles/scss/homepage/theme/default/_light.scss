@@ -12,13 +12,6 @@
   // Demo inner background
   #{$css-var-prefix}demo-inner-background: var(#{$css-var-prefix}background-color);
 
-  // Stats background gradient
-  #{$css-var-prefix}stats-background-gradient: radial-gradient(
-    circle closest-side,
-    #{mix($indigo-100, $indigo-50)},
-    transparent
-  );
-
   // Mark gradient
   #{$css-var-prefix}mark-gradient: linear-gradient(to right, transparent, rgba($slate-700, 12.5%)),
     linear-gradient(

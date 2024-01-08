@@ -14,13 +14,6 @@
   #{$css-var-prefix}card-component-outline-color: #{mix($blue-850, $slate-900, 25%)};
   #{$css-var-prefix}card-border-color: var(#{$css-var-prefix}card-component-outline-color);
 
-  // Stats background gradient
-  #{$css-var-prefix}stats-background-gradient: radial-gradient(
-    circle closest-side,
-    #{mix($violet-900, $slate-900, 37.5%)},
-    transparent
-  );
-
   // Mark gradient
   #{$css-var-prefix}mark-gradient: linear-gradient(to right, transparent 50%, rgba($azure-50, 50%)),
     linear-gradient(

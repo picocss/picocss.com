@@ -98,46 +98,4 @@ body > main > .stats {
       }
     }
   }
-
-  .background {
-    display: flex;
-    z-index: -1;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-    inset: 0;
-
-    @if $columns-at-xl {
-      @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
-        justify-content: flex-start;
-      }
-    }
-
-    &::after {
-      display: block;
-      aspect-ratio: 1 / 1;
-      height: 100%;
-      inset: 0 auto;
-      transform: scale(3);
-      border-radius: 50%;
-      background: var(#{$css-var-prefix}stats-background-gradient);
-      content: "";
-      opacity: 0.5;
-
-      @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
-        transform: scale(4);
-      }
-
-      @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {
-        transform: scale(10);
-      }
-
-      @if $columns-at-xl {
-        @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
-          transform: scale(16);
-          opacity: 1;
-        }
-      }
-    }
-  }
 }
