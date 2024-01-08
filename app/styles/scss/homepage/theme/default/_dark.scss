@@ -10,7 +10,7 @@
   );
 
   // Demo outline
-  #{$css-var-prefix}card-component-outline-width: 0.125rem;
+  #{$css-var-prefix}card-component-outline-width: 0.0625rem;
   #{$css-var-prefix}card-component-outline-color: #{mix($azure-850, $slate-900, 25%)};
   #{$css-var-prefix}card-border-color: var(#{$css-var-prefix}card-component-outline-color);
 
