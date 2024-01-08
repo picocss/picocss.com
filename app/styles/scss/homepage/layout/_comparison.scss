@@ -39,9 +39,7 @@ body > main > .comparison {
 
       .code {
         height: 100%;
-        border-left: 0.1875rem solid;
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
+        border-left: 0.25rem solid;
 
         pre {
           height: 100%;
@@ -50,8 +48,6 @@ body > main > .comparison {
         @media (min-width: map.get(map.get($breakpoints, "lg"), "breakpoint")) {
           border-top: 0.25rem solid;
           border-left: none;
-          border-top-left-radius: var(#{$css-var-prefix}border-radius);
-          border-bottom-left-radius: var(#{$css-var-prefix}border-radius);
         }
       }
 
