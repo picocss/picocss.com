@@ -4,7 +4,7 @@ import bash from "react-syntax-highlighter/dist/esm/languages/prism/bash";
 import css from "react-syntax-highlighter/dist/esm/languages/prism/css";
 import jsx from "react-syntax-highlighter/dist/esm/languages/prism/jsx";
 import scss from "react-syntax-highlighter/dist/esm/languages/prism/scss";
-import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/prism-async-light";
+import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/prism-light";
 import Link from "./Link";
 import Check from "./icons/Check";
 import Copy from "./icons/Copy";
