@@ -47,28 +47,43 @@ body > main > .comparison {
 
       .code {
         height: 100%;
-        border-left: 0.25rem solid;
-        background-color: var(#{$css-var-prefix}card-background-color);
+
+        &::before {
+          display: block;
+          position: absolute;
+          width: 0.25rem;
+          height: 100%;
+          inset: 0 auto 0 0;
+          content: "";
+        }
 
         pre {
           height: 100%;
         }
 
         @media (min-width: map.get(map.get($breakpoints, "lg"), "breakpoint")) {
-          border-top: 0.25rem solid;
-          border-left: none;
+          #{$css-var-prefix}comparison-gradient-direction: to right;
+          &::before {
+            width: 100%;
+            height: 0.25rem;
+            inset: 0 0 auto 0;
+          }
         }
       }
 
       &.pico {
         .code {
-          border-color: var(#{$css-var-prefix}form-element-valid-border-color);
+          &::before {
+            background: var(#{$css-var-prefix}comparison-gradient-valid);
+          }
         }
       }
 
       &.utility-framework {
         .code {
-          border-color: var(#{$css-var-prefix}form-element-invalid-border-color);
+          &::before {
+            background: var(#{$css-var-prefix}comparison-gradient-invalid);
+          }
         }
       }
     }

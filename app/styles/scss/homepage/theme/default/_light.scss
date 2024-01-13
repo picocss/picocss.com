@@ -39,4 +39,18 @@
     #{rgba(mix($blue-50, $slate-50, 25%), 0.25)}
   );
   #{$css-var-prefix}icon-color: mix($blue-600, $slate-600, 25%);
+
+  // Comparison gradients
+  #{$css-var-prefix}comparison-gradient-valid: linear-gradient(
+    var(#{$css-var-prefix}comparison-gradient-direction, to bottom),
+    mix($cyan-300, $slate-300, 25%),
+    mix($jade-350, $slate-350, 37.5%),
+    mix($green-400, $slate-400, 50%)
+  );
+  #{$css-var-prefix}comparison-gradient-invalid: linear-gradient(
+    var(#{$css-var-prefix}comparison-gradient-direction, to bottom),
+    mix($pumpkin-300, $slate-300, 50%),
+    mix($orange-350, $slate-350, 62.5%),
+    mix($red-400, $slate-400, 75%)
+  );
 }
