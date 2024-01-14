@@ -45,3 +45,9 @@
 section {
   margin-block: var(#{$css-var-prefix}homepage-spacing-vertical);
 }
+
+#{$semantic-root-element} {
+  section:last-child {
+    margin-block-end: 0;
+  }
+}

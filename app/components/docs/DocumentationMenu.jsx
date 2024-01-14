@@ -34,37 +34,36 @@ export default function Aside(props) {
       {/* Navigation */}
       <nav>
         {documentationMenu.map((category, index) => {
-          const isCurrentCategory = category.links.some((link) => link.route === locationPath);
+          const { category: title, links } = category;
+          const isCurrentCategory = links.some((link) => link.route === locationPath);
           const shouldOpen =
-            isCurrentCategory ||
-            (isThemeGeneratorNestedPage && category.category === "Customization");
+            isCurrentCategory || (isThemeGeneratorNestedPage && title === "Customization");
 
-          if (isCurrentCategory && currentCategory !== category.category) {
-            setCurrentCategory(category.category);
+          if (isCurrentCategory && currentCategory !== title) {
+            setCurrentCategory(title);
           }
 
           return (
             <details key={index} open={shouldOpen}>
               {/* Category button */}
-              <summary {...(shouldOpen && { "aria-current": true })}>
-                {parse(category.category)}
-              </summary>
+              <summary {...(shouldOpen && { "aria-current": true })}>{parse(title)}</summary>
               <ul>
                 {category.links.map((link, index) => {
+                  const { label, route } = link;
                   const isThemeGeneratorLink = link.route === "/docs/theme-generator";
 
                   // Link
                   return (
                     <li key={index}>
                       <Link
-                        to={link.route}
+                        to={route}
                         className="secondary"
                         {...(isThemeGeneratorNestedPage && isThemeGeneratorLink
                           ? { "aria-current": "page" }
                           : {})}
                         onClick={() => setMenuIsOpenOnMobile(false)}
                       >
-                        {parse(link.label)}
+                        {parse(label)}
                       </Link>
                     </li>
                   );
