@@ -1,0 +1,32 @@
+a {
+  .icon-arrow-right {
+    --icon-right-toggle-duration: 200ms;
+
+    g.head,
+    path.line {
+      transition-duration: var(--icon-right-toggle-duration);
+      transition-property: transform;
+      transition-timing-function: ease-in-out;
+    }
+
+    g.head {
+      transform: translateX(0);
+    }
+
+    path.line {
+      transform: translate(0) scaleX(0);
+      transform-origin: 14px;
+    }
+  }
+
+  &:hover {
+    .icon-arrow-right {
+      g.head {
+        transform: translateX(5px);
+      }
+      path.line {
+        transform: translateX(5px) scaleX(1);
+      }
+    }
+  }
+}

@@ -14,6 +14,8 @@ body {
       }
 
       p {
+        text-wrap: pretty;
+
         &:first-of-type {
           margin-bottom: 0.25em;
           font-size: 16px;

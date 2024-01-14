@@ -3,7 +3,7 @@
 
 $columns-at-xl: true;
 
-body > main > .hero {
+body > main.homepage > .hero {
   display: grid;
   grid-template-columns: 1fr;
   column-gap: var(#{$css-var-prefix}homepage-spacing-horizontal);
@@ -67,6 +67,10 @@ body > main > .hero {
 
     h1 {
       margin-bottom: calc(var(#{$css-var-prefix}spacing) * 2);
+    }
+
+    p {
+      text-wrap: pretty;
     }
 
     .grid.ctas {

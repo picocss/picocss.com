@@ -2,7 +2,7 @@
 @use "settings" as *;
 @use "hero" as *;
 
-body > main > .stats {
+body > main.homepage > .stats {
   position: relative;
   margin-top: calc(var(#{$css-var-prefix}homepage-spacing-vertical) / 2);
 

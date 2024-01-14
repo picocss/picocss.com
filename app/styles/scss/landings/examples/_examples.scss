@@ -1,0 +1,112 @@
+@use "sass:map";
+@use "settings" as *;
+
+body > main.examples > .examples-list {
+  display: grid;
+  column-gap: calc(var(#{$css-var-prefix}homepage-spacing-horizontal) / 2);
+  row-gap: calc(var(#{$css-var-prefix}homepage-spacing-vertical) / 2);
+  margin-block: calc(var(#{$css-var-prefix}homepage-spacing-vertical) / 2);
+
+  @media (min-width: map.get(map.get($breakpoints, "lg"), "breakpoint")) {
+    grid-template-columns: 1fr 1fr;
+    row-gap: calc(var(#{$css-var-prefix}homepage-spacing-horizontal) / 2);
+  }
+
+  @media (min-width: map.get(map.get($breakpoints, "xxl"), "breakpoint")) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  article {
+    margin: 0;
+
+    @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+      $multiplier: 1.75;
+      #{$css-var-prefix}block-spacing-vertical: calc(var(#{$css-var-prefix}spacing) * $multiplier);
+      #{$css-var-prefix}block-spacing-horizontal: calc(
+        var(#{$css-var-prefix}spacing) * $multiplier
+      );
+    }
+
+    .badges {
+      display: flex;
+      margin-bottom: 0.5rem;
+
+      .badge {
+        padding: 0.125rem 0.25rem;
+        border-radius: 0.125rem;
+        font-weight: 600;
+        font-size: 12px;
+        text-transform: uppercase;
+        vertical-align: text-bottom;
+
+        &:not(:last-child) {
+          margin-right: 0.5rem;
+        }
+
+        &.html {
+          background-color: var(#{$css-var-prefix}badge-html-background-color);
+          color: var(#{$css-var-prefix}badge-html-color);
+        }
+        &.react {
+          background-color: var(#{$css-var-prefix}badge-react-background-color);
+          color: var(#{$css-var-prefix}badge-react-color);
+        }
+        &.sass {
+          background-color: var(#{$css-var-prefix}badge-sass-background-color);
+          color: var(#{$css-var-prefix}badge-sass-color);
+        }
+        &.javascript {
+          background-color: var(#{$css-var-prefix}badge-javascript-background-color);
+          color: var(#{$css-var-prefix}badge-javascript-color);
+        }
+        &.css {
+          background-color: var(#{$css-var-prefix}badge-css-background-color);
+          color: var(#{$css-var-prefix}badge-css-color);
+        }
+      }
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      line-height: 1.2;
+    }
+
+    p {
+      color: var(#{$css-var-prefix}muted-color);
+      text-wrap: pretty;
+
+      &:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+
+      &.links {
+        margin-bottom: 0;
+
+        a {
+          display: block;
+
+          &:not(:last-child) {
+            margin-bottom: 0.25rem;
+          }
+
+          &.preview {
+            margin-bottom: 1rem;
+          }
+
+          svg {
+            width: auto;
+            height: 1rem;
+            margin-right: calc(var(#{$css-var-prefix}spacing) * 0.25);
+            transform: translateY(-0.0625rem);
+
+            &.pico-icon {
+              path {
+                fill: currentColor;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

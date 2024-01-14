@@ -39,6 +39,19 @@
       }
     }
     padding: 0;
+
+    &.is-loading {
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-name: page-loading;
+      opacity: 0.5;
+    }
+  }
+}
+
+@keyframes page-loading {
+  from {
+    opacity: 1;
   }
 }
 

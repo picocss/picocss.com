@@ -20,10 +20,10 @@ export default function Hero(props) {
             Get Started
             <ArrowRight />
           </Link>
-          <a href="https://github.com/picocss/examples" role="button" className="contrast">
+          <Link to="/examples" role="button" className="contrast">
             Examples
             <ArrowRight />
-          </a>
+          </Link>
         </div>
       </div>
       <Demo />

@@ -1,19 +1,17 @@
 import Header from "~/components/Header";
-import Comparison from "~/components/homepage/Comparison";
-import Features from "~/components/homepage/Features";
-import Hero from "~/components/homepage/Hero";
-import Stats from "~/components/homepage/Stats";
+import Examples from "~/components/examples/Examples";
+import Hero from "~/components/examples/Hero";
 import { useNavigation } from "~/contexts/NavigationContext";
 import metaData from "~/data/meta";
 import landingPageStyles from "~/styles/css/landings.css";
 
-const { defaultTitle, defaultDescription } = metaData();
+const { titleSuffix } = metaData();
 
 export const meta = () => [
-  { title: defaultTitle },
+  { title: `Examples ${titleSuffix}` },
   {
     name: "description",
-    content: defaultDescription,
+    content: "Minimalist templates to discover Pico in action.",
   },
 ];
 
@@ -27,11 +25,9 @@ export default function Docs() {
   return (
     <>
       <Header />
-      <main className={`homepage container ${isLoading && " is-loading"}`}>
+      <main className={`examples container ${isLoading && " is-loading"}`}>
         <Hero />
-        <Stats />
-        <Features />
-        <Comparison />
+        <Examples />
       </main>
     </>
   );

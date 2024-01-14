@@ -37,9 +37,9 @@
   // Feature icons
   #{$css-var-prefix}icon-border-color: #{mix($blue-850, $slate-800, 25%)};
   #{$css-var-prefix}icon-background-color: linear-gradient(
-    135deg,
-    #{mix($blue-900, $slate-850, 25%)},
-    #{rgba(mix($blue-900, $slate-850, 25%), 0.25)}
+    to bottom,
+    #{rgba(mix($blue-900, $slate-850, 25%), 0.125)},
+    #{mix($blue-900, $slate-850, 25%)}
   );
   #{$css-var-prefix}icon-color: mix($blue-300, $slate-300);
 
@@ -56,4 +56,25 @@
     mix($orange-550, $slate-550, 62.5%),
     mix($red-600, $slate-600, 75%)
   );
+
+  // Language badges
+  $html-color: mix($orange-300, $slate-300, 75%);
+  $react-color: mix(mix($azure-300, $cyan-300, 25%), $slate-400);
+  $sass-color: mix($fuchsia-300, $slate-300);
+  $javascript-color: mix($amber-300, $slate-300);
+  $css-color: $blue-300;
+  $background-color-opacity: 0.125;
+  #{$css-var-prefix}badge-html-background-color: rgba($html-color, $background-color-opacity);
+  #{$css-var-prefix}badge-html-color: $html-color;
+  #{$css-var-prefix}badge-react-background-color: rgba($react-color, $background-color-opacity);
+  #{$css-var-prefix}badge-react-color: $react-color;
+  #{$css-var-prefix}badge-sass-background-color: rgba($sass-color, $background-color-opacity);
+  #{$css-var-prefix}badge-sass-color: $sass-color;
+  #{$css-var-prefix}badge-javascript-background-color: rgba(
+    $javascript-color,
+    $background-color-opacity
+  );
+  #{$css-var-prefix}badge-javascript-color: $javascript-color;
+  #{$css-var-prefix}badge-css-background-color: rgba($css-color, $background-color-opacity);
+  #{$css-var-prefix}badge-css-color: $css-color;
 }

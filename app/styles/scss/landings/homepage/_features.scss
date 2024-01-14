@@ -1,7 +1,7 @@
 @use "sass:map";
 @use "settings" as *;
 
-body > main > .features {
+body > main.homepage > .features {
   > hgroup {
     max-width: map.get(map.get($breakpoints, "md"), "viewport");
     margin-bottom: calc(var(#{$css-var-prefix}homepage-spacing-vertical) / 2);
@@ -12,6 +12,7 @@ body > main > .features {
 
     > *:not(:first-child):last-child {
       #{$css-var-prefix}color: var(#{$css-var-prefix}color);
+      text-wrap: pretty;
     }
   }
 
@@ -52,13 +53,14 @@ body > main > .features {
       }
 
       h3 {
-        font-size: 1.125rem;
-        line-height: 1.225;
+        font-size: 1.25rem;
+        line-height: 1.2;
       }
 
       p {
         margin-bottom: calc(var(#{$css-var-prefix}spacing) * 1);
         color: var(#{$css-var-prefix}muted-color);
+        text-wrap: pretty;
 
         &:last-child {
           margin-bottom: 0;

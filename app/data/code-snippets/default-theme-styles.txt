@@ -16,7 +16,7 @@
   --pico-transition: 0.2s ease-in-out;
   --pico-spacing: 1rem;
   --pico-typography-spacing-vertical: 1rem;
-  --pico-block-spacing-vertical: calc(var(--pico-spacing) * 2);
+  --pico-block-spacing-vertical: var(--pico-spacing);
   --pico-block-spacing-horizontal: var(--pico-spacing);
   --pico-grid-column-gap: var(--pico-spacing);
   --pico-grid-row-gap: var(--pico-spacing);
@@ -115,44 +115,32 @@
 
 @media (min-width: 576px) {
   article {
+    --pico-block-spacing-vertical: calc(var(--pico-spacing) * 1.25);
     --pico-block-spacing-horizontal: calc(var(--pico-spacing) * 1.25);
   }
 }
 @media (min-width: 768px) {
   article {
+    --pico-block-spacing-vertical: calc(var(--pico-spacing) * 1.5);
     --pico-block-spacing-horizontal: calc(var(--pico-spacing) * 1.5);
   }
 }
 @media (min-width: 1024px) {
   article {
+    --pico-block-spacing-vertical: calc(var(--pico-spacing) * 1.75);
     --pico-block-spacing-horizontal: calc(var(--pico-spacing) * 1.75);
   }
 }
 @media (min-width: 1280px) {
   article {
+    --pico-block-spacing-vertical: calc(var(--pico-spacing) * 2);
     --pico-block-spacing-horizontal: calc(var(--pico-spacing) * 2);
   }
 }
 @media (min-width: 1536px) {
   article {
+    --pico-block-spacing-vertical: calc(var(--pico-spacing) * 2.25);
     --pico-block-spacing-horizontal: calc(var(--pico-spacing) * 2.25);
-  }
-}
-
-dialog > article {
-  --pico-block-spacing-vertical: calc(var(--pico-spacing) * 2);
-  --pico-block-spacing-horizontal: var(--pico-spacing);
-}
-@media (min-width: 576px) {
-  dialog > article {
-    --pico-block-spacing-vertical: calc(var(--pico-spacing) * 2.5);
-    --pico-block-spacing-horizontal: calc(var(--pico-spacing) * 1.25);
-  }
-}
-@media (min-width: 768px) {
-  dialog > article {
-    --pico-block-spacing-vertical: calc(var(--pico-spacing) * 3);
-    --pico-block-spacing-horizontal: calc(var(--pico-spacing) * 1.5);
   }
 }
 

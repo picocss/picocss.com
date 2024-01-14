@@ -997,10 +997,9 @@
   resolved "https://registry.yarnpkg.com/@picocss/pico/-/pico-1.5.11.tgz#8bd37fc546fcab95625218dddd8cf788b8fd5f8a"
   integrity sha512-cDaFiSyNPtuSTwSQt/05xsw8+g2ek4/S58tgh9Nc7miJCCdUrY9PAyl4OPWRJtYgJDdEvkUA9GuGj0J4nDP4Cw==
 
-"@picocss/pico@2.0.0-rc2":
+"@picocss/pico@github:picocss/pico#v2":
   version "2.0.0-rc2"
-  resolved "https://registry.yarnpkg.com/@picocss/pico/-/pico-2.0.0-rc2.tgz#d03493d33896ed238838df372a9465fa739a0ae3"
-  integrity sha512-0bT9gKwqJqHxh8b07MM3Rd3sXtMZItFIw8kkKoMVsYDooozOKYUYudADG+02Q96gYFvymcVTbHloS3GPyw6zow==
+  resolved "https://codeload.github.com/picocss/pico/tar.gz/5a97b6baac59a496ef3abba44058fcde026d0916"
 
 "@pkgjs/parseargs@^0.11.0":
   version "0.11.0"
@@ -3819,13 +3818,13 @@ hosted-git-info@^6.0.0, hosted-git-info@^6.1.1:
   dependencies:
     lru-cache "^7.5.1"
 
-html-dom-parser@5.0.6:
-  version "5.0.6"
-  resolved "https://registry.yarnpkg.com/html-dom-parser/-/html-dom-parser-5.0.6.tgz#bc7ee4bbf508030d5326eab0800d67e2fcd7d586"
-  integrity sha512-6KSMOgxzAIZZ1Tcc6eNEfRFC/XE0+TiYaWanKNYKHSEQOtdxrR0t8ILKXNDcRea/WbIDltLUIP8mi/tw7dtFvQ==
+html-dom-parser@5.0.7:
+  version "5.0.7"
+  resolved "https://registry.yarnpkg.com/html-dom-parser/-/html-dom-parser-5.0.7.tgz#33f029b34e8ec4076b7e2624c97debc79abb0c75"
+  integrity sha512-2YD2/yB0QgrlkBIn0CsGaRXC89E1gtuPVpiOGC52NTzPCC83n0WMdGD+5q7lpcKqbCpnWValQbovuy/NI/0kag==
   dependencies:
     domhandler "5.0.3"
-    htmlparser2 "9.0.0"
+    htmlparser2 "9.1.0"
 
 html-includes@^5.0.0:
   version "5.0.0"
@@ -3878,20 +3877,20 @@ html-minifier@^4.0.0:
     relateurl "^0.2.7"
     uglify-js "^3.5.1"
 
-html-react-parser@^5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/html-react-parser/-/html-react-parser-5.1.0.tgz#93037971c883ca1c2ea708d67b211304e6373357"
-  integrity sha512-9BXtf81EFbi/YZDvDQkiwuPg4y8bXQrrWwrMvpIJxREXPv5HiLS0aQvtjY7YP3z2mYFD4urCWSl2ebSDdrrGwg==
+html-react-parser@^5.1.1:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/html-react-parser/-/html-react-parser-5.1.1.tgz#9863709ab1bb5d15bce273253b539a6dd4fa28e2"
+  integrity sha512-L5VK0rKN3VM7uzRH+4wxAL9elvHuCNDjyWKKjcCDR+YWW5Qr7WWSK7+e627DcePVAFi5IMqc+rAU8j/1DpC/Tw==
   dependencies:
     domhandler "5.0.3"
-    html-dom-parser "5.0.6"
+    html-dom-parser "5.0.7"
     react-property "2.0.2"
     style-to-js "1.1.10"
 
-htmlparser2@9.0.0:
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/htmlparser2/-/htmlparser2-9.0.0.tgz#e431142b7eeb1d91672742dea48af8ac7140cddb"
-  integrity sha512-uxbSI98wmFT/G4P2zXx4OVx04qWUmyFPrD2/CNepa2Zo3GPNaCaaxElDgwUrwYWkK1nr9fft0Ya8dws8coDLLQ==
+htmlparser2@9.1.0:
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/htmlparser2/-/htmlparser2-9.1.0.tgz#cdb498d8a75a51f739b61d3f718136c369bc8c23"
+  integrity sha512-5zfg6mHUoaer/97TxnGpxmbR7zJtPwIYFMZ/H5ucTlPZhKvtum05yiPK3Mgai3a0DyVxv7qYqoweaEd2nrYQzQ==
   dependencies:
     domelementtype "^2.3.0"
     domhandler "^5.0.3"
@@ -5918,10 +5917,10 @@ prettier@^2.7.1:
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.8.8.tgz#e8c5d7e98a4305ffe3de2e1fc4aca1a71c28b1da"
   integrity sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==
 
-prettier@^3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.2.1.tgz#babf33580e16c796a9740b9fae551624f7bfeaab"
-  integrity sha512-qSUWshj1IobVbKc226Gw2pync27t0Kf0EdufZa9j7uBSJay1CC+B3K5lAAZoqgX3ASiKuWsk6OmzKRetXNObWg==
+prettier@^3.2.2:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.2.2.tgz#96e580f7ca9c96090ad054616c0c4597e2844b65"
+  integrity sha512-HTByuKZzw7utPiDO523Tt2pLtEyK7OibUD9suEJQrPUCYQqrHr74GGX6VidMrovbf/I50mPqr8j/II6oBAuc5A==
 
 pretty-format@^27.0.2:
   version "27.5.1"
@@ -7170,19 +7169,19 @@ typed-array-length@^1.0.4:
     for-each "^0.3.3"
     is-typed-array "^1.1.9"
 
-typeit-react@2.7.0:
-  version "2.7.0"
-  resolved "https://registry.yarnpkg.com/typeit-react/-/typeit-react-2.7.0.tgz#f928563181ca65242ced2c98aa4e7ca21174e340"
-  integrity sha512-8Jq5RKZPUllZWSdvC4E2Of6qSyxp92xzH3B6bzq9NftLo39A7n8UDuPbd9k//0mKEc2jSKfl9tn5aQPNCVfTuQ==
+typeit-react@2.7.1:
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/typeit-react/-/typeit-react-2.7.1.tgz#30a4b947ddd70320285a414426d711b7db77202f"
+  integrity sha512-40MB1PeED6FOh3yY4ZWhSIppmzqdnwBh7iTOtjgrYntVqs0Bit94w5D+eLqMIWKvRY9NX2+2xSYk6j2QkcTjTQ==
   dependencies:
     react ">=18.2.0"
     react-dom ">=18.2.0"
-    typeit "^8.8.0"
+    typeit "^8.8.3"
 
-typeit@^8.8.0:
-  version "8.8.0"
-  resolved "https://registry.yarnpkg.com/typeit/-/typeit-8.8.0.tgz#9def6390cf4dd886096657fc4557c875e44d8739"
-  integrity sha512-GQp6OW7vxro1HN3F7UPL0C2KzkGs8bFtUgmJSeK+xNhdofI40mkWxrBT2AXQwtS5Txkg7ttwplxvWCQxnUXyrw==
+typeit@^8.8.3:
+  version "8.8.3"
+  resolved "https://registry.yarnpkg.com/typeit/-/typeit-8.8.3.tgz#1933700fb92f0c9d1f53fc9c2d927bb83004052f"
+  integrity sha512-K7nChkj6iyylUi713VBDULUXXLF0pfB6nFPVhNnXTKO2An7NzVz5fjoAHk2FAC3TFLiSnU+QsqhDmap17oBELw==
   dependencies:
     "@types/web-animations-js" "^2.2.16"
 

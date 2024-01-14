@@ -26,7 +26,7 @@ const ThankYouForRegisteringExample = ({ preventDefault, ...props }) => {
       <article>
         <header>
           {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
-          <Link to="#" aria-label="Close" className="close" onClick={preventDefault} />
+          <Link to="#" aria-label="Close" rel="prev" onClick={preventDefault} />
           <p>
             <strong>🗓️ Thank You for Registering!</strong>
           </p>
@@ -127,7 +127,7 @@ export default function Modal() {
           </p>
           <p>
             Inside <Code display="inline">{`<header>`}</Code>{" "}
-            <Code display="inline">{`<a class="close">`}</Code> is defined to{" "}
+            <Code display="inline">{`<a rel="pref">`}</Code> is defined to{" "}
             <Code display="inline">{`float: right;`}</Code> allowing a close icon to be top aligned
             with a title.
           </p>
@@ -135,7 +135,7 @@ export default function Modal() {
           <Code>{`<dialog open>
   <article>
     <header>
-      <Link to="#" aria-label="Close" class="close" />
+      <a href="#" aria-label="Close" rel="prev" />
       <p>
         <strong>🗓️ Thank You for Registering!</strong>
       </p>

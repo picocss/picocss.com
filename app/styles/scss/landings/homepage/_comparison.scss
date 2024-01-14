@@ -1,7 +1,7 @@
 @use "sass:map";
 @use "settings" as *;
 
-body > main > .comparison {
+body > main.homepage > .comparison {
   > hgroup {
     max-width: map.get(map.get($breakpoints, "md"), "viewport");
     margin-bottom: calc(var(#{$css-var-prefix}homepage-spacing-vertical) / 2);
@@ -20,6 +20,7 @@ body > main > .comparison {
 
     > *:not(:first-child):last-child {
       #{$css-var-prefix}color: var(#{$css-var-prefix}color);
+      text-wrap: pretty;
     }
   }
 
