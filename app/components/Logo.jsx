@@ -1,15 +1,14 @@
 import { useHeader } from "~/contexts/HeaderContext";
 
-export default function Logo({ displayWordmark = true, ...props }) {
-  const { shouldAnimateLogo } = useHeader();
+export default function Logo({ displayWordmark = true, shouldAnimateLogo = false, ...props }) {
+  const { shouldAnimateLogo: shouldAnimateLogoOnRouteChange } = useHeader();
+  const isAnimated = shouldAnimateLogo && shouldAnimateLogoOnRouteChange;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox={displayWordmark ? "0 0 381 164" : "279 0 102 93"}
       fill="none"
-      className={`${displayWordmark ? "pico-logo" : "pico-icon"}${
-        shouldAnimateLogo ? " animated" : ""
-      }`}
+      className={`${displayWordmark ? "pico-logo" : "pico-icon"}${isAnimated ? " animated" : ""}`}
       {...props}
     >
       <path
