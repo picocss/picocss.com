@@ -1,5 +1,5 @@
 import metaData from "~/data/meta";
-const { titleSuffix } = metaData();
+const { titleSuffix } = metaData;
 
 export function themeGeneratorTitle(colorName) {
   return `Minimal ${colorName} theme ${titleSuffix}`;

@@ -7,7 +7,7 @@ import Header from "~/components/docs/Header";
 import TableOfContents from "~/components/docs/TableOfContents";
 import metaData from "~/data/meta";
 
-const { titleSuffix } = metaData();
+const { titleSuffix } = metaData;
 
 export const meta = () => [
   { title: `v2.0 ${titleSuffix}` },

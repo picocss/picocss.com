@@ -1,6 +1,6 @@
+import Demo from "~/components/homepage/Demo";
 import Link from "~/components/Link";
-import ArrowRight from "../icons/ArrowRight";
-import Demo from "./Demo";
+import ArrowRight from "~/components/icons/ArrowRight";
 
 export default function Hero(props) {
   return (

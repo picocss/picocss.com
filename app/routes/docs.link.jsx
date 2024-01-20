@@ -1,10 +1,11 @@
 import Code from "~/components/Code";
 import Link from "~/components/Link";
 import Content from "~/components/docs/Content";
+import EditOnGithub from "~/components/docs/EditOnGithub";
 import Header from "~/components/docs/Header";
 import metaData from "~/data/meta";
 
-const { titleSuffix } = metaData();
+const { titleSuffix } = metaData;
 
 export const meta = () => [
   { title: `Link ${titleSuffix}` },
@@ -31,50 +32,55 @@ export default function LinkPage() {
 
       {/* Content */}
       <Content>
-        <article aria-label="Links example" className="component">
-          <Link to="#" onClick={preventDefault}>
-            Primary
-          </Link>
-          <br />
-          <Link to="#" onClick={preventDefault} className="secondary">
-            Secondary
-          </Link>
-          <br />
-          <Link to="#" onClick={preventDefault} className="contrast">
-            Contrast
-          </Link>
-          <br />
-          <Code as="footer">{`<a href="#">Primary</a>
+        <section>
+          <article aria-label="Links example" className="component">
+            <Link to="#" onClick={preventDefault}>
+              Primary
+            </Link>
+            <br />
+            <Link to="#" onClick={preventDefault} className="secondary">
+              Secondary
+            </Link>
+            <br />
+            <Link to="#" onClick={preventDefault} className="contrast">
+              Contrast
+            </Link>
+            <br />
+            <Code as="footer">{`<a href="#">Primary</a>
 <a href="#" class="secondary">Secondary</a>
 <a href="#" class="contrast">Contrast</a>`}</Code>
-        </article>
+          </article>
 
-        <p>
-          <Code display="inline">.secondary</Code> and <Code display="inline">.contrast</Code>{" "}
-          classes are not available in the{" "}
-          <Link to="/docs/classless">class&#8209;less&nbsp;version</Link>.
-        </p>
-        <p>
-          <Code display="inline">aria-current</Code> send the active state to assistive technologies
-          and is displayed as the hover links.
-        </p>
-        <article aria-label="Active link example" className="component">
-          <Link to="#" onClick={preventDefault}>
-            Regular link
-          </Link>
-          <br />
-          <Link to="#" onClick={preventDefault} aria-current="page">
-            Active link
-          </Link>
-          <br />
-          <Link to="#" onClick={preventDefault}>
-            Regular link
-          </Link>
-          <br />
-          <Code as="footer">{`<a href="#">Regular link</a>
+          <p>
+            <Code display="inline">.secondary</Code> and <Code display="inline">.contrast</Code>{" "}
+            classes are not available in the{" "}
+            <Link to="/docs/classless">class&#8209;less&nbsp;version</Link>.
+          </p>
+          <p>
+            <Code display="inline">aria-current</Code> send the active state to assistive
+            technologies and is displayed as the hover links.
+          </p>
+          <article aria-label="Active link example" className="component">
+            <Link to="#" onClick={preventDefault}>
+              Regular link
+            </Link>
+            <br />
+            <Link to="#" onClick={preventDefault} aria-current="page">
+              Active link
+            </Link>
+            <br />
+            <Link to="#" onClick={preventDefault}>
+              Regular link
+            </Link>
+            <br />
+            <Code as="footer">{`<a href="#">Regular link</a>
 <a href="#" aria-current="page">Active link</a>
 <a href="#">Regular link</a>`}</Code>
-        </article>
+          </article>
+        </section>
+
+        {/* Edit on GitHub */}
+        <EditOnGithub file="docs.link.jsx" />
       </Content>
     </>
   );

@@ -1,10 +1,11 @@
 import Code from "~/components/Code";
 import Link from "~/components/Link";
 import Content from "~/components/docs/Content";
+import EditOnGithub from "~/components/docs/EditOnGithub";
 import Header from "~/components/docs/Header";
 import metaData from "~/data/meta";
 
-const { titleSuffix } = metaData();
+const { titleSuffix } = metaData;
 
 export const meta = () => [
   { title: `Loading ${titleSuffix}` },
@@ -66,6 +67,9 @@ export default function Loading() {
 <button aria-busy="true" class="outline contrast">Please wait…</button>`}</Code>
           </article>
         </section>
+
+        {/* Edit on GitHub */}
+        <EditOnGithub file="docs.loading.jsx" />
       </Content>
     </>
   );

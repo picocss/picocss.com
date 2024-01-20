@@ -4,7 +4,7 @@ import Header from "~/components/docs/Header";
 import metaData from "~/data/meta";
 import colorPickerStyles from "~/styles/css/docs/color-picker.css";
 
-const { titleSuffix } = metaData();
+const { titleSuffix } = metaData;
 
 export const meta = () => [
   { title: `Minimal theme generator ${titleSuffix}` },

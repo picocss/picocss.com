@@ -2,7 +2,7 @@ import { useNavigation } from "~/contexts/NavigationContext";
 import metaData from "~/data/meta";
 
 export default function Head({ children, ...props }) {
-  const { domain } = metaData();
+  const { domain } = metaData;
   const { routePath } = useNavigation();
   const canonicalUrl = `${domain}${routePath.replace(/\/\s*$/, "")}`;
   return (

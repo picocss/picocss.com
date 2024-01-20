@@ -5,7 +5,7 @@ import { useNavigation } from "~/contexts/NavigationContext";
 import metaData from "~/data/meta";
 import landingPageStyles from "~/styles/css/landings.css";
 
-const { titleSuffix } = metaData();
+const { titleSuffix } = metaData;
 
 export const meta = () => [
   { title: `Examples ${titleSuffix}` },

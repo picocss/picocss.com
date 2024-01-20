@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import metaData from "~/data/meta";
 
-const { defaultDescription, domain, githubRepo, siteName, twitterUrl, version } = metaData();
+const { defaultDescription, domain, githubRepo, siteName, twitterUrl, version } = metaData;
 
 export default function StructuredData() {
   return (

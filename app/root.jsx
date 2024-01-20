@@ -9,18 +9,18 @@ import {
   useRouteError,
 } from "@remix-run/react";
 import { HelmetProvider } from "react-helmet-async";
+import Body from "~/components/Body";
+import Footer from "~/components/Footer";
+import Head from "~/components/Head/";
+import RootError from "~/components/RootError";
+import StructuredData from "~/components/StructuredData";
 import { HeaderProvider } from "~/contexts/HeaderContext";
 import { ModalProvider } from "~/contexts/ModalContext";
 import { PageProvider } from "~/contexts/PageContext";
 import metaData from "~/data/meta";
 import picoStyles from "~/styles/css/main.css";
-import Body from "./components/Body";
-import Footer from "./components/Footer";
-import Head from "./components/Head/";
-import RootError from "./components/RootError";
-import StructuredData from "./components/StructuredData";
 
-const { domain, siteName, titleSuffix, twitterHandle } = metaData();
+const { domain, siteName, titleSuffix, twitterHandle } = metaData;
 
 export const meta = () => {
   return [

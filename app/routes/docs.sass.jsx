@@ -3,6 +3,7 @@ import Code from "~/components/Code";
 import Heading from "~/components/Heading";
 import Link from "~/components/Link";
 import Content from "~/components/docs/Content";
+import EditOnGithub from "~/components/docs/EditOnGithub";
 import Header from "~/components/docs/Header";
 import TableOfContents from "~/components/docs/TableOfContents";
 import picoScssSettings from "~/data/code-snippets/_settings.txt";
@@ -10,7 +11,7 @@ import metaData from "~/data/meta";
 
 import { removeLines } from "~/utils";
 
-const { titleSuffix, githubTreeBaseUrl } = metaData();
+const { titleSuffix, githubTreeBaseUrl } = metaData;
 
 export const meta = () => [
   { title: `Sass ${titleSuffix}` },
@@ -240,6 +241,9 @@ export default function Sass() {
 );
 `}</Code>
         </section>
+
+        {/* Edit on GitHub */}
+        <EditOnGithub file="docs.sass.jsx" />
       </Content>
     </>
   );

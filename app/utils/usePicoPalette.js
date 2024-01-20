@@ -1,4 +1,4 @@
-import colors from "~/data/colors.json";
+import colors from "~/data/colors";
 
 // Get the color object from the color family and shade
 const getColor = ({ family, shade }) => {

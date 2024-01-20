@@ -1,10 +1,17 @@
 import { useEffect, useRef, useState } from "react";
+import Code from "~/components/Code";
+import Heading from "~/components/Heading";
+import Link from "~/components/Link";
+import ColorModal from "~/components/docs/ColorModal";
+import Content from "~/components/docs/Content";
+import EditOnGithub from "~/components/docs/EditOnGithub";
+import Header from "~/components/docs/Header";
+import TableOfContents from "~/components/docs/TableOfContents";
 import { useModal } from "~/contexts/ModalContext";
-
 import picoColorsScssSettings from "~/data/code-snippets/_color-utilities-settings.txt";
 import metaData from "~/data/meta";
 import paletteImporterImage from "~/images/customization-colors-palette-importer.png";
-
+import colorUtilities from "~/styles/css/docs/color-utilities.css";
 import {
   getColorFamilies,
   getColorPalette,
@@ -14,17 +21,7 @@ import {
   sentenceCase,
 } from "~/utils";
 
-import colorUtilities from "~/styles/css/docs/color-utilities.css";
-
-import Code from "~/components/Code";
-import Heading from "~/components/Heading";
-import Link from "~/components/Link";
-import ColorModal from "~/components/docs/ColorModal";
-import Content from "~/components/docs/Content";
-import Header from "~/components/docs/Header";
-import TableOfContents from "~/components/docs/TableOfContents";
-
-const { cdnBaseUrl, titleSuffix } = metaData();
+const { cdnBaseUrl, titleSuffix } = metaData;
 
 export function links() {
   return [{ rel: "stylesheet", href: colorUtilities }];
@@ -262,6 +259,9 @@ export default function Colors() {
             <DownloadColorPalette />
           </p>
         </section>
+
+        {/* Edit on GitHub */}
+        <EditOnGithub file="docs.colors.jsx" />
 
         {modalIsOpen && (
           <ColorModal

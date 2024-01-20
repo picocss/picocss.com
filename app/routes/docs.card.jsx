@@ -2,11 +2,12 @@ import { useRef } from "react";
 import Code from "~/components/Code";
 import Heading from "~/components/Heading";
 import Content from "~/components/docs/Content";
+import EditOnGithub from "~/components/docs/EditOnGithub";
 import Header from "~/components/docs/Header";
 import TableOfContents from "~/components/docs/TableOfContents";
 import metaData from "~/data/meta";
 
-const { titleSuffix } = metaData();
+const { titleSuffix } = metaData;
 
 export const meta = () => [
   { title: `Card ${titleSuffix}` },
@@ -72,6 +73,9 @@ export default function Card() {
   <footer>Footer</footer>
 </article>`}</Code>
         </section>
+
+        {/* Edit on GitHub */}
+        <EditOnGithub file="docs.card.jsx" />
       </Content>
     </>
   );

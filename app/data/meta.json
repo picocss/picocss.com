@@ -1,0 +1,29 @@
+{
+  "siteName": "Pico CSS",
+  "defaultTitle": "Pico CSS • Minimal CSS Framework for semantic HTML",
+  "defaultDescription": "Minimalist and lightweight starter kit that prioritizes semantic syntax, making every HTML element responsive and elegant by default.",
+  "domain": "https://v2.picocss.com",
+  "titleSuffix": "• Pico CSS",
+  "versions": {
+    "current": "2.0.0-rc2",
+    "all": [
+      {
+        "version": "2.0.0-rc2",
+        "url": "/docs"
+      },
+      {
+        "version": "1.5.11",
+        "url": "/docs/1.5.11/"
+      }
+    ]
+  },
+  "cdnBaseUrl": "https://cdn.jsdelivr.net/npm/@picocss/pico@next/",
+  "githubRepo": "https://github.com/picocss/pico",
+  "githubFilesBaseUrl": "https://github.com/picocss/pico/blob/v2/",
+  "githubTreeBaseUrl": "https://github.com/picocss/pico/tree/v2/",
+  "documentationGithubRepo": "https://github.com/picocss/picocss.com",
+  "documentationGithubFilesBaseUrl": "https://github.com/picocss/picocss.com/blob/main/",
+  "documentationGithubTreeBaseUrl": "https://github.com/picocss/picocss.com/tree/main/",
+  "twitterUrl": "https://twitter.com/picocss",
+  "twitterHandle": "@picocss"
+}

@@ -3,11 +3,12 @@ import Code from "~/components/Code";
 import Heading from "~/components/Heading";
 import Link from "~/components/Link";
 import Content from "~/components/docs/Content";
+import EditOnGithub from "~/components/docs/EditOnGithub";
 import Header from "~/components/docs/Header";
 import TableOfContents from "~/components/docs/TableOfContents";
 import metaData from "~/data/meta";
 
-const { titleSuffix, cdnBaseUrl } = metaData();
+const { titleSuffix, cdnBaseUrl } = metaData;
 
 export const meta = () => [
   { title: `Class-less version ${titleSuffix}` },
@@ -169,6 +170,9 @@ body > footer {
             <Link to="/docs/sass">compiling a custom version of Pico with SASS</Link>.
           </p>
         </section>
+
+        {/* Edit on GitHub */}
+        <EditOnGithub file="docs.classless.jsx" />
       </Content>
     </>
   );

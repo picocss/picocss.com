@@ -1,7 +1,7 @@
 import Logo from "~/components/Logo";
+import Edit from "~/components/icons/Edit";
+import GitHub from "~/components/icons/GitHub";
 import examples from "~/data/examples";
-import Edit from "../icons/Edit";
-import GitHub from "../icons/GitHub";
 
 const ExternalLink = ({ url, children, ...props }) => (
   <a href={url} target="_blank" rel="noopener noreferrer" {...props}>

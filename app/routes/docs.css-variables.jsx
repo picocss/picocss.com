@@ -3,6 +3,7 @@ import Code from "~/components/Code";
 import Heading from "~/components/Heading";
 import Link from "~/components/Link";
 import Content from "~/components/docs/Content";
+import EditOnGithub from "~/components/docs/EditOnGithub";
 import Header from "~/components/docs/Header";
 import TableOfContents from "~/components/docs/TableOfContents";
 import colorsCssVars from "~/data/code-snippets/default-theme-color-schemes.txt";
@@ -10,7 +11,7 @@ import stylesCssVars from "~/data/code-snippets/default-theme-styles.txt";
 import metaData from "~/data/meta";
 import { removeLines } from "~/utils";
 
-const { titleSuffix } = metaData();
+const { titleSuffix } = metaData;
 
 export const meta = () => [
   { title: `CSS variables ${titleSuffix}` },
@@ -238,6 +239,9 @@ export default function CssVariables() {
             </Code>
           </details>
         </section>
+
+        {/* Edit on GitHub */}
+        <EditOnGithub file="docs.css-variables.jsx" />
       </Content>
     </>
   );

@@ -1,9 +1,9 @@
 import Code from "~/components/Code";
+import Heading from "~/components/Heading";
 import Link from "~/components/Link";
 import Check from "~/components/icons/Check";
 import { useNavigation } from "~/contexts/NavigationContext";
 import { getColorFamilies, removeLines } from "~/utils";
-import Heading from "../Heading";
 
 // Add a missing empty line before a comment.
 const addMissingEmptyLineBeforeComment = ({ code }) => {

@@ -6,7 +6,7 @@ import TwitterIcon from "~/components/icons/XTwitter";
 import { usePage } from "~/contexts/PageContext";
 import metaData from "~/data/meta";
 
-const { versions } = metaData();
+const { versions } = metaData;
 
 export default function Nav({ shouldDisplayDocsVersion = false, ...props }) {
   const { pageTheme, switchTheme } = usePage();

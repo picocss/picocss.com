@@ -3,7 +3,7 @@ import Content from "~/components/docs/Content";
 import Header from "~/components/docs/Header";
 import metaData from "~/data/meta";
 
-const { titleSuffix } = metaData();
+const { titleSuffix } = metaData;
 
 export const meta = () => [
   { title: `Mission ${titleSuffix}` },

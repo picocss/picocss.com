@@ -13,7 +13,7 @@ import darkIconSvg from "~/images/brand-assets/pico-mark-dark.svg";
 import lightIconPng from "~/images/brand-assets/pico-mark-light.png";
 import lightIconSvg from "~/images/brand-assets/pico-mark-light.svg";
 
-const { titleSuffix } = metaData();
+const { titleSuffix } = metaData;
 
 export const meta = () => [
   { title: `Brand ${titleSuffix}` },

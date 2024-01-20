@@ -4,7 +4,7 @@ import Logo from "~/components/Logo";
 import metaData from "~/data/meta";
 
 export default forwardRef(function Footer(props, ref) {
-  const { versions } = metaData();
+  const { versions } = metaData;
   const { current } = versions;
   return (
     <footer {...props} ref={ref}>

@@ -1,9 +1,10 @@
 import Code from "~/components/Code";
 import Content from "~/components/docs/Content";
+import EditOnGithub from "~/components/docs/EditOnGithub";
 import Header from "~/components/docs/Header";
 import metaData from "~/data/meta";
 
-const { titleSuffix } = metaData();
+const { titleSuffix } = metaData;
 
 export const meta = () => [
   { title: `Range ${titleSuffix}` },
@@ -50,6 +51,9 @@ export default function Range() {
 </label>`}</Code>
           </article>
         </section>
+
+        {/* Edit on GitHub */}
+        <EditOnGithub file="docs.forms.range.jsx" />
       </Content>
     </>
   );
