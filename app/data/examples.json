@@ -31,12 +31,12 @@
   },
   {
     "title": "Customized design system",
-    "description": "A minimal example to customize Pico CSS with SASS.",
+    "description": "An example to customize Pico CSS with SASS.",
     "stack": ["HTML", "Sass"],
     "links": {
-      "preview": null,
-      "editor": null,
-      "source": null
+      "preview": "https://gddt65-3000.csb.app/",
+      "editor": "https://codesandbox.io/p/devbox/github/picocss/examples/tree/master/v2-sass-customized-design-system?embed=1&file=%2Fscss%2Fmain.scss",
+      "source": "https://github.com/picocss/examples/tree/master/v2-sass-customized-design-system"
     }
   },
   {
