@@ -27,7 +27,7 @@ export default function Docs() {
   return (
     <>
       <Header />
-      <main className={`homepage container ${isLoading && " is-loading"}`}>
+      <main className={`homepage container${isLoading ? " is-loading" : ""}`}>
         <Hero />
         <Stats />
         <Features />

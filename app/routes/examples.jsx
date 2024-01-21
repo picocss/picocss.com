@@ -25,7 +25,7 @@ export default function Docs() {
   return (
     <>
       <Header />
-      <main className={`examples container ${isLoading && " is-loading"}`}>
+      <main className={`examples container${isLoading ? " is-loading" : ""}`}>
         <Hero />
         <Examples />
       </main>
