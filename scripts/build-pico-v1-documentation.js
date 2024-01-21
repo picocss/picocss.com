@@ -4,17 +4,9 @@ const { execSync } = require("child_process");
 
 // Settings
 const picoLibraryFolder = "./node_modules/@picocss/pico-v1/";
-const picoLibraryPackageJsonFilePath = picoLibraryFolder + "package.json";
 const picoCssFilePath = picoLibraryFolder + "css/pico.min.css";
 const picoCssSourceMapFilePath = picoLibraryFolder + "css/pico.min.css.map";
 const picoDocsFolder = picoLibraryFolder + "docs/";
-
-// Get the version of the Pico library from its package.json file
-function getPicoLibraryVersion() {
-  const picoLibraryPackageJsonFileContent = readFileSync(picoLibraryPackageJsonFilePath, "utf8");
-  const picoLibraryPackageJson = JSON.parse(picoLibraryPackageJsonFileContent);
-  return picoLibraryPackageJson.version;
-}
 
 // Create a folder if it does not exist
 function createFolderIfNonExistent(folderPath) {
@@ -72,21 +64,20 @@ function replaceCssPathInHeadPartial(picoDocsHeadPartialFilePath) {
 }
 
 // Build the documentation with html-includes
-function buildDocs(picoLibraryVersion) {
+function buildDocs() {
   execSync(
-    `html-includes --src public/docs/${picoLibraryVersion}/src --dest public/docs/${picoLibraryVersion}/ --minify minifyJS=true --quiet`,
+    `html-includes --src public/docs/v1/src --dest public/docs/v1/ --minify minifyJS=true --quiet`,
   );
 }
 
-// Temove the documentation's source folder
-function removeDocsSourceFolder(picoLibraryVersion) {
-  rmSync(`public/docs/${picoLibraryVersion}/src`, { recursive: true, force: true });
+// Remove the documentation's source folder
+function removeDocsSourceFolder() {
+  rmSync(`public/docs/v1/src`, { recursive: true, force: true });
 }
 
 // Main
 function main() {
-  const picoLibraryVersion = getPicoLibraryVersion();
-  const outputDocsFolder = `./public/docs/${picoLibraryVersion}/`;
+  const outputDocsFolder = `./public/docs/v1/`;
   const outputCssFolder = outputDocsFolder + "css/";
   const picoDocsHeadPartialFilePath = outputDocsFolder + "src/_head.html";
 
@@ -94,8 +85,8 @@ function main() {
   copyDocsFolderToOutputFolder(outputDocsFolder);
   copyPicoCssFileToOutputFolder(outputCssFolder);
   replaceCssPathInHeadPartial(picoDocsHeadPartialFilePath);
-  buildDocs(picoLibraryVersion);
-  removeDocsSourceFolder(picoLibraryVersion);
+  buildDocs();
+  removeDocsSourceFolder();
 }
 
 main();
