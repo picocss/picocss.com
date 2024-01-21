@@ -12,32 +12,36 @@ const ModalProvider = ({ children }) => {
   const [scrollbarWidth, setScrollbarWidth] = useState(0);
 
   // On open modal
-  const onOpenModal = ({ isAnimated = true } = {}) => {
-    if (isAnimated) {
-      setModalHelperClasses("modal-is-open modal-is-opening");
-      setModalIsOpen(true);
-      setTimeout(() => {
-        setModalHelperClasses("modal-is-open");
-      }, modalAnimationDuration);
-    } else {
+  const onOpenModal = () => {
+    setModalHelperClasses("modal-is-open modal-is-opening");
+    setModalIsOpen(true);
+    setTimeout(() => {
       setModalHelperClasses("modal-is-open");
-      setModalIsOpen(true);
-    }
+    }, modalAnimationDuration);
   };
 
   // On close modal
-  const onCloseModal = ({ isAnimated = true } = {}) => {
-    if (isAnimated) {
-      setModalHelperClasses("modal-is-open modal-is-closing");
-      setTimeout(() => {
-        setModalHelperClasses();
-        setModalIsOpen(false);
-      }, modalAnimationDuration);
-    } else {
+  const onCloseModal = () => {
+    setModalHelperClasses("modal-is-open modal-is-closing");
+    setTimeout(() => {
       setModalHelperClasses();
       setModalIsOpen(false);
-    }
+    }, modalAnimationDuration);
   };
+
+  // Handle escape key
+  useEffect(() => {
+    const handleEscape = (event) => {
+      if (!modalIsOpen) return;
+      if (event.key === "Escape") {
+        onCloseModal(event);
+      }
+    };
+    window.addEventListener("keydown", handleEscape);
+    return () => {
+      window.removeEventListener("keydown", handleEscape);
+    };
+  }, [modalIsOpen]);
 
   // Set scrollbar when modal is open
   useEffect(() => {

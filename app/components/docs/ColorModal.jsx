@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { use100vh } from "react-div-100vh";
 import Code from "~/components/Code";
-import Link from "~/components/Link";
 import Close from "~/components/icons/Close";
 import {
   getColorFromNextColorFamily,
@@ -76,25 +75,16 @@ export default function ColorModal({ color, isOpen, onClose, setSelectedColor, .
       }
     };
 
-    // Key escape: close modal
-    const handleKeyEscape = (event) => {
-      if (event.key === "Escape") {
-        onClose(event);
-      }
-    };
-
     document.addEventListener("keydown", handleKeyUp);
     document.addEventListener("keydown", handleKeyRight);
     document.addEventListener("keydown", handleKeyDown);
     document.addEventListener("keydown", handleKeyLeft);
-    document.addEventListener("keydown", handleKeyEscape);
 
     return () => {
       document.removeEventListener("keydown", handleKeyUp);
       document.removeEventListener("keydown", handleKeyRight);
       document.removeEventListener("keydown", handleKeyDown);
       document.removeEventListener("keydown", handleKeyLeft);
-      document.removeEventListener("keydown", handleKeyEscape);
     };
   }, [setSelectedColor, onClose, color]);
 
@@ -108,9 +98,9 @@ export default function ColorModal({ color, isOpen, onClose, setSelectedColor, .
     <dialog open={isOpen} className={`color`} onClick={handleClickOverlay} {...props}>
       <article style={{ "--pico-glowing-color": `${mainHexValue}26`, maxHeight: modalHeight }}>
         <header className={backgroundColorClassName}>
-          <Link to="#" aria-label="Close" className="close" onClick={onClose}>
+          <a href="#close" rel="prev" aria-label="Close" className="close" onClick={onClose}>
             <Close />
-          </Link>
+          </a>
           <hgroup>
             <h3 className="color-family">
               {sentenceCase(color.family)}&nbsp;{color.shade}
