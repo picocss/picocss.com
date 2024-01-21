@@ -6,7 +6,7 @@ const ANIMATION_DURATION = 1000;
 const HeaderContext = createContext({});
 const useHeader = () => useContext(HeaderContext);
 
-export default function HeaderProvider({ shouldAnimateOnRouteChange = true, children }) {
+const HeaderProvider = ({ shouldAnimateOnRouteChange = true, children }) => {
   const headerRef = useRef();
   const { locationPath } = useNavigation();
   const [headerHeight, setHeaderHeight] = useState(0);
@@ -32,6 +32,6 @@ export default function HeaderProvider({ shouldAnimateOnRouteChange = true, chil
       {children}
     </HeaderContext.Provider>
   );
-}
+};
 
 export { HeaderProvider, useHeader };

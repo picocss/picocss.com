@@ -4,7 +4,7 @@ import { createContext, useContext } from "react";
 const NavigationContext = createContext({});
 const useNavigation = () => useContext(NavigationContext);
 
-export default function NavigationProvider({ children }) {
+const NavigationProvider = ({ children }) => {
   const navigation = useRemixNavigation();
   const routes = useMatches();
 
@@ -25,6 +25,6 @@ export default function NavigationProvider({ children }) {
       {children}
     </NavigationContext.Provider>
   );
-}
+};
 
 export { NavigationProvider, useNavigation };

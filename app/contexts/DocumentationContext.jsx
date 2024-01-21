@@ -3,7 +3,7 @@ import { createContext, useContext, useState } from "react";
 const DocumentationContext = createContext({});
 const useDocumentation = () => useContext(DocumentationContext);
 
-export default function DocumentationProvider({ children }) {
+const DocumentationProvider = ({ children }) => {
   const [menuIsOpenOnMobile, setMenuIsOpenOnMobile] = useState(false);
 
   return (
@@ -11,6 +11,6 @@ export default function DocumentationProvider({ children }) {
       {children}
     </DocumentationContext.Provider>
   );
-}
+};
 
 export { DocumentationProvider, useDocumentation };

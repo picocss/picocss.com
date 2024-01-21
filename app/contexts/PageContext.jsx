@@ -7,7 +7,7 @@ import { NavigationProvider } from "~/contexts/NavigationContext";
 const PageContext = createContext({});
 const usePage = () => useContext(PageContext);
 
-export default function PageProvider({ children, ...props }) {
+const PageProvider = ({ children, ...props }) => {
   const isSSR = typeof window === "undefined";
 
   // Modal
@@ -53,6 +53,6 @@ export default function PageProvider({ children, ...props }) {
       </html>
     </PageContext.Provider>
   );
-}
+};
 
 export { PageProvider, usePage };

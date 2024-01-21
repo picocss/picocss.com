@@ -4,7 +4,7 @@ import { isScrollbarVisible } from "~/utils";
 const ModalContext = createContext({});
 const useModal = () => useContext(ModalContext);
 
-export default function ModalProvider({ children }) {
+const ModalProvider = ({ children }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [modalHelperClasses, setModalHelperClasses] = useState();
   const scrollbarIsVisible = isScrollbarVisible();
@@ -60,6 +60,6 @@ export default function ModalProvider({ children }) {
       {children}
     </ModalContext.Provider>
   );
-}
+};
 
 export { ModalProvider, useModal };
