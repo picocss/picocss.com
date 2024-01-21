@@ -84,7 +84,9 @@ export default function Code(props) {
   } = useDemo();
 
   const delOpts = { instant: true, delay: delay.pause };
+  const delInstant = { instant: true, delay: 0 };
   const moveOpts = { instant: true, delay: delay.pause };
+  const moveInstant = { instant: true, delay: 0 };
 
   return (
     <code {...props}>
@@ -148,18 +150,31 @@ export default function Code(props) {
             .delete(53, delOpts)
             .move(-5, moveOpts)
             .delete(24, delOpts)
-            .move(-62, moveOpts)
-            .type(` ${attr("role")}=${value('"group"')}`)
-            .move(67, moveOpts)
+            .move(-58, moveOpts)
             .type("<br />  ", moveOpts)
+            .move(-3, moveOpts)
+            .type(`&lt;${tag("fieldset")} ${attr("role")}=${value('"group"')}&gt;`)
+            .move(66, moveOpts)
+            .type("<br />  ", moveOpts)
+            .type(`&lt;/${tag("fieldset")}&gt;`)
+            .move(-16, moveInstant)
+            .type(`  `, moveInstant)
+            .move(-36, moveInstant)
+            .type(`  `, moveInstant)
+            .move(-19, moveInstant)
+            .type(`  `, moveInstant)
+            .move(-12, moveInstant)
+            .type(`  `, moveInstant)
+            .move(69, moveInstant)
+            .type("<br />    ", moveOpts)
             .type(
               `&lt;${tag("button")} ${attr("type")}=${value('"submit"')}&gt;&lt;/${tag(
                 "button",
               )}&gt;`,
             )
             .move(-9, moveOpts)
-            .type("<br />    <br />  ", moveOpts)
-            .move(-3, moveOpts)
+            .type("<br />      <br />    ", moveOpts)
+            .move(-5, moveOpts)
             .type("Subscribe")
             .exec(() => {
               setFormRole("group");
@@ -174,9 +189,26 @@ export default function Code(props) {
 
             // Search input with button
             .pause(delay.displayComponent)
-            .move(-106, moveOpts)
-            .delete(7, delOpts)
-            .type(`${value('"search"')}`)
+            .move(-117, moveOpts)
+            .delete(26, delOpts)
+            .move(145, moveOpts)
+            .delete(14, delOpts)
+            .move(-10, moveInstant)
+            .delete(2, delInstant)
+            .move(-12, moveInstant)
+            .delete(2, delInstant)
+            .move(-26, moveInstant)
+            .delete(2, delInstant)
+            .move(-5, moveInstant)
+            .delete(2, delInstant)
+            .move(-34, moveInstant)
+            .delete(2, delInstant)
+            .move(-17, moveInstant)
+            .delete(2, delInstant)
+            .move(-10, moveInstant)
+            .delete(2, delInstant)
+            .move(-4, moveOpts)
+            .type(` ${attr("role")}=${value('"search"')}`)
             .move(27, moveOpts)
             .delete(7, delOpts)
             .type(`${value('"search"')}`)

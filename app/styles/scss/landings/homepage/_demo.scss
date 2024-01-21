@@ -38,6 +38,9 @@ body > main.homepage > .hero > .demo {
           var(--demo-height, 260px) + (var(#{$css-var-prefix}block-spacing-vertical) * 2)
         );
         padding-bottom: 0;
+        animation-duration: 6s;
+        animation-fill-mode: both;
+        animation-name: delayedFadeIn;
         transition: height 0.4s ease-out;
       }
 
@@ -258,5 +261,17 @@ body > main.homepage > .hero > .demo {
         opacity: 0.66;
       }
     }
+  }
+}
+
+@keyframes delayedFadeIn {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
   }
 }
