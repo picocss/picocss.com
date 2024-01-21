@@ -82,11 +82,17 @@ export default function Modal() {
   const liveDemoRef = useRef();
   const utilitiesRef = useRef();
 
+  const handleClickOverlay = (event) => {
+    if (event.target === event.currentTarget) {
+      onCloseModal();
+    }
+  };
+
   return (
     <>
       {/* Demo modal */}
       <ConfirmYourMembershipExample
-        handleClickOverlay={onCloseModal}
+        handleClickOverlay={handleClickOverlay}
         modalIsOpen={modalIsOpen}
         onCloseModal={onCloseModal}
       />

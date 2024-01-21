@@ -19,6 +19,7 @@ export default function Breadcrumb(props) {
   };
 
   const checkBreadcrumbPosition = () => {
+    if (!breadcrumbRef.current) return;
     const { top } = breadcrumbRef.current.getBoundingClientRect();
     setIsBreadcrumbSticky(top <= -1);
   };

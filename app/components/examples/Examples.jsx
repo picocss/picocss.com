@@ -36,7 +36,7 @@ export default function Hero(props) {
       {examples.map((example, index) => {
         const { title, description, stack, links } = example;
         const shouldDisplay =
-          links.source !== null || links.editor !== null || links.preview !== null;
+          links.source !== null && links.editor !== null && links.preview !== null;
         if (!shouldDisplay) return null;
         return (
           <article key={index}>
