@@ -10,7 +10,7 @@ export default function TableOfContents({ data, ...props }) {
     <aside id="table-of-contents" {...props}>
       <Scrollspy sectionRefs={sectionRefs} offset={-(headerHeight * 2)}>
         {({ currentElementIndexInViewport }) => (
-          <nav>
+          <nav className="is-sticky-above-lg ">
             <details open>
               <summary>Content</summary>
               <ul>

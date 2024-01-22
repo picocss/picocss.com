@@ -61,12 +61,15 @@ body {
 
       > aside {
         > nav {
-          position: sticky;
-          top: calc(
-            var(#{$css-var-prefix}main-top-offset) + calc(var(--pico-block-spacing-vertical) / 2)
-          );
-          transition: top var(#{$css-var-prefix}transition);
-          transition-delay: 0.05s;
+          margin-top: calc(var(--pico-block-spacing-vertical) / 2);
+          &.is-sticky-above-lg {
+            position: sticky;
+            top: calc(
+              var(#{$css-var-prefix}main-top-offset) + (var(--pico-block-spacing-vertical) / 2)
+            );
+            transition: top var(#{$css-var-prefix}transition);
+            transition-delay: 0.05s;
+          }
         }
       }
 

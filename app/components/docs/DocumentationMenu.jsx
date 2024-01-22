@@ -1,5 +1,5 @@
 import parse from "html-react-parser";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Heading from "~/components/Heading";
 import Link from "~/components/Link";
 import Close from "~/components/icons/Close";
@@ -8,14 +8,26 @@ import { useNavigation } from "~/contexts/NavigationContext";
 import documentationMenu from "~/data/documentationMenu";
 
 export default function Aside(props) {
+  const navRef = useRef();
   const { locationPath } = useNavigation();
   const isThemeGeneratorNestedPage = locationPath.includes("/docs/theme-generator/");
   const { menuIsOpenOnMobile, setMenuIsOpenOnMobile } = useDocumentation();
   const [currentCategory, setCurrentCategory] = useState("Getting started");
+  const [isStickyAboveLg, setIsStickyAboveLg] = useState(false);
 
   const onClose = (event) => {
     event.preventDefault();
     setMenuIsOpenOnMobile(false);
+  };
+
+  const checkIfShouldBeStickyAboveLg = () => {
+    if (!navRef.current) return;
+    const navTop = navRef.current.getBoundingClientRect().top;
+    const navHeight = navRef.current.offsetHeight;
+    const windowHeight = window.innerHeight;
+
+    const isNavHeightGreaterThanWindowHeight = navHeight + navTop > windowHeight;
+    setIsStickyAboveLg(!isNavHeightGreaterThanWindowHeight);
   };
 
   return (
@@ -32,7 +44,7 @@ export default function Aside(props) {
       </header>
 
       {/* Navigation */}
-      <nav>
+      <nav ref={navRef} className={isStickyAboveLg ? "is-sticky-above-lg" : ""}>
         {documentationMenu.map((category, index) => {
           const { category: title, links } = category;
           const isCurrentCategory = links.some((link) => link.route === locationPath);
@@ -44,7 +56,7 @@ export default function Aside(props) {
           }
 
           return (
-            <details key={index} open={shouldOpen}>
+            <details key={index} open={shouldOpen} onToggle={checkIfShouldBeStickyAboveLg}>
               {/* Category button */}
               <summary {...(shouldOpen && { "aria-current": true })}>{parse(title)}</summary>
               <ul>
