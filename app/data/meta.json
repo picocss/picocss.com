@@ -5,10 +5,10 @@
   "domain": "https://v2.picocss.com",
   "titleSuffix": "• Pico CSS",
   "versions": {
-    "current": "2.0.0-rc2",
+    "current": "2.0.0-rc3",
     "all": [
       {
-        "version": "2.0.0-rc2",
+        "version": "2.0.0-rc3",
         "url": "/docs"
       },
       {
