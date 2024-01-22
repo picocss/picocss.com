@@ -1,0 +1,15 @@
+@use "sass:map";
+@use "settings" as *;
+
+/**
+ * Page: Card
+ */
+
+main#card {
+  // Remove responsive spacings to demo this component
+  // because it's not the default behavior anymore.
+  article {
+    #{$css-var-prefix}block-spacing-vertical: var(#{$css-var-prefix}spacing);
+    #{$css-var-prefix}block-spacing-horizontal: var(#{$css-var-prefix}spacing);
+  }
+}

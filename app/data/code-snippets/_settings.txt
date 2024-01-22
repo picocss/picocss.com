@@ -21,8 +21,8 @@ $enable-semantic-container: false !default;
 $enable-viewport: true !default;
 
 // Enable responsive spacings for <header>, <main>, <footer>, <section>, <article>
-// Fixed spacings if disabled
-$enable-responsive-spacings: true !default;
+// Fixed spacings by default
+$enable-responsive-spacings: false !default;
 
 // Enable responsive typography
 // Fixed root element size (rem) if disabled

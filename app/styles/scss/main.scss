@@ -1,5 +1,7 @@
 // Pico CSS
-@use "pico";
+@use "pico" with (
+  $enable-responsive-spacings: true,
+);
 
 // Theme
 @use "commons/theme/default";

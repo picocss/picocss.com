@@ -1,8 +1,6 @@
 @use "settings" as *;
 
 .chapter {
-  // width: fit-content;
-  // background-clip: text;
   color: var(#{$css-var-prefix}chapter-color);
   font-weight: 600;
   font-size: 13px;

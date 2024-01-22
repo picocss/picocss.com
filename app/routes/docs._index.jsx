@@ -72,11 +72,8 @@ export default function Docs() {
 
       {/* Content */}
       <Content>
-        <section aria-label="Introduction">
-          <p>There are 4 ways to get started with pico.css:</p>
-        </section>
-
         <section ref={installManuallyRef}>
+          <p>There are 4 ways to get started with pico.css:</p>
           <Heading level={2} anchor="install-manually">
             Install manually
           </Heading>

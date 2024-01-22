@@ -3,7 +3,7 @@
 @use "settings" as *;
 
 /**
- * Docs: Code
+ * Code
  */
 
 pre,
@@ -91,7 +91,8 @@ article footer.code {
   border-top-left-radius: 0;
 
   pre {
-    padding: calc(var(#{$css-var-prefix}block-spacing-vertical) * 0.66) var(#{$css-var-prefix}block-spacing-horizontal);
+    padding: calc(var(#{$css-var-prefix}block-spacing-vertical) * 0.66)
+      var(#{$css-var-prefix}block-spacing-horizontal);
     background-color: transparent;
   }
 }
@@ -115,8 +116,12 @@ article footer.code {
           $multiplier: 2.5;
         }
 
-        #{$css-var-prefix}block-spacing-horizontal: calc(var(#{$css-var-prefix}spacing) * $multiplier);
-        #{$css-var-prefix}block-spacing-vertical: calc(var(#{$css-var-prefix}spacing) * $multiplier);
+        #{$css-var-prefix}block-spacing-horizontal: calc(
+          var(#{$css-var-prefix}spacing) * $multiplier
+        );
+        #{$css-var-prefix}block-spacing-vertical: calc(
+          var(#{$css-var-prefix}spacing) * $multiplier
+        );
       }
     }
   }
@@ -126,7 +131,8 @@ article footer.code {
   box-shadow: var(#{$css-var-prefix}card-box-shadow);
 
   pre {
-    padding: calc(var(#{$css-var-prefix}block-spacing-vertical) * 0.66) var(#{$css-var-prefix}block-spacing-horizontal);
+    padding: calc(var(#{$css-var-prefix}block-spacing-vertical) * 0.66)
+      var(#{$css-var-prefix}block-spacing-horizontal);
     background: transparent;
   }
 }
