@@ -42,6 +42,7 @@ export default function DemoProvider({ children }) {
   const [displayRange, setDisplayRange] = useState(false);
   const [rangeValue, setRangeValue] = useState(0);
   const [rangeIsFocused, setRangeIsFocused] = useState(false);
+  const [rangeClass, setRangeClass] = useState("");
 
   // Button states
   const [displayButton, setDisplayButton] = useState(false);
@@ -176,6 +177,8 @@ export default function DemoProvider({ children }) {
         setRangeValue,
         rangeIsFocused,
         setRangeIsFocused,
+        rangeClass,
+        setRangeClass,
 
         // Button states
         displayButton,

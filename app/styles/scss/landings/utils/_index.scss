@@ -1,13 +1,13 @@
 @use "sass:map";
 @use "settings" as *;
 
-.fadeIn {
+.fade-in {
   animation-duration: 1s;
   animation-fill-mode: both;
-  animation-name: fadeIn;
+  animation-name: fade-in;
 }
 
-@keyframes fadeIn {
+@keyframes fade-in {
   from {
     opacity: 0;
   }

@@ -85,11 +85,11 @@ const Checkbox = (props) => {
 
 // Range
 const Range = (props) => {
-  const { displayRange, rangeValue, rangeIsFocused, setRangeValue } = useDemo();
+  const { displayRange, rangeClass, rangeValue, rangeIsFocused, setRangeValue } = useDemo();
 
   if (!displayRange) return null;
   return (
-    <label {...props}>
+    <label className={rangeClass} {...props}>
       Brightness
       <input
         tabIndex="-1"

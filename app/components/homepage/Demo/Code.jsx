@@ -64,6 +64,7 @@ export default function Code(props) {
     setDisplayRange,
     setRangeValue,
     setRangeIsFocused,
+    setRangeClass,
 
     // Button states
     setDisplayButton,
@@ -101,7 +102,6 @@ export default function Code(props) {
         getBeforeInit={(instance) => {
           instance
             // Email input
-            .empty()
             .type(initialDemoCode[0], { instant: true })
             .type(initialDemoCode[1], { instant: true })
             .type(initialDemoCode[2], { instant: true })
@@ -141,7 +141,7 @@ export default function Code(props) {
             .type("Please enter a valid email!")
             .exec(() => {
               setInputHelper("Please enter a valid email!");
-              setInputHelperClass("fadeIn");
+              setInputHelperClass("fade-in");
             })
 
             // Email input with submit button
@@ -184,7 +184,7 @@ export default function Code(props) {
               setDisplayButton(true);
               setButtonType("submit");
               setButtonLabel("Subscribe");
-              setButtonClass("fadeIn");
+              setButtonClass("fade-in");
             })
 
             // Search input with button
@@ -253,12 +253,14 @@ export default function Code(props) {
             .move(-23, moveOpts)
             .delete(14, delOpts)
             .exec(() => {
+              setFormGroupIsFocused(false);
               setFormRole(null);
               setDisplayButton(false);
               setButtonIsFocused(false);
               setButtonClass("");
               setButtonIsBusy(false);
               setInputType("date");
+              setInputClass("fade-in");
               setDisplayedInputValue(todayForInputDate);
               setInputValue(todayForInputDate);
               setInputPlaceholder(null);
@@ -271,9 +273,10 @@ export default function Code(props) {
             .type("<br />  ", moveOpts)
             .type(`&lt;${tag("button")}&gt;Next&lt;/${tag("button")}&gt;`)
             .exec(() => {
+              setInputClass("");
               setDisplayButton(true);
               setButtonLabel("Next");
-              setButtonClass("fadeIn");
+              setButtonClass("fade-in");
             })
 
             // Select
@@ -307,7 +310,7 @@ export default function Code(props) {
               setDisplaySelect(false);
               setDisplayButton(false);
               setDisplayCheckbox(true);
-              setCheckboxClass("fadeIn");
+              setCheckboxClass("fade-in");
             })
 
             // Checkbox checked
@@ -368,6 +371,7 @@ export default function Code(props) {
             .delete(13, delOpts)
             .type(`${attr("value")}=${value('"25"')}`)
             .exec(() => {
+              setRangeClass("fade-in");
               setDisplayCheckbox(false);
               setDisplayRange(true);
               setRangeValue(25);
@@ -378,6 +382,7 @@ export default function Code(props) {
             .delete(4, delOpts)
             .type(value('"50"'))
             .exec(() => {
+              setRangeClass("");
               setRangeIsFocused(true);
               setTimeout(function () {
                 setRangeValue(50);
@@ -412,13 +417,12 @@ export default function Code(props) {
             .exec(() => {
               setFormIsBusy(false);
               setDisplayInput(true);
-              setInputClass("fadeIn");
+              setInputClass("fade-in");
               setInputType("email");
               setInputValue("");
               setDisplayedInputValue("");
               setInputPlaceholder("Enter your email");
-            })
-            .pause(delay.displayComponent);
+            });
 
           return instance;
         }}
