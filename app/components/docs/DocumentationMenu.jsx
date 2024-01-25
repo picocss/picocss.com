@@ -1,5 +1,5 @@
 import parse from "html-react-parser";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Heading from "~/components/Heading";
 import Link from "~/components/Link";
 import Close from "~/components/icons/Close";
@@ -13,22 +13,26 @@ export default function Aside(props) {
   const isThemeGeneratorNestedPage = locationPath.includes("/docs/theme-generator/");
   const { menuIsOpenOnMobile, setMenuIsOpenOnMobile } = useDocumentation();
   const [currentCategory, setCurrentCategory] = useState("Getting started");
-  const [isStickyAboveLg, setIsStickyAboveLg] = useState(false);
+  const [maxHeight, setMaxHeight] = useState(0);
 
   const onClose = (event) => {
     event.preventDefault();
     setMenuIsOpenOnMobile(false);
   };
 
-  const checkIfShouldBeStickyAboveLg = () => {
+  // Calculate Navigation max height
+  const calculateMaxHeight = () => {
     if (!navRef.current) return;
     const navTop = navRef.current.getBoundingClientRect().top;
-    const navHeight = navRef.current.offsetHeight;
-    const windowHeight = window.innerHeight;
-
-    const isNavHeightGreaterThanWindowHeight = navHeight + navTop > windowHeight;
-    setIsStickyAboveLg(!isNavHeightGreaterThanWindowHeight);
+    const maxHeight = window.innerHeight - navTop;
+    setMaxHeight(maxHeight);
   };
+
+  useEffect(() => {
+    calculateMaxHeight();
+    window.addEventListener("resize", calculateMaxHeight);
+    return () => window.removeEventListener("resize", calculateMaxHeight);
+  }, []);
 
   return (
     <aside
@@ -44,7 +48,13 @@ export default function Aside(props) {
       </header>
 
       {/* Navigation */}
-      <nav ref={navRef} className={isStickyAboveLg ? "is-sticky-above-lg" : ""}>
+      <nav
+        ref={navRef}
+        {...(maxHeight !== 0 && {
+          className: "is-sticky-above-lg",
+          style: { "--max-height": `${maxHeight}px` },
+        })}
+      >
         {documentationMenu.map((category, index) => {
           const { category: title, links } = category;
           const isCurrentCategory = links.some((link) => link.route === locationPath);
@@ -56,7 +66,7 @@ export default function Aside(props) {
           }
 
           return (
-            <details key={index} open={shouldOpen} onToggle={checkIfShouldBeStickyAboveLg}>
+            <details key={index} open={shouldOpen} onToggle={calculateMaxHeight}>
               {/* Category button */}
               <summary {...(shouldOpen && { "aria-current": true })}>{parse(title)}</summary>
               <ul>
