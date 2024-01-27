@@ -17,7 +17,7 @@ export default function Comparison(props) {
             <span className="emoji">😌</span> Pico CSS
           </p>
           <Code language="html" allowCopy={false} dataTheme={pageTheme}>{`<form>
-  <input type="text">
+  <input type="text" />
   <button type="submit">Action</button>
 </form>`}</Code>
         </div>
@@ -32,7 +32,7 @@ export default function Comparison(props) {
           >{`<div class="container display-flex my-md mx-sm">
   <form class="form shadow-md my-md mx-sm align-center">
     <div class="input-wrapper border-radius-sm">
-      <input type="text" class="input text-color-gray placeholder-color-light-gray focus-outline-blue">
+      <input type="text" class="input text-color-gray placeholder-color-light-gray focus-outline-blue" />
     </div>
     <div class="button-wrapper border-radius-sm">
       <button type="submit" class="button bg-color-blue text-color-white focus-light-blue hover-light-blue">
