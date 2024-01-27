@@ -50,8 +50,8 @@ export default function Aside(props) {
       {/* Navigation */}
       <nav
         ref={navRef}
+        className="is-sticky-above-lg"
         {...(maxHeight !== 0 && {
-          className: "is-sticky-above-lg",
           style: { "--max-height": `${maxHeight}px` },
         })}
       >
