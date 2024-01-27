@@ -23,7 +23,9 @@ main {
 
       a {
         opacity: 0.5;
-        transition: background-color var(#{$css-var-prefix}transition), color var(#{$css-var-prefix}transition),
+        transition:
+          background-color var(#{$css-var-prefix}transition),
+          color var(#{$css-var-prefix}transition),
           opacity var(#{$css-var-prefix}transition);
 
         svg {
@@ -102,21 +104,6 @@ main {
 
     @media (min-width: #{map.get(map.get($breakpoints, "lg"), "breakpoint")}) {
       transition: none;
-    }
-
-    nav {
-      details {
-        ul {
-          li {
-            a {
-              &:active,
-              &:focus {
-                color: var(#{$css-var-prefix}primary-hover);
-              }
-            }
-          }
-        }
-      }
     }
   }
 }

@@ -48,7 +48,8 @@ main {
         }
 
         ul {
-          border-left: var(#{$css-var-prefix}border-width) solid var(#{$css-var-prefix}muted-border-color);
+          border-left: var(#{$css-var-prefix}border-width) solid
+            var(#{$css-var-prefix}muted-border-color);
 
           &:first-of-type {
             margin: 0;
@@ -67,9 +68,13 @@ main {
               border-left: var(#{$css-var-prefix}border-width) solid transparent;
               border-radius: 0;
               font-weight: 400;
-              transition: background-color var(#{$css-var-prefix}transition), color var(#{$css-var-prefix}transition),
-                text-decoration var(#{$css-var-prefix}transition), box-shadow var(#{$css-var-prefix}transition),
-                border-color var(#{$css-var-prefix}transition), font-weight var(#{$css-var-prefix}transition);
+              transition:
+                background-color var(#{$css-var-prefix}transition),
+                color var(#{$css-var-prefix}transition),
+                text-decoration var(#{$css-var-prefix}transition),
+                box-shadow var(#{$css-var-prefix}transition),
+                border-color var(#{$css-var-prefix}transition),
+                font-weight var(#{$css-var-prefix}transition);
 
               &:hover {
                 border-color: var(#{$css-var-prefix}secondary-underline);
