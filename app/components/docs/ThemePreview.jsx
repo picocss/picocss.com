@@ -66,7 +66,7 @@ export default function ThemePreview({ title, code, ...props }) {
             name="login"
             placeholder="Login"
             aria-label="Login"
-            autoComplete="nickname"
+            autoComplete="username"
           />
           <input
             type="password"

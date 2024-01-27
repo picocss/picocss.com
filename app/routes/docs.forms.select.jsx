@@ -74,7 +74,7 @@ export default function Select() {
         <section ref={syntaxRef}>
           <article aria-label="Select example" className="component">
             <select
-              id="favorite-cuisine"
+              name="favorite-cuisine"
               aria-label=" Select your favorite cuisine..."
               defaultValue=""
               required
@@ -88,7 +88,7 @@ export default function Select() {
               <option>Thai</option>
               <option>French</option>
             </select>
-            <Code as="footer">{`<select aria-label=" Select your favorite cuisine..." required>
+            <Code as="footer">{`<select name="favorite-cuisine" aria-label="Select your favorite cuisine..." required>
   <option selected disabled value="">
     Select your favorite cuisine...
   </option>
@@ -137,10 +137,10 @@ export default function Select() {
             Disabled select
           </Heading>
           <article aria-label="Disabled example" className="component">
-            <select aria-label="Select a meal type..." disabled>
+            <select name="meal-type" aria-label="Select a meal type..." disabled>
               <option>Select a meal type...</option>
             </select>
-            <Code as="footer">{`<select  aria-label="Select a meal type..." disabled>
+            <Code as="footer">{`<select name="meal-type" aria-label="Select a meal type..." disabled>
   <option>Select a meal type...</option>
   <option>...</option>
 </select>`}</Code>
@@ -156,6 +156,7 @@ export default function Select() {
           </p>
           <article aria-label="Validation states example" className="component">
             <select
+              name="pizza-topping"
               aria-label="Select your favorite pizza topping..."
               defaultValue="Pepperoni"
               aria-invalid="false"
@@ -169,6 +170,7 @@ export default function Select() {
             </select>
             <small>Great choice!</small>
             <select
+              name="pizza-topping"
               aria-label="Select your favorite pizza topping..."
               defaultValue=""
               required

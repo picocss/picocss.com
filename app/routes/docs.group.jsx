@@ -77,13 +77,18 @@ export default function Group() {
           <article className="component" aria-label="Form group example">
             <form onSubmit={preventDefault}>
               <fieldset role="group">
-                <input type="email" placeholder="Enter your email" />
+                <input
+                  name="email"
+                  type="email"
+                  placeholder="Enter your email"
+                  autoComplete="email"
+                />
                 <input type="submit" value="Subscribe" />
               </fieldset>
             </form>
             <Code as="footer">{`<form>
   <fieldset role="group">
-    <input type="email" placeholder="Enter your email" />
+    <input name="email" type="email" placeholder="Enter your email" autocomplete="email" />
     <input type="submit" value="Subscribe" />
   </fieldset>
 </form>`}</Code>
@@ -107,15 +112,15 @@ export default function Group() {
           <article className="component" aria-label="Form group example">
             <form onSubmit={preventDefault}>
               <fieldset role="group">
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
+                <input name="email" type="email" placeholder="Email" autoComplete="email" />
+                <input name="password" type="password" placeholder="Password" />
                 <input type="submit" value="Log in" />
               </fieldset>
             </form>
             <Code as="footer">{`<form>
   <fieldset role="group">
-    <input type="email" placeholder="Email" />
-    <input type="password" placeholder="Password" />
+    <input name="email" type="email" placeholder="Email" autocomplete="email" />
+    <input name="password" type="password" placeholder="Password" />
     <input type="submit" value="Log in" />
   </fieldset>
 </form>`}</Code>
@@ -136,11 +141,11 @@ export default function Group() {
 
           <article className="component" aria-label="Searcgh group example">
             <form role="search" onSubmit={preventDefault}>
-              <input type="search" placeholder="Search" />
+              <input name="search" type="search" placeholder="Search" />
               <input type="submit" value="Search" />
             </form>
             <Code as="footer">{`<form role="search">
-  <input type="search" placeholder="Search" />
+  <input name="search" type="search" placeholder="Search" />
   <input type="submit" value="Search" />
 </form>`}</Code>
           </article>

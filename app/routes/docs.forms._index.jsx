@@ -73,7 +73,7 @@ export default function Forms() {
               <fieldset>
                 <label>
                   First name
-                  <input name="first_name" placeholder="First name" />
+                  <input name="first_name" placeholder="First name" autoComplete="given-name" />
                 </label>
                 <label>
                   Email
@@ -89,6 +89,7 @@ export default function Forms() {
       <input
         name="first_name"
         placeholder="First name"
+        autocomplete="given-name"
       />
     </label>
     <label>
@@ -117,10 +118,10 @@ export default function Forms() {
             <form>
               <label>
                 First name
-                <input name="first_name" placeholder="First name" />
+                <input name="first_name" placeholder="First name" autoComplete="given-name" />
               </label>
               <label htmlFor="email">Email</label>
-              <input type="email" name="email" placeholder="Email" autoComplete="email" />
+              <input type="email" id="email" placeholder="Email" autoComplete="email" />
             </form>
             <Code as="footer">{`<form>
   
@@ -130,6 +131,7 @@ export default function Forms() {
     <input
       name="first_name"
       placeholder="First name"
+      autocomplete="given-name"
     />
   </label>
 
@@ -137,7 +139,7 @@ export default function Forms() {
   <label for="email">Email</label>
   <input
     type="email"
-    name="email"
+    id="email"
     placeholder="Email"
     autocomplete="email"
   />
@@ -193,7 +195,7 @@ export default function Forms() {
                   name="login"
                   placeholder="Login"
                   aria-label="Login"
-                  autoComplete="nickname"
+                  autoComplete="username"
                 />
                 <input
                   type="password"
@@ -211,7 +213,7 @@ export default function Forms() {
       name="login"
       placeholder="Login"
       aria-label="Login"
-      autocomplete="nickname"
+      autocomplete="username"
     />
     <input
       type="password"
@@ -240,13 +242,23 @@ export default function Forms() {
           <article className="component" aria-label="Form group example">
             <form onSubmit={preventDefault}>
               <fieldset role="group">
-                <input type="email" placeholder="Enter your email" />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  autoComplete="email"
+                />
                 <input type="submit" value="Subscribe" />
               </fieldset>
             </form>
             <Code as="footer">{`<form>
-  <fieldset role="group"
-    <input type="email" placeholder="Enter your email" />
+  <fieldset role="group">
+    <input
+      type="email"
+      name="email"
+      placeholder="Enter your email"
+      autocomplete="email"
+    />
     <input type="submit" value="Subscribe" />
   </fieldset>
 </form>`}</Code>

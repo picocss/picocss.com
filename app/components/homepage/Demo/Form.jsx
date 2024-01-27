@@ -17,6 +17,7 @@ const Input = (props) => {
   if (!displayInput) return null;
   return (
     <input
+      name="input-demo"
       tabIndex="-1"
       type={inputType}
       placeholder={inputPlaceholder}
@@ -48,7 +49,7 @@ const Select = (props) => {
 
   if (!displaySelect) return null;
   return (
-    <select tabIndex="-1" defaultValue="" required {...props}>
+    <select name="select-demo" tabIndex="-1" defaultValue="" required {...props}>
       <option disabled value="">
         Select...
       </option>
@@ -71,6 +72,7 @@ const Checkbox = (props) => {
   return (
     <label className={checkboxClass} {...props}>
       <input
+        name="checkbox-demo"
         tabIndex="-1"
         type="checkbox"
         {...(checkboxRole && { role: checkboxRole })}
@@ -92,6 +94,7 @@ const Range = (props) => {
     <label className={rangeClass} {...props}>
       Brightness
       <input
+        name="range-demo"
         tabIndex="-1"
         type="range"
         value={rangeValue}

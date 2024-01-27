@@ -117,7 +117,7 @@ export default function ColorSchemes() {
                   name="login"
                   placeholder="Login"
                   aria-label="Login"
-                  autoComplete="nickname"
+                  autoComplete="username"
                 />
                 <input
                   type="password"
@@ -151,7 +151,7 @@ export default function ColorSchemes() {
                   name="login"
                   placeholder="Login"
                   aria-label="Login"
-                  autoComplete="nickname"
+                  autoComplete="username"
                 />
                 <input
                   type="password"

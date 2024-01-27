@@ -3,7 +3,7 @@
  */
 :root {
   --pico-font-family-emoji: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --pico-font-family-sans-serif: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, var(--pico-font-family-emoji);
+  --pico-font-family-sans-serif: system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, Helvetica, Arial, "Helvetica Neue", sans-serif, var(--pico-font-family-emoji);
   --pico-font-family-monospace: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace, var(--pico-font-family-emoji);
   --pico-font-family: var(--pico-font-family-sans-serif);
   --pico-line-height: 1.5;
@@ -64,12 +64,6 @@
   :root {
     --pico-font-size: 131.25%;
   }
-}
-:root details summary[role=button]:not(.outline)::after {
-  filter: brightness(0) invert(1);
-}
-:root [aria-busy=true]:not(input, select, textarea):is(button, [type=submit], [type=button], [type=reset], [role=button]):not(.outline)::before {
-  filter: brightness(0) invert(1);
 }
 
 a {
@@ -211,6 +205,14 @@ nav details.dropdown summary:focus-visible {
 [role=group] [type=button],
 [role=group] [role=button] {
   --pico-form-element-spacing-horizontal: 2rem;
+}
+
+details summary[role=button]:not(.outline)::after {
+  filter: brightness(0) invert(1);
+}
+
+[aria-busy=true]:not(input, select, textarea):is(button, [type=submit], [type=button], [type=reset], [role=button]):not(.outline)::before {
+  filter: brightness(0) invert(1);
 }
 
 /*# sourceMappingURL=default-theme-styles.css.map */

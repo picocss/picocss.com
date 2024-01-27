@@ -86,18 +86,24 @@ export default function Input() {
       <Content>
         <section ref={syntaxRef}>
           <article aria-label="Input examples" className="component">
-            <input type="text" placeholder="Text" aria-label="Text" />
-            <input type="email" placeholder="Email" aria-label="Email" />
-            <input type="number" placeholder="Number" aria-label="Number" />
-            <input type="password" placeholder="Password" aria-label="Password" />
-            <input type="tel" placeholder="Tel" aria-label="Tel" />
-            <input type="url" placeholder="Url" aria-label="Url" />
-            <Code as="footer">{`<input type="text" placeholder="Text" aria-label="Text" />
-<input type="email" placeholder="Email" aria-label="Email" />
-<input type="number" placeholder="Number" aria-label="Number" />
-<input type="password" placeholder="Password" aria-label="Password" />
-<input type="tel" placeholder="Tel" aria-label="Tel" />
-<input type="url" placeholder="Url" aria-label="Url" />`}</Code>
+            <input type="text" name="text" placeholder="Text" aria-label="Text" />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              aria-label="Email"
+              autoComplete="email"
+            />
+            <input type="number" name="number" placeholder="Number" aria-label="Number" />
+            <input type="password" name="password" placeholder="Password" aria-label="Password" />
+            <input type="tel" name="tel" placeholder="Tel" aria-label="Tel" autoComplete="tel" />
+            <input type="url" name="url" placeholder="Url" aria-label="Url" />
+            <Code as="footer">{`<input type="text" name="text" placeholder="Text" aria-label="Text" />
+<input type="email" name="email" placeholder="Email" aria-label="Email" autocomplete="email" />
+<input type="number" name="number" placeholder="Number" aria-label="Number" />
+<input type="password" name="password" placeholder="Password" aria-label="Password" />
+<input type="tel" name="tel" placeholder="Tel" aria-label="Tel" autocomplete="tel" />
+<input type="url" name="url" placeholder="Url" aria-label="Url" />`}</Code>
           </article>
         </section>
 
@@ -107,15 +113,14 @@ export default function Input() {
           </Heading>
           <p>Datetime inputs come with an icon.</p>
           <article aria-label="Datetime input examples" className="component">
-            <input type="date" aria-label="Date" />
-            <input type="datetime-local" aria-label="Datetime local" />
-            <input type="month" aria-label="Month" />
-
-            <input type="time" aria-label="Time" />
-            <Code as="footer">{`<input type="date" aria-label="Date" />
-<input type="datetime-local" aria-label="Datetime local" />
-<input type="month" aria-label="Month" />
-<input type="time" aria-label="Time" />`}</Code>
+            <input type="date" name="date" aria-label="Date" />
+            <input type="datetime-local" name="datetime-local" aria-label="Datetime local" />
+            <input type="month" name="month" aria-label="Month" />
+            <input type="time" name="time" aria-label="Time" />
+            <Code as="footer">{`<input type="date" name="date" aria-label="Date" />
+<input type="datetime-local" name="datetime-local" aria-label="Datetime local" />
+<input type="month" name="month" aria-label="Month" />
+<input type="time" name="time" aria-label="Time" />`}</Code>
           </article>
         </section>
 
@@ -127,9 +132,10 @@ export default function Input() {
             <Code display="inline">type="search"</Code> comes with a distinctive style.
           </p>
           <article aria-label="Search input example" className="component">
-            <input type="search" placeholder="Search" aria-label="Search" />
+            <input type="search" name="search" placeholder="Search" aria-label="Search" />
             <Code as="footer">{`<input
   type="search"
+  name="search"
   placeholder="Search"
   aria-label="Search"
 />`}</Code>
@@ -176,9 +182,16 @@ export default function Input() {
             Disabled input
           </Heading>
           <article aria-label="Disabled example" className="component">
-            <input type="text" placeholder="Disabled" aria-label="Disabled input" disabled />
+            <input
+              type="text"
+              name="text"
+              placeholder="Disabled"
+              aria-label="Disabled input"
+              disabled
+            />
             <Code as="footer">{`<input
   type="text"
+  name="text"
   placeholder="Disabled"
   aria-label="Disabled input"
   disabled
@@ -191,9 +204,16 @@ export default function Input() {
             Read-only input
           </Heading>
           <article aria-label="Disabled example" className="component">
-            <input type="text" defaultValue="Read-only" aria-label="Read-only input" readOnly />
+            <input
+              type="text"
+              name="text"
+              defaultValue="Read-only"
+              aria-label="Read-only input"
+              readOnly
+            />
             <Code as="footer">{`<input
   type="text"
+  name="text"
   value="Read-only"
   aria-label="Read-only input"
   readonly
@@ -209,16 +229,30 @@ export default function Input() {
             Validation states are provided with <Code display="inline">aria-invalid</Code>.
           </p>
           <article aria-label="Validation states example" className="component">
-            <input type="text" defaultValue="Valid" placeholder="Valid" aria-invalid="false" />
-            <input type="text" defaultValue="Invalid" placeholder="Invalid" aria-invalid="true" />
+            <input
+              type="text"
+              name="valid"
+              defaultValue="Valid"
+              placeholder="Valid"
+              aria-invalid="false"
+            />
+            <input
+              type="text"
+              name="invalid"
+              defaultValue="Invalid"
+              placeholder="Invalid"
+              aria-invalid="true"
+            />
             <Code as="footer">{`<input
   type="text"
+  name="valid"
   value="Valid"
   aria-invalid="false"
 />
 
 <input
   type="text"
+  name="invalid"
   value="Invalid"
   aria-invalid="true"
 />`}</Code>
@@ -231,6 +265,7 @@ export default function Input() {
           <article aria-label="Validation states example" className="component">
             <input
               type="text"
+              name="valid"
               defaultValue="Valid"
               placeholder="Valid"
               aria-invalid="false"
@@ -239,6 +274,7 @@ export default function Input() {
             <small id="valid-helper">Looks good!</small>
             <input
               type="text"
+              name="invalid"
               defaultValue="Invalid"
               placeholder="Invalid"
               aria-invalid="true"
@@ -247,6 +283,7 @@ export default function Input() {
             <small id="invalid-helper">Please provide a valid value!</small>
             <Code as="footer">{`<input
   type="text"
+  name="valid"
   value="Valid"
   aria-invalid="false"
   aria-describedby="valid-helper"
@@ -255,6 +292,7 @@ export default function Input() {
 
 <input
   type="text"
+  name="invalid"
   value="Invalid"
   aria-invalid="true"
   aria-describedby="invalid-helper"

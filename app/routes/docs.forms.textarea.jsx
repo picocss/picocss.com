@@ -67,10 +67,12 @@ export default function Textarea() {
         <section ref={syntaxRef}>
           <article aria-label="Textarea example" className="component">
             <textarea
+              name="bio"
               placeholder="Write a professional short bio..."
               aria-label="Professional short bio"
             />
             <Code as="footer">{`<textarea
+  name="bio"
   placeholder="Write a professional short bio..."
   aria-label="Professional short bio"
 >
@@ -83,8 +85,13 @@ export default function Textarea() {
             Disabled textarea
           </Heading>
           <article aria-label="Disabled example" className="component">
-            <textarea defaultValue="Disabled" aria-label="Disabled textarea" disabled />
-            <Code as="footer">{`<textarea disabled>
+            <textarea
+              name="disabled"
+              defaultValue="Disabled"
+              aria-label="Disabled textarea"
+              disabled
+            />
+            <Code as="footer">{`<textarea name="disabled" disabled>
   Disabled
 </textarea>`}</Code>
           </article>
@@ -95,8 +102,13 @@ export default function Textarea() {
             Read-only textarea
           </Heading>
           <article aria-label="Disabled example" className="component">
-            <textarea defaultValue="Read-only" aria-label="Read-only textarea" readOnly />
-            <Code as="footer">{`<textarea readonly>
+            <textarea
+              name="read-only"
+              defaultValue="Read-only"
+              aria-label="Read-only textarea"
+              readOnly
+            />
+            <Code as="footer">{`<textarea name="read-only" readonly>
   Read-only
 </textarea>`}</Code>
           </article>
@@ -110,13 +122,18 @@ export default function Textarea() {
             Validation states are provided with <Code display="inline">aria-invalid</Code>.
           </p>
           <article aria-label="Validation states example" className="component">
-            <textarea defaultValue="Valid" placeholder="Valid" aria-invalid="false" />
-            <textarea defaultValue="Invalid" placeholder="Invalid" aria-invalid="true" />
-            <Code as="footer">{`<textarea aria-invalid="false">
+            <textarea name="valid" defaultValue="Valid" placeholder="Valid" aria-invalid="false" />
+            <textarea
+              name="invalid"
+              defaultValue="Invalid"
+              placeholder="Invalid"
+              aria-invalid="true"
+            />
+            <Code as="footer">{`<textarea name="valid" aria-invalid="false">
   Valid
 </textarea>
 
-<textarea aria-invalid="true">
+<textarea name="invalid" aria-invalid="true">
   Invalid
 </textarea> `}</Code>
           </article>
@@ -127,6 +144,7 @@ export default function Textarea() {
           </p>
           <article aria-label="Validation states example" className="component">
             <textarea
+              name="valid"
               defaultValue="Valid"
               placeholder="Valid"
               aria-invalid="false"
@@ -134,6 +152,7 @@ export default function Textarea() {
             />
             <small id="valid-helper">Looks good!</small>
             <textarea
+              name="invalid"
               defaultValue="Invalid"
               placeholder="Invalid"
               aria-invalid="true"
@@ -141,6 +160,7 @@ export default function Textarea() {
             />
             <small id="invalid-helper">Please provide a valid value!</small>
             <Code as="footer">{`<textarea
+  name="valid"
   aria-invalid="false"
   aria-describedby="valid-helper"
 >
@@ -149,6 +169,7 @@ export default function Textarea() {
 <small id="valid-helper">Looks good!</small>
 
 <textarea
+  name="invalid"
   aria-invalid="true"
   aria-describedby="invalid-helper"
 >

@@ -57,20 +57,20 @@ export default function Switch() {
           <article aria-label="Switch example" className="component">
             <fieldset>
               <label>
-                <input type="checkbox" role="switch" />I agree to the Terms
+                <input name="terms" type="checkbox" role="switch" />I agree to the Terms
               </label>
               <label>
-                <input type="checkbox" role="switch" defaultChecked={true} />I want to receive
-                updates
+                <input name="opt-in" type="checkbox" role="switch" defaultChecked={true} />I want to
+                receive updates
               </label>
             </fieldset>
             <Code as="footer">{`<fieldset>
   <label>
-    <input type="checkbox" role="switch" />
+    <input name="terms" type="checkbox" role="switch" />
     I agree to the Terms
   </label>
   <label>
-    <input type="checkbox" role="switch" checked />
+    <input name="opt-in" type="checkbox" role="switch" checked />
     Receive news and offers
   </label>
 </fieldset>`}</Code>
@@ -84,21 +84,27 @@ export default function Switch() {
           <article aria-label="Disabled switch example" className="component">
             <fieldset>
               <label aria-disabled="true">
-                <input type="checkbox" role="switch" disabled />
+                <input name="publish" type="checkbox" role="switch" disabled />
                 Publish on my profile
               </label>
               <label aria-disabled="true">
-                <input type="checkbox" role="switch" defaultChecked={true} disabled />
+                <input
+                  name="change-password"
+                  type="checkbox"
+                  role="switch"
+                  defaultChecked={true}
+                  disabled
+                />
                 Change my password at next login
               </label>
             </fieldset>
             <Code as="footer">{`<fieldset>
   <label>
-    <input type="checkbox" role="switch" disabled />
+    <input name="publish" type="checkbox" role="switch" disabled />
     Publish on my profile
   </label>
   <label>
-    <input type="checkbox" role="switch" checked disabled />
+    <input name="change-password" type="checkbox" role="switch" checked disabled />
     Change my password at next login
   </label>
 </fieldset>`}</Code>
@@ -112,21 +118,21 @@ export default function Switch() {
           <article aria-label="Validation states example" className="component">
             <fieldset>
               <label>
-                <input type="checkbox" role="switch" aria-invalid="false" />
+                <input name="2fa" type="checkbox" role="switch" aria-invalid="false" />
                 Enable two-factor authentication
               </label>
               <label>
-                <input type="checkbox" role="switch" aria-invalid="true" />
+                <input name="subscription" type="checkbox" role="switch" aria-invalid="true" />
                 Automatic subscription renewal
               </label>
             </fieldset>
             <Code as="footer">{`<fieldset>
   <label>
-    <input type="checkbox" role="switch" aria-invalid="false" />
+    <input name="2fa" type="checkbox" role="switch" aria-invalid="false" />
     Enable two-factor authentication
   </label>
   <label>
-    <input type="checkbox" role="switch" aria-invalid="true" />
+    <input name="subscription" type="checkbox" role="switch" aria-invalid="true" />
     Automatic subscription renewal
   </label>
 </fieldset>`}</Code>
