@@ -19,7 +19,6 @@ export default function Main({ children, ...props }) {
   const pageId = getPageId(routePath);
 
   const pageIdsWithoutTableOfContents = [
-    "color-schemes",
     "rtl",
     "theme-generator",
     "scroller",
