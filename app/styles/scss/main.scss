@@ -1,6 +1,6 @@
 // Pico CSS
 @use "pico" with (
-  $enable-responsive-spacings: true,
+  $enable-responsive-spacings: true
 );
 
 // Theme
@@ -15,6 +15,7 @@
 @use "commons/content/code";
 
 // Components
+@use "commons/components/skip-to-content";
 @use "commons/components/logo";
 @use "commons/components/theme-toggle";
 @use "commons/components/chapter";

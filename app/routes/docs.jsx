@@ -5,6 +5,7 @@ import DocumentationMenu from "~/components/docs/DocumentationMenu";
 import Main from "~/components/docs/Main";
 import { DocumentationProvider } from "~/contexts/DocumentationContext";
 import docsStyles from "~/styles/css/docs.css";
+import SkipToContent from "~/components/SkipToContent";
 
 export function links() {
   return [{ rel: "stylesheet", href: docsStyles }];
@@ -13,6 +14,7 @@ export function links() {
 export default function DocsPage() {
   return (
     <DocumentationProvider>
+      <SkipToContent />
       <Header headerIsFixed={true} shouldDisplayDocsVersion={true} />
       <Main>
         <Breadcrumb />

@@ -4,6 +4,7 @@ import Hero from "~/components/examples/Hero";
 import { useNavigation } from "~/contexts/NavigationContext";
 import metaData from "~/data/meta";
 import landingPageStyles from "~/styles/css/landings.css";
+import SkipToContent from "~/components/SkipToContent";
 
 const { titleSuffix } = metaData;
 
@@ -24,8 +25,9 @@ export default function Docs() {
 
   return (
     <>
+      <SkipToContent />
       <Header />
-      <main className={`examples container${isLoading ? " is-loading" : ""}`}>
+      <main id="content" className={`examples container${isLoading ? " is-loading" : ""}`}>
         <Hero />
         <Examples />
       </main>

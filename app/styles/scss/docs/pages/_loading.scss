@@ -5,7 +5,7 @@
  * Page: Loading
  */
 
-main#loading {
+main.page-loading {
   .grid {
     &#buttons {
       margin-bottom: var(#{$css-var-prefix}spacing);

@@ -35,12 +35,13 @@ export default function Main({ children, ...props }) {
     "container",
     hasTableOfContents && "has-table-of-contents",
     isLoading && "is-loading",
+    `page-${pageId}`,
   ]
     .filter(Boolean)
     .join(" ");
 
   return (
-    <main className={classNames} id={pageId} {...props}>
+    <main className={classNames} {...props}>
       {children}
     </main>
   );

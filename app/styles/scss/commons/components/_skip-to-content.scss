@@ -1,0 +1,14 @@
+@use "settings" as *;
+
+.skip-to-content {
+  z-index: 999;
+  position: absolute;
+  top: calc(var(#{$css-var-prefix}spacing) * 0.75);
+  left: calc(var(#{$css-var-prefix}spacing) * 0.75);
+  transform: translateY(-200%);
+  #{$css-var-prefix}box-shadow: var(#{$css-var-prefix}card-box-shadow);
+
+  &:focus {
+    transform: translateY(0);
+  }
+}
