@@ -70,8 +70,8 @@ export default function Container() {
         title="Container"
         description={
           <>
-            Use <Code display="inline">.container</Code> for a centered&nbsp;viewport or{" "}
-            <Code display="inline">.container-fluid</Code> for a full-width&nbsp;layout.
+            Use <code>.container</code> for a centered&nbsp;viewport or{" "}
+            <code>.container-fluid</code> for a full-width&nbsp;layout.
           </>
         }
       />
@@ -128,8 +128,8 @@ export default function Container() {
             </tbody>
           </table>
           <p>
-            <Code display="inline">.container</Code> and{" "}
-            <Code display="inline">.container-fluid</Code> are not available in the{" "}
+            <code>.container</code> and{" "}
+            <code>.container-fluid</code> are not available in the{" "}
             <Link to="/docs/classless">class&#8209;less&nbsp;version</Link> (see{" "}
             <Link to="#semantic-containers">Semantic containers</Link> for an alternative).
           </p>
@@ -140,7 +140,7 @@ export default function Container() {
             Fixed width
           </Heading>
           <p>
-            <Code display="inline">.container</Code> provides a centered container with a fixed
+            <code>.container</code> provides a centered container with a fixed
             width.
           </p>
           <Code>{`<body>
@@ -155,7 +155,7 @@ export default function Container() {
             Fluid width
           </Heading>
           <p>
-            <Code display="inline">.container-fluid</Code> provides a full-width container.
+            <code>.container-fluid</code> provides a full-width container.
           </p>
           <Code>{`<body>
   <main class="container-fluid">

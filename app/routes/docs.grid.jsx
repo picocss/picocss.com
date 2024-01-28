@@ -43,8 +43,8 @@ export default function Grid() {
         title="Grid"
         description={
           <>
-            Create minimal responsive&nbsp;layouts with <Code display="inline">.grid</Code> to
-            enable auto-layout&nbsp;columns.
+            Create minimal responsive&nbsp;layouts with <code>.grid</code> to enable
+            auto-layout&nbsp;columns.
           </>
         }
       />
@@ -93,11 +93,10 @@ export default function Grid() {
 </div>`}</Code>
           </article>
           <p>
-            Columns intentionally collapse on small devices (
-            <Code display="inline">{`<768px`}</Code>).
+            Columns intentionally collapse on small devices (<code>{`<768px`}</code>).
           </p>
           <p>
-            <Code display="inline">.grid</Code> is not available in the{" "}
+            <code>.grid</code> is not available in the{" "}
             <Link to="/docs/classless">class&#8209;less&nbsp;version</Link>.
           </p>
         </section>

@@ -23,8 +23,8 @@ export default function OverflowAuto() {
         title="Overflow auto"
         description={
           <>
-            <Code display="inline">{`.overflow-auto`}</Code> enables automatic scrollbars to an
-            element if its content extends beyond its limits.
+            <code>{`.overflow-auto`}</code> enables automatic scrollbars to an element if its
+            content extends beyond its limits.
           </>
         }
       />

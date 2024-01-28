@@ -82,12 +82,9 @@ export default function ColorSchemes() {
             elements, such as <Code display="inline">{`<article data-theme="dark">`}</Code>.
           </p>
           <p>
-            Color schemes at the HTML tag level work great for elements such as{" "}
-            <Code display="inline">a</Code>, <Code display="inline">button</Code>,{" "}
-            <Code display="inline">table</Code>, <Code display="inline">input</Code>,{" "}
-            <Code display="inline">textarea</Code>, <Code display="inline">select</Code>,{" "}
-            <Code display="inline">article</Code>, <Code display="inline">dialog</Code>,{" "}
-            <Code display="inline">progress</Code>.
+            Color schemes at the HTML tag level work great for elements such as <code>a</code>,{" "}
+            <code>button</code>, <code>table</code>, <code>input</code>, <code>textarea</code>,{" "}
+            <code>select</code>, <code>article</code>, <code>dialog</code>, <code>progress</code>.
           </p>
           <p>
             CSS variables specific to the color scheme are assigned to every HTML tag. However, to
@@ -95,8 +92,8 @@ export default function ColorSchemes() {
             have not enforced specific background and color settings across all HTML tags.
           </p>
           <p>
-            For some other HTML tags, you might need to explicitly set{" "}
-            <Code display="inline">background-color</Code> and <Code display="inline">color</Code>.
+            For some other HTML tags, you might need to explicitly set <code>background-color</code>{" "}
+            and <code>color</code>.
           </p>
           <Code language="css">{`section {
   background-color: var(--pico-background-color);

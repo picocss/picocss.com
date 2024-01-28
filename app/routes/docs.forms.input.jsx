@@ -129,7 +129,7 @@ export default function Input() {
             Search input
           </Heading>
           <p>
-            <Code display="inline">type="search"</Code> comes with a distinctive style.
+            <code>type="search"</code> comes with a distinctive style.
           </p>
           <article aria-label="Search input example" className="component">
             <input type="search" name="search" placeholder="Search" aria-label="Search" />
@@ -147,8 +147,7 @@ export default function Input() {
             Color input
           </Heading>
           <p>
-            <Code display="inline">type="color"</Code> is also consistent with the other input
-            types.
+            <code>type="color"</code> is also consistent with the other input types.
           </p>
           <article aria-label="Color input example" className="component">
             <input type="color" defaultValue="#ff9500" aria-label="Color picker" />
@@ -226,7 +225,7 @@ export default function Input() {
             Validation states
           </Heading>
           <p>
-            Validation states are provided with <Code display="inline">aria-invalid</Code>.
+            Validation states are provided with <code>aria-invalid</code>.
           </p>
           <article aria-label="Validation states example" className="component">
             <input

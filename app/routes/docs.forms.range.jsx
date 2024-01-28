@@ -10,7 +10,7 @@ export const meta = () => [
   { title: `Range ${titleSuffix}` },
   {
     name: "description",
-    content: "Create a slider control with the input type <input type='range'>.",
+    content: "Create a slider control with <input type='range'>.",
   },
 ];
 
@@ -22,8 +22,7 @@ export default function Range() {
         title="Range"
         description={
           <>
-            Create a slider control with the input type{" "}
-            <Code display="inline">{`<input type="range">`}</Code>.
+            Create a slider control with <Code display="inline">{`<input type="range">`}</Code>.
           </>
         }
       />

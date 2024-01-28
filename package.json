@@ -61,7 +61,7 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20230518.0",
-    "@picocss/pico": "github:picocss/pico#v2",
+    "@picocss/pico": "2.0.0-rc4",
     "@picocss/pico-v1": "npm:@picocss/pico@1.5.11",
     "@remix-run/dev": "^2.5.1",
     "@remix-run/eslint-config": "^2.5.1",

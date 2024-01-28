@@ -155,12 +155,11 @@ export default function TablePage() {
             Color schemes
           </Heading>
           <p>
-            <Code display="inline">{`data-theme="light"`}</Code> or{" "}
-            <Code display="inline">{`data-theme="dark"`}</Code> can be used at any level:{" "}
-            <Code display="inline">{`<table>`}</Code>, <Code display="inline">{`<thead>`}</Code>,{" "}
-            <Code display="inline">{`<tbody>`}</Code>, <Code display="inline">{`<tfoot>`}</Code>,{" "}
-            <Code display="inline">{`<tr>`}</Code>, <Code display="inline">{`<th>`}</Code>,{" "}
-            <Code display="inline">{`<td>`}</Code>.
+            <code>{`data-theme="light"`}</code> or <code>{`data-theme="dark"`}</code> can be used at
+            any level: <Code display="inline">{`<table>`}</Code>,{" "}
+            <Code display="inline">{`<thead>`}</Code>, <Code display="inline">{`<tbody>`}</Code>,{" "}
+            <Code display="inline">{`<tfoot>`}</Code>, <Code display="inline">{`<tr>`}</Code>,{" "}
+            <Code display="inline">{`<th>`}</Code>, <Code display="inline">{`<td>`}</Code>.
           </p>
           <p>&nbsp;</p>
           <div className="overflow-auto">
@@ -180,7 +179,7 @@ export default function TablePage() {
             Striped table
           </Heading>
           <p>
-            <Code display="inline">.striped</Code> enable striped rows (not available in the{" "}
+            <code>.striped</code> enable striped rows (not available in the{" "}
             <Link to="/docs/classless">class&#8209;less&nbsp;version</Link>).
           </p>
           <div className="overflow-auto">

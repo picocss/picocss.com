@@ -152,7 +152,7 @@ export default function Select() {
             Validation states
           </Heading>
           <p>
-            Validation states are provided with <Code display="inline">aria-invalid</Code>.
+            Validation states are provided with <code>aria-invalid</code>.
           </p>
           <article aria-label="Validation states example" className="component">
             <select

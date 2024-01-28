@@ -24,8 +24,7 @@ export default function LinkPage() {
         title="Link"
         description={
           <>
-            Links come with <Code display="inline">.secondary</Code> and{" "}
-            <Code display="inline">.contrast</Code> styles.
+            Links come with <code>.secondary</code> and <code>.contrast</code> styles.
           </>
         }
       />
@@ -52,13 +51,12 @@ export default function LinkPage() {
           </article>
 
           <p>
-            <Code display="inline">.secondary</Code> and <Code display="inline">.contrast</Code>{" "}
-            classes are not available in the{" "}
+            <code>.secondary</code> and <code>.contrast</code> classes are not available in the{" "}
             <Link to="/docs/classless">class&#8209;less&nbsp;version</Link>.
           </p>
           <p>
-            <Code display="inline">aria-current</Code> send the active state to assistive
-            technologies and is displayed as the hover links.
+            <code>aria-current</code> send the active state to assistive technologies and is
+            displayed as the hover links.
           </p>
           <article aria-label="Active link example" className="component">
             <Link to="#" onClick={preventDefault}>

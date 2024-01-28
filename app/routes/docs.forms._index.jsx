@@ -185,8 +185,7 @@ export default function Forms() {
             Usage with grid
           </Heading>
           <p>
-            You can use <Code display="inline">.grid</Code> inside a form. See{" "}
-            <Link to="/docs/grid">Grid</Link>.
+            You can use <code>.grid</code> inside a form. See <Link to="/docs/grid">Grid</Link>.
           </p>
           <article aria-label="Form and grid example" className="component">
             <form onSubmit={preventDefault}>
@@ -236,7 +235,7 @@ export default function Forms() {
             Usage with group
           </Heading>
           <p>
-            You can use <Code display="inline">role="group"</Code> with form elements. See{" "}
+            You can use <code>role="group"</code> with form elements. See{" "}
             <Link to="/docs/group">Group</Link>.
           </p>
           <article className="component" aria-label="Form group example">

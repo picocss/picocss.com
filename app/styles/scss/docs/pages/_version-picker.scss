@@ -1,0 +1,12 @@
+@use "sass:map";
+@use "settings" as *;
+
+/**
+ * Page: Version Picker
+ */
+
+main.page-version-picker {
+  select + small {
+    margin-bottom: calc(var(#{$css-var-prefix}spacing) * 2) !important;
+  }
+}

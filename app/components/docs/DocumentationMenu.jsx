@@ -10,7 +10,7 @@ import documentationMenu from "~/data/documentationMenu";
 export default function Aside(props) {
   const navRef = useRef();
   const { locationPath } = useNavigation();
-  const isThemeGeneratorNestedPage = locationPath.includes("/docs/theme-generator/");
+  const isVersionPickerNestedPage = locationPath.includes("/docs/version-picker/");
   const { menuIsOpenOnMobile, setMenuIsOpenOnMobile } = useDocumentation();
   const [currentCategory, setCurrentCategory] = useState("Getting started");
   const [maxHeight, setMaxHeight] = useState(0);
@@ -59,20 +59,20 @@ export default function Aside(props) {
           const { category: title, links } = category;
           const isCurrentCategory = links.some((link) => link.route === locationPath);
           const shouldOpen =
-            isCurrentCategory || (isThemeGeneratorNestedPage && title === "Customization");
+            isCurrentCategory || (isVersionPickerNestedPage && title === "Getting started");
 
           if (isCurrentCategory && currentCategory !== title) {
             setCurrentCategory(title);
           }
 
           return (
-            <details key={index} open={shouldOpen} onToggle={calculateMaxHeight}>
+            <details key={index} open={shouldOpen}>
               {/* Category button */}
               <summary {...(shouldOpen && { "aria-current": true })}>{parse(title)}</summary>
               <ul>
                 {category.links.map((link, index) => {
                   const { label, route } = link;
-                  const isThemeGeneratorLink = link.route === "/docs/theme-generator";
+                  const isVersionPickerLink = link.route === "/docs/version-picker";
 
                   // Link
                   return (
@@ -80,7 +80,7 @@ export default function Aside(props) {
                       <Link
                         to={route}
                         className="secondary"
-                        {...(isThemeGeneratorNestedPage && isThemeGeneratorLink
+                        {...(isVersionPickerNestedPage && isVersionPickerLink
                           ? { "aria-current": "page" }
                           : {})}
                         onClick={() => setMenuIsOpenOnMobile(false)}

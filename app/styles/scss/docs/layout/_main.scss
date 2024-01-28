@@ -5,6 +5,8 @@
  * Docs: Main
  */
 
+$aside-width: 11rem;
+
 body {
   #{$css-var-prefix}main-top-offset: 0rem;
 
@@ -29,7 +31,7 @@ body {
 
     @media (min-width: map.get(map.get($breakpoints, "lg"), "breakpoint")) {
       grid-template-rows: auto 1fr;
-      grid-template-columns: 10rem 1fr;
+      grid-template-columns: $aside-width 1fr;
       grid-template-areas:
         "menu header"
         "menu body";
@@ -39,7 +41,7 @@ body {
       // Hack for Firefox, which doesn't support the `:has()` pseudo-class
       &.has-table-of-contents {
         grid-template-rows: auto auto 1fr;
-        grid-template-columns: 10rem 1fr;
+        grid-template-columns: $aside-width 1fr;
         grid-template-areas:
           "menu header"
           "menu table-of-content"
@@ -48,7 +50,7 @@ body {
 
       &:has(aside#table-of-contents) {
         grid-template-rows: auto auto 1fr;
-        grid-template-columns: 10rem 1fr;
+        grid-template-columns: $aside-width 1fr;
         grid-template-areas:
           "menu header"
           "menu table-of-content"
@@ -96,7 +98,7 @@ body {
 
     @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
       grid-template-rows: auto 1fr;
-      grid-template-columns: 10rem 1fr;
+      grid-template-columns: $aside-width 1fr;
       grid-template-areas:
         "menu header"
         "menu body";
@@ -105,7 +107,7 @@ body {
       // Hack for Firefox, which doesn't support the `:has()` pseudo-class
       &.has-table-of-contents {
         grid-template-rows: auto 1fr;
-        grid-template-columns: 10rem 1fr 10rem;
+        grid-template-columns: $aside-width 1fr $aside-width;
         grid-template-areas:
           "menu header table-of-content"
           "menu body table-of-content";
@@ -113,7 +115,7 @@ body {
 
       &:has(aside#table-of-contents) {
         grid-template-rows: auto 1fr;
-        grid-template-columns: 10rem 1fr 10rem;
+        grid-template-columns: $aside-width 1fr $aside-width;
         grid-template-areas:
           "menu header table-of-content"
           "menu body table-of-content";
@@ -138,7 +140,7 @@ body {
 
     @media (min-width: map.get(map.get($breakpoints, "xxl"), "breakpoint")) {
       grid-template-rows: auto 1fr;
-      grid-template-columns: 10rem 1fr 10rem;
+      grid-template-columns: $aside-width 1fr $aside-width;
       grid-template-areas:
         "menu header table-of-content"
         "menu body table-of-content";

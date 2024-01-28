@@ -135,8 +135,7 @@ export default function Modal() {
           <p>
             Inside <Code display="inline">{`<header>`}</Code>{" "}
             <Code display="inline">{`<a rel="pref">`}</Code> is defined to{" "}
-            <Code display="inline">{`float: right;`}</Code> allowing a close icon to be top aligned
-            with a title.
+            <code>{`float: right;`}</code> allowing a close icon to be top aligned with a title.
           </p>
           <ThankYouForRegisteringExample preventDefault={preventDefault} className="example" open />
           <Code>{`<dialog open>
@@ -204,7 +203,7 @@ export default function Modal() {
             modals.
           </p>
           <p>
-            To open a modal, add the <Code display="inline">open</Code> attribute to the
+            To open a modal, add the <code>open</code> attribute to the
             <Code display="inline">{"<dialog>"}</Code> container.
           </p>
         </section>
@@ -219,22 +218,21 @@ export default function Modal() {
             <Link to="/docs/classless">class-less version</Link>.
           </p>
           <p>
-            <Code display="inline">.modal-is-open</Code> prevents any scrolling and interactions
-            below the modal.
+            <code>.modal-is-open</code> prevents any scrolling and interactions below the modal.
           </p>
           <Code>{`<!doctype html>
 <html class="modal-is-open">
   ...
 </html>`}</Code>
           <p>
-            <Code display="inline">.modal-is-opening</Code> brings an opening animation.
+            <code>.modal-is-opening</code> brings an opening animation.
           </p>
           <Code>{`<!doctype html>
 <html class="modal-is-open modal-is-opening">
   ...
 </html>`}</Code>
           <p>
-            <Code display="inline">.modal-is-closing</Code> brings a closing animation.
+            <code>.modal-is-closing</code> brings a closing animation.
           </p>
           <Code>{`<!doctype html>
 <html class="modal-is-open modal-is-closing">

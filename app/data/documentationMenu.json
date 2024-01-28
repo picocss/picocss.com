@@ -3,8 +3,10 @@
     "category": "Getting started",
     "links": [
       { "label": "Quick start", "route": "/docs" },
+      { "label": "Version picker <mark>New</mark>", "route": "/docs/version-picker" },
       { "label": "Color schemes", "route": "/docs/color-schemes" },
       { "label": "Class-less version", "route": "/docs/classless" },
+      { "label": "Conditional styling <mark>New</mark>", "route": "/docs/conditional" },
       { "label": "RTL", "route": "/docs/rtl" }
     ]
   },
@@ -12,7 +14,6 @@
     "category": "Customization",
     "links": [
       { "label": "CSS Variables", "route": "/docs/css-variables" },
-      { "label": "Theme generator", "route": "/docs/theme-generator" },
       { "label": "Sass", "route": "/docs/sass" },
       { "label": "Colors <mark>New</mark>", "route": "/docs/colors" }
     ]
@@ -23,7 +24,7 @@
       { "label": "Container", "route": "/docs/container" },
       { "label": "Landmarks & section", "route": "/docs/landmarks-section" },
       { "label": "Grid", "route": "/docs/grid" },
-      { "label": "Overflow auto", "route": "/docs/overflow-auto" }
+      { "label": "Overflow auto <mark>New</mark>", "route": "/docs/overflow-auto" }
     ]
   },
   {

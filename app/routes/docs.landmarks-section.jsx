@@ -60,7 +60,7 @@ export default function LandmarksAndSection() {
             <Code display="inline">{`<header>`}</Code>, <Code display="inline">{`<main>`}</Code> and{" "}
             <Code display="inline">{`<footer>`}</Code> as direct children of{" "}
             <Code display="inline">{`<body>`}</Code> provide a responsive vertical{" "}
-            <Code display="inline">padding</Code>
+            <code>padding</code>
           </p>
           <Code>{`<body>
   <header>...</header>
@@ -118,7 +118,7 @@ export default function LandmarksAndSection() {
           </Heading>
           <p>
             <Code display="inline">{`<section>`}</Code> provides a responsive{" "}
-            <Code display="inline">margin-bottom</Code> to separate your sections.
+            <code>margin-bottom</code> to separate your sections.
           </p>
         </section>
 

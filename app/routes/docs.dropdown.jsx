@@ -103,8 +103,7 @@ export default function Dropdown() {
             Dropdowns are built with <Code display="inline">{`<details class="dropdown">`}</Code> as
             a wrapper and <Code display="inline">{`<summary>`}</Code> and{" "}
             <Code display="inline">{`<ul>`}</Code> as direct childrens. Unless they are in a{" "}
-            <Link to="/docs/nav">Nav</Link>, dropdowns are{" "}
-            <Code display="inline">{`width: 100%;`}</Code> by default.
+            <Link to="/docs/nav">Nav</Link>, dropdowns are <code>{`width: 100%;`}</code> by default.
           </p>
 
           <p>
@@ -265,9 +264,9 @@ export default function Dropdown() {
           </article>
 
           <p>
-            Like regular buttons, they come with <Code display="inline">.secondary</Code>,{" "}
-            <Code display="inline">.contrast</Code>, and <Code display="inline">.outline</Code> (not
-            available in the <Link to="/docs/classless">class-less version</Link>).
+            Like regular buttons, they come with <code>.secondary</code>, <code>.contrast</code>,
+            and <code>.outline</code> (not available in the{" "}
+            <Link to="/docs/classless">class-less version</Link>).
           </p>
           <article aria-label="Dropdowns as buttons" className="component">
             <details className="dropdown">
@@ -373,7 +372,7 @@ export default function Dropdown() {
           </Heading>
           <p>
             Just like any form elements, validation states are provided with{" "}
-            <Code display="inline">aria-invalid</Code>.
+            <code>aria-invalid</code>.
           </p>
           <article aria-label="Dropdowns with validation states" className="component">
             <details className="dropdown">

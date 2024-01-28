@@ -10,24 +10,12 @@
   }
 }
 
-// Handle the switch color override based on the mode
-@mixin handle-switch-color($primary-inverse, $mode) {
-  @if $primary-inverse == $black {
-    @if $mode == "light" {
-      #{$css-var-prefix}switch-color: var(#{$css-var-prefix}secondary-hover);
-    } @else if $mode == "dark" {
-      #{$css-var-prefix}switch-color: var(#{$css-var-prefix}background-color);
-    }
-  }
-}
-
 // Generate the defitions for a theme and mode
 @mixin generate-css-vars($theme, $mode) {
   $color-map: map.get(map.get($color-mappings, $theme), $mode);
   $primary-inverse: map.get($color-map, "primary-inverse");
 
   @include generate-main-css-vars($color-map);
-  @include handle-switch-color($primary-inverse, $mode);
 }
 
 @mixin generate-theme($name, $theme) {
@@ -52,5 +40,3 @@
     @include generate-css-vars($theme, "dark");
   }
 }
-
-

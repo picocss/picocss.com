@@ -8,8 +8,8 @@ function getPageId(routePath) {
           .replace("/docs/", "")
           .replace(/\/\s*$/, "")
           .replace(/\//g, "-");
-  if (pageId.includes("theme-generator-")) {
-    pageId = "theme-generator";
+  if (pageId.includes("version-picker-")) {
+    pageId = "version-picker";
   }
   return pageId;
 }
@@ -20,7 +20,6 @@ export default function Main({ children, ...props }) {
 
   const pageIdsWithoutTableOfContents = [
     "rtl",
-    "theme-generator",
     "scroller",
     "link",
     "forms-range",

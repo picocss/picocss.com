@@ -119,7 +119,7 @@ export default function Textarea() {
             Validation states
           </Heading>
           <p>
-            Validation states are provided with <Code display="inline">aria-invalid</Code>.
+            Validation states are provided with <code>aria-invalid</code>.
           </p>
           <article aria-label="Validation states example" className="component">
             <textarea name="valid" defaultValue="Valid" placeholder="Valid" aria-invalid="false" />

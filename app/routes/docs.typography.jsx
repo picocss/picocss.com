@@ -78,11 +78,11 @@ export default function Typography() {
           <p>
             To ensure that the user’s default font size is followed, the base font size is defined
             as a percentage that grows with the user’s screen size, while HTML elements are defined
-            in <Code display="inline">rem</Code>.
+            in <code>rem</code>.
           </p>
           <p>
-            Since <Code display="inline">rem</Code> is a multiplier of the HTML document font size,
-            all HTML element’s font sizes grow proportionally with the size of the user’s screen.
+            Since <code>rem</code> is a multiplier of the HTML document font size, all HTML
+            element’s font sizes grow proportionally with the size of the user’s screen.
           </p>
         </section>
 
@@ -112,7 +112,7 @@ export default function Typography() {
           </Heading>
           <p>
             Inside a <Code display="inline">{`<hgroup>`}</Code>, margins are collapsed, and the{" "}
-            <Code display="inline">:last-child</Code> is muted.
+            <code>:last-child</code> is muted.
           </p>
           <article aria-label="Headings example" className="component">
             <hgroup>

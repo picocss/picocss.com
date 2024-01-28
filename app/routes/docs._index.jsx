@@ -33,8 +33,8 @@ export default function Docs() {
         title="Quick start"
         description={
           <>
-            Link <Code display="inline">pico.css</Code> manually or via CDN for a dependency-free
-            setup, or use NPM or Composer for advanced&nbsp;usage.
+            Link <code>pico.css</code> manually or via CDN for a dependency-free setup, or use NPM
+            or Composer for advanced&nbsp;usage.
           </>
         }
       />
@@ -48,8 +48,8 @@ export default function Docs() {
             ref: installManuallyRef,
           },
           {
-            anchor: "install-from-cdn",
-            title: "Install from CDN",
+            anchor: "usage-from-cdn",
+            title: "Usage from CDN",
             ref: installFromCdnRef,
           },
           {
@@ -81,15 +81,15 @@ export default function Docs() {
             <Link to="https://github.com/picocss/pico/archive/refs/heads/v2.zip">
               Download Pico
             </Link>{" "}
-            and link <Code display="inline">{`/css/pico.min.css`}</Code> in the{" "}
-            <Code display="inline">{`<head>`}</Code> of your website.
+            and link <code>/css/pico.min.css</code> in the <Code display="inline">{`<head>`}</Code>{" "}
+            of your website.
           </p>
           <Code className="small">{`<link rel="stylesheet" href="css/pico.min.css" />`}</Code>
         </section>
 
         <section ref={installFromCdnRef}>
-          <Heading level={2} anchor="install-from-cdn">
-            Install from CDN
+          <Heading level={2} anchor="usage-from-cdn">
+            Usage from CDN
           </Heading>
           <p>
             Alternatively, you can use <Link to={cdnBaseUrl}>jsDelivr CDN</Link> to link pico.css

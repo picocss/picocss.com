@@ -97,7 +97,7 @@ export default function Accordion() {
           </Heading>
 
           <p>
-            <Code display="inline">role="button"</Code> can be used to turn{" "}
+            <code>role="button"</code> can be used to turn{" "}
             <Code display="inline">{`<summary>`}</Code> into a button.
           </p>
           <article aria-label="Accordions buttons example" className="component">
@@ -116,9 +116,9 @@ export default function Accordion() {
 </details>`}</Code>
           </article>
           <p>
-            Like regular buttons, they come with <Code display="inline">.secondary</Code>,{" "}
-            <Code display="inline">.contrast</Code>, and <Code display="inline">.outline</Code> (Not
-            available in the <Link to="/docs/classless">class-less version</Link>).
+            Like regular buttons, they come with <code>.secondary</code>, <code>.contrast</code>,
+            and <code>.outline</code> (Not available in the{" "}
+            <Link to="/docs/classless">class-less version</Link>).
           </p>
           <article aria-label="Accordions buttons example" className="component">
             <details>

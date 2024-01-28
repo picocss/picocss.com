@@ -23,17 +23,68 @@ export const meta = () => [
 const brandLabel = "Acme Corp";
 const menuItems = ["About", "Services", "Products"];
 
+const phasesOfMatter = ["Solid", "Liquid", "Gas", "Plasma"];
+const accountItems = ["Profile", "Settings", "Security", "Logout"];
+
+export function Item({ children, className, ...props }) {
+  const preventDefault = (e) => e.preventDefault();
+
+  return (
+    <Link to="#" onClick={preventDefault} {...(className && { className: className })} {...props}>
+      {children}
+    </Link>
+  );
+}
+
+export function DropdownItems({ items = phasesOfMatter, dir, id }) {
+  return (
+    <ul dir={dir} id={id}>
+      {items.map((item) => (
+        <li key={item}>
+          <Item>{item}</Item>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 export default function Nav() {
   const preventDefault = (e) => e.preventDefault();
 
   const syntaxRef = useRef();
   const linkVariantsRef = useRef();
   const buttonsRef = useRef();
+  const dropdownsRef = useRef();
   const verticalStackingRef = useRef();
   const breadcrumbRef = useRef();
+  const overflowRef = useRef();
 
   return (
     <>
+      <nav aria-label="overflow-with-focus">
+        <ul>
+          {menuItems.slice(0, 2).map((item) => {
+            const isFirst = item === menuItems[0];
+            return (
+              <li key={item}>
+                <Link to="#" onClick={preventDefault} {...(isFirst && { className: "focused" })}>
+                  {item}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+        <ul>
+          {menuItems[2] && (
+            <li key={menuItems[2]}>
+              <Link to="#" onClick={preventDefault} className="focused">
+                {menuItems[2]}
+              </Link>
+            </li>
+          )}
+        </ul>
+      </nav>
+
       {/* Header */}
       <Header title="Nav" description="The essential navbar component in pure semantic HTML." />
 
@@ -56,6 +107,11 @@ export default function Nav() {
             ref: buttonsRef,
           },
           {
+            anchor: "dropdowns",
+            title: "Dropdowns",
+            ref: dropdownsRef,
+          },
+          {
             anchor: "vertical-stacking",
             title: "Vertical stacking",
             ref: verticalStackingRef,
@@ -65,13 +121,18 @@ export default function Nav() {
             title: "Breadcrumb",
             ref: breadcrumbRef,
           },
+          {
+            anchor: "overflow",
+            title: "Overflow",
+            ref: overflowRef,
+          },
         ]}
       />
 
       {/* Content */}
       <Content>
         <section ref={syntaxRef}>
-          <article aria-label="Nav example">
+          <article aria-label="Nav example" className="component">
             <nav>
               <ul>
                 <li>
@@ -120,11 +181,10 @@ export default function Nav() {
             Link variants
           </Heading>
           <p>
-            You can use <Code display="inline">.secondary</Code>,{" "}
-            <Code display="inline">.contrast</Code>, and <Code display="inline">.outline</Code>{" "}
+            You can use <code>.secondary</code>, <code>.contrast</code>, and <code>.outline</code>{" "}
             classes (not available in the <Link to="/docs/classless">class-less version</Link>).
           </p>
-          <article aria-label="Nav example">
+          <article aria-label="Nav example" className="component">
             <nav>
               <ul>
                 <li>
@@ -157,7 +217,7 @@ export default function Nav() {
   </ul>
 </nav>`}</Code>
           </article>
-          <article aria-label="Nav example">
+          <article aria-label="Nav example" className="component">
             <nav>
               <ul>
                 <li>
@@ -187,8 +247,7 @@ export default function Nav() {
     <li><strong>${brandLabel}</strong></li>
   </ul>
   <ul>
-    <li><a href="#" class="secondary">...</a>
-    </li>
+    <li><a href="#" class="secondary">...</a></li>
   </ul>
 </nav>`}</Code>
           </article>
@@ -203,7 +262,7 @@ export default function Nav() {
             <Code display="inline">{`<li>`}</Code>.
           </p>
           <p>Button sizes automatically match link size and margin.</p>
-          <article aria-label="Nav example">
+          <article aria-label="Nav example" className="component">
             <nav>
               <ul>
                 <li>
@@ -249,6 +308,58 @@ export default function Nav() {
           </article>
         </section>
 
+        <section ref={dropdownsRef}>
+          <Heading level={2} anchor="dropdowns">
+            Dropdowns
+          </Heading>
+          <p>
+            You can use <Link to="/docs/dropdown">dropdowns</Link> inside Nav.
+          </p>
+          <article aria-label="Dropdowns inside nav" className="component">
+            <nav>
+              <ul>
+                <li>
+                  <strong>Acme Corp</strong>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <Item className="secondary">Services</Item>
+                </li>
+                <li>
+                  <details className="dropdown">
+                    <summary>Account</summary>
+                    <DropdownItems items={accountItems} dir="rtl" />
+                  </details>
+                </li>
+              </ul>
+            </nav>
+            <Code as="footer">{`<nav>
+  <ul>
+    <li><strong>Acme Corp<</strong></li>
+  </ul>
+  <ul>
+    <li><a href="#" class="secondary">Services</a></li>
+    <li>
+      <details class="dropdown">
+        <summary>
+          Account
+        </summary>
+        <ul dir="rtl">
+${accountItems
+  .map(
+    (item, index) =>
+      `          <li><a href="#">${item}</a></li>${index !== accountItems.length - 1 ? "\n" : ""}`,
+  )
+  .join("")}
+        </ul>
+      </details>
+    </li>
+  </ul>
+</nav>`}</Code>
+          </article>
+        </section>
+
         <section ref={verticalStackingRef}>
           <Heading level={2} anchor="vertical-stacking">
             Vertical stacking
@@ -257,7 +368,7 @@ export default function Nav() {
           <p>
             Inside <Code display="inline">{`<aside>`}</Code>, navs items are stacked vertically.
           </p>
-          <article aria-label="Vertical nav example">
+          <article aria-label="Vertical nav example" className="component">
             <aside>
               <nav>
                 <ul>
@@ -288,10 +399,6 @@ export default function Nav() {
           </article>
         </section>
 
-        <p>
-          You can also use <Link to="/docs/dropdown">Dropdowns</Link> inside navs.
-        </p>
-
         <section ref={breadcrumbRef}>
           <Heading level={2} anchor="breadcrumb">
             Breadcrumb
@@ -301,7 +408,7 @@ export default function Nav() {
             With <Code display="inline">{`<nav aria-label="breadcrumb">`}</Code>, you can turn a nav
             into a breadcrumb.
           </p>
-          <article aria-label="Breadcrumb example">
+          <article aria-label="Breadcrumb example" className="component">
             <nav aria-label="breadcrumb">
               <ul>
                 <li>
@@ -327,9 +434,9 @@ export default function Nav() {
           </article>
           <p>
             You can change the divider with a local CSS custom property{" "}
-            <Code display="inline">--pico-nav-breadcrumb-divider</Code>.
+            <code>--pico-nav-breadcrumb-divider</code>.
           </p>
-          <article aria-label="Breadcrumb example">
+          <article aria-label="Breadcrumb example" className="component">
             <nav aria-label="breadcrumb" style={{ "--pico-nav-breadcrumb-divider": "'✨'" }}>
               <ul>
                 <li>
@@ -355,6 +462,70 @@ export default function Nav() {
     <li>Design</li>
   </ul>
 </nav>`}</Code>
+          </article>
+        </section>
+
+        <section id="overflow" ref={overflowRef}>
+          <Heading level={2} anchor="overflow">
+            Overflow
+          </Heading>
+          <p>
+            The <Code display="inline">{`<nav>`}</Code> component uses{" "}
+            <Code display="inline" language="css">
+              overflow: visible;
+            </Code>{" "}
+            on the container and negative margins on childrens to provide a nice{" "}
+            <code>::focus-visible</code> style for links on keyboard navigation while keeping the
+            content aligned horizontally.
+          </p>
+          <article aria-label="Overflow example" className="component">
+            <nav aria-label="overflow">
+              <ul>
+                {menuItems.slice(0, 2).map((item) => (
+                  <li key={item}>
+                    <Link to="#" onClick={preventDefault}>
+                      {item}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <ul>
+                {menuItems[2] && (
+                  <li key={menuItems[2]}>
+                    <Link to="#" onClick={preventDefault}>
+                      {menuItems[2]}
+                    </Link>
+                  </li>
+                )}
+              </ul>
+            </nav>
+            <nav aria-label="overflow-with-focus">
+              <ul>
+                {menuItems.slice(0, 2).map((item) => {
+                  const isFirst = item === menuItems[0];
+                  return (
+                    <li key={item}>
+                      <Link
+                        to="#"
+                        onClick={preventDefault}
+                        {...(isFirst && { className: "focused" })}
+                      >
+                        {item}
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+              <ul>
+                {menuItems[2] && (
+                  <li key={menuItems[2]}>
+                    <Link to="#" onClick={preventDefault} className="focused">
+                      {menuItems[2]}
+                    </Link>
+                  </li>
+                )}
+              </ul>
+            </nav>
           </article>
         </section>
 

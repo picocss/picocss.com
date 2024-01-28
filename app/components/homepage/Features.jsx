@@ -1,4 +1,3 @@
-import Code from "~/components/Code";
 import Link from "~/components/Link";
 import Logo from "~/components/Logo";
 import Adjustments from "~/components/icons/Adjustments";
@@ -37,8 +36,8 @@ export default function Features(props) {
           <h3>Class-light and Semantic</h3>
           <p>
             Thriving on simplicity, Pico directly styles your HTML tags, using fewer than 10{" "}
-            <Code display="inline">.classes</Code> overall. It also comes with a class-less version
-            for wild HTML&nbsp;purists.
+            <code>.classes</code> overall. It also comes with a class-less version for wild
+            HTML&nbsp;purists.
           </p>
           <ArrowLink to="/docs/classless">Discover the class-less version</ArrowLink>
         </article>
@@ -67,8 +66,8 @@ export default function Features(props) {
           <h3>Light or Dark Mode</h3>
           <p>
             Pico comes with two accessible, neutral color schemes out of the box: light and dark.
-            The best part? It automatically adapts to users'{" "}
-            <Code display="inline">prefers-color-scheme</Code>, all without the use of JavaScript.
+            The best part? It automatically adapts to users' <code>prefers-color-scheme</code>, all
+            without the use of JavaScript.
           </p>
           <ArrowLink to="/docs/color-schemes">Learn about the color schemes</ArrowLink>
         </article>

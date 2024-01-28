@@ -24,6 +24,7 @@ export const meta = () => [
 
 export default function Sass() {
   const introductionRef = useRef();
+  const importRef = useRef();
   const settingsRef = useRef();
   const themeColorRef = useRef();
   const customThemeRef = useRef();
@@ -48,6 +49,11 @@ export default function Sass() {
             anchor: "",
             title: "Introduction",
             ref: introductionRef,
+          },
+          {
+            anchor: "import",
+            title: "Import",
+            ref: importRef,
           },
           {
             anchor: "settings",
@@ -81,6 +87,11 @@ export default function Sass() {
             Pico up to date without conflicts since the Pico code and your custom code are
             separated.{" "}
           </p>
+        </section>
+        <section ref={importRef}>
+          <Heading level={2} anchor="import">
+            Import
+          </Heading>
           <p>
             You can import Pico into your SCSS file with{" "}
             <Link to="https://sass-lang.com/documentation/at-rules/use">@use</Link>:
@@ -98,8 +109,18 @@ export default function Sass() {
             avoid using relative URLs like:
           </p>
           <Code language="scss" className="small">
-            @use "../../../node_modules/@picocss/pico/scss/pico";
+            @use "node_modules/@picocss/pico/scss/pico";
           </Code>
+          <p>
+            If you are using <Link to="https://react.dev/">React</Link>, or{" "}
+            <Link to="https://webpack.js.org/">Webpack</Link> with{" "}
+            <Link to="https://github.com/webpack-contrib/sass-loader">sass-loader</Link>, the
+            default configuration will automatically resolve the path to{" "}
+            <Code display="inline">node_modules</Code> so you can simply import Pico with:
+            <Code language="scss" className="small">
+              @use "@picocss/pico/scss/pico";
+            </Code>
+          </p>
         </section>
 
         <section ref={settingsRef}>
@@ -121,8 +142,8 @@ export default function Sass() {
 );
 `}</Code>
           <p>
-            Example to generate a lightweight version without <Code display="inline">.classes</Code>
-            , uncommon form elements, and components.
+            Example to generate a lightweight version without <code>.classes</code>, uncommon form
+            elements, and components.
           </p>
           <p>This version reduces the weight of Pico by ~50%.</p>
           <Code language="scss">{`// Pico lightweight version
@@ -205,9 +226,7 @@ export default function Sass() {
               "zinc",
             ].map((color, index) => (
               <Fragment key={color}>
-                <Code display="inline" language="scss">
-                  {`${color}`}
-                </Code>
+                <code>{`${color}`}</code>
                 {index < 19 ? ", " : "."}
               </Fragment>
             ))}
@@ -230,15 +249,15 @@ export default function Sass() {
               starting point and customize it to match your brand’s style).
             </li>
           </ol>
-          <Code language="scss">{`// Your custom theme
-@use "path/custom-theme";          
-          
-// Pico without default theme
+          <Code language="scss">{`// Pico without default theme
 @use "pico" with (
   $modules: (
     "themes/default": false
   )
 );
+
+// Your custom theme
+@use "path/custom-theme";   
 `}</Code>
         </section>
 

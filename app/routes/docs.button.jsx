@@ -34,7 +34,7 @@ export default function Button() {
         description={
           <>
             Buttons are using the native <Code display="inline">{`<button>`}</Code> tag, without{" "}
-            <Code display="inline">.classes</Code>. for the default&nbsp;style.
+            <code>.classes</code>. for the default&nbsp;style.
           </>
         }
       />
@@ -89,9 +89,8 @@ export default function Button() {
             Variants
           </Heading>
           <p>
-            Buttons come with <Code display="inline">.secondary</Code> and{" "}
-            <Code display="inline">.contrast</Code> styles (not available in the{" "}
-            <Link to="/docs/classless">class-less version</Link>).
+            Buttons come with <code>.secondary</code> and <code>.contrast</code> styles (not
+            available in the <Link to="/docs/classless">class-less version</Link>).
           </p>
           <article aria-label="Button colors example" className="component">
             <div className="grid">
@@ -124,10 +123,9 @@ export default function Button() {
             Form buttons
           </Heading>
           <p>
-            <Code display="inline">type="submit"</Code> and{" "}
-            <Code display="inline">type="button"</Code> inputs are also displayed as buttons. All
-            form buttons are <Code display="inline">width: 100%;</Code> by default, to match with
-            the other form elements.
+            <code>type="submit"</code> and <code>type="button"</code> inputs are also displayed as
+            buttons. All form buttons are <code>width: 100%;</code> by default, to match with the
+            other form elements.
           </p>
           <article aria-label="Input buttons example" className="component">
             <input type="submit" />
@@ -169,8 +167,7 @@ export default function Button() {
             Role button
           </Heading>
           <p>
-            Clickable elements with <Code display="inline">role="button"</Code> are rendered as
-            buttons.
+            Clickable elements with <code>role="button"</code> are rendered as buttons.
           </p>
           <article aria-label="Role button example" className="component">
             <div role="button" tabIndex="0">
@@ -189,7 +186,7 @@ export default function Button() {
           </Heading>
 
           <p>
-            You can use <Code display="inline">role="group"</Code> with buttons. See{" "}
+            You can use <code>role="group"</code> with buttons. See{" "}
             <Link to="/docs/group">Group</Link>.
           </p>
 

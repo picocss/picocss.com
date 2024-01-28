@@ -148,7 +148,7 @@ export default function Colors() {
           <Heading level={2} anchor="usage-with-css">
             Usage with CSS
           </Heading>
-          <p>No color utilities are in the main Pico stylesheet.</p>
+          <p>The main Pico stylesheet excludes color utilities.</p>
           <p>
             There is a separate stylesheet with all the color utilities that you can link in the{" "}
             <Code display="inline">{`<head>`}</Code> of your website.
@@ -190,8 +190,7 @@ export default function Colors() {
             Usage with SASS
           </Heading>
           <p>
-            You can import all colors as SASS variables in any <Code display="inline">.scss</Code>{" "}
-            file with:
+            You can import all colors as SASS variables in any <code>.scss</code> file with:
           </p>
           <Code language="scss">@use "colors" as *;</Code>
           <p>The colors can then be used like this:</p>
@@ -253,7 +252,7 @@ export default function Colors() {
             />
           </p>
           <p>
-            Download the <Code display="inline">.json</Code> file with all the colors:
+            Download the <code>.json</code> file with all the colors:
           </p>
           <p>
             <DownloadColorPalette />

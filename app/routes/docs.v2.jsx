@@ -92,9 +92,9 @@ export default function Classless() {
             Easier customization
           </Heading>
           <p>
-            We have refactored all <Code display="inline">.scss</Code> files to make it easier for
-            you to compile your own version of Pico with <Link to="/docs/sass">SASS</Link>. All
-            modules can now be enabled or disabled using @use and vars.
+            We have refactored all <code>.scss</code> files to make it easier for you to compile
+            your own version of Pico with <Link to="/docs/sass">SASS</Link>. All modules can now be
+            enabled or disabled using @use and vars.
           </p>
         </section>
 
@@ -105,7 +105,7 @@ export default function Classless() {
           <p>
             Pico v2 comes with <Link to="/docs/colors">380 manually crafted colors</Link> to help
             you personalize your brand design system. The colors can be imported into any{" "}
-            <Code display="inline">.scss</Code>
+            <code>.scss</code>
             file, and a new stylesheet with all the color utilities is provided.
           </p>
         </section>
@@ -141,16 +141,16 @@ export default function Classless() {
           <Heading level={3}>CSS Vars</Heading>
           <p>
             All <Link to="/docs/css-variables">CSS custom properties</Link> are prefixed with{" "}
-            <Code display="inline">pico-</Code>
+            <code>pico-</code>
             to avoid collisions with other CSS frameworks or your own vars. We also added new CSS
             variables and renamed some to follow a consistent pattern
-            <Code display="inline">{`{component}-{state}-{property}`}</Code>.
+            <code>{`{component}-{state}-{property}`}</code>.
           </p>
 
           <Heading level={3}>SCSS files</Heading>
           <p>
-            We renamed and moved many <Code display="inline">.scss</Code> files. If you import Pico
-            modules, you need to update your paths.
+            We renamed and moved many <code>.scss</code> files. If you import Pico modules, you need
+            to update your paths.
           </p>
 
           <Heading level={3}>Buttons</Heading>
@@ -165,21 +165,21 @@ export default function Classless() {
 
           <Heading level={3}>Table</Heading>
           <p>
-            The <Code display="inline">.striped</Code> class is now used for the striped{" "}
+            The <code>.striped</code> class is now used for the striped{" "}
             <Link to="/docs/table">table</Link>’s style.
           </p>
 
           <Heading level={3}>Dropdowns</Heading>
           <p>
             While accordions are still classless, <Link to="/docs/dropdown">dropdowns</Link> now use
-            <Code display="inline">.dropdown</Code>. We also removed the experimental syntax that
-            allowed dropdowns in the nav using nested lists.
+            <code>.dropdown</code>. We also removed the experimental syntax that allowed dropdowns
+            in the nav using nested lists.
           </p>
 
           <Heading level={3}>Grid</Heading>
           <p>
             <Link to="/docs/grid">Grid</Link> columns now collapse on small devices (
-            <Code display="inline">{`<768px`}</Code>).
+            <code>{`<768px`}</code>).
           </p>
         </section>
       </Content>

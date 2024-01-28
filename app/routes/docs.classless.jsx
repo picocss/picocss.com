@@ -6,9 +6,11 @@ import Content from "~/components/docs/Content";
 import EditOnGithub from "~/components/docs/EditOnGithub";
 import Header from "~/components/docs/Header";
 import TableOfContents from "~/components/docs/TableOfContents";
+import examples from "~/data/examples";
 import metaData from "~/data/meta";
 
 const { titleSuffix, cdnBaseUrl } = metaData;
+const classlessExample = examples.find((example) => example.title === "Class-less preview");
 
 export const meta = () => [
   { title: `Class-less version ${titleSuffix}` },
@@ -31,9 +33,8 @@ export default function Classless() {
         title="Class-less version"
         description={
           <>
-            Embrace minimalism with Pico’s <Code display="inline">.classless</Code> version, a
-            semantic&nbsp;option for wild&nbsp;HTML&nbsp;purists who prefer a
-            stripped-down&nbsp;approach.
+            Embrace minimalism with Pico’s <code>.classless</code> version, a semantic&nbsp;option
+            for wild&nbsp;HTML&nbsp;purists who prefer a stripped-down&nbsp;approach.
           </>
         }
       />
@@ -63,10 +64,8 @@ export default function Classless() {
       <Content>
         <section ref={introductionRef}>
           <p>
-            Pico provides a <Code display="inline">.classless</Code> version (
-            <Link to="https://codesandbox.io/s/github/picocss/examples/tree/master/v1-classless">
-              example
-            </Link>
+            Pico provides a <code>.classless</code> version (
+            <Link to={classlessExample.links.preview}>example</Link>
             ).
           </p>
           <p>
@@ -94,6 +93,10 @@ body > footer {
     <h1>Hello, world!</h1>
   </main>
 </body>`}</Code>
+          <p>
+            See the <Link to="/docs/version-picker">version picker</Link> to easily select the ideal
+            Pico CSS version variant to match your project's needs.
+          </p>
         </section>
 
         <section ref={usageRef}>
@@ -101,19 +104,17 @@ body > footer {
             Usage
           </Heading>
           <p>
-            Use the default <Code display="inline">.classless</Code> version if you need centered
-            viewports:
+            Use the default <code>.classless</code> version if you need centered viewports:
           </p>
           <Code className="small">{`<link rel="stylesheet" href="css/pico.classless.min.css" />`}</Code>
 
           <p>
-            Or use the <Code display="inline">.fluid.classless</Code> version if you need a fluid
-            container:
+            Or use the <code>.fluid.classless</code> version if you need a fluid container:
           </p>
           <Code className="small">{`<link rel="stylesheet" href="css/pico.fluid.classless.min.css" />`}</Code>
 
           <p>
-            These <Code display="inline">.classless</Code> versions are also available on{" "}
+            These <code>.classless</code> versions are also available on{" "}
             <a href={cdnBaseUrl}>jsDelivr CDN</a>:
           </p>
           <Code>{`<!-- Centered viewport --> 

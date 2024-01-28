@@ -1,0 +1,32 @@
+@use "sass:map";
+@use "settings" as *;
+
+/**
+ * Page: Nav
+ */
+
+main.page-nav {
+  section#overflow {
+    article {
+      nav {
+        border: 1px dashed var(#{$css-var-prefix}del-color);
+
+        &:not(:last-child) {
+          border-bottom-color: transparent;
+        }
+
+        ul {
+          li {
+            a {
+              &.focused {
+                box-shadow: 0 0 0 var(#{$css-var-prefix}outline-width)
+                  var(#{$css-var-prefix}primary-focus);
+                color: var(#{$css-var-prefix}primary-hover);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -10,6 +10,7 @@
   --pico-primary-hover-background: #bd3c13;
   --pico-primary-focus: rgba(244, 93, 44, 0.5);
   --pico-primary-inverse: #fff;
+  --pico-switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
 }
 
 /* Orange color for dark color scheme (Auto) */
@@ -24,6 +25,7 @@
     --pico-primary-hover-background: #e74b1a;
     --pico-primary-focus: rgba(245, 107, 61, 0.375);
     --pico-primary-inverse: #fff;
+    --pico-switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
   }
 }
 /* Orange color for dark color scheme (Forced) */
@@ -37,6 +39,7 @@
   --pico-primary-hover-background: #e74b1a;
   --pico-primary-focus: rgba(245, 107, 61, 0.375);
   --pico-primary-inverse: #fff;
+  --pico-switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
 }
 
 /*# sourceMappingURL=orange.css.map */

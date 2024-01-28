@@ -156,8 +156,7 @@ export default function Checkboxes() {
           </Heading>
           <p>
             You can change a checkbox to an indeterminate state by setting the{" "}
-            <Code display="inline">indeterminate</Code> property to{" "}
-            <Code display="inline">true</Code>.
+            <code>indeterminate</code> property to <code>true</code>.
           </p>
           <article aria-label="Indeterminate checkbox example" className="component">
             <label>
@@ -183,7 +182,7 @@ export default function Checkboxes() {
             Validation states
           </Heading>
           <p>
-            Validation states are provided with <Code display="inline">aria-invalid</Code>.
+            Validation states are provided with <code>aria-invalid</code>.
           </p>
           <article aria-label="Validation states example" className="component">
             <label>

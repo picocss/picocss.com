@@ -8,6 +8,7 @@ import Header from "~/components/docs/Header";
 import TableOfContents from "~/components/docs/TableOfContents";
 import colorsCssVars from "~/data/code-snippets/default-theme-color-schemes.txt";
 import stylesCssVars from "~/data/code-snippets/default-theme-styles.txt";
+import orangeCssCode from "~/data/code-snippets/orange.txt";
 import metaData from "~/data/meta";
 import { removeLines } from "~/utils";
 
@@ -73,21 +74,18 @@ export default function CssVariables() {
         <section ref={introductionRef}>
           <p>
             Pico includes many custom properties (variables) that allow easy access to frequently
-            used values such as <Code display="inline">{`font-family`}</Code>,{" "}
-            <Code display="inline">{`font-size`}</Code>,
-            <Code display="inline">{`border-radius`}</Code>,{" "}
-            <Code display="inline">{`margin`}</Code>, <Code display="inline">{`padding`}</Code>, and
-            more.
+            used values such as <code>font-family</code>, <code>font-size</code>,
+            <code>border-radius</code>, <code>margin</code>, <code>padding</code>, and more.
           </p>
           <p>
-            All CSS variables are prefixed with <Code display="inline">{`pico-`}</Code> to avoid
-            collisions with other CSS frameworks or your own vars. You can remove or customize this
-            prefix by recompiling the CSS files with <Link to="/docs/sass">SASS</Link>.
+            All CSS variables are prefixed with <code>pico-</code> to avoid collisions with other
+            CSS frameworks or your own vars. You can remove or customize this prefix by recompiling
+            the CSS files with <Link to="/docs/sass">SASS</Link>.
           </p>
           <p>
-            You can define the CSS variables within the <Code display="inline">{`:root`}</Code>{" "}
-            selector to apply the changes globally or overwrite the CSS variables on specific
-            selectors to apply the changes locally.
+            You can define the CSS variables within the <code>:root</code> selector to apply the
+            changes globally or overwrite the CSS variables on specific selectors to apply the
+            changes locally.
           </p>
         </section>
 
@@ -165,19 +163,18 @@ export default function CssVariables() {
 }`}</Code>
           <p>To add or edit CSS variables for dark mode, you need to define them twice.</p>
           <p>
-            The first inclusion is in the <Code display="inline">{`@media`}</Code>query that checks
-            if the user has dark mode enabled through their device settings with{" "}
-            <Code display="inline">{`prefers-color-scheme:
-            dark`}</Code>
-            . In this case, the dark mode styling is applied to the{" "}
-            <Code display="inline">{`:root`}</Code> element if there is no explicit{" "}
-            <Code display="inline">{`data-theme`}</Code> attribute set.
+            The first inclusion is in the <code>{`@media`}</code>query that checks if the user has
+            dark mode enabled through their device settings with{" "}
+            <code>{`prefers-color-scheme:
+            dark`}</code>
+            . In this case, the dark mode styling is applied to the <code>{`:root`}</code> element
+            if there is no explicit <code>{`data-theme`}</code> attribute set.
           </p>
 
           <p>
             The second inclusion is when you force the dark mode with{" "}
-            <Code display="inline">{`data-theme="dark"`}</Code>. This allows you to manually toggle
-            between the light and dark themes regardless of the user’s device settings.
+            <code>{`data-theme="dark"`}</code>. This allows you to manually toggle between the light
+            and dark themes regardless of the user’s device settings.
           </p>
           <Code language="css">{`/* Dark color scheme (Auto) */
 /* Automatically enabled if user has Dark mode enabled */
@@ -192,10 +189,18 @@ export default function CssVariables() {
 [data-theme="dark"] {
   ...
 }`}</Code>
-          <p>
-            Try our <Link to="/docs/theme-generator">Minimal theme generator</Link> for a detailed
-            example.
-          </p>
+          <details>
+            <summary role="button" className="secondary">
+              Detailled example to override the primary color
+            </summary>
+            <Code language="css">
+              {removeLines({
+                code: orangeCssCode,
+                linesMatching: ["  --pico-switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0);"],
+                linesToRemoveFromEnd: 2,
+              })}
+            </Code>
+          </details>
         </section>
 
         <section ref={allCssVariablesRef}>
