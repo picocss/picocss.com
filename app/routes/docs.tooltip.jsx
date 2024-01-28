@@ -46,7 +46,7 @@ export default function Tooltip() {
       {/* Content */}
       <Content>
         <section ref={syntaxRef}>
-          <article aria-label="Tooltip example">
+          <article aria-label="Tooltip example" className="component">
             <p>
               Tooltip on a{" "}
               <Link to="#" data-tooltip="Tooltip">
@@ -73,7 +73,11 @@ export default function Tooltip() {
             The tooltip is displayed on top by default but you can change it with the{" "}
             <code>data-placement</code> attribute.
           </p>
-          <article aria-label="Tooltip placement example" id="tooltip-placement">
+          <article
+            aria-label="Tooltip placement example"
+            id="tooltip-placement"
+            className="component"
+          >
             <main className="grid">
               <button data-tooltip="Top">Top</button>
               <button data-tooltip="Right" data-placement="right">
