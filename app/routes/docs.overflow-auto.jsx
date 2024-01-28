@@ -7,24 +7,24 @@ import metaData from "~/data/meta";
 const { titleSuffix } = metaData;
 
 export const meta = () => [
-  { title: `Horizontal scroller ${titleSuffix}` },
+  { title: `Overflow auto ${titleSuffix}` },
   {
     name: "description",
     content:
-      "<figure> acts as a container to make any content scrollable horizontally with minimal and semantic HTML.",
+      ".overflow-auto enables automatic scrollbars to an element if its content extends beyond its limits.",
   },
 ];
 
-export default function Scroller() {
+export default function OverflowAuto() {
   return (
     <>
       {/* Header */}
       <Header
-        title="Horizontal scroller"
+        title="Overflow auto"
         description={
           <>
-            <Code display="inline">{`<figure>`}</Code> acts as a container to make any content
-            scrollable horizontally with minimal and semantic&nbsp;HTML.
+            <Code display="inline">{`.overflow-auto`}</Code> enables automatic scrollbars to an
+            element if its content extends beyond its limits.
           </>
         }
       />
@@ -35,7 +35,7 @@ export default function Scroller() {
           <p>
             Useful to have responsive <Code display="inline">{`<table>`}</Code>.
           </p>
-          <figure>
+          <div className="overflow-auto">
             <table>
               <thead>
                 <tr>
@@ -54,18 +54,18 @@ export default function Scroller() {
                 ))}
               </tbody>
             </table>
-          </figure>
+          </div>
           <Code>
-            {`<figure>
+            {`<div class="overflow-auto">
   <table>
   ...
   </table>
-</figure>`}
+</div>`}
           </Code>
         </section>
 
         {/* Edit on GitHub */}
-        <EditOnGithub file="docs.scroller.jsx" />
+        <EditOnGithub file="docs.overflow-auto.jsx" />
       </Content>
     </>
   );

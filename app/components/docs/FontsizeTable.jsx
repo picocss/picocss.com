@@ -95,7 +95,7 @@ export default function FontsizeTable(props) {
 
   return (
     <>
-      <figure {...props}>
+      <div className="overflow-auto" {...props}>
         <table className="striped" id="responsive-font-sizes">
           <caption>Responsive font sizes</caption>
           {/* Devices */}
@@ -174,12 +174,13 @@ export default function FontsizeTable(props) {
             })}
           </tbody>
         </table>
-      </figure>
+      </div>
       <p>
         <label>
           <input
             type="checkbox"
             role="switch"
+            name="toggle-font-size-in-rem"
             {...(fontSizeInRem ? { checked: "checked" } : {})}
             onChange={toggleFontSizeInRem}
           />

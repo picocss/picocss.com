@@ -67,8 +67,6 @@
   --pico-form-element-active-background-color: #fff;
   --pico-form-element-active-border-color: var(--pico-primary-border);
   --pico-form-element-focus-color: var(--pico-primary-border);
-  --pico-form-element-disabled-background-color: var(--pico-form-element-background-color);
-  --pico-form-element-disabled-border-color: var(--pico-form-element-border-color);
   --pico-form-element-disabled-opacity: 0.5;
   --pico-form-element-invalid-border-color: #b86a6b;
   --pico-form-element-invalid-active-border-color: #c84f48;
@@ -77,7 +75,7 @@
   --pico-form-element-valid-active-border-color: #279977;
   --pico-form-element-valid-focus-color: var(--pico-form-element-valid-active-border-color);
   --pico-switch-background-color: #bfc7d9;
-  --pico-switch-color: var(--pico-primary-inverse);
+  --pico-switch-color: #fff;
   --pico-switch-checked-background-color: var(--pico-primary-background);
   --pico-range-border-color: #dfe3eb;
   --pico-range-active-border-color: #bfc7d9;
@@ -188,8 +186,6 @@
     --pico-form-element-active-background-color: #1a1f28;
     --pico-form-element-active-border-color: var(--pico-primary-border);
     --pico-form-element-focus-color: var(--pico-primary-border);
-    --pico-form-element-disabled-background-color: var(--pico-form-element-background-color);
-    --pico-form-element-disabled-border-color: var(--pico-form-element-border-color);
     --pico-form-element-disabled-opacity: 0.5;
     --pico-form-element-invalid-border-color: #964a50;
     --pico-form-element-invalid-active-border-color: #b7403b;
@@ -198,7 +194,7 @@
     --pico-form-element-valid-active-border-color: #16896a;
     --pico-form-element-valid-focus-color: var(--pico-form-element-valid-active-border-color);
     --pico-switch-background-color: #333c4e;
-    --pico-switch-color: var(--pico-primary-inverse);
+    --pico-switch-color: #fff;
     --pico-switch-checked-background-color: var(--pico-primary-background);
     --pico-range-border-color: #202632;
     --pico-range-active-border-color: #2a3140;
@@ -312,8 +308,6 @@
   --pico-form-element-active-background-color: #1a1f28;
   --pico-form-element-active-border-color: var(--pico-primary-border);
   --pico-form-element-focus-color: var(--pico-primary-border);
-  --pico-form-element-disabled-background-color: var(--pico-form-element-background-color);
-  --pico-form-element-disabled-border-color: var(--pico-form-element-border-color);
   --pico-form-element-disabled-opacity: 0.5;
   --pico-form-element-invalid-border-color: #964a50;
   --pico-form-element-invalid-active-border-color: #b7403b;
@@ -322,7 +316,7 @@
   --pico-form-element-valid-active-border-color: #16896a;
   --pico-form-element-valid-focus-color: var(--pico-form-element-valid-active-border-color);
   --pico-switch-background-color: #333c4e;
-  --pico-switch-color: var(--pico-primary-inverse);
+  --pico-switch-color: #fff;
   --pico-switch-checked-background-color: var(--pico-primary-background);
   --pico-range-border-color: #202632;
   --pico-range-active-border-color: #2a3140;

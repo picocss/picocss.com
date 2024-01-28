@@ -23,7 +23,7 @@
       { "label": "Container", "route": "/docs/container" },
       { "label": "Landmarks & section", "route": "/docs/landmarks-section" },
       { "label": "Grid", "route": "/docs/grid" },
-      { "label": "Horizontal scroller", "route": "/docs/scroller" }
+      { "label": "Overflow auto", "route": "/docs/overflow-auto" }
     ]
   },
   {

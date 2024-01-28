@@ -22,7 +22,7 @@ export default function UsageScenarios() {
       <Content>
         <section>
           <p>Optimal use cases for Pico based on your CSS expertise and project type.</p>
-          <figure>
+          <div className="overflow-auto">
             <table className="striped">
               <thead>
                 <tr>
@@ -91,7 +91,7 @@ export default function UsageScenarios() {
                 </tr>
               </tbody>
             </table>
-          </figure>
+          </div>
         </section>
       </Content>
     </>

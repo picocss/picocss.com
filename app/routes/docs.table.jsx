@@ -101,9 +101,9 @@ export default function TablePage() {
       {/* Content */}
       <Content>
         <section ref={syntaxRef}>
-          <figure>
+          <div className="overflow-auto">
             <Table />
-          </figure>
+          </div>
           <Code>{`<table>
   <thead>
     <tr>
@@ -163,9 +163,9 @@ export default function TablePage() {
             <Code display="inline">{`<td>`}</Code>.
           </p>
           <p>&nbsp;</p>
-          <figure>
+          <div className="overflow-auto">
             <Table theadProps={{ "data-theme": inversedTheme }} />
-          </figure>
+          </div>
           <Code>{`<table>
   <thead data-theme="${inversedTheme}">
     ...
@@ -183,9 +183,9 @@ export default function TablePage() {
             <Code display="inline">.striped</Code> enable striped rows (not available in the{" "}
             <Link to="/docs/classless">class&#8209;less&nbsp;version</Link>).
           </p>
-          <figure>
+          <div className="overflow-auto">
             <Table className="striped" />
-          </figure>
+          </div>
           <Code>{`<table class="striped">
   ...
 </table>`}</Code>
