@@ -5,10 +5,12 @@
   position: absolute;
   top: calc(var(#{$css-var-prefix}spacing) * 0.75);
   left: calc(var(#{$css-var-prefix}spacing) * 0.75);
-  transform: translateY(-200%);
+  transform: translateY(-1000%);
   #{$css-var-prefix}box-shadow: var(#{$css-var-prefix}card-box-shadow);
+  opacity: 0;
 
   &:focus {
     transform: translateY(0);
+    opacity: 1;
   }
 }
