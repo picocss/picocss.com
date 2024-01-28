@@ -73,6 +73,8 @@ export default function Classless() {
       {/* Content */}
       <Content>
         <section>
+        <article>Documentation in progress...</article>
+        
           <Heading level={2} ref={newLookAndFeelRef} anchor="new-look-and-feel">
             New look and feel
           </Heading>
