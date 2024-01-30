@@ -35,14 +35,14 @@ export default function Loading() {
           <article aria-label="Loading example" aria-busy="true" />
           <Code>{`<article aria-busy="true"></article>`}</Code>
           <p>Any inline element:</p>
-          <article aria-label="Loading example">
+          <article aria-label="Loading example" className="component">
             <Link to="#" aria-busy="true">
               Your link is being generated...
             </Link>
             <Code as="footer">{`<a href="#" aria-busy="true">Your link is being generated...</a>`}</Code>
           </article>
           <p>Any button:</p>
-          <article aria-label="Loading button examples">
+          <article aria-label="Loading button examples" className="component">
             <div className="grid" id="buttons">
               <button aria-busy="true" aria-label="Please wait…" />
               <button aria-busy="true" aria-label="Please wait…" className="secondary" />
