@@ -191,7 +191,7 @@ export default function CssVariables() {
 }`}</Code>
           <details>
             <summary role="button" className="secondary">
-              Detailled example to override the primary color
+              Detailed example to override the primary color
             </summary>
             <Code language="css">
               {removeLines({
