@@ -196,7 +196,10 @@ export default function CssVariables() {
             <Code language="css">
               {removeLines({
                 code: orangeCssCode,
-                linesMatching: ["  --pico-switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0);"],
+                linesMatching: [
+                  "  --pico-switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0);",
+                  "    --pico-switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0);",
+                ],
                 linesToRemoveFromEnd: 2,
               })}
             </Code>
