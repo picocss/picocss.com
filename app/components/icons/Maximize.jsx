@@ -10,6 +10,7 @@ export default function Maximize(props) {
       fill="none"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="icon-maximize"
       {...props}
     >
       <path d="M4 8v-2a2 2 0 0 1 2 -2h2" />

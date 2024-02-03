@@ -10,6 +10,7 @@ export default function Plus(props) {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="icon-plus"
       {...props}
     >
       <circle cx="12" cy="12" r="10"></circle>

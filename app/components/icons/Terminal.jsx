@@ -10,6 +10,7 @@ export default function Terminal(props) {
       fill="none"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="icon-terminal"
       {...props}
     >
       <path d="M8 9l3 3l-3 3" />

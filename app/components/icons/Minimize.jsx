@@ -10,6 +10,7 @@ export default function Minimize(props) {
       fill="none"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="icon-minimize"
       {...props}
     >
       <path d="M15 19v-2a2 2 0 0 1 2 -2h2" />

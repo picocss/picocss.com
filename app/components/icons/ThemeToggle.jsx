@@ -1,5 +1,6 @@
 // Source: https://toggles.dev
-export default function ThemeToggle(props) {
+export default function ThemeToggle({ className, ...props }) {
+  const classes = ["icon-theme-toggle", className].join(" ");
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -7,6 +8,7 @@ export default function ThemeToggle(props) {
       height="24"
       viewBox="0 0 32 32"
       fill="currentColor"
+      className={classes}
       {...props}
     >
       <clipPath id="theme-toggle-cutout">

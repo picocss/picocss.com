@@ -10,6 +10,7 @@ export default function Menu(props) {
       fill="none"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="icon-menu"
       {...props}
     >
       <path d="M4 6l16 0"></path>
