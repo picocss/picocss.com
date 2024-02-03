@@ -8,9 +8,10 @@ export function removeLines({
   const lines = code.split("\n");
   if (linesMatching.length > 0) {
     linesMatching.forEach((line) => {
-      const index = lines.indexOf(line);
-      if (index > -1) {
+      let index = lines.indexOf(line);
+      while (index > -1) {
         lines.splice(index, 1);
+        index = lines.indexOf(line);
       }
     });
   }

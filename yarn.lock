@@ -387,35 +387,35 @@
   dependencies:
     mime "^3.0.0"
 
-"@cloudflare/workerd-darwin-64@1.20231218.0":
-  version "1.20231218.0"
-  resolved "https://registry.yarnpkg.com/@cloudflare/workerd-darwin-64/-/workerd-darwin-64-1.20231218.0.tgz#e887296a6bfa707b2e02dbf5168582cd3afb800c"
-  integrity sha512-547gOmTIVmRdDy7HNAGJUPELa+fSDm2Y0OCxqAtQOz0GLTDu1vX61xYmsb2rn91+v3xW6eMttEIpbYokKjtfJA==
+"@cloudflare/workerd-darwin-64@1.20240129.0":
+  version "1.20240129.0"
+  resolved "https://registry.yarnpkg.com/@cloudflare/workerd-darwin-64/-/workerd-darwin-64-1.20240129.0.tgz#b6db9c944fcb1a49b15be646383c937ffa175978"
+  integrity sha512-DfVVB5IsQLVcWPJwV019vY3nEtU88c2Qu2ST5SQxqcGivZ52imagLRK0RHCIP8PK4piSiq90qUC6ybppUsw8eg==
 
-"@cloudflare/workerd-darwin-arm64@1.20231218.0":
-  version "1.20231218.0"
-  resolved "https://registry.yarnpkg.com/@cloudflare/workerd-darwin-arm64/-/workerd-darwin-arm64-1.20231218.0.tgz#9346de61b74324b09e3ef83e1666ffc84f1c4559"
-  integrity sha512-b39qrU1bKolCfmKFDAnX4vXcqzISkEUVE/V8sMBsFzxrIpNAbcUHBZAQPYmS/OHIGB94KjOVokvDi7J6UNurPw==
+"@cloudflare/workerd-darwin-arm64@1.20240129.0":
+  version "1.20240129.0"
+  resolved "https://registry.yarnpkg.com/@cloudflare/workerd-darwin-arm64/-/workerd-darwin-arm64-1.20240129.0.tgz#1e217bae20c8407ed0225b3eb60b6b2c4ab1a5ed"
+  integrity sha512-t0q8ABkmumG1zRM/MZ/vIv/Ysx0vTAXnQAPy/JW5aeQi/tqrypXkO9/NhPc0jbF/g/hIPrWEqpDgEp3CB7Da7Q==
 
-"@cloudflare/workerd-linux-64@1.20231218.0":
-  version "1.20231218.0"
-  resolved "https://registry.yarnpkg.com/@cloudflare/workerd-linux-64/-/workerd-linux-64-1.20231218.0.tgz#7d21aaa0b4a97f9d7769fa6af2e484538f7e3713"
-  integrity sha512-dMUF1wA+0mybm6hHNOCgY/WMNMwomPPs4I7vvYCgwHSkch0Q2Wb7TnxQZSt8d1PK/myibaBwadrlIxpjxmpz3w==
+"@cloudflare/workerd-linux-64@1.20240129.0":
+  version "1.20240129.0"
+  resolved "https://registry.yarnpkg.com/@cloudflare/workerd-linux-64/-/workerd-linux-64-1.20240129.0.tgz#d0e46297c79982b47495cbfb73623d621aa49335"
+  integrity sha512-sFV1uobHgDI+6CKBS/ZshQvOvajgwl6BtiYaH4PSFSpvXTmRx+A9bcug+6BnD+V4WgwxTiEO2iR97E1XuwDAVw==
 
-"@cloudflare/workerd-linux-arm64@1.20231218.0":
-  version "1.20231218.0"
-  resolved "https://registry.yarnpkg.com/@cloudflare/workerd-linux-arm64/-/workerd-linux-arm64-1.20231218.0.tgz#e8280275379aca868886db7d2491517be3f473f4"
-  integrity sha512-2s5uc8IHt0QmWyKxAr1Fy+4b8Xy0b/oUtlPnm5MrKi2gDRlZzR7JvxENPJCpCnYENydS8lzvkMiAFECPBccmyQ==
+"@cloudflare/workerd-linux-arm64@1.20240129.0":
+  version "1.20240129.0"
+  resolved "https://registry.yarnpkg.com/@cloudflare/workerd-linux-arm64/-/workerd-linux-arm64-1.20240129.0.tgz#e5d02fafcad1536e0515ee5feb2e713e487b1f2a"
+  integrity sha512-O7q7htHaFRp8PgTqNJx1/fYc3+LnvAo6kWWB9a14C5OWak6AAZk42PNpKPx+DXTmGvI+8S1+futBGUeJ8NPDXg==
 
-"@cloudflare/workerd-windows-64@1.20231218.0":
-  version "1.20231218.0"
-  resolved "https://registry.yarnpkg.com/@cloudflare/workerd-windows-64/-/workerd-windows-64-1.20231218.0.tgz#85fc18f18f7c6593b427c58bf58224850f706d20"
-  integrity sha512-oN5hz6TXUDB5YKUN5N3QWAv6cYz9JjTZ9g16HVyoegVFEL6/zXU3tV19MBX2IvlE11ab/mRogEv9KXVIrHfKmA==
+"@cloudflare/workerd-windows-64@1.20240129.0":
+  version "1.20240129.0"
+  resolved "https://registry.yarnpkg.com/@cloudflare/workerd-windows-64/-/workerd-windows-64-1.20240129.0.tgz#99f456b636413e66d860deb2b803d04cc5b47d75"
+  integrity sha512-YqGno0XSqqqkDmNoGEX6M8kJlI2lEfWntbTPVtHaZlaXVR9sWfoD7TEno0NKC95cXFz+ioyFLbgbOdnfWwmVAA==
 
-"@cloudflare/workers-types@^4.20230518.0":
-  version "4.20240117.0"
-  resolved "https://registry.yarnpkg.com/@cloudflare/workers-types/-/workers-types-4.20240117.0.tgz#6cadb53017488ea4258dfd4fb589562d3b85a597"
-  integrity sha512-HQU8lJhaJVh8gQXFtVA7lZwd0hK1ckIFjRuxOXkVN2Z9t7DtzNbA2YTwBry5thKNgF5EwjN4THjHg5NUZzj05A==
+"@cloudflare/workers-types@^4.20240129.0":
+  version "4.20240129.0"
+  resolved "https://registry.yarnpkg.com/@cloudflare/workers-types/-/workers-types-4.20240129.0.tgz#a10e314565ff5edeb00592ed0e06686f561ba524"
+  integrity sha512-VyHbih/bqh/RN2FRxnXznG0bpBIg9RfSP1ldbAVnCXFinjOdv0zm2P/RWqOVN9+FgU5sanRltwwT7jGngxZy8w==
 
 "@cspotcode/source-map-support@0.8.1":
   version "0.8.1"
@@ -1007,30 +1007,30 @@
   resolved "https://registry.yarnpkg.com/@pkgjs/parseargs/-/parseargs-0.11.0.tgz#a77ea742fab25775145434eb1d2328cf5013ac33"
   integrity sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==
 
-"@remix-run/cloudflare-pages@^2.5.1":
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/@remix-run/cloudflare-pages/-/cloudflare-pages-2.5.1.tgz#6c4cf88f0126bb26b4c0effa9ed6977557bf2dee"
-  integrity sha512-ZRyPUXyqqVqsJbKQtwJz4tBxHEH5aokCNDV3AK7nqmIJjlp+5yKVuos16/Oqd5n+9ZZ3SUJy+CgcHzylz1eaCQ==
+"@remix-run/cloudflare-pages@^2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@remix-run/cloudflare-pages/-/cloudflare-pages-2.6.0.tgz#c2b3df2a2cc72cb3733896ab8aefe461631d9dfd"
+  integrity sha512-SRWrh/RaakMaE3xgvgMDyynNryFcwQvste3MJOLECDo6mxlB18AjOx+SvAoQaw89w1ec8bV87Ri7QF436q/xIw==
   dependencies:
-    "@remix-run/cloudflare" "2.5.1"
+    "@remix-run/cloudflare" "2.6.0"
 
-"@remix-run/cloudflare@2.5.1", "@remix-run/cloudflare@^2.5.1":
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/@remix-run/cloudflare/-/cloudflare-2.5.1.tgz#a5a077c34b275b7d59bf1922608c571c441b2591"
-  integrity sha512-mioyYeZuhAqD6ak42oJUhtD50ezm/CCP53pC4tossMfQCvhZvbCfxuWfVNlwZsXLeVy2z9ecMuJXXKoRi1Wd0g==
+"@remix-run/cloudflare@2.6.0", "@remix-run/cloudflare@^2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@remix-run/cloudflare/-/cloudflare-2.6.0.tgz#10a0dfc8b967d632589d98cbfe2a4af36cfd3e07"
+  integrity sha512-wL6d9oaaSNherRQZI11q+qedqGDkQdu85BZYgeg6MLoMvyX2ogHe004ZIZAsAfk0LYET1YR0gY1jIGTfXaHYdg==
   dependencies:
     "@cloudflare/kv-asset-handler" "^0.1.3"
-    "@remix-run/server-runtime" "2.5.1"
+    "@remix-run/server-runtime" "2.6.0"
 
-"@remix-run/css-bundle@^2.5.1":
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/@remix-run/css-bundle/-/css-bundle-2.5.1.tgz#0ac123cb89e7308b1fa129e0704901fb1ae4c7c5"
-  integrity sha512-QPeNvgD7fj4NmXB9CuGM5Mp0ZtM43dMeda8Ik3AUoQOMgMWb0d4jK4Cye6eoTGwJOron6XISKh0mq8MorucWEQ==
+"@remix-run/css-bundle@^2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@remix-run/css-bundle/-/css-bundle-2.6.0.tgz#1a6ccfb65752dd342fc49cac21a73e07b44fe56a"
+  integrity sha512-c3I1FVsWeBoA3c92Fwa1sufxAlosovfE2V7hwjc9HeQHA3DAHe18RXfgU6my/IvpItkIvaEgQPuoWEA6Dh8VDQ==
 
-"@remix-run/dev@^2.5.1":
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/@remix-run/dev/-/dev-2.5.1.tgz#51dfabdf3b47b29ccd6a97b3787602872924d774"
-  integrity sha512-IrYhWANubH+WM62Wz55n8NWT5kBqfbyytXDFlP0VoZLrr1IpJf2GtaT4IA+CODMaNoeXeMACOD5Tw5/Y2bO5lA==
+"@remix-run/dev@^2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@remix-run/dev/-/dev-2.6.0.tgz#b62ee6610f6aae49d560aada0f203162fd111aeb"
+  integrity sha512-wf5DoKxBwz3/84FNyFM6NKvQIOEv+Ukwj9DjXrDs6YLI6oSqw2XsJCxWN4lAbOxXuK37pBt1WAE8LzEMuyowsw==
   dependencies:
     "@babel/core" "^7.21.8"
     "@babel/generator" "^7.21.5"
@@ -1042,9 +1042,9 @@
     "@babel/types" "^7.22.5"
     "@mdx-js/mdx" "^2.3.0"
     "@npmcli/package-json" "^4.0.1"
-    "@remix-run/node" "2.5.1"
-    "@remix-run/router" "1.14.2"
-    "@remix-run/server-runtime" "2.5.1"
+    "@remix-run/node" "2.6.0"
+    "@remix-run/router" "1.15.0"
+    "@remix-run/server-runtime" "2.6.0"
     "@types/mdx" "^2.0.5"
     "@vanilla-extract/integration" "^6.2.0"
     arg "^5.0.1"
@@ -1086,10 +1086,10 @@
     tsconfig-paths "^4.0.0"
     ws "^7.4.5"
 
-"@remix-run/eslint-config@^2.5.1":
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/@remix-run/eslint-config/-/eslint-config-2.5.1.tgz#23e1e9c507287df94243e99a26a1b05c0f6b3982"
-  integrity sha512-PpLj0QSd2NZ12KdTA2QYPd/FK3Szu9Np7kTmx26VxDZJTzQYSgGb5i2O9uby+j2sD68zR/+EAYaIcOlq66ekJw==
+"@remix-run/eslint-config@^2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@remix-run/eslint-config/-/eslint-config-2.6.0.tgz#02b14d5029ec8c76c5ddcf584eeeb4b6bd636c78"
+  integrity sha512-WIYyCl8qHNDyZy05ggzl/x3wbnLtmHWOaeSqvtshYbvBsKpyLT0xVQNWyj0XEzk6hWWk+93b0yQ5ihumjM4Y1Q==
   dependencies:
     "@babel/core" "^7.21.8"
     "@babel/eslint-parser" "^7.21.8"
@@ -1108,19 +1108,19 @@
     eslint-plugin-react-hooks "^4.6.0"
     eslint-plugin-testing-library "^5.10.2"
 
-"@remix-run/express@2.5.1":
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/@remix-run/express/-/express-2.5.1.tgz#1ab0b03c3ff8250a301b1837fb32ffb14db9d8dc"
-  integrity sha512-ISaf2hzHxDTS1hNsOovRoSfIQC29m4ogzXvBC6xp2BuJj0K8R0yQ4RFD4+qUFEUnS2n6MyWyjFQRhOC6PhQhRw==
+"@remix-run/express@2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@remix-run/express/-/express-2.6.0.tgz#95cecfd2ff13270b393f55ac04b8c0e013363bbe"
+  integrity sha512-sAb0eoMwqP4yhDCnT5H6Db0svfzBuRbuPuPSbQCtuLRWkEGmIhWN7vKA0IqaxsUA09qKwQQiKQdupra55KfCyA==
   dependencies:
-    "@remix-run/node" "2.5.1"
+    "@remix-run/node" "2.6.0"
 
-"@remix-run/node@2.5.1", "@remix-run/node@^2.5.1":
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/@remix-run/node/-/node-2.5.1.tgz#f511cb9e84b4bf12bfb9690866cb78420011e27c"
-  integrity sha512-UI442xzHAiokmsfrYOabMQB024+IizmRhZBGcNa42QjJWsNqogy1bNwYhzEpB6oQEB1wF3vwOKK1AD1/iYA/9A==
+"@remix-run/node@2.6.0", "@remix-run/node@^2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@remix-run/node/-/node-2.6.0.tgz#7272edc84b8f19053f0ffc96ccb2f9ef84850075"
+  integrity sha512-bWemy3g258Kdqi+4OxIEZ7QS64T96jNK6a7NdlPXGJZqeLpxM5NmlCl/slSdx52oTi9r5Xoz1Tm4uR37nD1/Xw==
   dependencies:
-    "@remix-run/server-runtime" "2.5.1"
+    "@remix-run/server-runtime" "2.6.0"
     "@remix-run/web-fetch" "^4.4.2"
     "@remix-run/web-file" "^3.1.0"
     "@remix-run/web-stream" "^1.1.0"
@@ -1129,28 +1129,28 @@
     source-map-support "^0.5.21"
     stream-slice "^0.1.2"
 
-"@remix-run/react@^2.5.1":
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/@remix-run/react/-/react-2.5.1.tgz#46f8084cae55241fea4fccea251920d1187e6be8"
-  integrity sha512-MNXHLj4Iu9Iyi+3uY61JZJ1Rtx2nM/z11j9AtwQdEADkh1/t9GruhtT/8VLplToOl0qWZKItboWScKf6uRQsrw==
+"@remix-run/react@^2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@remix-run/react/-/react-2.6.0.tgz#baacc56e8272bd1ab729822d5c137160548f4465"
+  integrity sha512-m/Ph6bryny7wrmrQyXQMvIiW+cBLrU/MepcLGFPvTVVwvfeiGBgXRiYZJ6yPNsfrmHFaS83d+Ja/Mx4N4zUWcg==
   dependencies:
-    "@remix-run/router" "1.14.2"
-    "@remix-run/server-runtime" "2.5.1"
-    react-router "6.21.3"
-    react-router-dom "6.21.3"
+    "@remix-run/router" "1.15.0"
+    "@remix-run/server-runtime" "2.6.0"
+    react-router "6.22.0"
+    react-router-dom "6.22.0"
 
-"@remix-run/router@1.14.2":
-  version "1.14.2"
-  resolved "https://registry.yarnpkg.com/@remix-run/router/-/router-1.14.2.tgz#4d58f59908d9197ba3179310077f25c88e49ed17"
-  integrity sha512-ACXpdMM9hmKZww21yEqWwiLws/UPLhNKvimN8RrYSqPSvB3ov7sLvAcfvaxePeLvccTQKGdkDIhLYApZVDFuKg==
+"@remix-run/router@1.15.0":
+  version "1.15.0"
+  resolved "https://registry.yarnpkg.com/@remix-run/router/-/router-1.15.0.tgz#461a952c2872dd82c8b2e9b74c4dfaff569123e2"
+  integrity sha512-HOil5aFtme37dVQTB6M34G95kPM3MMuqSmIRVCC52eKV+Y/tGSqw9P3rWhlAx6A+mz+MoX+XxsGsNJbaI5qCgQ==
 
-"@remix-run/serve@^2.5.1":
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/@remix-run/serve/-/serve-2.5.1.tgz#80411c5908af739b45807144a02794ef4fe00697"
-  integrity sha512-r1IWfirwkLrxADd8uFUIpLR1wMU8VeRI4ED4SpbhrKwqODLrYtv5irzjei+r/w0y0Oob8DMHnYxg03UY4T7ejg==
+"@remix-run/serve@^2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@remix-run/serve/-/serve-2.6.0.tgz#8afc03f8a95e6b4608daf48a22abf2cf39df7805"
+  integrity sha512-OIvGWaruFLCMLpemovitE8WnxRD/4TBPDTsgC/pSxcjDfuXv3nZk0nhAcmfklPSnxBCCct50cbtEN1xcrPqeyw==
   dependencies:
-    "@remix-run/express" "2.5.1"
-    "@remix-run/node" "2.5.1"
+    "@remix-run/express" "2.6.0"
+    "@remix-run/node" "2.6.0"
     chokidar "^3.5.3"
     compression "^1.7.4"
     express "^4.17.1"
@@ -1158,12 +1158,12 @@
     morgan "^1.10.0"
     source-map-support "^0.5.21"
 
-"@remix-run/server-runtime@2.5.1":
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/@remix-run/server-runtime/-/server-runtime-2.5.1.tgz#6db6f264ff260527f0f762a36b838d0a42b0a55d"
-  integrity sha512-bP31jrVbYTJ2eP5sxZfDgT1YyXzDlzsfMxGYVzpaoLCYDJAekq1QpHLLXKGOXhmyb46O9rdhlQKfwD6WpAxr3A==
+"@remix-run/server-runtime@2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@remix-run/server-runtime/-/server-runtime-2.6.0.tgz#61595c102ebb14ff08d8d994cc639c3a3cd55c34"
+  integrity sha512-qFXDl4pK55njBLuvyRn5AkI/hu8fEU3t1XFKv0Syivx0nmUVpWMW25Uzi1pkX/chF1VIxCVrZ8KuQ1rcrKj+DQ==
   dependencies:
-    "@remix-run/router" "1.14.2"
+    "@remix-run/router" "1.15.0"
     "@types/cookie" "^0.6.0"
     "@web3-storage/multipart-parser" "^1.0.0"
     cookie "^0.6.0"
@@ -1947,10 +1947,10 @@ caniuse-lite@^1.0.30001578:
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001579.tgz#45c065216110f46d6274311a4b3fcf6278e0852a"
   integrity sha512-u5AUVkixruKHJjw/pj9wISlcMpgFWzSrczLZbrqBSxukQixmg0SJ5sZTpvaFvxU0HoQKd4yoyAogyrAz9pzJnA==
 
-caniuse-lite@^1.0.30001580:
-  version "1.0.30001580"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001580.tgz#e3c76bc6fe020d9007647044278954ff8cd17d1e"
-  integrity sha512-mtj5ur2FFPZcCEpXFy8ADXbDACuNFXg6mxVDqp7tqooX6l3zwm+d8EPoeOSIFRDvHs8qu7/SLFOGniULkcH2iA==
+caniuse-lite@^1.0.30001583:
+  version "1.0.30001583"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001583.tgz#abb2970cc370801dc7e27bf290509dc132cfa390"
+  integrity sha512-acWTYaha8xfhA/Du/z4sNZjHUWjkiuoAi2LM+T/aL+kemKQgPT1xBb/YKjlQ0Qo8gvbHsGNplrEJ+9G3gL7i4Q==
 
 capnp-ts@^0.7.0:
   version "0.7.0"
@@ -5086,10 +5086,10 @@ mimic-fn@^2.1.0:
   resolved "https://registry.yarnpkg.com/mimic-fn/-/mimic-fn-2.1.0.tgz#7ed2c2ccccaf84d3ffcb7a69b57711fc2083401b"
   integrity sha512-OqbOk5oEQeAZ8WXWydlu9HJjz9WVdEIvamMCcXmuqUYjTknH/sqsWvhQ3vgwKFRR1HpjvNBKQ37nbJgYzGqGcg==
 
-miniflare@3.20231218.4:
-  version "3.20231218.4"
-  resolved "https://registry.yarnpkg.com/miniflare/-/miniflare-3.20231218.4.tgz#f010e4e96792602513658648e687b6695b5ea148"
-  integrity sha512-2mpxvDiRBxGGGVnTKC0SZy0FtTXxFs3tM1ol67EoIJABGzvWFf33GThwh+/dRmaHSjKKId/FI8rEl5JxXXXZgQ==
+miniflare@3.20240129.0:
+  version "3.20240129.0"
+  resolved "https://registry.yarnpkg.com/miniflare/-/miniflare-3.20240129.0.tgz#19229826852876dc793bbe381ce28028c9788907"
+  integrity sha512-27pDhlP2G/4gXmvnSt6LjMQ8KrkmbJElIQmn+BLjdiyIx+zXY4E8MSPJmi9flgf0dn3wtjuHO2ASenuopqqxrw==
   dependencies:
     "@cspotcode/source-map-support" "0.8.1"
     acorn "^8.8.0"
@@ -5099,7 +5099,7 @@ miniflare@3.20231218.4:
     glob-to-regexp "^0.4.1"
     stoppable "^1.1.0"
     undici "^5.28.2"
-    workerd "1.20231218.0"
+    workerd "1.20240129.0"
     ws "^8.11.0"
     youch "^3.2.2"
     zod "^3.20.6"
@@ -6105,20 +6105,20 @@ react-refresh@^0.14.0:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.14.0.tgz#4e02825378a5f227079554d4284889354e5f553e"
   integrity sha512-wViHqhAd8OHeLS/IRMJjTSDHF3U9eWi62F/MledQGPdJGDhodXJ9PBLNGr6WWL7qlH12Mt3TyTpbS+hGXMjCzQ==
 
-react-router-dom@6.21.3:
-  version "6.21.3"
-  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-6.21.3.tgz#ef3a7956a3699c7b82c21fcb3dbc63c313ed8c5d"
-  integrity sha512-kNzubk7n4YHSrErzjLK72j0B5i969GsuCGazRl3G6j1zqZBLjuSlYBdVdkDOgzGdPIffUOc9nmgiadTEVoq91g==
+react-router-dom@6.22.0:
+  version "6.22.0"
+  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-6.22.0.tgz#177c8bd27146decbb991eafb5df159f7a9f70035"
+  integrity sha512-z2w+M4tH5wlcLmH3BMMOMdrtrJ9T3oJJNsAlBJbwk+8Syxd5WFJ7J5dxMEW0/GEXD1BBis4uXRrNIz3mORr0ag==
   dependencies:
-    "@remix-run/router" "1.14.2"
-    react-router "6.21.3"
+    "@remix-run/router" "1.15.0"
+    react-router "6.22.0"
 
-react-router@6.21.3:
-  version "6.21.3"
-  resolved "https://registry.yarnpkg.com/react-router/-/react-router-6.21.3.tgz#8086cea922c2bfebbb49c6594967418f1f167d70"
-  integrity sha512-a0H638ZXULv1OdkmiK6s6itNhoy33ywxmUFT/xtSoVyf9VnC7n7+VT4LjVzdIHSaF5TIh9ylUgxMXksHTgGrKg==
+react-router@6.22.0:
+  version "6.22.0"
+  resolved "https://registry.yarnpkg.com/react-router/-/react-router-6.22.0.tgz#a22b44851a79dafc6b944cb418db3e80622b9be1"
+  integrity sha512-q2yemJeg6gw/YixRlRnVx6IRJWZD6fonnfZhN1JIOhV2iJCPeRNSH3V1ISwHf+JWcESzLC3BOLD1T07tmO5dmg==
   dependencies:
-    "@remix-run/router" "1.14.2"
+    "@remix-run/router" "1.15.0"
 
 react-syntax-highlighter@^15.5.0:
   version "15.5.0"
@@ -7562,21 +7562,21 @@ wordwrapjs@^4.0.0:
     reduce-flatten "^2.0.0"
     typical "^5.2.0"
 
-workerd@1.20231218.0:
-  version "1.20231218.0"
-  resolved "https://registry.yarnpkg.com/workerd/-/workerd-1.20231218.0.tgz#a00403af346f654c1d73f4805c07b9ef3a6d2142"
-  integrity sha512-AGIsDvqCrcwhoA9kb1hxOhVAe53/xJeaGZxL4FbYI9FvO17DZwrnqGq+6eqItJ6Cfw1ZLmf3BM+QdMWaL2bFWQ==
+workerd@1.20240129.0:
+  version "1.20240129.0"
+  resolved "https://registry.yarnpkg.com/workerd/-/workerd-1.20240129.0.tgz#123a84331ec18a1af7172fcd7b764070cfb951a9"
+  integrity sha512-t4pnsmjjk/u+GdVDgH2M1AFmJaBUABshYK/vT/HNrAXsHSwN6VR8Yqw0JQ845OokO34VLkuUtYQYyxHHKpdtsw==
   optionalDependencies:
-    "@cloudflare/workerd-darwin-64" "1.20231218.0"
-    "@cloudflare/workerd-darwin-arm64" "1.20231218.0"
-    "@cloudflare/workerd-linux-64" "1.20231218.0"
-    "@cloudflare/workerd-linux-arm64" "1.20231218.0"
-    "@cloudflare/workerd-windows-64" "1.20231218.0"
+    "@cloudflare/workerd-darwin-64" "1.20240129.0"
+    "@cloudflare/workerd-darwin-arm64" "1.20240129.0"
+    "@cloudflare/workerd-linux-64" "1.20240129.0"
+    "@cloudflare/workerd-linux-arm64" "1.20240129.0"
+    "@cloudflare/workerd-windows-64" "1.20240129.0"
 
-wrangler@^3.25.0:
-  version "3.25.0"
-  resolved "https://registry.yarnpkg.com/wrangler/-/wrangler-3.25.0.tgz#2c04a494b09d1305493e5791c4965370d8689c18"
-  integrity sha512-eU47Ez1QLu1B/wutm5ow+VwZnY4OqA+D/iy6BORAu5tABujoDr9p1yBxY/1DS/DxxDWqqY3sBBS6TzcC4NSLUQ==
+wrangler@^3.26.0:
+  version "3.26.0"
+  resolved "https://registry.yarnpkg.com/wrangler/-/wrangler-3.26.0.tgz#208e368992603c993e690a07135b87cb6ec91f61"
+  integrity sha512-2FKDyL0wV6ws+9AHkQl5/Yzn17kG9jlpgyT7wqCDkhb5q+TCL/I8N5IKVwXe8tRrTluBI1QQZRRymoA5nu0pHw==
   dependencies:
     "@cloudflare/kv-asset-handler" "^0.2.0"
     "@esbuild-plugins/node-globals-polyfill" "^0.2.3"
@@ -7584,7 +7584,7 @@ wrangler@^3.25.0:
     blake3-wasm "^2.1.5"
     chokidar "^3.5.3"
     esbuild "0.17.19"
-    miniflare "3.20231218.4"
+    miniflare "3.20240129.0"
     nanoid "^3.3.3"
     path-to-regexp "^6.2.0"
     resolve "^1.22.8"
