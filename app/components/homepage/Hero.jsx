@@ -1,5 +1,5 @@
-import Demo from "~/components/homepage/Demo";
 import Link from "~/components/Link";
+import Demo from "~/components/homepage/Demo";
 import ArrowRight from "~/components/icons/ArrowRight";
 
 export default function Hero(props) {
@@ -20,7 +20,7 @@ export default function Hero(props) {
             Get Started
             <ArrowRight />
           </Link>
-          <Link to="/examples" role="button" className="contrast">
+          <Link to="/examples" role="button" className="outline contrast">
             Examples
             <ArrowRight />
           </Link>

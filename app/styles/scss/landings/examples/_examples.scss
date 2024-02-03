@@ -18,6 +18,9 @@ body > main.examples > .examples-list {
 
   article {
     margin: 0;
+    outline-color: var(#{$css-var-prefix}card-component-outline-color);
+    outline-style: solid;
+    outline-width: var(#{$css-var-prefix}card-component-outline-width);
 
     @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
       $multiplier: 1.75;

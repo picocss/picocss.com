@@ -16,9 +16,7 @@
 
   // Card for components
   #{$css-var-prefix}card-component-outline-width: 2px;
-  #{$css-var-prefix}card-component-outline-color: var(
-    #{$css-var-prefix}card-sectioning-background-color
-  );
+  #{$css-var-prefix}card-component-outline-color: var(#{$css-var-prefix}card-background-color);
 
   // Code
   #{$css-var-prefix}code-color: #{$zinc-350};

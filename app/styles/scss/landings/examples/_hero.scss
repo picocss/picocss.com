@@ -5,7 +5,7 @@ body > main.examples > .examples-hero {
   margin-top: calc(var(#{$css-var-prefix}homepage-spacing-vertical) / 2);
   margin-bottom: 0;
 
-  @media (min-width: map.get(map.get($breakpoints, "lg"), "breakpoint")) {
+  @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
     text-align: center;
   }
 }

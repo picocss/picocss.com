@@ -1,8 +1,6 @@
 @use "sass:map";
 @use "settings" as *;
 
-$columns-at-xl: true;
-
 body > main.homepage > .hero {
   display: grid;
   grid-template-columns: 1fr;
@@ -11,40 +9,17 @@ body > main.homepage > .hero {
   justify-items: center;
   margin-block: calc(var(#{$css-var-prefix}homepage-spacing-vertical) / 2);
 
-  @if $columns-at-xl {
-    @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
-      grid-template-columns: 6fr 5fr;
-      row-gap: calc(var(#{$css-var-prefix}homepage-spacing-vertical) / 2);
-      align-items: center;
-      margin-inline: auto;
-
-      .demo {
-        justify-content: center;
-        transform: translateY(calc(var(#{$css-var-prefix}spacing) * -1.5));
-      }
-    }
-
-    @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
-      grid-template-columns: 7fr 5fr;
-    }
-  }
-
   .demo,
   .hook {
     width: 100%;
+    min-width: 0;
 
-    @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {
+    @media (min-width: map.get(map.get($breakpoints, "lg"), "breakpoint")) {
       max-width: map.get(map.get($breakpoints, "md"), "viewport");
     }
 
-    @if $columns-at-xl {
-      @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
-        max-width: none;
-      }
-    } @else {
-      @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
-        max-width: map.get(map.get($breakpoints, "lg"), "viewport");
-      }
+    @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+      max-width: map.get(map.get($breakpoints, "lg"), "viewport");
     }
   }
 
@@ -54,23 +29,14 @@ body > main.homepage > .hero {
 
     h1,
     p {
+      text-wrap: balance;
       @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
         text-align: center;
-      }
-
-      @if $columns-at-xl {
-        @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
-          text-align: left;
-        }
       }
     }
 
     h1 {
       margin-bottom: calc(var(#{$css-var-prefix}spacing) * 2);
-    }
-
-    p {
-      text-wrap: pretty;
     }
 
     .grid.ctas {
@@ -81,12 +47,6 @@ body > main.homepage > .hero {
       @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
         display: flex;
         justify-content: center;
-      }
-
-      @if $columns-at-xl {
-        @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
-          justify-content: flex-start;
-        }
       }
 
       a[role="button"] {

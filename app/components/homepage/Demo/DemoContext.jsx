@@ -52,14 +52,11 @@ export default function DemoProvider({ children }) {
   const [buttonIsBusy, setButtonIsBusy] = useState(false);
   const [buttonIsFocused, setButtonIsFocused] = useState(false);
 
-  // Footer
-  const footerRef = useRef(null);
-
   // Demo input date (yyyy-MM-dd)
   const todayForInputDate = new Date().toISOString().slice(0, 10);
 
   // Speed and delay
-  const speed = 10;
+  const speed = 7;
   const delay = {
     type: speed,
     delete: 0,
@@ -94,23 +91,40 @@ export default function DemoProvider({ children }) {
     }, delay.type);
   }, [delay.displayComponent, delay.type, inputValue]);
 
-  // Demo height
-  const [demoHeight, setDemoHeight] = useState(null);
-  useEffect(() => {
-    const calculateHeight = () => {
-      if (!footerRef.current || !formRef.current) return;
-      const footerHeight = footerRef.current.clientHeight;
-      const formHeight = formRef.current.clientHeight;
-      setDemoHeight(footerHeight + formHeight);
-    };
-
-    const calculateHeightIntervalId = setInterval(calculateHeight, 10);
-    calculateHeight();
-
-    return () => {
-      clearInterval(calculateHeightIntervalId);
-    };
-  }, []);
+  // Reset all the form and input states
+  const resetForm = () => {
+    console.log("resetForm");
+    setFormRole(false);
+    setFormIsBusy(false);
+    setFormGroupIsFocused(false);
+    setDisplayInput(true);
+    setInputPlaceholder("Enter your email");
+    setInputInvalid(null);
+    setInputClass("");
+    setInputType(null);
+    setInputValue("");
+    setDisplayedInputValue("");
+    setInputIsDisabled(false);
+    setInputIsFocused(false);
+    setInputHelper(null);
+    setInputHelperClass("");
+    setDisplaySelect(false);
+    setDisplayCheckbox(false);
+    setCheckboxIsChecked(false);
+    setCheckboxClass("");
+    setCheckboxRole(null);
+    setCheckboxIsFocused(false);
+    setDisplayRange(false);
+    setRangeValue(0);
+    setRangeIsFocused(false);
+    setRangeClass("");
+    setDisplayButton(false);
+    setButtonType(null);
+    setButtonLabel(null);
+    setButtonClass("");
+    setButtonIsBusy(false);
+    setButtonIsFocused(false);
+  };
 
   return (
     <DemoContext.Provider
@@ -194,9 +208,6 @@ export default function DemoProvider({ children }) {
         buttonIsFocused,
         setButtonIsFocused,
 
-        // Footer
-        footerRef,
-
         // Demo input date (yyyy-MM-dd)
         todayForInputDate,
 
@@ -206,8 +217,8 @@ export default function DemoProvider({ children }) {
         // Reset TypeIt instance
         manualLoop,
 
-        // Demo height
-        demoHeight,
+        // Reset all the form and input states
+        resetForm,
       }}
     >
       {children}

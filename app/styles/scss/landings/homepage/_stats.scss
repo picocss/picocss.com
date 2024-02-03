@@ -1,10 +1,8 @@
 @use "sass:map";
 @use "settings" as *;
-@use "hero" as *;
 
 body > main.homepage > .stats {
-  position: relative;
-  margin-top: calc(var(#{$css-var-prefix}homepage-spacing-vertical) / 2);
+  margin-top: calc(var(#{$css-var-prefix}homepage-spacing-vertical) * 0.75);
 
   ul li {
     margin: 0;
@@ -13,8 +11,6 @@ body > main.homepage > .stats {
 
   ul {
     display: grid;
-    z-index: 1;
-    position: relative;
     column-gap: calc(var(#{$css-var-prefix}spacing) * 2);
     row-gap: calc(var(#{$css-var-prefix}spacing) * 2);
     max-width: map.get(map.get($breakpoints, "md"), "viewport");
@@ -24,28 +20,10 @@ body > main.homepage > .stats {
     @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
       grid-template-columns: repeat(3, 1fr);
     }
-
-    @if $columns-at-xl {
-      @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
-        grid-template-columns: repeat(3, auto);
-        column-gap: calc(var(#{$css-var-prefix}spacing) * 4);
-        width: fit-content;
-        max-width: none;
-        margin-left: 0;
-      }
-    }
   }
 
   ul li {
-    @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
-      text-align: center;
-    }
-
-    @if $columns-at-xl {
-      @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
-        text-align: left;
-      }
-    }
+    text-align: center;
 
     p.count {
       margin-bottom: calc(var(#{$css-var-prefix}spacing) * 0.25);
@@ -81,12 +59,6 @@ body > main.homepage > .stats {
           @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
             display: none;
           }
-
-          @if $columns-at-xl {
-            @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
-              display: inline;
-            }
-          }
         }
       }
     }
@@ -97,12 +69,6 @@ body > main.homepage > .stats {
 
       @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
         display: block;
-      }
-
-      @if $columns-at-xl {
-        @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
-          display: none;
-        }
       }
     }
   }

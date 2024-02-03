@@ -1,13 +1,10 @@
 @use "sass:map";
 @use "settings" as *;
-@use "hero" as *;
 
 body > main.homepage > .hero > .demo {
   display: flex;
   position: relative;
   flex-direction: column;
-  max-width: calc(100vw - (var(#{$css-var-prefix}spacing) * 2));
-  min-height: 25rem;
 
   article.component {
     #{$css-var-prefix}block-spacing-horizontal: var(#{$css-var-prefix}spacing) !important;
@@ -18,8 +15,8 @@ body > main.homepage > .hero > .demo {
     justify-content: flex-start;
     width: 100%;
     min-width: 0;
-    max-width: map.get(map.get($breakpoints, "md"), "viewport");
     height: 100%;
+    min-height: calc(365px + var(#{$css-var-prefix}block-spacing-vertical));
     margin-bottom: 0;
     margin-inline: auto;
     background-color: var(#{$css-var-prefix}background-color);
@@ -29,23 +26,30 @@ body > main.homepage > .hero > .demo {
         var(#{$css-var-prefix}spacing) * 1.5
       ) !important;
       #{$css-var-prefix}block-spacing-vertical: calc(var(#{$css-var-prefix}spacing) * 2) !important;
+      min-height: calc(416px + var(#{$css-var-prefix}block-spacing-vertical));
     }
 
-    @if $columns-at-xl {
-      @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
-        justify-content: flex-start;
-        height: calc(
-          var(--demo-height, 260px) + (var(#{$css-var-prefix}block-spacing-vertical) * 2)
-        );
-        padding-bottom: 0;
-        transition: height 0.4s ease-out;
-      }
+    @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {
+      max-width: map.get(map.get($breakpoints, "sm"), "viewport");
+      min-height: calc(440px + var(#{$css-var-prefix}block-spacing-vertical));
+    }
 
-      @media (min-width: map.get(map.get($breakpoints, "xxl"), "breakpoint")) {
-        height: calc(
-          var(--demo-height, 265px) + (var(#{$css-var-prefix}block-spacing-vertical) * 2)
-        );
-      }
+    @media (min-width: map.get(map.get($breakpoints, "lg"), "breakpoint")) {
+      max-width: map.get(map.get($breakpoints, "md"), "viewport");
+      min-height: calc(455px + var(#{$css-var-prefix}block-spacing-vertical));
+    }
+
+    @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+      #{$css-var-prefix}block-spacing-horizontal: calc(
+        var(#{$css-var-prefix}spacing) * 3
+      ) !important;
+      #{$css-var-prefix}block-spacing-vertical: calc(var(#{$css-var-prefix}spacing) * 3) !important;
+      max-width: map.get(map.get($breakpoints, "lg"), "viewport");
+      min-height: calc(489px + var(#{$css-var-prefix}block-spacing-vertical));
+    }
+
+    @media (min-width: map.get(map.get($breakpoints, "xxl"), "breakpoint")) {
+      min-height: calc(506px + var(#{$css-var-prefix}block-spacing-vertical));
     }
 
     main,
@@ -55,12 +59,6 @@ body > main.homepage > .hero > .demo {
     }
 
     main {
-      @if $columns-at-xl {
-        @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
-          margin-bottom: auto;
-        }
-      }
-
       form {
         &[role="search"],
         &[role="group"],
@@ -98,8 +96,10 @@ body > main.homepage > .hero > .demo {
           }
         }
 
-        // Focused input
+        // Input
         input {
+          user-select: none;
+
           &:not([type="range"]) {
             &.is-focused {
               #{$css-var-prefix}border-color: var(
@@ -162,11 +162,8 @@ body > main.homepage > .hero > .demo {
     footer.code {
       background: none;
 
-      @if $columns-at-xl {
-        @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
-          margin-top: auto;
-          margin-bottom: 0;
-        }
+      pre {
+        overflow: hidden;
       }
 
       [data-typeit-id] {
@@ -228,11 +225,21 @@ body > main.homepage > .hero > .demo {
     article.component {
       position: unset;
       max-width: none;
-      border-radius: none;
+      border-radius: 0;
       outline: none;
 
-      @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+      @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
+        max-width: map.get(map.get($breakpoints, "sm"), "viewport");
+        height: auto;
+        margin: auto;
+      }
+
+      @media (min-width: map.get(map.get($breakpoints, "lg"), "breakpoint")) {
         max-width: map.get(map.get($breakpoints, "md"), "viewport");
+      }
+
+      @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+        max-width: map.get(map.get($breakpoints, "lg"), "viewport");
       }
 
       .controls {
@@ -247,16 +254,10 @@ body > main.homepage > .hero > .demo {
     z-index: -1;
     position: absolute;
     inset: 0;
-    transform: scale(2.5);
+    transform: scale(2.75);
     transform-origin: center;
     background: var(#{$css-var-prefix}demo-outer-background);
     content: "";
     transition: opacity var(#{$css-var-prefix}transition);
-
-    @if $columns-at-xl {
-      @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
-        opacity: 0.66;
-      }
-    }
   }
 }
