@@ -62,7 +62,7 @@ body {
                 height: 1.125rem;
                 margin-inline: var(#{$css-var-prefix}nav-element-spacing-horizontal);
                 border-left: var(#{$css-var-prefix}border-width) solid
-                  var(#{$css-var-prefix}muted-border-color);
+                  var(#{$css-var-prefix}form-element-border-color);
                 content: "";
               }
             }

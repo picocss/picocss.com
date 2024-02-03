@@ -9,6 +9,14 @@
     transparent
   );
 
+  // Demo border gradient
+  #{$css-var-prefix}demo-border-gradient-colors:
+    transparent 50%,
+    mix($azure-850, $fuchsia-850, 20%),
+    mix($azure-850, $purple-850, 25%),
+    mix($azure-850, $violet-850, 30%),
+    mix($azure-850, $indigo-850, 35%);
+
   // Cards
   #{$css-var-prefix}card-background-color: #{mix($slate-950, $slate-900, 25%)};
   #{$css-var-prefix}card-component-outline-width: 0.0625rem;
@@ -26,6 +34,9 @@
 
   // Stats color
   #{$css-var-prefix}stats-color: mix($azure-300, $slate-300);
+
+  // Features icon color
+  #{$css-var-prefix}features-icon-color: mix($azure-300, $purple-300, 25%);
 
   // Comparison gradients
   #{$css-var-prefix}comparison-gradient-valid: linear-gradient(

@@ -93,7 +93,6 @@ export default function DemoProvider({ children }) {
 
   // Reset all the form and input states
   const resetForm = () => {
-    console.log("resetForm");
     setFormRole(false);
     setFormIsBusy(false);
     setFormGroupIsFocused(false);

@@ -43,7 +43,7 @@ body > main.homepage > .features {
         width: auto;
         height: 1.125rem;
         margin-bottom: calc(var(#{$css-var-prefix}spacing) * 0.75);
-        color: var(#{$css-var-prefix}logo-big-sparkle);
+        color: var(#{$css-var-prefix}features-icon-color);
 
         &.pico-icon {
           path {

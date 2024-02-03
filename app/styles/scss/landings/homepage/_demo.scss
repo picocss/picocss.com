@@ -2,9 +2,18 @@
 @use "settings" as *;
 
 body > main.homepage > .hero > .demo {
+  --demo-border-gradient-angle: 0deg;
   display: flex;
   position: relative;
   flex-direction: column;
+
+  @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {
+    max-width: map.get(map.get($breakpoints, "md"), "viewport");
+  }
+
+  @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+    max-width: map.get(map.get($breakpoints, "lg"), "viewport");
+  }
 
   article.component {
     #{$css-var-prefix}block-spacing-horizontal: var(#{$css-var-prefix}spacing) !important;
@@ -16,27 +25,28 @@ body > main.homepage > .hero > .demo {
     width: 100%;
     min-width: 0;
     height: 100%;
-    min-height: calc(22.8125rem + var(#{$css-var-prefix}block-spacing-vertical));
+    height: calc(22.8125rem + var(#{$css-var-prefix}block-spacing-vertical));
     margin-bottom: 0;
     margin-inline: auto;
+    overflow: visible;
+    outline: none;
     background-color: var(#{$css-var-prefix}background-color);
+    box-shadow: none;
 
     @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
       #{$css-var-prefix}block-spacing-horizontal: calc(
         var(#{$css-var-prefix}spacing) * 1.5
       ) !important;
       #{$css-var-prefix}block-spacing-vertical: calc(var(#{$css-var-prefix}spacing) * 2) !important;
-      min-height: calc(24.471rem + var(#{$css-var-prefix}block-spacing-vertical));
+      height: calc(24.471rem + var(#{$css-var-prefix}block-spacing-vertical));
     }
 
     @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {
-      max-width: map.get(map.get($breakpoints, "sm"), "viewport");
-      min-height: calc(24.445rem + var(#{$css-var-prefix}block-spacing-vertical));
+      height: calc(24.445rem + var(#{$css-var-prefix}block-spacing-vertical));
     }
 
     @media (min-width: map.get(map.get($breakpoints, "lg"), "breakpoint")) {
-      max-width: map.get(map.get($breakpoints, "md"), "viewport");
-      min-height: calc(23.948rem + var(#{$css-var-prefix}block-spacing-vertical));
+      height: calc(23.948rem + var(#{$css-var-prefix}block-spacing-vertical));
     }
 
     @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
@@ -44,12 +54,11 @@ body > main.homepage > .hero > .demo {
         var(#{$css-var-prefix}spacing) * 3
       ) !important;
       #{$css-var-prefix}block-spacing-vertical: calc(var(#{$css-var-prefix}spacing) * 3) !important;
-      max-width: map.get(map.get($breakpoints, "lg"), "viewport");
-      min-height: calc(24.45rem + var(#{$css-var-prefix}block-spacing-vertical));
+      height: calc(24.45rem);
     }
 
     @media (min-width: map.get(map.get($breakpoints, "xxl"), "breakpoint")) {
-      min-height: calc(24.096rem + var(#{$css-var-prefix}block-spacing-vertical));
+      height: calc(24.096rem + var(#{$css-var-prefix}block-spacing-vertical));
     }
 
     main,
@@ -212,6 +221,17 @@ body > main.homepage > .hero > .demo {
         opacity: 1;
       }
     }
+
+    // Border gradient
+    &::before {
+      z-index: -1;
+      position: absolute;
+      inset: calc(var(#{$css-var-prefix}card-component-outline-width) * -1);
+      border-radius: var(#{$css-var-prefix}border-radius);
+      background: linear-gradient(var(--angle), var(#{$css-var-prefix}demo-border-gradient-colors));
+      content: "";
+      animation: rotate-border-gradient 10s linear infinite;
+    }
   }
 
   &.is-maximized {
@@ -248,8 +268,21 @@ body > main.homepage > .hero > .demo {
     }
   }
 
+  // Border gradient
+  &::before {
+    z-index: 0;
+    position: absolute;
+    inset: 0.5rem;
+    border-radius: var(#{$css-var-prefix}border-radius);
+    background: linear-gradient(var(--angle), var(#{$css-var-prefix}demo-border-gradient-colors));
+    content: "";
+    animation: rotate-border-gradient 10s linear infinite;
+    filter: blur(2rem);
+    opacity: 0.5;
+  }
+
   // Background gradient
-  &:after {
+  &::after {
     display: block;
     z-index: -1;
     position: absolute;
@@ -258,6 +291,19 @@ body > main.homepage > .hero > .demo {
     transform-origin: center;
     background: var(#{$css-var-prefix}demo-outer-background);
     content: "";
+    opacity: 0.75;
     transition: opacity var(#{$css-var-prefix}transition);
   }
+}
+
+@keyframes rotate-border-gradient {
+  100% {
+    --angle: 360deg;
+  }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
 }

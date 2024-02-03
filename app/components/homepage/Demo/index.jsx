@@ -6,7 +6,7 @@ import Form from "./Form";
 import LargeWidthCode from "./LargeWidthCode";
 import SmallWidthCode from "./SmallWidthCode";
 
-const Demo = (props) => {
+const Demo = ({ isMaximizable = false, props }) => {
   const { modalIsOpen, onCloseModal } = useModal();
 
   // Define isLargeLayout on load and on resize
@@ -46,7 +46,7 @@ const Demo = (props) => {
         <footer className="code">
           <pre>{isLargeLayout ? <LargeWidthCode /> : <SmallWidthCode />}</pre>
         </footer>
-        <Controls />
+        {isMaximizable && <Controls />}
       </article>
     </div>
   );

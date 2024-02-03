@@ -13,6 +13,11 @@ body > main.homepage > .hero {
   .hook {
     width: 100%;
     min-width: 0;
+  }
+
+  .hook {
+    z-index: 1;
+    position: relative;
 
     @media (min-width: map.get(map.get($breakpoints, "lg"), "breakpoint")) {
       max-width: map.get(map.get($breakpoints, "md"), "viewport");
@@ -21,11 +26,6 @@ body > main.homepage > .hero {
     @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
       max-width: map.get(map.get($breakpoints, "lg"), "viewport");
     }
-  }
-
-  .hook {
-    z-index: 1;
-    position: relative;
 
     h1,
     p {
