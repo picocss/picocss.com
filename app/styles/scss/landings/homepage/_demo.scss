@@ -16,7 +16,7 @@ body > main.homepage > .hero > .demo {
     width: 100%;
     min-width: 0;
     height: 100%;
-    min-height: calc(365px + var(#{$css-var-prefix}block-spacing-vertical));
+    min-height: calc(22.8125rem + var(#{$css-var-prefix}block-spacing-vertical));
     margin-bottom: 0;
     margin-inline: auto;
     background-color: var(#{$css-var-prefix}background-color);
@@ -26,17 +26,17 @@ body > main.homepage > .hero > .demo {
         var(#{$css-var-prefix}spacing) * 1.5
       ) !important;
       #{$css-var-prefix}block-spacing-vertical: calc(var(#{$css-var-prefix}spacing) * 2) !important;
-      min-height: calc(416px + var(#{$css-var-prefix}block-spacing-vertical));
+      min-height: calc(24.471rem + var(#{$css-var-prefix}block-spacing-vertical));
     }
 
     @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {
       max-width: map.get(map.get($breakpoints, "sm"), "viewport");
-      min-height: calc(440px + var(#{$css-var-prefix}block-spacing-vertical));
+      min-height: calc(24.445rem + var(#{$css-var-prefix}block-spacing-vertical));
     }
 
     @media (min-width: map.get(map.get($breakpoints, "lg"), "breakpoint")) {
       max-width: map.get(map.get($breakpoints, "md"), "viewport");
-      min-height: calc(455px + var(#{$css-var-prefix}block-spacing-vertical));
+      min-height: calc(23.948rem + var(#{$css-var-prefix}block-spacing-vertical));
     }
 
     @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
@@ -45,11 +45,11 @@ body > main.homepage > .hero > .demo {
       ) !important;
       #{$css-var-prefix}block-spacing-vertical: calc(var(#{$css-var-prefix}spacing) * 3) !important;
       max-width: map.get(map.get($breakpoints, "lg"), "viewport");
-      min-height: calc(489px + var(#{$css-var-prefix}block-spacing-vertical));
+      min-height: calc(24.45rem + var(#{$css-var-prefix}block-spacing-vertical));
     }
 
     @media (min-width: map.get(map.get($breakpoints, "xxl"), "breakpoint")) {
-      min-height: calc(506px + var(#{$css-var-prefix}block-spacing-vertical));
+      min-height: calc(24.096rem + var(#{$css-var-prefix}block-spacing-vertical));
     }
 
     main,
