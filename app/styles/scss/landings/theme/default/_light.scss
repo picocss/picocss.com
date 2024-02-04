@@ -12,10 +12,10 @@
   // Demo border gradient
   #{$css-var-prefix}demo-border-gradient-colors:
     $azure-50 50%,
-    mix($azure-200, $fuchsia-200, 25%),
-    mix($azure-200, $purple-200, 30%),
-    mix($azure-200, $violet-200, 35%),
-    mix($azure-200, $indigo-200, 40%);
+    mix($azure-250, $fuchsia-250, 25%),
+    mix($azure-250, $purple-250, 30%),
+    mix($azure-250, $violet-250, 35%),
+    mix($azure-250, $indigo-250, 40%);
 
   // Cards
   #{$css-var-prefix}card-component-outline-width: 0.0625rem;

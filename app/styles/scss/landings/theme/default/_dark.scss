@@ -12,10 +12,10 @@
   // Demo border gradient
   #{$css-var-prefix}demo-border-gradient-colors:
     transparent 50%,
-    mix($azure-850, $fuchsia-850, 20%),
-    mix($azure-850, $purple-850, 25%),
-    mix($azure-850, $violet-850, 30%),
-    mix($azure-850, $indigo-850, 35%);
+    mix($azure-800, $fuchsia-800, 20%),
+    mix($azure-800, $purple-800, 25%),
+    mix($azure-800, $violet-800, 30%),
+    mix($azure-800, $indigo-800, 35%);
 
   // Cards
   #{$css-var-prefix}card-background-color: #{mix($slate-950, $slate-900, 25%)};

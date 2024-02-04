@@ -1,0 +1,34 @@
+[
+  {
+    "category": "About",
+    "links": [
+      { "label": "What’s new?", "url": "/docs/v2" },
+      { "label": "Brand", "url": "/docs/brand" },
+      { "label": "Usage scenarios", "url": "/docs/usage-scenarios" }
+    ]
+  },
+  {
+    "category": "Docs",
+    "links": [
+      { "label": "Quick start", "url": "/docs" },
+      { "label": "Version picker", "url": "/docs/version-picker" },
+      { "label": "Class-less version", "url": "/docs/classless" }
+    ]
+  },
+  {
+    "category": "Community",
+    "links": [
+      { "label": "Issues", "url": "https://github.com/picocss/pico/issues" },
+      { "label": "Discussions", "url": "https://github.com/picocss/pico/discussions" },
+      { "label": "Help", "url": "https://github.com/picocss/pico/discussions/categories/help" }
+    ]
+  },
+  {
+    "category": "Examples",
+    "links": [
+      { "label": "HTML", "url": "https://4mrnhq.csb.app/" },
+      { "label": "Class-less", "url": "https://x4qtf8.csb.app/" },
+      { "label": "React", "url": "https://zhghzt-8080.csb.app/" }
+    ]
+  }
+]

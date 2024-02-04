@@ -20,6 +20,7 @@ body {
     display: grid;
     grid-template-rows: 1fr;
     row-gap: 2rem;
+    margin-bottom: calc(var(#{$css-var-prefix}spacing) * 4);
     padding: 0;
 
     > * {
