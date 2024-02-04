@@ -26,6 +26,7 @@ export default function Conditional() {
   const introductionRef = useRef();
   const installManuallyRef = useRef();
   const installFromCdnRef = useRef();
+  const usageWithSaasRef = useRef();
   const starterHtmlTemplateRef = useRef();
   const examplesRef = useRef();
   const demoRef = useRef();
@@ -60,6 +61,11 @@ export default function Conditional() {
             anchor: "usage-from-cdn",
             title: "Usage from CDN",
             ref: installFromCdnRef,
+          },
+          {
+            anchor: "usage-with-sass",
+            title: "Usage with Sass",
+            ref: usageWithSaasRef,
           },
           {
             anchor: "starter-html-template",
@@ -125,6 +131,16 @@ export default function Conditional() {
   rel="stylesheet"
   href="${cdnBaseUrl}css/pico.conditional.min.css"
 />`}</Code>
+        </section>
+
+        {/* Usage with Sass */}
+        <section ref={usageWithSaasRef}>
+          <Heading level={2} anchor="usage-with-sass">
+            Usage with Sass
+          </Heading>
+          <Code language="scss">{`@use "pico" with (
+  $parent-selector: ".pico"
+);`}</Code>
         </section>
 
         {/* Starter HTML template */}
