@@ -230,7 +230,7 @@ body > main.homepage > .hero > .demo {
       border-radius: var(#{$css-var-prefix}border-radius);
       background: linear-gradient(var(--angle), var(#{$css-var-prefix}demo-border-gradient-colors));
       content: "";
-      animation: rotate-border-gradient 10s linear infinite;
+      animation: rotate-border-gradient 6s linear infinite;
     }
   }
 
@@ -276,7 +276,7 @@ body > main.homepage > .hero > .demo {
     border-radius: var(#{$css-var-prefix}border-radius);
     background: linear-gradient(var(--angle), var(#{$css-var-prefix}demo-border-gradient-colors));
     content: "";
-    animation: rotate-border-gradient 10s linear infinite;
+    animation: rotate-border-gradient 6s linear infinite;
     filter: blur(2rem);
     opacity: 0.5;
   }
