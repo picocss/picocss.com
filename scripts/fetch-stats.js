@@ -14,7 +14,7 @@ async function fetchStats() {
     try {
       const response = await fetch(endpoint.endpoint);
       const data = await response.json();
-      const value = endpoint.dataPath.split(".").reduce((o, k) => (o || {})[k], data);
+      const value = endpoint.dataPath.split(".").reduce((o, k) => (o || {})[k], data) || endpoint.default;
 
       statsData.push({
         key: endpoint.key,
@@ -24,7 +24,12 @@ async function fetchStats() {
       });
     } catch (error) {
       console.error(`Error fetching data for ${endpoint.key}:`, error);
-      return;
+      statsData.push({
+        key: endpoint.key,
+        label: endpoint.label,
+        count: endpoint.default,
+        url: endpoint.url,
+      });
     }
   }
 
