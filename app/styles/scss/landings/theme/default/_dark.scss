@@ -8,6 +8,7 @@
     #{mix($blue-850, $slate-900, 37.5%)},
     transparent
   );
+  #{$css-var-prefix}demo-outer-background-fallback: #{mix($blue-850, $slate-900, 37.5%)};
 
   // Demo border gradient
   #{$css-var-prefix}demo-border-gradient-colors:

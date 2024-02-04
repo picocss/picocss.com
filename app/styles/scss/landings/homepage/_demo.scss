@@ -2,10 +2,20 @@
 @use "settings" as *;
 
 body > main.homepage > .hero > .demo {
-  --demo-border-gradient-angle: 0deg;
+  --angle: 0deg;
+  --demo-border-gradient: linear-gradient(
+    var(--angle),
+    var(#{$css-var-prefix}demo-border-gradient-colors)
+  );
   display: flex;
   position: relative;
   flex-direction: column;
+  animation: rotate-border-gradient 6s linear infinite;
+
+  // Hack to avoid lag on Safari
+  @supports (-webkit-hyphens: none) {
+    animation: none;
+  }
 
   @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {
     max-width: map.get(map.get($breakpoints, "md"), "viewport");
@@ -218,9 +228,8 @@ body > main.homepage > .hero > .demo {
       position: absolute;
       inset: calc(var(#{$css-var-prefix}card-component-outline-width) * -1);
       border-radius: var(#{$css-var-prefix}border-radius);
-      background: linear-gradient(var(--angle), var(#{$css-var-prefix}demo-border-gradient-colors));
+      background: var(--demo-border-gradient);
       content: "";
-      animation: rotate-border-gradient 6s linear infinite;
     }
   }
 
@@ -264,9 +273,8 @@ body > main.homepage > .hero > .demo {
     position: absolute;
     inset: 0.5rem;
     border-radius: var(#{$css-var-prefix}border-radius);
-    background: linear-gradient(var(--angle), var(#{$css-var-prefix}demo-border-gradient-colors));
+    background: var(--demo-border-gradient);
     content: "";
-    animation: rotate-border-gradient 6s linear infinite;
     filter: blur(2rem);
     opacity: 0.5;
   }
@@ -282,7 +290,25 @@ body > main.homepage > .hero > .demo {
     background: var(#{$css-var-prefix}demo-outer-background);
     content: "";
     opacity: 0.75;
-    transition: opacity var(#{$css-var-prefix}transition);
+  }
+
+  // Hack to avoid banding on Firefox
+  @supports (-moz-appearance: none) {
+    &::after {
+      transform: scale(1);
+      background: var(#{$css-var-prefix}demo-outer-background-fallback);
+      filter: blur(5rem);
+      opacity: 0.5;
+    }
+  }
+
+  // Hack to avoid banding on Safari
+  @supports (-webkit-hyphens: none) {
+    &::after {
+      transform: scale(1);
+      background: var(#{$css-var-prefix}demo-outer-background-fallback);
+      filter: blur(3rem);
+    }
   }
 }
 

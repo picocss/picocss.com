@@ -8,6 +8,7 @@
     #{$blue-50},
     transparent
   );
+  #{$css-var-prefix}demo-outer-background-fallback: #{$blue-50};
 
   // Demo border gradient
   #{$css-var-prefix}demo-border-gradient-colors:
