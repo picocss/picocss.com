@@ -83,9 +83,9 @@
     "postcss": "^8.4.33",
     "postcss-cli": "^11.0.0",
     "postcss-scss": "^4.0.9",
-    "prettier": "^3.2.4",
+    "prettier": "^3.2.5",
     "prettier-plugin-organize-imports": "^3.2.4",
-    "renamer": "^4.0.0",
+    "renamer": "^5.0.0",
     "sass": "^1.70.0",
     "typescript": "^5.1.0",
     "wrangler": "^3.26.0"
