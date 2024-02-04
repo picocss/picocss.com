@@ -260,12 +260,12 @@ body > main.homepage > .hero > .demo {
   &::before {
     z-index: 0;
     position: absolute;
-    inset: 0.5rem;
+    inset: -3rem;
     border-radius: var(#{$css-var-prefix}border-radius);
     background: var(--demo-border-gradient);
     content: "";
     filter: blur(3rem);
-    opacity: 0.5;
+    opacity: 0.25;
   }
   &::after {
     z-index: -1;
