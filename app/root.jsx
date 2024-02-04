@@ -8,7 +8,6 @@ import {
   isRouteErrorResponse,
   useRouteError,
 } from "@remix-run/react";
-import { HelmetProvider } from "react-helmet-async";
 import Body from "~/components/Body";
 import Footer from "~/components/Footer";
 import Head from "~/components/Head/";
@@ -80,20 +79,41 @@ export function ErrorBoundary() {
   const error = useRouteError();
 
   return (
-    <HelmetProvider>
+    <PageProvider>
+      <HeaderProvider>
+        <Head>
+          <Meta />
+          <title>
+            {isRouteErrorResponse(error)
+              ? `${error.status} ${error.statusText} ${titleSuffix}`
+              : `Something went wrong ${titleSuffix}`}
+          </title>
+          <Links />
+        </Head>
+        <Body>
+          <RootError error={isRouteErrorResponse(error) ? error : null} />
+          <Footer />
+          <ScrollRestoration />
+          <Scripts />
+          <LiveReload />
+        </Body>
+      </HeaderProvider>
+    </PageProvider>
+  );
+}
+
+export default function App() {
+  return (
+    <ModalProvider>
       <PageProvider>
         <HeaderProvider>
           <Head>
             <Meta />
-            <title>
-              {isRouteErrorResponse(error)
-                ? `${error.status} ${error.statusText} ${titleSuffix}`
-                : `Something went wrong ${titleSuffix}`}
-            </title>
             <Links />
+            <StructuredData />
           </Head>
           <Body>
-            <RootError error={isRouteErrorResponse(error) ? error : null} />
+            <Outlet />
             <Footer />
             <ScrollRestoration />
             <Scripts />
@@ -101,31 +121,6 @@ export function ErrorBoundary() {
           </Body>
         </HeaderProvider>
       </PageProvider>
-    </HelmetProvider>
-  );
-}
-
-export default function App() {
-  return (
-    <HelmetProvider>
-      <ModalProvider>
-        <PageProvider>
-          <HeaderProvider>
-            <Head>
-              <Meta />
-              <Links />
-              <StructuredData />
-            </Head>
-            <Body>
-              <Outlet />
-              <Footer />
-              <ScrollRestoration />
-              <Scripts />
-              <LiveReload />
-            </Body>
-          </HeaderProvider>
-        </PageProvider>
-      </ModalProvider>
-    </HelmetProvider>
+    </ModalProvider>
   );
 }

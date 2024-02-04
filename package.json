@@ -52,7 +52,6 @@
     "react-copy-to-clipboard": "^5.1.0",
     "react-div-100vh": "^0.7.0",
     "react-dom": "^18.2.0",
-    "react-helmet-async": "^2.0.4",
     "react-syntax-highlighter": "^15.5.0",
     "typeit-react": "2.7.1",
     "use-debounce": "^10.0.0",
