@@ -117,10 +117,10 @@ export default function Sass() {
             <Link to="https://github.com/webpack-contrib/sass-loader">sass-loader</Link>, the
             default configuration will automatically resolve the path to{" "}
             <Code display="inline">node_modules</Code> so you can simply import Pico with:
-            <Code language="scss" className="small">
-              @use "@picocss/pico/scss/pico";
-            </Code>
           </p>
+          <Code language="scss" className="small">
+            @use "@picocss/pico/scss/pico";
+          </Code>
         </section>
 
         <section ref={settingsRef}>
