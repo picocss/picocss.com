@@ -92,7 +92,8 @@ export default function Docs() {
             Usage from CDN
           </Heading>
           <p>
-            Alternatively, you can use <Link to={cdnBaseUrl}>jsDelivr CDN</Link> to link pico.css
+            Alternatively, you can use <Link to={cdnBaseUrl}>jsDelivr CDN</Link> to link
+            <code>pico.min.css</code>.
           </p>
           <Code>{`<link
   rel="stylesheet"
@@ -107,9 +108,20 @@ export default function Docs() {
           <Code language="bash" className="small">
             npm install @picocss/pico@next
           </Code>
+          <p>Or</p>
           <Code language="bash" className="small">
             yarn add @picocss/pico@next
           </Code>
+          <p>
+            Then, import Pico into your SCSS file with{" "}
+            <Link to="https://sass-lang.com/documentation/at-rules/use">@use</Link>:
+          </p>
+          <Code language="scss" className="small">
+            @use "pico";
+          </Code>
+          <p>
+            Learn more about the <Link to="/docs/sass">customization with Sass</Link>.
+          </p>
         </section>
 
         <section ref={installWithComposerRef}>
@@ -132,11 +144,11 @@ export default function Docs() {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="light dark" />
     <link rel="stylesheet" href="css/pico.min.css">
-    <title>Hello, world!</title>
+    <title>Hello world!</title>
   </head>
   <body>
     <main class="container">
-      <h1>Hello, world!</h1>
+      <h1>Hello world!</h1>
     </main>
   </body>
 </html>`}</Code>

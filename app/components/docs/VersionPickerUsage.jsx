@@ -89,11 +89,11 @@ export default function Usage() {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="light dark" />
     ${simplifiedCssLink}
-    <title>Hello, world!</title>
+    <title>Hello world!</title>
   </head>
   <body>
     <main class="container">
-      <h1>Hello, world!</h1>
+      <h1>Hello world!</h1>
     </main>
   </body>
 </html>`}</Code>

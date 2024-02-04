@@ -48,7 +48,7 @@ const VersionPickerProvider = ({ children, value }) => {
     {
       name: "Yes",
       filePattern: "conditional.",
-      description: `This version restricts Pico styling to HTML elements within <code>.pico</code> containers only. <a href="/docs/conditional">See here</a>.`,
+      description: `This version restricts Pico styling to HTML elements within <code>.pico</code> containers only. <a href="/docs/conditional">See&nbsp;here</a>.`,
       sassProperties: {
         "$parent-selector": `".pico"`,
       },
