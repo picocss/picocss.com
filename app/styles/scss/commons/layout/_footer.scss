@@ -7,8 +7,6 @@
 
 body {
   > footer {
-    background-color: var(#{$css-var-prefix}footer-background);
-
     .container {
       section {
         &:first-of-type {
@@ -85,6 +83,12 @@ body {
 
               li {
                 display: block;
+
+                strong {
+                  a {
+                    color: currentColor;
+                  }
+                }
               }
             }
           }

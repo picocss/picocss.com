@@ -2,23 +2,16 @@
 @use "settings" as *;
 
 @mixin theme {
-  // Demo outer background
-  #{$css-var-prefix}demo-outer-background: radial-gradient(
-    circle closest-side,
-    #{$blue-50},
-    transparent
-  );
-  #{$css-var-prefix}demo-outer-background-fallback: #{$blue-50};
-
   // Demo border gradient
   #{$css-var-prefix}demo-border-gradient-colors:
-    $azure-50 50%,
-    mix($azure-250, $fuchsia-250, 25%),
-    mix($azure-250, $purple-250, 30%),
-    mix($azure-250, $violet-250, 35%),
-    mix($azure-250, $indigo-250, 40%);
+    transparent 33%,
+    mix($azure-150, $fuchsia-150, 25%),
+    mix($azure-150, $purple-150, 30%),
+    mix($azure-150, $violet-150, 35%),
+    mix($azure-150, $indigo-150, 40%);
 
   // Cards
+  #{$css-var-prefix}card-box-shadow: var(#{$css-var-prefix}box-shadow);
   #{$css-var-prefix}card-component-outline-width: 0.0625rem;
   #{$css-var-prefix}card-component-outline-color: transparent;
 

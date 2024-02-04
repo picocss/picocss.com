@@ -10,7 +10,6 @@ body > main.homepage > .hero > .demo {
   display: flex;
   position: relative;
   flex-direction: column;
-  animation: rotate-border-gradient 6s linear infinite;
 
   // Hack to avoid lag on Safari
   @supports (-webkit-hyphens: none) {
@@ -50,15 +49,15 @@ body > main.homepage > .hero > .demo {
         var(#{$css-var-prefix}spacing) * 1.5
       ) !important;
       #{$css-var-prefix}block-spacing-vertical: calc(var(#{$css-var-prefix}spacing) * 2) !important;
-      height: calc(24.471rem + var(#{$css-var-prefix}block-spacing-vertical));
+      height: calc(24.5rem + var(#{$css-var-prefix}block-spacing-vertical));
     }
 
     @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {
-      height: calc(24.445rem + var(#{$css-var-prefix}block-spacing-vertical));
+      height: calc(24.5rem + var(#{$css-var-prefix}block-spacing-vertical));
     }
 
     @media (min-width: map.get(map.get($breakpoints, "lg"), "breakpoint")) {
-      height: calc(23.948rem + var(#{$css-var-prefix}block-spacing-vertical));
+      height: calc(24rem + var(#{$css-var-prefix}block-spacing-vertical));
     }
 
     @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
@@ -66,11 +65,11 @@ body > main.homepage > .hero > .demo {
         var(#{$css-var-prefix}spacing) * 3
       ) !important;
       #{$css-var-prefix}block-spacing-vertical: calc(var(#{$css-var-prefix}spacing) * 3) !important;
-      height: calc(24.45rem);
+      height: calc(24rem);
     }
 
     @media (min-width: map.get(map.get($breakpoints, "xxl"), "breakpoint")) {
-      height: calc(24.096rem + var(#{$css-var-prefix}block-spacing-vertical));
+      height: calc(23.5rem + var(#{$css-var-prefix}block-spacing-vertical));
     }
 
     form {
@@ -221,16 +220,6 @@ body > main.homepage > .hero > .demo {
         opacity: 1;
       }
     }
-
-    // Border gradient
-    &::before {
-      z-index: -1;
-      position: absolute;
-      inset: calc(var(#{$css-var-prefix}card-component-outline-width) * -1);
-      border-radius: var(#{$css-var-prefix}border-radius);
-      background: var(--demo-border-gradient);
-      content: "";
-    }
   }
 
   &.is-maximized {
@@ -275,51 +264,15 @@ body > main.homepage > .hero > .demo {
     border-radius: var(#{$css-var-prefix}border-radius);
     background: var(--demo-border-gradient);
     content: "";
-    filter: blur(2rem);
+    filter: blur(3rem);
     opacity: 0.5;
   }
-
-  // Background gradient
   &::after {
-    display: block;
     z-index: -1;
     position: absolute;
-    inset: 0;
-    transform: scale(2.75);
-    transform-origin: center;
-    background: var(#{$css-var-prefix}demo-outer-background);
+    inset: -1px;
+    border-radius: var(#{$css-var-prefix}border-radius);
+    background: var(--demo-border-gradient);
     content: "";
-    opacity: 0.75;
   }
-
-  // Hack to avoid banding on Firefox
-  @supports (-moz-appearance: none) {
-    &::after {
-      transform: scale(1);
-      background: var(#{$css-var-prefix}demo-outer-background-fallback);
-      filter: blur(5rem);
-      opacity: 0.5;
-    }
-  }
-
-  // Hack to avoid banding on Safari
-  @supports (-webkit-hyphens: none) {
-    &::after {
-      transform: scale(1);
-      background: var(#{$css-var-prefix}demo-outer-background-fallback);
-      filter: blur(3rem);
-    }
-  }
-}
-
-@keyframes rotate-border-gradient {
-  100% {
-    --angle: 360deg;
-  }
-}
-
-@property --angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
 }

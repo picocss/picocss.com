@@ -2,7 +2,7 @@
 @use "settings" as *;
 
 body > main.homepage > .stats {
-  margin-top: calc(var(#{$css-var-prefix}homepage-spacing-vertical) * 0.75);
+  margin-top: calc(var(#{$css-var-prefix}homepage-spacing-vertical) * 0.25);
 
   ul li {
     margin: 0;
@@ -23,7 +23,9 @@ body > main.homepage > .stats {
   }
 
   ul li {
-    text-align: center;
+    @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
+      text-align: center;
+    }
 
     p.count {
       margin-bottom: calc(var(#{$css-var-prefix}spacing) * 0.25);

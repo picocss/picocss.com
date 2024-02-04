@@ -7,7 +7,8 @@ body > main.homepage > .hero {
   column-gap: var(#{$css-var-prefix}homepage-spacing-horizontal);
   row-gap: calc(var(#{$css-var-prefix}homepage-spacing-vertical) / 2);
   justify-items: center;
-  margin-block: calc(var(#{$css-var-prefix}homepage-spacing-vertical) / 2);
+  margin-top: calc(var(#{$css-var-prefix}homepage-spacing-vertical) / 2);
+  margin-bottom: 0;
 
   .demo,
   .hook {
