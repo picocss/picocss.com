@@ -10,6 +10,7 @@ export default function Edit(props) {
       fill="none"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="icon-edit"
       {...props}
     >
       <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />

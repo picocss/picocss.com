@@ -1,22 +1,10 @@
-import Link from "~/components/Link";
+import ArrowLink from "~/components/ArrowLink";
 import Logo from "~/components/Logo";
 import Adjustments from "~/components/icons/Adjustments";
-import ArrowRight from "~/components/icons/ArrowRight";
 import Brightness from "~/components/icons/Brightness";
 import CodeIcon from "~/components/icons/Code";
 import Expand from "~/components/icons/Expand";
 import Speedtest from "~/components/icons/Speedtest";
-
-const ArrowLink = ({ children, to, ...props }) => (
-  <p {...props}>
-    <Link to={to}>
-      <>
-        {children}
-        <ArrowRight />
-      </>
-    </Link>
-  </p>
-);
 
 export default function Features(props) {
   return (

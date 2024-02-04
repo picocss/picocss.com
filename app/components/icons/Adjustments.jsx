@@ -10,6 +10,7 @@ export default function Adjustments(props) {
       fill="none"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="icon-adjustments"
       {...props}
     >
       <path

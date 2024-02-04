@@ -5,8 +5,6 @@
  * Docs: Main
  */
 
-$aside-width: 11rem;
-
 body {
   #{$css-var-prefix}main-top-offset: 0rem;
 
@@ -22,6 +20,7 @@ body {
     display: grid;
     grid-template-rows: 1fr;
     row-gap: 2rem;
+    margin-bottom: calc(var(#{$css-var-prefix}spacing) * 4);
     padding: 0;
 
     > * {
@@ -30,6 +29,7 @@ body {
     }
 
     @media (min-width: map.get(map.get($breakpoints, "lg"), "breakpoint")) {
+      $aside-width: 11rem;
       grid-template-rows: auto 1fr;
       grid-template-columns: $aside-width 1fr;
       grid-template-areas:
@@ -97,6 +97,7 @@ body {
     }
 
     @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+      $aside-width: 10.5rem;
       grid-template-rows: auto 1fr;
       grid-template-columns: $aside-width 1fr;
       grid-template-areas:
@@ -139,6 +140,7 @@ body {
     }
 
     @media (min-width: map.get(map.get($breakpoints, "xxl"), "breakpoint")) {
+      $aside-width: 10rem;
       grid-template-rows: auto 1fr;
       grid-template-columns: $aside-width 1fr $aside-width;
       grid-template-areas:

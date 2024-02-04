@@ -1,13 +1,25 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useModal } from "~/contexts/ModalContext";
-import Code from "./Code";
 import Controls from "./Controls";
-import { DemoProvider, useDemo } from "./DemoContext";
+import { DemoProvider } from "./DemoContext";
 import Form from "./Form";
+import LargeWidthCode from "./LargeWidthCode";
+import SmallWidthCode from "./SmallWidthCode";
 
-const Demo = (props) => {
-  const { demoHeight, footerRef } = useDemo();
+const Demo = ({ isMaximizable = false, props }) => {
   const { modalIsOpen, onCloseModal } = useModal();
+
+  // Define isLargeLayout on load and on resize
+  const largeLayoutBreakpoint = 1280;
+  const [isLargeLayout, setIsLargeLayout] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsLargeLayout(window.innerWidth >= largeLayoutBreakpoint);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   // Handle escape
   useEffect(() => {
@@ -27,20 +39,14 @@ const Demo = (props) => {
 
   return (
     <div className={`demo${modalIsOpen ? " is-maximized" : ""}`} {...props}>
-      <article
-        className="component"
-        aria-label="Demo"
-        style={demoHeight && { "--demo-height": `${demoHeight}px` }}
-      >
+      <article className="component" aria-label="Demo">
         <main>
           <Form />
         </main>
         <footer className="code">
-          <pre ref={footerRef}>
-            <Code />
-          </pre>
+          <pre>{isLargeLayout ? <LargeWidthCode /> : <SmallWidthCode />}</pre>
         </footer>
-        <Controls />
+        {isMaximizable && <Controls />}
       </article>
     </div>
   );

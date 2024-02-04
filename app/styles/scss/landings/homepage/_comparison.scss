@@ -4,7 +4,12 @@
 body > main.homepage > .comparison {
   > hgroup {
     max-width: map.get(map.get($breakpoints, "md"), "viewport");
-    margin-bottom: calc(var(#{$css-var-prefix}homepage-spacing-vertical) / 2);
+    margin-bottom: calc(var(#{$css-var-prefix}homepage-spacing-vertical) * 0.75);
+    margin-inline: auto;
+
+    @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
+      text-align: center;
+    }
 
     @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {
       margin-bottom: calc(var(#{$css-var-prefix}homepage-spacing-vertical) / 3);
@@ -48,6 +53,10 @@ body > main.homepage > .comparison {
 
       .code {
         height: 100%;
+        margin-bottom: 0;
+        border: var(#{$css-var-prefix}card-component-outline-width) solid
+          var(#{$css-var-prefix}card-component-outline-color);
+        background-color: var(#{$css-var-prefix}card-background-color);
 
         &::before {
           display: block;

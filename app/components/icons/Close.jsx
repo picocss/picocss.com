@@ -10,6 +10,7 @@ export default function Close(props) {
       fill="none"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="icon-close"
       {...props}
     >
       <path d="M18 6l-12 12"></path>

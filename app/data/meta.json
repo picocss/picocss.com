@@ -25,5 +25,7 @@
   "documentationGithubFilesBaseUrl": "https://github.com/picocss/picocss.com/blob/main/",
   "documentationGithubTreeBaseUrl": "https://github.com/picocss/picocss.com/tree/main/",
   "twitterUrl": "https://twitter.com/picocss",
-  "twitterHandle": "@picocss"
+  "twitterHandle": "@picocss",
+  "npmUrl": "https://www.npmjs.com/package/@picocss/pico",
+  "jsDelivrUrl": "https://www.jsdelivr.com/package/npm/@picocss/pico"
 }

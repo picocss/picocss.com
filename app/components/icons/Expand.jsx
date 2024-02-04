@@ -10,6 +10,7 @@ export default function Expand(props) {
       fill="none"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="icon-expand"
       {...props}
     >
       <path d="M16 4l4 0l0 4" />

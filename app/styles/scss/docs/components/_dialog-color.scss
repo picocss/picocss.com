@@ -7,8 +7,11 @@ dialog.color {
 
   article {
     transform: translate3d(0, 0, 0);
-    box-shadow: 0 0 0 var(#{$css-var-prefix}border-width) var(#{$css-var-prefix}secondary-focus),
-      0 -0 6rem 0 var(#{$css-var-prefix}glowing-color), var(#{$css-var-prefix}box-shadow);
+    background: var(#{$css-var-prefix}background-color);
+    box-shadow:
+      0 0 0 var(#{$css-var-prefix}border-width) var(#{$css-var-prefix}secondary-focus),
+      0 -0 6rem 0 var(#{$css-var-prefix}glowing-color),
+      var(#{$css-var-prefix}box-shadow);
     transition: box-shadow var(#{$css-var-prefix}transition);
 
     @if map.get($breakpoints, "lg") {
@@ -28,7 +31,9 @@ dialog.color {
 
     header {
       font-weight: bold;
-      transition: color var(#{$css-var-prefix}transition), background-color var(#{$css-var-prefix}transition);
+      transition:
+        color var(#{$css-var-prefix}transition),
+        background-color var(#{$css-var-prefix}transition);
 
       a {
         &.close {
@@ -65,6 +70,7 @@ dialog.color {
     .grid {
       .code {
         margin-bottom: 0;
+        box-shadow: none;
       }
 
       @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {

@@ -3,8 +3,13 @@
 
 body > main.homepage > .features {
   > hgroup {
-    max-width: map.get(map.get($breakpoints, "md"), "viewport");
-    margin-bottom: calc(var(#{$css-var-prefix}homepage-spacing-vertical) / 2);
+    max-width: map.get(map.get($breakpoints, "lg"), "viewport");
+    margin-bottom: calc(var(#{$css-var-prefix}homepage-spacing-vertical) * 0.75);
+    margin-inline: auto;
+
+    @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
+      text-align: center;
+    }
 
     > h2 {
       margin-bottom: calc(var(#{$css-var-prefix}spacing) * 1);
@@ -21,29 +26,24 @@ body > main.homepage > .features {
     row-gap: calc(var(#{$css-var-prefix}homepage-spacing-vertical) / 2);
 
     @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr;
     }
 
-    @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
-      grid-template-columns: repeat(3, 1fr);
+    @media (min-width: map.get(map.get($breakpoints, "lg"), "breakpoint")) {
+      grid-template-columns: 1fr 1fr;
     }
 
     article {
       margin-bottom: 0;
       margin-block: 0;
-      padding: 0;
-      background-color: transparent;
-      box-shadow: none;
+      border: var(#{$css-var-prefix}card-component-outline-width) solid
+        var(#{$css-var-prefix}card-component-outline-color);
 
       > svg {
         width: auto;
-        height: 2.5rem;
-        margin-bottom: calc(var(#{$css-var-prefix}spacing) * 1);
-        padding: calc(var(#{$css-var-prefix}spacing) * 0.75);
-        border: 1px solid var(#{$css-var-prefix}icon-border-color);
-        border-radius: 0.25rem;
-        background: var(#{$css-var-prefix}icon-background-color);
-        color: var(#{$css-var-prefix}icon-color);
+        height: 1.125rem;
+        margin-bottom: calc(var(#{$css-var-prefix}spacing) * 0.75);
+        color: var(#{$css-var-prefix}features-icon-color);
 
         &.pico-icon {
           path {

@@ -5,40 +5,36 @@
   // Demo outer background
   #{$css-var-prefix}demo-outer-background: radial-gradient(
     circle closest-side,
-    #{$azure-50},
+    #{$blue-50},
     transparent
   );
 
-  // Demo inner background
-  #{$css-var-prefix}demo-inner-background: var(#{$css-var-prefix}background-color);
+  // Demo border gradient
+  #{$css-var-prefix}demo-border-gradient-colors:
+    $azure-50 50%,
+    mix($azure-250, $fuchsia-250, 25%),
+    mix($azure-250, $purple-250, 30%),
+    mix($azure-250, $violet-250, 35%),
+    mix($azure-250, $indigo-250, 40%);
+
+  // Cards
+  #{$css-var-prefix}card-component-outline-width: 0.0625rem;
+  #{$css-var-prefix}card-component-outline-color: transparent;
 
   // Mark gradient
-  #{$css-var-prefix}mark-gradient: linear-gradient(to right, transparent, rgba($slate-700, 12.5%)),
-    linear-gradient(
-      to right,
-      mix($slate-550, $pink-550, 30%),
-      mix($slate-550, $fuchsia-550, 25%),
-      mix($slate-550, $purple-550, 20%),
-      mix($slate-550, $violet-550, 25%),
-      mix($slate-550, $indigo-550, 30%),
-      mix($slate-550, $blue-550, 35%),
-      mix($slate-550, $azure-550, 35%),
-      mix($slate-550, $cyan-550, 40%),
-      mix($slate-550, $jade-550, 45%),
-      mix($slate-550, $green-550, 40%)
-    );
+  #{$css-var-prefix}mark-gradient: linear-gradient(
+    to right,
+    mix($slate-650, $fuchsia-650, 25%),
+    mix($slate-650, $purple-650, 30%),
+    mix($slate-650, $violet-650, 35%),
+    mix($slate-650, $indigo-650, 40%)
+  );
 
   // Stats color
   #{$css-var-prefix}stats-color: mix($azure-600, $slate-600);
 
-  // Feature icons
-  #{$css-var-prefix}icon-border-color: #{mix($blue-100, $slate-100, 25%)};
-  #{$css-var-prefix}icon-background-color: linear-gradient(
-    to bottom,
-    #{rgba(mix($blue-50, $white, 25%), 0.125)},
-    #{mix($blue-50, $slate-50, 25%)}
-  );
-  #{$css-var-prefix}icon-color: mix($blue-600, $slate-600, 25%);
+  // Features icon color
+  #{$css-var-prefix}features-icon-color: mix($slate-550, $purple-550, 30%);
 
   // Comparison gradients
   #{$css-var-prefix}comparison-gradient-valid: linear-gradient(

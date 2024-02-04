@@ -2,7 +2,6 @@ export default function ArrowRight(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="icon-arrow-right"
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -11,6 +10,7 @@ export default function ArrowRight(props) {
       fill="none"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="icon-arrow-right"
       {...props}
     >
       <g className="head">

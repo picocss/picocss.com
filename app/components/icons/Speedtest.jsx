@@ -10,6 +10,7 @@ export default function Speedtest(props) {
       fill="none"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="icon-speedtest"
       {...props}
     >
       <path d="M5.636 19.364a9 9 0 1 1 12.728 0" />

@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "settings" as *;
 
 /**
@@ -6,25 +7,142 @@
 
 body {
   > footer {
+    background-color: var(#{$css-var-prefix}footer-background);
+
     .container {
-      svg {
-        width: 2rem;
-        height: 2rem;
-        margin-bottom: var(#{$css-var-prefix}spacing);
-      }
-
-      p {
-        text-wrap: pretty;
-
+      section {
         &:first-of-type {
-          margin-bottom: 0.25em;
-          font-size: 16px;
+          display: grid;
+          grid-template-areas:
+            "logo"
+            "links"
+            "resources"
+            "built";
+          column-gap: calc(var(#{$css-var-prefix}spacing) * 4);
+          row-gap: calc(var(#{$css-var-prefix}spacing) * 2);
+          justify-content: stretch;
+          font-size: 14px;
+
+          @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {
+            grid-template-columns: auto 1fr;
+            grid-template-areas:
+              "logo links"
+              "built built"
+              "resources resources";
+            row-gap: calc(var(#{$css-var-prefix}spacing) * 2);
+            justify-content: space-around;
+          }
+
+          @media (min-width: map.get(map.get($breakpoints, "lg"), "breakpoint")) {
+            grid-template-columns: 1fr 2fr;
+            grid-template-areas:
+              "logo links"
+              "built links"
+              "resources links";
+            row-gap: var(#{$css-var-prefix}spacing);
+          }
+
+          // Logo
+          svg.pico-icon {
+            grid-area: logo;
+          }
+
+          // Links
+          nav.links {
+            #{$css-var-prefix}nav-element-spacing-vertical: 0.125rem;
+            #{$css-var-prefix}nav-link-spacing-vertical: 0.125rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: calc(var(#{$css-var-prefix}spacing) * 4);
+            row-gap: calc(var(#{$css-var-prefix}spacing) * 2);
+            grid-area: links;
+            align-items: start;
+            width: fit-content;
+
+            @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
+              width: 100%;
+            }
+
+            @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {
+              grid-template-columns: 1fr 1fr 1fr 1fr;
+              justify-content: flex-end;
+            }
+
+            @media (min-width: map.get(map.get($breakpoints, "lg"), "breakpoint")) {
+              margin-left: auto;
+            }
+
+            ul {
+              display: grid;
+              margin-inline: calc(var(#{$css-var-prefix}nav-element-spacing-horizontal) * -1);
+
+              li {
+                display: block;
+              }
+            }
+          }
+
+          // Build info
+          p.build-info {
+            grid-area: built;
+            margin-bottom: 0;
+            color: var(#{$css-var-prefix}muted-color);
+            text-wrap: balance;
+          }
+
+          // Resources
+          ul.resources {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            column-gap: calc(var(#{$css-var-prefix}spacing) / 2);
+            grid-area: resources;
+            width: fit-content;
+            margin-bottom: 0;
+            padding: 0;
+
+            li {
+              margin: 0;
+              list-style: none;
+
+              svg {
+                display: inline-block;
+                width: auto;
+                height: 1rem;
+
+                &.icon-npm {
+                  transform: scale(1.5);
+                  transform-origin: left;
+                }
+              }
+            }
+          }
         }
 
-        &:not(:first-of-type) {
-          margin-bottom: 0.125em;
-          color: var(#{$css-var-prefix}muted-color);
-          font-size: 14px;
+        &:last-of-type {
+          margin-block: calc(var(#{$css-var-prefix}spacing) * 2);
+          padding-top: calc(var(#{$css-var-prefix}spacing) * 2);
+          border-top: var(#{$css-var-prefix}border-width) solid
+            var(#{$css-var-prefix}muted-border-color);
+          font-size: 12px;
+
+          p {
+            margin-bottom: 0;
+            color: var(#{$css-var-prefix}muted-color);
+
+            @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
+              display: inline;
+
+              &:not(:first-of-type) {
+                margin-inline-start: calc(var(#{$css-var-prefix}spacing) / 2);
+              }
+            }
+
+            code {
+              padding: 0;
+              background-color: transparent;
+              font-size: 1em;
+            }
+          }
         }
       }
     }

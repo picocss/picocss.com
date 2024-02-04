@@ -10,6 +10,7 @@ export default function Code(props) {
       fill="none"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="icon-code"
       {...props}
     >
       <path d="M7 8l-4 4l4 4" />

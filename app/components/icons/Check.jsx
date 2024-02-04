@@ -10,6 +10,7 @@ export default function Check({ isAnimated = false, strokeWidth = 4, ...props })
       fill="none"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="icon-check"
       {...props}
     >
       {isAnimated && (

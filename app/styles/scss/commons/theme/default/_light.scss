@@ -30,8 +30,9 @@
   #{$css-var-prefix}chapter-color: var(#{$css-var-prefix}code-tag);
 
   // Footer
+  #{$css-var-prefix}footer-background: #{mix($slate-50, $white)};
   footer {
-    #{$css-var-prefix}logo-small-sparkles: #{mix($slate-100, $azure-100)};
-    #{$css-var-prefix}logo-big-sparkle: #{mix($slate-150, $azure-150)};
+    #{$css-var-prefix}logo-small-sparkles: #{$slate-150};
+    #{$css-var-prefix}logo-big-sparkle: #{$slate-250};
   }
 }

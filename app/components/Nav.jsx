@@ -53,7 +53,7 @@ export default function Nav({ shouldDisplayDocsVersion = false, ...props }) {
             </details>
           </li>
         )}
-        <li {...(shouldDisplayDocsVersion && { className: "hide-before-sm" })}>
+        <li className="hide-before-sm">
           <Link to="/examples" className="contrast">
             Examples
           </Link>
@@ -63,6 +63,8 @@ export default function Nav({ shouldDisplayDocsVersion = false, ...props }) {
             Docs
           </Link>
         </li>
+      </ul>
+      <ul className="icons">
         <li>
           <Link
             to="https://github.com/picocss/pico"
@@ -84,7 +86,7 @@ export default function Nav({ shouldDisplayDocsVersion = false, ...props }) {
             onClick={handleSwitchTheme}
             aria-label={isThemeDark ? "Turn off dark mode" : "Turn on dark mode"}
           >
-            <ThemeToggle className={`theme-toggle${isThemeDark ? " moon" : ""}`} />
+            <ThemeToggle className={isThemeDark ? " moon" : ""} />
           </Link>
         </li>
       </ul>

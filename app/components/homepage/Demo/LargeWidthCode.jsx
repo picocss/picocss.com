@@ -1,4 +1,5 @@
 import parse from "html-react-parser";
+import { useEffect } from "react";
 import TypeIt from "typeit-react";
 import { useDemo } from "./DemoContext";
 
@@ -20,10 +21,7 @@ const value = (value) => {
 // Initial Demo Code
 const initialDemoCode = [
   `&lt;${tag("form")}&gt;`,
-  `<br />  &lt;${tag("input")}`,
-  `<br />    ${attr("type")}=${value('"email"')}`,
-  `<br />    ${attr("placeholder")}=${value('"Enter your email"')}`,
-  `<br />  /&gt;`,
+  `<br />  &lt;${tag("input")} ${attr("type")}=${value('"email"')} ${attr("placeholder")}=${value('"Enter your email"')} /&gt;`,
   `<br />&lt;/${tag("form")}&gt;`,
 ];
 
@@ -82,12 +80,21 @@ export default function Code(props) {
 
     // Reset TypeIt instance
     manualLoop,
+
+    // Reset all the form and input states
+    resetForm,
   } = useDemo();
 
   const delOpts = { instant: true, delay: delay.pause };
   const delInstant = { instant: true, delay: 0 };
   const moveOpts = { instant: true, delay: delay.pause };
   const moveInstant = { instant: true, delay: 0 };
+
+  // Reset form on load
+  useEffect(() => {
+    resetForm();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <code {...props}>
@@ -105,11 +112,8 @@ export default function Code(props) {
             .type(initialDemoCode[0], { instant: true })
             .type(initialDemoCode[1], { instant: true })
             .type(initialDemoCode[2], { instant: true })
-            .type(initialDemoCode[3], { instant: true })
-            .type(initialDemoCode[4], { instant: true })
-            .type(initialDemoCode[5], { instant: true })
-            .move(-13, { instant: true })
-            .pause(delay.displayComponent)
+            .move(-11, { instant: true })
+            .pause(delay.displayComponent / 2)
             .exec(() => {
               setInputType("email");
               setTimeout(() => {
@@ -121,9 +125,8 @@ export default function Code(props) {
             })
 
             // Invalid email input
-            .pause(delay.displayComponent)
-            .type("<br />    ", moveOpts)
-            .type(`${attr("aria-invalid")}=${value('"true"')}`)
+            .pause(delay.displayComponent / 2)
+            .type(` ${attr("aria-invalid")}=${value('"true"')}`)
             .exec(() => {
               setInputInvalid(true);
               setInputClass("");
@@ -131,14 +134,9 @@ export default function Code(props) {
 
             // Invalid email input helper
             .pause(delay.displayComponent)
-            .move(6, moveOpts)
-            .type("  <br />", moveOpts)
-            .move(-1, moveOpts)
-            .type(`&lt;${tag("small")}&gt;&lt;/${tag("small")}&gt;`)
-            .move(-8, moveOpts)
-            .type("<br />    <br />  ", moveOpts)
-            .move(-3, moveOpts)
-            .type("Please enter a valid email!")
+            .move(3, moveOpts)
+            .type("  <br />  ", moveOpts)
+            .type(`&lt;${tag("small")}&gt;Please enter a valid email!&lt;/${tag("small")}&gt;`)
             .exec(() => {
               setInputHelper("Please enter a valid email!");
               setInputHelperClass("fade-in");
@@ -146,35 +144,22 @@ export default function Code(props) {
 
             // Email input with submit button
             .pause(delay.displayComponent)
-            .move(11, moveOpts)
-            .delete(53, delOpts)
-            .move(-5, moveOpts)
-            .delete(24, delOpts)
-            .move(-58, moveOpts)
-            .type("<br />  ", moveOpts)
+            .delete(47, delOpts)
             .move(-3, moveOpts)
-            .type(`&lt;${tag("fieldset")} ${attr("role")}=${value('"group"')}&gt;`)
-            .move(66, moveOpts)
-            .type("<br />  ", moveOpts)
-            .type(`&lt;/${tag("fieldset")}&gt;`)
-            .move(-16, moveInstant)
+            .delete(20, delOpts)
+            .move(-53, moveOpts)
+            .type(`<br />  &lt;${tag("fieldset")} ${attr("role")}=${value('"group"')}&gt;`)
+            .move(56, moveOpts)
+            .type(`<br />  &lt;/${tag("fieldset")}&gt;`)
+            .move(-67, moveInstant)
             .type(`  `, moveInstant)
-            .move(-36, moveInstant)
-            .type(`  `, moveInstant)
-            .move(-19, moveInstant)
-            .type(`  `, moveInstant)
-            .move(-12, moveInstant)
-            .type(`  `, moveInstant)
-            .move(69, moveInstant)
-            .type("<br />    ", moveOpts)
+            .move(53, moveInstant)
             .type(
-              `&lt;${tag("button")} ${attr("type")}=${value('"submit"')}&gt;&lt;/${tag(
+              `<br />    &lt;${tag("button")} ${attr("type")}=${value('"submit"')}&gt;&lt;/${tag(
                 "button",
               )}&gt;`,
             )
             .move(-9, moveOpts)
-            .type("<br />      <br />    ", moveOpts)
-            .move(-5, moveOpts)
             .type("Subscribe")
             .exec(() => {
               setFormRole("group");
@@ -189,33 +174,23 @@ export default function Code(props) {
 
             // Search input with button
             .pause(delay.displayComponent)
-            .move(-117, moveOpts)
+            .move(-94, moveOpts)
             .delete(26, delOpts)
-            .move(145, moveOpts)
+            .move(117, moveOpts)
             .delete(14, delOpts)
-            .move(-10, moveInstant)
+            .move(-40, moveInstant)
             .delete(2, delInstant)
-            .move(-12, moveInstant)
-            .delete(2, delInstant)
-            .move(-26, moveInstant)
-            .delete(2, delInstant)
-            .move(-5, moveInstant)
-            .delete(2, delInstant)
-            .move(-34, moveInstant)
-            .delete(2, delInstant)
-            .move(-17, moveInstant)
-            .delete(2, delInstant)
-            .move(-10, moveInstant)
+            .move(-56, moveInstant)
             .delete(2, delInstant)
             .move(-4, moveOpts)
             .type(` ${attr("role")}=${value('"search"')}`)
-            .move(27, moveOpts)
+            .move(23, moveOpts)
             .delete(7, delOpts)
             .type(`${value('"search"')}`)
-            .move(35, moveOpts)
+            .move(31, moveOpts)
             .delete(18, delOpts)
             .type(`${value('"Search"')}`)
-            .move(44, moveOpts)
+            .move(37, moveOpts)
             .delete(8, delOpts)
             .type("earch")
             .exec(() => {
@@ -227,13 +202,9 @@ export default function Code(props) {
 
             // Search input and button submitted
             .pause(delay.displayComponent)
-            .move(-26, moveOpts)
-            .type("<br />   ", moveOpts)
-            .move(14, moveOpts)
-            .type("<br />    <br />  ", moveOpts)
-            .move(-3, moveOpts)
-            .type(`${attr("aria-busy")}=${value('"true"')}`)
-            .move(15, moveOpts)
+            .move(-7, moveOpts)
+            .type(` ${attr("aria-busy")}=${value('"true"')}`)
+            .move(7, moveOpts)
             .type("...")
             .exec(() => {
               setButtonIsFocused(true);
@@ -245,12 +216,12 @@ export default function Code(props) {
 
             // Date input
             .pause(delay.displayComponent)
-            .move(12, moveOpts)
-            .delete(79, delOpts)
-            .move(-2, moveOpts)
-            .delete(46, delOpts)
-            .type(` ${attr("type")}=${value('"date"')} `)
-            .move(-23, moveOpts)
+            .move(9, moveOpts)
+            .delete(60, delOpts)
+            .move(-3, moveOpts)
+            .delete(29, delOpts)
+            .type(`${value('"date"')}`)
+            .move(-22, moveOpts)
             .delete(14, delOpts)
             .exec(() => {
               setFormGroupIsFocused(false);
@@ -270,8 +241,7 @@ export default function Code(props) {
             // Date input with Next button
             .pause(delay.displayComponent)
             .move(25, moveOpts)
-            .type("<br />  ", moveOpts)
-            .type(`&lt;${tag("button")}&gt;Next&lt;/${tag("button")}&gt;`)
+            .type(`<br />  &lt;${tag("button")}&gt;Next&lt;/${tag("button")}&gt;`)
             .exec(() => {
               setInputClass("");
               setDisplayButton(true);
@@ -329,23 +299,16 @@ export default function Code(props) {
 
             // Switch checked
             .pause(delay.displayComponent)
-            .move(1, moveOpts)
-            .type("<br />    ", moveOpts)
-            .move(-14, moveOpts)
-            .type("<br />     ", moveOpts)
-            .move(-22, moveOpts)
-            .type("<br />     ", moveOpts)
-            .move(16, moveOpts)
-            .type("<br />      ", moveOpts)
-            .type(`${attr("role")}=${value('"switch"')}`)
+            .move(-8, moveOpts)
+            .type(` ${attr("role")}=${value('"switch"')}`)
             .exec(() => {
               setCheckboxRole("switch");
             })
 
             // Switch not checked
             .pause(delay.displayComponent)
-            .move(14, moveOpts)
-            .delete(14, delOpts)
+            .move(8, moveOpts)
+            .delete(8, delOpts)
             .exec(() => {
               setCheckboxIsFocused(true);
               setTimeout(function () {
@@ -358,18 +321,15 @@ export default function Code(props) {
 
             // Range
             .pause(delay.displayComponent)
-            .move(34, moveOpts)
+            .move(29, moveOpts)
             .delete(26, delOpts)
-            .move(-56, moveOpts)
+            .move(-44, moveOpts)
             .type("    <br />    ", moveOpts)
-            .move(-9, moveOpts)
             .type("Brightness")
-            .move(37, moveOpts)
-            .delete(10, delOpts)
+            .move(41, moveOpts)
+            .delete(24, delOpts)
             .type(value('"range"'))
-            .move(20, moveOpts)
-            .delete(13, delOpts)
-            .type(`${attr("value")}=${value('"25"')}`)
+            .type(` ${attr("value")}=${value('"25"')}`)
             .exec(() => {
               setRangeClass("fade-in");
               setDisplayCheckbox(false);
@@ -394,8 +354,8 @@ export default function Code(props) {
 
             // Form busy
             .pause(delay.displayComponent)
-            .move(20, moveOpts)
-            .delete(96, delOpts)
+            .move(15, moveOpts)
+            .delete(79, delOpts)
             .move(-1, moveOpts)
             .type(` ${attr("aria-busy")}=${value('"true"')}`)
             .exec(() => {
@@ -407,13 +367,9 @@ export default function Code(props) {
             .pause(delay.displayComponent)
             .delete(17, delOpts)
             .move(1, moveOpts)
-            .type(`${initialDemoCode[1]}<br />`)
+            .type(`<br />`)
             .move(-1, moveOpts)
-            .type(initialDemoCode[2])
-            .type(initialDemoCode[3])
-            .type(initialDemoCode[4])
-            .type(" ", { instant: true })
-            .delete(1, { instant: true })
+            .type(initialDemoCode[1])
             .exec(() => {
               setFormIsBusy(false);
               setDisplayInput(true);

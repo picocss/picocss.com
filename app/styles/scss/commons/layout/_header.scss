@@ -46,10 +46,26 @@ body {
           }
         }
 
-        // Hide docs link on mobile
-        li.hide-before-sm {
-          @media (max-width: calc(#{map.get(map.get($breakpoints, "sm"), "breakpoint")} - 1px)) {
-            display: none;
+        ul {
+          // Hide docs link on mobile
+          li.hide-before-sm {
+            @media (max-width: calc(#{map.get(map.get($breakpoints, "sm"), "breakpoint")} - 1px)) {
+              display: none;
+            }
+          }
+
+          // Icons separator
+          @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
+            &.icons {
+              &::before {
+                display: block;
+                height: 1.125rem;
+                margin-inline: var(#{$css-var-prefix}nav-element-spacing-horizontal);
+                border-left: var(#{$css-var-prefix}border-width) solid
+                  var(#{$css-var-prefix}form-element-border-color);
+                content: "";
+              }
+            }
           }
         }
 

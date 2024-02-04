@@ -12,6 +12,7 @@ h6 {
 @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
   h1 {
     #{$css-var-prefix}font-size: 2.5rem;
+    #{$css-var-prefix}line-height: 1.0625;
   }
 
   h2 {
@@ -43,5 +44,11 @@ h6 {
 @media (min-width: map.get(map.get($breakpoints, "xxl"), "breakpoint")) {
   h1 {
     #{$css-var-prefix}font-size: 3rem;
+    #{$css-var-prefix}line-height: 1;
+  }
+
+  h2 {
+    #{$css-var-prefix}font-size: 2.5rem;
+    #{$css-var-prefix}line-height: 1.0625;
   }
 }
