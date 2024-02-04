@@ -53,22 +53,29 @@ body {
             #{$css-var-prefix}nav-link-spacing-vertical: 0.125rem;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            column-gap: calc(var(#{$css-var-prefix}spacing) * 4);
+            column-gap: calc(var(#{$css-var-prefix}spacing) * 2);
             row-gap: calc(var(#{$css-var-prefix}spacing) * 2);
             grid-area: links;
             align-items: start;
             width: fit-content;
 
             @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
-              width: 100%;
+              column-gap: calc(var(#{$css-var-prefix}spacing) * 4);
             }
 
             @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {
               grid-template-columns: 1fr 1fr 1fr 1fr;
+              column-gap: calc(var(#{$css-var-prefix}spacing) * 2);
               justify-content: flex-end;
+              width: 100%;
             }
 
             @media (min-width: map.get(map.get($breakpoints, "lg"), "breakpoint")) {
+              margin-left: auto;
+            }
+
+            @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+              column-gap: calc(var(#{$css-var-prefix}spacing) * 4);
               margin-left: auto;
             }
 
