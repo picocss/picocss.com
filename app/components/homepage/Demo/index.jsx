@@ -40,9 +40,7 @@ const Demo = ({ isMaximizable = false, props }) => {
   return (
     <div className={`demo${modalIsOpen ? " is-maximized" : ""}`} {...props}>
       <article className="component" aria-label="Demo">
-        <main>
-          <Form />
-        </main>
+        <Form />
         <footer className="code">
           <pre>{isLargeLayout ? <LargeWidthCode /> : <SmallWidthCode />}</pre>
         </footer>

@@ -32,6 +32,8 @@ body > main.homepage > .hero > .demo {
     outline: none;
     background-color: var(#{$css-var-prefix}background-color);
     box-shadow: none;
+    pointer-events: none;
+    user-select: none;
 
     @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
       #{$css-var-prefix}block-spacing-horizontal: calc(
@@ -61,110 +63,98 @@ body > main.homepage > .hero > .demo {
       height: calc(24.096rem + var(#{$css-var-prefix}block-spacing-vertical));
     }
 
-    main,
-    footer {
-      pointer-events: none;
-      user-select: none;
-    }
+    form {
+      &[role="search"],
+      &[role="group"],
+      input:only-child,
+      input[aria-invalid="true"],
+      button {
+        margin-bottom: 0;
+      }
 
-    main {
-      form {
-        &[role="search"],
-        &[role="group"],
-        input:only-child,
-        input[aria-invalid="true"],
-        button {
-          margin-bottom: 0;
+      small {
+        margin-top: 0.25rem;
+        margin-bottom: 0;
+      }
+
+      label {
+        margin-bottom: 0;
+      }
+
+      // Focused group form
+      &[role="search"],
+      &[role="group"] {
+        &.is-focused {
+          #{$css-var-prefix}group-box-shadow: var(
+            #{$css-var-prefix}group-box-shadow-focus-with-button
+          );
+
+          input:not([type="checkbox"], [type="radio"]),
+          select {
+            border-color: transparent;
+          }
+
+          button {
+            box-shadow: none;
+          }
         }
+      }
 
-        small {
-          margin-top: 0.25rem;
-          margin-bottom: 0;
-        }
+      // Input
+      input {
+        user-select: none;
 
-        label {
-          margin-bottom: 0;
-        }
-
-        // Focused group form
-        &[role="search"],
-        &[role="group"] {
+        &:not([type="range"]) {
           &.is-focused {
-            #{$css-var-prefix}group-box-shadow: var(
-              #{$css-var-prefix}group-box-shadow-focus-with-button
+            #{$css-var-prefix}border-color: var(#{$css-var-prefix}form-element-active-border-color);
+            #{$css-var-prefix}box-shadow: 0 0 0 var(#{$css-var-prefix}outline-width)
+              var(#{$css-var-prefix}form-element-focus-color);
+          }
+        }
+
+        &:not([type="checkbox"]) {
+          &.is-focused {
+            #{$css-var-prefix}background-color: var(
+              #{$css-var-prefix}form-element-active-background-color
             );
-
-            input:not([type="checkbox"], [type="radio"]),
-            select {
-              border-color: transparent;
-            }
-
-            button {
-              box-shadow: none;
-            }
           }
         }
 
-        // Input
-        input {
-          user-select: none;
-
-          &:not([type="range"]) {
-            &.is-focused {
-              #{$css-var-prefix}border-color: var(
-                #{$css-var-prefix}form-element-active-border-color
-              );
-              #{$css-var-prefix}box-shadow: 0 0 0 var(#{$css-var-prefix}outline-width)
-                var(#{$css-var-prefix}form-element-focus-color);
-            }
-          }
-
-          &:not([type="checkbox"]) {
-            &.is-focused {
-              #{$css-var-prefix}background-color: var(
-                #{$css-var-prefix}form-element-active-background-color
-              );
-            }
-          }
-
-          &[type="range"] {
-            &.is-focused {
-              #{$css-var-prefix}range-border-color: var(
-                #{$css-var-prefix}range-active-border-color
-              );
-              #{$css-var-prefix}range-thumb-color: var(#{$css-var-prefix}range-thumb-active-color);
-
-              // Slider Thumb
-              &::-webkit-slider-thumb {
-                transform: scale(1.25);
-              }
-
-              &::-moz-range-thumb {
-                transform: scale(1.25);
-              }
-
-              &::-ms-thumb {
-                transform: scale(1.25);
-              }
-            }
-          }
-        }
-
-        // Focused button
-        button {
+        &[type="range"] {
           &.is-focused {
-            #{$css-var-prefix}background-color: var(#{$css-var-prefix}primary-hover-background);
-            #{$css-var-prefix}border-color: var(#{$css-var-prefix}primary-hover-border);
-            #{$css-var-prefix}color: var(#{$css-var-prefix}primary-inverse);
-            #{$css-var-prefix}box-shadow:
-              var(#{$css-var-prefix}button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0)),
-              0 0 0 var(#{$css-var-prefix}outline-width) var(#{$css-var-prefix}primary-focus);
+            #{$css-var-prefix}range-border-color: var(#{$css-var-prefix}range-active-border-color);
+            #{$css-var-prefix}range-thumb-color: var(#{$css-var-prefix}range-thumb-active-color);
+
+            // Slider Thumb
+            &::-webkit-slider-thumb {
+              transform: scale(1.25);
+            }
+
+            &::-moz-range-thumb {
+              transform: scale(1.25);
+            }
+
+            &::-ms-thumb {
+              transform: scale(1.25);
+            }
           }
         }
+      }
 
-        * {
-          transition: border-radius var(#{$css-var-prefix}transition);
+      // Focused button
+      button {
+        &.is-focused {
+          #{$css-var-prefix}background-color: var(#{$css-var-prefix}primary-hover-background);
+          #{$css-var-prefix}border-color: var(#{$css-var-prefix}primary-hover-border);
+          #{$css-var-prefix}color: var(#{$css-var-prefix}primary-inverse);
+          #{$css-var-prefix}box-shadow:
+            var(#{$css-var-prefix}button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0)),
+            0 0 0 var(#{$css-var-prefix}outline-width) var(#{$css-var-prefix}primary-focus);
         }
+      }
+
+      * {
+        transition: border-radius var(#{$css-var-prefix}transition);
       }
     }
 

@@ -62,16 +62,6 @@ export default function Card() {
   Body
   <footer>Footer</footer>
 </article>`}</Code>
-
-          <p>
-            Optionally, you can use <Code display="inline">{`<main>`}</Code> to wrap the body
-            content.
-          </p>
-          <Code>{`<article>
-  <header>Header</header>
-  <main>Body</main>
-  <footer>Footer</footer>
-</article>`}</Code>
         </section>
 
         {/* Edit on GitHub */}
