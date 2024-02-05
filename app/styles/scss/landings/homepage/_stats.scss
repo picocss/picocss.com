@@ -4,11 +4,6 @@
 body > main.homepage > .stats {
   margin-top: calc(var(#{$css-var-prefix}homepage-spacing-vertical) * 0.25);
 
-  ul li {
-    margin: 0;
-    list-style-type: none;
-  }
-
   ul {
     display: grid;
     column-gap: calc(var(#{$css-var-prefix}spacing) * 2);
@@ -20,57 +15,65 @@ body > main.homepage > .stats {
     @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
       grid-template-columns: repeat(3, 1fr);
     }
-  }
 
-  ul li {
-    @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
-      text-align: center;
-    }
-
-    p.count {
-      margin-bottom: calc(var(#{$css-var-prefix}spacing) * 0.25);
-      color: var(#{$css-var-prefix}stats-color);
-      font-size: 1.75rem;
-      line-height: 1.15;
-      font-family: "Figtree", var(#{$css-var-prefix}font-family);
-    }
-
-    p.label {
+    li {
       margin: 0;
-
-      a {
-        text-decoration: none;
-
-        svg {
-          display: inline-block;
-          width: auto;
-          height: 1em;
-          margin-right: calc(var(#{$css-var-prefix}spacing) * 0.375);
-          transform: translateY(-0.125em);
-
-          @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
-            display: none;
-          }
-
-          @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {
-            display: inline-block;
-          }
-        }
-
-        span.period-prefix {
-          @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
-            display: none;
-          }
-        }
-      }
-    }
-
-    p.period-suffix {
-      display: none;
-      color: var(#{$css-var-prefix}muted-color);
+      list-style-type: none;
 
       @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
-        display: block;
+        text-align: center;
+      }
+
+      p {
+        margin: 0;
+
+        &.count {
+          margin-bottom: calc(var(#{$css-var-prefix}spacing) * 0.25);
+          color: var(#{$css-var-prefix}stats-color);
+          font-size: 1.75rem;
+          line-height: 1.15;
+          font-family: "Figtree", var(#{$css-var-prefix}font-family);
+        }
+
+        &.label {
+          a {
+            text-decoration: none;
+
+            svg {
+              display: inline-block;
+              width: auto;
+              height: 1em;
+              margin-right: calc(var(#{$css-var-prefix}spacing) * 0.375);
+              transform: translateY(-0.125em);
+
+              @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
+                display: none;
+              }
+
+              @media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {
+                display: inline-block;
+              }
+            }
+
+            span.period-prefix {
+              @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
+                display: none;
+              }
+            }
+          }
+        }
+
+        &.period-suffix {
+          display: none;
+          margin-bottom: 0;
+          color: var(#{$css-var-prefix}muted-color);
+          font-size: 12px;
+          opacity: 0.75;
+
+          @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
+            display: block;
+          }
+        }
       }
     }
   }

@@ -44,9 +44,7 @@ export default function Stats(props) {
                 </a>
               </p>
               {labelContainsMonthly && (
-                <p className="period-suffix">
-                  <small>(Last month)</small>
-                </p>
+                <p className="period-suffix">(Last month)</p>
               )}
             </li>
           );
