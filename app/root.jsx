@@ -19,48 +19,7 @@ import { PageProvider } from "~/contexts/PageContext";
 import metaData from "~/data/meta";
 import picoStyles from "~/styles/css/main.css";
 
-const { domain, siteName, titleSuffix, twitterHandle } = metaData;
-
-export const meta = () => {
-  return [
-    {
-      name: "og:image",
-      content: `${domain}/opengraph.png`,
-    },
-    {
-      name: "og:image:type",
-      content: "image/png",
-    },
-    {
-      name: "og:image:width",
-      content: "1200",
-    },
-    {
-      name: "og:image:height",
-      content: "630",
-    },
-    {
-      name: "og:site_name",
-      content: siteName,
-    },
-    {
-      name: "og:type",
-      content: "website",
-    },
-    {
-      name: "twitter:card",
-      content: "summary_large_image",
-    },
-    {
-      name: "twitter:domain",
-      content: domain,
-    },
-    {
-      name: "twitter:site",
-      content: twitterHandle,
-    },
-  ];
-};
+const { titleSuffix } = metaData;
 
 export function links() {
   return [
