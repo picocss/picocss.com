@@ -1,5 +1,5 @@
-import Logo from "~/components/Logo";
 import Edit from "~/components/icons/Edit";
+import Eye from "~/components/icons/Eye";
 import GitHub from "~/components/icons/GitHub";
 import examples from "~/data/examples";
 
@@ -10,8 +10,8 @@ const ExternalLink = ({ url, children, ...props }) => (
 );
 
 const PreviewLink = ({ url, ...props }) => (
-  <ExternalLink role="button" className="preview secondary" url={url} {...props}>
-    <Logo displayWordmark={false} />
+  <ExternalLink className="preview secondary" url={url} {...props}>
+    <Eye />
     Preview
   </ExternalLink>
 );
