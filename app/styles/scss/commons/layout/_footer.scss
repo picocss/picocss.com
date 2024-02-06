@@ -40,6 +40,10 @@ body {
             row-gap: var(#{$css-var-prefix}spacing);
           }
 
+          @media (min-width: map.get(map.get($breakpoints, "xl"), "breakpoint")) {
+            column-gap: calc(var(#{$css-var-prefix}spacing) * 4);
+          }
+
           // Logo
           svg.pico-icon {
             grid-area: logo;
