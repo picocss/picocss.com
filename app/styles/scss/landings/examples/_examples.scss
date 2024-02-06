@@ -32,7 +32,7 @@ body > main.examples > .examples-list {
 
     .badges {
       display: flex;
-      margin-bottom: 0.5rem;
+      margin-bottom: calc(var(#{$css-var-prefix}spacing) / 2);
 
       .badge {
         padding: 0.125rem 0.25rem;
@@ -43,7 +43,7 @@ body > main.examples > .examples-list {
         vertical-align: text-bottom;
 
         &:not(:last-child) {
-          margin-right: 0.5rem;
+          margin-right: calc(var(#{$css-var-prefix}spacing) / 2);
         }
 
         &.html {
@@ -73,6 +73,7 @@ body > main.examples > .examples-list {
       font-size: 1.25rem;
       line-height: 1.2;
       text-wrap: balance;
+      margin-bottom: calc(var(#{$css-var-prefix}spacing) / 4);
     }
 
     p {
@@ -80,7 +81,7 @@ body > main.examples > .examples-list {
       text-wrap: pretty;
 
       &:not(:last-child) {
-        margin-bottom: 1.5rem;
+        margin-bottom: calc(var(#{$css-var-prefix}spacing) * 1.5);
       }
 
       &.links {
@@ -90,13 +91,13 @@ body > main.examples > .examples-list {
           display: block;
 
           &:not(:last-child) {
-            margin-bottom: 0.25rem;
+            margin-bottom: calc(var(#{$css-var-prefix}spacing) / 4);
           }
 
           svg {
             width: auto;
             height: 1rem;
-            margin-right: calc(var(#{$css-var-prefix}spacing) * 0.25);
+            margin-right: calc(var(#{$css-var-prefix}spacing) / 4);
             transform: translateY(-0.0625rem);
 
             &.pico-icon {
