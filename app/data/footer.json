@@ -4,6 +4,7 @@
     "links": [
       { "label": "What’s new?", "url": "/docs/v2" },
       { "label": "Brand", "url": "/docs/brand" },
+      { "label": "Mission", "url": "/docs/mission" },
       { "label": "Usage scenarios", "url": "/docs/usage-scenarios" }
     ]
   },
@@ -12,7 +13,8 @@
     "links": [
       { "label": "Quick start", "url": "/docs" },
       { "label": "Version picker", "url": "/docs/version-picker" },
-      { "label": "Class-less version", "url": "/docs/classless" }
+      { "label": "Class-less version", "url": "/docs/classless" },
+      { "label": "Form elements", "url": "/docs/forms" }
     ]
   },
   {
@@ -25,11 +27,11 @@
   },
   {
     "category": "Examples",
-    "categoryLink": "/examples",
     "links": [
       { "label": "HTML", "url": "https://codesandbox.io/embed/4mrnhq?view=Editor+%2B+Preview&module=%2Findex.html" },
       { "label": "Class-less", "url": "https://codesandbox.io/embed/x4qtf8?view=Editor+%2B+Preview&module=%2Findex.html" },
-      { "label": "React", "url": "https://codesandbox.io/p/devbox/github/picocss/examples/tree/master/v2-react-classless-login?embed=1&file=%2Fsrc%2Fmain.scss" }
+      { "label": "React", "url": "https://codesandbox.io/p/devbox/github/picocss/examples/tree/master/v2-react-classless-login?embed=1&file=%2Fsrc%2Fmain.scss" },
+      { "label": "All", "url": "/examples" }
     ]
   }
 ]

@@ -13,19 +13,11 @@ const Links = ({ data, ...props }) => {
   return (
     <nav className="links">
       {data.map((category, index) => {
-        const { category: categoryTitle, categoryLink, links } = category;
+        const { category: categoryTitle, links } = category;
         return (
           <ul key={index} {...props}>
             <li>
-              <strong>
-                {categoryLink ? (
-                  <Link to={categoryLink} className="contrast">
-                    {categoryTitle}
-                  </Link>
-                ) : (
-                  categoryTitle
-                )}
-              </strong>
+              <strong>{categoryTitle}</strong>
             </li>
             {links.map((link, index) => {
               const { label, url } = link;
