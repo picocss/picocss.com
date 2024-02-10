@@ -69,7 +69,8 @@
       { "label": "What’s new in v2?", "route": "/docs/v2" },
       { "label": "Mission", "route": "/docs/mission" },
       { "label": "Usage scenarios", "route": "/docs/usage-scenarios" },
-      { "label": "Brand", "route": "/docs/brand" }
+      { "label": "Brand", "route": "/docs/brand" },
+      { "label": "Built With", "route": "/docs/built-with" }
     ]
   }
 ]
