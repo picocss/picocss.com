@@ -87,9 +87,9 @@ export default function ColorSchemes() {
             <code>select</code>, <code>article</code>, <code>dialog</code>, <code>progress</code>.
           </p>
           <p>
-            CSS variables specific to the color scheme are assigned to every HTML tag. However, to
-            maintain transparent backgrounds and ensure colors are inherited from the parent tag, we
-            have not enforced specific background and color settings across all HTML tags.
+            CSS variables specific to the color scheme are assigned to every HTML tag. However, we
+            have not enforced specific background and color settings across all HTML tags to
+            maintain transparent backgrounds and ensure colors are inherited from the parent tag.
           </p>
           <p>
             For some other HTML tags, you might need to explicitly set <code>background-color</code>{" "}

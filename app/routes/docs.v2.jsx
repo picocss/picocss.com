@@ -14,7 +14,7 @@ export const meta = () => [
   {
     name: "description",
     content:
-      "Pico v2.0 features better accessibility, easier customization with SASS, a complete color palette, and a new group component.",
+      "Pico v2.0 features better accessibility, easier customization with SASS, a complete color palette, a new group component, and 20 precompiled color themes totaling over 100 combinations accessible via CDN.",
   },
 ];
 
@@ -24,6 +24,8 @@ export default function Classless() {
   const colorPaletteRef = useRef();
   const betterBreakpointsRef = useRef();
   const newGroupComponentRef = useRef();
+  const conditionalStylingRef = useRef();
+  const versionPickerRef = useRef();
   const breakingChangesRef = useRef();
 
   return (
@@ -31,14 +33,14 @@ export default function Classless() {
       {/* Header */}
       <Header
         title="What’s new in v2?"
-        description="Pico v2.0 features better accessibility, easier customization with SASS, a complete color palette, and a new group component."
+        description="Pico v2.0 features better accessibility, easier customization with SASS, a complete color palette, a new group component, and 20 precompiled color themes totaling over 100 combinations accessible via CDN."
       />
 
       {/* Table of content */}
       <TableOfContents
         data={[
           {
-            anchor: "new-look-and-feel",
+            anchor: "",
             title: "New look and feel",
             ref: newLookAndFeelRef,
           },
@@ -58,9 +60,19 @@ export default function Classless() {
             ref: betterBreakpointsRef,
           },
           {
-            anchor: "new-group-component",
-            title: "New group component",
+            anchor: "group-component",
+            title: "Group component",
             ref: newGroupComponentRef,
+          },
+          {
+            anchor: "conditional-styling",
+            title: "Conditional Styling",
+            ref: conditionalStylingRef,
+          },
+          {
+            anchor: "version-picker",
+            title: "Version picker",
+            ref: versionPickerRef,
           },
           {
             anchor: "breaking-changes",
@@ -73,9 +85,7 @@ export default function Classless() {
       {/* Content */}
       <Content>
         <section>
-        <article>Documentation in progress...</article>
-        
-          <Heading level={2} ref={newLookAndFeelRef} anchor="new-look-and-feel">
+          <Heading level={2} ref={newLookAndFeelRef}>
             New look and feel
           </Heading>
           <p>
@@ -83,10 +93,14 @@ export default function Classless() {
             (less bluish) look and feel.
           </p>
           <p>
-            The default color theme is much more accessible, with most colors now following the WCAG
-            2.1 AAA standard. Some secondary muted colors follow the WCAG 2.1 AA standard.
+            The default color theme is much more accessible, with most colors now following the
+            WCAG&nbsp;2.1&nbsp;AAA standard. Some secondary muted colors follow the
+            WCAG&nbsp;2.1&nbsp;AA standard.
           </p>
-          <p>Focus states have been improved for more consistency and contrast.</p>
+          <p>
+            Focus states have been improved for more consistency and contrast and spacings have been
+            reduced for a sleeker and more neutral style.
+          </p>
         </section>
 
         <section>
@@ -96,7 +110,12 @@ export default function Classless() {
           <p>
             We have refactored all <code>.scss</code> files to make it easier for you to compile
             your own version of Pico with <Link to="/docs/sass">SASS</Link>. All modules can now be
-            enabled or disabled using @use and vars.
+            enabled or disabled using{" "}
+            <Link to="https://sass-lang.com/documentation/at-rules/use">@use</Link>.
+          </p>
+          <p>
+            We added more <Link to="/docs/css-variables">CSS variables</Link>, now totaling over
+            130, to easily create a unique look and feel, enhancing design flexibility.
           </p>
         </section>
 
@@ -123,8 +142,8 @@ export default function Classless() {
         </section>
 
         <section>
-          <Heading level={2} ref={newGroupComponentRef} anchor="new-group-component">
-            New group component
+          <Heading level={2} ref={newGroupComponentRef} anchor="group-component">
+            Group component
           </Heading>
           <p>
             With <Link to="/docs/group">group</Link> (
@@ -132,6 +151,29 @@ export default function Classless() {
               role="group"
             </Code>
             ), you can now stack forms elements and buttons horizontally.
+          </p>
+        </section>
+
+        <section>
+          <Heading level={2} ref={conditionalStylingRef} anchor="conditional-styling">
+            Conditional Styling
+          </Heading>
+          <p>
+            <Link to="/docs/conditional">Conditional Styling</Link> is a powerful feature to apply
+            styles selectively by wrapping elements in <code>.pico</code> containers, ideal for
+            mixed-style environments. This method restricts styling to designated sections, making
+            it particularly useful for combining multiple stylesheets or components seamlessly.
+          </p>
+        </section>
+
+        <section>
+          <Heading level={2} ref={versionPickerRef} anchor="version-picker">
+            Version picker
+          </Heading>
+          <p>
+            Play with the <Link to="/docs/version-picker">Version Picker</Link>, offering 20
+            precompiled color themes, accessible via CDN for all Pico versions, totaling over 100
+            combinations.
           </p>
         </section>
 
@@ -173,7 +215,8 @@ export default function Classless() {
 
           <Heading level={3}>Dropdowns</Heading>
           <p>
-            While accordions are still classless, <Link to="/docs/dropdown">dropdowns</Link> now use
+            While <Link to="/docs/accordion">accordions</Link> are still classless,{" "}
+            <Link to="/docs/dropdown">dropdowns</Link> now use
             <code>.dropdown</code>. We also removed the experimental syntax that allowed dropdowns
             in the nav using nested lists.
           </p>
@@ -184,6 +227,19 @@ export default function Classless() {
             <code>{`<768px`}</code>).
           </p>
         </section>
+
+        <Heading level={3}>Figure</Heading>
+        <p>
+          We removed the{" "}
+          <Code display="inline" language="css">
+            overflow-x: auto;
+          </Code>{" "}
+          from <Code display="inline">{`<figure>`}</Code> and introduced a new utility class,
+          <code>
+            <Link to="docs/overflow-auto">.overflow-auto</Link>
+          </code>
+          , to enable horizontal scrolling on any element.
+        </p>
       </Content>
     </>
   );
