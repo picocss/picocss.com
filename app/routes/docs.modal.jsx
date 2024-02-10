@@ -6,6 +6,7 @@ import Content from "~/components/docs/Content";
 import EditOnGithub from "~/components/docs/EditOnGithub";
 import Header from "~/components/docs/Header";
 import TableOfContents from "~/components/docs/TableOfContents";
+import examples from "~/data/examples";
 import metaData from "~/data/meta";
 
 import { useModal } from "~/contexts/ModalContext";
@@ -75,6 +76,18 @@ const ConfirmYourMembershipExample = ({
 };
 
 export default function Modal() {
+  const previewExample = examples.find((example) => example.title === "Preview");
+  const previewExampleEditorLink = previewExample.links.editor.replace(
+    "%2Findex.html",
+    "%2Fjs%2Fmodal.js",
+  );
+  const reactExample = examples.find(
+    (example) => example.title === "React color schemes and modal",
+  );
+  const reactExampleEditorLink = reactExample.links.editor.replace(
+    "%2Fsrc%2FApp.js",
+    "%2Fsrc%2Fcomponents%2FModal.js",
+  );
   const { modalIsOpen, onOpenModal, onCloseModal } = useModal();
   const preventDefault = (e) => e.preventDefault();
 
@@ -202,6 +215,15 @@ export default function Modal() {
             Pico does not include JavaScript code. You need to implement your JS to interact with
             modals.
           </p>
+          <p>As a starting point, you can look at theses examples:</p>
+          <ul>
+            <li>
+              <Link to={previewExampleEditorLink}>Vanilla JavaScript</Link>
+            </li>
+            <li>
+              <Link to={reactExampleEditorLink}>React</Link>
+            </li>
+          </ul>
           <p>
             To open a modal, add the <code>open</code> attribute to the
             <Code display="inline">{"<dialog>"}</Code> container.

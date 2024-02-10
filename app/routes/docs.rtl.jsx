@@ -1,5 +1,4 @@
 import Code from "~/components/Code";
-import Link from "~/components/Link";
 import Content from "~/components/docs/Content";
 import EditOnGithub from "~/components/docs/EditOnGithub";
 import Header from "~/components/docs/Header";
@@ -26,11 +25,7 @@ export default function Rtl() {
         <section>
           <p>
             To enable RTL (Right-To-Left) with Pico, you need to set <code>dir="rtl"</code> on the{" "}
-            <Code display="inline">{`<html>`}</Code> element (
-            <Link to="https://codesandbox.io/s/github/picocss/examples/tree/master/v1-preview-rtl">
-              example
-            </Link>
-            ).
+            <Code display="inline">{`<html>`}</Code> element.
           </p>
           <Code>{`<!doctype html>
 <html dir="rtl" lang="ar">
