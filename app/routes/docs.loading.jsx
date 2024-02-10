@@ -1,5 +1,4 @@
 import Code from "~/components/Code";
-import Link from "~/components/Link";
 import Content from "~/components/docs/Content";
 import EditOnGithub from "~/components/docs/EditOnGithub";
 import Header from "~/components/docs/Header";
@@ -36,10 +35,8 @@ export default function Loading() {
           <Code>{`<article aria-busy="true"></article>`}</Code>
           <p>Any inline element:</p>
           <article aria-label="Loading example" className="component">
-            <Link to="#" aria-busy="true">
-              Your link is being generated...
-            </Link>
-            <Code as="footer">{`<a href="#" aria-busy="true">Your link is being generated...</a>`}</Code>
+            <span aria-busy="true">Generating your link...</span>
+            <Code as="footer">{`<span aria-busy="true">Generating your link...</span>`}</Code>
           </article>
           <p>Any button:</p>
           <article aria-label="Loading button examples" className="component">
