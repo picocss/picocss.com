@@ -336,7 +336,7 @@ export default function Nav() {
             </nav>
             <Code as="footer">{`<nav>
   <ul>
-    <li><strong>Acme Corp<</strong></li>
+    <li><strong>Acme Corp</strong></li>
   </ul>
   <ul>
     <li><a href="#" class="secondary">Services</a></li>
