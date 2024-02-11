@@ -4,6 +4,7 @@ import Logo from "~/components/Logo";
 import GitHubIcon from "~/components/icons/GitHub";
 import NpmIcon from "~/components/icons/Npm";
 import TwitterIcon from "~/components/icons/XTwitter";
+import { useNavigation } from "~/contexts/NavigationContext";
 import footerLinks from "~/data/footer";
 import metaData from "~/data/meta";
 import JsdelivrIcon from "./icons/Jsdelivr";
@@ -112,6 +113,8 @@ const LicensesAndVersion = () => {
 
 // Footer
 export default forwardRef(function Footer(props, ref) {
+  const { routePath } = useNavigation();
+  if (routePath === "/demo") return null;
   return (
     <footer {...props} ref={ref}>
       <div className="container">

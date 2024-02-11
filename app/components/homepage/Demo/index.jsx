@@ -6,7 +6,7 @@ import Form from "./Form";
 import LargeWidthCode from "./LargeWidthCode";
 import SmallWidthCode from "./SmallWidthCode";
 
-const Demo = ({ isMaximizable = false, props }) => {
+const Demo = ({ isMaximizable = false, ...props }) => {
   const { modalIsOpen, onCloseModal } = useModal();
 
   // Define isLargeLayout on load and on resize

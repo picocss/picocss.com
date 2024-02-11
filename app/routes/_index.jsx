@@ -22,7 +22,7 @@ export function links() {
   return [{ rel: "stylesheet", href: landingPageStyles }];
 }
 
-export default function Docs() {
+export default function Homepage() {
   const { isLoading } = useNavigation();
 
   return (
