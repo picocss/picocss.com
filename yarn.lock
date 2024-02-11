@@ -1000,15 +1000,13 @@
   dependencies:
     which "^3.0.0"
 
-"@picocss/pico-v1@npm:@picocss/pico@1.5.11":
+"@picocss/pico-v1@github:picocss/pico#v1-dev":
   version "1.5.11"
-  resolved "https://registry.yarnpkg.com/@picocss/pico/-/pico-1.5.11.tgz#8bd37fc546fcab95625218dddd8cf788b8fd5f8a"
-  integrity sha512-cDaFiSyNPtuSTwSQt/05xsw8+g2ek4/S58tgh9Nc7miJCCdUrY9PAyl4OPWRJtYgJDdEvkUA9GuGj0J4nDP4Cw==
+  resolved "https://codeload.github.com/picocss/pico/tar.gz/d490899f63d0a92cc4c31025ab9fe310ecd0e593"
 
-"@picocss/pico@2.0.0-rc4":
-  version "2.0.0-rc4"
-  resolved "https://registry.yarnpkg.com/@picocss/pico/-/pico-2.0.0-rc4.tgz#eac8473be0ac0be44cef1544da0ba3bddc09474d"
-  integrity sha512-tiDdkvIOUlO8FDOihhHMRY0phOQAsIeIRqF/aoO0npvFhSxK9ICvez/7Vqzc+Ixz8MXD/9fpKc9eGS2k0slqDQ==
+"@picocss/pico@github:picocss/pico#main":
+  version "2.0.0"
+  resolved "https://codeload.github.com/picocss/pico/tar.gz/5907151a92a9804c0f61cb60fadabf02ac322f2d"
 
 "@pkgjs/parseargs@^0.11.0":
   version "0.11.0"

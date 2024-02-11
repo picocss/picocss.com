@@ -78,7 +78,7 @@ export default function QuickStart() {
             Install manually
           </Heading>
           <p>
-            <Link to="https://github.com/picocss/pico/archive/refs/heads/v2.zip">
+            <Link to="https://github.com/picocss/pico/archive/refs/heads/main.zip">
               Download Pico
             </Link>{" "}
             and link <code>/css/pico.min.css</code> in the <Code display="inline">{`<head>`}</Code>{" "}
