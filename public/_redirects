@@ -1,5 +1,3 @@
-https://www.picocss.com/* https://picocss.com/:splat 301
-https://v2.picocss.com/* https://picocss.com/:splat 301
 /docs/ /docs 301
 /docs/accordions.html /docs/accordion 301
 /docs/buttons.html /docs/button 301
@@ -17,9 +15,10 @@ https://v2.picocss.com/* https://picocss.com/:splat 301
 /docs/rtl.html /docs/rtl 301
 /docs/scroller.html /docs/overflow-auto 301
 /docs/tables.html /docs/table 301
-/docs/theme-generator /docs/version-picker 301
+/docs/theme-generator/* /docs/version-picker/:splat 301
 /docs/themes.html /docs/color-schemes 301
 /docs/third-party/ /docs/built-with 301
 /docs/tooltips.html /docs/tooltip 301
 /docs/typography.html /docs/typography 301
 /docs/we-love-classes.html /docs/mission 301
+/examples/* /examples 301
