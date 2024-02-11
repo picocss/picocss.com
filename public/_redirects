@@ -1,3 +1,5 @@
+https://www.picocss.com/* https://picocss.com/:splat 301
+https://v2.picocss.com/* https://picocss.com/:splat 301
 /docs/ /docs 301
 /docs/accordions.html /docs/accordion 301
 /docs/buttons.html /docs/button 301
