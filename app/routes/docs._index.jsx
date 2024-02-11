@@ -106,11 +106,11 @@ export default function QuickStart() {
             Install with NPM
           </Heading>
           <Code language="bash" className="small">
-            npm install @picocss/pico@next
+            npm install @picocss/pico
           </Code>
           <p>Or</p>
           <Code language="bash" className="small">
-            yarn add @picocss/pico@next
+            yarn add @picocss/pico
           </Code>
           <p>
             Then, import Pico into your SCSS file with{" "}
