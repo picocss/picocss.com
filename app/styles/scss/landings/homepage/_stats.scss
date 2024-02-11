@@ -66,9 +66,8 @@ body > main.homepage > .stats {
         &.period-suffix {
           display: none;
           margin-bottom: 0;
-          color: var(#{$css-var-prefix}muted-color);
-          font-size: 12px;
-          opacity: 0.75;
+          color: var(#{$css-var-prefix}secondary);
+          font-size: 14px;
 
           @media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {
             display: block;
