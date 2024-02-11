@@ -2,7 +2,7 @@ export default function Npm(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="auto"
+      width="21.33"
       height="24"
       viewBox="0 0 576 512"
       className="icon-npm"
