@@ -24,7 +24,7 @@ export function links() {
   return [{ rel: "stylesheet", href: colorPickerStyles }];
 }
 
-export default function ThemeGenerator() {
+export default function VersionPicker() {
   const themeRef = useRef();
   const customizationRef = useRef();
   const usageFromCdnRef = useRef();

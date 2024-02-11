@@ -1,10 +1,10 @@
 import Header from "~/components/Header";
+import SkipToContent from "~/components/SkipToContent";
 import Examples from "~/components/examples/Examples";
 import Hero from "~/components/examples/Hero";
 import { useNavigation } from "~/contexts/NavigationContext";
 import metaData from "~/data/meta";
 import landingPageStyles from "~/styles/css/landings.css";
-import SkipToContent from "~/components/SkipToContent";
 
 const { titleSuffix } = metaData;
 
@@ -20,7 +20,7 @@ export function links() {
   return [{ rel: "stylesheet", href: landingPageStyles }];
 }
 
-export default function Docs() {
+export default function ExamplesPage() {
   const { isLoading } = useNavigation();
 
   return (

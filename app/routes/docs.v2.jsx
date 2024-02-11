@@ -10,7 +10,7 @@ import metaData from "~/data/meta";
 const { titleSuffix } = metaData;
 
 export const meta = () => [
-  { title: `v2.0 ${titleSuffix}` },
+  { title: `What’s new in v2? ${titleSuffix}` },
   {
     name: "description",
     content:
@@ -18,7 +18,7 @@ export const meta = () => [
   },
 ];
 
-export default function Classless() {
+export default function WhatsWewInV2() {
   const newLookAndFeelRef = useRef();
   const easierCustomisationRef = useRef();
   const colorPaletteRef = useRef();
@@ -93,13 +93,13 @@ export default function Classless() {
             (less bluish) look and feel.
           </p>
           <p>
-            The default color theme is much more accessible, with most colors now following the
-            WCAG&nbsp;2.1&nbsp;AAA standard. Some secondary muted colors follow the
+            The default color theme is much more accessible. Most colors now follow the
+            WCAG&nbsp;2.1&nbsp;AAA standard, and some secondary muted colors follow the
             WCAG&nbsp;2.1&nbsp;AA standard.
           </p>
           <p>
-            Focus states have been improved for more consistency and contrast and spacings have been
-            reduced for a sleeker and more neutral style.
+            Focus states have been improved for more consistency and contrast, and spacings have
+            been reduced for a sleeker and more neutral style.
           </p>
         </section>
 
@@ -109,7 +109,7 @@ export default function Classless() {
           </Heading>
           <p>
             We have refactored all <code>.scss</code> files to make it easier for you to compile
-            your own version of Pico with <Link to="/docs/sass">SASS</Link>. All modules can now be
+            your version of Pico with <Link to="/docs/sass">SASS</Link>. All modules can now be
             enabled or disabled using{" "}
             <Link to="https://sass-lang.com/documentation/at-rules/use">@use</Link>.
           </p>
@@ -159,10 +159,11 @@ export default function Classless() {
             Conditional Styling
           </Heading>
           <p>
-            <Link to="/docs/conditional">Conditional Styling</Link> is a powerful feature to apply
-            styles selectively by wrapping elements in <code>.pico</code> containers, ideal for
-            mixed-style environments. This method restricts styling to designated sections, making
-            it particularly useful for combining multiple stylesheets or components seamlessly.
+            <Link to="/docs/conditional">Conditional Styling</Link> is a powerful feature that
+            allows you to apply styles selectively by wrapping elements in <code>.pico</code>{" "}
+            containers, which is ideal for mixed-style environments. This method restricts styling
+            to designated sections, making it particularly useful for combining multiple stylesheets
+            or components seamlessly.
           </p>
         </section>
 
@@ -171,9 +172,9 @@ export default function Classless() {
             Version picker
           </Heading>
           <p>
-            Play with the <Link to="/docs/version-picker">Version Picker</Link>, offering 20
-            precompiled color themes, accessible via CDN for all Pico versions, totaling over 100
-            combinations.
+            Play with the <Link to="/docs/version-picker">Version Picker</Link>, which offers 20
+            precompiled color themes accessible via CDN for all Pico versions. The total number of
+            combinations is over 100.
           </p>
         </section>
 
@@ -186,7 +187,7 @@ export default function Classless() {
           <p>
             All <Link to="/docs/css-variables">CSS custom properties</Link> are prefixed with{" "}
             <code>pico-</code>
-            to avoid collisions with other CSS frameworks or your own vars. We also added new CSS
+            to avoid collisions with other CSS frameworks or your vars. We also added new CSS
             variables and renamed some to follow a consistent pattern
             <code>{`{component}-{state}-{property}`}</code>.
           </p>

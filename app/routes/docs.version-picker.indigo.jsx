@@ -16,6 +16,6 @@ export function links() {
   return [{ rel: "stylesheet", href: cssStyle }];
 }
 
-export default function Customization() {
+export default function VersionPicker() {
   return <ThemePreview title={colorName} />;
 }

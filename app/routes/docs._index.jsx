@@ -19,7 +19,7 @@ export const meta = () => [
   },
 ];
 
-export default function Docs() {
+export default function QuickStart() {
   const installManuallyRef = useRef();
   const installFromCdnRef = useRef();
   const installWithNpmRef = useRef();
