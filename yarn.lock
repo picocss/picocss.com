@@ -1001,8 +1001,8 @@
     which "^3.0.0"
 
 "@picocss/pico-v1@github:picocss/pico#v1-dev":
-  version "1.5.11"
-  resolved "https://codeload.github.com/picocss/pico/tar.gz/d490899f63d0a92cc4c31025ab9fe310ecd0e593"
+  version "1.5.12"
+  resolved "https://codeload.github.com/picocss/pico/tar.gz/cc7457bc94622a49eadd94c4f246693ba2572d80"
 
 "@picocss/pico@github:picocss/pico#main":
   version "2.0.0"
