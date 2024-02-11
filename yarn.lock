@@ -1002,7 +1002,7 @@
 
 "@picocss/pico-v1@github:picocss/pico#v1-dev":
   version "1.5.12"
-  resolved "https://codeload.github.com/picocss/pico/tar.gz/cc7457bc94622a49eadd94c4f246693ba2572d80"
+  resolved "https://codeload.github.com/picocss/pico/tar.gz/df0faeedfb4d3d5b174abc1115ef09e38d361632"
 
 "@picocss/pico@github:picocss/pico#main":
   version "2.0.0"
