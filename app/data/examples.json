@@ -2,7 +2,7 @@
   {
     "title": "Preview",
     "description": "A pure HTML example, without dependencies.",
-    "stack": ["HTML", "JavaScript" ],
+    "stack": ["HTML", "JavaScript"],
     "links": {
       "preview": "https://4mrnhq.csb.app/",
       "editor": "https://codesandbox.io/embed/4mrnhq?view=Editor+%2B+Preview&module=%2Findex.html",
@@ -17,6 +17,16 @@
       "preview": "https://x4qtf8.csb.app/",
       "editor": "https://codesandbox.io/embed/x4qtf8?view=Editor+%2B+Preview&module=%2Findex.html",
       "source": "https://github.com/picocss/examples/tree/master/v2-html-classless"
+    }
+  },
+  {
+    "title": "Conditional styling",
+    "description": "Example to apply Pico CSS styles selectively by wrapping elements in a .pico container",
+    "stack": ["HTML", "JavaScript"],
+    "links": {
+      "preview": "https://kv4lrs.csb.app/",
+      "editor": "https://codesandbox.io/embed/kv4lrs?view=Editor+%2B+Preview&module=%2Findex.html",
+      "source": "https://github.com/picocss/examples/tree/master/v2-conditional-styling"
     }
   },
   {

@@ -6,6 +6,7 @@ import Content from "~/components/docs/Content";
 import EditOnGithub from "~/components/docs/EditOnGithub";
 import Header from "~/components/docs/Header";
 import TableOfContents from "~/components/docs/TableOfContents";
+import examples from "~/data/examples";
 import metaData from "~/data/meta";
 
 const { titleSuffix, cdnBaseUrl } = metaData;
@@ -23,6 +24,7 @@ export const meta = () => [
 ];
 
 export default function Conditional() {
+  const conditionalExample = examples.find((example) => example.title === "Conditional styling");
   const introductionRef = useRef();
   const installManuallyRef = useRef();
   const installFromCdnRef = useRef();
@@ -208,17 +210,13 @@ export default function Conditional() {
           </Heading>
           <ul>
             <li>
-              <Link to="https://kv4lrs.csb.app/">Preview</Link>
+              <Link to={conditionalExample.links.preview}>Preview</Link>
             </li>
             <li>
-              <Link to="https://codesandbox.io/embed/kv4lrs?view=Editor+%2B+Preview&module=%2Findex.html">
-                Edit in CodeSandbox
-              </Link>
+              <Link to={conditionalExample.links.editor}>Edit in CodeSandbox</Link>
             </li>
             <li>
-              <Link to="https://github.com/picocss/examples/tree/master/v2-conditional-styling">
-                View source
-              </Link>
+              <Link to={conditionalExample.links.source}>View source</Link>
             </li>
           </ul>
         </section>
