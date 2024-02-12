@@ -16,7 +16,7 @@
     "build:code-snippets:copy-snippets": "node scripts/copy-code-snippets",
     "build:fetch-stats": "node scripts/fetch-stats",
     "build:v1-documentation": "node scripts/build-pico-v1-documentation",
-    "dev": "remix build && run-p 'dev:*'",
+    "dev": "run-s 'build:*' --silent && remix build && run-p 'dev:*'",
     "dev:remix": "remix dev --manual -c \"npm run start\"",
     "dev:recompile-css-then-watch": "run-s 'build:build-css' 'build:autoprefix' 'dev:watch'",
     "dev:watch": "run-p 'dev:watch:*'",
