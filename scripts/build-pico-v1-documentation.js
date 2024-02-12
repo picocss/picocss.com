@@ -63,6 +63,16 @@ function replaceCssPathInHeadPartial(picoDocsHeadPartialFilePath) {
   execSync(`echo '${headPartialFileContentWithCorrectCssPath}' > ${picoDocsHeadPartialFilePath}`);
 }
 
+// Remove the canonical link in the head partial file
+function removeCanonicalLinkInHeadPartial(picoDocsHeadPartialFilePath) {
+  const headPartialFileContent = readFileSync(picoDocsHeadPartialFilePath, "utf8");
+  const headPartialFileContentWithoutCanonicalLink = headPartialFileContent.replace(
+    /<link rel="canonical" href="https:\/\/picocss.com\/docs\/\${props.canonical}" \/>/,
+    "",
+  );
+  execSync(`echo '${headPartialFileContentWithoutCanonicalLink}' > ${picoDocsHeadPartialFilePath}`);
+}
+
 // Build the documentation with html-includes
 function buildDocs() {
   execSync(
@@ -85,6 +95,7 @@ function main() {
   copyDocsFolderToOutputFolder(outputDocsFolder);
   copyPicoCssFileToOutputFolder(outputCssFolder);
   replaceCssPathInHeadPartial(picoDocsHeadPartialFilePath);
+  removeCanonicalLinkInHeadPartial(picoDocsHeadPartialFilePath);
   buildDocs();
   removeDocsSourceFolder();
 }
