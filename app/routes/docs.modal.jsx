@@ -147,7 +147,7 @@ export default function Modal() {
           </p>
           <p>
             Inside <Code display="inline">{`<header>`}</Code>{" "}
-            <Code display="inline">{`<a rel="pref">`}</Code> is defined to{" "}
+            <Code display="inline">{`<a rel="prev">`}</Code> is defined to{" "}
             <code>{`float: right;`}</code> allowing a close icon to be top aligned with a title.
           </p>
           <ThankYouForRegisteringExample preventDefault={preventDefault} className="example" open />
