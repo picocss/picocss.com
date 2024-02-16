@@ -46,8 +46,8 @@
     "@remix-run/node": "^2.6.0",
     "@remix-run/react": "^2.6.0",
     "@remix-run/serve": "^2.6.0",
-    "html-react-parser": "^5.1.2",
-    "isbot": "^4.4.0",
+    "html-react-parser": "^5.1.5",
+    "isbot": "^5.1.0",
     "react": "^18.2.0",
     "react-copy-to-clipboard": "^5.1.0",
     "react-div-100vh": "^0.7.0",
@@ -65,7 +65,7 @@
     "@remix-run/dev": "^2.6.0",
     "@remix-run/eslint-config": "^2.6.0",
     "autoprefixer": "^10.4.17",
-    "caniuse-lite": "^1.0.30001585",
+    "caniuse-lite": "^1.0.30001587",
     "clean-css-cli": "^5.6.3",
     "copyfiles": "^2.4.1",
     "css-declaration-sorter": "^7.1.1",
@@ -84,9 +84,9 @@
     "postcss-scss": "^4.0.9",
     "prettier": "^3.2.5",
     "prettier-plugin-organize-imports": "^3.2.4",
-    "sass": "^1.70.0",
+    "sass": "^1.71.0",
     "typescript": "^5.1.0",
-    "wrangler": "^3.28.1"
+    "wrangler": "^3.28.2"
   },
   "engines": {
     "node": ">=18.19.0"
