@@ -28,7 +28,7 @@ const ThankYouForRegisteringExample = ({ preventDefault, ...props }) => {
       <article>
         <header>
           {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
-          <Link to="#" aria-label="Close" rel="prev" onClick={preventDefault} />
+          <button aria-label="Close" rel="prev" onClick={preventDefault} />
           <p>
             <strong>🗓️ Thank You for Registering!</strong>
           </p>
@@ -147,14 +147,14 @@ export default function Modal() {
           </p>
           <p>
             Inside <Code display="inline">{`<header>`}</Code>{" "}
-            <Code display="inline">{`<a rel="prev">`}</Code> is defined to{" "}
+            <Code display="inline">{`<button rel="prev">`}</Code> is defined to{" "}
             <code>{`float: right;`}</code> allowing a close icon to be top aligned with a title.
           </p>
           <ThankYouForRegisteringExample preventDefault={preventDefault} className="example" open />
           <Code>{`<dialog open>
   <article>
     <header>
-      <a href="#" aria-label="Close" rel="prev" />
+      <button aria-label="Close" rel="prev"></button>
       <p>
         <strong>🗓️ Thank You for Registering!</strong>
       </p>
@@ -215,7 +215,13 @@ export default function Modal() {
             Pico does not include JavaScript code. You need to implement your JS to interact with
             modals.
           </p>
-          <p>As a starting point, you can look at theses examples:</p>
+          <p>
+            As a starting point, you can look at the{" "}
+            <Link to="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement">
+              HTMLDialogElement
+            </Link>{" "}
+            or the advanced examples below:
+          </p>
           <ul>
             <li>
               <Link to={previewExampleEditorLink}>Vanilla JavaScript</Link>
