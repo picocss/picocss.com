@@ -60,7 +60,7 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240208.0",
-    "@picocss/pico": "^2.0.3",
+    "@picocss/pico": "github:picocss/pico#ll/fix-select-multiple",
     "@picocss/pico-v1": "npm:@picocss/pico@1.5.12",
     "@remix-run/dev": "^2.6.0",
     "@remix-run/eslint-config": "^2.6.0",
