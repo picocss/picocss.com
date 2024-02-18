@@ -14,7 +14,7 @@ export default function Features(props) {
           A&nbsp;Superpowered <mark>HTML&nbsp;Reset</mark>
         </h2>
         <p>
-          With just the right&nbsp;amount of&nbsp;everything, Pico is great starting&nbsp;point for
+          With just the right&nbsp;amount of&nbsp;everything, Pico is a great starting&nbsp;point for
           a&nbsp;clean and&nbsp;lightweight design&nbsp;system.
         </p>
       </hgroup>
