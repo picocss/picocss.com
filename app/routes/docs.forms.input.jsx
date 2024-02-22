@@ -28,6 +28,8 @@ export default function Input() {
   const readonlyRef = useRef();
   const validationStatesRef = useRef();
 
+  const preventDefault = (e) => e.preventDefault();
+
   return (
     <>
       {/* Header */}
@@ -86,24 +88,32 @@ export default function Input() {
       <Content>
         <section ref={syntaxRef}>
           <article aria-label="Input examples" className="component">
-            <input type="text" name="text" placeholder="Text" aria-label="Text" />
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              aria-label="Email"
-              autoComplete="email"
-            />
-            <input type="number" name="number" placeholder="Number" aria-label="Number" />
-            <input type="password" name="password" placeholder="Password" aria-label="Password" />
-            <input type="tel" name="tel" placeholder="Tel" aria-label="Tel" autoComplete="tel" />
-            <input type="url" name="url" placeholder="Url" aria-label="Url" />
-            <Code as="footer">{`<input type="text" name="text" placeholder="Text" aria-label="Text" />
+            <form onSubmit={preventDefault}>
+              <input type="text" name="text" placeholder="Text" aria-label="Text" />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                aria-label="Email"
+                autoComplete="email"
+              />
+              <input type="number" name="number" placeholder="Number" aria-label="Number" />
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                aria-label="Password"
+                autoComplete="current-password"
+              />
+              <input type="tel" name="tel" placeholder="Tel" aria-label="Tel" autoComplete="tel" />
+              <input type="url" name="url" placeholder="Url" aria-label="Url" />
+              <Code as="footer">{`<input type="text" name="text" placeholder="Text" aria-label="Text" />
 <input type="email" name="email" placeholder="Email" aria-label="Email" autocomplete="email" />
 <input type="number" name="number" placeholder="Number" aria-label="Number" />
 <input type="password" name="password" placeholder="Password" aria-label="Password" />
 <input type="tel" name="tel" placeholder="Tel" aria-label="Tel" autocomplete="tel" />
 <input type="url" name="url" placeholder="Url" aria-label="Url" />`}</Code>
+            </form>
           </article>
         </section>
 
@@ -113,14 +123,16 @@ export default function Input() {
           </Heading>
           <p>Datetime inputs come with an icon.</p>
           <article aria-label="Datetime input examples" className="component">
-            <input type="date" name="date" aria-label="Date" />
-            <input type="datetime-local" name="datetime-local" aria-label="Datetime local" />
-            <input type="month" name="month" aria-label="Month" />
-            <input type="time" name="time" aria-label="Time" />
-            <Code as="footer">{`<input type="date" name="date" aria-label="Date" />
+            <form onSubmit={preventDefault}>
+              <input type="date" name="date" aria-label="Date" />
+              <input type="datetime-local" name="datetime-local" aria-label="Datetime local" />
+              <input type="month" name="month" aria-label="Month" />
+              <input type="time" name="time" aria-label="Time" />
+              <Code as="footer">{`<input type="date" name="date" aria-label="Date" />
 <input type="datetime-local" name="datetime-local" aria-label="Datetime local" />
 <input type="month" name="month" aria-label="Month" />
 <input type="time" name="time" aria-label="Time" />`}</Code>
+            </form>
           </article>
         </section>
 

@@ -111,7 +111,12 @@ export default function Group() {
             <form onSubmit={preventDefault}>
               <fieldset role="group">
                 <input name="email" type="email" placeholder="Email" autoComplete="email" />
-                <input name="password" type="password" placeholder="Password" />
+                <input
+                  name="password"
+                  type="password"
+                  placeholder="Password"
+                  autoComplete="current-password"
+                />
                 <input type="submit" value="Log in" />
               </fieldset>
             </form>
