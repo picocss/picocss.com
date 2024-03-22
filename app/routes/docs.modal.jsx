@@ -192,7 +192,7 @@ export default function Modal() {
       <li>Price: $10</li>
     </ul>
     <footer>
-      <button className="secondary">
+      <button class="secondary">
         Cancel
       </button>
       <button>Confirm</button>
