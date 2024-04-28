@@ -109,7 +109,7 @@ export default function ColorModal({ color, isOpen, onClose, setSelectedColor, .
           </hgroup>
         </header>
         <div className="grid">
-          <p>Hexedecimal color</p>
+          <p>Hexadecimal color</p>
           <Code className="small">{hexValue.toUpperCase()}</Code>
           <p>RGB color</p>
           <Code className="small">{rgbValue}</Code>
