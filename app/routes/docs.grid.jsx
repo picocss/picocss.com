@@ -122,8 +122,7 @@ export default function Grid() {
           <p>
             If you need a light and custom grid, you can look at{" "}
             <strong>CSS Grid Generators</strong>—for example,{" "}
-            <a href="https://cssgrid-generator.netlify.com/">CSS Grid Generator</a>,{" "}
-            <a href="http://grid.layoutit.com/">Layoutit!</a>, or{" "}
+            <a href="http://grid.layoutit.com/">Layoutit!</a> or{" "}
             <a href="https://griddy.io/">Griddy</a>.
           </p>
           <p>
