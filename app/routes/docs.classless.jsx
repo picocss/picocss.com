@@ -106,27 +106,27 @@ body > footer {
           <p>
             Use the default <code>.classless</code> version if you need centered viewports:
           </p>
-          <Code className="small">{`<link rel="stylesheet" href="css/pico.classless.min.css" />`}</Code>
+          <Code className="small">{`<link rel="stylesheet" href="css/pico.classless.min.css">`}</Code>
 
           <p>
             Or use the <code>.fluid.classless</code> version if you need a fluid container:
           </p>
-          <Code className="small">{`<link rel="stylesheet" href="css/pico.fluid.classless.min.css" />`}</Code>
+          <Code className="small">{`<link rel="stylesheet" href="css/pico.fluid.classless.min.css">`}</Code>
 
           <p>
             These <code>.classless</code> versions are also available on{" "}
             <a href={cdnBaseUrl}>jsDelivr CDN</a>:
           </p>
-          <Code>{`<!-- Centered viewport --> 
+          <Code>{`<!-- Centered viewport -->
 <link
   rel="stylesheet"
   href="${cdnBaseUrl}css/pico.classless.min.css"
-/>`}</Code>
-          <Code>{`<!-- Fluid viewport --> 
+>`}</Code>
+          <Code>{`<!-- Fluid viewport -->
 <link
   rel="stylesheet"
   href="${cdnBaseUrl}css/pico.fluid.classless.min.css"
-/>`}</Code>
+>`}</Code>
         </section>
 
         <section ref={rootContainerRef}>

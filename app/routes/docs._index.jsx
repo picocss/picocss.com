@@ -84,7 +84,7 @@ export default function QuickStart() {
             and link <code>/css/pico.min.css</code> in the <Code display="inline">{`<head>`}</Code>{" "}
             of your website.
           </p>
-          <Code className="small">{`<link rel="stylesheet" href="css/pico.min.css" />`}</Code>
+          <Code className="small">{`<link rel="stylesheet" href="css/pico.min.css">`}</Code>
         </section>
 
         <section ref={installFromCdnRef}>
@@ -98,7 +98,7 @@ export default function QuickStart() {
           <Code>{`<link
   rel="stylesheet"
   href="${cdnBaseUrl}css/pico.min.css"
-/>`}</Code>
+>`}</Code>
         </section>
 
         <section ref={installWithNpmRef}>
@@ -142,7 +142,7 @@ export default function QuickStart() {
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="light dark" />
+    <meta name="color-scheme" content="light dark">
     <link rel="stylesheet" href="css/pico.min.css">
     <title>Hello world!</title>
   </head>

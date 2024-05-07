@@ -130,14 +130,14 @@ export default function Button() {
           <article aria-label="Input buttons example" className="component">
             <input type="submit" />
             <input type="button" value="Input" />
-            <Code as="footer">{`<input type="submit" />
-<input type="button" value="Input" />`}</Code>
+            <Code as="footer">{`<input type="submit">
+<input type="button" value="Input">`}</Code>
           </article>
 
           <p>Reset inputs have the secondary style by default.</p>
           <article aria-label="Reset input example" className="component">
             <input type="reset" />
-            <Code as="footer" className="small">{`<input type="reset" />`}</Code>
+            <Code as="footer" className="small">{`<input type="reset">`}</Code>
           </article>
         </section>
 

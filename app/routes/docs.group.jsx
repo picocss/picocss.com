@@ -137,7 +137,7 @@ export default function Group() {
 
           <p>
             <code>role="search"</code> also stacks children horizontally and brings a special style,
-            consistent with <Code display="inline">{`<input type="search" />`}</Code> (see{" "}
+            consistent with <Code display="inline">{`<input type="search">`}</Code> (see{" "}
             <Link to="/docs/forms/input#search">Search input</Link>).
           </p>
 
