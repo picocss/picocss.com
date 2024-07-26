@@ -117,7 +117,7 @@ export default function Conditional() {
             and link <code>/css/pico.conditional.min.css</code> in the{" "}
             <Code display="inline">{`<head>`}</Code> of your website.
           </p>
-          <Code className="small">{`<link rel="stylesheet" href="css/pico.conditional.min.css" />`}</Code>
+          <Code className="small">{`<link rel="stylesheet" href="css/pico.conditional.min.css">`}</Code>
         </section>
 
         {/* Usage from CDN */}
@@ -131,8 +131,7 @@ export default function Conditional() {
           </p>
           <Code>{`<link
   rel="stylesheet"
-  href="${cdnBaseUrl}css/pico.conditional.min.css"
-/>`}</Code>
+  href="${cdnBaseUrl}css/pico.conditional.min.css">`}</Code>
         </section>
 
         {/* Usage with Sass */}

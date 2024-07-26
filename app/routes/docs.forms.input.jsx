@@ -107,12 +107,12 @@ export default function Input() {
               />
               <input type="tel" name="tel" placeholder="Tel" aria-label="Tel" autoComplete="tel" />
               <input type="url" name="url" placeholder="Url" aria-label="Url" />
-              <Code as="footer">{`<input type="text" name="text" placeholder="Text" aria-label="Text" />
-<input type="email" name="email" placeholder="Email" aria-label="Email" autocomplete="email" />
-<input type="number" name="number" placeholder="Number" aria-label="Number" />
-<input type="password" name="password" placeholder="Password" aria-label="Password" />
-<input type="tel" name="tel" placeholder="Tel" aria-label="Tel" autocomplete="tel" />
-<input type="url" name="url" placeholder="Url" aria-label="Url" />`}</Code>
+              <Code as="footer">{`<input type="text" name="text" placeholder="Text" aria-label="Text">
+<input type="email" name="email" placeholder="Email" aria-label="Email" autocomplete="email">
+<input type="number" name="number" placeholder="Number" aria-label="Number">
+<input type="password" name="password" placeholder="Password" aria-label="Password">
+<input type="tel" name="tel" placeholder="Tel" aria-label="Tel" autocomplete="tel">
+<input type="url" name="url" placeholder="Url" aria-label="Url">`}</Code>
             </form>
           </article>
         </section>
@@ -128,10 +128,10 @@ export default function Input() {
               <input type="datetime-local" name="datetime-local" aria-label="Datetime local" />
               <input type="month" name="month" aria-label="Month" />
               <input type="time" name="time" aria-label="Time" />
-              <Code as="footer">{`<input type="date" name="date" aria-label="Date" />
-<input type="datetime-local" name="datetime-local" aria-label="Datetime local" />
-<input type="month" name="month" aria-label="Month" />
-<input type="time" name="time" aria-label="Time" />`}</Code>
+              <Code as="footer">{`<input type="date" name="date" aria-label="Date">
+<input type="datetime-local" name="datetime-local" aria-label="Datetime local">
+<input type="month" name="month" aria-label="Month">
+<input type="time" name="time" aria-label="Time">`}</Code>
             </form>
           </article>
         </section>
@@ -167,7 +167,7 @@ export default function Input() {
   type="color"
   value="#ff9500"
   aria-label="Color picker"
-/>`}</Code>
+>`}</Code>
           </article>
         </section>
 
@@ -184,7 +184,7 @@ export default function Input() {
           </p>
           <article aria-label="File input example" className="component">
             <input type="file" />
-            <Code as="footer" className="small">{`<input type="file" />`}</Code>
+            <Code as="footer" className="small">{`<input type="file">`}</Code>
           </article>
         </section>
 
@@ -206,7 +206,7 @@ export default function Input() {
   placeholder="Disabled"
   aria-label="Disabled input"
   disabled
-/>`}</Code>
+>`}</Code>
           </article>
         </section>
 
@@ -228,7 +228,7 @@ export default function Input() {
   value="Read-only"
   aria-label="Read-only input"
   readonly
-/>`}</Code>
+>`}</Code>
           </article>
         </section>
 
@@ -259,14 +259,14 @@ export default function Input() {
   name="valid"
   value="Valid"
   aria-invalid="false"
-/>
+>
 
 <input
   type="text"
   name="invalid"
   value="Invalid"
   aria-invalid="true"
-/>`}</Code>
+>`}</Code>
           </article>
 
           <p>
@@ -298,7 +298,7 @@ export default function Input() {
   value="Valid"
   aria-invalid="false"
   aria-describedby="valid-helper"
-/>
+>
 <small id="valid-helper">Looks good!</small>
 
 <input
@@ -307,7 +307,7 @@ export default function Input() {
   value="Invalid"
   aria-invalid="true"
   aria-describedby="invalid-helper"
-/>
+>
 <small id="invalid-helper">
   Please provide a valid value!
 </small>`}</Code>

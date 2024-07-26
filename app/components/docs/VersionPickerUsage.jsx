@@ -66,7 +66,7 @@ export default function Usage() {
         <Code>{`<link
   rel="stylesheet"
   href="${cdnBaseUrl}css/${picoFileName}"
-/>`}</Code>
+>`}</Code>
       </section>
 
       {/* Usage with Sass */}

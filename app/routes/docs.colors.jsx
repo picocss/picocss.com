@@ -153,14 +153,14 @@ export default function Colors() {
             There is a separate stylesheet with all the color utilities that you can link in the{" "}
             <Code display="inline">{`<head>`}</Code> of your website.
           </p>
-          <Code className="small">{`<link rel="stylesheet" href="css/pico.colors.min.css" />`}</Code>
+          <Code className="small">{`<link rel="stylesheet" href="css/pico.colors.min.css">`}</Code>
           <p>
             Also available on <Link to={cdnBaseUrl}>jsDelivr CDN</Link>:
           </p>
           <Code>{`<link
   rel="stylesheet"
   href="${cdnBaseUrl}css/pico.colors.min.css"
-/>`}</Code>
+>`}</Code>
           <p>This stylesheet is almost the same size as the entire Pico library.</p>
           <p>
             We do not recommend including all colors on a production site. You should include only
