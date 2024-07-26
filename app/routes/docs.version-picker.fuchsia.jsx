@@ -2,7 +2,7 @@ import ThemePreview from "~/components/docs/ThemePreview";
 import cssStyle from "~/styles/css/custom-themes/fuchsia.css";
 import { themeGeneratorDescription, themeGeneratorTitle } from "~/utils";
 
-const colorName = "Fuchia";
+const colorName = "Fuchsia";
 
 export const meta = () => [
   { title: themeGeneratorTitle(colorName) },
