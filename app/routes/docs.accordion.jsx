@@ -50,8 +50,12 @@ export default function Accordion() {
       {/* Content */}
       <Content>
         <section ref={overviewRef}>
+          <p>
+            <code>name="example"</code> can be added to multiple {" "}
+            <Code display="inline">{`<details>`}</Code> so only one can be open at a time.
+          </p>
           <article aria-label="Accordions example" className="component">
-            <details open>
+            <details name="example" open>
               <summary>Accordion 1</summary>
               <p>
                 Flamingos are known for their bright pink feathers and distinctive long necks. These
@@ -61,7 +65,7 @@ export default function Accordion() {
               </p>
             </details>
             <hr />
-            <details>
+            <details name="example">
               <summary>Accordion 2</summary>
               <ul>
                 <li>Kangaroos are marsupials that are native to Australia.</li>
@@ -74,14 +78,14 @@ export default function Accordion() {
                 <li>Some species of kangaroos can leap up to 30 feet in a single bound.</li>
               </ul>
             </details>
-            <Code as="footer">{`<details open>
+            <Code as="footer">{`<details name="example" open>
   <summary>Accordion 1</summary>
   <p>...</p>
 </details>
 
 <hr />
 
-<details>
+<details name="example">
   <summary>Accordion 2</summary>
   <ul>
     <li>...</li>
