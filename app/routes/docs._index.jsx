@@ -117,7 +117,7 @@ export default function QuickStart() {
             <Link to="https://sass-lang.com/documentation/at-rules/use">@use</Link>:
           </p>
           <Code language="scss" className="small">
-            @use "pico";
+            @use "@picocss/pico";
           </Code>
           <p>
             Learn more about the <Link to="/docs/sass">customization with Sass</Link>.
