@@ -75,7 +75,7 @@ const ButtonCopyToClipboard = ({ text, ...props }) => {
 export default function Code({
   as = "div",
   children,
-  dataTheme = "dark",
+  dataTheme,
   language = "html",
   display = "block",
   allowCopy = true,
@@ -85,12 +85,14 @@ export default function Code({
   const Tag = as;
   const displayInline = display === "inline";
 
+  const { pageTheme } = usePage();
+
   if (displayInline) {
     return <HighlightedCode {...{ children, displayInline, language, ...props }} />;
   }
 
   return (
-    <Tag className={className ? `code ${className}` : "code"} data-theme={dataTheme}>
+    <Tag className={className ? `code ${className}` : "code"} data-theme={dataTheme || pageTheme}>
       {allowCopy && <ButtonCopyToClipboard text={children.toString()} />}
       <HighlightedCode {...{ children, displayInline, language, ...props }} />
     </Tag>
