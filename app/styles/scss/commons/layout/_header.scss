@@ -71,6 +71,7 @@ body {
 
         // Dropdown menu
         details[class="dropdown"] {
+          display: inline-block;
           margin: calc(var(#{$css-var-prefix}nav-element-spacing-vertical) * -1)
             calc(var(#{$css-var-prefix}nav-element-spacing-horizontal) * -1);
 
