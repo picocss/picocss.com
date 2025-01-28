@@ -102,7 +102,7 @@ export default function Dropdown() {
           <p>
             Dropdowns are built with <Code display="inline">{`<details class="dropdown">`}</Code> as
             a wrapper and <Code display="inline">{`<summary>`}</Code> and{" "}
-            <Code display="inline">{`<ul>`}</Code> as direct childrens. Unless they are in a{" "}
+            <Code display="inline">{`<ul>`}</Code> as direct children. Unless they are in a{" "}
             <Link to="/docs/nav">Nav</Link>, dropdowns are <code>{`width: 100%;`}</code> by default.
           </p>
 
