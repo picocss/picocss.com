@@ -474,7 +474,7 @@ ${accountItems
             <Code display="inline" language="css">
               overflow: visible;
             </Code>{" "}
-            on the container and negative margins on childrens to provide a nice{" "}
+            on the container and negative margins on children to provide a nice{" "}
             <code>::focus-visible</code> style for links on keyboard navigation while keeping the
             content aligned horizontally.
           </p>
