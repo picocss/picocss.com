@@ -101,9 +101,7 @@ export default function Group() {
           </p>
 
           <p>
-            The group <code>:focus</code> style relies on the <code>:has()</code> CSS selector and
-            is therefore not (yet) supported by Firefox (see on{" "}
-            <Link to="https://caniuse.com/css-has">caniuse</Link>). When <code>:has()</code> is not
+            The group <code>:focus</code> style relies on the <code>:has()</code> CSS selector. When <code>:has()</code> is not
             supported the children have their regular <code>:focus</code> style.
           </p>
 
