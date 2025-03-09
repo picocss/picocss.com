@@ -5,7 +5,7 @@ dialog.color {
   #{$css-var-prefix}font-size: 0.875rem;
   padding: 0;
 
-  article {
+  > article {
     transform: translate3d(0, 0, 0);
     background: var(#{$css-var-prefix}background-color);
     box-shadow:
