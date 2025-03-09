@@ -8,7 +8,7 @@
   "scripts": {
     "build": "run-s 'build:*' --silent && remix build",
     "build:sort-scss": "postcss --config app/styles/scss ./app/styles/**/*.scss --replace",
-    "build:build-css": "sass --load-path=node_modules/@picocss/pico/scss/ app/styles/scss/:app/styles/css/",
+    "build:build-css": "sass --load-path=node_modules/@picocss/pico/scss/ app/styles/scss/:app/styles/css/ --silence-deprecation=global-builtin,color-functions,mixed-decls",
     "build:autoprefix": "postcss --config app/styles/css --replace app/styles/css/*.css",
     "build:minify": "cleancss -O1 --with-rebase --batch --batch-suffix '' app/styles/css/*.css app/styles/css/**/*.css !app/styles/css/custom-themes/*.css !app/styles/css/snippets/*.css",
     "build:code-snippets": "run-s 'build:code-snippets:*' --silent",
@@ -22,7 +22,7 @@
     "dev:watch": "run-p 'dev:watch:*'",
     "dev:watch:prettier": "onchange 'app/**/*.{js,jsx,ts,tsx,scss}' -- prettier --write --log-level silent {{changed}}",
     "dev:watch:sort-scss": "onchange 'app/styles/**/*.scss' -- postcss --config app/styles/scss {{changed}} --replace",
-    "dev:watch:build-css": "sass --load-path=node_modules/@picocss/pico/scss/ app/styles/scss/:app/styles/css/ --watch",
+    "dev:watch:build-css": "sass --load-path=node_modules/@picocss/pico/scss/ app/styles/scss/:app/styles/css/ --watch --silence-deprecation=global-builtin,color-functions,mixed-decls",
     "disabled_dev:watch:autoprefix": "onchange 'app/styles/css/*.css' -- postcss --config app/styles/css {{changed}} --replace",
     "disabled_dev:watch:code-snippets": "onchange -k --await-write-finish 3000 'app/styles/css/**/*.css' -- run-s 'build:code-snippets:copy-snippets' --silent",
     "start": "wrangler pages dev --ip 0.0.0.0 --compatibility-date=2023-06-21 ./public",
@@ -84,7 +84,7 @@
     "postcss-scss": "^4.0.9",
     "prettier": "^3.5.3",
     "prettier-plugin-organize-imports": "^4.1.0",
-    "sass": "^1.71.1",
+    "sass": "1.85.1",
     "typescript": "^5.8.2",
     "wrangler": "^3.114.0"
   },
