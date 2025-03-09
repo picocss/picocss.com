@@ -75,7 +75,7 @@ export default function Nav({ shouldDisplayDocsVersion = false, ...props }) {
           </Link>
         </li>
         <li>
-          <Link to="https://twitter.com/picocss" className="contrast" aria-label="Twitter">
+          <Link to="https://x.com/picocss" className="contrast" aria-label="Twitter">
             <TwitterIcon />
           </Link>
         </li>
