@@ -58,7 +58,7 @@ const VersionPickerProvider = ({ children, value }) => {
   const colorFilePattern = themeColor === "azure" ? "" : `${themeColor}.`;
 
   const picoFileName = `pico.${baseConfiguration[baseIndex].filePattern}${conditionalConfiguration[conditionalIndex].filePattern}${colorFilePattern}min.css`;
-  const simplifiedCssLink = `<link rel="stylesheet" href="css/${picoFileName}" />`;
+  const simplifiedCssLink = `<link rel="stylesheet" href="css/${picoFileName}">`;
 
   return (
     <VersionPickerContext.Provider
@@ -85,4 +85,4 @@ const VersionPickerProvider = ({ children, value }) => {
   );
 };
 
-export { VersionPickerProvider, useVersionPicker };
+export { useVersionPicker, VersionPickerProvider };
