@@ -150,13 +150,13 @@ body > footer {
   
   // Define the root element used to target <header>, <main>, <footer>
   // with $enable-semantic-container and $enable-responsive-spacings
-  $semantic-root-element: "#root";
+  $semantic-root-element: "#root",
   
   // Enable <header>, <main>, <footer> inside $semantic-root-element as containers
-  $enable-semantic-container: true;
+  $enable-semantic-container: true,
 
   // Enable .classes
-  $enable-classes: false;
+  $enable-classes: false
 )`}</Code>
 
           <p>The code above will compile Pico with the containers defined like this:</p>
