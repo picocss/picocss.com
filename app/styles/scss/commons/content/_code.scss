@@ -45,6 +45,7 @@ code {
       width: 1.125rem;
       height: 1.125rem;
       opacity: 0.5;
+      pointer-events: none;
       transition: opacity var(#{$css-var-prefix}transition);
     }
 

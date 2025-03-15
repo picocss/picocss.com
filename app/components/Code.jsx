@@ -48,6 +48,7 @@ const ButtonCopyToClipboard = ({ text, ...props }) => {
     setCopied(true);
     setTimeout(() => {
       setCopied(false);
+      event.target.blur();
     }, 1000);
   };
 
