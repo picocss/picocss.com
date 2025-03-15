@@ -33,7 +33,6 @@ export default function Code(props) {
   const {
     // Form states
     setFormRole,
-    setFormIsBusy,
     setFormGroupIsFocused,
 
     // Input states
@@ -402,20 +401,11 @@ export default function Code(props) {
               }, delay.pause);
             })
 
-            // Form busy
+            // Loop to input email
             .pause(delay.displayComponent)
             .move(20, moveOpts)
             .delete(96, delOpts)
             .move(-1, moveOpts)
-            .type(` ${attr("aria-busy")}=${value('"true"')}`)
-            .exec(() => {
-              setDisplayRange(false);
-              setFormIsBusy(true);
-            })
-
-            // Loop to input email
-            .pause(delay.displayComponent)
-            .delete(17, delOpts)
             .move(1, moveOpts)
             .type(`${initialDemoCode[1]}<br />`)
             .move(-1, moveOpts)
@@ -425,7 +415,7 @@ export default function Code(props) {
             .type(" ", { instant: true })
             .delete(1, { instant: true })
             .exec(() => {
-              setFormIsBusy(false);
+              setDisplayRange(false);
               setDisplayInput(true);
               setInputClass("fade-in");
               setInputType("email");

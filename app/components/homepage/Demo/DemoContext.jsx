@@ -7,7 +7,6 @@ export default function DemoProvider({ children }) {
   // Form states
   const formRef = useRef(null);
   const [formRole, setFormRole] = useState(false);
-  const [formIsBusy, setFormIsBusy] = useState(false);
   const [formGroupIsFocused, setFormGroupIsFocused] = useState(false);
 
   // Demo states
@@ -94,7 +93,6 @@ export default function DemoProvider({ children }) {
   // Reset all the form and input states
   const resetForm = () => {
     setFormRole(false);
-    setFormIsBusy(false);
     setFormGroupIsFocused(false);
     setDisplayInput(true);
     setInputPlaceholder("Enter your email");
@@ -132,8 +130,6 @@ export default function DemoProvider({ children }) {
         formRef,
         formRole,
         setFormRole,
-        formIsBusy,
-        setFormIsBusy,
         formGroupIsFocused,
         setFormGroupIsFocused,
 

@@ -130,14 +130,12 @@ export default function Form(props) {
     // Form states
     formRef,
     formRole,
-    formIsBusy,
     formGroupIsFocused,
   } = useDemo();
   return (
     <form
       ref={formRef}
       {...(formRole && { role: formRole })}
-      aria-busy={formIsBusy}
       className={formGroupIsFocused ? "is-focused" : ""}
       {...props}
     >
