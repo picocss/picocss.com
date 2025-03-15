@@ -52,7 +52,7 @@
     "react-copy-to-clipboard": "^5.1.0",
     "react-div-100vh": "^0.7.0",
     "react-dom": "^19.0.0",
-    "react-syntax-highlighter": "^15.5.0",
+    "react-syntax-highlighter": "^15.6.1",
     "typeit-react": "2.7.8",
     "use-debounce": "^10.0.4",
     "use-local-storage-state": "^19.5.0",
@@ -86,7 +86,7 @@
     "prettier-plugin-organize-imports": "^4.1.0",
     "sass": "1.85.1",
     "typescript": "^5.8.2",
-    "wrangler": "^3.114.0"
+    "wrangler": "^4.0.0"
   },
   "engines": {
     "node": ">=18.19.0"
