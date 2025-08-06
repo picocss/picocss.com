@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "colors" as *;
 @use "settings" as *;
 
@@ -5,10 +6,10 @@
   // Demo border gradient
   #{$css-var-prefix}demo-border-gradient-colors:
     transparent 33%,
-    mix($azure-150, $fuchsia-150, 25%),
-    mix($azure-150, $purple-150, 30%),
-    mix($azure-150, $violet-150, 35%),
-    mix($azure-150, $indigo-150, 40%);
+    color.mix($azure-150, $fuchsia-150, 25%),
+    color.mix($azure-150, $purple-150, 30%),
+    color.mix($azure-150, $violet-150, 35%),
+    color.mix($azure-150, $indigo-150, 40%);
 
   // Cards
   #{$css-var-prefix}card-box-shadow: var(#{$css-var-prefix}box-shadow);
@@ -18,37 +19,37 @@
   // Mark gradient
   #{$css-var-prefix}mark-gradient: linear-gradient(
     to right,
-    mix($slate-650, $fuchsia-650, 25%),
-    mix($slate-650, $purple-650, 30%),
-    mix($slate-650, $violet-650, 35%),
-    mix($slate-650, $indigo-650, 40%)
+    color.mix($slate-650, $fuchsia-650, 25%),
+    color.mix($slate-650, $purple-650, 30%),
+    color.mix($slate-650, $violet-650, 35%),
+    color.mix($slate-650, $indigo-650, 40%)
   );
 
   // Stats color
-  #{$css-var-prefix}stats-color: mix($azure-600, $slate-600);
+  #{$css-var-prefix}stats-color: color.mix($azure-600, $slate-600);
 
   // Features icon color
-  #{$css-var-prefix}features-icon-color: mix($slate-550, $purple-550, 30%);
+  #{$css-var-prefix}features-icon-color: color.mix($slate-550, $purple-550, 30%);
 
   // Comparison gradients
   #{$css-var-prefix}comparison-gradient-valid: linear-gradient(
     var(#{$css-var-prefix}comparison-gradient-direction, to bottom),
-    mix($cyan-300, $slate-300, 25%),
-    mix($jade-350, $slate-350, 37.5%),
-    mix($green-400, $slate-400, 50%)
+    color.mix($cyan-300, $slate-300, 25%),
+    color.mix($jade-350, $slate-350, 37.5%),
+    color.mix($green-400, $slate-400, 50%)
   );
   #{$css-var-prefix}comparison-gradient-invalid: linear-gradient(
     var(#{$css-var-prefix}comparison-gradient-direction, to bottom),
-    mix($pumpkin-300, $slate-300, 50%),
-    mix($orange-350, $slate-350, 62.5%),
-    mix($red-400, $slate-400, 75%)
+    color.mix($pumpkin-300, $slate-300, 50%),
+    color.mix($orange-350, $slate-350, 62.5%),
+    color.mix($red-400, $slate-400, 75%)
   );
 
   // Language badges
   $html-color: $orange-600;
-  $react-color: mix(mix($azure-600, $cyan-600), $slate-400, 75%);
-  $sass-color: mix($fuchsia-600, $slate-600, 75%);
-  $javascript-color: mix($amber-600, $pumpkin-600);
+  $react-color: color.mix(color.mix($azure-600, $cyan-600), $slate-400, 75%);
+  $sass-color: color.mix($fuchsia-600, $slate-600, 75%);
+  $javascript-color: color.mix($amber-600, $pumpkin-600);
   $css-color: $blue-600;
   $background-color-opacity: 0.125;
   #{$css-var-prefix}badge-html-background-color: rgba($html-color, $background-color-opacity);

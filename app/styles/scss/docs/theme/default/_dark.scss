@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "colors" as *;
 @use "settings" as *;
 
@@ -6,9 +7,9 @@
   #{$css-var-prefix}aside-link-current-background-color: #{$slate-850};
 
   // Color coded scale
-  #{$css-var-prefix}scale-color-1: #{mix($jade-150, $zinc-200)};
-  #{$css-var-prefix}scale-color-2: #{mix($lime-150, $zinc-200)};
-  #{$css-var-prefix}scale-color-3: #{mix($amber-250, $zinc-200)};
-  #{$css-var-prefix}scale-color-4: #{mix($pumpkin-250, $zinc-200)};
-  #{$css-var-prefix}scale-color-5: #{mix($red-350, $zinc-200)};
+  #{$css-var-prefix}scale-color-1: #{color.mix($jade-150, $zinc-200)};
+  #{$css-var-prefix}scale-color-2: #{color.mix($lime-150, $zinc-200)};
+  #{$css-var-prefix}scale-color-3: #{color.mix($amber-250, $zinc-200)};
+  #{$css-var-prefix}scale-color-4: #{color.mix($pumpkin-250, $zinc-200)};
+  #{$css-var-prefix}scale-color-5: #{color.mix($red-350, $zinc-200)};
 }

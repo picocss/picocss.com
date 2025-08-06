@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "colors" as *;
 @use "settings" as *;
 
@@ -18,7 +19,7 @@
       #{$css-var-prefix}card-background-color: #{$slate-900};
       #{$css-var-prefix}card-border-color: var(#{$css-var-prefix}card-background-color);
       #{$css-var-prefix}card-box-shadow: var(#{$css-var-prefix}box-shadow);
-      #{$css-var-prefix}card-sectioning-background-color: #{mix($slate-900, $slate-850)};
+      #{$css-var-prefix}card-sectioning-background-color: #{color.mix($slate-900, $slate-850)};
     }
   }
 }
