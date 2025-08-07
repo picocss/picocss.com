@@ -100,6 +100,11 @@ article footer.code {
 
 // Standalone code blocks
 .code:not(article footer.code) {
+  margin-bottom: var(#{$css-var-prefix}block-spacing-vertical);
+  overflow: hidden;
+  border-radius: var(#{$css-var-prefix}border-radius);
+  box-shadow: var(#{$css-var-prefix}card-box-shadow);
+  
   @each $key, $values in $breakpoints {
     @if $values {
       @media (min-width: map.get($values, "breakpoint")) {
@@ -126,10 +131,6 @@ article footer.code {
       }
     }
   }
-  margin-bottom: var(#{$css-var-prefix}block-spacing-vertical);
-  overflow: hidden;
-  border-radius: var(#{$css-var-prefix}border-radius);
-  box-shadow: var(#{$css-var-prefix}card-box-shadow);
 
   pre {
     padding: calc(var(#{$css-var-prefix}block-spacing-vertical) * 0.66)

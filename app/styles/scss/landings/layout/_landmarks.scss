@@ -3,6 +3,7 @@
 
 #{$semantic-root-element} {
   overflow: hidden;
+  padding: 0;
 
   > main {
     #{$css-var-prefix}homepage-spacing-vertical: calc(var(#{$css-var-prefix}spacing) * 5);
@@ -38,7 +39,6 @@
         }
       }
     }
-    padding: 0;
 
     &.is-loading {
       animation-duration: 1s;
