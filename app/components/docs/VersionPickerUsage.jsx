@@ -29,6 +29,10 @@ ${Object.entries(allSassProperties)
 );`;
 }
 
+const getIsClassless = (baseConfigurationProps) => {
+  return baseConfigurationProps["$enable-classes"] === false;
+}
+
 export default function Usage() {
   const {
     usageFromCdnRef,
@@ -55,6 +59,8 @@ export default function Usage() {
     ...conditionalConfigurationProps,
   };
   const sassCode = getSassCode(allSassProperties);
+
+  const isClassless = getIsClassless(baseConfigurationProps);
 
   return (
     <>
@@ -92,7 +98,7 @@ export default function Usage() {
     <title>Hello world!</title>
   </head>
   <body>
-    <main class="container">
+    <main${isClassless ? "" : ` class="container"`}>
       <h1>Hello world!</h1>
     </main>
   </body>
