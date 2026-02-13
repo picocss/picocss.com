@@ -128,11 +128,11 @@ export default function Radios() {
             <Code as="footer">{`<fieldset>
   <legend>Second language:</legend>
   <input type="radio" id="hindi" name="second-language" checked />
-  <label htmlFor="hindi">Hindi</label>
+  <label for="hindi">Hindi</label>
   <input type="radio" id="swahili" name="second-language" />
-  <label htmlFor="swahili">Swahili</label>
+  <label for="swahili">Swahili</label>
   <input type="radio" id="navi" name="second-language" disabled />
-  <label htmlFor="navi" aria-disabled="true">Na'vi</label>
+  <label for="navi" aria-disabled="true">Na'vi</label>
 </fieldset>`}</Code>
           </article>
         </section>
