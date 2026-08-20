@@ -86,7 +86,7 @@ export default function UsageScenarios() {
                   <td className="scale-color-5">High</td>
                   <td className="scale-color-5">Low</td>
                   <td className="muted">
-                    SASS products, web applications with complex data models, enterprise software
+                    SaaS products, web applications with complex data models, enterprise software
                   </td>
                 </tr>
               </tbody>
