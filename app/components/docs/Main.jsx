@@ -24,6 +24,7 @@ export default function Main({ children, ...props }) {
     "link",
     "forms-range",
     "loading",
+    "maintenance",
     "mission",
     "usage-scenarios",
   ];

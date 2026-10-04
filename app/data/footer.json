@@ -2,6 +2,7 @@
   {
     "category": "About",
     "links": [
+      { "label": "Maintenance", "url": "/docs/maintenance" },
       { "label": "What’s new?", "url": "/docs/v2" },
       { "label": "Brand", "url": "/docs/brand" },
       { "label": "Mission", "url": "/docs/mission" },

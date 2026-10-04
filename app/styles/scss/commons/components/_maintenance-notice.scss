@@ -1,0 +1,14 @@
+@use "settings" as *;
+
+/**
+ * Maintenance notice
+ * Uses the inverse theme, set with data-theme
+ */
+
+.maintenance-notice {
+  padding: calc(var(#{$css-var-prefix}spacing) * 0.5) var(#{$css-var-prefix}spacing);
+  background-color: var(#{$css-var-prefix}background-color);
+  color: var(#{$css-var-prefix}color);
+  font-size: 0.875rem;
+  text-align: center;
+}
