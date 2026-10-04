@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Link from "~/components/Link";
 import Logo from "~/components/Logo";
+import MaintenanceNotice from "~/components/MaintenanceNotice";
 import Nav from "~/components/Nav";
 import { useHeader } from "~/contexts/HeaderContext";
 
@@ -20,19 +21,22 @@ export default function Header({
   }, []);
 
   return (
-    <header
-      {...(headerIsFixed && {
-        className: `is-fixed-above-lg${userHasScrolled ? " is-fixed" : ""}`,
-      })}
-      ref={headerRef}
-      {...props}
-    >
-      <div className="container">
-        <Link to="/" aria-label="Pico CSS homepage">
-          <Logo shouldAnimateLogo={true} />
-        </Link>
-        <Nav shouldDisplayDocsVersion={shouldDisplayDocsVersion} />
-      </div>
-    </header>
+    <>
+      <MaintenanceNotice />
+      <header
+        {...(headerIsFixed && {
+          className: `is-fixed-above-lg${userHasScrolled ? " is-fixed" : ""}`,
+        })}
+        ref={headerRef}
+        {...props}
+      >
+        <div className="container">
+          <Link to="/" aria-label="Pico CSS homepage">
+            <Logo shouldAnimateLogo={true} />
+          </Link>
+          <Nav shouldDisplayDocsVersion={shouldDisplayDocsVersion} />
+        </div>
+      </header>
+    </>
   );
 }
